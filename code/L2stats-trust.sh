@@ -6,16 +6,18 @@ maindir="$(dirname "$scriptdir")"
 
 # setting inputs and common variables
 sub=$1
-type=$2 # change to "act" ## EDIT THESE FOR MASK "ppi- " "nppi-"
-task=ugr 
+ses=$2
+type=$3 # change to "act" ## EDIT THESE FOR MASK "ppi- " "nppi-"
+task=trust 
 sm=5 # edit if necessary, smoothing kernel, should not change 
-MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}
-model=3 # model 2 is "old" version (merged events), 3 is new (timing fixes)
+model=01 # model 2 is "old" version (merged events), 3 is new (timing fixes)
+
+MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}
 
 NCOPES=17 # our model has 17 copes
 # ppi has more contrasts than act (phys), so need a different L2 template?
 if [ "${type}" == "act" ]; then
-	ITEMPLATE=${maindir}/templates/L2_task-${task}_model-${model}_type-act.fsf
+	ITEMPLATE=${maindir}/templates/L2_task-${task}_model-${model}_type-act_nruns-2.fsf
 	NCOPES=${NCOPES}
 else
 	ITEMPLATE=${maindir}/templates/L2_task-${task}_model-${model}_type-ppi.fsf

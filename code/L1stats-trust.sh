@@ -19,7 +19,7 @@ sm=5
 sub=$1
 run=$2
 ppi=$3 # 0 for activation, otherwise seed region
-model=1 # there's only been model-1 since 2018
+model=01 # there's only been model-1 since 2018
 ses=`zeropad 1 2`
 
 # set inputs and general outputs (may change depending on Tedana or fMRIPrep confounds)
@@ -27,14 +27,14 @@ MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}
 mkdir -p $MAINOUTPUT
 DATA=${rf1datadir}/derivatives/fmriprep-24/sub-${sub}/ses-${ses}/func/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz
 NVOLUMES=`fslnvols $DATA`
-CONFOUNDEVS=${rf1datadir}/derivatives/fsl/confounds_tedana/sub-${sub}/ses-${ses}/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_desc-TedanaPlusConfounds.tsv
+CONFOUNDEVS=${rf1datadir}/derivatives/fsl/confounds_tedana-24/sub-${sub}/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_desc-TedanaPlusConfounds.tsv
 
 if [ ! -e $CONFOUNDEVS ]; then
 	echo "missing confounds: $CONFOUNDEVS "  
 	exit # exiting to ensure nothing gets run without confounds
 fi
 
-EVDIR=${maindir}/derivatives/fsl/EVfiles/sub-${sub}/${TASK}
+EVDIR=${maindir}/derivatives/fsl/EVfiles/sub-${sub}/${TASK}/run-${run}
 
 # empty EVs (specific to this study)
 MISSED_TRIAL=${EVDIR}_missed_trial.txt
@@ -70,12 +70,6 @@ if [ "$ppi" == "0" ]; then
 	-e 's@EVDIR@'$EVDIR'@g' \
 	-e 's@MISSED_TRIAL@'$MISSED_TRIAL'@g' \
 	-e 's@SHAPE_EV@'$SHAPE_EV'@g' \
-	-e 's@EV_FRIENDN@'$EV_FRIENDN'@g' \
-	-e 's@SHAPE_FRIENDN@'$SHAPE_FRIENDN'@g' \
-	-e 's@EV_COMPN@'$EV_COMPN'@g' \
-	-e 's@SHAPE_COMPN@'$SHAPE_COMPN'@g' \
-	-e 's@EV_STRANGERN@'$EV_STRANGERN'@g' \
-	-e 's@SHAPE_STRANGERN@'$SHAPE_STRANGERN'@g' \
 	-e 's@SMOOTH@'$sm'@g' \
 	-e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
 	-e 's@NVOLUMES@'$NVOLUMES'@g' \

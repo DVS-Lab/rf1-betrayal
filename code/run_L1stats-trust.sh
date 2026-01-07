@@ -14,7 +14,7 @@ for sub in `cat ${scriptdir}/sublist_DD128.txt`; do
 
 	  	# Manages the number of jobs and cores
 	  	SCRIPTNAME=${scriptdir}/L1stats-trust.sh
-	  	NCORES=45
+	  	NCORES=50
 	  	while [ $(ps -ef | grep -v grep | grep $SCRIPTNAME | wc -l) -ge $NCORES ]; do
 	    		sleep 5s
 	  	done
