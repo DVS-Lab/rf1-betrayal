@@ -34,7 +34,7 @@ if [ ! -e $CONFOUNDEVS ]; then
 	exit # exiting to ensure nothing gets run without confounds
 fi
 
-EVDIR=${maindir}/derivatives/fsl/EVfiles/sub-${sub}/${task}/model-${model}/run-${run} # need ses here?
+EVDIR=${maindir}/derivatives/fsl/EVfiles/sub-${sub}/${TASK}
 
 # empty EVs (specific to this study)
 MISSED_TRIAL=${EVDIR}_missed_trial.txt
@@ -63,7 +63,7 @@ else
 fi
 
 # create template and run analyses
-ITEMPLATE=${maindir}/templates/L1_task-ugr_model-${model}_type-${TYPE}.fsf # this should be pointed to the trust template that Shenghan is using, which should be identical to the one I made long ago
+ITEMPLATE=${maindir}/templates/L1_task-trust_model-${model}_type-${TYPE}.fsf # this should be pointed to the trust template that Shenghan is using, which should be identical to the one I made long ago
 if [ "$ppi" == "0" ]; then
 	sed -e 's@OUTPUT@'$OUTPUT'@g' \
 	-e 's@DATA@'$DATA'@g' \
