@@ -1,0 +1,62 @@
+<HTML><HEAD>
+<!--refreshstart-->
+
+<!--refreshstop-->
+<link REL=stylesheet TYPE=text/css href=.files/fsl.css>
+<TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
+<h2>Progress Report / Log</h2>
+Started at Wed Jul 30 14:30:01 EDT 2025<p>
+Feat main script<br><pre>
+
+/bin/cp /gpfs/scratch/tug87422/smithlab-shared/rf1-derrick/templates/L3_task-ugr_model-3_type-act_group-AQ_n142_flame1.fsf design.fsf
+
+/home/tut28273/work/tools/fsl/bin/feat_model design
+
+mkdir .files;cp /home/tut28273/work/tools/fsl/doc/fsl.css .files;cp -r /home/tut28273/work/tools/fsl/doc/images .files/images
+
+/home/tut28273/work/tools/fsl/bin/fsl_sub -T 60 -l logs -N feat2_pre   /home/tut28273/work/tools/fsl/bin/feat /gpfs/scratch/tug87422/smithlab-shared/rf1-derrick/templates/OUTPUT.gfeat/design.fsf -D /gpfs/scratch/tug87422/smithlab-shared/rf1-derrick/templates/OUTPUT.gfeat -gfeatprep
+Error submitting job - child process exited abnormally
+    while executing
+"if { [ catch {
+
+for { set argindex 1 } { $argindex < $argc } { incr argindex 1 } {
+    switch -- [ lindex $argv $argindex ] {
+
+	-I {
+	    incr arginde..."
+    (file "/home/tut28273/work/tools/fsl/bin/feat" line 312)
+
+
+FATAL ERROR ENCOUNTERED:
+COMMAND:
+/home/tut28273/work/tools/fsl/bin/fsl_sub -T 60 -l logs -N feat2_pre   /home/tut28273/work/tools/fsl/bin/feat /gpfs/scratch/tug87422/smithlab-shared/rf1-derrick/templates/OUTPUT.gfeat/design.fsf -D /gpfs/scratch/tug87422/smithlab-shared/rf1-derrick/templates/OUTPUT.gfeat -gfeatprep
+ERROR MESSAGE:
+child process exited abnormally
+END OF ERROR MESSAGE
+</pre><hr>Higher-level input files preparation<br><pre>
+
+/home/tut28273/work/tools/fsl/bin/featregapply /ZPOOL/data/projects/rf1-norms/derivatives/fsl/sub-10369/L2_task-ugr_model-3_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat
+couldn't change working directory to "/ZPOOL/data/projects/rf1-norms/derivatives/fsl/sub-10369/L2_task-ugr_model-3_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat": no such file or directory
+    while executing
+"cd [ lindex $argv 0 ]"
+    (file "/home/tut28273/work/tools/fsl/bin/featregapply" line 156)
+
+FATAL ERROR ENCOUNTERED:
+COMMAND:
+/home/tut28273/work/tools/fsl/bin/featregapply /ZPOOL/data/projects/rf1-norms/derivatives/fsl/sub-10369/L2_task-ugr_model-3_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat
+ERROR MESSAGE:
+child process exited abnormally
+END OF ERROR MESSAGE
+child process exited abnormally
+    while executing
+"if { [ catch {
+
+for { set argindex 1 } { $argindex < $argc } { incr argindex 1 } {
+    switch -- [ lindex $argv $argindex ] {
+
+	-I {
+	    incr arginde..."
+    (file "/home/tut28273/work/tools/fsl/bin/feat" line 312)
+Error encountered while running in main feat script, halting.
+child process exited abnormally
+</pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></BODY></HTML>

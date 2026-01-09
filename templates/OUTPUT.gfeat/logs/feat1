@@ -1,0 +1,26 @@
+
+/bin/cp /gpfs/scratch/tug87422/smithlab-shared/rf1-derrick/templates/L3_task-ugr_model-3_type-act_group-AQ_n142_flame1.fsf design.fsf
+
+/home/tut28273/work/tools/fsl/bin/feat_model design
+
+mkdir .files;cp /home/tut28273/work/tools/fsl/doc/fsl.css .files;cp -r /home/tut28273/work/tools/fsl/doc/images .files/images
+
+/home/tut28273/work/tools/fsl/bin/fsl_sub -T 60 -l logs -N feat2_pre   /home/tut28273/work/tools/fsl/bin/feat /gpfs/scratch/tug87422/smithlab-shared/rf1-derrick/templates/OUTPUT.gfeat/design.fsf -D /gpfs/scratch/tug87422/smithlab-shared/rf1-derrick/templates/OUTPUT.gfeat -gfeatprep
+Error submitting job - child process exited abnormally
+    while executing
+"if { [ catch {
+
+for { set argindex 1 } { $argindex < $argc } { incr argindex 1 } {
+    switch -- [ lindex $argv $argindex ] {
+
+	-I {
+	    incr arginde..."
+    (file "/home/tut28273/work/tools/fsl/bin/feat" line 312)
+
+
+FATAL ERROR ENCOUNTERED:
+COMMAND:
+/home/tut28273/work/tools/fsl/bin/fsl_sub -T 60 -l logs -N feat2_pre   /home/tut28273/work/tools/fsl/bin/feat /gpfs/scratch/tug87422/smithlab-shared/rf1-derrick/templates/OUTPUT.gfeat/design.fsf -D /gpfs/scratch/tug87422/smithlab-shared/rf1-derrick/templates/OUTPUT.gfeat -gfeatprep
+ERROR MESSAGE:
+child process exited abnormally
+END OF ERROR MESSAGE

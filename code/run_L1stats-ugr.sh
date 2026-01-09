@@ -6,17 +6,17 @@ basedir="$(dirname "$scriptdir")"
 nruns=2
 task=ugr # edit if necessary
 
-for ppi in "pTPJ"; do #0
+for ppi in "0"; do #0
 #for ppi in "ecn"; do # putting 0 first will indicate "activation" Put in "NAcc-bin" and "ecn" for PPI 
 #for ppi in "pTPJ"; do
-	 for sub in 10317; do
+	 for sub in `cat ${scriptdir}/sublist_DD128.txt`; do
 	 #for sub in `cat ${scriptdir}/sublist_allUGRresponses.txt`; do	
 	#for sub in `cat ${scriptdir}/sublist_mkExist.txt`; do	
 	  for run in `seq $nruns`; do
 
 	  	# Manages the number of jobs and cores
-	  	SCRIPTNAME=${basedir}/code/L1stats.sh
-	  	NCORES=30
+	  	SCRIPTNAME=${scriptdir}/L1stats-ugr.sh
+	  	NCORES=50
 	  	while [ $(ps -ef | grep -v grep | grep $SCRIPTNAME | wc -l) -ge $NCORES ]; do
 	    		sleep 5s
 	  	done

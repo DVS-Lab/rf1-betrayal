@@ -25,8 +25,8 @@ for analysis in "act"; do # "act" "ppi_seed-pTPJ"
 		copenum=$1
 		copename=$2
 
-		NCORES=15
-		SCRIPTNAME=${maindir}/code/L3stats.sh
+		NCORES=50
+		SCRIPTNAME=${maindir}/code/L3stats-trust.sh
 		echo $SCRIPTNAME
 		while [ $(ps -ef | grep -v grep | grep $SCRIPTNAME | wc -l) -ge $NCORES ]; do
 			sleep 1s

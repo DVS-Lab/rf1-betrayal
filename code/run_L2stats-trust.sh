@@ -3,12 +3,12 @@
 # ensure paths are correct irrespective from where user runs the script
 scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 maindir="$(dirname "$scriptdir")"
-
+type=act
 
 for sub in `cat ${scriptdir}/sublist_DD128.txt`; do
 	# Manage the number of jobs and cores # `cat ${scriptdir}/sublist_all.txt
   	SCRIPTNAME=${maindir}/code/L2stats-trust.sh
-  	NCORES=80
+  	NCORES=50
   	while [ $(ps -ef | grep -v grep | grep $SCRIPTNAME | wc -l) -ge $NCORES ]; do
     		sleep 1s
   	done
