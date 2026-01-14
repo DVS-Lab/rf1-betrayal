@@ -6,10 +6,11 @@ maindir="$(dirname "$scriptdir")"
 
 # setting inputs and common variables
 sub=$1
-type=$2 # change to "act" ## EDIT THESE FOR MASK "ppi- " "nppi-"
+ses=$2
+type=$3 # change to "act" ## EDIT THESE FOR MASK "ppi- " "nppi-"
 task=ugr 
 sm=5 # edit if necessary, smoothing kernel, should not change 
-MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}
+MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}
 model=3 # model 2 is "old" version (merged events), 3 is new (timing fixes)
 
 NCOPES=17 # our model has 17 copes

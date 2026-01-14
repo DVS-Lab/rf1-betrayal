@@ -26,43 +26,9 @@ REPLACEME=act # act  ppi, nppi # this defines the parts of the path that differ 
 type=${REPLACEME} # For output template
 
 # Variables that change per analysis. Check carefully! 
-#covariate=$4
-# covariate=dACC
 covariate=ONES
-# Covariates:
-# dACC
 
-# ONESUNDER55
-# ONES
-
-# Alpha-RelDep-Int-wCovars 
-
-# Alpha-ExtBet-Int-wCovars 
-# Alpha-ExtWor-Int-wCovars 
-# Alpha-IntBet-Int-wCovars 
-# Alpha-IntWor-Int-wCovars 
-
-# RelDep-ExtBet-Int-wCovars D
-# RelDep-ExtWor-Int-wCovars D
-# RelDep-IntBet-Int-wCovars  D
-# RelDep-IntWor-Int-wCovars D
-# USI-ADI-ExtBet-wCovars D
-
-# USI-ADI-ExtBet-Int-wCovars n
-
-
-# RelDep-ExtBet-MainEffects-wCovars change to 112 
-# RelDep-ExtWor-MainEffects-wCovars 
-# RelDep-IntBet-MainEffects-wCovars  
-# RelDep-IntWor-MainEffects-wCovars 
-
-
-# eventually delete
-# Alpha-ExtWor-RelDep-Int-wCovars
-# Alpha-IntBet-RelDep-Int-wCovars
-# Alpha-IntWor-RelDep-Int-wCovars
-
-N=209 # update with total n after exclusions
+N=128 # update with total n after exclusions
 
 if [[ $analysis == "act" ]]; then
 	template=L3_task-ugr_model-3_type-act_group-${covariate}_n${N}_flame1.fsf #
@@ -70,17 +36,12 @@ else
 	template=L3_task-ugr_model-3_type-ppi_group-${covariate}_n${N}_flame1.fsf
 fi
 
-# Templates:
-# L3_task-ugr_group_dACC_n118_flame1.fsf 
-# L3_task-ugr_type-act_group-RelDep_n94_flame1.fsf (no model in name = model-2, added model-3 for most recent analysis)
-# L3_task-ugr_type-act_group-ExtBet-ADI-USI_n94_flame1.fsf
-# L3_task-ugr_type-act_group-ExtBet-RelDep-Int_n94_flame1.fsf
 
 # Set once and then forget.
 model=3 # or model 2
 task=ugr
 modeltype=flame1
-templatedir="/ZPOOL/data/projects/rf1-norms/templates"
+templatedir="/ZPOOL/data/projects/rf1-betrayal/templates"
 MAINOUTPUT=${maindir}/derivatives/fsl/L3-act/L3_model-${model}_task-${task}_type-${type}-n${N}-cov-${covariate}-${modeltype}
 
 mkdir -p $MAINOUTPUT
