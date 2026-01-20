@@ -30,7 +30,7 @@ for sub in `cat ${basedir}/code/sublist_DD128.txt`; do
      echo "Extracting L2 AIns signal for subject: ${sub}" >> $log
     OUTPUT="${outputdir}/sub-${sub}_L2_AIns_meants.txt" 
     fslmeants -i $DATA -o $OUTPUT -m $mask
-   	
+    #could use fslstats instead - fslmeants is usually for time series	
     chmod 777 $OUTPUT
   else
     echo "sub${sub} ${DATA} doesn't exist" >> $log
