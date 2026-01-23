@@ -6,9 +6,7 @@ basedir="$(dirname "$scriptdir")"
 nruns=2
 task=ugr # edit if necessary
 
-for ppi in "0"; do #0
-#for ppi in "ecn"; do # putting 0 first will indicate "activation" Put in "NAcc-bin" and "ecn" for PPI 
-#for ppi in "pTPJ"; do
+for ppi in 0 aIns; do #0
 	 #for sub in `cat ${scriptdir}/sublist_DD128.txt`; do
 	 for sub in 10636; do	
 	#for sub in `cat ${scriptdir}/sublist_mkExist.txt`; do	

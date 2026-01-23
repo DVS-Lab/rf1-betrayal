@@ -7,7 +7,7 @@
 #		2) seed-based ppi
 #		3) network-based ppi
 # Note that activation analysis must be performed first.
-# Seed-based PPI and Network PPI should follow activation analyses.
+# Seed-based PPI should follow activation analyses.
 
 # ensure paths are correct irrespective from where user runs the script
 scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
@@ -19,10 +19,9 @@ TASK=ugr
 sm=5
 sub=$1
 run=$2
-ppi=$3 # 0 for activation, otherwise seed region or network
+ppi=$3 # 0 for activation, otherwise seed region (check path on line 84; expectation: ${maindir}/masks/seed-${ppi}.nii.gz)
 model=3 # 2 for the "original" merged events version
 ses=`zeropad 1 2`
-# maskname=$4
 
 # set inputs and general outputs (may change depending on Tedana or fMRIPrep confounds)
 MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}
