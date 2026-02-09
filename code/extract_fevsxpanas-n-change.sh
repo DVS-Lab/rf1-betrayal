@@ -1,0 +1,64 @@
+# directory (borrowed style from L1stats.sh)
+scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+basedir="$(dirname "$scriptdir")"
+
+# Define input variables
+sublist=${basedir}/code/sublist_final_n231.txt
+task="ugr"
+model="3"
+sm="5"
+mask=${basedir}/masks/fevsxpanas-n-change_cope11_SFG.nii.gz
+
+# Output directory for the meants text files
+outputdir=${basedir}/derivatives/fevsxpanas-n-change_cope11_SFG_meants
+log=${basedir}/code/fevsxpanas-n-change_cope11_SFG_meants_log.txt
+mkdir -p $outputdir
+
+# Loop through each subject
+for sub in `cat ${basedir}/code/sublist_final_n231.txt`; do
+
+  # Define the path to the filtered functional data
+  DATA=${basedir}/derivatives/fsl/sub-${sub}/ses-01/L2_task-${task}_model-${model}_type-act_sm-${sm}.gfeat/cope11.feat/stats/zstat1.nii.gz
+
+  DATArun1=${basedir}/derivatives/fsl/sub-${sub}/ses-01/L1_task-${task}_model-${model}_type-act_run-1_sm-${sm}.feat/stats/zstat11.nii.gz
+  
+  DATArun2=${basedir}/derivatives/fsl/sub-${sub}/ses-01/L1_task-${task}_model-${model}_type-act_run-2_sm-${sm}.feat/stats/zstat11.nii.gz
+ 
+
+  # Check if the data file exists
+  if [ -f "$DATA" ]; then   
+     echo "Extracting signal for subject: ${sub}" >> $log
+    OUTPUT="${outputdir}/sub-${sub}_L2_meants.txt" 
+    fslmeants -i $DATA -o $OUTPUT -m $mask
+   	
+    chmod 777 $OUTPUT
+  else
+    echo "sub${sub} ${DATA} doesn't exist" >> $log
+  fi
+  	
+   if [ -f "$DATArun1" ]; then
+   	 echo "Extracting run1  signal for subject: ${sub}" >> $log
+   	 OUTPUT="${outputdir}/sub-${sub}_run-1_meants.txt"
+   	 fslmeants -i $DATArun1 -o $OUTPUT -m $mask
+
+
+     chmod 777 $OUTPUT
+   else 
+   	 echo "WARNING: Run-1 ${DATArun1} not found for subject ${sub}. Skipping." >> $log
+   fi
+ 	if [ -f "$DATArun2" ]; then
+   	 echo "Extracting run2 signal for subject: ${sub}" >> $log
+   	 OUTPUT="${outputdir}/sub-${sub}_run-2_meants.txt"
+   	 fslmeants -i $DATArun2 -o $OUTPUT -m $mask
+ 
+
+     chmod 777 $OUTPUT
+   else 
+   	 echo "WARNING: Run-2 ${DATArun2} not found for subject ${sub}. Skipping." >> $log
+   fi
+
+
+done
+
+echo "Extraction complete. All output files saved to: $outputdir"
+

@@ -7,9 +7,9 @@ nruns=2
 task=ugr # edit if necessary
 
 for ppi in 0 aIns; do #0
-	 #for sub in `cat ${scriptdir}/sublist_DD128.txt`; do
-	 for sub in 10636; do	
-	#for sub in `cat ${scriptdir}/sublist_mkExist.txt`; do	
+
+	for sub in `cat ${scriptdir}/sublist_DD128.txt`; do	
+	
 	  for run in `seq $nruns`; do
 
 	  	# Manages the number of jobs and cores

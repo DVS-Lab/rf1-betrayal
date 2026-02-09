@@ -13,18 +13,21 @@ sm=5 # edit if necessary, smoothing kernel, should not change
 MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}
 model=3 # model 2 is "old" version (merged events), 3 is new (timing fixes)
 
-NCOPES=17 # our model has 17 copes
-# ppi has more contrasts than act (phys), so need a different L2 template?
+NCOPES=18 # our model has 17 copes, 18 with ppi
+
 if [ "${type}" == "act" ]; then
 	ITEMPLATE=${maindir}/templates/L2_task-${task}_model-${model}_type-act.fsf
 	NCOPES=${NCOPES}
+	INPUT1=${MAINOUTPUT}/L1_task-${task}_model-${model}_type-${type}_run-1_sm-${sm}.feat
+	INPUT2=${MAINOUTPUT}/L1_task-${task}_model-${model}_type-${type}_run-2_sm-${sm}.feat
 else
 	ITEMPLATE=${maindir}/templates/L2_task-${task}_model-${model}_type-ppi.fsf
 	let NCOPES=${NCOPES}+1 # add 1 since we tend to only have one extra contrast for PPI (for PHYS)
+	INPUT1=${MAINOUTPUT}/L1_task-${task}_model-${model}_type-${type}_seed-aIns_run-1_sm-${sm}.feat
+	INPUT2=${MAINOUTPUT}/L1_task-${task}_model-${model}_type-${type}_seed-aIns_run-2_sm-${sm}.feat
 fi
 
-INPUT1=${MAINOUTPUT}/L1_task-${task}_model-${model}_type-${type}_run-1_sm-${sm}.feat
-INPUT2=${MAINOUTPUT}/L1_task-${task}_model-${model}_type-${type}_run-2_sm-${sm}.feat
+
 
 # check for existing output and re-do if missing/incomplete
 OUTPUT=${MAINOUTPUT}/L2_task-${task}_model-${model}_type-${type}_sm-${sm}
