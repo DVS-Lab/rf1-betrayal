@@ -51,6 +51,20 @@ Tracked directories include:
 
 ---
 
+## Running the analyses
+
+Analyses for this project are executed via a sequence of bash scripts corresponding
+to first-, second-, and third-level fMRI analyses.
+
+From the code repository, run the following commands in order:
+
+```bash
+bash run_L1stats-ugr.sh
+bash run_L2stats-ugr.sh
+bash run_L3stats-ugr.sh
+
+
+
 ## Reproducibility notes
 
 This repository is intended to allow reproduction of reported analyses given access to the
