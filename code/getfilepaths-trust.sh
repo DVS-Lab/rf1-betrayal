@@ -35,4 +35,4 @@ for sub in $(cat sublist_DD128.txt); do
 done
 
 
-# if 'cat -A sublist_n241.txt | head' shows 10317^M$ then run 'sed -i 's/\r$//' sublist_n241.txt'
+# if 'cat -A sublist_n139.txt | head' shows 10317^M$ then run 'sed -i 's/\r$//' sublist_n139.txt'

@@ -28,12 +28,12 @@ type=${REPLACEME} # For output template
 # Variables that change per analysis. Check carefully! 
 covariate=ones
 
-N=128 # update with total n after exclusions
+N=132 # update with total n after exclusions
 
 if [[ $analysis == "act" ]]; then
-	template=L3_template_n128_trust_onegroup_voxelthresh.fsf #
+	template=L3_task-trust_model-01_type-act_group-${covariate}_n${N}_flame1.fsf 
 else
-	template=L3_task-ugr_model-3_type-ppi_group-${covariate}_n${N}_flame1.fsf
+	template=L3_task-trust_model-01_type-ppi_group-${covariate}_n${N}_flame1.fsf
 fi
 
 
@@ -42,20 +42,20 @@ model=01 # or model 2
 task=trust
 modeltype=flame1
 templatedir="/ZPOOL/data/projects/rf1-betrayal/templates"
-MAINOUTPUT=${maindir}/derivatives/fsl/L3-act/L3_model-${model}_task-${task}_type-${type}-n${N}-cov-${covariate}-${modeltype}_voxelthresh
+MAINOUTPUT=${maindir}/derivatives/fsl/L3-act/L3_model-${model}_task-${task}_type-${type}-n${N}-cov-${covariate}-${modeltype}
 
 mkdir -p $MAINOUTPUT
 
 # set outputs and check for existing
 cnum_pad=`zeropad ${copenum} 2`
-OUTPUT=${MAINOUTPUT}/L3_model-${model}_task-${task}_n${N}-cov-${covariate}-cope-${copenum}_cname-${copename}-${modeltype}_voxelthresh
+OUTPUT=${MAINOUTPUT}/L3_model-${model}_task-${task}_n${N}-cov-${covariate}-cope-${copenum}_cname-${copename}-${modeltype}
 
 	echo "[$(date)] re-doing: ${OUTPUT}" >> re-runL3.log
 	rm -rf ${OUTPUT}.gfeat
 
 	# create template and run FEAT analyses
 	ITEMPLATE=${templatedir}/${template}
-	OTEMPLATE=${MAINOUTPUT}/L3_task-${task}_model-${model}_type-${type}_cope-${copenum}_cname-${copename}_${covariate}_n${N}_${modeltype}_voxelthresh.fsf
+	OTEMPLATE=${MAINOUTPUT}/L3_task-${task}_model-${model}_type-${type}_cope-${copenum}_cname-${copename}_${covariate}_n${N}_${modeltype}.fsf
 	sed -e 's@OUTPUT@'$OUTPUT'@g' \
 	-e 's@COPENUM@'$copenum'@g' \
 	-e 's@REPLACEME@'$REPLACEME'@g' \

@@ -11,7 +11,7 @@ maindir="$(dirname "$scriptdir")"
 
 # Change the type of analysis in the " " marks.
 
-for analysis in "ppi"; do # "act" "ppi_seed-pTPJ"
+for analysis in "ppi_seed-mpfc"; do # "act" "ppi_seed-pTPJ"
 
 	# Define the contrast value and the name you would like in the output. 
 

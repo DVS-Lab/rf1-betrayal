@@ -3,19 +3,19 @@ scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 basedir="$(dirname "$scriptdir")"
 
 # Define input variables
-sublist=${basedir}/code/sublist_DD128.txt
+sublist=${basedir}/code/sublist_n132.txt
 task="trust"
 model="01"
 sm="5"
-mask=${basedir}/masks/ugr-trust_intersection_voxelthresh.nii.gz
+mask=${basedir}/masks/seed-AIns.nii.gz
 
 # Output directory for the meants text files
-outputdir=${basedir}/derivatives/AIns_trust_meants
+outputdir=${basedir}/derivatives/extractions/AIns_trust_meants
 log=${basedir}/code/AIns_trust_meants_log.txt
 mkdir -p $outputdir
 
 # Loop through each subject
-for sub in `cat ${basedir}/code/sublist_DD128.txt`; do
+for sub in `cat ${basedir}/code/sublist_n132.txt`; do
 
   # Define the path to the filtered functional data
   DATA=${basedir}/derivatives/fsl/sub-${sub}/ses-01/L2_task-${task}_model-${model}_type-act_sm-${sm}.gfeat/cope10.feat/stats/zstat1.nii.gz

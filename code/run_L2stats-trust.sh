@@ -5,7 +5,7 @@ scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 maindir="$(dirname "$scriptdir")"
 type=act
 
-for sub in `cat ${scriptdir}/sublist_DD128.txt`; do
+for sub in `cat ${scriptdir}/sublist_n138.txt`; do
 	# Manage the number of jobs and cores # `cat ${scriptdir}/sublist_all.txt
   	SCRIPTNAME=${maindir}/code/L2stats-trust.sh
   	NCORES=50

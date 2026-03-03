@@ -9,7 +9,7 @@ nruns=2
 task=trust # edit if necessary
 ppi=0 # could also be dACC or AI, just check paths and pre-registration
 
-for sub in `cat ${scriptdir}/sublist_DD128.txt`; do	
+for sub in `cat ${scriptdir}/sublist_n138.txt`; do	
 	  for run in `seq $nruns`; do
 
 	  	# Manages the number of jobs and cores

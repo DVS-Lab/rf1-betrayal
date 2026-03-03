@@ -26,13 +26,12 @@ REPLACEME=ppi # act  ppi, nppi # this defines the parts of the path that differ 
 type=${REPLACEME} # For output template
 
 # Variables that change per analysis. Check carefully! 
-covariate=AInsxAQ
+covariate=mpfc
 
-N=128 # update with total n after exclusions
+N=132 # update with total n after exclusions
 
 if [[ $analysis == "act" ]]; then
-	#template=L3_task-ugr_model-3_type-act_group-${covariate}_n${N}_flame1.fsf 
-	template=L3_template_n128_ugr_onegroup_voxelthresh.fsf
+	template=L3_task-ugr_model-3_type-act_group-${covariate}_n${N}_flame1.fsf 
 else
 	template=L3_task-ugr_model-3_type-ppi_group-${covariate}_n${N}_flame1.fsf
 fi

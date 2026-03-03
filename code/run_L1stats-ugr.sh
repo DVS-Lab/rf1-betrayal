@@ -6,9 +6,9 @@ basedir="$(dirname "$scriptdir")"
 nruns=2
 task=ugr # edit if necessary
 
-for ppi in 0 aIns; do #0
+for ppi in mpfc; do #0
 
-	for sub in `cat ${scriptdir}/sublist_DD128.txt`; do	
+	for sub in `cat ${scriptdir}/sublist_n132.txt`; do	
 	
 	  for run in `seq $nruns`; do
 
