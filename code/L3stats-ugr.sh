@@ -26,7 +26,7 @@ REPLACEME=ppi # act  ppi, nppi # this defines the parts of the path that differ 
 type=${REPLACEME} # For output template
 
 # Variables that change per analysis. Check carefully! 
-covariate=mpfc
+covariate=pTPJxAQ
 
 N=132 # update with total n after exclusions
 

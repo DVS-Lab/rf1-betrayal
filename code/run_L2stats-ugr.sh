@@ -5,7 +5,7 @@ scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 maindir="$(dirname "$scriptdir")"
 
 # the "type" variable below is setting a path inside the main script
-type=ppi_seed-mpfc
+type=ppi_seed-pTPJ
 for sub in `cat ${scriptdir}/sublist_n132.txt`; do
   	SCRIPTNAME=${maindir}/code/L2stats-ugr.sh
   	NCORES=50

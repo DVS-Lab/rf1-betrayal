@@ -53,16 +53,56 @@ Tracked directories include:
 
 ## Running the analyses
 
+
+Get the first 225 subjects with usuable neuroimaging and behavioral data
+bash get_n225_sublist.sh
+This should produce subject_list_n225.txt which is used as input in the next steps
+
+Remove participants with more than 25% of missing trials (preregistered exclusion)
+Rscript check_trust_validtrials.R
+Rscript check_ugr_validtrials.R
+
+Get the final subject list for analysis by applying the remaining preregistered exclusions
+Requires Age.csv and mriqc-metrics_allTasks_n299_ses-01.xlsx as well as output from previous steps
+Rscript get_master_sublist.R
+This should produice sublist_n139.txt
+
+Produce EVfiles for Trust and UGR tasks
+For Trust:
+matlab convertTrust_BIDS.m (converts raw csv events to BIDS)
+bash run_BIDSto3colTRUST.sh (converts BIDS from previous step to EVfiles)
+
+For UGR:
+matlab convertUGR_BIDS.m
+bash run_gen3colfilesUGR.sh
+
 Analyses for this project are executed via a sequence of bash scripts corresponding
 to first-, second-, and third-level fMRI analyses.
 
-From the code repository, run the following commands in order:
+Run the following commands in order:
 
 ```bash
 bash run_L1stats-ugr.sh
 bash run_L2stats-ugr.sh
+
+check_trust_prereqs.sh
+get_trust_filepaths.R (gives L3 filepaths for trust)
+
 bash run_L3stats-ugr.sh
 
+
+
+REWORKED PIPELINE
+bash get_n225_sublist.sh
+matlab convertTrust_BIDS.m
+bash run_BIDSto3colTRUST.sh
+check_EVfiles.sh
+check_dualtask_validtrials.R
+get_master_sublist.R
+
+get_dualtask_filepaths.R
+
+sed -i 's/\r$//' sublist_n137.txt
 
 
 ## Reproducibility notes

@@ -7,11 +7,11 @@ sublist=${basedir}/code/sublist_n132.txt
 task="trust"
 model="01"
 sm="5"
-mask=${basedir}/masks/seed-AIns.nii.gz
+mask=${basedir}/masks/seed-AIns-vt.nii.gz
 
 # Output directory for the meants text files
-outputdir=${basedir}/derivatives/extractions/AIns_trust_social_meants
-log=${basedir}/code/AIns_trust_social_meants_log.txt
+outputdir=${basedir}/derivatives/extractions/AIns-vt_trust_social_meants
+log=${basedir}/code/AIns-vt_trust_social_meants_log.txt
 mkdir -p $outputdir
 
 # Loop through each subject
