@@ -1,0 +1,561 @@
+---
+title: "UG-Trust Behavioral Analyses"
+output: pdf_document
+date: "2026-02-20"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+data <- read.table("sublist_n132.txt", header = FALSE)
+colnames(data) <- "sub_id"
+
+
+
+
+# contains fairness sensitivity slopes
+fairness_data = read.csv('slope_df.csv')
+
+# contains trial-level information on accept/rejection
+behavioral_data = read.csv('behavioral_data.csv')
+library(tidyverse)
+percent_accept_data <- behavioral_data %>%
+  group_by(sub_id) %>%
+  summarise(
+    sum_accept = sum(accept, na.rm = TRUE),
+    total_trials = sum(!is.na(accept)),
+    percent_accept = (sum_accept / total_trials) * 100,
+    
+    # Calculate percent_accept_social only for "social" trials
+    sum_accept_social = sum(accept[condition == "social"], na.rm = TRUE),
+    total_social = sum(condition == "social" & !is.na(accept)),
+    percent_accept_social = (sum_accept_social / total_social) * 100,
+    
+    # Calculate percent_accept_nonsocial only for "nonsocial" trials
+    sum_accept_nonsocial = sum(accept[condition == "nonsocial"], na.rm = TRUE),
+    total_nonsocial = sum(condition == "nonsocial" & !is.na(accept)),
+    percent_accept_nonsocial = (sum_accept_nonsocial / total_nonsocial) * 100
+  )
+
+
+
+# continue combining data frames
+data <- merge(data, fairness_data,
+                     by.x = "sub_id",  # column from 'data'
+                     by.y = "sub_id",         # column from 'fairness_data'
+                     all.x = TRUE)   
+data = merge(data, percent_accept_data,
+             by.x = 'sub_id',
+             by.y = 'sub_id',
+             all.x = TRUE)
+
+
+
+
+demographics <- behavioral_data %>%
+  select(sub_id, sub_age, sub_gender) %>%
+  distinct() %>%
+  mutate(
+    male = ifelse(sub_gender == "Male", 1, 0)
+  ) %>%
+  select(sub_id, sub_age, male)   # drop original sub_gender
+
+data <- merge(data, demographics,
+              by = "sub_id",
+              all.x = TRUE)
+```
+
+```{r}
+
+# read subject list
+subs <- scan("sublist_n132.txt", what = character())
+
+# initialize output data frame
+out_AIns <- data.frame(
+  sub_id = subs,
+  trust_AIns = NA_real_,
+  ugr_AIns   = NA_real_,
+  stringsAsFactors = FALSE
+)
+
+# helper function to read the correct file
+read_meants <- function(folder, sub) {
+  l2_file  <- file.path(folder, paste0("sub-", sub, "_L2_AIns_meants.txt"))
+  run1_file <- file.path(folder, paste0("sub-", sub, "_run-1_AIns_meants.txt"))
+  
+  if (file.exists(l2_file)) {
+    as.numeric(scan(l2_file, what = numeric(), quiet = TRUE))
+  } else {
+    as.numeric(scan(run1_file, what = numeric(), quiet = TRUE))
+  }
+}
+
+# loop over subjects
+for (i in seq_along(subs)) {
+  s <- subs[i]
+  
+  out_AIns$trust_AIns[i] <- read_meants("AIns_trust_meants", s)
+  out_AIns$ugr_AIns[i]   <- read_meants("AIns_ugr_meants", s)
+}
+
+data <- merge(data, out_AIns,
+              by = "sub_id",
+              all.x = TRUE)
+
+
+
+
+
+# initialize output data frame
+out_AIns_social <- data.frame(
+  sub_id = subs,
+  trust_AIns_social = NA_real_,
+  ugr_AIns_social   = NA_real_,
+  stringsAsFactors = FALSE
+)
+
+# helper function to read the correct file
+read_meants <- function(folder, sub) {
+  l2_file  <- file.path(folder, paste0("sub-", sub, "_L2_AIns_social_meants.txt"))
+  run1_file <- file.path(folder, paste0("sub-", sub, "_run-1_AIns_social_meants.txt"))
+  
+  if (file.exists(l2_file)) {
+    as.numeric(scan(l2_file, what = numeric(), quiet = TRUE))
+  } else {
+    as.numeric(scan(run1_file, what = numeric(), quiet = TRUE))
+  }
+}
+
+# loop over subjects
+for (i in seq_along(subs)) {
+  s <- subs[i]
+  
+  out_AIns_social$trust_AIns_social[i] <- read_meants("AIns_trust_social_meants", s)
+  out_AIns_social$ugr_AIns_social[i]   <- read_meants("AIns_ugr_social_meants", s)
+}
+
+
+data <- merge(data, out_AIns_social,
+              by = "sub_id",
+              all.x = TRUE)
+
+
+
+
+
+
+
+
+
+# initialize output data frame
+out_dACC <- data.frame(
+  sub_id = subs,
+  trust_dACC = NA_real_,
+  trust_dACC_social = NA_real_,
+  ugr_dACC = NA_real_,
+  ugr_dACC_social = NA_real_,
+  stringsAsFactors = FALSE
+)
+
+# helper function to read the correct file
+read_dACC_meants <- function(folder, sub) {
+  l2_file  <- file.path(folder, paste0("sub-", sub, "_L2_dACC_meants.txt"))
+  run1_file <- file.path(folder, paste0("sub-", sub, "_run-1_dACC_meants.txt"))
+  
+  if (file.exists(l2_file)) {
+    as.numeric(scan(l2_file, what = numeric(), quiet = TRUE))
+  } else {
+    as.numeric(scan(run1_file, what = numeric(), quiet = TRUE))
+  }
+}
+
+# helper function to read the correct file
+read_dACC_social_meants <- function(folder, sub) {
+  l2_file  <- file.path(folder, paste0("sub-", sub, "_L2_dACC_social_meants.txt"))
+  run1_file <- file.path(folder, paste0("sub-", sub, "_run-1_dACC_social_meants.txt"))
+  
+  if (file.exists(l2_file)) {
+    as.numeric(scan(l2_file, what = numeric(), quiet = TRUE))
+  } else {
+    as.numeric(scan(run1_file, what = numeric(), quiet = TRUE))
+  }
+}
+
+# loop over subjects
+for (i in seq_along(subs)) {
+  s <- subs[i]
+  
+  out_dACC$trust_dACC[i] <- read_dACC_meants("dACC_trust_meants", s)
+  out_dACC$trust_dACC_social[i]   <- read_dACC_social_meants("dACC_trust_social_meants", s)
+  out_dACC$ugr_dACC[i] <- read_dACC_meants("dACC_ugr_meants", s)
+  out_dACC$ugr_dACC_social[i]   <- read_dACC_social_meants("dACC_ugr_social_meants", s)
+}
+
+data <- merge(data, out_dACC,
+              by = "sub_id",
+              all.x = TRUE)
+```
+#Get demographics
+```{r}
+library(dplyr)
+library(knitr)
+library(kableExtra)
+# behavioral_data$sub_id is numeric → convert to character
+behavioral_data$sub_id <- as.character(behavioral_data$sub_id)
+
+# Keep only behavioral_data rows where subject is in sub_ids
+behavioral_data <- behavioral_data %>%
+  filter(sub_id %in% data$sub_id)
+
+
+# df = your long dataframe
+# assumes columns: sub_id, sub_age, sub_gender
+demo_tbl <- behavioral_data %>%
+  # 1) one row per subject (prevents long-format duplication)
+  group_by(sub_id) %>%
+  summarise(
+    sub_gender = dplyr::first(na.omit(sub_gender)),
+    sub_age    = dplyr::first(na.omit(sub_age)),
+    .groups = "drop"
+  ) %>%
+  filter(!is.na(sub_gender), !is.na(sub_age)) %>%
+  
+  # 2) summarize by gender
+  group_by(sub_gender) %>%
+  summarise(
+    Count    = n(),
+    Percent  = 100 * n() / n_distinct(.$sub_id),  # will be overwritten below; see note
+    Mean_Age = mean(sub_age),
+    SD_Age   = sd(sub_age),
+    Min_Age  = min(sub_age),
+    Max_Age  = max(sub_age),
+    .groups = "drop"
+  )
+
+# Fix Percent denominator to be TOTAL N across all subjects (not within-group)
+N_total <- behavioral_data %>%
+  distinct(sub_id, sub_gender, sub_age) %>%
+  filter(!is.na(sub_gender), !is.na(sub_age)) %>%
+  nrow()
+
+demo_tbl <- demo_tbl %>%
+  mutate(
+    Percent  = 100 * Count / N_total,
+    Mean_Age = round(Mean_Age, 1),
+    SD_Age   = round(SD_Age, 1),
+    Min_Age  = round(Min_Age, 2),
+    Max_Age  = round(Max_Age, 2),
+    Percent  = round(Percent, 1)
+  ) %>%
+  rename(Gender = sub_gender) %>%
+  arrange(match(Gender, c("Female","Male","Non-Binary")))  # optional ordering
+
+# 3) print like your example
+kable(
+  demo_tbl,
+  caption = "Participant Demographics by Gender",
+  align = "lrrrrrr"
+) %>%
+  kable_styling(full_width = FALSE)
+```
+
+
+
+
+
+# Testing H1.1
+We hypothesize that elevated dACC responses to unreciprocated trust in the Trust Game will be associated with a greater tendency to reject offers in the UG 
+
+**DV: Sensitivity to fairness sloped; IV: ACC Activation during TG, age, sex**
+```{r}
+H1.1_slopes = lm(slope_all ~ trust_dACC + sub_age + male, data = data)
+summary(H1.1_slopes)
+```
+
+**DV: UG Rejection rates; IV: dACC Activation during TG, age, sex**
+```{r}
+H1.1_rates = lm(percent_accept ~ trust_dACC + sub_age + male, data = data)
+summary(H1.1_rates)
+```
+
+
+**DV: Sensitivity to fairness sloped; IV: AIns Activation during TG, age, sex**
+```{r}
+H1.1_slopes = lm(slope_all ~ trust_AIns + sub_age + male, data = data)
+summary(H1.1_slopes)
+
+H1.1_slopes = lm(slope_all ~ ugr_AIns + sub_age + male, data = data)
+summary(H1.1_slopes)
+```
+
+**DV: UG Rejection rates; IV: AIns Activation during TG, age, sex**
+```{r}
+H1.1_rates = lm(percent_accept ~ trust_AIns + sub_age + male, data = data)
+summary(H1.1_rates)
+
+H1.1_rates = lm(percent_accept ~ ugr_AIns + sub_age + male, data = data)
+summary(H1.1_rates)
+```
+
+
+
+```{r}
+H1.1_slopes = lm(slope_all ~ ugr_AIns + sub_age + male, data = data)
+summary(H1.1_slopes)
+```
+
+```{r}
+H1.1_rates = lm(percent_accept ~ ugr_AIns + sub_age + male, data = data)
+summary(H1.1_rates)
+```
+
+```{r}
+H1.2_slopes = lm(slope_social ~ ugr_AIns_social + sub_age + male, data = data)
+summary(H1.2_slopes)
+```
+
+```{r}
+H1.2_rates = lm(percent_accept_social ~ ugr_AIns_social + sub_age + male, data = data)
+summary(H1.2_rates)
+```
+
+
+
+#ANOVA Results
+```{r}
+library(tidyverse)
+library(ez)
+
+### ----------------------------------------------------------
+### STEP 1 — CLEAN subject IDs in sub_ids
+### ----------------------------------------------------------
+
+
+# behavioral_data$sub_id is numeric → convert to character
+behavioral_data$sub_id <- as.character(behavioral_data$sub_id)
+
+# Keep only behavioral_data rows where subject is in sub_ids
+behavioral_data <- behavioral_data %>%
+  filter(sub_id %in% data$sub_id)
+
+
+### ----------------------------------------------------------
+### STEP 2 — PREPARE TRIAL-LEVEL ACCEPTANCE VARIABLE
+### ----------------------------------------------------------
+
+behavioral_data <- behavioral_data %>%
+  mutate(accept_binary = ifelse(accept_reject == "Accept", 1, 0))
+
+### ----------------------------------------------------------
+### STEP 3 — CREATE SUBJECT × FAIRNESS × CONDITION ACCEPTANCE RATES
+### ----------------------------------------------------------
+
+anova_df <- behavioral_data %>%
+  group_by(sub_id, beh_fairness_perc, condition) %>%
+  summarise(
+    accept_rate = mean(accept_binary, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    # order fairness levels (largest → smallest)
+    beh_fairness_perc = factor(
+      beh_fairness_perc,
+      levels = c("50%", "25%", "10%", "5%")
+    ),
+    # ensure correct ordering of social condition
+    condition = factor(condition, levels = c("social", "nonsocial"))
+  )
+
+### ----------------------------------------------------------
+### STEP 4 — RUN TWO-WAY REPEATED-MEASURES ANOVA
+### ----------------------------------------------------------
+
+anova_results <- ezANOVA(
+  data    = anova_df,
+  dv      = accept_rate,
+  wid     = sub_id,
+  within  = .(beh_fairness_perc, condition),
+  type    = 3,
+  detailed = TRUE
+)
+
+anova_results
+```
+
+
+
+
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(scales)
+
+plot_data <- behavioral_data %>%
+  mutate(
+    accept_binary = ifelse(accept_reject == "Accept", 1, 0)
+  )
+
+plot_df <- plot_data %>%
+  group_by(beh_fairness_perc, condition) %>%
+  summarise(
+    n           = dplyr::n(),
+    accept_rate = mean(accept_binary, na.rm = TRUE),
+    sd_accept   = sd(accept_binary, na.rm = TRUE),
+    se_accept   = sd_accept / sqrt(n),
+    .groups     = "drop"
+  ) %>%
+  mutate(
+    condition = factor(condition, levels = c("social", "nonsocial")),
+    ymin = pmax(0, accept_rate - se_accept),
+    ymax = pmin(1, accept_rate + se_accept),
+    beh_fairness_perc = factor(
+      beh_fairness_perc,
+      levels = c("5%", "10%", "25%", "50%")
+    )
+  )
+
+pd <- position_dodge(width = 0.75)
+
+p <- ggplot(plot_df, aes(x = beh_fairness_perc, y = accept_rate, fill = condition)) +
+  geom_col(
+  width = 0.7,
+  position = pd,
+  linewidth = 0
+  ) +
+  geom_errorbar(
+    aes(ymin = ymin, ymax = ymax, group = condition),
+    width = 0.15,
+    position = pd,
+    linewidth = 0.3
+  ) +
+  scale_y_continuous(
+    name   = "Acceptance Rate",
+    limits = c(0, 1),
+    breaks = c(0, 0.25, 0.50, 0.75, 1.00),
+    labels = label_percent(accuracy = 1),
+    expand = expansion(mult = c(0, 0.02))
+  ) +
+  scale_x_discrete(
+    name = "Offer Fairness (% of endowment)"
+  ) +
+  scale_fill_manual(
+    values = c("social" = "#E65D2C", "nonsocial" = "#0870B7"),
+    breaks = c("social", "nonsocial"),
+    labels = c("Social", "Nonsocial")
+  ) +
+  theme_classic(base_size = 14) +
+  theme(
+    panel.grid = element_blank(),
+    axis.line = element_line(linewidth = 0.4),
+    axis.ticks = element_line(linewidth = 0.4),
+    axis.title = element_text(size = 15),
+    axis.text = element_text(size = 12),
+    legend.title = element_blank()
+  )
+
+p
+
+ggsave(
+  "acceptance_rate_plot.tiff",
+  plot = p,
+  width = 6,
+  height = 5,
+  dpi = 600
+)
+
+ggsave("acceptance_rate_plot_svg.svg", plot = p, width = 6, height = 5)
+```
+
+
+# Testing H1.2
+We hypothesize that elevated dACC responses to unreciprocated trust in the Trust Game will be associated with a greater tendency to reject offers in the UG *FOR SOCIAL PARTNER*
+
+**DV: Sensitivity to fairness slope during social UG trials; IV: dACC Activation during TG with social partner, age, sex**
+```{r}
+H1.2_slopes = lm(slope_social ~ trust_dACC_social + sub_age + male, data = data)
+summary(H1.2_slopes)
+```
+
+**DV: UG Rejection rates during social trials; IV: dACC Activation during TG with social partner, age, sex**
+```{r}
+H1.2_rates = lm(percent_accept_social ~ trust_dACC_social + sub_age + male, data = data)
+summary(H1.2_rates)
+```
+
+
+**DV: Sensitivity to fairness slope during social UG trials; IV: AIns Activation during TG with social partner, age, sex**
+```{r}
+H1.2_slopes = lm(slope_social ~ trust_AIns_social + sub_age + male, data = data)
+summary(H1.2_slopes)
+
+H1.2_slopes = lm(slope_social ~ ugr_AIns_social + sub_age + male, data = data)
+summary(H1.2_slopes)
+```
+
+**DV: UG Rejection rates during social trials; IV: AIns Activation during TG with social partner, age, sex**
+```{r}
+H1.2_rates = lm(percent_accept_social ~ trust_AIns_social + sub_age + male, data = data)
+summary(H1.2_rates)
+
+H1.2_rates = lm(percent_accept_social ~ ugr_AIns_social + sub_age + male, data = data)
+summary(H1.2_rates)
+```
+
+
+
+
+
+
+# Testing H2.1 and H2.2
+```{r}
+H2.1 = lm(ugr_dACC ~ trust_dACC + sub_age + male, data = data)
+summary(H2.1)
+
+H2.2 = lm(ugr_dACC_social ~ trust_dACC_social + sub_age + male, data = data)
+summary(H2.2)
+
+H2.1 = lm(ugr_AIns ~ trust_AIns, data = data)
+summary(H2.1)
+
+H2.2 = lm(ugr_AIns_social ~ trust_AIns_social, data = data)
+summary(H2.2)
+```
+
+```{r}
+library(tidyverse)
+
+plot_data <- data %>%
+  drop_na(ugr_AIns, trust_AIns, sub_age, male) %>%
+  mutate(
+    ugr_AIns_adj = resid(lm(ugr_AIns ~ sub_age + male, data = .)) + 
+      mean(ugr_AIns, na.rm = TRUE),
+    
+    trust_AIns_adj = resid(lm(trust_AIns ~ sub_age + male, data = .)) + 
+      mean(trust_AIns, na.rm = TRUE)
+  )
+
+p = ggplot(plot_data, aes(x = trust_AIns_adj, y = ugr_AIns_adj)) +
+  geom_point(size = 2.5, alpha = 0.75) +
+  geom_smooth(
+    method = "lm",
+    se = TRUE,
+    linewidth = 1,
+    color = "#F5E911"
+  ) +
+  labs(
+    x = "TG aIns Response to Defected Trust (z)",
+    y = "UG aIns Response to Unfairness (z)",
+    title = "Association Between TG and UG aIns Response to Norm Violations"
+  ) +
+  theme_classic(base_size = 14) +
+  theme(
+    axis.text = element_text(size = 16),
+    axis.title = element_text(size = 18)
+  )
+
+ggsave("crosstask_aIns_plot.svg", plot = p, width = 6, height = 5)
+```
+
