@@ -52,20 +52,15 @@ Tracked directories include:
 ---
 
 ## Running the analyses
+Analyses for this project are executed via a sequence of bash scripts corresponding
+to first-, second-, and third-level fMRI analyses.
+
+Run the following commands in order:
 
 
-Get the first 225 subjects with usuable neuroimaging and behavioral data
+
+Get the first 225 subjects with usuable neuroimaging and behavioral data; This should produce subject_list_n225.txt which is used as input in the next steps
 bash get_n225_sublist.sh
-This should produce subject_list_n225.txt which is used as input in the next steps
-
-Remove participants with more than 25% of missing trials (preregistered exclusion)
-Rscript check_trust_validtrials.R
-Rscript check_ugr_validtrials.R
-
-Get the final subject list for analysis by applying the remaining preregistered exclusions
-Requires Age.csv and mriqc-metrics_allTasks_n299_ses-01.xlsx as well as output from previous steps
-Rscript get_master_sublist.R
-This should produice sublist_n139.txt
 
 Produce EVfiles for Trust and UGR tasks
 For Trust:
@@ -76,34 +71,29 @@ For UGR:
 matlab convertUGR_BIDS.m
 bash run_gen3colfilesUGR.sh
 
-Analyses for this project are executed via a sequence of bash scripts corresponding
-to first-, second-, and third-level fMRI analyses.
-
-Run the following commands in order:
-
-```bash
-bash run_L1stats-ugr.sh
-bash run_L2stats-ugr.sh
-
-check_trust_prereqs.sh
-get_trust_filepaths.R (gives L3 filepaths for trust)
-
-bash run_L3stats-ugr.sh
-
-
-
-REWORKED PIPELINE
-bash get_n225_sublist.sh
-matlab convertTrust_BIDS.m
-bash run_BIDSto3colTRUST.sh
 check_EVfiles.sh
+
+Remove participants with more than 25% of missing trials (preregistered exclusion)
 check_dualtask_validtrials.R
-get_master_sublist.R
+
+Get the final subject list for analysis by applying the remaining preregistered exclusions
+Requires Age.csv and mriqc-metrics_allTasks_n299_ses-01.xlsx as well as output from previous steps
+Rscript get_master_sublist.R
+This should produce sublist_n132.txt
 
 get_dualtask_filepaths.R
+sed -i 's/\r$//' sublist_n132.txt
 
-sed -i 's/\r$//' sublist_n137.txt
+# run fMRI statistics
+bash run_L1stats-trust.sh
+bash run_L2stats-trust.sh
+bash run_L3stats-trust.sh
 
+bash run_L1stats-ugr.sh
+bash run_L2stats-ugr.sh
+bash run_L3stats-ugr.sh
+
+# behavioral statistics
 
 ## Reproducibility notes
 

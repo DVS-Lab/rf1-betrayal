@@ -22,11 +22,11 @@ maindir="$(dirname "$scriptdir")"
 copenum=$1
 copename=$2
 analysis=$3
-REPLACEME=ppi # act  ppi, nppi # this defines the parts of the path that differ across analyses
+REPLACEME=act # act  ppi, nppi # this defines the parts of the path that differ across analyses
 type=${REPLACEME} # For output template
 
 # Variables that change per analysis. Check carefully! 
-covariate=pTPJxAQ
+covariate=full
 
 N=132 # update with total n after exclusions
 
