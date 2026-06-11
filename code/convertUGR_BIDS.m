@@ -7,7 +7,7 @@ basedir = project_root;   % where BIDS folder will live
 datadir = '/ZPOOL/data/projects/rf1-sra/stimuli/Scan-Lets_Make_A_Deal';
 
 %% ---- LOAD SUBJECT LIST ----
-sublist_file = fullfile(project_root, 'code', 'sublist_n139.txt');
+sublist_file = fullfile(project_root, 'code', 'sublist_n132.txt');
 assert(isfile(sublist_file), 'Subject list file not found.')
 
 subjects = readmatrix(sublist_file);
