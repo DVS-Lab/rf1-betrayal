@@ -83,6 +83,7 @@
     "final_voxels": 497
   },
   "voxel_index_convention": "i/j/k are zero-based NIfTI indices; MNI coordinates are millimetres",
+  "mni_y_color_scale": "continuous MNI y-coordinate in millimetres; negative values are more posterior and positive values are more anterior. No insula subdivision or threshold is imposed.",
   "correspondence": {
     "cope": {
       "pearson_r": 0.32313841422195505,
@@ -117,10 +118,14 @@
     "cope_voxel_table": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_cope.tsv",
     "cope_scatter_pdf": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_cope_scatter.pdf",
     "cope_scatter_png": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_cope_scatter.png",
+    "cope_scatter_colored_mni_y_pdf": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_cope_scatter_colored_mni-y.pdf",
+    "cope_scatter_colored_mni_y_png": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_cope_scatter_colored_mni-y.png",
     "cope_signed_odr_residual_map": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_cope_signed_odr_residual.nii.gz",
     "zstat_voxel_table": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_zstat.tsv",
     "zstat_scatter_pdf": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_zstat_scatter.pdf",
     "zstat_scatter_png": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_zstat_scatter.png",
+    "zstat_scatter_colored_mni_y_pdf": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_zstat_scatter_colored_mni-y.pdf",
+    "zstat_scatter_colored_mni_y_png": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_zstat_scatter_colored_mni-y.png",
     "zstat_signed_odr_residual_map": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_zstat_signed_odr_residual.nii.gz",
     "metadata": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/analysis_metadata.json"
   }
