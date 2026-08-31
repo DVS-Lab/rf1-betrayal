@@ -1,5 +1,5 @@
 {
-  "analysis": "descriptive voxelwise cross-task correspondence in anatomical left insula",
+  "analysis": "descriptive voxelwise left-insula and atlas-wide Harvard-Oxford cross-task correspondence with across-subject SEM error bars",
   "implementation": "Python",
   "package_versions": {
     "numpy": "2.1.3",
@@ -74,7 +74,12 @@
     "left_hemisphere_rule": "voxel center MNI x < 0 mm",
     "initial_left_insula_voxels_atlas_grid": 10648,
     "left_insula_voxels_reference_grid": 497,
-    "mask_resampled_nearest_neighbor": true
+    "mask_resampled_nearest_neighbor": true,
+    "cortical_xml_labels": 48,
+    "cortical_rois_retained_after_coverage": 48,
+    "cortical_rois_empty_after_coverage": 0,
+    "cortical_roi_map_resampled_nearest_neighbor": true,
+    "cortical_roi_definition": "one ROI per integer/XML label in the Harvard-Oxford cortical maxprob-thr25 atlas; labels are not post hoc subdivided by hemisphere"
   },
   "coverage": {
     "criterion": "intersection of every required subject's final TG and UGR FEAT masks",
@@ -84,35 +89,63 @@
   },
   "voxel_index_convention": "i/j/k are zero-based NIfTI indices; MNI coordinates are millimetres",
   "mni_y_color_scale": "continuous MNI y-coordinate in millimetres; negative values are more posterior and positive values are more anterior. No insula subdivision or threshold is imposed.",
-  "correspondence": {
+  "voxelwise_correspondence": {
     "cope": {
-      "pearson_r": 0.32313841422195505,
-      "odr_intercept": 0.5764178852618155,
-      "odr_slope": 0.008824814553037841,
-      "odr_intercept_sd": 0.05106585456429053,
-      "odr_slope_sd": 0.0011608534872300492,
+      "pearson_r": 0.3231384142219552,
+      "odr_intercept": 0.5764178756328642,
+      "odr_slope": 0.008824814305775662,
+      "odr_intercept_sd": 0.0510658546060682,
+      "odr_slope_sd": 0.001160853483708567,
       "odr_stop_reason": [
         "Sum of squares convergence"
       ],
       "method": "unweighted orthogonal distance regression"
     },
     "zstat": {
-      "pearson_r": 0.36238864919436975,
-      "odr_intercept": 0.08781716736385912,
-      "odr_slope": 0.4812836473540472,
-      "odr_intercept_sd": 0.006696989093717801,
-      "odr_slope_sd": 0.03429040372917105,
+      "pearson_r": 0.3623886491943695,
+      "odr_intercept": 0.08781716609510239,
+      "odr_slope": 0.481283643885808,
+      "odr_intercept_sd": 0.006696989498769803,
+      "odr_slope_sd": 0.03429040414558685,
       "odr_stop_reason": [
         "Sum of squares convergence"
       ],
       "method": "unweighted orthogonal distance regression"
     }
   },
+  "harvardoxford_roi_correspondence": {
+    "cope": {
+      "pearson_r": 0.7733522474185918,
+      "odr_intercept": 0.36377958268746985,
+      "odr_slope": 0.021542870300474016,
+      "odr_intercept_sd": 0.08233792487526774,
+      "odr_slope_sd": 0.002603066665569531,
+      "odr_stop_reason": [
+        "Sum of squares convergence"
+      ],
+      "method": "unweighted orthogonal distance regression"
+    },
+    "zstat": {
+      "pearson_r": 0.7976460062006127,
+      "odr_intercept": 0.0546678104303235,
+      "odr_slope": 0.6940721515050927,
+      "odr_intercept_sd": 0.012220275722737125,
+      "odr_slope_sd": 0.06953965661012752,
+      "odr_stop_reason": [
+        "Sum of squares convergence"
+      ],
+      "method": "unweighted orthogonal distance regression"
+    }
+  },
+  "error_bars": "horizontal TG and vertical UGR error bars are SEM across the same 132 participants",
   "signed_residual_definition": "(UG - (ODR intercept + ODR slope * TG)) / sqrt(1 + slope^2); positive means a stronger UG/fairness response than predicted from the TG reciprocity response, while negative means a weaker UG/fairness response than predicted. Residual maps are zero outside the saved final coverage mask.",
-  "inference_note": "Pearson r and ODR are descriptive. No conventional voxelwise Pearson p-value is computed because neighboring voxels are spatially dependent.",
+  "statistical_scope": "Pearson r, ODR, signed residuals, and SEM error bars are descriptive. No voxelwise or ROI-wise hypothesis tests, p-values, significance flags, or multiple-comparison corrections are computed.",
   "outputs": {
     "anatomical_mask_reference_grid": "/ZPOOL/data/projects/rf1-betrayal/masks/left_insula_maxprob-thr25_anatomical_refgrid.nii.gz",
     "final_dualtask_coverage_mask": "/ZPOOL/data/projects/rf1-betrayal/masks/left_insula_maxprob-thr25_dualtask_coverage_mask.nii.gz",
+    "harvardoxford_atlas_reference_grid": "/ZPOOL/data/projects/rf1-betrayal/masks/harvardoxford_cortical_maxprob-thr25_refgrid.nii.gz",
+    "harvardoxford_atlas_dualtask_coverage": "/ZPOOL/data/projects/rf1-betrayal/masks/harvardoxford_cortical_maxprob-thr25_dualtask_coverage.nii.gz",
+    "harvardoxford_roi_coverage_exclusions": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/harvardoxford_roi_coverage_exclusions.tsv",
     "included_subjects": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/included_subjects.tsv",
     "excluded_subjects": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/excluded_subjects.tsv",
     "cope_voxel_table": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_cope.tsv",
@@ -127,6 +160,14 @@
     "zstat_scatter_colored_mni_y_pdf": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_zstat_scatter_colored_mni-y.pdf",
     "zstat_scatter_colored_mni_y_png": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_zstat_scatter_colored_mni-y.png",
     "zstat_signed_odr_residual_map": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/voxelwise_cross_task_insula_zstat_signed_odr_residual.nii.gz",
+    "harvardoxford_roi_cope_summary": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/harvardoxford_roi_summary_cope.tsv",
+    "harvardoxford_roi_cope_subject_values": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/harvardoxford_roi_subject_values_cope.tsv",
+    "harvardoxford_roi_cope_scatter_pdf": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/harvardoxford_roi_cope_scatter.pdf",
+    "harvardoxford_roi_cope_scatter_png": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/harvardoxford_roi_cope_scatter.png",
+    "harvardoxford_roi_zstat_summary": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/harvardoxford_roi_summary_zstat.tsv",
+    "harvardoxford_roi_zstat_subject_values": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/harvardoxford_roi_subject_values_zstat.tsv",
+    "harvardoxford_roi_zstat_scatter_pdf": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/harvardoxford_roi_zstat_scatter.pdf",
+    "harvardoxford_roi_zstat_scatter_png": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/harvardoxford_roi_zstat_scatter.png",
     "metadata": "/ZPOOL/data/projects/rf1-betrayal/code/voxelwise_cross_task_insula_output/analysis_metadata.json"
   }
 }
