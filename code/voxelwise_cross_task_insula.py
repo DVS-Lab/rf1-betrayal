@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Descriptive voxelwise TG--UG correspondence in anatomical left insula.
+"""Descriptive TG--UG correspondence in left insula and Harvard-Oxford ROIs.
 
 This analysis is separate from the existing FEAT workflows. It reads the final
 subject-level inputs named in the N=132 L3 templates, never reruns FEAT, and
@@ -74,34 +74,14 @@ class SubjectRoute:
         return match.group(1) if match else "both"
 
 
-class RunningStats:
-    """Vectorized Welford summaries without a subject-by-voxel output table."""
-
-    def __init__(self, size: int) -> None:
-        self.n = 0
-        self.mean = np.zeros(size, dtype=np.float64)
-        self.m2 = np.zeros(size, dtype=np.float64)
-
-    def update(self, values: np.ndarray) -> None:
-        self.n += 1
-        delta = values - self.mean
-        self.mean += delta / self.n
-        self.m2 += delta * (values - self.mean)
-
-    def finish(self) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
-        if self.n < 2:
-            raise RuntimeError("At least two subjects are required.")
-        sd = np.sqrt(np.maximum(self.m2 / (self.n - 1), 0))
-        return self.mean, sd, sd / np.sqrt(self.n)
-
-
 def parse_args() -> argparse.Namespace:
     script = Path(__file__).resolve()
     project_root = script.parent.parent
     parser = argparse.ArgumentParser(
         description=(
-            "Create COPE and mean-subject-ZSTAT voxelwise TG--UG left-insula "
-            "correspondence tables, ODR plots, and signed residual maps."
+            "Create descriptive COPE and mean-subject-ZSTAT TG--UG correspondence "
+            "tables and SEM-error-bar plots for left-insula voxels and "
+            "Harvard-Oxford cortical ROIs."
         )
     )
     parser.add_argument(
@@ -498,22 +478,36 @@ def choose_atlas(
     )
 
 
-def insula_label_from_xml(xml_path: Path) -> tuple[int, int, str]:
+def atlas_labels_from_xml(xml_path: Path) -> list[dict[str, Any]]:
     root = ET.parse(xml_path).getroot()
-    matches: list[tuple[int, str]] = []
+    labels: list[dict[str, Any]] = []
     for label in root.findall(".//label"):
         name = " ".join((label.text or "").split())
-        if name.casefold() == "insular cortex":
-            if "index" not in label.attrib:
-                raise ValueError(f"Insular Cortex label lacks an index in {xml_path}")
-            matches.append((int(label.attrib["index"]), name))
-    if len(matches) != 1:
-        raise ValueError(
-            f"Expected one XML label named 'Insular Cortex' in {xml_path}; found {matches}"
+        if not name:
+            continue
+        if "index" not in label.attrib:
+            raise ValueError(f"Atlas label {name!r} lacks an index in {xml_path}")
+        xml_index = int(label.attrib["index"])
+        labels.append(
+            {
+                "xml_index": xml_index,
+                "nifti_value": xml_index + 1,
+                "name": name,
+            }
         )
-    xml_index, name = matches[0]
-    # FSL XML indices are zero-based; value 0 in a max-probability atlas is background.
-    return xml_index, xml_index + 1, name
+    if not labels:
+        raise ValueError(f"No labels found in Harvard-Oxford XML: {xml_path}")
+    if len({label["nifti_value"] for label in labels}) != len(labels):
+        raise ValueError(f"Duplicate label indices found in {xml_path}")
+    return sorted(labels, key=lambda label: label["nifti_value"])
+
+
+def insula_label_from_xml(labels: list[dict[str, Any]]) -> tuple[int, int, str]:
+    matches = [label for label in labels if label["name"].casefold() == "insular cortex"]
+    if len(matches) != 1:
+        raise ValueError(f"Expected one XML label named 'Insular Cortex'; found {matches}")
+    label = matches[0]
+    return label["xml_index"], label["nifti_value"], label["name"]
 
 
 def make_left_insula_mask(
@@ -554,6 +548,91 @@ def make_left_insula_mask(
     return left_reference, native_count, reference_count, was_resampled
 
 
+def make_atlas_roi_map(
+    atlas: nib.spatialimages.SpatialImage,
+    labels: list[dict[str, Any]],
+    reference: nib.spatialimages.SpatialImage,
+) -> tuple[np.ndarray, dict[int, int], dict[int, int], bool]:
+    """Put every binary HO cortical ROI onto the statistical reference grid."""
+    atlas_data = np.asanyarray(atlas.dataobj)
+    label_map = np.zeros(reference.shape, dtype=np.int16)
+    native_counts: dict[int, int] = {}
+    reference_counts: dict[int, int] = {}
+    was_resampled = not same_grid(atlas, reference)
+    for label in labels:
+        value = int(label["nifti_value"])
+        binary = np.isclose(atlas_data, value)
+        native_counts[value] = int(binary.sum())
+        if was_resampled:
+            source = nib.Nifti1Image(binary.astype(np.uint8), atlas.affine)
+            resampled = resample_from_to(
+                source,
+                (reference.shape, reference.affine),
+                order=0,
+                mode="constant",
+                cval=0,
+            )
+            binary_reference = np.asanyarray(resampled.dataobj) > 0.5
+        else:
+            binary_reference = binary
+        overlap = binary_reference & (label_map != 0)
+        if np.any(overlap):
+            raise ValueError(
+                "Nearest-neighbor resampling produced overlapping Harvard-Oxford "
+                f"binary ROIs at label {value}."
+            )
+        label_map[binary_reference] = value
+        reference_counts[value] = int(binary_reference.sum())
+    if not np.any(label_map):
+        raise ValueError("Harvard-Oxford cortical ROI map is empty on the reference grid.")
+    return label_map, native_counts, reference_counts, was_resampled
+
+
+def make_roi_info(
+    labels: list[dict[str, Any]],
+    covered_label_map: np.ndarray,
+    native_counts: dict[int, int],
+    reference_counts: dict[int, int],
+    reference: nib.spatialimages.SpatialImage,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    retained: list[dict[str, Any]] = []
+    empty: list[dict[str, Any]] = []
+    for label in labels:
+        value = int(label["nifti_value"])
+        covered_indices = np.argwhere(covered_label_map == value)
+        reference_count = reference_counts.get(value, 0)
+        base = {
+            "xml_index": int(label["xml_index"]),
+            "nifti_value": value,
+            "roi_name": label["name"],
+            "native_atlas_voxels": native_counts.get(value, 0),
+            "reference_grid_voxels": reference_count,
+            "dualtask_covered_voxels": int(len(covered_indices)),
+            "coverage_fraction_reference_roi": (
+                float(len(covered_indices) / reference_count)
+                if reference_count > 0
+                else 0.0
+            ),
+        }
+        if len(covered_indices) == 0:
+            empty.append({**base, "reason": "zero voxels after dual-task coverage"})
+            continue
+        centroid = np.mean(
+            nib.affines.apply_affine(reference.affine, covered_indices), axis=0
+        )
+        retained.append(
+            {
+                **base,
+                "mni_centroid_x_mm": float(centroid[0]),
+                "mni_centroid_y_mm": float(centroid[1]),
+                "mni_centroid_z_mm": float(centroid[2]),
+            }
+        )
+    if not retained:
+        raise ValueError("No Harvard-Oxford cortical ROIs remain after coverage filtering.")
+    return retained, empty
+
+
 def coverage_intersection(
     included: list[tuple[SubjectRoute, SubjectRoute]],
     reference_shape: tuple[int, ...],
@@ -582,44 +661,83 @@ def save_nifti(
     nib.save(image, str(path))
 
 
-def extract_summaries(
-    included: list[tuple[SubjectRoute, SubjectRoute]], voxel_indices: np.ndarray
-) -> dict[str, dict[str, np.ndarray]]:
-    selection = tuple(voxel_indices.T)
-    accumulators = {
-        "cope_tg": RunningStats(len(voxel_indices)),
-        "cope_ug": RunningStats(len(voxel_indices)),
-        "zstat_tg": RunningStats(len(voxel_indices)),
-        "zstat_ug": RunningStats(len(voxel_indices)),
+def summarize_subject_values(values: np.ndarray) -> dict[str, np.ndarray]:
+    if values.shape[0] < 2:
+        raise RuntimeError("At least two subjects are required for summary statistics.")
+    sd = np.std(values, axis=0, ddof=1)
+    return {
+        "mean": np.mean(values, axis=0),
+        "sd": sd,
+        "sem": sd / np.sqrt(values.shape[0]),
     }
-    for tg, ug in included:
+
+
+def extract_subject_values(
+    included: list[tuple[SubjectRoute, SubjectRoute]],
+    voxel_indices: np.ndarray,
+    covered_roi_map: np.ndarray,
+    roi_label_values: list[int],
+) -> tuple[dict[str, np.ndarray], dict[str, np.ndarray]]:
+    selection = tuple(voxel_indices.T)
+    n_subjects = len(included)
+    voxel_values = {
+        name: np.empty((n_subjects, len(voxel_indices)), dtype=np.float64)
+        for name in ("cope_tg", "cope_ug", "zstat_tg", "zstat_ug")
+    }
+    roi_values = {
+        name: np.empty((n_subjects, len(roi_label_values)), dtype=np.float64)
+        for name in ("cope_tg", "cope_ug", "zstat_tg", "zstat_ug")
+    }
+    roi_flat = covered_roi_map.ravel()
+    in_any_roi = roi_flat > 0
+    roi_labels_flat = roi_flat[in_any_roi]
+    max_label = int(max(roi_label_values))
+    roi_counts = np.bincount(roi_labels_flat, minlength=max_label + 1)
+    if any(roi_counts[value] == 0 for value in roi_label_values):
+        raise ValueError("A requested Harvard-Oxford ROI has zero covered voxels.")
+
+    for subject_index, (tg, ug) in enumerate(included):
         # Retain both stored contrast directions; no multiplication by -1.
         arrays = {
-            "cope_tg": np.asanyarray(nib.load(str(tg.cope)).dataobj)[selection],
-            "cope_ug": np.asanyarray(nib.load(str(ug.cope)).dataobj)[selection],
-            "zstat_tg": np.asanyarray(nib.load(str(tg.zstat)).dataobj)[selection],
-            "zstat_ug": np.asanyarray(nib.load(str(ug.zstat)).dataobj)[selection],
+            "cope_tg": np.asanyarray(nib.load(str(tg.cope)).dataobj),
+            "cope_ug": np.asanyarray(nib.load(str(ug.cope)).dataobj),
+            "zstat_tg": np.asanyarray(nib.load(str(tg.zstat)).dataobj),
+            "zstat_ug": np.asanyarray(nib.load(str(ug.zstat)).dataobj),
         }
-        for name, values in arrays.items():
-            values = np.asarray(values, dtype=np.float64)
-            if not np.all(np.isfinite(values)):
-                bad = int((~np.isfinite(values)).sum())
-                raise ValueError(
-                    f"sub-{tg.subject} has {bad} non-finite {name} values in the ROI."
+        for name, image_values in arrays.items():
+            voxel_vector = np.asarray(image_values[selection], dtype=np.float64)
+            roi_vector = np.asarray(image_values.ravel()[in_any_roi], dtype=np.float64)
+            if not np.all(np.isfinite(voxel_vector)) or not np.all(np.isfinite(roi_vector)):
+                bad = int((~np.isfinite(voxel_vector)).sum()) + int(
+                    (~np.isfinite(roi_vector)).sum()
                 )
-            accumulators[name].update(values)
+                raise ValueError(
+                    f"sub-{tg.subject} has {bad} non-finite {name} values in covered ROIs."
+                )
+            voxel_values[name][subject_index] = voxel_vector
+            weighted_sums = np.bincount(
+                roi_labels_flat,
+                weights=roi_vector,
+                minlength=max_label + 1,
+            )
+            roi_values[name][subject_index] = [
+                weighted_sums[value] / roi_counts[value] for value in roi_label_values
+            ]
+    return voxel_values, roi_values
 
-    result: dict[str, dict[str, np.ndarray]] = {}
+
+def summarize_quantities(values: dict[str, np.ndarray]) -> dict[str, dict[str, Any]]:
+    result: dict[str, dict[str, Any]] = {}
     for quantity in ("cope", "zstat"):
-        tg_mean, tg_sd, tg_sem = accumulators[f"{quantity}_tg"].finish()
-        ug_mean, ug_sd, ug_sem = accumulators[f"{quantity}_ug"].finish()
+        tg = summarize_subject_values(values[f"{quantity}_tg"])
+        ug = summarize_subject_values(values[f"{quantity}_ug"])
         result[quantity] = {
-            "tg_mean": tg_mean,
-            "tg_sd": tg_sd,
-            "tg_sem": tg_sem,
-            "ug_mean": ug_mean,
-            "ug_sd": ug_sd,
-            "ug_sem": ug_sem,
+            "tg_mean": tg["mean"],
+            "tg_sd": tg["sd"],
+            "tg_sem": tg["sem"],
+            "ug_mean": ug["mean"],
+            "ug_sd": ug["sd"],
+            "ug_sem": ug["sem"],
         }
     return result
 
@@ -692,39 +810,141 @@ def write_voxel_table(
             )
 
 
+def write_roi_summary_table(
+    path: Path,
+    quantity: str,
+    roi_info: list[dict[str, Any]],
+    summary: dict[str, np.ndarray],
+    fit: dict[str, Any],
+) -> None:
+    prefix = "cope" if quantity == "cope" else "subject_zstat"
+    fields = [
+        "xml_index",
+        "nifti_value",
+        "roi_name",
+        "native_atlas_voxels",
+        "reference_grid_voxels",
+        "dualtask_covered_voxels",
+        "coverage_fraction_reference_roi",
+        "mni_centroid_x_mm",
+        "mni_centroid_y_mm",
+        "mni_centroid_z_mm",
+        f"tg_mean_{prefix}_recip_gt_nonrecip",
+        f"tg_sd_{prefix}_recip_gt_nonrecip",
+        f"tg_sem_{prefix}_recip_gt_nonrecip",
+        f"ug_mean_{prefix}_fairness_pmod",
+        f"ug_sd_{prefix}_fairness_pmod",
+        f"ug_sem_{prefix}_fairness_pmod",
+        "signed_odr_residual",
+    ]
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields, delimiter="\t")
+        writer.writeheader()
+        for index, roi in enumerate(roi_info):
+            row = {
+                **roi,
+                f"tg_mean_{prefix}_recip_gt_nonrecip": summary["tg_mean"][index],
+                f"tg_sd_{prefix}_recip_gt_nonrecip": summary["tg_sd"][index],
+                f"tg_sem_{prefix}_recip_gt_nonrecip": summary["tg_sem"][index],
+                f"ug_mean_{prefix}_fairness_pmod": summary["ug_mean"][index],
+                f"ug_sd_{prefix}_fairness_pmod": summary["ug_sd"][index],
+                f"ug_sem_{prefix}_fairness_pmod": summary["ug_sem"][index],
+                "signed_odr_residual": fit["signed_orthogonal_residual"][index],
+            }
+            writer.writerow(row)
+
+
+def write_roi_subject_table(
+    path: Path,
+    quantity: str,
+    subjects: list[str],
+    roi_info: list[dict[str, Any]],
+    tg_values: np.ndarray,
+    ug_values: np.ndarray,
+) -> None:
+    fields = [
+        "subject",
+        "xml_index",
+        "nifti_value",
+        "roi_name",
+        "quantity",
+        "tg_recip_gt_nonrecip",
+        "ug_fairness_pmod",
+    ]
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields, delimiter="\t")
+        writer.writeheader()
+        for subject_index, subject in enumerate(subjects):
+            for roi_index, roi in enumerate(roi_info):
+                tg_value = float(tg_values[subject_index, roi_index])
+                ug_value = float(ug_values[subject_index, roi_index])
+                writer.writerow(
+                    {
+                        "subject": subject,
+                        "xml_index": roi["xml_index"],
+                        "nifti_value": roi["nifti_value"],
+                        "roi_name": roi["roi_name"],
+                        "quantity": quantity,
+                        "tg_recip_gt_nonrecip": tg_value,
+                        "ug_fairness_pmod": ug_value,
+                    }
+                )
+
+
 def make_plot(
     output_stem: Path,
     quantity: str,
-    x: np.ndarray,
-    y: np.ndarray,
+    summary: dict[str, np.ndarray],
     fit: dict[str, Any],
     n_subjects: int,
+    title: str,
+    point_kind: str,
     mni_y: np.ndarray | None = None,
+    annotations: list[str] | None = None,
 ) -> None:
+    """Plot descriptive task means with horizontal and vertical SEM bars."""
     import matplotlib
 
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     from matplotlib.colors import Normalize, TwoSlopeNorm
 
+    x = summary["tg_mean"]
+    y = summary["ug_mean"]
+    x_sem = summary["tg_sem"]
+    y_sem = summary["ug_sem"]
     quantity_label = (
         "mean COPE" if quantity == "cope" else "mean subject-level Z-statistic"
     )
-    fig, ax = plt.subplots(figsize=(7.1, 6.0), constrained_layout=True)
+    fig, ax = plt.subplots(figsize=(7.3, 6.2), constrained_layout=True)
+    ax.errorbar(
+        x,
+        y,
+        xerr=x_sem,
+        yerr=y_sem,
+        fmt="none",
+        ecolor="0.45",
+        elinewidth=0.5 if point_kind == "voxels" else 0.8,
+        alpha=0.24 if point_kind == "voxels" else 0.5,
+        capsize=0,
+        rasterized=True,
+        zorder=1,
+    )
     if mni_y is None:
         ax.scatter(
             x,
             y,
-            s=18,
-            alpha=0.58,
+            s=18 if point_kind == "voxels" else 30,
+            alpha=0.62 if point_kind == "voxels" else 0.8,
             color="#276FBF",
             edgecolors="white",
             linewidths=0.25,
             rasterized=True,
+            zorder=2,
         )
     else:
         if len(mni_y) != len(x):
-            raise ValueError("MNI y-coordinate vector does not match the voxel count.")
+            raise ValueError("MNI y-coordinate vector does not match the point count.")
         # Draw posterior voxels first and anterior voxels last for deterministic
         # rendering where points overlap. The colour scale itself remains
         # continuous and does not impose an anatomical subdivision.
@@ -746,11 +966,26 @@ def make_plot(
             edgecolors="white",
             linewidths=0.2,
             rasterized=True,
+            zorder=2,
         )
         colorbar = fig.colorbar(points, ax=ax, pad=0.02)
         colorbar.set_label(
-            "MNI y-coordinate (mm)\nposterior (−) to anterior (+)", fontsize=9.5
+            "MNI y-coordinate (mm)\nposterior (-) to anterior (+)", fontsize=9.5
         )
+    if annotations is not None:
+        if len(annotations) != len(x):
+            raise ValueError("Point annotations do not match the plotted point count.")
+        for point_x, point_y, annotation in zip(x, y, annotations, strict=True):
+            ax.annotate(
+                annotation,
+                (point_x, point_y),
+                xytext=(2, 2),
+                textcoords="offset points",
+                fontsize=6.2,
+                color="0.2",
+                alpha=0.85,
+                zorder=4,
+            )
     x_line = np.linspace(float(np.min(x)), float(np.max(x)), 250)
     ax.plot(
         x_line,
@@ -758,24 +993,24 @@ def make_plot(
         color="#B23A48",
         linewidth=2.2,
         label="ODR fit",
+        zorder=3,
     )
     ax.set_xlabel(
-        f"Trust Game: reciprocated > nonreciprocated\n({quantity_label})",
+        f"Trust Game: reciprocated > nonreciprocated\n({quantity_label}; error bars = SEM)",
         fontsize=11,
     )
     ax.set_ylabel(
-        f"Ultimatum Game: fairness parametric modulation\n({quantity_label})",
+        f"Ultimatum Game: fairness parametric modulation\n({quantity_label}; error bars = SEM)",
         fontsize=11,
     )
-    title = "Voxelwise cross-task correspondence in anatomical left insula"
     if mni_y is not None:
-        title += "\ncolored by anterior–posterior location"
+        title += "\ncolored by anterior-posterior location"
     ax.set_title(title, fontsize=12.5)
     ax.text(
         0.03,
         0.97,
         (
-            f"N = {n_subjects} subjects; V = {len(x)} voxels\n"
+            f"N = {n_subjects} subjects; {point_kind} = {len(x)}\n"
             f"Pearson r = {fit['pearson_r']:.3f}\n"
             f"ODR: y = {fit['odr_intercept']:.3g} + {fit['odr_slope']:.3g}x"
         ),
@@ -793,7 +1028,10 @@ def make_plot(
     ax.text(
         0.5,
         -0.18,
-        "Descriptive voxelwise correspondence; spatial dependence precludes treating voxels as independent.",
+        (
+            "Descriptive correspondence; horizontal and vertical error bars are "
+            "across-subject SEM."
+        ),
         transform=ax.transAxes,
         ha="center",
         va="top",
@@ -876,12 +1114,16 @@ def main() -> int:
     print("Reference affine:\n" + np.array2string(reference.affine, precision=6))
 
     xml_path = discover_xml(fsldir, args.atlas_xml)
+    atlas_labels = atlas_labels_from_xml(xml_path)
     atlas_path, atlas, atlas_rule = choose_atlas(
         atlas_candidates(fsldir, args.atlas_file), reference
     )
-    xml_index, label_value, label_name = insula_label_from_xml(xml_path)
+    xml_index, label_value, label_name = insula_label_from_xml(atlas_labels)
     left_insula, native_voxels, reference_voxels, was_resampled = (
         make_left_insula_mask(atlas, label_value, reference)
+    )
+    atlas_roi_map, roi_native_counts, roi_reference_counts, roi_map_resampled = (
+        make_atlas_roi_map(atlas, atlas_labels, reference)
     )
     print(f"Harvard-Oxford atlas: {atlas_path}")
     print(f"Atlas selection: {atlas_rule}")
@@ -898,6 +1140,7 @@ def main() -> int:
         )
 
     tg_coverage, ug_coverage = coverage_intersection(included, reference.shape)
+    dualtask_coverage = tg_coverage & ug_coverage
     final_mask = left_insula & tg_coverage & ug_coverage
     final_voxels = int(final_mask.sum())
     if final_voxels == 0:
@@ -910,22 +1153,68 @@ def main() -> int:
     print(f"Left-insula voxels with all-subject UGR coverage: {ug_covered}")
     print(f"Final dual-task coverage voxel count: {final_voxels}")
 
+    covered_roi_map = np.where(dualtask_coverage, atlas_roi_map, 0).astype(np.int16)
+    roi_info, empty_rois = make_roi_info(
+        atlas_labels,
+        covered_roi_map,
+        roi_native_counts,
+        roi_reference_counts,
+        reference,
+    )
+    write_tsv(
+        output_dir / "harvardoxford_roi_coverage_exclusions.tsv",
+        empty_rois,
+        [
+            "xml_index",
+            "nifti_value",
+            "roi_name",
+            "native_atlas_voxels",
+            "reference_grid_voxels",
+            "dualtask_covered_voxels",
+            "coverage_fraction_reference_roi",
+            "reason",
+        ],
+    )
+    print(
+        f"Harvard-Oxford cortical ROIs retained after dual-task coverage: "
+        f"{len(roi_info)} of {len(atlas_labels)}"
+    )
+
     anatomical_path = (
         masks_dir / "left_insula_maxprob-thr25_anatomical_refgrid.nii.gz"
     )
     final_mask_path = (
         masks_dir / "left_insula_maxprob-thr25_dualtask_coverage_mask.nii.gz"
     )
+    atlas_map_path = (
+        masks_dir / "harvardoxford_cortical_maxprob-thr25_refgrid.nii.gz"
+    )
+    covered_atlas_map_path = (
+        masks_dir
+        / "harvardoxford_cortical_maxprob-thr25_dualtask_coverage.nii.gz"
+    )
     save_nifti(left_insula, anatomical_path, reference, np.uint8)
     save_nifti(final_mask, final_mask_path, reference, np.uint8)
+    save_nifti(atlas_roi_map, atlas_map_path, reference, np.int16)
+    save_nifti(covered_roi_map, covered_atlas_map_path, reference, np.int16)
 
     indices = np.argwhere(final_mask)
     coordinates = nib.affines.apply_affine(reference.affine, indices)
-    summaries = extract_summaries(included, indices)
+    roi_label_values = [int(roi["nifti_value"]) for roi in roi_info]
+    voxel_values, roi_values = extract_subject_values(
+        included, indices, covered_roi_map, roi_label_values
+    )
+    summaries = summarize_quantities(voxel_values)
+    roi_summaries = summarize_quantities(roi_values)
     fit_results: dict[str, dict[str, Any]] = {}
     output_files: dict[str, str] = {
         "anatomical_mask_reference_grid": str(anatomical_path),
         "final_dualtask_coverage_mask": str(final_mask_path),
+        "harvardoxford_atlas_reference_grid": str(atlas_map_path),
+        "harvardoxford_atlas_dualtask_coverage": str(covered_atlas_map_path),
+        "harvardoxford_roi_coverage_exclusions": str(
+            output_dir / "harvardoxford_roi_coverage_exclusions.tsv"
+        ),
         "included_subjects": str(output_dir / "included_subjects.tsv"),
         "excluded_subjects": str(output_dir / "excluded_subjects.tsv"),
     }
@@ -947,18 +1236,20 @@ def main() -> int:
         make_plot(
             plot_stem,
             quantity,
-            summary["tg_mean"],
-            summary["ug_mean"],
+            summary,
             fit,
             len(included),
+            title="Voxelwise cross-task correspondence in anatomical left insula",
+            point_kind="voxels",
         )
         make_plot(
             mni_y_plot_stem,
             quantity,
-            summary["tg_mean"],
-            summary["ug_mean"],
+            summary,
             fit,
             len(included),
+            title="Voxelwise cross-task correspondence in anatomical left insula",
+            point_kind="voxels",
             mni_y=coordinates[:, 1],
         )
         residual_map = np.zeros(reference.shape, dtype=np.float32)
@@ -985,7 +1276,56 @@ def main() -> int:
             f"intercept={fit['odr_intercept']:.6f}"
         )
 
-    correspondence = {
+    roi_fit_results: dict[str, dict[str, Any]] = {}
+    included_subject_ids = [tg.subject for tg, _ in included]
+    for quantity in ("cope", "zstat"):
+        summary = roi_summaries[quantity]
+        fit = fit_odr(summary["tg_mean"], summary["ug_mean"])
+        roi_fit_results[quantity] = fit
+        summary_path = output_dir / f"harvardoxford_roi_summary_{quantity}.tsv"
+        subject_path = (
+            output_dir / f"harvardoxford_roi_subject_values_{quantity}.tsv"
+        )
+        plot_stem = output_dir / f"harvardoxford_roi_{quantity}_scatter"
+        write_roi_summary_table(summary_path, quantity, roi_info, summary, fit)
+        write_roi_subject_table(
+            subject_path,
+            quantity,
+            included_subject_ids,
+            roi_info,
+            roi_values[f"{quantity}_tg"],
+            roi_values[f"{quantity}_ug"],
+        )
+        make_plot(
+            plot_stem,
+            quantity,
+            summary,
+            fit,
+            len(included),
+            title="Harvard-Oxford cortical ROI cross-task correspondence",
+            point_kind="ROIs",
+            annotations=[str(roi["nifti_value"]) for roi in roi_info],
+        )
+        output_files.update(
+            {
+                f"harvardoxford_roi_{quantity}_summary": str(summary_path),
+                f"harvardoxford_roi_{quantity}_subject_values": str(subject_path),
+                f"harvardoxford_roi_{quantity}_scatter_pdf": str(
+                    plot_stem.with_suffix(".pdf")
+                ),
+                f"harvardoxford_roi_{quantity}_scatter_png": str(
+                    plot_stem.with_suffix(".png")
+                ),
+            }
+        )
+        label = "COPE" if quantity == "cope" else "mean subject-level ZSTAT"
+        print(
+            f"Harvard-Oxford ROI {label}: Pearson r={fit['pearson_r']:.6f}; "
+            f"ODR slope={fit['odr_slope']:.6f}; "
+            f"intercept={fit['odr_intercept']:.6f}"
+        )
+
+    voxel_correspondence = {
         quantity: {
             key: value
             for key, value in fit.items()
@@ -993,10 +1333,21 @@ def main() -> int:
         }
         for quantity, fit in fit_results.items()
     }
+    roi_correspondence = {
+        quantity: {
+            key: value
+            for key, value in fit.items()
+            if key != "signed_orthogonal_residual"
+        }
+        for quantity, fit in roi_fit_results.items()
+    }
     metadata_path = output_dir / "analysis_metadata.json"
     output_files["metadata"] = str(metadata_path)
     metadata = {
-        "analysis": "descriptive voxelwise cross-task correspondence in anatomical left insula",
+        "analysis": (
+            "descriptive voxelwise left-insula and atlas-wide Harvard-Oxford "
+            "cross-task correspondence with across-subject SEM error bars"
+        ),
         "implementation": "Python",
         "package_versions": {
             "numpy": np.__version__,
@@ -1026,6 +1377,14 @@ def main() -> int:
             "initial_left_insula_voxels_atlas_grid": native_voxels,
             "left_insula_voxels_reference_grid": reference_voxels,
             "mask_resampled_nearest_neighbor": was_resampled,
+            "cortical_xml_labels": len(atlas_labels),
+            "cortical_rois_retained_after_coverage": len(roi_info),
+            "cortical_rois_empty_after_coverage": len(empty_rois),
+            "cortical_roi_map_resampled_nearest_neighbor": roi_map_resampled,
+            "cortical_roi_definition": (
+                "one ROI per integer/XML label in the Harvard-Oxford cortical "
+                "maxprob-thr25 atlas; labels are not post hoc subdivided by hemisphere"
+            ),
         },
         "coverage": {
             "criterion": "intersection of every required subject's final TG and UGR FEAT masks",
@@ -1041,7 +1400,12 @@ def main() -> int:
             "posterior and positive values are more anterior. No insula subdivision "
             "or threshold is imposed."
         ),
-        "correspondence": correspondence,
+        "voxelwise_correspondence": voxel_correspondence,
+        "harvardoxford_roi_correspondence": roi_correspondence,
+        "error_bars": (
+            "horizontal TG and vertical UGR error bars are SEM across the same "
+            "132 participants"
+        ),
         "signed_residual_definition": (
             "(UG - (ODR intercept + ODR slope * TG)) / sqrt(1 + slope^2); "
             "positive means a stronger UG/fairness response than predicted from the "
@@ -1049,9 +1413,10 @@ def main() -> int:
             "response than predicted. Residual maps are zero outside the saved final "
             "coverage mask."
         ),
-        "inference_note": (
-            "Pearson r and ODR are descriptive. No conventional voxelwise Pearson "
-            "p-value is computed because neighboring voxels are spatially dependent."
+        "statistical_scope": (
+            "Pearson r, ODR, signed residuals, and SEM error bars are descriptive. "
+            "No voxelwise or ROI-wise hypothesis tests, p-values, significance flags, "
+            "or multiple-comparison corrections are computed."
         ),
         "outputs": output_files,
     }
