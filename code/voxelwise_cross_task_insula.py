@@ -699,26 +699,58 @@ def make_plot(
     y: np.ndarray,
     fit: dict[str, Any],
     n_subjects: int,
+    mni_y: np.ndarray | None = None,
 ) -> None:
     import matplotlib
 
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
+    from matplotlib.colors import Normalize, TwoSlopeNorm
 
     quantity_label = (
         "mean COPE" if quantity == "cope" else "mean subject-level Z-statistic"
     )
     fig, ax = plt.subplots(figsize=(7.1, 6.0), constrained_layout=True)
-    ax.scatter(
-        x,
-        y,
-        s=18,
-        alpha=0.58,
-        color="#276FBF",
-        edgecolors="white",
-        linewidths=0.25,
-        rasterized=True,
-    )
+    if mni_y is None:
+        ax.scatter(
+            x,
+            y,
+            s=18,
+            alpha=0.58,
+            color="#276FBF",
+            edgecolors="white",
+            linewidths=0.25,
+            rasterized=True,
+        )
+    else:
+        if len(mni_y) != len(x):
+            raise ValueError("MNI y-coordinate vector does not match the voxel count.")
+        # Draw posterior voxels first and anterior voxels last for deterministic
+        # rendering where points overlap. The colour scale itself remains
+        # continuous and does not impose an anatomical subdivision.
+        order = np.argsort(mni_y)
+        color_min = float(np.min(mni_y))
+        color_max = float(np.max(mni_y))
+        if color_min < 0 < color_max:
+            color_norm = TwoSlopeNorm(vmin=color_min, vcenter=0.0, vmax=color_max)
+        else:
+            color_norm = Normalize(vmin=color_min, vmax=color_max)
+        points = ax.scatter(
+            x[order],
+            y[order],
+            c=mni_y[order],
+            cmap="coolwarm",
+            norm=color_norm,
+            s=20,
+            alpha=0.72,
+            edgecolors="white",
+            linewidths=0.2,
+            rasterized=True,
+        )
+        colorbar = fig.colorbar(points, ax=ax, pad=0.02)
+        colorbar.set_label(
+            "MNI y-coordinate (mm)\nposterior (−) to anterior (+)", fontsize=9.5
+        )
     x_line = np.linspace(float(np.min(x)), float(np.max(x)), 250)
     ax.plot(
         x_line,
@@ -735,10 +767,10 @@ def make_plot(
         f"Ultimatum Game: fairness parametric modulation\n({quantity_label})",
         fontsize=11,
     )
-    ax.set_title(
-        "Voxelwise cross-task correspondence in anatomical left insula",
-        fontsize=12.5,
-    )
+    title = "Voxelwise cross-task correspondence in anatomical left insula"
+    if mni_y is not None:
+        title += "\ncolored by anterior–posterior location"
+    ax.set_title(title, fontsize=12.5)
     ax.text(
         0.03,
         0.97,
@@ -903,6 +935,10 @@ def main() -> int:
         fit_results[quantity] = fit
         table_path = output_dir / f"voxelwise_cross_task_insula_{quantity}.tsv"
         plot_stem = output_dir / f"voxelwise_cross_task_insula_{quantity}_scatter"
+        mni_y_plot_stem = (
+            output_dir
+            / f"voxelwise_cross_task_insula_{quantity}_scatter_colored_mni-y"
+        )
         residual_path = (
             output_dir
             / f"voxelwise_cross_task_insula_{quantity}_signed_odr_residual.nii.gz"
@@ -916,6 +952,15 @@ def main() -> int:
             fit,
             len(included),
         )
+        make_plot(
+            mni_y_plot_stem,
+            quantity,
+            summary["tg_mean"],
+            summary["ug_mean"],
+            fit,
+            len(included),
+            mni_y=coordinates[:, 1],
+        )
         residual_map = np.zeros(reference.shape, dtype=np.float32)
         residual_map[tuple(indices.T)] = fit["signed_orthogonal_residual"]
         save_nifti(residual_map, residual_path, reference, np.float32)
@@ -924,6 +969,12 @@ def main() -> int:
                 f"{quantity}_voxel_table": str(table_path),
                 f"{quantity}_scatter_pdf": str(plot_stem.with_suffix(".pdf")),
                 f"{quantity}_scatter_png": str(plot_stem.with_suffix(".png")),
+                f"{quantity}_scatter_colored_mni_y_pdf": str(
+                    mni_y_plot_stem.with_suffix(".pdf")
+                ),
+                f"{quantity}_scatter_colored_mni_y_png": str(
+                    mni_y_plot_stem.with_suffix(".png")
+                ),
                 f"{quantity}_signed_odr_residual_map": str(residual_path),
             }
         )
@@ -984,6 +1035,11 @@ def main() -> int:
         },
         "voxel_index_convention": (
             "i/j/k are zero-based NIfTI indices; MNI coordinates are millimetres"
+        ),
+        "mni_y_color_scale": (
+            "continuous MNI y-coordinate in millimetres; negative values are more "
+            "posterior and positive values are more anterior. No insula subdivision "
+            "or threshold is imposed."
         ),
         "correspondence": correspondence,
         "signed_residual_definition": (
