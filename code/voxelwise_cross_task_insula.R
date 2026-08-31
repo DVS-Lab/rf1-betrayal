@@ -24,7 +24,7 @@ usage <- function(default_root) {
     "Usage: Rscript code/voxelwise_cross_task_insula.R [options]\n\n",
     "Options:\n",
     "  --project-root PATH       rf1-betrayal root [", default_root, "]\n",
-    "  --output-dir PATH         output directory [project derivatives/extractions]\n",
+    "  --output-dir PATH         statistical output directory [code/voxelwise_cross_task_insula_output]\n",
     "  --fsldir PATH             FSL root [$FSLDIR]\n",
     "  --atlas-file PATH         explicit cortical maxprob-thr25 atlas (optional)\n",
     "  --atlas-xml PATH          explicit Harvard-Oxford cortical XML (optional)\n",
@@ -66,7 +66,7 @@ parse_args <- function() {
   result$project_root <- normalizePath(result$project_root, mustWork = TRUE)
   if (is.null(result$output_dir)) {
     result$output_dir <- file.path(
-      result$project_root, "derivatives", "extractions", "voxelwise_cross_task_insula"
+      result$project_root, "code", "voxelwise_cross_task_insula_output"
     )
   }
   result
@@ -556,6 +556,9 @@ main <- function() {
   require_packages()
   dir.create(args$output_dir, recursive = TRUE, showWarnings = FALSE)
   output_dir <- normalizePath(args$output_dir, mustWork = TRUE)
+  masks_dir <- file.path(args$project_root, "masks")
+  if (!dir.exists(masks_dir)) stopf("Repository masks directory not found: %s", masks_dir)
+  masks_dir <- normalizePath(masks_dir, mustWork = TRUE)
   if (is.na(args$fsldir) || !nzchar(args$fsldir)) stop("FSLDIR is not set. Export FSLDIR or pass --fsldir.", call. = FALSE)
   fsldir <- normalizePath(args$fsldir, mustWork = TRUE)
 
@@ -610,8 +613,8 @@ main <- function() {
   message(sprintf("Left-insula voxels with all-subject UGR coverage: %d", ug_covered))
   message(sprintf("Final dual-task coverage voxel count: %d", final_voxels))
 
-  anatomical_path <- file.path(output_dir, "left_insula_maxprob-thr25_anatomical_refgrid.nii.gz")
-  final_mask_path <- file.path(output_dir, "left_insula_maxprob-thr25_dualtask_coverage_mask.nii.gz")
+  anatomical_path <- file.path(masks_dir, "left_insula_maxprob-thr25_anatomical_refgrid.nii.gz")
+  final_mask_path <- file.path(masks_dir, "left_insula_maxprob-thr25_dualtask_coverage_mask.nii.gz")
   write_nifti(insula$mask * 1L, anatomical_path, reference, "uint8")
   write_nifti(final_mask * 1L, final_mask_path, reference, "uint8")
 
@@ -697,7 +700,8 @@ main <- function() {
     outputs = output_files
   )
   jsonlite::write_json(metadata, metadata_path, pretty = TRUE, auto_unbox = TRUE, digits = NA)
-  message(sprintf("Outputs written to: %s", output_dir))
+  message(sprintf("Statistical outputs written to: %s", output_dir))
+  message(sprintf("Masks written to: %s", masks_dir))
   invisible(metadata)
 }
 
