@@ -33,7 +33,7 @@ DEFAULT_FSF = Path(
     "templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf"
 )
 SCRIPT_DIR = Path(__file__).resolve().parent
-DEFAULT_OUT_DIR = SCRIPT_DIR / "ppi_audit"
+DEFAULT_OUT_DIR = SCRIPT_DIR
 COPE_NUMBERS = {
     "difference_cope": 12,
     "nonsocial_cope": 13,
