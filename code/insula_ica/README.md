@@ -1,307 +1,297 @@
-# Exploratory insula ICA for the betrayal revision
+# Insula ICA from preserved first-level FEAT residuals
 
-This self-contained analysis uses **left, right and bilateral anatomical insula**,
-each with one shared TG+UG decomposition. Five components per ROI are primary;
-three and seven are spatial-stability checks. Component numbers do not correspond
-between ROIs or dimensionalities. Existing FEAT models, results, upstream
-preprocessing and the N=132 participant list are never edited.
+This workflow follows the revised 2026-10-26 brief. **The earlier workflow that
+added a new nuisance-cleaning model before ICA is retired.** Old configs are
+rejected. Existing first-level FEAT task+nuisance fits supply the residual data;
+original task COPEs supply a separate task-preserved analysis branch.
 
-## Current status and input gate
+The earlier user addition remains in force: **left, right and bilateral insula**,
+each with one shared TG+UG basis, five primary components and 3/7 spatial checks.
+Retain every component. The 30 primary ROI × component × task tests form one
+Bonferroni family. Component numbers do not match across ROIs/dimensionalities.
+No new gPPI or behavioral search is included.
 
-The implementation can be tested locally, but **production is blocked until the
-linux2 audit passes**. No participant ICA/connectivity/task results have been
-computed during implementation. `/ZPOOL` is not available on the development Mac.
+## Current evidence and limits
 
-Source inspection on 2026-10-26:
+Jacob's corrected `master_subject_table_full (1).csv` has 147 rows and exactly
+132 `include_final=TRUE` identities, matching `code/sublist_n132.txt`. For that
+cohort, the saved full-run QC permits:
 
-- Betrayal main: `affb3b30ad9b911232a99e32df6459403c84d4ea` (local clone originally
-  `6aba28a25c7256b2bcca03339f3996da9fa200f3`). Read root and code READMEs.
-- Upstream local clone: `72a5a160a8636cff770ea93116cb13bab64cf609`; remote main:
-  `02faf289fcf04908c4a57bdc49ddf9e3b7498c97`. Current confound generator inspected
-  at that remote commit; it is **not** evidence that legacy `-24` files match it.
-- Archive: `8d127f18d5930803410e716a4b62aac7d4aa4beb`; inspected
-  [`leech12_dual_regression`](https://github.com/DVS-Lab/duke-archive/blob/8d127f18d5930803410e716a4b62aac7d4aa4beb/leech12_dual_regression)
-  and [`leech12_dual_regression_conf`](https://github.com/DVS-Lab/duke-archive/blob/8d127f18d5930803410e716a4b62aac7d4aa4beb/leech12_dual_regression_conf).
-  The latter appends confounds to stage 2. This implementation uses explicit
-  matrix operations and keyed run records rather than its parallel positional
-  lists and `paste` command.
-- Both task templates specify TR=1.615 s, `ndelete=0`, and disabled FEAT temporal
-  high-pass filtering. The actual NIfTI TR and saved FSF must agree at audit.
-- Local FSL 6.0.7.19, MELODIC 3.15; local help inspected for MELODIC and fsl_glm.
-  Linux2 versions/help are captured again by the audit.
-- `code/sublist_n132.txt` contains 132 unique participant IDs. The saved
-  `master_subject_table_full.csv` was absent from the local checkouts, current
-  GitHub main tree and available betrayal Git history. It may be on linux2.
-  **Do not regenerate its outlier thresholds on a different cohort or infer run
-  inclusion from image availability.** Configure its existing saved location.
-- Independent Harvard–Oxford cortical maxprob thr25 mask, XML Insular Cortex
-  index 1 / NIfTI label 2. Native 2 mm counts: left 1,160, right 1,181,
-  bilateral 2,341. These are **not** final BOLD-grid coverage counts.
+| Task | Run 1 | Run 2 | Total accepted runs |
+|---|---:|---:|---:|
+| Trust | 131 | 110 | 241 |
+| UGR | 132 | 117 | 249 |
 
-The script-derived source candidates, not yet live-data verified, are:
+These are **QC-eligible counts, not verified linux2 image availability**. The
+private CSV and ages are not committed. The startup helper can use a saved
+linux2 copy or restore the supplied cohort-only snapshot into ignored output.
+It rejects the superseded 137-included table. Keep the manuscript list unchanged.
+
+Source inspection of `L1stats-trust.sh` and `L1stats-ugr.sh` confirms both delete
+`stats/res4d.nii.gz`, `stats/corrections.nii.gz`, and `stats/threshac1.nii.gz`.
+Trust also deletes `filtered_func_data.nii.gz`. Both wrappers can skip completed
+models or remove an existing FEAT directory. **Never run those wrappers to
+recover these inputs.** The new scripts do not call them or change them.
+
+The model templates use TR=1.615 s, smoothing=5 mm, zero volume deletion,
+disabled FEAT temporal high-pass, and **FILM prewhitening enabled**. Per-run
+saved settings and designs, not the templates alone, are authoritative.
+The old `fmriprep-24` images may be missing. Neither the old images nor historical
+FEAT trees are available on the development Mac, so no real-data reconstruction
+or historical comparison has yet been performed.
+
+## Important residual-scale gate
+
+The installed FSL 6.0.7.19 source (`src/fsl-film/film_gls.cc`) prewhitens each
+voxel's data/design, computes residuals in that transformed space, and writes
+them as `stats/res4d`. An actual synthetic `film_gls` run confirmed this:
+prewhitened-data minus the matching whitened design × PEs reproduced `res4d`
+(relative error <1e-4), while original-scale `Y-X*beta` did not.
+
+Therefore **a FEAT filename alone does not establish an unwhitened background
+BOLD series**. Voxel-dependent whitening changes the temporal covariance being
+characterized. The scripts verify the native product and stop before ICA unless
+its scale is acceptable under `residual_scale_review`.
+
+Default `accept_voxelwise_prewhitened=false` deliberately leaves that decision
+open for the real pilot. Set it to true only after explicit scientific review,
+with a written `reason`, if innovation-scale residual networks are the intended
+estimand. Do not interpret those maps as original-scale BOLD connectivity.
+No inverse whitening, alternate residual reconstruction, extra regression or
+additional temporal filtering is silently applied.
+
+If unwhitened full-model residual connectivity is required, the alternative to
+review is the **original joint FILM decomposition**: centered
+`filtered_func_data - design.mat * original_FILM_PEs`. This uses the same fitted
+model without fitting another nuisance regression. It is proposed here, not
+automatically substituted for native `res4d`. It requires retained/recreated
+filtered data and a reviewed scale/orthogonality validation.
+
+## First linux2 operation
+
+Use the upstream-documented Python interpreter:
+
+```bash
+INSULA_AUDIT_PYTHON=/ZPOOL/data/tools/anaconda/tug87422/envs/tedana-26.0.3/bin/python
+"$INSULA_AUDIT_PYTHON" code/insula_ica/audit_linux2.py --qc /path/to/corrected/master_subject_table_full.csv
+```
+
+`audit_linux2.py` prints its actual Python and FSL versions, searches when no
+`--qc` is supplied, checks the corrected cohort identity, creates fresh output
+and config, and **runs inventory only**. `--qc-snapshot-stdin` reads the supplied
+gzip/base64 cohort-only CSV; if no matching saved CSV exists, it restores that
+snapshot locally. No shared Python environment is changed and no FEAT is run.
+
+The printed paths have this structure (the timestamp/token is generated once):
 
 ```text
-/ZPOOL/data/projects/rf1-sra-linux2/derivatives/fmriprep-24/sub-<id>/ses-01/func/
-  sub-<id>_ses-01_task-<trust|ugr>_run-<1|2>_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz
-/ZPOOL/data/projects/rf1-sra-linux2/derivatives/fsl/confounds_tedana-24/sub-<id>/
-  sub-<id>_ses-01_task-<trust|ugr>_run-<1|2>_desc-TedanaPlusConfounds.tsv
+<betrayal>/code/insula_ica/output/linux2-audit-<timestamp-token>/
+  config.json
+  audit/report.md
+  audit/manifest.tsv
+  audit/<run-key>/reconstruction.fsf
+<betrayal>/derivatives/insula_ica/feat-residuals-<timestamp-token>/
+  feat_reconstruction/<run-key>.feat/
 ```
 
-Their matching fMRIPrep confounds, BOLD JSON and MNI brain masks must exist.
-The audit checks those **exact** candidates against each original activation
-FEAT `design.fsf`, including its BOLD and confound paths. It never substitutes
-copes, zstats, FEAT residuals, new upstream derivatives or TEDANA denoised files.
-An optimally combined fMRIPrep image and a TEDANA-denoised image are distinct:
-`part-mag` / `desc-preproc` alone does not establish either provenance.
+Both trees are ignored. The manifest gives the exact original FSF, historical
+FEAT, BOLD and confound paths, whether BOLD/filtered data remain, actual model
+settings, recovery route, target directory, and exclusions. Raw paths are read
+from the generated FSF. No newer derivative is substituted.
 
-## Denoising decision
+You can also copy `config.example.json`, set `master_qc`, `output_root` and
+`derivatives_root`, and call `insula_ica.py --config FILE audit`. A new run needs
+fresh output/derivative roots. Relative config paths resolve against this repo.
+Legacy pre-ICA-cleaning configs cannot be used.
 
-The primary plan is **joint nuisance cleaning before ICA**, followed by
-confound- and task-adjusted dual regression. Adding confounds only after ICA
-cannot recover a useful component basis if noise dominated discovery.
-[Lindquist et al. (2019)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6865661/)
-warn about sequential nonorthogonal projections, not nuisance regression before
-ICA in itself. We use one nuisance subspace Q and consistently project both
-BOLD and subsequent task columns with R = I − QQᵀ.
+## Recovery routes
 
-The exact existing legacy confound matrix is used, with an intercept. Its prefix
-must match the inspected upstream generator layout: six aCompCor columns, six
-motion terms, FD, existing cosine terms and NSS spikes. Its remaining columns
-are preserved, including TEDANA noise terms. Drift is included **in this same
-projection**: existing cosines are retained; only when none exist is a 128 s DCT
-basis added. No sequential second high-pass, event regression for discovery,
-extra smoothing, new global-signal regression, new censoring threshold, or TEDANA
-rerun is performed. NSS spikes remain on the original time grid; initial NSS
-rows are omitted only from ICA discovery. Component task/connectivity models
-retain the original event timing and volume count.
+The inventory chooses a route for each originally accepted run:
 
-The config's provenance review must establish what generated the selected BOLD,
-which echo/optimal-combination operation was used, whether it was already
-TE-denoised, and the source of the appended TEDANA noise columns. If those noise
-terms were already removed, **stop**: this primary implementation is specifically
-for the legacy preprocessed-BOLD + confound-regression route. Do not set its
-review flag merely to make a gate pass. It does not authorize replacing data or
-removing columns from already denoised data without a revised plan.
+1. **Reuse existing `stats/res4d`** if present, followed by full residual QC. No
+   requirement to restore raw BOLD solely to read a valid retained residual.
+2. **Full FEAT reconstruction** if original BOLD, confounds and EVs remain. Copy
+   the original generated FSF, change **only `fmri(outputdir)`**, and execute
+   `feat <copied.fsf>` in the new reconstruction root. Preserve all intermediates.
+3. **Stats-only FILM replay** if raw BOLD is gone but original FEAT
+   `filtered_func_data`, full design/contrasts and the exact FILM command remain.
+   Parse that command from the original log, retain fit options, use the same
+   input/design, and change only the FILM results destination to new `stats/`.
+   Copy small model/reference files into the new FEAT directory. Do not rerun
+   smoothing, filtering, TEDANA or source preprocessing. A missing/ambiguous log,
+   voxelwise EV model or unsupported command is a blocker, not an invitation to
+   assemble an approximate command.
+4. **Blocked** if no exact route exists. Report which original inputs are absent.
+   Restore those exact sources from archive/backup. If Trust lost both its source
+   BOLD and filtered data, its residuals cannot be reproduced from COPEs alone.
 
-## Run on linux2
+Reconstruction never writes in the historical FEAT directory. Completed new
+residuals are not rerun. Partial new directories are preserved and require
+inspection; there is no `rm -rf` recovery path or overwrite switch.
 
-Python >=3.10 with NumPy, SciPy, NiBabel and Matplotlib is needed, together with
-FSL `melodic`, `feat_model`, `fsl_glm` and the standard atlases. Install
-`requirements.txt` in a suitable existing environment if needed. Set `PYTHON`
-to that interpreter; shell `python3` can resolve to an unrelated installation.
-Work is sequential and currently loads one whole 4D run; allow ample RAM
-(roughly several times the uncompressed run size) and disk for cleaned images
-and per-run connectivity maps. No scheduler assumptions or upstream changes.
+## Pilot then full reconstruction
 
-From your linux2 betrayal checkout:
+Use the `config.json` path printed by the inventory:
 
 ```bash
-git fetch origin
-git switch --track origin/insula-ica
-cp code/insula_ica/config.example.json code/insula_ica/config.local.json
-export PYTHON=/absolute/path/to/your/python
-"$PYTHON" code/insula_ica/insula_ica.py --config code/insula_ica/config.local.json audit
+INSULA_CONFIG=/exact/printed/path/config.json
+"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope pilot reconstruct
 ```
 
-The **first audit is useful with the review fields blank**. It reports blockers,
-exact paths, all 528 potential cohort/task/run slots, original QC exclusions,
-accepted counts, geometry/TR, nuisance rank, NSS count, residual dof, EV timing
-and mask coverage. `audit/report.md` and `audit/manifest.tsv` are the first files
-to inspect. `master_qc` can be an absolute path to the saved linux2 CSV; no need
-to copy it into Git. Missing/unknown QC produces a blocker, never implicit
-inclusion. All N=132 identities remain required; missing data stops production
-and is disclosed for scientific review rather than silently reducing N.
-
-Fill `provenance_review` from the original sidecars/commands and saved EV coding,
-set a **fresh output_root**, then repeat `audit`. Fresh output roots preserve
-failed attempts and prevent stale outputs from being mixed. Relative config
-paths resolve against the betrayal repository, not your current directory.
-The live upstream Git commit is recorded. Keep the legacy `-24` derivative
-settings unless a separately reviewed provenance decision changes the source.
-
-Configure independent MNI network templates before the final `summarize` stage:
-provide one 3D map, name and DOI/version per entry in `network_templates`.
-No atlas is downloaded or selected based on the observed task effects.
-Templates must already be in the same MNI reference; only grid interpolation is
-performed, not registration. Missing templates leave this stage blocked.
-
-After a passing audit, run:
+This is a **dry run**, writing the exact argv/cwd/output plan. It selects up to
+five representative runs spanning tasks, recovery routes and model rank.
+Missing runs elsewhere do not prevent a runnable pilot from being inspected.
+After checking that every destination is in the new root:
 
 ```bash
-"$PYTHON" code/insula_ica/insula_ica.py --config code/insula_ica/config.local.json prepare
-"$PYTHON" code/insula_ica/insula_ica.py --config code/insula_ica/config.local.json --scope pilot ica
-"$PYTHON" code/insula_ica/insula_ica.py --config code/insula_ica/config.local.json --scope pilot regress
-"$PYTHON" code/insula_ica/insula_ica.py --config code/insula_ica/config.local.json --scope pilot summarize
+"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope pilot --execute reconstruct
+"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope pilot verify
 ```
 
-The deterministic pilot spans up to five participants across nuisance rank and
-NSS burden and retains their original valid runs from both tasks. Review
-`pilot/regression_qc.tsv`, task EV timing/amplitudes, reports for all nine ICA
-solutions, mask loss, component timecourses, sign convention and template
-correspondence. A successful synthetic pilot is **not** a real-data pilot.
-The full ICA command requires completed real-data pilot regressions.
+`verify` compares **every historical COPE and ZSTAT**, full design and contrast
+matrices, geometry/time count, finite residual coverage, and fitted-regressor
+projection using the appropriate voxelwise whitened design. When filtered input
+and PEs are present, it also reconstructs the native residual scale numerically.
+The diagnostic FFT design transform is checked against real FILM; it is never
+applied as another cleaning step to the analysis residuals. Do not compare
+prewhitened residuals with unwhitened EVs and call the difference failed denoising.
+
+Default voxelwise COPE/ZSTAT comparison tolerances are atol=rtol=1e-4. A material
+difference stops the run; do not loosen tolerances to conceal a version/model
+change. Original nuisance matrices and all model columns are retained. Complete
+commands and source-file identities are saved. A surviving external confound
+matrix must agree with FEAT's retained `confoundevs.txt` when both exist.
+
+A successful pilot historical comparison is required for full reconstruction:
 
 ```bash
-"$PYTHON" code/insula_ica/insula_ica.py --config code/insula_ica/config.local.json --scope full ica
-"$PYTHON" code/insula_ica/insula_ica.py --config code/insula_ica/config.local.json --scope full regress
-"$PYTHON" code/insula_ica/insula_ica.py --config code/insula_ica/config.local.json --scope full summarize
+"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope full reconstruct
+"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope full --execute reconstruct
+"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope full verify
 ```
 
-Input identity, lightweight file checksums, BOLD size/mtime, software versions,
-config and pipeline source checksum are rechecked between stages. Full BOLD
-checksums are deliberately not calculated for hundreds of private 4D images.
-Commands, stdout/stderr, exit codes and source EV/FSF identities are preserved.
-A changed analysis config or input requires a fresh audit/output root.
-Independent network-template entries/notes are the only config exception: they
-may be supplied later because they do not change ICA or task/connectivity fits;
-the summary saves their exact identities and citations. Do not rerun a
-partially written processing stage in place; preserve it and use a new output
-root. Existing complete stages are not overwritten.
+Full reconstruction recovers the remaining inputs; ICA still requires successful
+full QC and the scale review. FEAT may submit jobs on a configured scheduler;
+if files are not ready when the command returns, inspect scheduler/log status
+and later run `verify` rather than rerunning into that partial destination.
 
-## Estimation details
+## ICA, residual connectivity and task-preserved branch
 
-1. Masks: nearest-neighbor resample the independent 2 mm HO anatomical label,
-   split by MNI x<0 / x>0 (not array direction), intersect with the fixed common
-   MNI brain-mask coverage across all accepted runs. This is anatomical cortical
-   gray matter coverage, not an activation/statistical mask. Record final and
-   lost voxels, retained fraction and lost-voxel MNI bounds. The coverage gate is
-   80%; inspect the lost maps for anterior/ventral loss even above that threshold.
-   Nonfinite/zero-variance data within whole-brain coverage stop preparation.
-2. ICA: pooled TG+UG temporal concatenation separately for each ROI. Preserve
-   every accepted steady-state frame and run. Build **one input per participant
-   per task** by concatenating that participant/task's valid runs. Each run is
-   mean-centered/variance-normalized voxelwise, then weighted by
-   `1/sqrt(number_of_valid_subject_task_runs * steady_frames_in_this_run)`
-   before concatenation. This equalizes run covariance contributions inside each
-   participant/task input. Standard non-MIGP group MELODIC then performs its
-   individual PCA whitening on each input: each participant/task supplies the
-   same number of whitened PCs. This is session balancing, not a claim that
-   unwhitened group covariance is exactly the weighted raw covariance.
-   Disable MELODIC's voxel variance normalization with `--vn`, which the local
-   help defines as **switch off**, so it does not undo within-session run weights.
-   Disable MIGP to retain the standard individual-PCA/group-concatenation path.
-   Disable automatic mask updating with `--update_mask` (the documented switch
-   off), and require the resulting mask to equal the audited mask exactly.
-   Save exact input/run boundaries, weights and all native MELODIC outputs/reports.
-   ICA is stochastic; freeze saved solutions rather than expect bitwise agreement
-   from an unsupported random-seed flag. A requested dimensionality that returns
-   fewer maps is a blocker. Inspect convergence/restarts in the saved logs.
-   Group-report spectra include concatenation boundaries; use saved **original-run**
-   timecourses for temporal artifact review rather than treating these boundaries
-   as continuous physiological time.
-3. Sign: the voxel with largest absolute loading within each anatomical mask is
-   positive (ties follow array order). Save original and oriented maps and the
-   sign vector; no task coefficient or connectivity template determines sign.
-   All 3/5/7 spatial pair correlations are reported; splits/merges need qualitative
-   interpretation rather than forced one-to-one component matching.
-4. Stage 1: simultaneously spatially regress all five maps plus a spatial
-   intercept into the cleaned, percent-signal BOLD. Save the resulting five TCs
-   and their scaling. TCs are standardized to one run-specific temporal SD.
-5. Stage 2: regress all five TCs into whole-brain BOLD, controlling the same
-   nuisance subspace and all existing task EVs. The implementation uses the
-   Frisch–Waugh–Lovell equivalent of the full simultaneous model and saves the
-   full design `[five TCs, projected task EVs, Q]`. Rank, condition and residual
-   dof are checked. Maps are partial regression coefficients in percent signal
-   per TC SD, **not bivariate correlations or voxelwise inferential z maps**.
-   Collinear nuisance/empty task columns are represented by their column space;
-   all five component effects and task contrasts must remain estimable.
-6. Task effects: use original FSF/EV definitions rendered by FSL `feat_model` in
-   analysis output only; the saved task-only FSF disables appended confounds,
-   which are handled jointly by Q. No new HRF/event model is invented. TG is
-   negative contrast 10 `rec-def`, retaining all partner conditions. UG is
-   contrast 11 across all four pmods (partner × endowment), reversed only if
-   the existing amplitudes increase with fairness. The sign review is required:
-   current event-generation history includes renaming conventions, so filenames
-   alone are insufficient. Store the original contrast magnitude convention
-   (sum, not redefined average) and signed coefficients.
-7. Run task uncertainty: OLS coefficients with Newey–West temporal covariance,
-   lag `floor(4*(T/100)^(2/9))` (at least 1), with a residual-dof correction.
-   This avoids treating fMRI samples as independent for reported within-run SEs;
-   it is not a replacement for FEAT FILM or a claim of identical first-level
-   uncertainty. Equal-run averages form participant effects; reported participant
-   HAC SEs assume independent runs. Group t tests/95% CIs use empirical variation
-   across participants, giving each participant one observation.
-8. Group connectivity: equal-run means within participant/task, then equal-task
-   participant means, then equal-participant group mean. Save participant/task,
-   participant-pooled and group maps for every IC. Network correspondence is a
-   signed spatial correlation outside the defining ROI with independent templates.
-   Maps and correspondence are descriptive; there is no voxelwise inference or
-   automatic assignment of a psychological label. Different maps alone do not
-   constitute a formal component-difference test.
-9. Multiplicity: **30 two-sided primary task tests** (3 ROIs × 5 ICs × 2 tasks),
-   Bonferroni corrected as one family. Sensitivity dimensions receive no task
-   discovery tests. No formal TG–UG interaction, cross-ROI component matching,
-   component-wise gPPI or behavioral search is implemented.
+After all original accepted runs pass comparison/coverage checks and residual
+scale is approved, `prepare` constructs fixed anatomical/valid-data masks and
+references the native residual files **without a new cleaning/scaling operation**.
+The HO cortical maxprob thr25 XML identifies Insular Cortex as label 2; left and
+right are defined by MNI coordinates, with nearest-neighbor atlas resampling.
+Intersect with common finite nonconstant residual coverage; save loss masks and
+counts. Default retained ROI coverage gate: 80%; inspect anterior/ventral loss.
 
-## Outputs and interpretation
+```bash
+"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" prepare
+"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope pilot ica
+```
 
-All generated outputs are ignored under `code/insula_ica/output/` by default.
-If using another output location, keep private BOLD and bulky intermediates out
-of Git. Select lightweight tables/figures deliberately for any later commit.
+ICA pools all accepted TG+UG runs in one shared basis per ROI. One concatenated
+input per participant/task balances the number of subject-level PCA blocks;
+within that input, run/voxel variance scaling and `1/sqrt(n_runs*T_run)` weights
+balance runs. All original residual frames remain; no new censoring is applied.
+Standard MELODIC individual PCA/group concatenation is used. It performs ordinary
+demeaning/spatial ICA scaling but **no additional temporal high-pass, band-pass,
+new nuisance regression, or smoothing**. `--vn` disables its voxel variance
+normalization, `--disableMigp` uses the explicit individual-PCA route, and
+`--update_mask` disables automatic mask changes; output mask equality is checked.
+Installed help and complete effective commands are saved. Freeze the stochastic
+solutions rather than claim bitwise reproducibility from an unsupported seed.
 
-- `audit/`: manifest/exclusions, source/command provenance, task designs and EV
-  timing/amplitudes, nuisance bases, geometry/coverage masks and dry-run report.
-- `prepared/`: joint-cleaned 4D images and orthogonality diagnostics.
-- `pilot/` / `full/`: 3/5/7 MELODIC solutions for each ROI, sign files, spatial
-  stability matrices, discovery weights, all five component TCs and partial maps
-  per run, signed run/participant effects and model diagnostics.
-- Final summary: all 30 estimates/N/SE/CI/p/corrected-p, descriptive group maps,
-  independent-template correspondence, component anatomy, two composite figures
-  and `results_summary.md`. Component spectra/overlays are also in native
-  MELODIC reports. Retain potential artifact components and inspect them.
+Original maps are retained, with oriented copies whose largest absolute loading
+is positive. No task coefficient or network label determines the sign. Save all
+3/5/7 spatial correspondences; do not select a dimension based on task effects.
 
-This exploratory analysis can characterize heterogeneity in independent
-anatomical insula and its task responses. The component basis is learned from
-these task datasets: task effects are **not independent validation**, a unique
-encoding claim, a replication of the previous aIns–vmPFC gPPI, or a test of its
-survival with an independent seed. Null/ambiguous components must be shown.
-TG and UG coefficients have different units and must not be directly subtracted
-as a task interaction. A targeted vmPFC follow-up requires separate scientific
-review; it is not implemented here.
+Set `ugr_pmods_increase_with_fairness` and `ugr_coding_evidence` after inspecting
+stored pmod coding. Then run:
+
+```bash
+"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope pilot regress
+```
+
+- **Connectivity stage 1:** one simultaneous spatial model with all five frozen
+  maps and a spatial intercept into insula residuals. Save overlapping-component
+  partial timecourses and the spatial projection operator.
+- **Connectivity stage 2:** simultaneously regress those five TCs into the **same
+  native whole-brain residual series**, after documenting TC SD scaling. Do not
+  append task/confound EVs or use preprocessed BOLD as the target. Maps are
+  descriptive partial/background coefficients, not bivariate seed correlations.
+- **Task response:** apply the **same frozen multivariate spatial operator** to
+  each run's **original task COPE**, separately from the residual timecourses.
+  This is linear spatial projection of a task-preserved estimate, not recovery
+  of modeled task signal from `res4d`. Negate Trust contrast 10 `rec-def`; use
+  UGR contrast 11 across all partner/endowment pmods and reverse it only when
+  increasing pmod amplitude means increasing fairness. Preserve original contrast
+  sum/units. Task coefficients are not divided by residual TC SD.
+
+No independent-voxel assumption is used to manufacture a spatially weighted
+COPE variance. Within-participant projection SEs are left unestimated; equal-run
+participant means enter group one-sample tests/CIs using empirical between-person
+variation. All 30 primary tests receive Bonferroni correction. Task units differ;
+no raw TG–UG interaction or matched cross-ROI component comparison is claimed.
+
+Supply independent 3D MNI network templates (`name`, `path`, `citation`) before
+`summarize`. Only grid interpolation is performed; templates must already be in
+MNI space. Correlate outside the defining insula ROI, report weak/ambiguous
+matches, and retain unlabeled/artifact components. Group connectivity averages
+runs within participant/task, then tasks, then participants equally.
+
+```bash
+"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope pilot summarize
+# Review pilot maps, scales, source timing/sign and model/QC reports first.
+"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope full ica
+"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope full regress
+"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope full summarize
+```
+
+Outputs include all 15 component anatomies, descriptive network maps/template
+correspondence, all 30 task estimates/N/SE/CI/corrected-p, two composite figures,
+spatial stability, and `results_summary.md`. Potential component differences
+remain exploratory; different maps alone are not a formal difference test.
+The result is not independent validation or a unique betrayal/fairness encoding
+claim, and does not test whether the original sample-defined aIns–vmPFC gPPI
+survives an independent seed. Show null and ambiguous outcomes.
+
+## Verification and provenance
+
+```bash
+"$INSULA_AUDIT_PYTHON" -m unittest discover -s code/insula_ica -p 'test_*.py' -v
+"$INSULA_AUDIT_PYTHON" code/insula_ica/test_insula_ica.py --integration /absolute/new/scratch/path
+```
+
+The synthetic integration uses actual installed `feat_model`/`film_gls`/MELODIC,
+creates historical fits, deletes their residuals, omits the raw BOLD, dry-runs and
+replays stored FILM commands into separate roots, compares all original results,
+checks native residual scale, and exercises all three ROIs and task/summary
+branches. Historical files must remain byte-identical. A separate prewhitened
+FILM probe validates the diagnostic whitening convention. No RF1 pilot result
+is implied by these software tests.
+
+This branch started at betrayal main `affb3b30ad9b911232a99e32df6459403c84d4ea`.
+Original code/template/FEAT paths, input size/mtime, lightweight hashes, code
+hashes, software and generated commands are frozen in each inventory. Existing
+inputs cannot change between stages. Full private 4D hashes are not calculated.
+Retain partial/failed outputs for diagnosis. Do not commit source imaging,
+reconstructed 4D files, full private QC tables or ages.
 
 Methodological sources:
 [Leech 2012](https://doi.org/10.1523/JNEUROSCI.3689-11.2012),
 [Leech 2011](https://doi.org/10.1523/JNEUROSCI.5626-10.2011),
-[Lindquist 2019](https://doi.org/10.1002/hbm.24528),
-[FSL dual regression](https://fsl.fmrib.ox.ac.uk/fsl/docs/resting_state/dualregression.html).
-The supplied brief and complete archived scripts were available; full-text
-retrieval of the two Leech papers was blocked by publisher/PMC access responses
-in this session. Verify their full methods before manuscript methods are finalized.
+[Lindquist 2019](https://doi.org/10.1002/hbm.24528), and the installed FILM source
+(`film_gls.cc`, `AutoCorrEstimator.cc`, `glimGls.cc`). The supplied revised brief
+controls this workflow. In particular, no additional sequential nuisance filters
+are introduced after the joint FEAT task+nuisance fit.
 
-## Validation
-
-```bash
-"$PYTHON" -m unittest discover -s code/insula_ica -p 'test_*.py' -v
-"$PYTHON" code/insula_ica/test_insula_ica.py --integration /absolute/new/scratch/folder
-```
-
-Numerical tests check joint-projection task estimates, equivalence of partial
-and simultaneous regression, contrast nonestimability, coordinate-based
-hemisphere masks, sign orientation and the 30-test family. The integration test
-creates synthetic positive 4D data, confounds, NSS, original-template EV designs,
-three participants, both tasks, excluded second runs and fake reference maps.
-It runs the actual installed `feat_model`, all nine real MELODIC solutions,
-both regression stages and summaries for pilot and full scopes. It does not use
-private imaging or establish scientific validity on RF1 data.
-
-Development validation (2026-10-26): six numerical tests passed. The real-FSL
-synthetic integration completed pilot and full scopes, all 18 MELODIC calls,
-all regressions, 30-test summaries, template correspondence and both figures.
-Stage-1 TCs also matched an independent `fsl_glm --demean` calculation within
-1e-4 after the documented SD scaling. Fixed-mask equality was checked for every
-solution. Figure layouts were visually inspected. These are software tests,
-not RF1 scientific results.
-
-For an audit-only Linux2 startup, `audit_linux2.py` locates an existing saved QC
-CSV, verifies it against the unchanged N=132 list, creates a fresh timestamped
-output/config, checks the active Python/FSL dependencies and runs only `audit`.
-Use the upstream-documented interpreter
-`/ZPOOL/data/tools/anaconda/tug87422/envs/tedana-26.0.3/bin/python`.
-An explicit file can be supplied as `--qc /existing/path/master_subject_table_full.csv`.
-If supplied with `--qc-snapshot-stdin`, it reads a gzip/base64 attachment-derived
-cohort-only CSV and searches for matching saved run flags; if none is found, it
-restores that minimal snapshot in the ignored output directory. Neither the full
-attachment nor the snapshot is published to Git. The full table can include more
-`include_final` participants than N=132; the unchanged manuscript list always
-determines analysis identity. This startup helper does not waive denoising or
-UG-sign review gates and does not install packages or alter shared environments.
+Development checks on 2026-10-26: ten numerical/safety tests passed. The real-FSL
+synthetic residual-route integration reconstructed six deleted run residuals from
+retained filtered data with missing raw BOLD; all 210 historical COPE/ZSTAT maps
+matched exactly and original files remained byte-identical. It completed all
+3/5/7 decompositions for three ROIs in pilot/full scopes, residual connectivity,
+original-COPE projection and the 30-test summaries/figures. The separate native
+prewhitened FILM probe matched the whitened joint decomposition to 1.4e-5 relative
+error. Full FEAT prestats reconstruction still requires the real linux2 pilot;
+these synthetic results do not establish RF1 input availability or equivalence.

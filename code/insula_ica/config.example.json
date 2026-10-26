@@ -1,23 +1,24 @@
 {
+  "input_mode": "feat_full_model_residuals",
   "upstream_root": "/ZPOOL/data/projects/rf1-sra-linux2",
   "master_qc": "code/master_subject_table_full.csv",
-  "output_root": "code/insula_ica/output",
-  "fmriprep_derivative": "fmriprep-24",
-  "combined_confounds_derivative": "fsl/confounds_tedana-24",
+  "output_root": "code/insula_ica/output/feat-residuals",
+  "derivatives_root": "derivatives/insula_ica/feat-residuals",
   "expected_tr": 1.615,
   "expected_cohort_size": 132,
   "min_residual_dof": 30,
   "max_condition_number": 1000000,
   "minimum_roi_coverage": 0.8,
-  "drift_cutoff_seconds": 128,
   "ica_weighting": "participant_task_sessions",
-  "provenance_review": {
-    "signal_description": "",
-    "evidence": "",
-    "tedana_noise_not_already_removed": false,
-    "ugr_pmods_increase_with_fairness": null,
-    "ugr_coding_evidence": ""
+  "comparison_atol": 0.0001,
+  "comparison_rtol": 0.0001,
+  "residual_projection_tolerance": 0.0001,
+  "residual_scale_review": {
+    "accept_voxelwise_prewhitened": false,
+    "reason": ""
   },
+  "ugr_pmods_increase_with_fairness": null,
+  "ugr_coding_evidence": "",
   "network_templates": [],
-  "network_template_notes": "Add independent MNI-space 3D maps: [{\"name\": \"reference network\", \"path\": \"/verified/map.nii.gz\", \"citation\": \"DOI or atlas version\"}]. Required for summarize."
+  "network_template_notes": "Supply independent 3D MNI maps with name, path and citation before summarize."
 }

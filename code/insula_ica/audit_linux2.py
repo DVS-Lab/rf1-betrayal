@@ -31,12 +31,14 @@ def read_csv(text):
 
 
 def cohort_view(rows, cohort):
-    seen, view = set(), {}
+    seen, view, included = set(), {}, set()
     for row in rows:
         sub = str(int(float(row['sub_id'])))
         if sub in seen:
             raise ValueError('Duplicate QC participant ID')
         seen.add(sub)
+        if row.get('include_final', '').strip().upper() in ('TRUE','1'):
+            included.add(sub)
         if sub not in cohort:
             continue
         if row.get('include_final', '').strip().upper() not in ('TRUE', '1'):
@@ -48,6 +50,8 @@ def cohort_view(rows, cohort):
                 raise ValueError(f'Missing/unknown saved QC flag: {key}')
             values[key] = value in ('TRUE', '1')
         view[sub] = values
+    if included != cohort:
+        raise ValueError('Corrected include_final identities must match manuscript N=132 exactly')
     if set(view) != cohort:
         raise ValueError('QC table does not cover the exact manuscript cohort')
     return view
@@ -57,7 +61,7 @@ def candidates(roots):
     roots = [str(Path(r).resolve()) for r in roots if Path(r).is_dir()]
     if shutil.which('rg'):
         result = subprocess.run(['rg', '--files', '--hidden', '--no-ignore',
-            '-g', 'master_subject_table_full.csv', '-g', '!**/.git/**', *roots],
+            '-g', 'master_subject_table_full*.csv', '-g', '!**/.git/**', *roots],
             text=True, capture_output=True)
         if result.returncode not in (0, 1):
             print('QC search notices:', result.stderr.strip(), flush=True)
@@ -66,8 +70,7 @@ def candidates(roots):
     for root in roots:
         for directory, dirs, files in os.walk(root):
             dirs[:] = [d for d in dirs if d not in ('.git', 'node_modules', '.venv')]
-            if 'master_subject_table_full.csv' in files:
-                found.append(Path(directory) / 'master_subject_table_full.csv')
+            found.extend(Path(directory)/name for name in files if name.startswith('master_subject_table_full') and name.endswith('.csv'))
     return sorted(set(found))
 
 
@@ -127,8 +130,8 @@ def main():
         count = sum(values[f'{task}_run{r}_full_ok'] for values in view.values() for r in (1, 2))
         print(f'Original QC-eligible {task} runs: {count} (not yet verified image availability)', flush=True)
     c = json.loads((ROOT / 'code/insula_ica/config.example.json').read_text())
-    c.update(master_qc=str(qc), output_root=str(out), upstream_root=str(args.upstream_root.resolve()))
-    c['provenance_review']['evidence'] = 'Jacob confirmed on 2026-10-26 that current analyses use fmriprep-24 and confounds_tedana-24; echo combination and prior denoising remain unverified.'
+    c.update(master_qc=str(qc), output_root=str(out), upstream_root=str(args.upstream_root.resolve()),
+             derivatives_root=str(ROOT/'derivatives/insula_ica'/f'feat-residuals-{stamp}'))
     config_path = out / 'config.json'
     config_path.write_text(json.dumps(c, indent=2) + '\n')
     print('Config:', config_path, flush=True)
@@ -142,7 +145,7 @@ def main():
             print('BLOCKED RUN:', row['key'], row['reason'], flush=True)
         print('\nSend back this output plus:', report, out / 'audit/manifest.tsv', flush=True)
     if result.returncode == 2 and report.exists():
-        print('Audit completed with blockers; no production analysis was started.', flush=True)
+        print('FEAT residual inventory completed with blockers; no FEAT rerun or production analysis was started.', flush=True)
         return 0
     return result.returncode
 
