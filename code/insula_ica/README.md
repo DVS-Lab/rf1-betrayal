@@ -291,3 +291,17 @@ Stage-1 TCs also matched an independent `fsl_glm --demean` calculation within
 1e-4 after the documented SD scaling. Fixed-mask equality was checked for every
 solution. Figure layouts were visually inspected. These are software tests,
 not RF1 scientific results.
+
+For an audit-only Linux2 startup, `audit_linux2.py` locates an existing saved QC
+CSV, verifies it against the unchanged N=132 list, creates a fresh timestamped
+output/config, checks the active Python/FSL dependencies and runs only `audit`.
+Use the upstream-documented interpreter
+`/ZPOOL/data/tools/anaconda/tug87422/envs/tedana-26.0.3/bin/python`.
+An explicit file can be supplied as `--qc /existing/path/master_subject_table_full.csv`.
+If supplied with `--qc-snapshot-stdin`, it reads a gzip/base64 attachment-derived
+cohort-only CSV and searches for matching saved run flags; if none is found, it
+restores that minimal snapshot in the ignored output directory. Neither the full
+attachment nor the snapshot is published to Git. The full table can include more
+`include_final` participants than N=132; the unchanged manuscript list always
+determines analysis identity. This startup helper does not waive denoising or
+UG-sign review gates and does not install packages or alter shared environments.

@@ -70,6 +70,27 @@ class NumericalTests(unittest.TestCase):
             self.assertFalse((masks['left'] & masks['right']).any())
 
 
+class StartupTests(unittest.TestCase):
+    def test_qc_snapshot_preserves_manuscript_identity(self):
+        import audit_linux2 as startup
+        row = {'sub_id':'10001', 'include_final':'TRUE', **{k:'TRUE' for k in startup.FLAGS}}
+        extra = dict(row, sub_id='10002')
+        actual = startup.cohort_view([row, extra], {'10001'})
+        self.assertEqual(set(actual), {'10001'})
+        self.assertTrue(all(actual['10001'].values()))
+        with self.assertRaisesRegex(ValueError, 'Duplicate'):
+            startup.cohort_view([row, row], {'10001'})
+        with self.assertRaisesRegex(ValueError, 'does not cover'):
+            startup.cohort_view([extra], {'10001'})
+
+    def test_unknown_run_qc_is_rejected(self):
+        import audit_linux2 as startup
+        row = {'sub_id':'10001', 'include_final':'TRUE', **{k:'TRUE' for k in startup.FLAGS}}
+        row['trust_run1_full_ok']='NA'
+        with self.assertRaisesRegex(ValueError, 'unknown'):
+            startup.cohort_view([row], {'10001'})
+
+
 def integration(folder):
     """Exercise real feat_model + MELODIC + both regressions on fake NIfTIs."""
     require = p.require
