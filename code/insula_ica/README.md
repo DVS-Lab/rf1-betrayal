@@ -35,6 +35,13 @@ established expectation for the prior unseeded/eight-thread configuration.
 The new controls measure a default-setting repeat plus fixed-seed repeat/version
 differences before adopting an empirical historical-comparison standard.
 
+The [completed controls](records/linux2-bold-controls-20261027T113051Z-b1efa8/recovered-20261027T153848Z-31fc23/interpretation.md)
+show exact full-series equality within the historical FEAT masks for controlled
+24.1.1 repeats in all four subject/runs. The ordinary-setting sub-10402 repeats
+differ markedly. 25.2.5 is closer to the historical frame than controlled
+24.1.1 for sub-10402, farther for sub-10478, and farther than ordinary 24.1.1 A
+for sub-10402. Registration/masking QC is needed before selecting a pipeline.
+
 Jacob's corrected `master_subject_table_full (1).csv` has 147 rows and exactly
 132 `include_final=TRUE` identities, matching `code/sublist_n132.txt`. For that
 cohort, the saved full-run QC permits:
