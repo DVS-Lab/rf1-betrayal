@@ -1,0 +1,742 @@
+{
+  "container": {
+    "schema_version": 2,
+    "path": "/ZPOOL/data/tools/fmriprep-24.1.1.simg",
+    "sha256": "6261734ae209de4b103fa051d4c4fe8ea914cb4a4623014fd208454eace0c67f",
+    "version": "24.1.1"
+  },
+  "subjects": {
+    "sub-10369": {
+      "historical": {
+        "root": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/fmriprep-24",
+        "dataset_generated_by": [],
+        "execution_configs": [],
+        "subject_html_versions": [],
+        "html_software_versions": {},
+        "scope_note": "Dataset/subject metadata may cover multiple runs or be overwritten; inspect execution filters and dates before assigning it to historical Trust."
+      },
+      "rebuilt": {
+        "root": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24",
+        "dataset_generated_by": [
+          {
+            "Name": "fMRIPrep",
+            "Version": "24.1.1",
+            "CodeURL": "https://github.com/nipreps/fmriprep/archive/24.1.1.tar.gz"
+          }
+        ],
+        "execution_configs": [
+          {
+            "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10369/log/20261026-205055_4addb3a4-5f3b-4526-a716-70013f3ab0a6/fmriprep.toml",
+            "settings": {
+              "environment": {
+                "version": "24.1.1",
+                "nipype_version": "1.8.6",
+                "templateflow_version": "24.2.0"
+              },
+              "execution": {
+                "task_id": "trust",
+                "bids_filters": {
+                  "t1w": {
+                    "datatype": "anat",
+                    "session": "01",
+                    "suffix": "T1w"
+                  },
+                  "t2w": {
+                    "datatype": "anat",
+                    "session": "01",
+                    "suffix": "T2w"
+                  },
+                  "fmap": {
+                    "datatype": "fmap"
+                  },
+                  "sbref": {
+                    "datatype": "func",
+                    "session": "01",
+                    "suffix": "sbref",
+                    "part": [
+                      "<Query.NONE: 1>",
+                      "mag"
+                    ],
+                    "task": "trust",
+                    "run": [
+                      "1"
+                    ]
+                  },
+                  "bold": {
+                    "datatype": "func",
+                    "session": "01",
+                    "suffix": "bold",
+                    "part": [
+                      "<Query.NONE: 1>",
+                      "mag"
+                    ],
+                    "task": "trust",
+                    "run": [
+                      "1"
+                    ]
+                  }
+                },
+                "output_spaces": "T1w MNI152NLin6Asym:res-native",
+                "bids_dir": "/bids"
+              },
+              "workflow": {
+                "me_t2s_fit_method": "curvefit",
+                "run_reconall": false,
+                "bold2anat_init": "t1w",
+                "bold2anat_dof": 6,
+                "slice_time_ref": 0.5,
+                "fmap_bspline": false,
+                "use_syn_sdc": false,
+                "force_syn": false,
+                "skull_strip_template": "OASIS30ANTs",
+                "skull_strip_fixed_seed": false
+              },
+              "seeds": {
+                "master": 19259,
+                "ants": 64408,
+                "numpy": 10421
+              },
+              "nipype": {
+                "nprocs": 14,
+                "omp_nthreads": 8
+              }
+            }
+          }
+        ],
+        "subject_html_versions": [
+          "24.1.1"
+        ],
+        "html_software_versions": {
+          "ANTs": [
+            "2.5.3"
+          ],
+          "Nipype": [
+            "1.8.6",
+            "10.5281"
+          ],
+          "TemplateFlow": [
+            "24.2.0"
+          ]
+        },
+        "scope_note": "Dataset/subject metadata may cover multiple runs or be overwritten; inspect execution filters and dates before assigning it to historical Trust."
+      }
+    },
+    "sub-10402": {
+      "historical": {
+        "root": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/fmriprep-24",
+        "dataset_generated_by": [],
+        "execution_configs": [],
+        "subject_html_versions": [],
+        "html_software_versions": {},
+        "scope_note": "Dataset/subject metadata may cover multiple runs or be overwritten; inspect execution filters and dates before assigning it to historical Trust."
+      },
+      "rebuilt": {
+        "root": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24",
+        "dataset_generated_by": [
+          {
+            "Name": "fMRIPrep",
+            "Version": "24.1.1",
+            "CodeURL": "https://github.com/nipreps/fmriprep/archive/24.1.1.tar.gz"
+          }
+        ],
+        "execution_configs": [
+          {
+            "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10402/log/20261026-205055_82673113-2774-4213-bf22-c08536e8c6e2/fmriprep.toml",
+            "settings": {
+              "environment": {
+                "version": "24.1.1",
+                "nipype_version": "1.8.6",
+                "templateflow_version": "24.2.0"
+              },
+              "execution": {
+                "task_id": "trust",
+                "bids_filters": {
+                  "t1w": {
+                    "datatype": "anat",
+                    "session": "01",
+                    "suffix": "T1w"
+                  },
+                  "t2w": {
+                    "datatype": "anat",
+                    "session": "01",
+                    "suffix": "T2w"
+                  },
+                  "fmap": {
+                    "datatype": "fmap"
+                  },
+                  "sbref": {
+                    "datatype": "func",
+                    "session": "01",
+                    "suffix": "sbref",
+                    "part": [
+                      "<Query.NONE: 1>",
+                      "mag"
+                    ],
+                    "task": "trust",
+                    "run": [
+                      "1",
+                      "2"
+                    ]
+                  },
+                  "bold": {
+                    "datatype": "func",
+                    "session": "01",
+                    "suffix": "bold",
+                    "part": [
+                      "<Query.NONE: 1>",
+                      "mag"
+                    ],
+                    "task": "trust",
+                    "run": [
+                      "1",
+                      "2"
+                    ]
+                  }
+                },
+                "output_spaces": "T1w MNI152NLin6Asym:res-native",
+                "bids_dir": "/bids"
+              },
+              "workflow": {
+                "me_t2s_fit_method": "curvefit",
+                "run_reconall": false,
+                "bold2anat_init": "t1w",
+                "bold2anat_dof": 6,
+                "slice_time_ref": 0.5,
+                "fmap_bspline": false,
+                "use_syn_sdc": false,
+                "force_syn": false,
+                "skull_strip_template": "OASIS30ANTs",
+                "skull_strip_fixed_seed": false
+              },
+              "seeds": {
+                "master": 21614,
+                "ants": 61819,
+                "numpy": 65005
+              },
+              "nipype": {
+                "nprocs": 14,
+                "omp_nthreads": 8
+              }
+            }
+          }
+        ],
+        "subject_html_versions": [
+          "24.1.1"
+        ],
+        "html_software_versions": {
+          "ANTs": [
+            "2.5.3"
+          ],
+          "Nipype": [
+            "1.8.6",
+            "10.5281"
+          ],
+          "TemplateFlow": [
+            "24.2.0"
+          ]
+        },
+        "scope_note": "Dataset/subject metadata may cover multiple runs or be overwritten; inspect execution filters and dates before assigning it to historical Trust."
+      }
+    }
+  },
+  "runs": {
+    "sub-10369_ses-01_task-trust_run-1": {
+      "original_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10369/ses-01/L1_task-trust_model-01_type-act_run-1_sm-5.feat",
+      "rebuilt_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/feat_reconstruction/sub-10369_ses-01_task-trust_run-1.feat",
+      "saved_matrix_snapshot_hash_matches": true,
+      "saved_vs_original_feat": {
+        "left": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/original_confounds/sub-10369/sub-10369_ses-01_task-trust_run-1_desc-TedanaPlusConfounds.tsv",
+        "right": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10369/ses-01/L1_task-trust_model-01_type-act_run-1_sm-5.feat/confoundevs.txt",
+        "available": true,
+        "left_shape": [
+          280,
+          26
+        ],
+        "right_shape": [
+          280,
+          26
+        ],
+        "equal": true,
+        "max_absolute_difference": 0.0
+      },
+      "saved_vs_rebuilt_feat": {
+        "left": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/original_confounds/sub-10369/sub-10369_ses-01_task-trust_run-1_desc-TedanaPlusConfounds.tsv",
+        "right": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/feat_reconstruction/sub-10369_ses-01_task-trust_run-1.feat/confoundevs.txt",
+        "available": true,
+        "left_shape": [
+          280,
+          26
+        ],
+        "right_shape": [
+          280,
+          26
+        ],
+        "equal": true,
+        "max_absolute_difference": 0.0
+      },
+      "tedana": {
+        "metrics": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/tedana-24/sub-10369/ses-01/sub-10369_ses-01_task-trust_run-1_desc-tedana_metrics.tsv",
+        "mixing": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/tedana-24/sub-10369/ses-01/sub-10369_ses-01_task-trust_run-1_desc-ICA_mixing.tsv",
+        "available": false,
+        "rejected_suffix_matches": null,
+        "status": "Component identities cannot be checked from these missing source files."
+      },
+      "fsf_setting_differences_except_locations": {},
+      "full_model_checks": {
+        "design.mat": {
+          "old_shape": [
+            280,
+            36
+          ],
+          "new_shape": [
+            280,
+            36
+          ],
+          "match": true,
+          "max_absolute_difference": 0.0
+        },
+        "design.con": {
+          "old_shape": [
+            18,
+            36
+          ],
+          "new_shape": [
+            18,
+            36
+          ],
+          "match": true,
+          "max_absolute_difference": 0.0
+        }
+      },
+      "checkpoints": {
+        "example_func.nii.gz": {
+          "available": true,
+          "same_grid": true,
+          "voxels": 102086,
+          "spatial_r": 0.9966363726840806,
+          "relative_rms_difference": 0.042678749614627504,
+          "max_absolute_difference": 2218.1577758789062,
+          "new_on_old_global_scale": 1.0006024871051715,
+          "relative_rms_after_global_scale": 0.04267449680964229
+        },
+        "mean_func.nii.gz": {
+          "available": true,
+          "same_grid": true,
+          "voxels": 102086,
+          "spatial_r": 0.9984970411040157,
+          "relative_rms_difference": 0.02805524298511833,
+          "max_absolute_difference": 13535.095703125,
+          "new_on_old_global_scale": 0.9963051062732913,
+          "relative_rms_after_global_scale": 0.02781086872613575
+        }
+      },
+      "normalized_old_commands": [
+        "feat_model design",
+        "fslmaths /ZPOOL/data/projects/rf1-sra-linux2/derivatives/fmriprep-24/sub-10369/ses-01/func/sub-10369_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold prefiltered_func_data -odt float",
+        "fslroi prefiltered_func_data example_func 140 1",
+        "fslmaths prefiltered_func_data -Tmean mean_func",
+        "bet2 mean_func mask -f 0.3 -n -m; /usr/local/fsl/bin/immv mask_mask mask",
+        "fslmaths prefiltered_func_data -mas mask prefiltered_func_data_bet",
+        "fslstats prefiltered_func_data_bet -p 2 -p 98",
+        "fslmaths prefiltered_func_data_bet -thr 639.3628905999999 -Tmin -bin mask -odt char",
+        "fslstats prefiltered_func_data -k mask -p 50",
+        "fslmaths mask -dilF mask",
+        "fslmaths prefiltered_func_data -mas mask prefiltered_func_data_thresh",
+        "fslmaths prefiltered_func_data_thresh -Tmean mean_func",
+        "susan prefiltered_func_data_thresh 2964.4350585 2.1231422505307855 3 1 1 mean_func 2964.4350585 prefiltered_func_data_smooth",
+        "fslmaths prefiltered_func_data_smooth -mas mask prefiltered_func_data_smooth",
+        "fslmaths prefiltered_func_data_smooth -mul 2.5299930178922487 prefiltered_func_data_intnorm",
+        "fslmaths prefiltered_func_data_intnorm filtered_func_data",
+        "fslmaths filtered_func_data -Tmean mean_func",
+        "feat_model design confoundevs.txt",
+        "film_gls --in=filtered_func_data --rn=stats --pd=design.mat --thr=1000.0 --sa --ms=5 --con=design.con",
+        "fslmaths stats/zstat1 -mas mask thresh_zstat1",
+        "fslmaths stats/zstat2 -mas mask thresh_zstat2",
+        "fslmaths stats/zstat3 -mas mask thresh_zstat3",
+        "fslmaths stats/zstat4 -mas mask thresh_zstat4",
+        "fslmaths stats/zstat5 -mas mask thresh_zstat5",
+        "fslmaths stats/zstat6 -mas mask thresh_zstat6",
+        "fslmaths stats/zstat7 -mas mask thresh_zstat7",
+        "fslmaths stats/zstat8 -mas mask thresh_zstat8",
+        "fslmaths stats/zstat9 -mas mask thresh_zstat9",
+        "fslmaths stats/zstat10 -mas mask thresh_zstat10",
+        "fslmaths stats/zstat11 -mas mask thresh_zstat11",
+        "fslmaths stats/zstat12 -mas mask thresh_zstat12",
+        "fslmaths stats/zstat13 -mas mask thresh_zstat13",
+        "fslmaths stats/zstat14 -mas mask thresh_zstat14",
+        "fslmaths stats/zstat15 -mas mask thresh_zstat15",
+        "fslmaths stats/zstat16 -mas mask thresh_zstat16",
+        "fslmaths stats/zstat17 -mas mask thresh_zstat17",
+        "fslmaths stats/zstat18 -mas mask thresh_zstat18",
+        "fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat2 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat3 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat4 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat5 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat6 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat7 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat8 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat9 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat10 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat11 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat12 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat13 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat14 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat15 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat16 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat17 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat18 -l 0.0001 -R 2>/dev/null"
+      ],
+      "normalized_new_commands": [
+        "feat_model design",
+        "fslmaths /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10369/ses-01/func/sub-10369_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold prefiltered_func_data -odt float",
+        "fslroi prefiltered_func_data example_func 140 1",
+        "fslmaths prefiltered_func_data -Tmean mean_func",
+        "bet2 mean_func mask -f 0.3 -n -m; /usr/local/fsl/bin/immv mask_mask mask",
+        "fslmaths prefiltered_func_data -mas mask prefiltered_func_data_bet",
+        "fslstats prefiltered_func_data_bet -p 2 -p 98",
+        "fslmaths prefiltered_func_data_bet -thr 639.4138672 -Tmin -bin mask -odt char",
+        "fslstats prefiltered_func_data -k mask -p 50",
+        "fslmaths mask -dilF mask",
+        "fslmaths prefiltered_func_data -mas mask prefiltered_func_data_thresh",
+        "fslmaths prefiltered_func_data_thresh -Tmean mean_func",
+        "susan prefiltered_func_data_thresh 2976.96020475 2.1231422505307855 3 1 1 mean_func 2976.96020475 prefiltered_func_data_smooth",
+        "fslmaths prefiltered_func_data_smooth -mas mask prefiltered_func_data_smooth",
+        "fslmaths prefiltered_func_data_smooth -mul 2.5193484239504094 prefiltered_func_data_intnorm",
+        "fslmaths prefiltered_func_data_intnorm filtered_func_data",
+        "fslmaths filtered_func_data -Tmean mean_func",
+        "feat_model design confoundevs.txt",
+        "film_gls --in=filtered_func_data --rn=stats --pd=design.mat --thr=1000.0 --sa --ms=5 --con=design.con",
+        "fslmaths stats/zstat1 -mas mask thresh_zstat1",
+        "fslmaths stats/zstat2 -mas mask thresh_zstat2",
+        "fslmaths stats/zstat3 -mas mask thresh_zstat3",
+        "fslmaths stats/zstat4 -mas mask thresh_zstat4",
+        "fslmaths stats/zstat5 -mas mask thresh_zstat5",
+        "fslmaths stats/zstat6 -mas mask thresh_zstat6",
+        "fslmaths stats/zstat7 -mas mask thresh_zstat7",
+        "fslmaths stats/zstat8 -mas mask thresh_zstat8",
+        "fslmaths stats/zstat9 -mas mask thresh_zstat9",
+        "fslmaths stats/zstat10 -mas mask thresh_zstat10",
+        "fslmaths stats/zstat11 -mas mask thresh_zstat11",
+        "fslmaths stats/zstat12 -mas mask thresh_zstat12",
+        "fslmaths stats/zstat13 -mas mask thresh_zstat13",
+        "fslmaths stats/zstat14 -mas mask thresh_zstat14",
+        "fslmaths stats/zstat15 -mas mask thresh_zstat15",
+        "fslmaths stats/zstat16 -mas mask thresh_zstat16",
+        "fslmaths stats/zstat17 -mas mask thresh_zstat17",
+        "fslmaths stats/zstat18 -mas mask thresh_zstat18",
+        "fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat2 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat3 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat4 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat5 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat6 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat7 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat8 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat9 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat10 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat11 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat12 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat13 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat14 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat15 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat16 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat17 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat18 -l 0.0001 -R 2>/dev/null"
+      ],
+      "normalized_command_diff": [
+        "--- historical commands",
+        "+++ rebuilt commands",
+        "@@ -1,18 +1,18 @@",
+        " feat_model design",
+        "-fslmaths /ZPOOL/data/projects/rf1-sra-linux2/derivatives/fmriprep-24/sub-10369/ses-01/func/sub-10369_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold prefiltered_func_data -odt float",
+        "+fslmaths /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10369/ses-01/func/sub-10369_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold prefiltered_func_data -odt float",
+        " fslroi prefiltered_func_data example_func 140 1",
+        " fslmaths prefiltered_func_data -Tmean mean_func",
+        " bet2 mean_func mask -f 0.3 -n -m; /usr/local/fsl/bin/immv mask_mask mask",
+        " fslmaths prefiltered_func_data -mas mask prefiltered_func_data_bet",
+        " fslstats prefiltered_func_data_bet -p 2 -p 98",
+        "-fslmaths prefiltered_func_data_bet -thr 639.3628905999999 -Tmin -bin mask -odt char",
+        "+fslmaths prefiltered_func_data_bet -thr 639.4138672 -Tmin -bin mask -odt char",
+        " fslstats prefiltered_func_data -k mask -p 50",
+        " fslmaths mask -dilF mask",
+        " fslmaths prefiltered_func_data -mas mask prefiltered_func_data_thresh",
+        " fslmaths prefiltered_func_data_thresh -Tmean mean_func",
+        "-susan prefiltered_func_data_thresh 2964.4350585 2.1231422505307855 3 1 1 mean_func 2964.4350585 prefiltered_func_data_smooth",
+        "+susan prefiltered_func_data_thresh 2976.96020475 2.1231422505307855 3 1 1 mean_func 2976.96020475 prefiltered_func_data_smooth",
+        " fslmaths prefiltered_func_data_smooth -mas mask prefiltered_func_data_smooth",
+        "-fslmaths prefiltered_func_data_smooth -mul 2.5299930178922487 prefiltered_func_data_intnorm",
+        "+fslmaths prefiltered_func_data_smooth -mul 2.5193484239504094 prefiltered_func_data_intnorm",
+        " fslmaths prefiltered_func_data_intnorm filtered_func_data",
+        " fslmaths filtered_func_data -Tmean mean_func",
+        " feat_model design confoundevs.txt"
+      ]
+    },
+    "sub-10402_ses-01_task-trust_run-1": {
+      "original_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10402/ses-01/L1_task-trust_model-01_type-act_run-1_sm-5.feat",
+      "rebuilt_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/feat_reconstruction/sub-10402_ses-01_task-trust_run-1.feat",
+      "saved_matrix_snapshot_hash_matches": true,
+      "saved_vs_original_feat": {
+        "left": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/original_confounds/sub-10402/sub-10402_ses-01_task-trust_run-1_desc-TedanaPlusConfounds.tsv",
+        "right": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10402/ses-01/L1_task-trust_model-01_type-act_run-1_sm-5.feat/confoundevs.txt",
+        "available": true,
+        "left_shape": [
+          280,
+          25
+        ],
+        "right_shape": [
+          280,
+          25
+        ],
+        "equal": true,
+        "max_absolute_difference": 0.0
+      },
+      "saved_vs_rebuilt_feat": {
+        "left": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/original_confounds/sub-10402/sub-10402_ses-01_task-trust_run-1_desc-TedanaPlusConfounds.tsv",
+        "right": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/feat_reconstruction/sub-10402_ses-01_task-trust_run-1.feat/confoundevs.txt",
+        "available": true,
+        "left_shape": [
+          280,
+          25
+        ],
+        "right_shape": [
+          280,
+          25
+        ],
+        "equal": true,
+        "max_absolute_difference": 0.0
+      },
+      "tedana": {
+        "metrics": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/tedana-24/sub-10402/ses-01/sub-10402_ses-01_task-trust_run-1_desc-tedana_metrics.tsv",
+        "mixing": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/tedana-24/sub-10402/ses-01/sub-10402_ses-01_task-trust_run-1_desc-ICA_mixing.tsv",
+        "available": false,
+        "rejected_suffix_matches": null,
+        "status": "Component identities cannot be checked from these missing source files."
+      },
+      "fsf_setting_differences_except_locations": {},
+      "full_model_checks": {
+        "design.mat": {
+          "old_shape": [
+            280,
+            35
+          ],
+          "new_shape": [
+            280,
+            35
+          ],
+          "match": true,
+          "max_absolute_difference": 0.0
+        },
+        "design.con": {
+          "old_shape": [
+            18,
+            35
+          ],
+          "new_shape": [
+            18,
+            35
+          ],
+          "match": true,
+          "max_absolute_difference": 0.0
+        }
+      },
+      "checkpoints": {
+        "example_func.nii.gz": {
+          "available": true,
+          "same_grid": true,
+          "voxels": 99505,
+          "spatial_r": 0.9951297833050788,
+          "relative_rms_difference": 0.0515907319080656,
+          "max_absolute_difference": 3047.07177734375,
+          "new_on_old_global_scale": 1.0061947215900586,
+          "relative_rms_after_global_scale": 0.051217468145463484
+        },
+        "mean_func.nii.gz": {
+          "available": true,
+          "same_grid": true,
+          "voxels": 99505,
+          "spatial_r": 0.9975282563793523,
+          "relative_rms_difference": 0.03458423497519888,
+          "max_absolute_difference": 4911.2314453125,
+          "new_on_old_global_scale": 0.9968525986978923,
+          "relative_rms_after_global_scale": 0.03444071970594195
+        }
+      },
+      "normalized_old_commands": [
+        "feat_model design",
+        "fslmaths /ZPOOL/data/projects/rf1-sra-linux2/derivatives/fmriprep-24/sub-10402/ses-01/func/sub-10402_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold prefiltered_func_data -odt float",
+        "fslroi prefiltered_func_data example_func 140 1",
+        "fslmaths prefiltered_func_data -Tmean mean_func",
+        "bet2 mean_func mask -f 0.3 -n -m; /usr/local/fsl/bin/immv mask_mask mask",
+        "fslmaths prefiltered_func_data -mas mask prefiltered_func_data_bet",
+        "fslstats prefiltered_func_data_bet -p 2 -p 98",
+        "fslmaths prefiltered_func_data_bet -thr 656.3429688000001 -Tmin -bin mask -odt char",
+        "fslstats prefiltered_func_data -k mask -p 50",
+        "fslmaths mask -dilF mask",
+        "fslmaths prefiltered_func_data -mas mask prefiltered_func_data_thresh",
+        "fslmaths prefiltered_func_data_thresh -Tmean mean_func",
+        "susan prefiltered_func_data_thresh 2895.537048 2.1231422505307855 3 1 1 mean_func 2895.537048 prefiltered_func_data_smooth",
+        "fslmaths prefiltered_func_data_smooth -mas mask prefiltered_func_data_smooth",
+        "fslmaths prefiltered_func_data_smooth -mul 2.5901930714995984 prefiltered_func_data_intnorm",
+        "fslmaths prefiltered_func_data_intnorm filtered_func_data",
+        "fslmaths filtered_func_data -Tmean mean_func",
+        "feat_model design confoundevs.txt",
+        "film_gls --in=filtered_func_data --rn=stats --pd=design.mat --thr=1000.0 --sa --ms=5 --con=design.con",
+        "fslmaths stats/zstat1 -mas mask thresh_zstat1",
+        "fslmaths stats/zstat2 -mas mask thresh_zstat2",
+        "fslmaths stats/zstat3 -mas mask thresh_zstat3",
+        "fslmaths stats/zstat4 -mas mask thresh_zstat4",
+        "fslmaths stats/zstat5 -mas mask thresh_zstat5",
+        "fslmaths stats/zstat6 -mas mask thresh_zstat6",
+        "fslmaths stats/zstat7 -mas mask thresh_zstat7",
+        "fslmaths stats/zstat8 -mas mask thresh_zstat8",
+        "fslmaths stats/zstat9 -mas mask thresh_zstat9",
+        "fslmaths stats/zstat10 -mas mask thresh_zstat10",
+        "fslmaths stats/zstat11 -mas mask thresh_zstat11",
+        "fslmaths stats/zstat12 -mas mask thresh_zstat12",
+        "fslmaths stats/zstat13 -mas mask thresh_zstat13",
+        "fslmaths stats/zstat14 -mas mask thresh_zstat14",
+        "fslmaths stats/zstat15 -mas mask thresh_zstat15",
+        "fslmaths stats/zstat16 -mas mask thresh_zstat16",
+        "fslmaths stats/zstat17 -mas mask thresh_zstat17",
+        "fslmaths stats/zstat18 -mas mask thresh_zstat18",
+        "fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat2 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat3 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat4 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat5 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat6 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat7 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat8 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat9 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat10 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat11 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat12 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat13 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat14 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat15 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat16 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat17 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat18 -l 0.0001 -R 2>/dev/null"
+      ],
+      "normalized_new_commands": [
+        "feat_model design",
+        "fslmaths /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10402/ses-01/func/sub-10402_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold prefiltered_func_data -odt float",
+        "fslroi prefiltered_func_data example_func 140 1",
+        "fslmaths prefiltered_func_data -Tmean mean_func",
+        "bet2 mean_func mask -f 0.3 -n -m; /usr/local/fsl/bin/immv mask_mask mask",
+        "fslmaths prefiltered_func_data -mas mask prefiltered_func_data_bet",
+        "fslstats prefiltered_func_data_bet -p 2 -p 98",
+        "fslmaths prefiltered_func_data_bet -thr 657.5821289 -Tmin -bin mask -odt char",
+        "fslstats prefiltered_func_data -k mask -p 50",
+        "fslmaths mask -dilF mask",
+        "fslmaths prefiltered_func_data -mas mask prefiltered_func_data_thresh",
+        "fslmaths prefiltered_func_data_thresh -Tmean mean_func",
+        "susan prefiltered_func_data_thresh 2923.66735875 2.1231422505307855 3 1 1 mean_func 2923.66735875 prefiltered_func_data_smooth",
+        "fslmaths prefiltered_func_data_smooth -mas mask prefiltered_func_data_smooth",
+        "fslmaths prefiltered_func_data_smooth -mul 2.5652713115785475 prefiltered_func_data_intnorm",
+        "fslmaths prefiltered_func_data_intnorm filtered_func_data",
+        "fslmaths filtered_func_data -Tmean mean_func",
+        "feat_model design confoundevs.txt",
+        "film_gls --in=filtered_func_data --rn=stats --pd=design.mat --thr=1000.0 --sa --ms=5 --con=design.con",
+        "fslmaths stats/zstat1 -mas mask thresh_zstat1",
+        "fslmaths stats/zstat2 -mas mask thresh_zstat2",
+        "fslmaths stats/zstat3 -mas mask thresh_zstat3",
+        "fslmaths stats/zstat4 -mas mask thresh_zstat4",
+        "fslmaths stats/zstat5 -mas mask thresh_zstat5",
+        "fslmaths stats/zstat6 -mas mask thresh_zstat6",
+        "fslmaths stats/zstat7 -mas mask thresh_zstat7",
+        "fslmaths stats/zstat8 -mas mask thresh_zstat8",
+        "fslmaths stats/zstat9 -mas mask thresh_zstat9",
+        "fslmaths stats/zstat10 -mas mask thresh_zstat10",
+        "fslmaths stats/zstat11 -mas mask thresh_zstat11",
+        "fslmaths stats/zstat12 -mas mask thresh_zstat12",
+        "fslmaths stats/zstat13 -mas mask thresh_zstat13",
+        "fslmaths stats/zstat14 -mas mask thresh_zstat14",
+        "fslmaths stats/zstat15 -mas mask thresh_zstat15",
+        "fslmaths stats/zstat16 -mas mask thresh_zstat16",
+        "fslmaths stats/zstat17 -mas mask thresh_zstat17",
+        "fslmaths stats/zstat18 -mas mask thresh_zstat18",
+        "fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat2 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat3 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat4 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat5 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat6 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat7 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat8 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat9 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat10 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat11 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat12 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat13 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat14 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat15 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat16 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat17 -l 0.0001 -R 2>/dev/null",
+        "fslstats thresh_zstat18 -l 0.0001 -R 2>/dev/null"
+      ],
+      "normalized_command_diff": [
+        "--- historical commands",
+        "+++ rebuilt commands",
+        "@@ -1,18 +1,18 @@",
+        " feat_model design",
+        "-fslmaths /ZPOOL/data/projects/rf1-sra-linux2/derivatives/fmriprep-24/sub-10402/ses-01/func/sub-10402_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold prefiltered_func_data -odt float",
+        "+fslmaths /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10402/ses-01/func/sub-10402_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold prefiltered_func_data -odt float",
+        " fslroi prefiltered_func_data example_func 140 1",
+        " fslmaths prefiltered_func_data -Tmean mean_func",
+        " bet2 mean_func mask -f 0.3 -n -m; /usr/local/fsl/bin/immv mask_mask mask",
+        " fslmaths prefiltered_func_data -mas mask prefiltered_func_data_bet",
+        " fslstats prefiltered_func_data_bet -p 2 -p 98",
+        "-fslmaths prefiltered_func_data_bet -thr 656.3429688000001 -Tmin -bin mask -odt char",
+        "+fslmaths prefiltered_func_data_bet -thr 657.5821289 -Tmin -bin mask -odt char",
+        " fslstats prefiltered_func_data -k mask -p 50",
+        " fslmaths mask -dilF mask",
+        " fslmaths prefiltered_func_data -mas mask prefiltered_func_data_thresh",
+        " fslmaths prefiltered_func_data_thresh -Tmean mean_func",
+        "-susan prefiltered_func_data_thresh 2895.537048 2.1231422505307855 3 1 1 mean_func 2895.537048 prefiltered_func_data_smooth",
+        "+susan prefiltered_func_data_thresh 2923.66735875 2.1231422505307855 3 1 1 mean_func 2923.66735875 prefiltered_func_data_smooth",
+        " fslmaths prefiltered_func_data_smooth -mas mask prefiltered_func_data_smooth",
+        "-fslmaths prefiltered_func_data_smooth -mul 2.5901930714995984 prefiltered_func_data_intnorm",
+        "+fslmaths prefiltered_func_data_smooth -mul 2.5652713115785475 prefiltered_func_data_intnorm",
+        " fslmaths prefiltered_func_data_intnorm filtered_func_data",
+        " fslmaths filtered_func_data -Tmean mean_func",
+        " feat_model design confoundevs.txt"
+      ]
+    },
+    "sub-10402_ses-01_task-trust_run-2": {
+      "original_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10402/ses-01/L1_task-trust_model-01_type-act_run-2_sm-5.feat",
+      "rebuilt_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/feat_reconstruction/sub-10402_ses-01_task-trust_run-2.feat",
+      "saved_matrix_snapshot_hash_matches": true,
+      "saved_vs_original_feat": {
+        "left": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/original_confounds/sub-10402/sub-10402_ses-01_task-trust_run-2_desc-TedanaPlusConfounds.tsv",
+        "right": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10402/ses-01/L1_task-trust_model-01_type-act_run-2_sm-5.feat/confoundevs.txt",
+        "available": true,
+        "left_shape": [
+          280,
+          26
+        ],
+        "right_shape": [
+          280,
+          26
+        ],
+        "equal": true,
+        "max_absolute_difference": 0.0
+      },
+      "saved_vs_rebuilt_feat": {
+        "left": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/original_confounds/sub-10402/sub-10402_ses-01_task-trust_run-2_desc-TedanaPlusConfounds.tsv",
+        "right": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/feat_reconstruction/sub-10402_ses-01_task-trust_run-2.feat/confoundevs.txt",
+        "available": false,
+        "equal": null
+      },
+      "tedana": {
+        "metrics": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/tedana-24/sub-10402/ses-01/sub-10402_ses-01_task-trust_run-2_desc-tedana_metrics.tsv",
+        "mixing": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/tedana-24/sub-10402/ses-01/sub-10402_ses-01_task-trust_run-2_desc-ICA_mixing.tsv",
+        "available": false,
+        "rejected_suffix_matches": null,
+        "status": "Component identities cannot be checked from these missing source files."
+      },
+      "rebuilt_feat_available": false
+    }
+  }
+}

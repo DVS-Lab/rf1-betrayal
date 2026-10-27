@@ -1,0 +1,3 @@
+fMRIPrep version: 24.1.1 
+ fMRIPrep command: /opt/conda/envs/fmriprep/bin/fmriprep /bids /rebuild/fmriprep-24 participant --participant-label 10369 --task-id trust --bids-filter-file /rebuild/filters/sub-10369.json --stop-on-first-crash --skip-bids-validation --nthreads 14 --mem-mb 28000 --me-output-echos --output-spaces T1w MNI152NLin6Asym --fs-no-reconall --fs-license-file /opts/fs_license.txt -w /scratch 
+ Date preprocessed: 2026-10-26 20:51:29 -0400
