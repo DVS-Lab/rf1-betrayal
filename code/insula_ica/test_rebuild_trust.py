@@ -12,6 +12,52 @@ from test_insula_ica import vest
 
 
 class TrustRebuildTests(unittest.TestCase):
+    def test_container_migration_accepts_changed_notices_but_preserves_legacy_record(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            image = root / '24.sif'
+            image.write_bytes(b'container fixture')
+            first = 'Proxy warning\nfMRIPrep 24.1.1\nA newer version is available: 25.2.6\n'
+            second = 'Network check failed\nfMRIPrep 24.1.1\nA newer version is available: 25.2.7\n'
+            record = root / 'container.json'
+            r.save_json(record, dict(path=str(image), sha256=r.sha(image), version=first))
+            legacy = record.read_bytes()
+            r.record_container(root, image, second)
+            self.assertEqual((root / 'container.legacy.json').read_bytes(), legacy)
+            stable = record.read_bytes()
+            r.record_container(root, image, first)
+            self.assertEqual(record.read_bytes(), stable)
+            self.assertEqual(json.loads(stable)['version'], '24.1.1')
+            self.assertEqual(len((root / 'container_observations.jsonl').read_text().splitlines()), 2)
+
+    def test_container_digest_change_still_blocks_without_overwriting_record(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            image = root / '24.sif'
+            image.write_bytes(b'original')
+            r.record_container(root, image, 'fMRIPrep 24.1.1\n')
+            original = (root / 'container.json').read_bytes()
+            image.write_bytes(b'changed image')
+            with self.assertRaisesRegex(ValueError, 'SHA256 changed'):
+                r.record_container(root, image, 'fMRIPrep 24.1.1\n')
+            self.assertEqual((root / 'container.json').read_bytes(), original)
+
+    def test_version_is_the_application_line_not_the_new_release_notice(self):
+        self.assertEqual(r.parsed_version('fMRIPrep v24.1.1\nLatest release: 25.2.7\n'), '24.1.1')
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            with self.assertRaisesRegex(ValueError, 'not fMRIPrep'):
+                r.record_container(root, root / 'missing', 'fMRIPrep 25.2.5\nOld release: 24.1.1\n')
+        with self.assertRaisesRegex(ValueError, 'unique'):
+            r.parsed_version('fMRIPrep 24.1.1\nfMRIPrep 25.2.5\n')
+
+    def test_production_uses_eight_subjects_and_pilot_retains_two(self):
+        self.assertEqual(r.subject_jobs(False, None), 8)
+        self.assertEqual(r.subject_jobs(True, None), 2)
+        self.assertEqual(r.subject_jobs(False, 4), 4)
+        with self.assertRaisesRegex(ValueError, 'concurrent'):
+            r.subject_jobs(False, 0)
+
     def warpkit_fixture(self, folder):
         upstream = Path(folder)
         sub = 'sub-10001'

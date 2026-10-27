@@ -81,9 +81,11 @@ Remove `--execute` to inspect the plan first. `--fetch-image` pulls the official
 `/ZPOOL/data/tools/fmriprep-24.1.1.simg` is absent; `--image /path/to/image` can
 use an existing cluster container. The runtime version is checked and the
 container SHA256 recorded. No existing environment or current fMRIPrep wrapper
-is changed. The defaults permit two concurrent participants, each with 14
-processes and a 28,000 MB memory cap; adjust `--jobs`, `--nprocs`, `--mem-mb`
-for linux2 capacity.
+is changed. Defaults are two concurrent participants for the pilot and **eight
+for production**, each with 14 processes and a 28,000 MB memory cap. Explicit
+`--jobs` overrides concurrency; `--nprocs` and `--mem-mb` set per-subject limits.
+Eight concurrent subjects therefore have 112 process slots and 224,000 MB of
+combined configured memory caps.
 
 The runner preflights raw echo volume counts/TR against each saved FSF, preserves
 the full combined nuisance matrix and original FSF, and records raw image
@@ -127,8 +129,14 @@ an equivalent historical reconstruction. The regenerated BOLD must match the
 historical spatial grid, TR and time count. Full residual-scale/coverage QC is
 still required before ICA; a successful fit comparison is not that final QC.
 
-After the pilot passes, repeat the command without `--pilot` for the remaining
-participants. Full execution requires the matching `pilot-verified.json`.
+After the pilot passes, launch the full rebuild with eight concurrent subjects:
+
+```bash
+"$INSULA_AUDIT_PYTHON" code/insula_ica/rebuild_trust.py \
+  --audit-dir "$INSULA_AUDIT_DIR" --fit --fetch-image --execute --jobs 8
+```
+
+Full execution requires the matching `pilot-verified.json`.
 The runner does not automatically feed new Trust residuals into ICA; combining
 their reconstruction manifest with the existing UGR replay route remains the
 next step after real-data historical comparisons pass.
@@ -141,7 +149,16 @@ restarted with the same command/output root; corrected filters are regenerated,
 the downloaded container and work directories are retained, and participant
 logs append a timestamped attempt marker.
 
-Development checks: nine reconstruction safety tests plus ten existing numerical
+Container identity compares the image SHA256 and parsed application version,
+not the entire `--version` stdout/stderr stream. Update notices, proxy warnings,
+and transient network messages are appended to `container_observations.jsonl`.
+Legacy records storing the complete command output are normalized only after
+the SHA256 and parsed version match; the original bytes remain in
+`container.legacy.json`. A genuinely different image or version still blocks,
+with the original `container.json` left intact. Do not delete the identity record
+or change the output root merely to bypass a notice-only difference.
+
+Development checks: thirteen reconstruction safety tests plus ten existing numerical
 tests passed. A 241-run synthetic inventory exercised the full raw preflight,
 three-run pilot selection, byte-preserved confounds and isolated output plan.
 The exact upstream 24.1.1 converter functions reproduced the integer-run error

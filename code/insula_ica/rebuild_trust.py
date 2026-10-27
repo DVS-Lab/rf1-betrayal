@@ -103,6 +103,47 @@ def freeze_json(path, value):
         save_json(path, value)
 
 
+def parsed_version(output):
+    # --version writes a standalone application/version line. Release notices,
+    # proxy warnings, and update-check failures are observations, not identity.
+    matches = re.findall(r'^\s*(?:fmriprep(?:\s+version)?[\s-]+v?)?'
+                         r'(\d+\.\d+\.\d+(?:[A-Za-z0-9.+-]*))\s*$', output, re.I | re.M)
+    require(len(set(matches)) == 1, 'Cannot identify a unique fMRIPrep version line: ' + output)
+    return matches[0]
+
+
+def record_container(output, image, version_output):
+    version = parsed_version(version_output)
+    require(version == VERSION, 'Container is not fMRIPrep ' + VERSION + ': ' + version)
+    identity = dict(schema_version=2, path=str(image.resolve()), sha256=sha(image), version=version)
+    record = output / 'container.json'
+    observation = dict(timestamp_utc=datetime.now(timezone.utc).isoformat(),
+                       **identity, version_command_output=version_output)
+    with (output / 'container_observations.jsonl').open('a') as stream:
+        stream.write(json.dumps(observation) + '\n')
+    if record.is_file():
+        previous = json.loads(record.read_text())
+        require(previous.get('sha256') == identity['sha256'],
+                'Container image SHA256 changed; original container.json preserved. '
+                'Use the original image or a fresh output root. Current observation: ' +
+                str(output / 'container_observations.jsonl'))
+        require(parsed_version(previous['version']) == version,
+                'Recorded container version differs; original container.json preserved')
+        if previous.get('schema_version') != 2:
+            preserve(record, output / 'container.legacy.json')
+            print('Normalized legacy container record; SHA256 and parsed version match.', flush=True)
+    # Only after verifying both scientific identifiers may a legacy record or
+    # relocated byte-identical image update the stable record. Keep raw notices
+    # in the append-only observations and preserve the original legacy bytes.
+    save_json(record, identity)
+
+
+def subject_jobs(pilot, jobs):
+    selected = (2 if pilot else 8) if jobs is None else jobs
+    require(selected > 0, 'Invalid concurrent subject count')
+    return selected
+
+
 def warpkit_inputs(upstream, sub, run, raw_inputs):
     """The archived Warpkit script copies its first fieldmap volume into BIDS.
 
@@ -331,12 +372,13 @@ def main():
     p.add_argument('--image', type=Path)
     p.add_argument('--fetch-image', action='store_true', help='Pull nipreps/fmriprep:24.1.1 if absent')
     p.add_argument('--pilot', action='store_true', help='One two-run participant and one single-run participant')
-    p.add_argument('--jobs', type=int, default=2)
+    p.add_argument('--jobs', type=int, help='Concurrent subjects (default: 2 for pilot, 8 for production)')
     p.add_argument('--nprocs', type=int, default=14)
     p.add_argument('--mem-mb', type=int, default=28000)
     p.add_argument('--execute', action='store_true')
     p.add_argument('--fit', action='store_true', help='Reconstruct FEAT with original combined confounds and compare every COPE/ZSTAT')
     args = p.parse_args()
+    args.jobs = subject_jobs(args.pilot, args.jobs)
     require(args.jobs > 0 and args.nprocs > 0 and args.mem_mb > 0, 'Invalid resource allocation')
     audit = args.audit_dir.resolve()
     upstream = args.upstream_root.resolve()
@@ -405,8 +447,7 @@ def main():
         subprocess.run([runtime, 'pull', str(image), 'docker://nipreps/fmriprep:24.1.1'], check=True)
     require(image.is_file(), 'Missing 24.1.1 image; use --image PATH or --fetch-image')
     version = subprocess.check_output([runtime, 'run', '--cleanenv', str(image), '--version'], text=True, stderr=subprocess.STDOUT)
-    require(re.search(r'(?<![\d.])24\.1\.1(?![\d.])', version), 'Container is not fMRIPrep 24.1.1: ' + version)
-    freeze_json(output / 'container.json', dict(path=str(image), sha256=sha(image), version=version))
+    record_container(output, image, version)
     env = dict(os.environ, APPTAINERENV_TEMPLATEFLOW_HOME='/opt/templateflow',
                SINGULARITYENV_TEMPLATEFLOW_HOME='/opt/templateflow',
                APPTAINERENV_MPLCONFIGDIR='/opt/mplconfigdir', SINGULARITYENV_MPLCONFIGDIR='/opt/mplconfigdir')
