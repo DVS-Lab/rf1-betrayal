@@ -310,23 +310,49 @@ def compare_fit(run, active):
     import insula_ica as core
     old = Path(run['original_feat'])
     differences = []
+    ncontrasts = None
     for name in ('design.mat', 'design.con'):
         left, right = core.fsl_matrix(old / name), core.fsl_matrix(active / name)
         require(left.shape == right.shape and np.allclose(left, right, atol=1e-8, rtol=1e-8),
                 'Regenerated full design/contrasts differ: ' + run['key'])
-    for source in sorted((old / 'stats').glob('*.nii.gz')):
-        if not re.fullmatch(r'(cope|zstat)\d+\.nii\.gz', source.name):
+        if name == 'design.con':
+            ncontrasts = left.shape[0]
+    require(ncontrasts and ncontrasts > 0, 'No contrasts defined by the saved model')
+    # Historical directories can retain maps from additional, later contrasts.
+    # design.con defines this model's registry; a directory glob does not.
+    names = [f'{kind}{index}.nii.gz' for index in range(1, ncontrasts + 1)
+             for kind in ('cope', 'zstat')]
+    expected = set(names)
+    def extras(directory):
+        return sorted(p.name for p in (directory / 'stats').glob('*.nii.gz')
+                      if re.fullmatch(r'(cope|zstat)\d+\.nii\.gz', p.name) and p.name not in expected)
+    report = dict(key=run['key'], ncontrasts=ncontrasts,
+                  missing_original=[name for name in names if not (old / 'stats' / name).is_file()],
+                  missing_reconstructed=[name for name in names if not (active / 'stats' / name).is_file()],
+                  outside_original_model=extras(old), outside_reconstructed_model=extras(active),
+                  comparisons=differences)
+    report_path = active / 'historical_comparison.json'
+    save_json(report_path, report)
+    if report['outside_original_model']:
+        print(f'{run["key"]}: design.con defines {ncontrasts} contrasts; historical maps outside '
+              f'that model are listed separately: {", ".join(report["outside_original_model"])}', flush=True)
+    require(not report['missing_original'], 'Historical model-defined maps missing; see ' + str(report_path))
+    require(not report['missing_reconstructed'],
+            'Reconstructed FEAT is missing model-defined maps: ' + ', '.join(report['missing_reconstructed']) +
+            '. Check its FEAT logs/scheduler before resuming; do not rerun fMRIPrep. Report: ' + str(report_path))
+    for name in names:
+        left, right = nib.load(old / 'stats' / name), nib.load(active / 'stats' / name)
+        same_grid = left.shape == right.shape and np.allclose(left.affine, right.affine, atol=1e-5)
+        if not same_grid:
+            differences.append(dict(map=name, matched=False, grid_matches=False, max_abs_difference=None))
             continue
-        left, right = nib.load(source), nib.load(active / 'stats' / source.name)
-        require(left.shape == right.shape and np.allclose(left.affine, right.affine, atol=1e-5),
-                'Regenerated statistic grid differs: ' + run['key'])
         a, b = left.get_fdata(), right.get_fdata()
         matched = bool(np.allclose(a, b, atol=1e-4, rtol=1e-4))
-        differences.append(dict(map=source.name, matched=matched, max_abs_difference=float(np.max(np.abs(a-b)))))
+        differences.append(dict(map=name, matched=matched, grid_matches=True, max_abs_difference=float(np.max(np.abs(a-b)))))
     require(differences, 'No historical statistic maps to compare')
-    save_json(active / 'historical_comparison.json', differences)
+    save_json(report_path, report)
     require(all(d['matched'] for d in differences),
-            'Historical COPE/ZSTAT comparison failed; inspect ' + str(active / 'historical_comparison.json') +
+            'Historical COPE/ZSTAT comparison failed; inspect ' + str(report_path) +
             '. New preprocessing is not established as equivalent; do not expand the rerun.')
     residual = nib.load(active / 'stats/res4d.nii.gz')
     require(len(residual.shape) == 4 and residual.shape[-1] == run['nvol'], 'Residual time dimension differs')
@@ -467,7 +493,7 @@ def main():
             return
         Path(item['work']).mkdir(parents=True, exist_ok=True)
         log = output / (item['subject'] + '.fmriprep.log')
-        print('Running:', item['subject'], 'log:', log, flush=True)
+        print(f'Running: {item["subject"]}; log: {log}', flush=True)
         with log.open('a') as f:
             f.write('\n=== fMRIPrep attempt started ' + datetime.now(timezone.utc).isoformat() + ' ===\n')
             f.flush()

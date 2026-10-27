@@ -182,7 +182,43 @@ class TrustRebuildTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'COPE/ZSTAT'):
                 r.compare_fit(run, new)
             report = json.loads((new / 'historical_comparison.json').read_text())
-            self.assertFalse(next(x['matched'] for x in report if x['map'] == 'cope1.nii.gz'))
+            self.assertFalse(next(x['matched'] for x in report['comparisons'] if x['map'] == 'cope1.nii.gz'))
+
+    def test_comparison_uses_model_contrasts_and_reports_extra_historical_maps(self):
+        with tempfile.TemporaryDirectory() as folder:
+            old, new = Path(folder) / 'old', Path(folder) / 'new'
+            for tree in (old, new):
+                (tree / 'stats').mkdir(parents=True)
+                vest(tree / 'design.mat', np.ones((12, 1)))
+                vest(tree / 'design.con', np.ones((1, 1)))
+                for name in ('cope1', 'zstat1'):
+                    nib.save(nib.Nifti1Image(np.ones((2, 2, 2)), np.eye(4)), tree / 'stats' / (name + '.nii.gz'))
+            nib.save(nib.Nifti1Image(np.ones((2, 2, 2, 12)), np.eye(4)), new / 'stats/res4d.nii.gz')
+            nib.save(nib.Nifti1Image(np.full((2, 2, 2), 999.), np.eye(4)), old / 'stats/zstat20.nii.gz')
+            run = dict(key='synthetic', original_feat=str(old), nvol=12)
+            r.compare_fit(run, new)
+            report = json.loads((new / 'historical_comparison.json').read_text())
+            self.assertEqual(report['ncontrasts'], 1)
+            self.assertEqual(report['outside_original_model'], ['zstat20.nii.gz'])
+            self.assertEqual([x['map'] for x in report['comparisons']], ['cope1.nii.gz', 'zstat1.nii.gz'])
+            self.assertTrue(all(x['matched'] for x in report['comparisons']))
+
+    def test_missing_model_defined_map_is_never_silently_skipped(self):
+        with tempfile.TemporaryDirectory() as folder:
+            old, new = Path(folder) / 'old', Path(folder) / 'new'
+            for tree in (old, new):
+                (tree / 'stats').mkdir(parents=True)
+                vest(tree / 'design.mat', np.ones((12, 1)))
+                vest(tree / 'design.con', np.ones((2, 1)))
+                for name in ('cope1', 'zstat1', 'cope2', 'zstat2'):
+                    if tree == new and name == 'zstat2':
+                        continue
+                    nib.save(nib.Nifti1Image(np.ones((2, 2, 2)), np.eye(4)), tree / 'stats' / (name + '.nii.gz'))
+            with self.assertRaisesRegex(ValueError, 'missing model-defined maps: zstat2'):
+                r.compare_fit(dict(key='synthetic', original_feat=str(old)), new)
+            report = json.loads((new / 'historical_comparison.json').read_text())
+            self.assertEqual(report['missing_reconstructed'], ['zstat2.nii.gz'])
+            self.assertEqual(report['comparisons'], [])
 
 
 if __name__ == '__main__':

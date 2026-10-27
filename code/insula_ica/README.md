@@ -124,7 +124,14 @@ silently runs fMRIPrep without the required distortion-correction inputs.
 With `--fit`, only three saved FSF locations change: input BOLD, the preserved
 confound file, and output directory. All original task/nuisance settings remain.
 The runner compares the complete design/contrast matrices and every historical
-COPE/ZSTAT (atol=rtol=1e-4). A difference stops expansion; it is not accepted as
+model-defined COPE/ZSTAT (atol=rtol=1e-4). The contrast count comes from the
+matching saved `design.con` matrices, rather than a glob of all files in the
+historical statistics directory. Extra historical maps outside that model are
+listed separately in `historical_comparison.json`; they do not create new
+required contrasts. Missing maps inside the defined model still stop with the
+missing filenames recorded in that report. This avoids treating leftover or
+additional statistics as part of the saved model without silently accepting
+an incomplete reconstruction. A difference stops expansion; it is not accepted as
 an equivalent historical reconstruction. The regenerated BOLD must match the
 historical spatial grid, TR and time count. Full residual-scale/coverage QC is
 still required before ICA; a successful fit comparison is not that final QC.
@@ -158,7 +165,7 @@ the SHA256 and parsed version match; the original bytes remain in
 with the original `container.json` left intact. Do not delete the identity record
 or change the output root merely to bypass a notice-only difference.
 
-Development checks: thirteen reconstruction safety tests plus ten existing numerical
+Development checks: fifteen reconstruction safety tests plus ten existing numerical
 tests passed. A 241-run synthetic inventory exercised the full raw preflight,
 three-run pilot selection, byte-preserved confounds and isolated output plan.
 The exact upstream 24.1.1 converter functions reproduced the integer-run error
