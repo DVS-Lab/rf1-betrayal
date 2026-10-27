@@ -4,6 +4,7 @@ import argparse
 import contextlib
 import io
 import json
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -14,6 +15,7 @@ import numpy as np
 from compare_bold_controls import frame_metrics, series_metrics
 from run_bold_controls import ARMS, SEED, command, select_runs
 import run_bold_controls as controls
+from recover_bold_controls import completed_case, recover
 
 
 class BoldControlsTests(unittest.TestCase):
@@ -92,6 +94,33 @@ class BoldControlsTests(unittest.TestCase):
         selected = select_runs(plan)
         self.assertEqual({r['subject'] for r in selected}, {'sub-10402', 'sub-10478'})
 
+    def test_real_case_collection_after_successful_subprocess(self):
+        # Exercise the actual launcher success branch, rather than mocking it
+        # away as the experiment-wide fixture does. This catches the undefined
+        # output-directory variable that affected the first linux2 collection.
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            case, record = root / 'case', root / 'record'
+            record.mkdir()
+            key = 'sub-10402_ses-01_task-trust_run-1'
+            name = key + '_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz'
+            bold = case / 'fmriprep/sub-10402/ses-01/func' / name
+            bold.parent.mkdir(parents=True)
+            nib.save(nib.Nifti1Image(np.ones((2, 2, 2, 3)), np.eye(4)), bold)
+            row = dict(key=key, subject='sub-10402', new_bold=str(root / name), nvol=3)
+            item = dict(name='fixture', case=str(case), controlled=True, argv=[sys.executable, '-c', 'pass'], runs=[row])
+            status = dict(cases={})
+            with contextlib.redirect_stdout(io.StringIO()):
+                result = controls.launch_case(item, {}, record, status)
+            self.assertNotIn('error', result)
+            self.assertEqual(result['returncode'], 0)
+            self.assertEqual(result['bold_outputs'][key], str(bold))
+            self.assertEqual(json.loads((record / 'status.json').read_text())['cases']['fixture']['returncode'], 0)
+            # A zero exit or an output file alone is not sufficient for recovery
+            # when the saved fMRIPrep success marker is absent.
+            with self.assertRaisesRegex(ValueError, 'success marker absent'):
+                completed_case(item, record)
+
     def test_end_to_end_control_report_with_fake_preprocessing_preserves_anchors(self):
         with tempfile.TemporaryDirectory() as folder:
             base = Path(folder)
@@ -153,6 +182,19 @@ class BoldControlsTests(unittest.TestCase):
                 self.assertAlmostEqual(row['full_series']['v25_vs_v24']['relative_rms_difference'], .01)
             self.assertTrue((record / 'report.md').is_file())
             self.assertEqual(len(json.loads((record / 'plan.json').read_text())['cases']), 8)
+            # Recollect the saved fixture without any preprocessing calls and
+            # preserve every byte of the original experiment record.
+            (record / 'input-sha256.json').write_text('{}\n')
+            for item in json.loads((record / 'plan.json').read_text())['cases']:
+                (record / (item['name'] + '.fmriprep-log.txt')).write_text('fMRIPrep finished successfully!\n')
+            original = {str(p): controls.sha(p) for p in record.rglob('*') if p.is_file()}
+            with patch('recover_bold_controls.subprocess.check_output', return_value='fixture-commit'), \
+                 contextlib.redirect_stdout(io.StringIO()):
+                recovered = recover(record)
+            self.assertEqual(json.loads((recovered / 'status.json').read_text())['state'], 'complete')
+            self.assertTrue(all(controls.sha(p) == h for p, h in original.items()))
+            self.assertTrue((recovered / 'results.json').is_file())
+            self.assertTrue((recovered / 'bold-output-sha256.json').is_file())
 
 
 if __name__ == '__main__':

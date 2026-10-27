@@ -338,6 +338,24 @@ resampling. Only the experiment record is committed/pushed after completion,
 including an error record on failure. Unrelated staged/working changes are
 not included. Publication errors are retained locally and printed in the log.
 
+The first linux2 experiment completed all eight fMRIPrep jobs successfully,
+but output collection failed on an undefined `case` variable after each
+successful process exit. That launcher bug is fixed. To recover those existing
+outputs without running preprocessing again, use:
+
+```bash
+"$INSULA_AUDIT_PYTHON" -u code/insula_ica/recover_bold_controls.py \
+  --record code/insula_ica/records/linux2-bold-controls-20261027T113051Z-b1efa8
+```
+
+The recovery checks saved success markers, finds the retained BOLD, verifies
+input hashes, and writes comparisons plus output hashes in a new `recovered-*`
+subfolder of that record. Original error reports remain unchanged. Recovery
+does not invoke fMRIPrep, FEAT, TEDANA or Warpkit. Commit/push the new recovery
+folder after collection. Regression coverage now exercises the actual launcher
+success branch and recovery of all eight fixture cases, preserving original
+record hashes.
+
 ## Important residual-scale gate
 
 The installed FSL 6.0.7.19 source (`src/fsl-film/film_gls.cc`) prewhitens each

@@ -160,7 +160,7 @@ def launch_case(item, env, record, status):
             proc = subprocess.run(item['argv'], env=env, stdout=log, stderr=subprocess.STDOUT)
         result = dict(name=item['name'], started_utc=began, finished_utc=now(), returncode=proc.returncode)
         require(proc.returncode == 0, f'fMRIPrep exited {proc.returncode}; see {item["name"]}.fmriprep-log.txt')
-        result['bold_outputs'] = {r['key']: str(find_bold(case, r)) for r in item['runs']}
+        result['bold_outputs'] = {r['key']: str(find_bold(Path(item['case']), r)) for r in item['runs']}
     except Exception as exc:
         result = dict(name=item['name'], started_utc=began, finished_utc=now(), error=str(exc))
     with LOCK:
