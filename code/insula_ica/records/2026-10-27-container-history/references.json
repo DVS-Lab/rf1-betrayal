@@ -1,0 +1,102 @@
+[
+  {
+    "repository": "DVS-Lab/multiecho-pilot",
+    "sha": "5033f79d7085cfc30b3f7012d72f65dc466b3809",
+    "authored": "2024-12-18T09:24:12-05:00",
+    "committed": "2024-12-18T09:24:12-05:00",
+    "subject": "Update fmriprep version to 24",
+    "path": "code/fmriprep.sh",
+    "url": "https://github.com/DVS-Lab/multiecho-pilot/blob/5033f79d7085cfc30b3f7012d72f65dc466b3809/code/fmriprep.sh",
+    "saved_as": "sources/multiecho-pilot-5033f79d-fmriprep.sh",
+    "sha256": "a335e5e86a0188ff0a0f652650406eded32be32faddd596a8c183163ef7cbed6"
+  },
+  {
+    "repository": "DVS-Lab/rf1-sra-data",
+    "sha": "cc81807f790284661c9added6615178ed039946f",
+    "authored": "2025-03-14T10:56:13-04:00",
+    "committed": "2025-03-14T10:56:13-04:00",
+    "subject": "Update fmriprep for cluster",
+    "path": "code/fmriprep-hpc.sh",
+    "url": "https://github.com/DVS-Lab/rf1-sra-data/blob/cc81807f790284661c9added6615178ed039946f/code/fmriprep-hpc.sh",
+    "saved_as": "sources/rf1-sra-data-cc81807f-fmriprep-hpc.sh",
+    "sha256": "084960e8e81c3cb449aec31ba5f12ceea02cec11a9b75ec15175dade3b394461",
+    "content_source": "GitHub connector fetch at this exact commit; commit metadata from cloned Git history"
+  },
+  {
+    "repository": "DVS-Lab/rf1-sra-linux2",
+    "sha": "a19c46efdd89ea80f50fc12f3e891455e81cffc8",
+    "authored": "2025-11-13T02:26:17-05:00",
+    "committed": "2025-11-13T02:26:17-05:00",
+    "subject": "commit for all rf1 data using bids session subfolders. all necessary hpc preprocessing codes, helper codes/files, and select outputs: addIntendedFor, fmriprep24/25, tedana24/25, genTedanaconfounds and outputs",
+    "path": "code/fmriprep24-hpc.sh",
+    "url": "https://github.com/DVS-Lab/rf1-sra-linux2/blob/a19c46efdd89ea80f50fc12f3e891455e81cffc8/code/fmriprep24-hpc.sh",
+    "saved_as": "sources/rf1-sra-linux2-a19c46ef-fmriprep24-hpc.sh",
+    "sha256": "e34268bb6f1f1b1cff4ee5afdf68a1f02ed520a8f8da50926701f263aff3ee2a"
+  },
+  {
+    "repository": "DVS-Lab/rf1-sra-linux2",
+    "sha": "a19c46efdd89ea80f50fc12f3e891455e81cffc8",
+    "authored": "2025-11-13T02:26:17-05:00",
+    "committed": "2025-11-13T02:26:17-05:00",
+    "subject": "commit for all rf1 data using bids session subfolders. all necessary hpc preprocessing codes, helper codes/files, and select outputs: addIntendedFor, fmriprep24/25, tedana24/25, genTedanaconfounds and outputs",
+    "path": "code/ses-01.json",
+    "url": "https://github.com/DVS-Lab/rf1-sra-linux2/blob/a19c46efdd89ea80f50fc12f3e891455e81cffc8/code/ses-01.json",
+    "saved_as": "sources/rf1-sra-linux2-a19c46ef-ses-01.json",
+    "sha256": "7a602b18040140ff6f070afbcd783c4251ef343b5888034226e7ecf3ecfdce1f"
+  },
+  {
+    "repository": "DVS-Lab/rf1-sra-linux2",
+    "sha": "1ccfc94c75aaa0844a72474cc130b49b4dbeffaa",
+    "authored": "2026-04-14T22:31:22-04:00",
+    "committed": "2026-04-14T22:31:22-04:00",
+    "subject": "initial commit",
+    "path": "code/fmriprep.sh",
+    "url": "https://github.com/DVS-Lab/rf1-sra-linux2/blob/1ccfc94c75aaa0844a72474cc130b49b4dbeffaa/code/fmriprep.sh",
+    "saved_as": "sources/rf1-sra-linux2-1ccfc94c-fmriprep.sh",
+    "sha256": "78360d08786612c34308f45a4414c8ec3598cf9e6ad8b584227070ba3bd91796"
+  },
+  {
+    "repository": "DVS-Lab/rf1-sra-linux2",
+    "sha": "35e6cf0dc8cb41f3d299bc2349c8e39e887bea19",
+    "authored": "2026-04-14T23:47:52-04:00",
+    "committed": "2026-04-14T23:47:52-04:00",
+    "subject": "upgrade to 25.2.5",
+    "path": "code/fmriprep.sh",
+    "url": "https://github.com/DVS-Lab/rf1-sra-linux2/blob/35e6cf0dc8cb41f3d299bc2349c8e39e887bea19/code/fmriprep.sh",
+    "saved_as": "sources/rf1-sra-linux2-35e6cf0d-fmriprep.sh",
+    "sha256": "a06a92a6a08005c17a23cfd00084fd149b158f86e2fb7d3953adaaecc4ed420f"
+  },
+  {
+    "repository": "DVS-Lab/rf1-sra-linux2",
+    "sha": "3714c3a3508cedbce8997796959c0584c6aa05f2",
+    "authored": "2026-05-04T09:50:31-04:00",
+    "committed": "2026-05-04T09:50:31-04:00",
+    "subject": "initial commit; test fmriprep-warpkit integration",
+    "path": "code/fmriprep-warpkit.sh",
+    "url": "https://github.com/DVS-Lab/rf1-sra-linux2/blob/3714c3a3508cedbce8997796959c0584c6aa05f2/code/fmriprep-warpkit.sh",
+    "saved_as": "sources/rf1-sra-linux2-3714c3a3-fmriprep-warpkit.sh",
+    "sha256": "229a5b3e87f6c6500f32aa2fc4b333f49a06cf984ffe6834e11fa1f078ba5223"
+  },
+  {
+    "repository": "DVS-Lab/rf1-sra-linux2",
+    "sha": "e17334e7114db0047d660a40f20a3464ca5cb97a",
+    "authored": "2026-05-16T21:56:39-04:00",
+    "committed": "2026-05-16T21:56:39-04:00",
+    "subject": "test andrews fixes",
+    "path": "code/fmriprep-warpkit.sh",
+    "url": "https://github.com/DVS-Lab/rf1-sra-linux2/blob/e17334e7114db0047d660a40f20a3464ca5cb97a/code/fmriprep-warpkit.sh",
+    "saved_as": "sources/rf1-sra-linux2-e17334e7-fmriprep-warpkit.sh",
+    "sha256": "9f478487db4bb9f9a7d47d906b83d4a847aa9c6702f47b54b9248899bc5e9416"
+  },
+  {
+    "repository": "DVS-Lab/rf1-sra-linux2",
+    "sha": "4792bda47a4c59ccd631a1d956754cffb5e8201f",
+    "authored": "2026-06-30T21:19:45-04:00",
+    "committed": "2026-06-30T21:19:45-04:00",
+    "subject": "Enable fMRIPrep CIFTI and FreeSurfer outputs",
+    "path": "code/fmriprep.sh",
+    "url": "https://github.com/DVS-Lab/rf1-sra-linux2/blob/4792bda47a4c59ccd631a1d956754cffb5e8201f/code/fmriprep.sh",
+    "saved_as": "sources/rf1-sra-linux2-4792bda4-fmriprep.sh",
+    "sha256": "35ab6ccf53c6d0a5d8da77073a2246cf7de2776d9b1c92a0e017e82cffe52910"
+  }
+]

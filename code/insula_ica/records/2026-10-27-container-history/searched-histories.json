@@ -1,0 +1,257 @@
+[
+  {
+    "repository": "DVS-Lab/rf1-sra-linux2",
+    "local_head": "72a5a160a8636cff770ea93116cb13bab64cf609",
+    "shallow": "false",
+    "commits": [
+      {
+        "sha": "66db5ccc5c0b63339f596e798677669b43b86925",
+        "authored": "2025-11-13T00:18:44-05:00",
+        "committed": "2025-11-13T00:18:44-05:00",
+        "subject": "initial commit for all rf1 data using bids session subfolders. all necessary hpc preprocessing codes, helper codes/files, and select outputs: addIntendedFor and outputs, fmriprep24/25 compatible scripts, tedana24/25 compatible scripts and outputs"
+      },
+      {
+        "sha": "523131a214bf95553745bd7d09683dcdedfaf707",
+        "authored": "2025-11-13T00:49:34-05:00",
+        "committed": "2025-11-13T00:49:34-05:00",
+        "subject": "clean up gitignore and remove accidental tracking"
+      },
+      {
+        "sha": "a19c46efdd89ea80f50fc12f3e891455e81cffc8",
+        "authored": "2025-11-13T02:26:17-05:00",
+        "committed": "2025-11-13T02:26:17-05:00",
+        "subject": "commit for all rf1 data using bids session subfolders. all necessary hpc preprocessing codes, helper codes/files, and select outputs: addIntendedFor, fmriprep24/25, tedana24/25, genTedanaconfounds and outputs"
+      },
+      {
+        "sha": "3c37663ba863ea83a313325adacfa95b3f46c290",
+        "authored": "2026-03-12T18:55:36-04:00",
+        "committed": "2026-03-12T18:55:36-04:00",
+        "subject": "one wrapper script calls either linux or hpc version of fmriprep / tedana script"
+      },
+      {
+        "sha": "98bf9a5e6f490521f5170d04f6e7f21a9c51f1f9",
+        "authored": "2026-03-12T18:55:36-04:00",
+        "committed": "2026-03-12T18:55:36-04:00",
+        "subject": "one wrapper script calls either linux or hpc version of fmriprep / tedana script"
+      },
+      {
+        "sha": "1ccfc94c75aaa0844a72474cc130b49b4dbeffaa",
+        "authored": "2026-04-14T22:31:22-04:00",
+        "committed": "2026-04-14T22:31:22-04:00",
+        "subject": "initial commit"
+      },
+      {
+        "sha": "cc10abb80f238fbc9e496d034b0d82b644c4dc5e",
+        "authored": "2026-04-14T22:31:22-04:00",
+        "committed": "2026-04-14T22:31:22-04:00",
+        "subject": "initial commit"
+      },
+      {
+        "sha": "21d01f6e9c84eae8b9464543d71295faa7ab83a5",
+        "authored": "2026-04-14T23:47:52-04:00",
+        "committed": "2026-04-14T23:47:52-04:00",
+        "subject": "upgrade to 25.2.5"
+      },
+      {
+        "sha": "35e6cf0dc8cb41f3d299bc2349c8e39e887bea19",
+        "authored": "2026-04-14T23:47:52-04:00",
+        "committed": "2026-04-14T23:47:52-04:00",
+        "subject": "upgrade to 25.2.5"
+      },
+      {
+        "sha": "3714c3a3508cedbce8997796959c0584c6aa05f2",
+        "authored": "2026-05-04T09:50:31-04:00",
+        "committed": "2026-05-04T09:50:31-04:00",
+        "subject": "initial commit; test fmriprep-warpkit integration"
+      },
+      {
+        "sha": "1801a15958cdb59b9241b7d63f6d02e038db136c",
+        "authored": "2026-05-04T09:50:31-04:00",
+        "committed": "2026-05-04T09:50:31-04:00",
+        "subject": "initial commit; test fmriprep-warpkit integration"
+      },
+      {
+        "sha": "0e69bf32f0f20a9136c376de60859be4517d75e9",
+        "authored": "2026-05-08T21:47:40-04:00",
+        "committed": "2026-05-08T21:47:40-04:00",
+        "subject": "expand testing with help from codex"
+      },
+      {
+        "sha": "d403c0d17c57c08ccb3f62dffb37956568900ee0",
+        "authored": "2026-05-08T21:47:40-04:00",
+        "committed": "2026-05-08T21:47:40-04:00",
+        "subject": "expand testing with help from codex"
+      },
+      {
+        "sha": "a9321f7fd52b4ae66135c187acc9bf0e5330a9b4",
+        "authored": "2026-05-08T22:22:12-04:00",
+        "committed": "2026-05-08T22:22:12-04:00",
+        "subject": "reorganize inputs and outputs"
+      },
+      {
+        "sha": "4fe32523f01e701dfca1ba6cf8a507c171b9242e",
+        "authored": "2026-05-08T22:22:12-04:00",
+        "committed": "2026-05-08T22:22:12-04:00",
+        "subject": "reorganize inputs and outputs"
+      },
+      {
+        "sha": "cf5888a7fd5c092a10daf882e6bf6fcbc10ad492",
+        "authored": "2026-05-09T07:53:15-04:00",
+        "committed": "2026-05-09T07:53:15-04:00",
+        "subject": "point to a different subject with part-phase data and re-run"
+      },
+      {
+        "sha": "3099051b499024a3ace811fb3e4016bec007efa3",
+        "authored": "2026-05-09T07:53:15-04:00",
+        "committed": "2026-05-09T07:53:15-04:00",
+        "subject": "point to a different subject with part-phase data and re-run"
+      },
+      {
+        "sha": "db85913bf79986167f4147a0dfde29f5a8c0a075",
+        "authored": "2026-05-09T10:17:29-04:00",
+        "committed": "2026-05-09T10:17:29-04:00",
+        "subject": "clean up outputs and logging"
+      },
+      {
+        "sha": "9fb6f0ab2d46ef5e814bc6a883bcd9504174be6f",
+        "authored": "2026-05-09T10:17:29-04:00",
+        "committed": "2026-05-09T10:17:29-04:00",
+        "subject": "clean up outputs and logging"
+      },
+      {
+        "sha": "eaf6c232729b74845efec0569f4f7f3e59f2b3fe",
+        "authored": "2026-05-16T21:56:39-04:00",
+        "committed": "2026-05-16T21:56:39-04:00",
+        "subject": "test andrews fixes"
+      },
+      {
+        "sha": "e17334e7114db0047d660a40f20a3464ca5cb97a",
+        "authored": "2026-05-16T21:56:39-04:00",
+        "committed": "2026-05-16T21:56:39-04:00",
+        "subject": "test andrews fixes"
+      },
+      {
+        "sha": "6d46b8daee90d0093468d36841a2f7b83f09b6a0",
+        "authored": "2026-06-08T16:08:48-04:00",
+        "committed": "2026-06-08T16:09:10-04:00",
+        "subject": "amended fmriprep-related scripts with additional guidance at top of script, removed fmriprep derivatives folder encoding fmriprep version used (i.e., fmriprep-24, 25), removed hpc-related scripts, added guidance to top of other scripts"
+      },
+      {
+        "sha": "4b703384b1d002c1197e45942fcb424902a51585",
+        "authored": "2026-06-08T16:08:48-04:00",
+        "committed": "2026-06-08T16:09:10-04:00",
+        "subject": "amended fmriprep-related scripts with additional guidance at top of script, removed fmriprep derivatives folder encoding fmriprep version used (i.e., fmriprep-24, 25), removed hpc-related scripts, added guidance to top of other scripts"
+      },
+      {
+        "sha": "af244123dcf7a4941864d2bdd85d57ee749308fc",
+        "authored": "2026-06-25T23:48:48-04:00",
+        "committed": "2026-06-25T23:52:03-04:00",
+        "subject": "Improve pipeline safety and add validation tests"
+      },
+      {
+        "sha": "3edb6553f89f89a14bb5bf8b3fa941b085751f39",
+        "authored": "2026-06-25T23:48:48-04:00",
+        "committed": "2026-06-25T23:52:03-04:00",
+        "subject": "Improve pipeline safety and add validation tests"
+      },
+      {
+        "sha": "09caf14bf251f8647ea94b9ab931f384b496a3d7",
+        "authored": "2026-06-25T23:52:18-04:00",
+        "committed": "2026-06-25T23:52:51-04:00",
+        "subject": "Rewrite repository and code documentation"
+      },
+      {
+        "sha": "5d13e1e4a7ace10b40702f158cde4440d2345725",
+        "authored": "2026-06-25T23:52:18-04:00",
+        "committed": "2026-06-25T23:52:51-04:00",
+        "subject": "Rewrite repository and code documentation"
+      },
+      {
+        "sha": "418d5bb1f2014354eca1344c8b4c69e2665b3e2a",
+        "authored": "2026-06-26T13:14:19-04:00",
+        "committed": "2026-06-26T13:14:19-04:00",
+        "subject": "Simplify Linux2 batch workflow"
+      },
+      {
+        "sha": "caaf7bea83dbb3eefd9dcdee05ba8e90a0be5200",
+        "authored": "2026-06-26T13:14:19-04:00",
+        "committed": "2026-06-26T13:14:19-04:00",
+        "subject": "Simplify Linux2 batch workflow"
+      },
+      {
+        "sha": "9e95b3c4e1f14d17c54313ba00439b3529e4ec42",
+        "authored": "2026-07-05T21:03:54-04:00",
+        "committed": "2026-07-05T21:03:54-04:00",
+        "subject": "Tighten production README consistency"
+      },
+      {
+        "sha": "87921343ae68f4bd293022a624f39e23c295d9e6",
+        "authored": "2026-08-17T14:16:00-04:00",
+        "committed": "2026-08-17T14:16:00-04:00",
+        "subject": "Add guarded fMRIPrep geometry repair workflow"
+      }
+    ],
+    "error": null
+  },
+  {
+    "repository": "DVS-Lab/rf1-sra",
+    "local_head": "9b9cf69348adcd6ec0b19861b637f1a63d1129cb",
+    "shallow": "false",
+    "commits": [],
+    "error": null
+  },
+  {
+    "repository": "DVS-Lab/rf1-sra-trust",
+    "local_head": "bc731ddd143eea8737f42c22e7e334f5a9dc5532",
+    "shallow": "false",
+    "commits": [],
+    "error": null
+  },
+  {
+    "repository": "DVS-Lab/rf1-sra-ugr",
+    "local_head": "0a6715565b065e13ff03368700df952b2180fb13",
+    "shallow": "false",
+    "commits": [],
+    "error": null
+  },
+  {
+    "repository": "DVS-Lab/rf1-sra-sharedreward",
+    "local_head": "d5331d38c298023eeaf094e6e83ee0df65434ac2",
+    "shallow": "false",
+    "commits": [],
+    "error": null
+  },
+  {
+    "repository": "DVS-Lab/multiecho-pilot",
+    "local_head": "738a9121bf6cd571a780b10689390e6329b1bc31",
+    "shallow": "false",
+    "commits": [
+      {
+        "sha": "5033f79d7085cfc30b3f7012d72f65dc466b3809",
+        "authored": "2024-12-18T09:24:12-05:00",
+        "committed": "2024-12-18T09:24:12-05:00",
+        "subject": "Update fmriprep version to 24"
+      },
+      {
+        "sha": "d220bd34e3bda86b166eeaf65d5107feee294f8c",
+        "authored": "2024-12-18T09:28:46-05:00",
+        "committed": "2024-12-18T09:28:46-05:00",
+        "subject": "Update for use in multiecho-pilot"
+      },
+      {
+        "sha": "a82ad1910cd01087be26001eadaa6b2ad9226f0a",
+        "authored": "2024-12-18T13:31:29-05:00",
+        "committed": "2024-12-18T13:31:29-05:00",
+        "subject": "Make usable for cluster with relative paths"
+      }
+    ],
+    "error": null
+  },
+  {
+    "repository": "DVS-Lab/rf1-betrayal",
+    "local_head": "6aba28a25c7256b2bcca03339f3996da9fa200f3",
+    "shallow": "false",
+    "commits": [],
+    "error": null
+  }
+]

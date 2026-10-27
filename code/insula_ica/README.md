@@ -28,6 +28,13 @@ relative RMS within historical FEAT masks). No historical fMRIPrep execution
 metadata was recovered at the recorded location, so the specific upstream cause
 remains unresolved. All checks against the frozen recovery inputs passed.
 
+The [container history and repeatability plan](records/2026-10-27-container-history/README.md)
+documents older RF1 evidence for 24.1.1, the April 2026 upgrade from 25.2.4 to
+25.2.5, and the later integrated Warpkit test images. Exact equality is not an
+established expectation for the prior unseeded/eight-thread configuration.
+The new controls measure a default-setting repeat plus fixed-seed repeat/version
+differences before adopting an empirical historical-comparison standard.
+
 Jacob's corrected `master_subject_table_full (1).csv` has 147 rows and exactly
 132 `include_final=TRUE` identities, matching `code/sublist_n132.txt`. For that
 cohort, the saved full-run QC permits:
@@ -301,6 +308,35 @@ transfer archive is ignored. Images, full confound time series and participant
 tables are not packaged. The saved source manifest distinguishes unchanged
 TOML bytes from selected JSON metadata and extracted report text. Six checks,
 including an end-to-end synthetic archive and source-integrity check, passed.
+
+### Independent repeat/version controls
+
+`start_bold_controls.sh` launches the experiment described in the
+[container-history record](records/2026-10-27-container-history/README.md).
+It uses sub-10402 plus one additional accepted two-run subject. Eight isolated
+jobs compare ordinary-setting 24.1.1 repeats, fixed-seed/single-OpenMP-thread
+24.1.1 repeats, and 25.2.5 with the same controlled settings. The actual
+runtime versions/hashes/labels of all five named images are inventoried.
+
+```bash
+bash code/insula_ica/start_bold_controls.sh
+```
+
+The launcher prints a PID and a short-log command, then returns. Its default
+is up to eight concurrent subject jobs, each with 14 processes/28,000 MB;
+controlled arms use one OpenMP thread and ordinary repeats use eight. Existing
+images, historical FEAT inputs, and prior pilot outputs are preserved. The
+driver never runs FEAT or creates a passing reconstruction marker. No container
+is downloaded. A missing required image produces a saved/published failure.
+
+Small records/configs/logs go to `code/insula_ica/records/linux2-bold-controls-*`.
+Large outputs go to `derivatives/insula_ica/linux2-bold-controls-*`, with unique
+work directories under `/ZPOOL/data/scratch/$USER/rf1-betrayal-bold-controls/`.
+The final report includes full-series temporal metrics and historical-frame
+comparisons; grid mismatches retain geometry details and do not trigger silent
+resampling. Only the experiment record is committed/pushed after completion,
+including an error record on failure. Unrelated staged/working changes are
+not included. Publication errors are retained locally and printed in the log.
 
 ## Important residual-scale gate
 

@@ -1,0 +1,9 @@
+{
+  "t1w":  { "datatype": "anat", "session": "01", "suffix": "T1w" },
+  "t2w":  { "datatype": "anat", "session": "01", "suffix": "T2w" },
+  "fmap": { "datatype": "fmap" },
+
+  "sbref": { "datatype": "func", "session": "01", "suffix": "sbref", "part": [null, "mag"] },
+  "bold":  { "datatype": "func", "session": "01", "suffix": "bold",  "part": [null, "mag"] }
+}
+
