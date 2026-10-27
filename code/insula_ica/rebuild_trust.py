@@ -304,7 +304,7 @@ def recovery_fsf(text, bold, confounds, target):
     return text
 
 
-def compare_fit(run, active):
+def compare_fit(run, active, strict_historical=True):
     # Reconstruction of a historical model is distinct from merely obtaining a
     # successful preprocessing exit status. Never accept new task maps silently.
     import insula_ica as core
@@ -351,14 +351,15 @@ def compare_fit(run, active):
         differences.append(dict(map=name, matched=matched, grid_matches=True, max_abs_difference=float(np.max(np.abs(a-b)))))
     require(differences, 'No historical statistic maps to compare')
     save_json(report_path, report)
-    require(all(d['matched'] for d in differences),
+    require(all(d['grid_matches'] for d in differences), 'Reconstructed statistic grid differs: ' + run['key'])
+    require(not strict_historical or all(d['matched'] for d in differences),
             'Historical COPE/ZSTAT comparison failed; inspect ' + str(report_path) +
             '. New preprocessing is not established as equivalent; do not expand the rerun.')
     residual = nib.load(active / 'stats/res4d.nii.gz')
     require(len(residual.shape) == 4 and residual.shape[-1] == run['nvol'], 'Residual time dimension differs')
 
 
-def fit_run(run, output):
+def fit_run(run, output, strict_historical=True):
     target = output / 'feat_reconstruction' / (run['key'] + '.feat')
     fsf = output / 'feat_reconstruction' / (run['key'] + '.fsf')
     fsf.parent.mkdir(exist_ok=True)
@@ -375,7 +376,7 @@ def fit_run(run, output):
             subprocess.run(['feat', str(fsf)], stdout=log, stderr=subprocess.STDOUT, check=True)
     require((target / 'stats/res4d.nii.gz').is_file(),
             'FEAT has not produced residuals; check the log/scheduler: ' + str(target))
-    compare_fit(run, target)
+    compare_fit(run, target, strict_historical=strict_historical)
 
 
 def verify_outputs(runs):

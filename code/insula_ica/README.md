@@ -13,12 +13,28 @@ No new gPPI or behavioral search is included.
 
 ## Current evidence and limits
 
+**2026-10-27 production decision:** the user accepted regenerated 24.1.1 BOLD
+with the original combined confounds for this new analysis. Exact historical
+map matching is no longer required for that path. Use the
+[analysis-regeneration launcher](records/2026-10-27-analysis-regeneration/README.md):
+
+```bash
+bash code/insula_ica/start_trust_regeneration.sh
+```
+
+It resumes/adopts completed outputs, processes the remaining cohort eight
+subjects at a time, fits the original joint FEAT model, and publishes status/QC.
+Original nuisance/design identity remains required. No ICA is started before
+registration/coverage and residual-scale review. The strict reproduction commands
+below document the earlier investigation and remain available for diagnostics;
+their exact-map gates do not apply to `regenerate_trust.py`.
+
 The [Trust reconstruction record](records/2026-10-26-trust-reconstruction/README.md)
 contains the linux2 findings, the supplied diagnostic excerpt, and a structured
 summary. For sub-10402 Trust run 1, the historical and rebuilt nuisance matrices
 are exactly equal, as are the complete designs and contrasts. The midpoint BOLD
 frame already differs before FEAT masking/smoothing. The Trust pilot has not
-passed; production has not started. Separate TEDANA source files are not needed
+passed under the earlier strict criterion. Separate TEDANA source files are not needed
 to reuse the preserved historical nuisance matrix.
 
 The [complete provenance audit and interpretation](records/linux2-bold-provenance-20261027T040421Z-8489a4/interpretation.md)
