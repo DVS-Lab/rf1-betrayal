@@ -21,6 +21,13 @@ frame already differs before FEAT masking/smoothing. The Trust pilot has not
 passed; production has not started. Separate TEDANA source files are not needed
 to reuse the preserved historical nuisance matrix.
 
+The [complete provenance audit and interpretation](records/linux2-bold-provenance-20261027T040421Z-8489a4/interpretation.md)
+confirm exact nuisance/model equality for both completed pilot FEAT fits and
+midpoint BOLD differences in all three pilot runs (4.32%, 5.20%, and 8.17%
+relative RMS within historical FEAT masks). No historical fMRIPrep execution
+metadata was recovered at the recorded location, so the specific upstream cause
+remains unresolved. All checks against the frozen recovery inputs passed.
+
 Jacob's corrected `master_subject_table_full (1).csv` has 147 rows and exactly
 132 `include_final=TRUE` identities, matching `code/sublist_n132.txt`. For that
 cohort, the saved full-run QC permits:
