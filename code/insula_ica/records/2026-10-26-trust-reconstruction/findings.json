@@ -1,0 +1,207 @@
+{
+  "record_date_local": "2026-10-26",
+  "timezone": "America/New_York",
+  "evidence_code_commit": "790cf515",
+  "sources": {
+    "latest_excerpt": {
+      "file": "linux2-preprocessing-excerpt.txt",
+      "sha256": "d7095589fbb567d85d77f5dbb901c22ad3607f023b634a01d7017f7fcbe65580",
+      "origin": "User-supplied linux2 terminal excerpt; preserved verbatim.",
+      "limitations": [
+        "Some path strings contain apparent transcription errors.",
+        "Original full diagnostic JSON is not present in this record.",
+        "No version section or sub-10369 matrix comparison is included."
+      ],
+      "full_diagnostic_linux2": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/diagnostics/trust-preprocessing-evidence-20261027T032509Z-e54481.json",
+      "terminal_output_linux2": "/tmp/rf1-trust-preprocessing-evidence.bIMGoc"
+    },
+    "earlier_terminal_excerpts": {
+      "origin": "Earlier linux2 results pasted by the user in the conversation.",
+      "raw_source_in_record": false
+    }
+  },
+  "trust_runs": {
+    "sub-10402_ses-01_task-trust_run-1": {
+      "source": "latest_excerpt",
+      "saved_matrix_snapshot_hash_matches": true,
+      "saved_vs_original_feat": {
+        "shape": [
+          280,
+          25
+        ],
+        "exact_numeric_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "saved_vs_rebuilt_feat": {
+        "available": true,
+        "shape": [
+          280,
+          25
+        ],
+        "exact_numeric_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "fsf_setting_differences_excluding_relocated_paths": {},
+      "design_mat": {
+        "shape": [
+          280,
+          35
+        ],
+        "match": true,
+        "max_absolute_difference": 0.0
+      },
+      "design_con": {
+        "shape": [
+          18,
+          35
+        ],
+        "match": true,
+        "max_absolute_difference": 0.0
+      },
+      "reference_selection": {
+        "npts": 280,
+        "ndelete": 0,
+        "alternateReference_yn": 0,
+        "mc": 0,
+        "st": 0,
+        "regunwarp_yn": 0
+      },
+      "reference_extraction_command_both": "fslroi prefiltered_func_data example_func 140 1",
+      "image_comparisons": {
+        "example_func.nii.gz": {
+          "same_grid": true,
+          "common_mask_voxels": 99505,
+          "spatial_r": 0.9951297833050788,
+          "relative_rms_difference": 0.0515907319080656,
+          "max_absolute_difference": 3047.07177734375,
+          "new_on_old_global_scale": 1.0061947215900586,
+          "relative_rms_after_global_scale": 0.051217468145463484
+        },
+        "mean_func.nii.gz": {
+          "same_grid": true,
+          "common_mask_voxels": 99505,
+          "spatial_r": 0.9975282563793523,
+          "relative_rms_difference": 0.03458423497519888,
+          "max_absolute_difference": 4911.2314453125,
+          "new_on_old_global_scale": 0.9968525986978923,
+          "relative_rms_after_global_scale": 0.03444071970594195
+        }
+      },
+      "logged_command_counts": {
+        "historical": 55,
+        "rebuilt": 55
+      },
+      "susan_spatial_sigma_both": 2.1231422505307855,
+      "data_derived_values": {
+        "intensity_mask_threshold": {
+          "historical": 656.3429688000001,
+          "rebuilt": 657.5821289
+        },
+        "susan_brightness_threshold": {
+          "historical": 2895.537048,
+          "rebuilt": 2923.66735875
+        },
+        "global_intensity_multiplier": {
+          "historical": 2.5901930714995984,
+          "rebuilt": 2.5652713115785475
+        }
+      }
+    },
+    "sub-10402_ses-01_task-trust_run-2": {
+      "source": "latest_excerpt",
+      "saved_matrix_snapshot_hash_matches": true,
+      "saved_vs_original_feat": {
+        "shape": [
+          280,
+          26
+        ],
+        "exact_numeric_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "saved_vs_rebuilt_feat": {
+        "available": false,
+        "exact_numeric_equality": null
+      },
+      "rebuilt_design_available": false
+    }
+  },
+  "earlier_map_comparisons": {
+    "source": "earlier_terminal_excerpts",
+    "sub-10369_ses-01_task-trust_run-1": {
+      "maps_matched": 0,
+      "maps_compared": 36,
+      "missing_reconstructed_maps": [],
+      "brain_mask_dice": 0.994699,
+      "cope10": {
+        "spatial_r": 0.985898,
+        "relative_rms_difference": 0.16633,
+        "max_absolute_difference": 1148.62
+      },
+      "zstat10": {
+        "spatial_r": 0.965476,
+        "relative_rms_difference": 0.25893,
+        "max_absolute_difference": 4.3741
+      }
+    },
+    "sub-10402_ses-01_task-trust_run-1": {
+      "maps_matched": 0,
+      "maps_compared": 36,
+      "missing_reconstructed_maps": [],
+      "brain_mask_dice": 0.993877,
+      "cope10": {
+        "spatial_r": 0.987979,
+        "relative_rms_difference": 0.15472,
+        "max_absolute_difference": 949.687
+      },
+      "zstat10": {
+        "spatial_r": 0.976189,
+        "relative_rms_difference": 0.21662,
+        "max_absolute_difference": 3.53549
+      }
+    }
+  },
+  "ugr_film_control": {
+    "source": "earlier_terminal_excerpts",
+    "maps_matched": 34,
+    "maps_compared": 34,
+    "fsl_version": "6.0.7.18",
+    "reported_task_contrast_relative_rms_difference": 0.0,
+    "reported_task_contrast_max_absolute_difference": 0.0,
+    "historical_inputs_unchanged": true,
+    "reported_errors": false,
+    "terminal_output_linux2": "/tmp/rf1-film-control.931ycY"
+  },
+  "inventory_and_execution": {
+    "source": "earlier_terminal_excerpts",
+    "cohort_size": 132,
+    "accepted_trust_runs": 241,
+    "accepted_ugr_runs": 249,
+    "trust_preserved_combined_matrices": 241,
+    "trust_raw_four_echo_sets_ready": 241,
+    "trust_warpkit_bids_products_ready": 241,
+    "session_01_t1w_participants": 132,
+    "ugr_filtered_data_replay_routes": 249,
+    "completed_fmriprep_participants": 2,
+    "trust_pilot_passed": false,
+    "production_started": false,
+    "production_concurrent_subjects_when_validated": 8
+  },
+  "version_evidence": {
+    "source": "earlier_terminal_excerpts",
+    "rerun_container_version": "24.1.1",
+    "rerun_image_sha256_frozen_remotely": true,
+    "image_sha256_value_in_supplied_excerpt": null,
+    "archived_cluster_script_version": "24.1.1",
+    "original_run_specific_version_established": false
+  },
+  "interpretation": {
+    "exact_numeric_nuisance_identity_proven_for_completed_run_in_excerpt": [
+      "sub-10402_ses-01_task-trust_run-1"
+    ],
+    "historical_and_rebuilt_text_file_byte_identity_established": false,
+    "all_241_rebuilt_fits_verified": false,
+    "standalone_tedana_refit_required_to_reuse_preserved_matrix": false,
+    "inference": "For sub-10402 Trust run 1, disagreement is already present in the midpoint BOLD frame entering FEAT, before masking, smoothing, normalization and FILM.",
+    "specific_upstream_cause_established": false
+  }
+}

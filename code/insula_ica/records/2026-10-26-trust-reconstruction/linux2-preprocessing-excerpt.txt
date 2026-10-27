@@ -1,0 +1,49 @@
+=== sub-10402_ses-01_task-trust_run-1 ===
+Saved matrix matches frozen hash: True
+saved_vs_original_feat {"left": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/original_confounds/sub-10402/sub-10402_ses-01_task-trust_run-1_desc-TedanaPlusConfounds.tsv", "right": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10402/ses-01/L1_task-trust_model-01_type-act_run-1_sm-5.feat/confoundevs.txt", "available": true, "left_shape": [280, 25], "right_shape": [280, 25], "equal": true, "max_absolute_difference": 0.0}
+saved_vs_rebuilt_feat {"left": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/original_confounds/sub-10402/sub-10402_ses-01_task-trust_run-1_desc-TedanaPlusConfounds.t"sv", "right": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/feat_reconstruction/sub-10402_ses-01_task-trust_run-1.feat/confoundevs.txt", "available": true, "left_shape": [280, 25], "right_shape": [280, 25], "equal": true, "max_absolute_difference": 0.0}
+TEDANA component verification: {"metrics": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/tedana-24/sub-10402/ses-01/sub-10402_ses-01_task-trust_run-1_desc-tedana_metrics.tsv", "mixing": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/tedana-24/sub-10402/ses-01/sub-10402_ses-01_task-trust_run-1_desc-ICA_mixing.tsv", "available": false, "rejected_suffix_matches": null, "status": "Component identities cannot be checked from these missing source files."}
+FSF setting differences excluding the three relocated paths: {}
+design.mat {"old_shape": [280, 35], "new_shape": [280, 35], "match": true, "max_absolute_difference": 0.0}
+design.con {"old_shape": [18, 35], "new_shape": [18, 35], "match": true, "max_absolute_difference": 0.0}
+Reference selection: {'fmri(npts)': '280', 'fmri(ndelete)': '0', 'fmri(alternateReference_yn)': '0', 'fmri(mc)': '0', 'fmri(st)': '0', 'fmri(regunwarp_yn)': '0'}
+example_func.nii.gz {"available": true, "same_grid": true, "voxels": 99505, "spatial_r": 0.9951297833050788, "relative_rms_difference": 0.0515907319080656, "max_absolute_difference": 3047.07177734375, "new_on_old_global_scale": 1.0061947215900586, "relative_rms_after_global_scale": 0.051217468145463484}
+mean_func.nii.gz {"available": true, "same_grid": true, "voxels": 99505, "spatial_r": 0.9975282563793523, "relative_rms_difference": 0.03458423497519888, "max_absolute_difference": 4911.2314453125, "new_on_old_global_scale": 0.9968525986978923, "relative_rms_after_global_scale": 0.03444071970594195}
+Logged commands available: 55 historical; 55 rebuilt
+Logged preprocessing/fit command differences (first 24 lines; full comparison saved):
+--- historical commands
++++ rebuilt commands
+@@ -1,18 +1,18 @@
+ feat_model design
+-fslmaths /ZPOOL/data/projects/rf1-sra-linux2/derivatives/fmriprep-24/sub-10402/ses-01/func/sub-10402_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold prefiltered_func_data -odt float
++fslmaths /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10402/ses-01/func/sub-10402_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold prefiltered_func_data -odt float
+ fslroi prefiltered_func_data example_func 140 1
+ fslmaths prefiltered_func_data -Tmean mean_func
+ bet2 mean_func mask -f 0.3 -n -m; /usr/local/fsl/bin/immv mask_mask mask
+ fslmaths prefiltered_func_data -mas mask prefiltered_func_data_bet
+ fslstats prefiltered_func_data_bet -p 2 -p 98
+-fslmaths prefiltered_func_data_bet -thr 656.3429688000001 -Tmin -bin mask -odt char
++fslmaths prefiltered_func_data_bet -thr 657.5821289 -Tmin -bin mask -odt char
+ fslstats prefiltered_func_data -k mask -p 50
+ fslmaths mask -dilF mask
+ fslmaths prefiltered_func_data -mas mask prefiltered_func_data_thresh
+ fslmaths prefiltered_func_data_thresh -Tmean mean_func
+-susan prefiltered_func_data_thresh 2895.537048 2.1231422505307855 3 1 1 mean_func 2895.537048 prefiltered_func_data_smooth
++susan prefiltered_func_data_thresh 2923.66735875 2.1231422505307855 3 1 1 mean_func 2923.66735875 prefiltered_func_data_smooth
+ fslmaths prefiltered_func_data_smooth -mas mask prefiltered_func_data_smooth
+-fslmaths prefiltered_func_data_smooth -mul 2.5901930714995984 prefiltered_func_data_intnorm
++fslmaths prefiltered_func_data_smooth -mul 2.5652713115785475 prefiltered_func_data_intnorm
+ fslmaths prefiltered_func_data_intnorm filtered_func_data
+ fslmaths filtered_func_data -Tmean mean_func
+
+=== sub-10402_ses-01_task-trust_run-2 ===
+Saved matrix matches frozen hash: True
+saved_vs_original_feat {"left": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/original_confounds/sub-10402/sub-10402_ses-01_task-trust_run-2_desc-TedanaPlusConfounds. tsv", "right": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10402/ses-01/L1_task-trust_model-01_type-act_run-2_sm-5.feat/confoundevs.txt", "available": true, "left_shape": [280, 26], "right_shape": [280, 26], "equal": true, "max_absolute_difference": 0.0}
+saved_vs_rebuilt_feat {"left": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/original_confounds/sub-10402/sub-10402_ses-01_task-trust_run-2_desc-TedanaPlusConfounds.tusv", "right": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/feat_reconstruction/sub-10402_ses-01_task-trust_run-2.feat/confoundevs.txt", "available": false, "equal": null}
+TEDANA component verification: {"metrics": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/tedana-24/sub-10402/ses-01/sub-10402_ses-01_task-trust_run-2_desc-tedana_metrics.tsv", "mixing": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/tedana-24/sub-10402/ses-01/sub-10402_ses-01_task-trust_run-2_desc-ICA_mixing.tsv", "available": false, "rejected_suffix_matches": null, "status": "Component identities cannot be checked from these missing source files."}
+No rebuilt FEAT design yet; checkpoint comparison skipped.
+
+Full diagnostic: /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/diagnostics/trust-preprocessing-evidence-20261027T032509Z-e54481.json
+No preprocessing or model fits were run; this check does not launch production.
+
+Saved terminal output: /tmp/rf1-trust-preprocessing-evidence.bIMGoc

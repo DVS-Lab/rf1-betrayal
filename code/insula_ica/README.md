@@ -13,6 +13,14 @@ No new gPPI or behavioral search is included.
 
 ## Current evidence and limits
 
+The [Trust reconstruction record](records/2026-10-26-trust-reconstruction/README.md)
+contains the linux2 findings, the supplied diagnostic excerpt, and a structured
+summary. For sub-10402 Trust run 1, the historical and rebuilt nuisance matrices
+are exactly equal, as are the complete designs and contrasts. The midpoint BOLD
+frame already differs before FEAT masking/smoothing. The Trust pilot has not
+passed; production has not started. Separate TEDANA source files are not needed
+to reuse the preserved historical nuisance matrix.
+
 Jacob's corrected `master_subject_table_full (1).csv` has 147 rows and exactly
 132 `include_final=TRUE` identities, matching `code/sublist_n132.txt`. For that
 cohort, the saved full-run QC permits:
@@ -36,9 +44,10 @@ recover these inputs.** The new scripts do not call them or change them.
 The model templates use TR=1.615 s, smoothing=5 mm, zero volume deletion,
 disabled FEAT temporal high-pass, and **FILM prewhitening enabled**. Per-run
 saved settings and designs, not the templates alone, are authoritative.
-The old `fmriprep-24` images may be missing. Neither the old images nor historical
-FEAT trees are available on the development Mac, so no real-data reconstruction
-or historical comparison has yet been performed.
+The old `fmriprep-24` source images are absent at the checked historical paths
+on linux2. Neither those images nor the historical FEAT trees are available on
+the development Mac. Real-data comparisons were executed by the user on linux2;
+the results and their scope are recorded below and in the linked record.
 
 ## Trust preprocessing rebuild after the linux2 inventory
 
@@ -209,8 +218,8 @@ This diagnostic never creates a passing Trust pilot marker or unlocks production
 Two diagnostic metric tests passed. Real local FILM replays on synthetic data
 matched all 34 UGR maps exactly in the non-prewhitened fixture and all four maps
 exactly in a separate native-prewhitening fixture. Historical fixture input
-identities were unchanged in both tests. Real RF1 same-input agreement remains
-to be checked on linux2.
+identities were unchanged in both tests. The subsequent real RF1 linux2 control
+also passed, as recorded below.
 
 ### Focused Trust preprocessing and confound provenance check
 
@@ -234,6 +243,10 @@ original `tedana-24` metrics and mixing files survive, it numerically verifies
 that the rejected-component timecourses form the saved matrix suffix in the
 archived generator's order. Missing source files are reported as unknown,
 rather than inferred component identity from an unlabeled matrix or its name.
+That optional check is not required to reuse an exactly preserved historical
+FEAT nuisance matrix and is not an additional gate for reconstruction. The
+latest linux2 excerpt establishes exact matrix equality for the completed
+sub-10402 run 1; see the record for the run 2 limitation.
 
 It also compares retained `example_func` and `mean_func` images, including a
 global-scale diagnostic, FSF settings, and normalized logged initialization,
