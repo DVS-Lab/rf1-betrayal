@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import csv
+from datetime import datetime, timezone
 import hashlib
 import json
 import os
@@ -26,6 +27,39 @@ ROOT = Path(__file__).resolve().parents[2]
 VERSION = '24.1.1'
 HISTORICAL_SOURCE = ('DVS-Lab/rf1-sra-linux2@a19c46ef:code/fmriprep24-hpc.sh; '
                      'code/ses-01.json; code/tedana-hpc.sh; code/warpkit-hpc.sh')
+
+# Exercise the installed container's own JSON converters before starting jobs.
+# Extract just these functions: importing all of config initializes unrelated
+# runtime state, whereas these converters require only PyBIDS Query enums.
+FILTER_PREFLIGHT = r'''
+import ast
+import importlib.util
+import json
+from pathlib import Path
+import sys
+from bids.layout import Query
+
+root = Path(importlib.util.find_spec('fmriprep').origin).parent
+def load_function(path, name, namespace):
+    tree = ast.parse(path.read_text())
+    matches = [node for node in ast.walk(tree)
+               if isinstance(node, ast.FunctionDef) and node.name == name]
+    if len(matches) != 1:
+        raise RuntimeError('Cannot identify installed filter converter: ' + name)
+    exec(compile(ast.Module(body=matches, type_ignores=[]), str(path), 'exec'), namespace)
+    return namespace[name]
+
+parser_namespace = {}
+load_function(root / 'cli/parser.py', '_process_value', parser_namespace)
+json_hook = load_function(root / 'cli/parser.py', '_filter_pybids_none_any', parser_namespace)
+convert = load_function(root / 'config.py', '_process_value', {'Query': Query})
+for name in sys.argv[1:]:
+    filters = json.loads(Path(name).read_text(), object_hook=json_hook)
+    for query in filters.values():
+        for value in query.values():
+            convert(value)
+    print('Container filter preflight passed:', name, flush=True)
+'''
 
 
 def require(condition, message):
@@ -196,7 +230,10 @@ def filter_for(runs):
                 t2w=dict(datatype='anat', session='01', suffix='T2w'),
                 fmap=dict(datatype='fmap'),
                 **{k: dict(datatype='func', session='01', suffix=k, part=[None, 'mag'],
-                           task='trust', run=sorted({r['run'] for r in runs}))
+                           # fMRIPrep 24.1.1's config deserializer applies a
+                           # string membership check to each non-Query value.
+                           # Integer runs crash it before preprocessing starts.
+                           task='trust', run=[str(x) for x in sorted({int(r['run']) for r in runs})])
                    for k in ('sbref', 'bold')})
 
 
@@ -373,6 +410,10 @@ def main():
     env = dict(os.environ, APPTAINERENV_TEMPLATEFLOW_HOME='/opt/templateflow',
                SINGULARITYENV_TEMPLATEFLOW_HOME='/opt/templateflow',
                APPTAINERENV_MPLCONFIGDIR='/opt/mplconfigdir', SINGULARITYENV_MPLCONFIGDIR='/opt/mplconfigdir')
+    subprocess.run([runtime, 'exec', '--cleanenv', '-B', f'{output}:/rebuild:ro',
+                    str(image), 'python', '-c', FILTER_PREFLIGHT,
+                    *[f'/rebuild/filters/{subject}.json' for subject in subjects]],
+                   env=env, check=True)
     def launch(item):
         selected = [r for r in runs if r['subject'] == item['subject']]
         done = output / (item['subject'] + '.complete.json')
@@ -387,6 +428,8 @@ def main():
         log = output / (item['subject'] + '.fmriprep.log')
         print('Running:', item['subject'], 'log:', log, flush=True)
         with log.open('a') as f:
+            f.write('\n=== fMRIPrep attempt started ' + datetime.now(timezone.utc).isoformat() + ' ===\n')
+            f.flush()
             subprocess.run(item['argv'], env=env, stdout=f, stderr=subprocess.STDOUT, check=True)
         verify_outputs(selected)
         save_json(done, dict(runs=item['runs'], stage='fmriprep_only',

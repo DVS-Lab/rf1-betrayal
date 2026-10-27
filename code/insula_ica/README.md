@@ -133,9 +133,20 @@ The runner does not automatically feed new Trust residuals into ICA; combining
 their reconstruction manifest with the existing UGR replay route remains the
 next step after real-data historical comparisons pass.
 
-Development checks: eight reconstruction safety tests plus ten existing numerical
+Run filters use JSON string values (`"run": ["1", "2"]`), because the 24.1.1
+configuration deserializer crashes on integer run values. Before launching any
+participants, the runner exercises the installed container's own JSON/filter
+converter functions on every selected filter. Failed startup attempts can be
+restarted with the same command/output root; corrected filters are regenerated,
+the downloaded container and work directories are retained, and participant
+logs append a timestamped attempt marker.
+
+Development checks: nine reconstruction safety tests plus ten existing numerical
 tests passed. A 241-run synthetic inventory exercised the full raw preflight,
 three-run pilot selection, byte-preserved confounds and isolated output plan.
+The exact upstream 24.1.1 converter functions reproduced the integer-run error
+and accepted the corrected filters in a source-level check with a Query enum
+fixture. The actual container preflight runs on linux2.
 No fMRIPrep container or real RF1 images were executed on the Mac.
 
 ## Important residual-scale gate

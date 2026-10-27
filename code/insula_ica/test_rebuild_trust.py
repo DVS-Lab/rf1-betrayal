@@ -60,11 +60,23 @@ class TrustRebuildTests(unittest.TestCase):
     def test_filter_keeps_historical_anatomy_and_fieldmaps_but_only_accepted_trust(self):
         selected = r.filter_for([{'run': 2}])
         self.assertEqual(selected['bold']['task'], 'trust')
-        self.assertEqual(selected['bold']['run'], [2])
-        self.assertEqual(selected['sbref']['run'], [2])
+        self.assertEqual(selected['bold']['run'], ['2'])
+        self.assertEqual(selected['sbref']['run'], ['2'])
         self.assertEqual(selected['t1w']['session'], '01')
         self.assertEqual(selected['fmap'], {'datatype': 'fmap'})
         self.assertEqual(selected['bold']['part'], [None, 'mag'])
+
+    def test_filter_entities_are_compatible_with_24_series_string_deserializer(self):
+        # 24.1.1 applies `'Query' in value` to every non-enum scalar after
+        # converting JSON null to Query.NONE. Integers therefore fail even
+        # though PyBIDS itself would accept numeric runs.
+        selected = json.loads(json.dumps(r.filter_for([{'run': 2}, {'run': 1}, {'run': '2'}])))
+        for query in selected.values():
+            for value in query.values():
+                for leaf in value if isinstance(value, list) else [value]:
+                    if leaf is not None:
+                        self.assertIsInstance(leaf, str)
+        self.assertEqual(selected['bold']['run'], ['1', '2'])
 
     def test_command_does_not_write_upstream_or_run_other_tasks(self):
         cmd = r.command('apptainer', Path('/images/24.sif'), Path('/upstream'),
