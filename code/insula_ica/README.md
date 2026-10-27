@@ -40,6 +40,104 @@ The old `fmriprep-24` images may be missing. Neither the old images nor historic
 FEAT trees are available on the development Mac, so no real-data reconstruction
 or historical comparison has yet been performed.
 
+## Trust preprocessing rebuild after the linux2 inventory
+
+The user's 2026-10-26 linux2 inventory found a FILM replay route for all 249
+eligible UGR runs, but no residual, filtered data, or source BOLD at the recorded
+paths for all 241 eligible Trust runs. The subsequent direct RF1 BIDS check found
+four raw magnitude echoes plus JSONs for all 241 Trust runs and session-01 T1w
+files for all 132 participants. No other project needs to be searched.
+
+`rebuild_trust.py` uses the archived cluster configuration from
+[`a19c46ef:code/fmriprep24-hpc.sh`](https://github.com/DVS-Lab/rf1-sra-linux2/blob/a19c46ef/code/fmriprep24-hpc.sh)
+and its `ses-01.json`: fMRIPrep **24.1.1**, multi-echo outputs, T1w and
+MNI152NLin6Asym spaces, no FreeSurfer reconstruction. It restricts functional
+processing to accepted session-01 Trust runs and adds explicit resource caps.
+The archived command is evidence for the recovery configuration; it does not
+prove that today's raw BIDS data, metadata, fieldmaps, or template cache are
+identical to the inputs used for every historical analysis.
+
+**No standalone TEDANA rerun is needed for historical FEAT recovery when its
+original combined confounds remain.** The inventory reached its missing-BOLD
+checks only after confirming a surviving external or FEAT-preserved matrix.
+The rebuild checks every run's matrix again, preserves its original bytes, and
+uses it unchanged, including the original rejected TEDANA component time
+courses. The new fMRIPrep confounds and any new ICA decomposition are not
+substituted into that historical model. Re-running standalone TEDANA would
+produce a new nuisance fit, rather than recover the old one.
+
+Start the three-run, two-participant pilot (one participant with two accepted
+runs and one with a single accepted run):
+
+```bash
+INSULA_AUDIT_PYTHON=/ZPOOL/data/tools/anaconda/tug87422/envs/tedana-26.0.3/bin/python
+INSULA_AUDIT_DIR=/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/output/linux2-audit-20261026T213907Z-dc0e41/audit
+"$INSULA_AUDIT_PYTHON" code/insula_ica/rebuild_trust.py \
+  --audit-dir "$INSULA_AUDIT_DIR" --pilot --fit --fetch-image --execute --jobs 2
+```
+
+Remove `--execute` to inspect the plan first. `--fetch-image` pulls the official
+`nipreps/fmriprep:24.1.1` container into the isolated rebuild root if the exact
+`/ZPOOL/data/tools/fmriprep-24.1.1.simg` is absent; `--image /path/to/image` can
+use an existing cluster container. The runtime version is checked and the
+container SHA256 recorded. No existing environment or current fMRIPrep wrapper
+is changed. The defaults permit two concurrent participants, each with 14
+processes and a 28,000 MB memory cap; adjust `--jobs`, `--nprocs`, `--mem-mb`
+for linux2 capacity.
+
+The runner preflights raw echo volume counts/TR against each saved FSF, preserves
+the full combined nuisance matrix and original FSF, and records raw image
+size/mtime and JSON hashes. New outputs go under:
+
+```text
+derivatives/insula_ica/trust-rebuild-24-<audit-session>/
+  fmriprep-24/           # new BOLD; original data remain untouched
+  original_confounds/   # byte-preserved historical combined matrices
+  historical_fsf/
+  filters/
+  feat_reconstruction/  # with --fit; retained res4d/filtered data/threshac1
+  sub-*.fmriprep.log
+```
+
+Work directories are isolated under `/ZPOOL/data/scratch/$USER/rf1-betrayal-trust24/`.
+BIDS is bound read-only. Completed fMRIPrep participants can resume using their
+completion marker; interrupted work remains available to the container. An
+execution lock prevents duplicate launches. A partial FEAT is preserved and
+requires inspection; the runner never invokes the original deleting wrappers.
+
+The archived cluster and current linux2 Warpkit scripts both export the products
+consumed by fMRIPrep into `bids/sub-*/ses-01/fmap/` as
+`sub-*_ses-01_acq-trust_run-*_fieldmap.nii.gz`, `_magnitude.nii.gz`, and their
+JSON sidecars. They do not overwrite the raw `func/` BOLD echoes. The runner
+checks these exact four files, one-volume fieldmap/compatible magnitude grid,
+`Units=Hz`, and `IntendedFor` or matched `B0FieldIdentifier`/`B0FieldSource`
+associations to all four raw magnitude echoes. It records all 241 run results
+in `warpkit_inventory.json`, selecting ready participants for the pilot and
+requiring every selected run to be ready before execution. A `.warpkit_done`
+flag and the large Warpkit intermediate files are not required when those
+usable BIDS products remain. The exact retained 4D fieldmap location is also
+reported if a BIDS export is missing; the runner never invokes Warpkit or
+silently runs fMRIPrep without the required distortion-correction inputs.
+
+With `--fit`, only three saved FSF locations change: input BOLD, the preserved
+confound file, and output directory. All original task/nuisance settings remain.
+The runner compares the complete design/contrast matrices and every historical
+COPE/ZSTAT (atol=rtol=1e-4). A difference stops expansion; it is not accepted as
+an equivalent historical reconstruction. The regenerated BOLD must match the
+historical spatial grid, TR and time count. Full residual-scale/coverage QC is
+still required before ICA; a successful fit comparison is not that final QC.
+
+After the pilot passes, repeat the command without `--pilot` for the remaining
+participants. Full execution requires the matching `pilot-verified.json`.
+The runner does not automatically feed new Trust residuals into ICA; combining
+their reconstruction manifest with the existing UGR replay route remains the
+next step after real-data historical comparisons pass.
+
+Development checks: eight reconstruction safety tests plus ten existing numerical
+tests passed. A 241-run synthetic inventory exercised the full raw preflight,
+three-run pilot selection, byte-preserved confounds and isolated output plan.
+No fMRIPrep container or real RF1 images were executed on the Mac.
+
 ## Important residual-scale gate
 
 The installed FSL 6.0.7.19 source (`src/fsl-film/film_gls.cc`) prewhitens each
@@ -122,8 +220,9 @@ The inventory chooses a route for each originally accepted run:
    voxelwise EV model or unsupported command is a blocker, not an invitation to
    assemble an approximate command.
 4. **Blocked** if no exact route exists. Report which original inputs are absent.
-   Restore those exact sources from archive/backup. If Trust lost both its source
-   BOLD and filtered data, its residuals cannot be reproduced from COPEs alone.
+   If Trust lost both its source BOLD and filtered data, its residuals cannot be
+   reproduced from COPEs alone. Restore historical inputs if available, or use
+   the Trust preprocessing rebuild above and test its historical equivalence.
 
 Reconstruction never writes in the historical FEAT directory. Completed new
 residuals are not rerun. Partial new directories are preserved and require
