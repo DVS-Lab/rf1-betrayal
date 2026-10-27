@@ -173,6 +173,45 @@ and accepted the corrected filters in a source-level check with a Query enum
 fixture. The actual container preflight runs on linux2.
 No fMRIPrep container or real RF1 images were executed on the Mac.
 
+### Same-input FILM control for the failed real-data Trust comparison
+
+The first two linux2 Trust comparisons had matching complete design/contrast
+matrices and no missing model-defined maps, but COPE10 spatial correlations of
+0.986/0.988 with relative RMS differences of 16.6%/15.5%; ZSTAT10 correlations
+of 0.965/0.976 with relative RMS differences of 25.9%/21.7% inside common masks.
+Brain-mask Dice was approximately 0.994. These are material fit differences,
+not a reason to relax the historical-reproduction check. Production remains
+stopped, with both completed fMRIPrep participants preserved.
+
+`diagnose_film_replay.py` isolates the statistical-fit stage using an eligible
+UGR run's retained `filtered_func_data` and complete original matrices. It
+replays the uniquely logged FILM command, changing only the results destination
+and resolving the current executable. It does not run fMRIPrep, Warpkit, TEDANA,
+FEAT prestats, or cohort production. The diagnostic records the exact command,
+FSL version, executable hash, and historical input identities, verifies those
+inputs remain unchanged, compares every model-defined COPE/ZSTAT, and reports
+task-contrast spatial correlation and relative RMS difference.
+
+```bash
+"$INSULA_AUDIT_PYTHON" -u code/insula_ica/diagnose_film_replay.py \
+  --audit-dir "$INSULA_AUDIT_DIR" --subject 10369 --run 1 --execute
+```
+
+Without `--execute`, this writes a plan only. Each invocation uses a fresh
+`derivatives/insula_ica/diagnostics/ugr-film-<timestamp-token>/` directory.
+`result.json` reports whether the strict same-input comparison passed, plus
+common-mask task metrics; the detailed per-map report is in its `.feat` child.
+A passing control supports investigating Trust's earlier preprocessing/prestats
+or Trust-specific settings. A failed control calls for checking fitting/runtime
+differences or the retained inputs' provenance before attributing the Trust
+discrepancy to fMRIPrep. One UGR run does not establish cohort-wide equivalence.
+This diagnostic never creates a passing Trust pilot marker or unlocks production.
+Two diagnostic metric tests passed. Real local FILM replays on synthetic data
+matched all 34 UGR maps exactly in the non-prewhitened fixture and all four maps
+exactly in a separate native-prewhitening fixture. Historical fixture input
+identities were unchanged in both tests. Real RF1 same-input agreement remains
+to be checked on linux2.
+
 ## Important residual-scale gate
 
 The installed FSL 6.0.7.19 source (`src/fsl-film/film_gls.cc`) prewhitens each
