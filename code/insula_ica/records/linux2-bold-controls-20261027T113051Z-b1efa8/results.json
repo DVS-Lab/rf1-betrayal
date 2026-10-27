@@ -1,0 +1,466 @@
+{
+  "sub-10402_ses-01_task-trust_run-1": {
+    "historical_frames": {
+      "v24-a": {
+        "error": "name 'case' is not defined"
+      },
+      "v24-b": {
+        "error": "name 'case' is not defined"
+      },
+      "v25-a": {
+        "error": "name 'case' is not defined"
+      }
+    },
+    "full_series": {
+      "v24_repeat": {
+        "error": "One or both cases did not complete"
+      },
+      "v25_vs_v24": {
+        "error": "One or both cases did not complete"
+      },
+      "v24_default_repeat": {
+        "error": "Default repeat did not complete"
+      },
+      "v24_default_vs_previous_pilot": {
+        "error": "Default repeat did not complete"
+      }
+    },
+    "existing_versionless_frame": {
+      "reference": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10402/ses-01/L1_task-trust_model-01_type-act_run-1_sm-5.feat/example_func.nii.gz",
+      "bold": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/fmriprep/sub-10402/ses-01/func/sub-10402_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+      "frame_index": 140,
+      "same_grid": true,
+      "reference_geometry": {
+        "shape": [
+          57,
+          70,
+          54
+        ],
+        "zooms": [
+          2.700000047683716,
+          2.700000047683716,
+          2.9700000286102295
+        ],
+        "affine": [
+          [
+            2.700000047683716,
+            0.0,
+            0.0,
+            -74.80000305175781
+          ],
+          [
+            0.0,
+            2.700000047683716,
+            0.0,
+            -109.80000305175781
+          ],
+          [
+            0.0,
+            0.0,
+            2.9700000286102295,
+            -72.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "stored_dtype": "float32"
+      },
+      "bold_geometry": {
+        "shape": [
+          57,
+          70,
+          54,
+          280
+        ],
+        "zooms": [
+          2.700000047683716,
+          2.700000047683716,
+          2.9700000286102295,
+          1.6150000095367432
+        ],
+        "affine": [
+          [
+            2.700000047683716,
+            0.0,
+            0.0,
+            -74.80000305175781
+          ],
+          [
+            0.0,
+            2.700000047683716,
+            0.0,
+            -109.80000305175781
+          ],
+          [
+            0.0,
+            0.0,
+            2.9700000286102295,
+            -72.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "stored_dtype": "float32"
+      },
+      "voxels": 100205,
+      "spatial_r": 0.9477919548490618,
+      "relative_rms_difference": 0.17241721515789524,
+      "max_absolute_difference": 13204.422332763672,
+      "global_scale": 1.0169855004473651,
+      "relative_rms_after_global_scale": 0.17157852096738835
+    }
+  },
+  "sub-10402_ses-01_task-trust_run-2": {
+    "historical_frames": {
+      "v24-a": {
+        "error": "name 'case' is not defined"
+      },
+      "v24-b": {
+        "error": "name 'case' is not defined"
+      },
+      "v25-a": {
+        "error": "name 'case' is not defined"
+      }
+    },
+    "full_series": {
+      "v24_repeat": {
+        "error": "One or both cases did not complete"
+      },
+      "v25_vs_v24": {
+        "error": "One or both cases did not complete"
+      },
+      "v24_default_repeat": {
+        "error": "Default repeat did not complete"
+      },
+      "v24_default_vs_previous_pilot": {
+        "error": "Default repeat did not complete"
+      }
+    },
+    "existing_versionless_frame": {
+      "reference": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10402/ses-01/L1_task-trust_model-01_type-act_run-2_sm-5.feat/example_func.nii.gz",
+      "bold": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/fmriprep/sub-10402/ses-01/func/sub-10402_ses-01_task-trust_run-2_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+      "frame_index": 140,
+      "same_grid": true,
+      "reference_geometry": {
+        "shape": [
+          57,
+          70,
+          54
+        ],
+        "zooms": [
+          2.700000047683716,
+          2.700000047683716,
+          2.9700000286102295
+        ],
+        "affine": [
+          [
+            2.700000047683716,
+            0.0,
+            0.0,
+            -74.80000305175781
+          ],
+          [
+            0.0,
+            2.700000047683716,
+            0.0,
+            -109.80000305175781
+          ],
+          [
+            0.0,
+            0.0,
+            2.9700000286102295,
+            -72.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "stored_dtype": "float32"
+      },
+      "bold_geometry": {
+        "shape": [
+          57,
+          70,
+          54,
+          280
+        ],
+        "zooms": [
+          2.700000047683716,
+          2.700000047683716,
+          2.9700000286102295,
+          1.6150000095367432
+        ],
+        "affine": [
+          [
+            2.700000047683716,
+            0.0,
+            0.0,
+            -74.80000305175781
+          ],
+          [
+            0.0,
+            2.700000047683716,
+            0.0,
+            -109.80000305175781
+          ],
+          [
+            0.0,
+            0.0,
+            2.9700000286102295,
+            -72.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "stored_dtype": "float32"
+      },
+      "voxels": 100025,
+      "spatial_r": 0.9441285917236983,
+      "relative_rms_difference": 0.17758982747546725,
+      "max_absolute_difference": 14917.578125,
+      "global_scale": 1.0102948087477561,
+      "relative_rms_after_global_scale": 0.17729118346836473
+    }
+  },
+  "sub-10478_ses-01_task-trust_run-1": {
+    "historical_frames": {
+      "v24-a": {
+        "error": "name 'case' is not defined"
+      },
+      "v24-b": {
+        "error": "name 'case' is not defined"
+      },
+      "v25-a": {
+        "error": "name 'case' is not defined"
+      }
+    },
+    "full_series": {
+      "v24_repeat": {
+        "error": "One or both cases did not complete"
+      },
+      "v25_vs_v24": {
+        "error": "One or both cases did not complete"
+      }
+    },
+    "existing_versionless_frame": {
+      "reference": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10478/ses-01/L1_task-trust_model-01_type-act_run-1_sm-5.feat/example_func.nii.gz",
+      "bold": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/fmriprep/sub-10478/ses-01/func/sub-10478_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+      "frame_index": 140,
+      "same_grid": true,
+      "reference_geometry": {
+        "shape": [
+          57,
+          70,
+          54
+        ],
+        "zooms": [
+          2.700000047683716,
+          2.700000047683716,
+          2.9700000286102295
+        ],
+        "affine": [
+          [
+            2.700000047683716,
+            0.0,
+            0.0,
+            -74.80000305175781
+          ],
+          [
+            0.0,
+            2.700000047683716,
+            0.0,
+            -109.80000305175781
+          ],
+          [
+            0.0,
+            0.0,
+            2.9700000286102295,
+            -72.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "stored_dtype": "float32"
+      },
+      "bold_geometry": {
+        "shape": [
+          57,
+          70,
+          54,
+          280
+        ],
+        "zooms": [
+          2.700000047683716,
+          2.700000047683716,
+          2.9700000286102295,
+          1.6150000095367432
+        ],
+        "affine": [
+          [
+            2.700000047683716,
+            0.0,
+            0.0,
+            -74.80000305175781
+          ],
+          [
+            0.0,
+            2.700000047683716,
+            0.0,
+            -109.80000305175781
+          ],
+          [
+            0.0,
+            0.0,
+            2.9700000286102295,
+            -72.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "stored_dtype": "float32"
+      },
+      "voxels": 106582,
+      "spatial_r": 0.8994309970030703,
+      "relative_rms_difference": 0.21779337156058592,
+      "max_absolute_difference": 12261.902099609375,
+      "global_scale": 1.002025340801661,
+      "relative_rms_after_global_scale": 0.21778395416183577
+    }
+  },
+  "sub-10478_ses-01_task-trust_run-2": {
+    "historical_frames": {
+      "v24-a": {
+        "error": "name 'case' is not defined"
+      },
+      "v24-b": {
+        "error": "name 'case' is not defined"
+      },
+      "v25-a": {
+        "error": "name 'case' is not defined"
+      }
+    },
+    "full_series": {
+      "v24_repeat": {
+        "error": "One or both cases did not complete"
+      },
+      "v25_vs_v24": {
+        "error": "One or both cases did not complete"
+      }
+    },
+    "existing_versionless_frame": {
+      "reference": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10478/ses-01/L1_task-trust_model-01_type-act_run-2_sm-5.feat/example_func.nii.gz",
+      "bold": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/fmriprep/sub-10478/ses-01/func/sub-10478_ses-01_task-trust_run-2_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+      "frame_index": 140,
+      "same_grid": true,
+      "reference_geometry": {
+        "shape": [
+          57,
+          70,
+          54
+        ],
+        "zooms": [
+          2.700000047683716,
+          2.700000047683716,
+          2.9700000286102295
+        ],
+        "affine": [
+          [
+            2.700000047683716,
+            0.0,
+            0.0,
+            -74.80000305175781
+          ],
+          [
+            0.0,
+            2.700000047683716,
+            0.0,
+            -109.80000305175781
+          ],
+          [
+            0.0,
+            0.0,
+            2.9700000286102295,
+            -72.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "stored_dtype": "float32"
+      },
+      "bold_geometry": {
+        "shape": [
+          57,
+          70,
+          54,
+          280
+        ],
+        "zooms": [
+          2.700000047683716,
+          2.700000047683716,
+          2.9700000286102295,
+          1.6150000095367432
+        ],
+        "affine": [
+          [
+            2.700000047683716,
+            0.0,
+            0.0,
+            -74.80000305175781
+          ],
+          [
+            0.0,
+            2.700000047683716,
+            0.0,
+            -109.80000305175781
+          ],
+          [
+            0.0,
+            0.0,
+            2.9700000286102295,
+            -72.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "stored_dtype": "float32"
+      },
+      "voxels": 106693,
+      "spatial_r": 0.9003361671842363,
+      "relative_rms_difference": 0.21517405960180433,
+      "max_absolute_difference": 12150.762504577637,
+      "global_scale": 1.0223118708090775,
+      "relative_rms_after_global_scale": 0.21401414987453496
+    }
+  }
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "path": "/ZPOOL/data/tools/fmriprep-24.1.1.simg",
+    "exists": true,
+    "size": 2666102784,
+    "mtime_ns": 1744132193728229140,
+    "sha256": "6261734ae209de4b103fa051d4c4fe8ea914cb4a4623014fd208454eace0c67f",
+    "labels": {
+      "returncode": 0,
+      "output": "{\n\t\"data\": {\n\t\t\"attributes\": {\n\t\t\t\"labels\": {\n\t\t\t\t\"org.label-schema.build-arch\": \"amd64\",\n\t\t\t\t\"org.label-schema.build-date\": \"Tuesday_17_December_2024_11:25:25_EST\",\n\t\t\t\t\"org.label-schema.description\": \"fMRIPrep - robust fMRI preprocessing tool\",\n\t\t\t\t\"org.label-schema.name\": \"fMRIPrep\",\n\t\t\t\t\"org.label-schema.schema-version\": \"1.0\",\n\t\t\t\t\"org.label-schema.url\": \"https://fmriprep.org\",\n\t\t\t\t\"org.label-schema.usage.apptainer.version\": \"1.3.4\",\n\t\t\t\t\"org.label-schema.usage.singularity.deffile.bootstrap\": \"docker\",\n\t\t\t\t\"org.label-schema.usage.singularity.deffile.from\": \"nipreps/fmriprep:24.1.1\",\n\t\t\t\t\"org.label-schema.vcs-ref\": \"1248b632\",\n\t\t\t\t\"org.label-schema.vcs-url\": \"https://github.com/nipreps/fmriprep\",\n\t\t\t\t\"org.label-schema.version\": \"24.1.1\",\n\t\t\t\t\"org.opencontainers.image.ref.name\": \"ubuntu\",\n\t\t\t\t\"org.opencontainers.image.version\": \"22.04\"\n\t\t\t}\n\t\t}\n\t},\n\t\"type\": \"container\"\n}\n"
+    },
+    "packages": {
+      "returncode": 0,
+      "output": "{\"fmriprep\": \"24.1.1\", \"nipype\": \"1.8.6\", \"templateflow\": \"24.2.0\", \"numpy\": \"1.26.4\", \"nibabel\": \"5.2.1\"}\n"
+    },
+    "package_versions": {
+      "fmriprep": "24.1.1",
+      "nipype": "1.8.6",
+      "templateflow": "24.2.0",
+      "numpy": "1.26.4",
+      "nibabel": "5.2.1"
+    }
+  },
+  {
+    "path": "/ZPOOL/data/tools/fmriprep-25.2.4.simg",
+    "exists": true,
+    "size": 2413367296,
+    "mtime_ns": 1771269334230063536,
+    "sha256": "33bd4b1cb2465a01944887c919afcaa2fa7155b52850c3a4e82dd04ce19b17a1",
+    "labels": {
+      "returncode": 0,
+      "output": "{\n\t\"data\": {\n\t\t\"attributes\": {\n\t\t\t\"labels\": {\n\t\t\t\t\"org.label-schema.build-arch\": \"amd64\",\n\t\t\t\t\"org.label-schema.build-date\": \"Monday_16_February_2026_14:14:56_EST\",\n\t\t\t\t\"org.label-schema.description\": \"fMRIPrep - robust fMRI preprocessing tool\",\n\t\t\t\t\"org.label-schema.name\": \"fMRIPrep\",\n\t\t\t\t\"org.label-schema.schema-version\": \"1.0\",\n\t\t\t\t\"org.label-schema.url\": \"https://fmriprep.org\",\n\t\t\t\t\"org.label-schema.usage.apptainer.version\": \"1.4.2\",\n\t\t\t\t\"org.label-schema.usage.singularity.deffile.bootstrap\": \"docker\",\n\t\t\t\t\"org.label-schema.usage.singularity.deffile.from\": \"nipreps/fmriprep:25.2.4\",\n\t\t\t\t\"org.label-schema.vcs-ref\": \"d1e486e7\",\n\t\t\t\t\"org.label-schema.vcs-url\": \"https://github.com/nipreps/fmriprep\",\n\t\t\t\t\"org.label-schema.version\": \"25.2.4\",\n\t\t\t\t\"org.opencontainers.image.ref.name\": \"ubuntu\",\n\t\t\t\t\"org.opencontainers.image.version\": \"22.04\"\n\t\t\t}\n\t\t}\n\t},\n\t\"type\": \"container\"\n}\n"
+    },
+    "packages": {
+      "returncode": 0,
+      "output": "{\"fmriprep\": \"25.2.4\", \"nipype\": \"1.10.0\", \"templateflow\": \"25.0.4\", \"numpy\": \"2.2.6\", \"nibabel\": \"5.3.2\"}\n"
+    },
+    "package_versions": {
+      "fmriprep": "25.2.4",
+      "nipype": "1.10.0",
+      "templateflow": "25.0.4",
+      "numpy": "2.2.6",
+      "nibabel": "5.3.2"
+    }
+  },
+  {
+    "path": "/ZPOOL/data/tools/fmriprep-25.2.5.simg",
+    "exists": true,
+    "size": 2413481984,
+    "mtime_ns": 1776224793061752530,
+    "sha256": "ea9732be8a398c8e97fbac5ead26fcd06cb2145c41628a80d10a5ee7940f36b8",
+    "labels": {
+      "returncode": 0,
+      "output": "{\n\t\"data\": {\n\t\t\"attributes\": {\n\t\t\t\"labels\": {\n\t\t\t\t\"org.label-schema.build-arch\": \"amd64\",\n\t\t\t\t\"org.label-schema.build-date\": \"Tuesday_14_April_2026_23:45:47_EDT\",\n\t\t\t\t\"org.label-schema.description\": \"fMRIPrep - robust fMRI preprocessing tool\",\n\t\t\t\t\"org.label-schema.name\": \"fMRIPrep\",\n\t\t\t\t\"org.label-schema.schema-version\": \"1.0\",\n\t\t\t\t\"org.label-schema.url\": \"https://fmriprep.org\",\n\t\t\t\t\"org.label-schema.usage.apptainer.version\": \"1.4.2\",\n\t\t\t\t\"org.label-schema.usage.singularity.deffile.bootstrap\": \"docker\",\n\t\t\t\t\"org.label-schema.usage.singularity.deffile.from\": \"nipreps/fmriprep:25.2.5\",\n\t\t\t\t\"org.label-schema.vcs-ref\": \"8149bbef\",\n\t\t\t\t\"org.label-schema.vcs-url\": \"https://github.com/nipreps/fmriprep\",\n\t\t\t\t\"org.label-schema.version\": \"25.2.5\",\n\t\t\t\t\"org.opencontainers.image.ref.name\": \"ubuntu\",\n\t\t\t\t\"org.opencontainers.image.version\": \"22.04\"\n\t\t\t}\n\t\t}\n\t},\n\t\"type\": \"container\"\n}\n"
+    },
+    "packages": {
+      "returncode": 0,
+      "output": "{\"fmriprep\": \"25.2.5\", \"nipype\": \"1.10.0\", \"templateflow\": \"25.0.4\", \"numpy\": \"2.2.6\", \"nibabel\": \"5.3.2\"}\n"
+    },
+    "package_versions": {
+      "fmriprep": "25.2.5",
+      "nipype": "1.10.0",
+      "templateflow": "25.0.4",
+      "numpy": "2.2.6",
+      "nibabel": "5.3.2"
+    }
+  },
+  {
+    "path": "/ZPOOL/data/tools/fmriprep-warpkit-andrew.sif",
+    "exists": true,
+    "size": 2414731264,
+    "mtime_ns": 1778981577692363614,
+    "sha256": "3a0cb108fc6a6c46fb829b65190b1b8aca2bfb66ecb2601f2cb70f968069c3e4",
+    "labels": {
+      "returncode": 0,
+      "output": "{\n\t\"data\": {\n\t\t\"attributes\": {\n\t\t\t\"labels\": {\n\t\t\t\t\"org.label-schema.build-arch\": \"amd64\",\n\t\t\t\t\"org.label-schema.build-date\": \"Saturday_16_May_2026_21:32:45_EDT\",\n\t\t\t\t\"org.label-schema.description\": \"fMRIPrep - robust fMRI preprocessing tool\",\n\t\t\t\t\"org.label-schema.name\": \"fMRIPrep\",\n\t\t\t\t\"org.label-schema.schema-version\": \"1.0\",\n\t\t\t\t\"org.label-schema.url\": \"https://fmriprep.org\",\n\t\t\t\t\"org.label-schema.usage.apptainer.version\": \"1.5.0\",\n\t\t\t\t\"org.label-schema.usage.singularity.deffile.bootstrap\": \"docker-daemon\",\n\t\t\t\t\"org.label-schema.usage.singularity.deffile.from\": \"fmriprep-warpkit-andrew:latest\",\n\t\t\t\t\"org.label-schema.vcs-ref\": \"\",\n\t\t\t\t\"org.label-schema.vcs-url\": \"https://github.com/nipreps/fmriprep\",\n\t\t\t\t\"org.label-schema.version\": \"\",\n\t\t\t\t\"org.opencontainers.image.ref.name\": \"ubuntu\",\n\t\t\t\t\"org.opencontainers.image.version\": \"22.04\"\n\t\t\t}\n\t\t}\n\t},\n\t\"type\": \"container\"\n}\n"
+    },
+    "packages": {
+      "returncode": 0,
+      "output": "{\"fmriprep\": \"26.0.0.dev8083+g53d8fc759\", \"nipype\": \"1.10.0\", \"templateflow\": \"25.0.4\", \"numpy\": \"2.2.6\", \"nibabel\": \"5.3.2\"}\n"
+    },
+    "package_versions": {
+      "fmriprep": "26.0.0.dev8083+g53d8fc759",
+      "nipype": "1.10.0",
+      "templateflow": "25.0.4",
+      "numpy": "2.2.6",
+      "nibabel": "5.3.2"
+    }
+  },
+  {
+    "path": "/ZPOOL/data/tools/fmriprep-warpkit.sif",
+    "exists": true,
+    "size": 2414731264,
+    "mtime_ns": 1778467727792518565,
+    "sha256": "3a49acf6957b154db7006b1a21906876adb75ff2806f4ce7d0395fd85d2cfbe2",
+    "labels": {
+      "returncode": 0,
+      "output": "{\n\t\"data\": {\n\t\t\"attributes\": {\n\t\t\t\"labels\": {\n\t\t\t\t\"org.label-schema.build-arch\": \"amd64\",\n\t\t\t\t\"org.label-schema.build-date\": \"Sunday_10_May_2026_22:48:23_EDT\",\n\t\t\t\t\"org.label-schema.description\": \"fMRIPrep - robust fMRI preprocessing tool\",\n\t\t\t\t\"org.label-schema.name\": \"fMRIPrep\",\n\t\t\t\t\"org.label-schema.schema-version\": \"1.0\",\n\t\t\t\t\"org.label-schema.url\": \"https://fmriprep.org\",\n\t\t\t\t\"org.label-schema.usage.apptainer.version\": \"1.4.2\",\n\t\t\t\t\"org.label-schema.usage.singularity.deffile.bootstrap\": \"docker-daemon\",\n\t\t\t\t\"org.label-schema.usage.singularity.deffile.from\": \"fmriprep-warpkit:latest\",\n\t\t\t\t\"org.label-schema.vcs-ref\": \"\",\n\t\t\t\t\"org.label-schema.vcs-url\": \"https://github.com/nipreps/fmriprep\",\n\t\t\t\t\"org.label-schema.version\": \"\",\n\t\t\t\t\"org.opencontainers.image.ref.name\": \"ubuntu\",\n\t\t\t\t\"org.opencontainers.image.version\": \"22.04\"\n\t\t\t}\n\t\t}\n\t},\n\t\"type\": \"container\"\n}\n"
+    },
+    "packages": {
+      "returncode": 0,
+      "output": "{\"fmriprep\": \"26.0.0.dev8078+g4eb308f03\", \"nipype\": \"1.10.0\", \"templateflow\": \"25.0.4\", \"numpy\": \"2.2.6\", \"nibabel\": \"5.3.2\"}\n"
+    },
+    "package_versions": {
+      "fmriprep": "26.0.0.dev8078+g4eb308f03",
+      "nipype": "1.10.0",
+      "templateflow": "25.0.4",
+      "numpy": "2.2.6",
+      "nibabel": "5.3.2"
+    }
+  }
+]

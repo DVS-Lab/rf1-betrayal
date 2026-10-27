@@ -1,0 +1,122 @@
+[environment]
+cpu_count = 128
+exec_env = "singularity"
+free_mem = 109.7
+overcommit_policy = "heuristic"
+overcommit_limit = "50%"
+nipype_version = "1.8.6"
+templateflow_version = "24.2.0"
+version = "24.1.1"
+
+[execution]
+bids_dir = "/bids"
+bids_database_dir = "/scratch/20261026-205055_82673113-2774-4213-bf22-c08536e8c6e2/bids_db"
+bids_description_hash = "cebbba58753725dc994fc65c74be5585740493d33dd9ffcb5dd4275dda68fe84"
+boilerplate_only = false
+sloppy = false
+debug = []
+fmriprep_dir = "/rebuild/fmriprep-24"
+fs_license_file = "/opts/fs_license.txt"
+fs_subjects_dir = "/rebuild/fmriprep-24/sourcedata/freesurfer"
+layout = "BIDS Layout: .../bids | Subjects: 1 | Sessions: 1 | Runs: 2"
+log_dir = "/rebuild/fmriprep-24/logs"
+log_level = 25
+low_mem = false
+md_only_boilerplate = false
+notrack = false
+track_carbon = false
+country_code = "CAN"
+output_dir = "/rebuild/fmriprep-24"
+me_output_echos = true
+aggr_ses_reports = 4
+output_layout = "bids"
+output_spaces = "T1w MNI152NLin6Asym:res-native"
+reports_only = false
+run_uuid = "20261026-205055_82673113-2774-4213-bf22-c08536e8c6e2"
+participant_label = [ "10402",]
+task_id = "trust"
+templateflow_home = "/opt/templateflow"
+work_dir = "/scratch"
+write_graph = false
+
+[workflow]
+anat_only = false
+bold2anat_dof = 6
+bold2anat_init = "t1w"
+cifti_output = false
+fmap_bspline = false
+force_syn = false
+hires = true
+fs_no_resume = false
+ignore = []
+level = "full"
+longitudinal = false
+run_msmsulc = true
+medial_surface_nan = false
+project_goodvoxels = false
+regressors_all_comps = false
+regressors_dvars_th = 1.5
+regressors_fd_th = 0.5
+run_reconall = false
+skull_strip_fixed_seed = false
+skull_strip_template = "OASIS30ANTs"
+skull_strip_t1w = "force"
+slice_time_ref = 0.5
+spaces = "T1w MNI152NLin6Asym:res-native MNI152NLin2009cAsym"
+use_syn_sdc = false
+me_t2s_fit_method = "curvefit"
+
+[nipype]
+crashfile_format = "txt"
+get_linked_libs = false
+memory_gb = 28.0
+nprocs = 14
+omp_nthreads = 8
+plugin = "MultiProc"
+remove_unnecessary_outputs = true
+resource_monitor = false
+stop_on_first_crash = true
+
+[seeds]
+master = 21614
+ants = 61819
+numpy = 65005
+
+[execution.derivatives]
+
+[execution.dataset_links]
+raw = "/bids"
+templateflow = "/opt/templateflow"
+
+[nipype.plugin_args]
+maxtasksperchild = 1
+raise_insufficient = false
+
+[execution.bids_filters.t1w]
+datatype = "anat"
+session = "01"
+suffix = "T1w"
+
+[execution.bids_filters.t2w]
+datatype = "anat"
+session = "01"
+suffix = "T2w"
+
+[execution.bids_filters.fmap]
+datatype = "fmap"
+
+[execution.bids_filters.sbref]
+datatype = "func"
+session = "01"
+suffix = "sbref"
+part = [ "<Query.NONE: 1>", "mag",]
+task = "trust"
+run = [ "1", "2",]
+
+[execution.bids_filters.bold]
+datatype = "func"
+session = "01"
+suffix = "bold"
+part = [ "<Query.NONE: 1>", "mag",]
+task = "trust"
+run = [ "1", "2",]
