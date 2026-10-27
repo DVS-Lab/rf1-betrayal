@@ -212,6 +212,49 @@ exactly in a separate native-prewhitening fixture. Historical fixture input
 identities were unchanged in both tests. Real RF1 same-input agreement remains
 to be checked on linux2.
 
+### Focused Trust preprocessing and confound provenance check
+
+The user's linux2 UGR control subsequently reproduced all 34 maps, with zero
+task-contrast RMS/max differences under FSL 6.0.7.18 and unchanged historical
+inputs. This supports investigating earlier Trust processing or Trust-specific
+settings; it does not independently establish the historical Trust fMRIPrep
+minor version or every runtime option.
+
+`inspect_trust_preprocessing.py` reads only the recorded pilot runs and the
+known RF1 historical/rebuilt directories. It checks retained dataset/subject
+reports and execution TOMLs for fMRIPrep and tool versions, filters, multi-echo
+fit settings, anatomical/SDC settings and seeds. Dataset- or subject-level
+metadata is explicitly distinguished from conclusive original run provenance.
+The rerun container is verified as 24.1.1; the archived cluster script specifies
+24.1.1, but a directory name alone does not establish the original minor version.
+
+The check compares the frozen combined nuisance matrix with the historical
+and reconstructed FEAT `confoundevs.txt` and checks full model matrices. If the
+original `tedana-24` metrics and mixing files survive, it numerically verifies
+that the rejected-component timecourses form the saved matrix suffix in the
+archived generator's order. Missing source files are reported as unknown,
+rather than inferred component identity from an unlabeled matrix or its name.
+
+It also compares retained `example_func` and `mean_func` images, including a
+global-scale diagnostic, FSF settings, and normalized logged initialization,
+masking, smoothing, scaling and fitting commands. For the standard first-level
+initialization, `example_func` is the midpoint input frame before preprocessing;
+the actual extraction/reference settings and commands are reported to check
+that interpretation. `mean_func` is overwritten at the end of FEAT prestats.
+These 3D checkpoints can locate a discrepancy earlier than FILM, but matching a
+single frame would not establish full temporal equivalence.
+
+```bash
+"$INSULA_AUDIT_PYTHON" -u code/insula_ica/inspect_trust_preprocessing.py \
+  --rebuild-root /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41
+```
+
+The only new output is a timestamped JSON under that root's `diagnostics/`.
+Four evidence tests passed, plus a complete synthetic read-only inspection
+covering confound identity, missing TEDANA provenance, retained version
+differences and 3D checkpoints; all inspected source file identities remained
+unchanged. No additional preprocessing, fits, or production jobs are launched.
+
 ## Important residual-scale gate
 
 The installed FSL 6.0.7.19 source (`src/fsl-film/film_gls.cc`) prewhitens each
