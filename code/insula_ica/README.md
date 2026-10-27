@@ -268,6 +268,33 @@ covering confound identity, missing TEDANA provenance, retained version
 differences and 3D checkpoints; all inspected source file identities remained
 unchanged. No additional preprocessing, fits, or production jobs are launched.
 
+### Collect BOLD provenance into a GitHub record
+
+After the exact nuisance-matrix check, use `diagnose_bold_provenance.py` to
+investigate BOLD generation upstream of FEAT. It reads only the pilot subjects
+at their recorded historical/rebuilt paths and exact frozen raw/fieldmap inputs.
+It compares all saved workflow/environment/seed settings, retains methods and
+SDC summary reports, checks input drift since the rebuild snapshot, and compares
+the historical FEAT midpoint reference against available rebuilt combined/echo
+outputs on matching grids. It does not resample or run preprocessing. Different
+spaces are reported and skipped. Dataset/subject versions and candidate config
+differences are not automatically assigned to the original Trust run.
+
+```bash
+"$INSULA_AUDIT_PYTHON" -u code/insula_ica/diagnose_bold_provenance.py \
+  --rebuild-root /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41
+```
+
+Each invocation creates
+`code/insula_ica/records/linux2-bold-provenance-<UTC timestamp>-<token>/` with
+`report.md`, `evidence.json`, small provenance sources, the preceding full
+preprocessing diagnostic if present, and `SHA256SUMS`. A sibling `.tar.gz` is
+also written for transfer. The text record is ready to review and commit; the
+transfer archive is ignored. Images, full confound time series and participant
+tables are not packaged. The saved source manifest distinguishes unchanged
+TOML bytes from selected JSON metadata and extracted report text. Six checks,
+including an end-to-end synthetic archive and source-integrity check, passed.
+
 ## Important residual-scale gate
 
 The installed FSL 6.0.7.19 source (`src/fsl-film/film_gls.cc`) prewhitens each
