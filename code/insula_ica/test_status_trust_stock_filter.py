@@ -1,4 +1,7 @@
 import json
+import io
+import sys
+from contextlib import redirect_stdout
 from pathlib import Path
 import tempfile
 import unittest
@@ -44,6 +47,46 @@ class StatusTests(unittest.TestCase):
             processes,runners=s.process_table([2,999])
         self.assertEqual(runners,[1])
         self.assertEqual({p['pid'] for p in processes},{1,2})
+
+    def test_status_distinguishes_running_64_from_success_and_stale_state(self):
+        process=dict(pid=12,args='/env/bin/python -u code/insula_ica/resume_trust_stock_filter.py --jobs 64')
+        self.assertIn('jobs=64',s.resume_status({},[process],[12]))
+        self.assertIn('finished',s.resume_status(dict(state='functional_reruns_complete_qc_pending'),[],[]))
+        self.assertIn('not running',s.resume_status(dict(state='running'),[],[]))
+
+    def test_launcher_errors_select_latest_attempt_and_bound_output(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);old=root/'rf1-trust-stock-resume.old';new=root/'rf1-trust-stock-resume.new'
+            old.write_text('ValueError: earlier attempt\n')
+            new.write_text('ordinary progress\n'*1000+'ValueError: current attempt\n'*20)
+            import os
+            os.utime(old,(1,1));os.utime(new,(2,2))
+            log,errors=s.launcher_errors(root)
+            self.assertEqual(log,str(new));self.assertEqual(len(errors),8)
+            self.assertTrue(all('current attempt' in line for line in errors))
+
+    def test_brief_report_shows_64_worker_completion_without_process_or_log_dump(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);record=root/'code/insula_ica/records/linux2-trust-stock-filter-example-resume'
+            record.mkdir(parents=True);output=root/'outputs';case=output/'sub-1';case.mkdir(parents=True)
+            (case/'sub-1.fmriprep.log').write_text('fMRIPrep finished successfully!\n')
+            stats=case/'feat_reconstruction/run.feat/stats';stats.mkdir(parents=True)
+            (stats/'res4d.nii.gz').touch();(record/'qc').mkdir();(record/'qc/run.json').write_text('{}')
+            state=dict(state='functional_reruns_complete_qc_pending',jobs=64,selected_runs=1,output_root=str(output),
+                       subjects={'sub-1':dict(state='complete_qc_review_pending',fmriprep_reused=True,numerical_qc_reused=True)})
+            (record/'state.json').write_text(json.dumps(state))
+            machine=dict(logical_cpus_available=128,load_average=[0,0,0],memory={},vmstat='sample omitted from brief report')
+            captured=io.StringIO()
+            with patch.object(s,'ROOT',root),patch.object(sys,'argv',['status','--brief']), \
+                 patch.object(s,'process_table',return_value=([],[])),patch.object(s,'resources',return_value=machine), \
+                 patch.object(s,'launcher_errors',return_value=(None,[])),redirect_stdout(captured):
+                s.main()
+            report=captured.getvalue()
+            self.assertIn('Worker slots recorded: 64',report)
+            self.assertIn('finished; inputs ready for QC review',report)
+            self.assertIn('Finished FEAT + QC: 1',report)
+            self.assertNotIn('Busiest pipeline processes',report)
+            self.assertNotIn(machine['vmstat'],report)
 
 
 if __name__=='__main__':

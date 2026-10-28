@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Save a compact read-only snapshot of the live stock-filter rerun."""
 import argparse
-from collections import Counter
+from collections import Counter, deque
 from datetime import datetime, timezone
 import json
 import os
@@ -83,9 +83,38 @@ def resources():
     return dict(logical_cpus_available=affinity,load_average=list(os.getloadavg()),memory=memory,vmstat=sample)
 
 
+def launcher_errors(directory=Path('/tmp')):
+    logs=[p for p in directory.glob('rf1-trust-stock-resume.*') if p.is_file() and p.stat().st_uid==os.getuid()]
+    if not logs:
+        return None,[]
+    log=max(logs,key=lambda p:p.stat().st_mtime_ns)
+    hits=deque(maxlen=8)
+    with log.open(errors='replace') as stream:
+        for line in stream:
+            if re.search(r'Traceback|\bERROR:|\w*Error:|Git publication failed:',line):
+                hits.append(line.strip())
+    return str(log),list(hits)
+
+
+def resume_status(state,processes,runners):
+    live=[p for p in processes if p['pid'] in runners and
+          Path(p['args'].split()[0]).name.startswith('python') and
+          re.search(r'(?:^|\s)(?:\S*/)?resume_trust_stock_filter\.py(?:\s|$)',p['args'])]
+    if live:
+        details=[]
+        for p in live:
+            match=re.search(r'--jobs(?:=|\s+)(\d+)',p['args'])
+            details.append(f'PID {p["pid"]}, jobs={match[1] if match else state.get("jobs","unknown")}')
+        return 'running ('+'; '.join(details)+')'
+    if state.get('state')=='functional_reruns_complete_qc_pending':
+        return 'finished; inputs ready for QC review'
+    return 'not running; see recorded state/errors'
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--record',type=Path)
+    parser.add_argument('--brief',action='store_true',help='Show worker limit, completion counts and errors only')
     args=parser.parse_args()
     candidates=sorted(p for p in (ROOT/'code/insula_ica/records').glob('linux2-trust-stock-filter-*')
                       if (p/'state.json').is_file())
@@ -95,33 +124,48 @@ def main():
     state,root,counts,stages,errors=inventory(record)
     processes,runners=process_table(p['pid'] for p in state.get('inherited_processes',[]))
     machine=resources()
+    launcher,log_errors=launcher_errors()
+    submitter=resume_status(state,processes,runners)
     active=sorted(processes,key=lambda p:p['cpu'],reverse=True)
     stamp=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
     saved=ROOT/'code/insula_ica/output'/('trust-stock-filter-status-'+stamp)
     saved.mkdir(parents=True,exist_ok=False)
     snapshot=dict(record=str(record),output_root=str(root),state=state.get('state'),counts=counts,
-                  stages=stages,errors=errors,runner_pids=runners,processes=processes,resources=machine)
+                  stages=stages,errors=errors,runner_pids=runners,processes=processes,resources=machine,
+                  worker_slots=state.get('jobs'),resume_submitter=submitter,
+                  launcher_log=launcher,launcher_errors=log_errors)
     (saved/'snapshot.json').write_text(json.dumps(snapshot,indent=2)+'\n')
     lines=[f'Record: {record.name}',f'State: {state.get("state")}',
-           'Runner PID(s): '+(', '.join(map(str,runners)) or 'none'),
+           f'Worker slots recorded: {state.get("jobs", "not recorded yet")}',
+           'Resume submitter: '+submitter,
            f'Staged subjects: {counts["staged"]}/{counts["selected"]}',
            f'fMRIPrep successful: {counts.get("fmriprep_finished",0)}/{counts["selected"]}',
            f'FEAT started: {counts.get("feat_started",0)}; residuals present: {counts.get("residual_present",0)}',
            f'Finished FEAT + QC: {counts["completed_qc"]}; QC reports: {counts["qc_reports"]}; failed: {counts["failed"]}',
            'Residual presence alone does not establish FEAT/QC completion.',
            f'CPUs available: {machine["logical_cpus_available"]}; load averages: '+', '.join(f'{x:.1f}' for x in machine['load_average']),
-           'Memory GiB: '+json.dumps(machine['memory']),
-           '\nCPU/I/O sample (last row is the current one-second interval):',machine['vmstat'],
-           '\nBusiest pipeline processes (up to 12):']
-    for p in active[:12]:
-        command=p['args'].replace(str(root),'$OUTPUT')
-        lines.append(f'PID {p["pid"]} PPID {p["ppid"]} CPU {p["cpu"]}% MEM {p["mem_percent"]}% elapsed {p["elapsed"]} {p["status"]} | {command[:210]}')
-    if not active:
-        lines.append('No processes descended from the stock-filter runner found.')
+           'Memory GiB: '+json.dumps(machine['memory'])]
+    if args.brief:
+        lines=lines[:9]
+        reused=sum(p.get('fmriprep_reused') is True for p in state.get('subjects',{}).values())
+        reused_qc=sum(p.get('numerical_qc_reused') is True for p in state.get('subjects',{}).values())
+        lines.append(f'Completed cases reusing fMRIPrep: {reused}; reusing numerical QC: {reused_qc}')
+    else:
+        lines+=['\nCPU/I/O sample (last row is the current one-second interval):',machine['vmstat'],
+                '\nBusiest pipeline processes (up to 12):']
+        for p in active[:12]:
+            command=p['args'].replace(str(root),'$OUTPUT')
+            lines.append(f'PID {p["pid"]} PPID {p["ppid"]} CPU {p["cpu"]}% MEM {p["mem_percent"]}% elapsed {p["elapsed"]} {p["status"]} | {command[:210]}')
+        if not active:
+            lines.append('No processes descended from the stock-filter runner found.')
     lines.append('\nRecorded errors (up to 8):')
     lines.extend(f'{p["subject"]}: {p["error"]}' for p in errors[:8])
     if not errors:
         lines.append('None recorded.')
+    if launcher:
+        lines.append('Latest resume launcher: '+launcher)
+        lines.append('Launcher/publication error lines (up to 8):')
+        lines.extend(log_errors or ['None found.'])
     waiting=[s for s in stages if s['fmriprep_finished'] and not s['feat_started']]
     lines.append('Successful fMRIPrep awaiting FEAT: '+str(len(waiting)))
     lines.append('Full snapshot saved: '+str(saved/'snapshot.json'))
