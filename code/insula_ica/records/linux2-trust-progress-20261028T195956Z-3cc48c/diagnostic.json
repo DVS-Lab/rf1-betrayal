@@ -1,0 +1,998 @@
+{
+  "source_record": "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/records/linux2-trust-stock-filter-20261028T165853Z-314305",
+  "output_root": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305",
+  "counts": {
+    "selected": 108,
+    "staged": 96,
+    "fmriprep_finished": 96,
+    "feat_started": 96,
+    "residual_present": 88,
+    "completed_qc": 0,
+    "failed": 88,
+    "qc_reports": 88
+  },
+  "stages": [
+    {
+      "subject": "sub-10402",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10478",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10581",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10584",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10589",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10596",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10606",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10640",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10642",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10647",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10656",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10661",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10663",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10673",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10674",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10677",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10685",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10700",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10701",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10718",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10720",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10723",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10748",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10767",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10781",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10783",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10794",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10800",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10801",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10802",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10804",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10817",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10831",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10843",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10850",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10854",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10860",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10863",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10875",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10896",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10918",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10919",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10924",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10930",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10956",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10961",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10966",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10969",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10984",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10998",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11007",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11016",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11021",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11030",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11031",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11036",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11039",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11042",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11053",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11060",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11063",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11065",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11066",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11068",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11072",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11074",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11113",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11139",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11227",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11238",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11246",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11301",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11311",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11316",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11318",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11321",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11325",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11326",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11329",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11330",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11337",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11338",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11345",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11348",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11358",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11364",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11387",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11430",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11433",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": false
+    },
+    {
+      "subject": "sub-11435",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": false
+    },
+    {
+      "subject": "sub-11451",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": false
+    },
+    {
+      "subject": "sub-11492",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": false
+    },
+    {
+      "subject": "sub-11517",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": false
+    },
+    {
+      "subject": "sub-11518",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": false
+    },
+    {
+      "subject": "sub-11523",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": false
+    },
+    {
+      "subject": "sub-11526",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": false
+    }
+  ],
+  "errors": [
+    {
+      "subject": "sub-10478",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10596",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10402",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10581",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10606",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10589",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10640",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10584",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10656",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10642",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10663",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10661",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10674",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10647",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10673",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10677",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10700",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10701",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10718",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10685",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10720",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10723",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10748",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10767",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10781",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10783",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10794",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10800",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10801",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10804",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10802",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10817",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10843",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10831",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10854",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10860",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10850",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10863",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10875",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10896",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10918",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10919",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10924",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10930",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10966",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10956",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10961",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10969",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10984",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11007",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11030",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11016",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11021",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10998",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11031",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11036",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11039",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11042",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11060",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11066",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11065",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11053",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11068",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11063",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11072",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11113",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11074",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11139",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11238",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11227",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11301",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11246",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11311",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11318",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11321",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11325",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11316",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11326",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11329",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11330",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11337",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11348",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11358",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11345",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11338",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11364",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11430",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11387",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    }
+  ],
+  "reference_evidence": [
+    {
+      "subject": "sub-10478",
+      "log": {
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-10478/sub-10478.fmriprep.log",
+        "total_lines": 1797,
+        "matching_lines": 15,
+        "retained_lines": 25
+      },
+      "sidecars": [
+        "sub-10478_ses-01_task-trust_run-2_part-mag_desc-coreg_boldref.json",
+        "sub-10478_ses-01_task-trust_run-2_part-mag_desc-hmc_boldref.json",
+        "sub-10478_ses-01_task-trust_run-2_part-mag_space-MNI152NLin6Asym_boldref.json",
+        "sub-10478_ses-01_task-trust_run-2_part-mag_space-T1w_boldref.json"
+      ],
+      "sbrefs": 16
+    },
+    {
+      "subject": "sub-10596",
+      "log": {
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-10596/sub-10596.fmriprep.log",
+        "total_lines": 1798,
+        "matching_lines": 15,
+        "retained_lines": 25
+      },
+      "sidecars": [
+        "sub-10596_ses-01_task-trust_run-2_part-mag_desc-coreg_boldref.json",
+        "sub-10596_ses-01_task-trust_run-2_part-mag_desc-hmc_boldref.json",
+        "sub-10596_ses-01_task-trust_run-2_part-mag_space-MNI152NLin6Asym_boldref.json",
+        "sub-10596_ses-01_task-trust_run-2_part-mag_space-T1w_boldref.json"
+      ],
+      "sbrefs": 16
+    },
+    {
+      "subject": "sub-10402",
+      "log": {
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-10402/sub-10402.fmriprep.log",
+        "total_lines": 1765,
+        "matching_lines": 15,
+        "retained_lines": 25
+      },
+      "sidecars": [
+        "sub-10402_ses-01_task-trust_run-2_part-mag_desc-coreg_boldref.json",
+        "sub-10402_ses-01_task-trust_run-2_part-mag_desc-hmc_boldref.json",
+        "sub-10402_ses-01_task-trust_run-2_part-mag_space-MNI152NLin6Asym_boldref.json",
+        "sub-10402_ses-01_task-trust_run-2_part-mag_space-T1w_boldref.json"
+      ],
+      "sbrefs": 16
+    }
+  ],
+  "analysis_jobs_changed": false,
+  "analysis_rerun": false
+}

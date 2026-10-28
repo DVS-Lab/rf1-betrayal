@@ -1,0 +1,545 @@
+{
+  "resources": {
+    "logical_cpus_available": 128,
+    "load_average": [
+      23.3623046875,
+      22.20458984375,
+      27.8818359375
+    ],
+    "memory": {
+      "MemTotal_GiB": 251.5,
+      "MemAvailable_GiB": 76.7,
+      "SwapTotal_GiB": 136.0,
+      "SwapFree_GiB": 132.4
+    },
+    "vmstat": "procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------\n r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st gu\n 8  0 3818188 78801136  23520 3651540  297  500 14096  8644 9384    0  4  0 96  0  0  0\n 8  0 3818188 77926728  23520 3651812    0    0     0     0 10273  443  6  0 94  0  0  0"
+  },
+  "processes": [
+    {
+      "pid": 2051531,
+      "ppid": 1,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "03:01:04",
+      "status": "S",
+      "args": "bash -c      trap 'rm -f \"$INSULA_LOCK/pid\" \"$INSULA_LOCK/log\"; rmdir \"$INSULA_LOCK\"' EXIT     printf \"%s\\n\" \"$$\" > \"$INSULA_LOCK/pid\"     \"$INSULA_PYTHON\" -u code/insula_ica/rerun_trust_references.py --publish "
+    },
+    {
+      "pid": 2051532,
+      "ppid": 2051531,
+      "cpu": 8.1,
+      "mem_percent": 0.1,
+      "elapsed": "03:01:04",
+      "status": "Sl",
+      "args": "/ZPOOL/data/tools/anaconda/tug87422/envs/tedana-26.0.3/bin/python -u code/insula_ica/rerun_trust_references.py --publish"
+    },
+    {
+      "pid": 4168647,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:56",
+      "status": "S",
+      "args": "bash /usr/local/fsl/share/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11433/feat_reconstruction/sub-11433_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4168648,
+      "ppid": 4168647,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:56",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11433/feat_reconstruction/sub-11433_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4168654,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:56",
+      "status": "S",
+      "args": "bash /usr/local/fsl/share/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11435/feat_reconstruction/sub-11435_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4168655,
+      "ppid": 4168654,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:56",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11435/feat_reconstruction/sub-11435_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4170133,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:50",
+      "status": "S",
+      "args": "bash /usr/local/fsl/share/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11518/feat_reconstruction/sub-11518_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4170134,
+      "ppid": 4170133,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:50",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11518/feat_reconstruction/sub-11518_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4170216,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:48",
+      "status": "S",
+      "args": "bash /usr/local/fsl/share/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11517/feat_reconstruction/sub-11517_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4170217,
+      "ppid": 4170216,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:48",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11517/feat_reconstruction/sub-11517_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4172140,
+      "ppid": 4168648,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:43",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4169627  /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11433/feat_reconstruction/sub-11433_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11433/feat_reconstruction/sub-11433_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4172141,
+      "ppid": 4172140,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:43",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/python3.12 /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4169627 /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11433/feat_reconstruction/sub-11433_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11433/feat_reconstruction/sub-11433_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4172142,
+      "ppid": 4172141,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:43",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11433/feat_reconstruction/sub-11433_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11433/feat_reconstruction/sub-11433_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4172448,
+      "ppid": 4168655,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:43",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4169830  /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11435/feat_reconstruction/sub-11435_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11435/feat_reconstruction/sub-11435_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4172449,
+      "ppid": 4172448,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:43",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/python3.12 /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4169830 /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11435/feat_reconstruction/sub-11435_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11435/feat_reconstruction/sub-11435_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4172454,
+      "ppid": 4172449,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:42",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11435/feat_reconstruction/sub-11435_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11435/feat_reconstruction/sub-11435_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4174412,
+      "ppid": 4170134,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:33",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4171484  /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11518/feat_reconstruction/sub-11518_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11518/feat_reconstruction/sub-11518_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4174413,
+      "ppid": 4174412,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:33",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/python3.12 /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4171484 /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11518/feat_reconstruction/sub-11518_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11518/feat_reconstruction/sub-11518_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4174414,
+      "ppid": 4174413,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:33",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11518/feat_reconstruction/sub-11518_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11518/feat_reconstruction/sub-11518_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4174427,
+      "ppid": 4170217,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:33",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4171776  /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11517/feat_reconstruction/sub-11517_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11517/feat_reconstruction/sub-11517_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4174428,
+      "ppid": 4174427,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:33",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/python3.12 /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4171776 /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11517/feat_reconstruction/sub-11517_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11517/feat_reconstruction/sub-11517_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4174430,
+      "ppid": 4174428,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:33",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11517/feat_reconstruction/sub-11517_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11517/feat_reconstruction/sub-11517_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4176297,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:26",
+      "status": "S",
+      "args": "bash /usr/local/fsl/share/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11492/feat_reconstruction/sub-11492_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4176298,
+      "ppid": 4176297,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:26",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11492/feat_reconstruction/sub-11492_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4178494,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:15",
+      "status": "S",
+      "args": "bash /usr/local/fsl/share/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11451/feat_reconstruction/sub-11451_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4178495,
+      "ppid": 4178494,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:15",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11451/feat_reconstruction/sub-11451_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4179733,
+      "ppid": 4176298,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:12",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4176833  /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11492/feat_reconstruction/sub-11492_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11492/feat_reconstruction/sub-11492_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4179734,
+      "ppid": 4179733,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:12",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/python3.12 /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4176833 /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11492/feat_reconstruction/sub-11492_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11492/feat_reconstruction/sub-11492_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4179743,
+      "ppid": 4179734,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:12",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11492/feat_reconstruction/sub-11492_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11492/feat_reconstruction/sub-11492_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4181783,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:04",
+      "status": "S",
+      "args": "bash /usr/local/fsl/share/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11523/feat_reconstruction/sub-11523_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4181784,
+      "ppid": 4181783,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:04",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11523/feat_reconstruction/sub-11523_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4182716,
+      "ppid": 4178495,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:01",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4179267  /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11451/feat_reconstruction/sub-11451_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11451/feat_reconstruction/sub-11451_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4182717,
+      "ppid": 4182716,
+      "cpu": 0.1,
+      "mem_percent": 0.0,
+      "elapsed": "01:01",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/python3.12 /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4179267 /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11451/feat_reconstruction/sub-11451_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11451/feat_reconstruction/sub-11451_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4182718,
+      "ppid": 4182717,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:01",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11451/feat_reconstruction/sub-11451_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11451/feat_reconstruction/sub-11451_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4184911,
+      "ppid": 4181784,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:49",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4183054  /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11523/feat_reconstruction/sub-11523_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11523/feat_reconstruction/sub-11523_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4184912,
+      "ppid": 4184911,
+      "cpu": 0.1,
+      "mem_percent": 0.0,
+      "elapsed": "00:49",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/python3.12 /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4183054 /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11523/feat_reconstruction/sub-11523_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11523/feat_reconstruction/sub-11523_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4185059,
+      "ppid": 4184912,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:49",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11523/feat_reconstruction/sub-11523_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11523/feat_reconstruction/sub-11523_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4186765,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:37",
+      "status": "S",
+      "args": "bash /usr/local/fsl/share/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11526/feat_reconstruction/sub-11526_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4186767,
+      "ppid": 4186765,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:37",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11526/feat_reconstruction/sub-11526_ses-01_task-trust_run-2.fsf"
+    },
+    {
+      "pid": 4187827,
+      "ppid": 4179743,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:34",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/susan prefiltered_func_data_thresh 5150.6956785 2.1231422505307855 3 1 1 mean_func 5150.6956785 prefiltered_func_data_smooth"
+    },
+    {
+      "pid": 4187828,
+      "ppid": 4187827,
+      "cpu": 135.0,
+      "mem_percent": 0.2,
+      "elapsed": "00:34",
+      "status": "Rl",
+      "args": "/usr/local/fsl/bin/susan prefiltered_func_data_thresh 5150.6956785 2.1231422505307855 3 1 1 mean_func 5150.6956785 prefiltered_func_data_smooth"
+    },
+    {
+      "pid": 4188751,
+      "ppid": 4182718,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:24",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/susan prefiltered_func_data_thresh 6343.835449499999 2.1231422505307855 3 1 1 mean_func 6343.835449499999 prefiltered_func_data_smooth"
+    },
+    {
+      "pid": 4188752,
+      "ppid": 4188751,
+      "cpu": 149.0,
+      "mem_percent": 0.2,
+      "elapsed": "00:24",
+      "status": "Rl",
+      "args": "/usr/local/fsl/bin/susan prefiltered_func_data_thresh 6343.835449499999 2.1231422505307855 3 1 1 mean_func 6343.835449499999 prefiltered_func_data_smooth"
+    },
+    {
+      "pid": 4188889,
+      "ppid": 4186767,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:23",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4187377  /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11526/feat_reconstruction/sub-11526_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11526/feat_reconstruction/sub-11526_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4188890,
+      "ppid": 4188889,
+      "cpu": 0.2,
+      "mem_percent": 0.0,
+      "elapsed": "00:23",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/python3.12 /usr/local/fsl/bin/fsl_sub -T 28 -l logs -N feat2_pre -j 4187377 /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11526/feat_reconstruction/sub-11526_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11526/feat_reconstruction/sub-11526_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4188891,
+      "ppid": 4188890,
+      "cpu": 0.1,
+      "mem_percent": 0.0,
+      "elapsed": "00:23",
+      "status": "S",
+      "args": "/usr/local/fsl/bin/tclsh /usr/local/fsl/bin/feat /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11526/feat_reconstruction/sub-11526_ses-01_task-trust_run-2.feat/design.fsf -D /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11526/feat_reconstruction/sub-11526_ses-01_task-trust_run-2.feat -I 1 -prestats"
+    },
+    {
+      "pid": 4190414,
+      "ppid": 4185059,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:12",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/susan prefiltered_func_data_thresh 5096.8963619999995 2.1231422505307855 3 1 1 mean_func 5096.8963619999995 prefiltered_func_data_smooth"
+    },
+    {
+      "pid": 4190416,
+      "ppid": 4190414,
+      "cpu": 199.0,
+      "mem_percent": 0.2,
+      "elapsed": "00:12",
+      "status": "Rl",
+      "args": "/usr/local/fsl/bin/susan prefiltered_func_data_thresh 5096.8963619999995 2.1231422505307855 3 1 1 mean_func 5096.8963619999995 prefiltered_func_data_smooth"
+    },
+    {
+      "pid": 4191394,
+      "ppid": 4172142,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:05",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/fslmaths prefiltered_func_data_intnorm filtered_func_data"
+    },
+    {
+      "pid": 4191395,
+      "ppid": 4191394,
+      "cpu": 330.0,
+      "mem_percent": 0.1,
+      "elapsed": "00:05",
+      "status": "Rl",
+      "args": "/usr/local/fsl/bin/fslmaths prefiltered_func_data_intnorm filtered_func_data"
+    },
+    {
+      "pid": 4191529,
+      "ppid": 4172454,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:04",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/fslmaths prefiltered_func_data_intnorm filtered_func_data"
+    },
+    {
+      "pid": 4191530,
+      "ppid": 4191529,
+      "cpu": 362.0,
+      "mem_percent": 0.1,
+      "elapsed": "00:04",
+      "status": "Rl",
+      "args": "/usr/local/fsl/bin/fslmaths prefiltered_func_data_intnorm filtered_func_data"
+    },
+    {
+      "pid": 4191902,
+      "ppid": 4174414,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:02",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/fslmaths prefiltered_func_data_smooth -mul 1.4606877086120225 prefiltered_func_data_intnorm"
+    },
+    {
+      "pid": 4191903,
+      "ppid": 4191902,
+      "cpu": 607.0,
+      "mem_percent": 0.1,
+      "elapsed": "00:02",
+      "status": "Rl",
+      "args": "/usr/local/fsl/bin/fslmaths prefiltered_func_data_smooth -mul 1.4606877086120225 prefiltered_func_data_intnorm"
+    },
+    {
+      "pid": 4192037,
+      "ppid": 4188891,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:02",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/fslstats prefiltered_func_data -k mask -p 50"
+    },
+    {
+      "pid": 4192038,
+      "ppid": 4192037,
+      "cpu": 705.0,
+      "mem_percent": 0.2,
+      "elapsed": "00:02",
+      "status": "Rl",
+      "args": "/usr/local/fsl/bin/fslstats prefiltered_func_data -k mask -p 50"
+    },
+    {
+      "pid": 4192179,
+      "ppid": 4174430,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:01",
+      "status": "S",
+      "args": "sh -c /usr/local/fsl/bin/fslmaths prefiltered_func_data_smooth -mul 1.3163019626903645 prefiltered_func_data_intnorm"
+    },
+    {
+      "pid": 4192180,
+      "ppid": 4192179,
+      "cpu": 1002.0,
+      "mem_percent": 0.1,
+      "elapsed": "00:01",
+      "status": "Rl",
+      "args": "/usr/local/fsl/bin/fslmaths prefiltered_func_data_smooth -mul 1.3163019626903645 prefiltered_func_data_intnorm"
+    }
+  ],
+  "runner_pids": [
+    2051531,
+    2051532
+  ]
+}

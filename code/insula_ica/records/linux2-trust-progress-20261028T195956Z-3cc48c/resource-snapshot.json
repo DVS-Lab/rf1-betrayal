@@ -1,0 +1,2426 @@
+{
+  "record": "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/records/linux2-trust-stock-filter-20261028T165853Z-314305",
+  "output_root": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305",
+  "state": "running",
+  "counts": {
+    "selected": 108,
+    "staged": 96,
+    "fmriprep_finished": 88,
+    "feat_started": 88,
+    "residual_present": 88,
+    "completed_qc": 0,
+    "failed": 88,
+    "qc_reports": 88
+  },
+  "stages": [
+    {
+      "subject": "sub-10402",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10478",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10581",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10584",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10589",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10596",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10606",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10640",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10642",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10647",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10656",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10661",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10663",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10673",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10674",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10677",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10685",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10700",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10701",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10718",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10720",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10723",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10748",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10767",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10781",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10783",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10794",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10800",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10801",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10802",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10804",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10817",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10831",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10843",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10850",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10854",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10860",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10863",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10875",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10896",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10918",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10919",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10924",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10930",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10956",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10961",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10966",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10969",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10984",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-10998",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11007",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11016",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11021",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11030",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11031",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11036",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11039",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11042",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11053",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11060",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11063",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11065",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11066",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11068",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11072",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11074",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11113",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11139",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11227",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11238",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11246",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11301",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11311",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11316",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11318",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11321",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11325",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11326",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11329",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11330",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11337",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11338",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11345",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11348",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11358",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11364",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11387",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11430",
+      "fmriprep_finished": true,
+      "feat_started": true,
+      "residual_present": true
+    },
+    {
+      "subject": "sub-11433",
+      "fmriprep_finished": false,
+      "feat_started": false,
+      "residual_present": false
+    },
+    {
+      "subject": "sub-11435",
+      "fmriprep_finished": false,
+      "feat_started": false,
+      "residual_present": false
+    },
+    {
+      "subject": "sub-11451",
+      "fmriprep_finished": false,
+      "feat_started": false,
+      "residual_present": false
+    },
+    {
+      "subject": "sub-11492",
+      "fmriprep_finished": false,
+      "feat_started": false,
+      "residual_present": false
+    },
+    {
+      "subject": "sub-11517",
+      "fmriprep_finished": false,
+      "feat_started": false,
+      "residual_present": false
+    },
+    {
+      "subject": "sub-11518",
+      "fmriprep_finished": false,
+      "feat_started": false,
+      "residual_present": false
+    },
+    {
+      "subject": "sub-11523",
+      "fmriprep_finished": false,
+      "feat_started": false,
+      "residual_present": false
+    },
+    {
+      "subject": "sub-11526",
+      "fmriprep_finished": false,
+      "feat_started": false,
+      "residual_present": false
+    }
+  ],
+  "errors": [
+    {
+      "subject": "sub-10478",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10596",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10402",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10581",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10606",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10589",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10640",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10584",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10656",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10642",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10663",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10661",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10674",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10647",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10673",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10677",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10700",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10701",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10718",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10685",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10720",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10723",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10748",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10767",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10781",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10783",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10794",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10800",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10801",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10804",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10802",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10817",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10843",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10831",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10854",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10860",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10850",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10863",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10875",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10896",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10918",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10919",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10924",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10930",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10966",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10956",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10961",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10969",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10984",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11007",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11030",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11016",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11021",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-10998",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11031",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11036",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11039",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11042",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11060",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11066",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11065",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11053",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11068",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11063",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11072",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11113",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11074",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11139",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11238",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11227",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11301",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11246",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11311",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11318",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11321",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11325",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11316",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11326",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11329",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11330",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11337",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11348",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11358",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11345",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11338",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11364",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11430",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    },
+    {
+      "subject": "sub-11387",
+      "error": "Stock reference selection not established from actual run log: unknown_no_retained_log_evidence"
+    }
+  ],
+  "runner_pids": [
+    2051531,
+    2051532
+  ],
+  "processes": [
+    {
+      "pid": 2051531,
+      "ppid": 1,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "02:55:17",
+      "status": "S",
+      "args": "bash -c      trap 'rm -f \"$INSULA_LOCK/pid\" \"$INSULA_LOCK/log\"; rmdir \"$INSULA_LOCK\"' EXIT     printf \"%s\\n\" \"$$\" > \"$INSULA_LOCK/pid\"     \"$INSULA_PYTHON\" -u code/insula_ica/rerun_trust_references.py --publish "
+    },
+    {
+      "pid": 2051532,
+      "ppid": 2051531,
+      "cpu": 8.3,
+      "mem_percent": 0.1,
+      "elapsed": "02:55:17",
+      "status": "Sl",
+      "args": "/ZPOOL/data/tools/anaconda/tug87422/envs/tedana-26.0.3/bin/python -u code/insula_ica/rerun_trust_references.py --publish"
+    },
+    {
+      "pid": 4033199,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "06:01",
+      "status": "Ssl",
+      "args": "Apptainer runtime parent: fmriprep-24.1.1.simg"
+    },
+    {
+      "pid": 4033246,
+      "ppid": 4033199,
+      "cpu": 39.7,
+      "mem_percent": 0.1,
+      "elapsed": "06:01",
+      "status": "Sl",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 /opt/conda/envs/fmriprep/bin/fmriprep /bids /rebuild/fmriprep-24 participant --participant-label 11433 --task-id trust --stop-on-first-crash --skip-bids-validation --nthreads 14 --omp-nthreads 8 --mem-mb 28000 --me-output-echos --output-spaces T1w MNI152NLin6Asym --bids-filter-file /rebuild/fmriprep_config.json --derivatives anatomy=/rebuild/anatomy-cache --fs-no-reconall --fs-license-file /opts/fs_license.txt --notrack -w /scratch"
+    },
+    {
+      "pid": 4033261,
+      "ppid": 4033199,
+      "cpu": 1.6,
+      "mem_percent": 0.0,
+      "elapsed": "06:01",
+      "status": "Sl",
+      "args": "/usr/libexec/apptainer/bin/squashfuse_ll -f -o allow_other,ro,uid=1696788330,gid=56600513,offset=40960 /proc/self/fd/3 /var/lib/apptainer/mnt/session/rootfs"
+    },
+    {
+      "pid": 4045553,
+      "ppid": 4033246,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "05:53",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.resource_tracker import main;main(7)"
+    },
+    {
+      "pid": 4045554,
+      "ppid": 4033246,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "05:53",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4113018,
+      "ppid": 4045554,
+      "cpu": 2.6,
+      "mem_percent": 0.1,
+      "elapsed": "05:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4113029,
+      "ppid": 4045554,
+      "cpu": 1.6,
+      "mem_percent": 0.0,
+      "elapsed": "05:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4113030,
+      "ppid": 4045554,
+      "cpu": 1.6,
+      "mem_percent": 0.1,
+      "elapsed": "05:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4113031,
+      "ppid": 4045554,
+      "cpu": 2.4,
+      "mem_percent": 0.1,
+      "elapsed": "05:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4113032,
+      "ppid": 4045554,
+      "cpu": 1.7,
+      "mem_percent": 0.1,
+      "elapsed": "05:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4113033,
+      "ppid": 4045554,
+      "cpu": 21.5,
+      "mem_percent": 0.2,
+      "elapsed": "05:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4113034,
+      "ppid": 4045554,
+      "cpu": 6.5,
+      "mem_percent": 0.1,
+      "elapsed": "05:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4113035,
+      "ppid": 4045554,
+      "cpu": 14.6,
+      "mem_percent": 0.1,
+      "elapsed": "05:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4113036,
+      "ppid": 4045554,
+      "cpu": 4.4,
+      "mem_percent": 0.1,
+      "elapsed": "05:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4113037,
+      "ppid": 4045554,
+      "cpu": 1.5,
+      "mem_percent": 0.0,
+      "elapsed": "05:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4113038,
+      "ppid": 4045554,
+      "cpu": 17.9,
+      "mem_percent": 0.1,
+      "elapsed": "05:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4113039,
+      "ppid": 4045554,
+      "cpu": 1.3,
+      "mem_percent": 0.0,
+      "elapsed": "05:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4113040,
+      "ppid": 4045554,
+      "cpu": 18.2,
+      "mem_percent": 0.2,
+      "elapsed": "05:17",
+      "status": "R",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4113041,
+      "ppid": 4045554,
+      "cpu": 4.1,
+      "mem_percent": 0.1,
+      "elapsed": "05:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4115184,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "05:10",
+      "status": "Ssl",
+      "args": "Apptainer runtime parent: fmriprep-24.1.1.simg"
+    },
+    {
+      "pid": 4115232,
+      "ppid": 4115184,
+      "cpu": 36.9,
+      "mem_percent": 0.2,
+      "elapsed": "05:10",
+      "status": "Rl",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 /opt/conda/envs/fmriprep/bin/fmriprep /bids /rebuild/fmriprep-24 participant --participant-label 11435 --task-id trust --stop-on-first-crash --skip-bids-validation --nthreads 14 --omp-nthreads 8 --mem-mb 28000 --me-output-echos --output-spaces T1w MNI152NLin6Asym --bids-filter-file /rebuild/fmriprep_config.json --derivatives anatomy=/rebuild/anatomy-cache --fs-no-reconall --fs-license-file /opts/fs_license.txt --notrack -w /scratch"
+    },
+    {
+      "pid": 4115278,
+      "ppid": 4115184,
+      "cpu": 2.0,
+      "mem_percent": 0.0,
+      "elapsed": "05:10",
+      "status": "Sl",
+      "args": "/usr/libexec/apptainer/bin/squashfuse_ll -f -o allow_other,ro,uid=1696788330,gid=56600513,offset=40960 /proc/self/fd/3 /var/lib/apptainer/mnt/session/rootfs"
+    },
+    {
+      "pid": 4117344,
+      "ppid": 4115232,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "05:03",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.resource_tracker import main;main(7)"
+    },
+    {
+      "pid": 4117347,
+      "ppid": 4115232,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "05:03",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4117834,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "05:02",
+      "status": "Ssl",
+      "args": "Apptainer runtime parent: fmriprep-24.1.1.simg"
+    },
+    {
+      "pid": 4117887,
+      "ppid": 4117834,
+      "cpu": 37.0,
+      "mem_percent": 0.2,
+      "elapsed": "05:02",
+      "status": "Rl",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 /opt/conda/envs/fmriprep/bin/fmriprep /bids /rebuild/fmriprep-24 participant --participant-label 11451 --task-id trust --stop-on-first-crash --skip-bids-validation --nthreads 14 --omp-nthreads 8 --mem-mb 28000 --me-output-echos --output-spaces T1w MNI152NLin6Asym --bids-filter-file /rebuild/fmriprep_config.json --derivatives anatomy=/rebuild/anatomy-cache --fs-no-reconall --fs-license-file /opts/fs_license.txt --notrack -w /scratch"
+    },
+    {
+      "pid": 4117902,
+      "ppid": 4117834,
+      "cpu": 2.0,
+      "mem_percent": 0.0,
+      "elapsed": "05:02",
+      "status": "Sl",
+      "args": "/usr/libexec/apptainer/bin/squashfuse_ll -f -o allow_other,ro,uid=1696788330,gid=56600513,offset=40960 /proc/self/fd/3 /var/lib/apptainer/mnt/session/rootfs"
+    },
+    {
+      "pid": 4117935,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "05:00",
+      "status": "Ssl",
+      "args": "Apptainer runtime parent: fmriprep-24.1.1.simg"
+    },
+    {
+      "pid": 4117983,
+      "ppid": 4117935,
+      "cpu": 34.4,
+      "mem_percent": 0.2,
+      "elapsed": "05:00",
+      "status": "Rl",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 /opt/conda/envs/fmriprep/bin/fmriprep /bids /rebuild/fmriprep-24 participant --participant-label 11492 --task-id trust --stop-on-first-crash --skip-bids-validation --nthreads 14 --omp-nthreads 8 --mem-mb 28000 --me-output-echos --output-spaces T1w MNI152NLin6Asym --bids-filter-file /rebuild/fmriprep_config.json --derivatives anatomy=/rebuild/anatomy-cache --fs-no-reconall --fs-license-file /opts/fs_license.txt --notrack -w /scratch"
+    },
+    {
+      "pid": 4118028,
+      "ppid": 4117935,
+      "cpu": 2.0,
+      "mem_percent": 0.0,
+      "elapsed": "05:00",
+      "status": "Sl",
+      "args": "/usr/libexec/apptainer/bin/squashfuse_ll -f -o allow_other,ro,uid=1696788330,gid=56600513,offset=40960 /proc/self/fd/3 /var/lib/apptainer/mnt/session/rootfs"
+    },
+    {
+      "pid": 4118415,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:53",
+      "status": "Ssl",
+      "args": "Apptainer runtime parent: fmriprep-24.1.1.simg"
+    },
+    {
+      "pid": 4118464,
+      "ppid": 4118415,
+      "cpu": 35.2,
+      "mem_percent": 0.2,
+      "elapsed": "04:53",
+      "status": "Rl",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 /opt/conda/envs/fmriprep/bin/fmriprep /bids /rebuild/fmriprep-24 participant --participant-label 11517 --task-id trust --stop-on-first-crash --skip-bids-validation --nthreads 14 --omp-nthreads 8 --mem-mb 28000 --me-output-echos --output-spaces T1w MNI152NLin6Asym --bids-filter-file /rebuild/fmriprep_config.json --derivatives anatomy=/rebuild/anatomy-cache --fs-no-reconall --fs-license-file /opts/fs_license.txt --notrack -w /scratch"
+    },
+    {
+      "pid": 4118522,
+      "ppid": 4118415,
+      "cpu": 2.3,
+      "mem_percent": 0.0,
+      "elapsed": "04:53",
+      "status": "Sl",
+      "args": "/usr/libexec/apptainer/bin/squashfuse_ll -f -o allow_other,ro,uid=1696788330,gid=56600513,offset=40960 /proc/self/fd/3 /var/lib/apptainer/mnt/session/rootfs"
+    },
+    {
+      "pid": 4119333,
+      "ppid": 4117887,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:52",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.resource_tracker import main;main(7)"
+    },
+    {
+      "pid": 4119334,
+      "ppid": 4117887,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:52",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4124032,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:49",
+      "status": "Ssl",
+      "args": "Apptainer runtime parent: fmriprep-24.1.1.simg"
+    },
+    {
+      "pid": 4124212,
+      "ppid": 4124032,
+      "cpu": 33.6,
+      "mem_percent": 0.2,
+      "elapsed": "04:49",
+      "status": "Rl",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 /opt/conda/envs/fmriprep/bin/fmriprep /bids /rebuild/fmriprep-24 participant --participant-label 11518 --task-id trust --stop-on-first-crash --skip-bids-validation --nthreads 14 --omp-nthreads 8 --mem-mb 28000 --me-output-echos --output-spaces T1w MNI152NLin6Asym --bids-filter-file /rebuild/fmriprep_config.json --derivatives anatomy=/rebuild/anatomy-cache --fs-no-reconall --fs-license-file /opts/fs_license.txt --notrack -w /scratch"
+    },
+    {
+      "pid": 4124256,
+      "ppid": 4124032,
+      "cpu": 2.2,
+      "mem_percent": 0.0,
+      "elapsed": "04:49",
+      "status": "Sl",
+      "args": "/usr/libexec/apptainer/bin/squashfuse_ll -f -o allow_other,ro,uid=1696788330,gid=56600513,offset=40960 /proc/self/fd/3 /var/lib/apptainer/mnt/session/rootfs"
+    },
+    {
+      "pid": 4124444,
+      "ppid": 4117983,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:48",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.resource_tracker import main;main(7)"
+    },
+    {
+      "pid": 4124445,
+      "ppid": 4117983,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:48",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4130256,
+      "ppid": 4118464,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.resource_tracker import main;main(7)"
+    },
+    {
+      "pid": 4130275,
+      "ppid": 4118464,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4147482,
+      "ppid": 4124212,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:35",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.resource_tracker import main;main(7)"
+    },
+    {
+      "pid": 4147494,
+      "ppid": 4124212,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:35",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4149881,
+      "ppid": 4117347,
+      "cpu": 1.7,
+      "mem_percent": 0.0,
+      "elapsed": "04:32",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4150019,
+      "ppid": 4117347,
+      "cpu": 7.0,
+      "mem_percent": 0.1,
+      "elapsed": "04:31",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4150020,
+      "ppid": 4117347,
+      "cpu": 16.5,
+      "mem_percent": 0.1,
+      "elapsed": "04:31",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4150021,
+      "ppid": 4117347,
+      "cpu": 34.9,
+      "mem_percent": 0.2,
+      "elapsed": "04:31",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4150177,
+      "ppid": 4117347,
+      "cpu": 2.0,
+      "mem_percent": 0.1,
+      "elapsed": "04:31",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4150178,
+      "ppid": 4117347,
+      "cpu": 2.4,
+      "mem_percent": 0.1,
+      "elapsed": "04:31",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4150179,
+      "ppid": 4117347,
+      "cpu": 2.0,
+      "mem_percent": 0.1,
+      "elapsed": "04:31",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4150180,
+      "ppid": 4117347,
+      "cpu": 5.8,
+      "mem_percent": 0.1,
+      "elapsed": "04:31",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4150181,
+      "ppid": 4117347,
+      "cpu": 7.4,
+      "mem_percent": 0.1,
+      "elapsed": "04:31",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4150182,
+      "ppid": 4117347,
+      "cpu": 5.0,
+      "mem_percent": 0.1,
+      "elapsed": "04:31",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4150183,
+      "ppid": 4117347,
+      "cpu": 2.1,
+      "mem_percent": 0.0,
+      "elapsed": "04:31",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4150184,
+      "ppid": 4117347,
+      "cpu": 24.8,
+      "mem_percent": 0.2,
+      "elapsed": "04:31",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4150185,
+      "ppid": 4117347,
+      "cpu": 1.3,
+      "mem_percent": 0.0,
+      "elapsed": "04:31",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4150186,
+      "ppid": 4117347,
+      "cpu": 2.1,
+      "mem_percent": 0.1,
+      "elapsed": "04:31",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151684,
+      "ppid": 4119334,
+      "cpu": 22.9,
+      "mem_percent": 0.2,
+      "elapsed": "04:20",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151688,
+      "ppid": 4119334,
+      "cpu": 2.6,
+      "mem_percent": 0.1,
+      "elapsed": "04:20",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151689,
+      "ppid": 4119334,
+      "cpu": 2.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:20",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151690,
+      "ppid": 4119334,
+      "cpu": 2.1,
+      "mem_percent": 0.0,
+      "elapsed": "04:20",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151724,
+      "ppid": 4119334,
+      "cpu": 15.7,
+      "mem_percent": 0.1,
+      "elapsed": "04:20",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151725,
+      "ppid": 4119334,
+      "cpu": 2.4,
+      "mem_percent": 0.0,
+      "elapsed": "04:20",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151726,
+      "ppid": 4119334,
+      "cpu": 2.4,
+      "mem_percent": 0.1,
+      "elapsed": "04:20",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151727,
+      "ppid": 4119334,
+      "cpu": 26.5,
+      "mem_percent": 0.2,
+      "elapsed": "04:20",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151728,
+      "ppid": 4119334,
+      "cpu": 3.3,
+      "mem_percent": 0.0,
+      "elapsed": "04:20",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151729,
+      "ppid": 4119334,
+      "cpu": 2.4,
+      "mem_percent": 0.1,
+      "elapsed": "04:20",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151730,
+      "ppid": 4119334,
+      "cpu": 10.5,
+      "mem_percent": 0.1,
+      "elapsed": "04:20",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151731,
+      "ppid": 4119334,
+      "cpu": 2.2,
+      "mem_percent": 0.1,
+      "elapsed": "04:20",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151732,
+      "ppid": 4119334,
+      "cpu": 24.3,
+      "mem_percent": 0.1,
+      "elapsed": "04:20",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151733,
+      "ppid": 4119334,
+      "cpu": 5.5,
+      "mem_percent": 0.1,
+      "elapsed": "04:20",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151853,
+      "ppid": 4124445,
+      "cpu": 1.7,
+      "mem_percent": 0.0,
+      "elapsed": "04:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151866,
+      "ppid": 4124445,
+      "cpu": 16.0,
+      "mem_percent": 0.1,
+      "elapsed": "04:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151867,
+      "ppid": 4124445,
+      "cpu": 5.8,
+      "mem_percent": 0.1,
+      "elapsed": "04:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151868,
+      "ppid": 4124445,
+      "cpu": 2.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151891,
+      "ppid": 4124445,
+      "cpu": 21.5,
+      "mem_percent": 0.2,
+      "elapsed": "04:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151892,
+      "ppid": 4124445,
+      "cpu": 2.6,
+      "mem_percent": 0.1,
+      "elapsed": "04:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151893,
+      "ppid": 4124445,
+      "cpu": 2.1,
+      "mem_percent": 0.0,
+      "elapsed": "04:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151894,
+      "ppid": 4124445,
+      "cpu": 2.4,
+      "mem_percent": 0.1,
+      "elapsed": "04:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151895,
+      "ppid": 4124445,
+      "cpu": 2.1,
+      "mem_percent": 0.1,
+      "elapsed": "04:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151896,
+      "ppid": 4124445,
+      "cpu": 23.2,
+      "mem_percent": 0.1,
+      "elapsed": "04:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151897,
+      "ppid": 4124445,
+      "cpu": 3.3,
+      "mem_percent": 0.1,
+      "elapsed": "04:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151898,
+      "ppid": 4124445,
+      "cpu": 10.4,
+      "mem_percent": 0.1,
+      "elapsed": "04:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151899,
+      "ppid": 4124445,
+      "cpu": 2.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151900,
+      "ppid": 4124445,
+      "cpu": 26.7,
+      "mem_percent": 0.2,
+      "elapsed": "04:17",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4151995,
+      "ppid": 4130275,
+      "cpu": 18.1,
+      "mem_percent": 0.1,
+      "elapsed": "04:15",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4152029,
+      "ppid": 4130275,
+      "cpu": 9.0,
+      "mem_percent": 0.1,
+      "elapsed": "04:14",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4152030,
+      "ppid": 4130275,
+      "cpu": 7.3,
+      "mem_percent": 0.1,
+      "elapsed": "04:14",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4152031,
+      "ppid": 4130275,
+      "cpu": 4.0,
+      "mem_percent": 0.1,
+      "elapsed": "04:14",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4152037,
+      "ppid": 4130275,
+      "cpu": 17.8,
+      "mem_percent": 0.1,
+      "elapsed": "04:14",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4152038,
+      "ppid": 4130275,
+      "cpu": 2.5,
+      "mem_percent": 0.0,
+      "elapsed": "04:14",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4152039,
+      "ppid": 4130275,
+      "cpu": 24.2,
+      "mem_percent": 0.2,
+      "elapsed": "04:14",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4152041,
+      "ppid": 4130275,
+      "cpu": 2.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:14",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4152042,
+      "ppid": 4130275,
+      "cpu": 1.9,
+      "mem_percent": 0.0,
+      "elapsed": "04:14",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4152043,
+      "ppid": 4130275,
+      "cpu": 10.4,
+      "mem_percent": 0.1,
+      "elapsed": "04:14",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4152044,
+      "ppid": 4130275,
+      "cpu": 26.4,
+      "mem_percent": 0.2,
+      "elapsed": "04:14",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4152045,
+      "ppid": 4130275,
+      "cpu": 1.9,
+      "mem_percent": 0.0,
+      "elapsed": "04:14",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4152046,
+      "ppid": 4130275,
+      "cpu": 3.0,
+      "mem_percent": 0.1,
+      "elapsed": "04:14",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4152047,
+      "ppid": 4130275,
+      "cpu": 2.3,
+      "mem_percent": 0.1,
+      "elapsed": "04:14",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4152118,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:13",
+      "status": "Ssl",
+      "args": "Apptainer runtime parent: fmriprep-24.1.1.simg"
+    },
+    {
+      "pid": 4152165,
+      "ppid": 4152118,
+      "cpu": 16.4,
+      "mem_percent": 0.1,
+      "elapsed": "04:13",
+      "status": "Rl",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 /opt/conda/envs/fmriprep/bin/fmriprep /bids /rebuild/fmriprep-24 participant --participant-label 11523 --task-id trust --stop-on-first-crash --skip-bids-validation --nthreads 14 --omp-nthreads 8 --mem-mb 28000 --me-output-echos --output-spaces T1w MNI152NLin6Asym --bids-filter-file /rebuild/fmriprep_config.json --derivatives anatomy=/rebuild/anatomy-cache --fs-no-reconall --fs-license-file /opts/fs_license.txt --notrack -w /scratch"
+    },
+    {
+      "pid": 4152179,
+      "ppid": 4152118,
+      "cpu": 2.5,
+      "mem_percent": 0.0,
+      "elapsed": "04:13",
+      "status": "Sl",
+      "args": "/usr/libexec/apptainer/bin/squashfuse_ll -f -o allow_other,ro,uid=1696788330,gid=56600513,offset=40960 /proc/self/fd/3 /var/lib/apptainer/mnt/session/rootfs"
+    },
+    {
+      "pid": 4153599,
+      "ppid": 4147494,
+      "cpu": 2.0,
+      "mem_percent": 0.0,
+      "elapsed": "04:07",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4153642,
+      "ppid": 4147494,
+      "cpu": 5.2,
+      "mem_percent": 0.1,
+      "elapsed": "04:07",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4153643,
+      "ppid": 4147494,
+      "cpu": 22.9,
+      "mem_percent": 0.2,
+      "elapsed": "04:07",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4153644,
+      "ppid": 4147494,
+      "cpu": 8.6,
+      "mem_percent": 0.1,
+      "elapsed": "04:07",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4153664,
+      "ppid": 4147494,
+      "cpu": 2.4,
+      "mem_percent": 0.1,
+      "elapsed": "04:06",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4153665,
+      "ppid": 4147494,
+      "cpu": 2.6,
+      "mem_percent": 0.1,
+      "elapsed": "04:06",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4153666,
+      "ppid": 4147494,
+      "cpu": 18.3,
+      "mem_percent": 0.1,
+      "elapsed": "04:06",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4153667,
+      "ppid": 4147494,
+      "cpu": 1.4,
+      "mem_percent": 0.0,
+      "elapsed": "04:06",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4153668,
+      "ppid": 4147494,
+      "cpu": 2.2,
+      "mem_percent": 0.1,
+      "elapsed": "04:06",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4153669,
+      "ppid": 4147494,
+      "cpu": 2.5,
+      "mem_percent": 0.1,
+      "elapsed": "04:06",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4153670,
+      "ppid": 4147494,
+      "cpu": 22.1,
+      "mem_percent": 0.2,
+      "elapsed": "04:06",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4153671,
+      "ppid": 4147494,
+      "cpu": 19.9,
+      "mem_percent": 0.2,
+      "elapsed": "04:06",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4153672,
+      "ppid": 4147494,
+      "cpu": 10.8,
+      "mem_percent": 0.1,
+      "elapsed": "04:06",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4153673,
+      "ppid": 4147494,
+      "cpu": 2.6,
+      "mem_percent": 0.0,
+      "elapsed": "04:06",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4154874,
+      "ppid": 2051532,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "03:43",
+      "status": "Ssl",
+      "args": "Apptainer runtime parent: fmriprep-24.1.1.simg"
+    },
+    {
+      "pid": 4154953,
+      "ppid": 4154874,
+      "cpu": 12.1,
+      "mem_percent": 0.1,
+      "elapsed": "03:43",
+      "status": "Sl",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 /opt/conda/envs/fmriprep/bin/fmriprep /bids /rebuild/fmriprep-24 participant --participant-label 11526 --task-id trust --stop-on-first-crash --skip-bids-validation --nthreads 14 --omp-nthreads 8 --mem-mb 28000 --me-output-echos --output-spaces T1w MNI152NLin6Asym --bids-filter-file /rebuild/fmriprep_config.json --derivatives anatomy=/rebuild/anatomy-cache --fs-no-reconall --fs-license-file /opts/fs_license.txt --notrack -w /scratch"
+    },
+    {
+      "pid": 4154967,
+      "ppid": 4154874,
+      "cpu": 2.7,
+      "mem_percent": 0.0,
+      "elapsed": "03:43",
+      "status": "Sl",
+      "args": "/usr/libexec/apptainer/bin/squashfuse_ll -f -o allow_other,ro,uid=1696788330,gid=56600513,offset=40960 /proc/self/fd/3 /var/lib/apptainer/mnt/session/rootfs"
+    },
+    {
+      "pid": 4154994,
+      "ppid": 4152165,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "03:40",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.resource_tracker import main;main(7)"
+    },
+    {
+      "pid": 4154995,
+      "ppid": 4152165,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "03:40",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4155739,
+      "ppid": 4154953,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "03:13",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.resource_tracker import main;main(7)"
+    },
+    {
+      "pid": 4155740,
+      "ppid": 4154953,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "03:13",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4155975,
+      "ppid": 4154995,
+      "cpu": 3.0,
+      "mem_percent": 0.0,
+      "elapsed": "03:09",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4155993,
+      "ppid": 4154995,
+      "cpu": 4.2,
+      "mem_percent": 0.1,
+      "elapsed": "03:09",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4155994,
+      "ppid": 4154995,
+      "cpu": 9.4,
+      "mem_percent": 0.1,
+      "elapsed": "03:09",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4155995,
+      "ppid": 4154995,
+      "cpu": 21.3,
+      "mem_percent": 0.1,
+      "elapsed": "03:09",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4156014,
+      "ppid": 4154995,
+      "cpu": 9.6,
+      "mem_percent": 0.1,
+      "elapsed": "03:09",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4156015,
+      "ppid": 4154995,
+      "cpu": 25.8,
+      "mem_percent": 0.2,
+      "elapsed": "03:09",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4156016,
+      "ppid": 4154995,
+      "cpu": 21.5,
+      "mem_percent": 0.1,
+      "elapsed": "03:09",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4156017,
+      "ppid": 4154995,
+      "cpu": 7.8,
+      "mem_percent": 0.1,
+      "elapsed": "03:09",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4156018,
+      "ppid": 4154995,
+      "cpu": 2.3,
+      "mem_percent": 0.0,
+      "elapsed": "03:09",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4156019,
+      "ppid": 4154995,
+      "cpu": 21.6,
+      "mem_percent": 0.1,
+      "elapsed": "03:09",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4156020,
+      "ppid": 4154995,
+      "cpu": 15.5,
+      "mem_percent": 0.1,
+      "elapsed": "03:09",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4156021,
+      "ppid": 4154995,
+      "cpu": 2.6,
+      "mem_percent": 0.0,
+      "elapsed": "03:09",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4156022,
+      "ppid": 4154995,
+      "cpu": 9.3,
+      "mem_percent": 0.1,
+      "elapsed": "03:09",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4156023,
+      "ppid": 4154995,
+      "cpu": 3.6,
+      "mem_percent": 0.1,
+      "elapsed": "03:09",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4157402,
+      "ppid": 4155740,
+      "cpu": 3.2,
+      "mem_percent": 0.1,
+      "elapsed": "02:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4157425,
+      "ppid": 4155740,
+      "cpu": 24.4,
+      "mem_percent": 0.1,
+      "elapsed": "02:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4157426,
+      "ppid": 4155740,
+      "cpu": 3.1,
+      "mem_percent": 0.1,
+      "elapsed": "02:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4157427,
+      "ppid": 4155740,
+      "cpu": 12.2,
+      "mem_percent": 0.1,
+      "elapsed": "02:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4157429,
+      "ppid": 4155740,
+      "cpu": 24.5,
+      "mem_percent": 0.1,
+      "elapsed": "02:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4157430,
+      "ppid": 4155740,
+      "cpu": 10.1,
+      "mem_percent": 0.1,
+      "elapsed": "02:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4157431,
+      "ppid": 4155740,
+      "cpu": 3.5,
+      "mem_percent": 0.1,
+      "elapsed": "02:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4157432,
+      "ppid": 4155740,
+      "cpu": 3.5,
+      "mem_percent": 0.1,
+      "elapsed": "02:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4157433,
+      "ppid": 4155740,
+      "cpu": 3.8,
+      "mem_percent": 0.1,
+      "elapsed": "02:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4157434,
+      "ppid": 4155740,
+      "cpu": 8.1,
+      "mem_percent": 0.1,
+      "elapsed": "02:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4157435,
+      "ppid": 4155740,
+      "cpu": 34.3,
+      "mem_percent": 0.1,
+      "elapsed": "02:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4157436,
+      "ppid": 4155740,
+      "cpu": 3.0,
+      "mem_percent": 0.0,
+      "elapsed": "02:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4157437,
+      "ppid": 4155740,
+      "cpu": 15.3,
+      "mem_percent": 0.1,
+      "elapsed": "02:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4157438,
+      "ppid": 4155740,
+      "cpu": 28.5,
+      "mem_percent": 0.2,
+      "elapsed": "02:45",
+      "status": "S",
+      "args": "/opt/conda/envs/fmriprep/bin/python3.11 -s -c from multiprocessing.forkserver import main; main(7, 9, ['__main__'], **{'sys_path': ['/opt/conda/envs/fmriprep/bin', '/opt/conda/envs/fmriprep/lib/python311.zip', '/opt/conda/envs/fmriprep/lib/python3.11', '/opt/conda/envs/fmriprep/lib/python3.11/lib-dynload', '/opt/conda/envs/fmriprep/lib/python3.11/site-packages']})"
+    },
+    {
+      "pid": 4159146,
+      "ppid": 4156018,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:59",
+      "status": "S",
+      "args": "/bin/sh -c 3dUnifize -clfrac 0.2 -rbt 18.3 65.0 90.0 -prefix uni.nii.gz -T2 -input /scratch/fmriprep_24_1_wf/sub_11523_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/unifize/sub-11523_ses-01_task-trust_run-2_echo-1_sbref_corrected_brain_masked.nii.gz"
+    },
+    {
+      "pid": 4159147,
+      "ppid": 4159146,
+      "cpu": 99.9,
+      "mem_percent": 0.0,
+      "elapsed": "01:59",
+      "status": "R",
+      "args": "3dUnifize -clfrac 0.2 -rbt 18.3 65.0 90.0 -prefix uni.nii.gz -T2 -input /scratch/fmriprep_24_1_wf/sub_11523_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/unifize/sub-11523_ses-01_task-trust_run-2_echo-1_sbref_corrected_brain_masked.nii.gz"
+    },
+    {
+      "pid": 4160349,
+      "ppid": 4157432,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:33",
+      "status": "S",
+      "args": "/bin/sh -c 3dUnifize -clfrac 0.2 -rbt 18.3 65.0 90.0 -prefix uni.nii.gz -T2 -input /scratch/fmriprep_24_1_wf/sub_11526_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/unifize/sub-11526_ses-01_task-trust_run-2_echo-1_sbref_corrected_brain_masked.nii.gz"
+    },
+    {
+      "pid": 4160350,
+      "ppid": 4160349,
+      "cpu": 100.0,
+      "mem_percent": 0.0,
+      "elapsed": "01:33",
+      "status": "R",
+      "args": "3dUnifize -clfrac 0.2 -rbt 18.3 65.0 90.0 -prefix uni.nii.gz -T2 -input /scratch/fmriprep_24_1_wf/sub_11526_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/unifize/sub-11526_ses-01_task-trust_run-2_echo-1_sbref_corrected_brain_masked.nii.gz"
+    },
+    {
+      "pid": 4164006,
+      "ppid": 4113032,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:01",
+      "status": "S",
+      "args": "/bin/sh -c antsApplyTransforms -u int --default-value 0 --dimensionality 3 --float 0 --input /opt/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_desc-carpet_dseg.nii.gz --interpolation MultiLabel --output tpl-MNI152NLin2009cAsym_res-01_desc-carpet_dseg_trans.nii.gz --reference-image /rebuild/fmriprep-24/sub-11433/ses-01/func/sub-11433_ses-01_task-trust_run-2_part-mag_desc-brain_mask.nii.gz --transform [ /rebuild/fmriprep-24/sub-11433/ses-01/func/sub-11433_ses-01_task-trust_run-2_from-boldref_to-T1w_mode-image_desc-coreg_xfm.txt, 1 ] --transform /rebuild/anatomy-cache/sub-11433/ses-01/anat/sub-11433_ses-01_from-MNI152NLin2009cAsym_to-T1w_mode-image_xfm.h5"
+    },
+    {
+      "pid": 4164007,
+      "ppid": 4113041,
+      "cpu": 0.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:01",
+      "status": "S",
+      "args": "/bin/sh -c antsApplyTransforms --default-value 0 --float 0 --input /rebuild/fmriprep-24/sub-11433/ses-01/func/sub-11433_ses-01_task-trust_run-2_part-mag_desc-brain_mask.nii.gz --interpolation MultiLabel --output sub-11433_ses-01_task-trust_run-2_part-mag_desc-brain_mask_trans.nii.gz --reference-image /scratch/fmriprep_24_1_wf/sub_11433_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_std_wf/_in_tuple_MNI152NLin6Asym.resnative/gen_ref/tpl-MNI152NLin6Asym_res-01_T1w_reference.nii.gz --transform /rebuild/anatomy-cache/sub-11433/ses-01/anat/sub-11433_ses-01_from-T1w_to-MNI152NLin6Asym_mode-image_xfm.h5 --transform /rebuild/fmriprep-24/sub-11433/ses-01/func/sub-11433_ses-01_task-trust_run-2_from-boldref_to-T1w_mode-image_desc-coreg_xfm.txt"
+    },
+    {
+      "pid": 4164010,
+      "ppid": 4164006,
+      "cpu": 99.4,
+      "mem_percent": 0.1,
+      "elapsed": "00:01",
+      "status": "Rl",
+      "args": "antsApplyTransforms -u int --default-value 0 --dimensionality 3 --float 0 --input /opt/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_desc-carpet_dseg.nii.gz --interpolation MultiLabel --output tpl-MNI152NLin2009cAsym_res-01_desc-carpet_dseg_trans.nii.gz --reference-image /rebuild/fmriprep-24/sub-11433/ses-01/func/sub-11433_ses-01_task-trust_run-2_part-mag_desc-brain_mask.nii.gz --transform [ /rebuild/fmriprep-24/sub-11433/ses-01/func/sub-11433_ses-01_task-trust_run-2_from-boldref_to-T1w_mode-image_desc-coreg_xfm.txt, 1 ] --transform /rebuild/anatomy-cache/sub-11433/ses-01/anat/sub-11433_ses-01_from-MNI152NLin2009cAsym_to-T1w_mode-image_xfm.h5"
+    },
+    {
+      "pid": 4164011,
+      "ppid": 4164007,
+      "cpu": 104.0,
+      "mem_percent": 0.0,
+      "elapsed": "00:01",
+      "status": "Rl",
+      "args": "antsApplyTransforms --default-value 0 --float 0 --input /rebuild/fmriprep-24/sub-11433/ses-01/func/sub-11433_ses-01_task-trust_run-2_part-mag_desc-brain_mask.nii.gz --interpolation MultiLabel --output sub-11433_ses-01_task-trust_run-2_part-mag_desc-brain_mask_trans.nii.gz --reference-image /scratch/fmriprep_24_1_wf/sub_11433_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_std_wf/_in_tuple_MNI152NLin6Asym.resnative/gen_ref/tpl-MNI152NLin6Asym_res-01_T1w_reference.nii.gz --transform /rebuild/anatomy-cache/sub-11433/ses-01/anat/sub-11433_ses-01_from-T1w_to-MNI152NLin6Asym_mode-image_xfm.h5 --transform /rebuild/fmriprep-24/sub-11433/ses-01/func/sub-11433_ses-01_task-trust_run-2_from-boldref_to-T1w_mode-image_desc-coreg_xfm.txt"
+    }
+  ],
+  "resources": {
+    "logical_cpus_available": 128,
+    "load_average": [
+      21.0908203125,
+      36.2666015625,
+      34.0
+    ],
+    "memory": {
+      "MemTotal_GiB": 251.5,
+      "MemAvailable_GiB": 47.9,
+      "SwapTotal_GiB": 136.0,
+      "SwapFree_GiB": 132.4
+    },
+    "vmstat": "procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------\n r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st gu\n10  0 3759868 44884104  21432 7347136  297  499 14096  8639 9383    0  4  0 96  0  0  0\n 9  1 3759868 46206872  21440 7358792   12    0    20 327080 38439 46627  8  1 91  1  0  0"
+  }
+}
