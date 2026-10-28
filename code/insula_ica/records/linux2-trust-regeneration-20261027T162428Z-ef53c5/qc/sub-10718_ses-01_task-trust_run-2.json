@@ -1,0 +1,145 @@
+{
+  "key": "sub-10718_ses-01_task-trust_run-2",
+  "confounds": {
+    "shape": [
+      280,
+      31
+    ],
+    "exact_numeric_equality": true,
+    "saved_sha256": "4cbb4563929b35c885d0246555ddce88210346dba33d4b15c3b14100db52c955"
+  },
+  "coverage": {
+    "left": {
+      "total_voxels": 391,
+      "retained_voxels": 391,
+      "retained_fraction": 1.0
+    },
+    "right": {
+      "total_voxels": 427,
+      "retained_voxels": 427,
+      "retained_fraction": 1.0
+    },
+    "bilateral": {
+      "total_voxels": 818,
+      "retained_voxels": 818,
+      "retained_fraction": 1.0
+    }
+  },
+  "atlas_label": 2,
+  "atlas_counts": {
+    "left": {
+      "native_voxels": 1160,
+      "grid_voxels": 391
+    },
+    "right": {
+      "native_voxels": 1181,
+      "grid_voxels": 427
+    },
+    "bilateral": {
+      "native_voxels": 2341,
+      "grid_voxels": 818
+    }
+  },
+  "historical_frame": {
+    "reference": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10718/ses-01/L1_task-trust_model-01_type-act_run-2_sm-5.feat/example_func.nii.gz",
+    "bold": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10718/ses-01/func/sub-10718_ses-01_task-trust_run-2_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+    "frame_index": 140,
+    "same_grid": true,
+    "reference_geometry": {
+      "shape": [
+        57,
+        70,
+        54
+      ],
+      "zooms": [
+        2.700000047683716,
+        2.700000047683716,
+        2.9700000286102295
+      ],
+      "affine": [
+        [
+          2.700000047683716,
+          0.0,
+          0.0,
+          -74.80000305175781
+        ],
+        [
+          0.0,
+          2.700000047683716,
+          0.0,
+          -109.80000305175781
+        ],
+        [
+          0.0,
+          0.0,
+          2.9700000286102295,
+          -72.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "stored_dtype": "float32"
+    },
+    "bold_geometry": {
+      "shape": [
+        57,
+        70,
+        54,
+        280
+      ],
+      "zooms": [
+        2.700000047683716,
+        2.700000047683716,
+        2.9700000286102295,
+        1.6150000095367432
+      ],
+      "affine": [
+        [
+          2.700000047683716,
+          0.0,
+          0.0,
+          -74.80000305175781
+        ],
+        [
+          0.0,
+          2.700000047683716,
+          0.0,
+          -109.80000305175781
+        ],
+        [
+          0.0,
+          0.0,
+          2.9700000286102295,
+          -72.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "stored_dtype": "float32"
+    },
+    "voxels": 104138,
+    "spatial_r": 0.9783631332011357,
+    "relative_rms_difference": 0.095662766541397,
+    "max_absolute_difference": 7862.6544189453125,
+    "global_scale": 0.9953861437992588,
+    "relative_rms_after_global_scale": 0.09555143763080022
+  },
+  "historical_statistics_matched": 0,
+  "historical_statistics_compared": 36,
+  "finite_nonconstant_residuals": true,
+  "constant_mask_voxels": 10889,
+  "review_flags": [],
+  "review_note": "Review flags request visual inspection; they do not exclude runs or stop cohort preprocessing.",
+  "fmriprep_report": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10718.html",
+  "residual": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/feat_reconstruction/sub-10718_ses-01_task-trust_run-2.feat/stats/res4d.nii.gz",
+  "filtered_data": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/feat_reconstruction/sub-10718_ses-01_task-trust_run-2.feat/filtered_func_data.nii.gz",
+  "residual_scale": "native FILM voxelwise-prewhitened; scale decision remains separate from this input preparation"
+}
