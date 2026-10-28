@@ -28,6 +28,10 @@ from run_bold_controls import save, publish
 ROOT=original.core.ROOT
 
 
+def validate_worker_limits(jobs,fmriprep_jobs):
+    original.core.require(1<=fmriprep_jobs<=jobs<=64,'Require 1 <= fmriprep jobs <= total jobs <= 64')
+
+
 def processes():
     """Linux process identity includes start ticks, so reused PIDs are distinct."""
     result={}
@@ -323,12 +327,12 @@ def run(args,record,state):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--record',required=True,type=Path)
-    parser.add_argument('--jobs',type=int,default=16)
+    parser.add_argument('--jobs',type=int,default=64)
     parser.add_argument('--fmriprep-jobs',type=int,default=2)
     parser.add_argument('--publish',action='store_true')
     args=parser.parse_args()
     original.core.require(Path('/proc/self/stat').is_file(),'Linux process inspection is required')
-    original.core.require(1<=args.fmriprep_jobs<=args.jobs<=32,'Invalid worker limits')
+    validate_worker_limits(args.jobs,args.fmriprep_jobs)
     stamp=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'-'+uuid.uuid4().hex[:6]+'-resume'
     record=ROOT/'code/insula_ica/records'/('linux2-trust-stock-filter-'+stamp);record.mkdir()
     state=dict(state='preflight',subjects={},started_utc=datetime.now(timezone.utc).isoformat(),

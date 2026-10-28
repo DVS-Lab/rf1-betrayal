@@ -16,6 +16,13 @@ from diagnose_trust_registration import sbref_selection
 
 
 class ResumeTests(unittest.TestCase):
+    def test_worker_limits_allow_32_and_64_and_reject_invalid_limits(self):
+        for jobs in (16,32,64):
+            r.validate_worker_limits(jobs,2)
+        for jobs,preprocessing in ((0,2),(65,2),(64,0),(32,33)):
+            with self.assertRaises(ValueError):
+                r.validate_worker_limits(jobs,preprocessing)
+
     def test_handoff_signals_only_scheduler_and_retains_running_feat(self):
         with tempfile.TemporaryDirectory() as directory,ExitStack() as p:
             root=Path(directory);record=root/'record';record.mkdir();output=root/'output'
