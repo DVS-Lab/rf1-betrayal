@@ -1,0 +1,356 @@
+{
+  "key": "sub-10930_ses-01_task-ugr_run-1",
+  "native_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/ugr_film/sub-10930_ses-01_task-ugr_run-1.feat",
+  "native_recovered_by_film": true,
+  "native_residual_identity": {
+    "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/ugr_film/sub-10930_ses-01_task-ugr_run-1.feat/stats/res4d.nii.gz",
+    "size": 83193224,
+    "mtime_ns": 1793226061204255427,
+    "sha256": null
+  },
+  "source_identities": [
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/filtered_func_data.nii.gz",
+      "size": 91069275,
+      "mtime_ns": 1771270144763997843,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/design.mat",
+      "size": 133893,
+      "mtime_ns": 1771270149078061337,
+      "sha256": "14e35c15040d7a68305b4142ad64a91090f6341a1102d53d1c9297fd65011954"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/design.con",
+      "size": 10153,
+      "mtime_ns": 1771270149079061352,
+      "sha256": "2e32a582fecda091c71a9ba1754ff4d9e7659b9f793a5984e11c581ca6d5b759"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/mask.nii.gz",
+      "size": 8570,
+      "mtime_ns": 1771270036280401667,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/mean_func.nii.gz",
+      "size": 369651,
+      "mtime_ns": 1771270147662040496,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/sigmasquareds.nii.gz",
+      "size": 332945,
+      "mtime_ns": 1771270346745971875,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/dof",
+      "size": 6,
+      "mtime_ns": 1771270346747971904,
+      "sha256": "2165e7a0e6aae20b9c6f1f01c40b6b55a33c9ccd71cf43a36e007e1a7356cac8"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/confoundevs.txt",
+      "size": 106163,
+      "mtime_ns": 1771270148514053036,
+      "sha256": "df203537a9a394aedbab44554c7470daefc81fee536820261542d90134508e36"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/confoundevs.txt",
+      "size": 106163,
+      "mtime_ns": 1771270148514053036,
+      "sha256": "df203537a9a394aedbab44554c7470daefc81fee536820261542d90134508e36"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe1.nii.gz",
+      "size": 347542,
+      "mtime_ns": 1771270343346921807,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe2.nii.gz",
+      "size": 347021,
+      "mtime_ns": 1771270343368922131,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe3.nii.gz",
+      "size": 347402,
+      "mtime_ns": 1771270343390922455,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe4.nii.gz",
+      "size": 347676,
+      "mtime_ns": 1771270343412922780,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe5.nii.gz",
+      "size": 347450,
+      "mtime_ns": 1771270343434923104,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe6.nii.gz",
+      "size": 346544,
+      "mtime_ns": 1771270343456923428,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe7.nii.gz",
+      "size": 347175,
+      "mtime_ns": 1771270343481923796,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe8.nii.gz",
+      "size": 347365,
+      "mtime_ns": 1771270343510924223,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe9.nii.gz",
+      "size": 346842,
+      "mtime_ns": 1771270343540924665,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe10.nii.gz",
+      "size": 346465,
+      "mtime_ns": 1771270343570925107,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe11.nii.gz",
+      "size": 350121,
+      "mtime_ns": 1771270343596925490,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe12.nii.gz",
+      "size": 346645,
+      "mtime_ns": 1771270343618925814,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe13.nii.gz",
+      "size": 345518,
+      "mtime_ns": 1771270343640926138,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe14.nii.gz",
+      "size": 346670,
+      "mtime_ns": 1771270343662926462,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe15.nii.gz",
+      "size": 342601,
+      "mtime_ns": 1771270343683926771,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe16.nii.gz",
+      "size": 345069,
+      "mtime_ns": 1771270343705927095,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe17.nii.gz",
+      "size": 346020,
+      "mtime_ns": 1771270343727927419,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe18.nii.gz",
+      "size": 346656,
+      "mtime_ns": 1771270343748927729,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe19.nii.gz",
+      "size": 346715,
+      "mtime_ns": 1771270343769928038,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe20.nii.gz",
+      "size": 346517,
+      "mtime_ns": 1771270343791928362,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe21.nii.gz",
+      "size": 346740,
+      "mtime_ns": 1771270343812928672,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe22.nii.gz",
+      "size": 346813,
+      "mtime_ns": 1771270343833928981,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe23.nii.gz",
+      "size": 346654,
+      "mtime_ns": 1771270343855929305,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe24.nii.gz",
+      "size": 346473,
+      "mtime_ns": 1771270343876929614,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe25.nii.gz",
+      "size": 345187,
+      "mtime_ns": 1771270343897929924,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe26.nii.gz",
+      "size": 346344,
+      "mtime_ns": 1771270343918930233,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe27.nii.gz",
+      "size": 346700,
+      "mtime_ns": 1771270343939930542,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe28.nii.gz",
+      "size": 346858,
+      "mtime_ns": 1771270343960930852,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe29.nii.gz",
+      "size": 346954,
+      "mtime_ns": 1771270343981931161,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe30.nii.gz",
+      "size": 343994,
+      "mtime_ns": 1771270344002931470,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe31.nii.gz",
+      "size": 348819,
+      "mtime_ns": 1771270344024931794,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe32.nii.gz",
+      "size": 348946,
+      "mtime_ns": 1771270344046932118,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe33.nii.gz",
+      "size": 348168,
+      "mtime_ns": 1771270344068932442,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe34.nii.gz",
+      "size": 347711,
+      "mtime_ns": 1771270344092932796,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe35.nii.gz",
+      "size": 348417,
+      "mtime_ns": 1771270344117933164,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe36.nii.gz",
+      "size": 348797,
+      "mtime_ns": 1771270344149933636,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe37.nii.gz",
+      "size": 346503,
+      "mtime_ns": 1771270344184934151,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe38.nii.gz",
+      "size": 346658,
+      "mtime_ns": 1771270344275935492,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe39.nii.gz",
+      "size": 346775,
+      "mtime_ns": 1771270344306935948,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe40.nii.gz",
+      "size": 346723,
+      "mtime_ns": 1771270344327936258,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10930/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/stats/pe41.nii.gz",
+      "size": 348497,
+      "mtime_ns": 1771270344349936582,
+      "sha256": null
+    }
+  ],
+  "valid_voxels": 818,
+  "sampled_voxel_indices": [
+    0,
+    26,
+    52,
+    79,
+    105,
+    131,
+    158,
+    184,
+    210,
+    237,
+    263,
+    289,
+    316,
+    342,
+    368,
+    395,
+    421,
+    448,
+    474,
+    500,
+    527,
+    553,
+    579,
+    606,
+    632,
+    658,
+    685,
+    711,
+    737,
+    764,
+    790,
+    817
+  ],
+  "median_joint_bold_acf1": -0.023723080009483626,
+  "median_native_film_acf1": -0.010599849280735022,
+  "median_paired_temporal_r": 0.9977115591088331,
+  "max_ordinary_design_projection_of_joint_GLS_residual": 0.09592630940466547,
+  "ordinary_projection_note": "Diagnostic only: a joint GLS residual is orthogonal under the fitted whitening metric, not necessarily the ordinary Euclidean metric.",
+  "no_new_regression": true,
+  "no_additional_temporal_filter": true,
+  "representation_note": "Arrays contain insula voxels only; whole-brain connectivity remains a separate stage using these same fitted-model definitions."
+}

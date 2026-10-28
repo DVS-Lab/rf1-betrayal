@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/run_group_ica.py", line 335, in fit
+    result=fit_one(m,r,d,root,masks,slices,reference);result['state']='complete'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/run_group_ica.py", line 237, in fit_one
+    core.require((folder/'melodic_IC.nii.gz').is_file(),'MELODIC produced no component maps (possible nonconvergence); inspect '+str(log))
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/insula_ica.py", line 37, in require
+    raise ValueError(message)
+ValueError: MELODIC produced no component maps (possible nonconvergence); inspect /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/ica/joint_bold/left/dim-7.log

@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/run_group_ica.py", line 418, in main
+    try:run(args,root,record,state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/run_group_ica.py", line 344, in run
+    core.require(all(r['state']=='complete' for r in results),'Some fixed-dimensionality ICA fits failed; completed fits remain preserved')
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/insula_ica.py", line 37, in require
+    raise ValueError(message)
+ValueError: Some fixed-dimensionality ICA fits failed; completed fits remain preserved

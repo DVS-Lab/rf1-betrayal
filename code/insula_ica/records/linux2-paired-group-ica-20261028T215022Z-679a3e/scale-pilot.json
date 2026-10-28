@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "key": "sub-10369_ses-01_task-trust_run-1",
+      "scale": "voxelwise_prewhitened",
+      "sampled_voxels": 32,
+      "max_effective_design_projection": 1.0392577210065604e-08,
+      "max_unwhitened_design_projection": 0.08961389858598648,
+      "nvol": 280,
+      "voxels": 102451,
+      "unwhitened_joint_fit_vs_res4d_relative_error": 0.11727126141450415,
+      "max_whitened_decomposition_relative_error": 3.757237647607496e-05,
+      "valid_mask": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/checks/valid_masks/sub-10369_ses-01_task-trust_run-1.nii.gz",
+      "zero_variance_voxels": 10186,
+      "native_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/feat_reconstruction/sub-10369_ses-01_task-trust_run-1.feat",
+      "native_replayed": false
+    },
+    {
+      "key": "sub-10834_ses-01_task-trust_run-1",
+      "scale": "voxelwise_prewhitened",
+      "sampled_voxels": 32,
+      "max_effective_design_projection": 1.3731045479217074e-08,
+      "max_unwhitened_design_projection": 0.1018883147217307,
+      "nvol": 280,
+      "voxels": 106771,
+      "unwhitened_joint_fit_vs_res4d_relative_error": 0.12280474667442191,
+      "max_whitened_decomposition_relative_error": 6.548196307943546e-05,
+      "valid_mask": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/checks/valid_masks/sub-10834_ses-01_task-trust_run-1.nii.gz",
+      "zero_variance_voxels": 9408,
+      "native_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/registration-sub-10834-ignore-sbref-20261028T151154Z-acdf91/feat_reconstruction/sub-10834_ses-01_task-trust_run-1.feat",
+      "native_replayed": false
+    },
+    {
+      "key": "sub-10720_ses-01_task-trust_run-2",
+      "scale": "voxelwise_prewhitened",
+      "sampled_voxels": 32,
+      "max_effective_design_projection": 1.1383890977288297e-08,
+      "max_unwhitened_design_projection": 0.06277235541581422,
+      "nvol": 280,
+      "voxels": 103590,
+      "unwhitened_joint_fit_vs_res4d_relative_error": 0.08998940004686343,
+      "max_whitened_decomposition_relative_error": 7.551679130352341e-05,
+      "valid_mask": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/checks/valid_masks/sub-10720_ses-01_task-trust_run-2.nii.gz",
+      "zero_variance_voxels": 8350,
+      "native_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-10720/feat_reconstruction/sub-10720_ses-01_task-trust_run-2.feat",
+      "native_replayed": false
+    },
+    {
+      "key": "sub-10369_ses-01_task-ugr_run-1",
+      "scale": "voxelwise_prewhitened",
+      "sampled_voxels": 32,
+      "max_effective_design_projection": 1.450590262809969e-08,
+      "max_unwhitened_design_projection": 0.049544157561925276,
+      "nvol": 240,
+      "voxels": 102248,
+      "unwhitened_joint_fit_vs_res4d_relative_error": 0.08676295732752042,
+      "max_whitened_decomposition_relative_error": 5.548822343860343e-06,
+      "valid_mask": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/checks/valid_masks/sub-10369_ses-01_task-ugr_run-1.nii.gz",
+      "zero_variance_voxels": 7875,
+      "native_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/ugr_film/sub-10369_ses-01_task-ugr_run-1.feat",
+      "native_replayed": true
+    },
+    {
+      "key": "sub-11579_ses-01_task-ugr_run-2",
+      "scale": "voxelwise_prewhitened",
+      "sampled_voxels": 32,
+      "max_effective_design_projection": 1.448850204046052e-08,
+      "max_unwhitened_design_projection": 0.10404131209859592,
+      "nvol": 240,
+      "voxels": 107653,
+      "unwhitened_joint_fit_vs_res4d_relative_error": 0.0722336694086859,
+      "max_whitened_decomposition_relative_error": 1.0283955449531046e-05,
+      "valid_mask": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/checks/valid_masks/sub-11579_ses-01_task-ugr_run-2.nii.gz",
+      "zero_variance_voxels": 10295,
+      "native_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/ugr_film/sub-11579_ses-01_task-ugr_run-2.feat",
+      "native_replayed": true
+    }
+  ],
+  "joint_bold_definition": "Y minus its temporal mean minus the full saved design times the existing joint FILM PEs.",
+  "native_film_definition": "Native FILM voxelwise-prewhitened innovations, verified using the matching voxelwise whitened design.",
+  "extra_regression_or_temporal_filter": false
+}

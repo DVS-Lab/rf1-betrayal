@@ -1,0 +1,45 @@
+{
+  "analysis_policy_version": 1,
+  "cohort_n": 132,
+  "trust_runs": 241,
+  "ugr_runs": 249,
+  "residual_modes": [
+    "joint_bold",
+    "native_film"
+  ],
+  "rois": [
+    "left",
+    "right",
+    "bilateral"
+  ],
+  "primary_dimensionality": 5,
+  "sensitivity_dimensionalities": [
+    3,
+    7
+  ],
+  "automatic_dimensionality": true,
+  "automatic_dimension_code": 0,
+  "auto_fit_ram_reservation_GiB": 16,
+  "user_accepted_flagged_runs": [
+    "sub-10720_ses-01_task-trust_run-2",
+    "sub-11326_ses-01_task-trust_run-2",
+    "sub-11433_ses-01_task-trust_run-2"
+  ],
+  "both_representations_requested": true,
+  "physical_4d_masking": "Separate saved left/right/bilateral 4D inputs; outside-ROI values verified exactly zero before MELODIC.",
+  "nuisance_regression": "Existing complete joint task+nuisance fit only; no new regression.",
+  "interpretation": {
+    "joint_bold": "Original filtered-BOLD scale joint GLS residual.",
+    "native_film": "Voxelwise-prewhitened innovation scale; covariance differs."
+  },
+  "analysis_scope": "Paired spatial ICA and temporal diagnostics only. Whole-brain connectivity/task inference remain separate.",
+  "native_residual_scale_review": "User explicitly requested paired native-FILM and joint-BOLD ICA comparison; innovation-scale covariance is labeled separately.",
+  "prepare_ram_reservations_GiB": {
+    "existing_native": 1,
+    "missing_native_FILM_replay": 4,
+    "available_headroom": 8
+  },
+  "prepare_worker_limit": 64,
+  "ica_parallel_limit": 18,
+  "automatic_ica_parallel_limit": 6
+}
