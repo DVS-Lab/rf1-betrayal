@@ -1,0 +1,67 @@
+{
+  "original_runner": {
+    "pid": 2051532,
+    "ppid": 2051531,
+    "start": "666395763",
+    "state": "S",
+    "args": [
+      "/ZPOOL/data/tools/anaconda/tug87422/envs/tedana-26.0.3/bin/python",
+      "-u",
+      "code/insula_ica/rerun_trust_references.py",
+      "--publish"
+    ],
+    "cwd": "/ZPOOL/data/projects/rf1-betrayal"
+  },
+  "inherited_feat": [
+    {
+      "pid": 351688,
+      "ppid": 2051532,
+      "start": "667657242",
+      "state": "S",
+      "args": [
+        "bash",
+        "/usr/local/fsl/share/fsl/bin/feat",
+        "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11572/feat_reconstruction/sub-11572_ses-01_task-trust_run-2.fsf"
+      ],
+      "cwd": "/ZPOOL/data/projects/rf1-betrayal"
+    },
+    {
+      "pid": 352406,
+      "ppid": 2051532,
+      "start": "667657617",
+      "state": "S",
+      "args": [
+        "bash",
+        "/usr/local/fsl/share/fsl/bin/feat",
+        "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11540/feat_reconstruction/sub-11540_ses-01_task-trust_run-2.fsf"
+      ],
+      "cwd": "/ZPOOL/data/projects/rf1-betrayal"
+    },
+    {
+      "pid": 352849,
+      "ppid": 2051532,
+      "start": "667657802",
+      "state": "S",
+      "args": [
+        "bash",
+        "/usr/local/fsl/share/fsl/bin/feat",
+        "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11570/feat_reconstruction/sub-11570_ses-01_task-trust_run-2.fsf"
+      ],
+      "cwd": "/ZPOOL/data/projects/rf1-betrayal"
+    },
+    {
+      "pid": 356896,
+      "ppid": 2051532,
+      "start": "667659775",
+      "state": "S",
+      "args": [
+        "bash",
+        "/usr/local/fsl/share/fsl/bin/feat",
+        "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-11579/feat_reconstruction/sub-11579_ses-01_task-trust_run-2.fsf"
+      ],
+      "cwd": "/ZPOOL/data/projects/rf1-betrayal"
+    }
+  ],
+  "policy": "Original Python scheduler only is terminated; all active FEAT processes continue.",
+  "time_utc": "2026-10-28T20:33:38.878584+00:00"
+}

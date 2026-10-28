@@ -1,0 +1,373 @@
+{
+  "argv": [
+    "/usr/bin/apptainer",
+    "run",
+    "--cleanenv",
+    "-B",
+    "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-10969/bids-view:/bids:ro",
+    "-B",
+    "/ZPOOL/data/projects/rf1-sra-linux2/bids:/ZPOOL/data/projects/rf1-sra-linux2/bids:ro",
+    "-B",
+    "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat:/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat:ro",
+    "-B",
+    "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-10969:/rebuild",
+    "-B",
+    "/ZPOOL/data/scratch/tug87422/rf1-trust-stock-filter/trust-stock-filter-20261028T165853Z-314305/sub-10969:/scratch",
+    "-B",
+    "/ZPOOL/data/tools/templateflow:/opt/templateflow",
+    "-B",
+    "/ZPOOL/data/tools/mplconfigdir:/opt/mplconfigdir",
+    "-B",
+    "/ZPOOL/data/tools/licenses:/opts:ro",
+    "/ZPOOL/data/tools/fmriprep-24.1.1.simg",
+    "/bids",
+    "/rebuild/fmriprep-24",
+    "participant",
+    "--participant-label",
+    "10969",
+    "--task-id",
+    "trust",
+    "--stop-on-first-crash",
+    "--skip-bids-validation",
+    "--nthreads",
+    "14",
+    "--omp-nthreads",
+    "8",
+    "--mem-mb",
+    "28000",
+    "--me-output-echos",
+    "--output-spaces",
+    "T1w",
+    "MNI152NLin6Asym",
+    "--bids-filter-file",
+    "/rebuild/fmriprep_config.json",
+    "--derivatives",
+    "anatomy=/rebuild/anatomy-cache",
+    "--fs-no-reconall",
+    "--fs-license-file",
+    "/opts/fs_license.txt",
+    "--notrack",
+    "-w",
+    "/scratch"
+  ],
+  "anatomical_inputs": [
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_desc-brain_mask.json",
+      "size": 106,
+      "mtime_ns": 1793144376286099509,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_desc-brain_mask.nii.gz",
+      "size": 48248,
+      "mtime_ns": 1793144376285099494,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_desc-preproc_T1w.json",
+      "size": 28,
+      "mtime_ns": 1793144375801092256,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_desc-preproc_T1w.nii.gz",
+      "size": 25624295,
+      "mtime_ns": 1793144375801092256,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_dseg.nii.gz",
+      "size": 255727,
+      "mtime_ns": 1793144531504427708,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_from-MNI152NLin2009cAsym_to-T1w_mode-image_xfm.h5",
+      "size": 89724495,
+      "mtime_ns": 1793146416629768186,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_from-MNI152NLin6Asym_to-T1w_mode-image_xfm.h5",
+      "size": 74608782,
+      "mtime_ns": 1793146416540767181,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_from-T1w_to-MNI152NLin2009cAsym_mode-image_xfm.h5",
+      "size": 89711657,
+      "mtime_ns": 1793146416320764696,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_from-T1w_to-MNI152NLin6Asym_mode-image_xfm.h5",
+      "size": 74599077,
+      "mtime_ns": 1793146416228763657,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_label-CSF_probseg.nii.gz",
+      "size": 677929,
+      "mtime_ns": 1793144534421471579,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_label-GM_probseg.nii.gz",
+      "size": 1186295,
+      "mtime_ns": 1793144532638444763,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_label-WM_probseg.nii.gz",
+      "size": 661468,
+      "mtime_ns": 1793144533489457562,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_space-MNI152NLin6Asym_desc-brain_mask.json",
+      "size": 21,
+      "mtime_ns": 1793146464893321032,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_space-MNI152NLin6Asym_desc-brain_mask.nii.gz",
+      "size": 52876,
+      "mtime_ns": 1793146464892321020,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_space-MNI152NLin6Asym_desc-preproc_T1w.json",
+      "size": 27,
+      "mtime_ns": 1793146452837181530,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_space-MNI152NLin6Asym_desc-preproc_T1w.nii.gz",
+      "size": 8071969,
+      "mtime_ns": 1793146452837181530,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_space-MNI152NLin6Asym_dseg.nii.gz",
+      "size": 252365,
+      "mtime_ns": 1793146467561352026,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_space-MNI152NLin6Asym_label-CSF_probseg.nii.gz",
+      "size": 4447042,
+      "mtime_ns": 1793146460221266863,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_space-MNI152NLin6Asym_label-GM_probseg.nii.gz",
+      "size": 5897289,
+      "mtime_ns": 1793146458792250322,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-10969/ses-01/anat/sub-10969_ses-01_space-MNI152NLin6Asym_label-WM_probseg.nii.gz",
+      "size": 4336877,
+      "mtime_ns": 1793146459492258424,
+      "sha256": null
+    }
+  ],
+  "anatomy_preflight": {
+    "fmriprep": "24.1.1",
+    "smriprep": "0.16.0",
+    "cache": {
+      "t1w_preproc": "/rebuild/anatomy-cache/sub-10969/ses-01/anat/sub-10969_ses-01_desc-preproc_T1w.nii.gz",
+      "t1w_mask": "/rebuild/anatomy-cache/sub-10969/ses-01/anat/sub-10969_ses-01_desc-brain_mask.nii.gz",
+      "t1w_dseg": "/rebuild/anatomy-cache/sub-10969/ses-01/anat/sub-10969_ses-01_dseg.nii.gz",
+      "t1w_tpms": [
+        "/rebuild/anatomy-cache/sub-10969/ses-01/anat/sub-10969_ses-01_label-CSF_probseg.nii.gz",
+        "/rebuild/anatomy-cache/sub-10969/ses-01/anat/sub-10969_ses-01_label-GM_probseg.nii.gz",
+        "/rebuild/anatomy-cache/sub-10969/ses-01/anat/sub-10969_ses-01_label-WM_probseg.nii.gz"
+      ],
+      "transforms": {
+        "MNI152NLin6Asym": {
+          "forward": "/rebuild/anatomy-cache/sub-10969/ses-01/anat/sub-10969_ses-01_from-T1w_to-MNI152NLin6Asym_mode-image_xfm.h5",
+          "reverse": "/rebuild/anatomy-cache/sub-10969/ses-01/anat/sub-10969_ses-01_from-MNI152NLin6Asym_to-T1w_mode-image_xfm.h5"
+        },
+        "MNI152NLin2009cAsym": {
+          "forward": "/rebuild/anatomy-cache/sub-10969/ses-01/anat/sub-10969_ses-01_from-T1w_to-MNI152NLin2009cAsym_mode-image_xfm.h5",
+          "reverse": "/rebuild/anatomy-cache/sub-10969/ses-01/anat/sub-10969_ses-01_from-MNI152NLin2009cAsym_to-T1w_mode-image_xfm.h5"
+        }
+      }
+    },
+    "anatomical_graph": [
+      [
+        "anat_fit_wf.anat2std_buffer",
+        "Merge"
+      ],
+      [
+        "anat_fit_wf.anat_validate",
+        "ValidateImage"
+      ],
+      [
+        "anat_fit_wf.apply_mask",
+        "ApplyMask"
+      ],
+      [
+        "anat_fit_wf.fsLR_buffer",
+        "IdentityInterface"
+      ],
+      [
+        "anat_fit_wf.inputnode",
+        "IdentityInterface"
+      ],
+      [
+        "anat_fit_wf.msm_buffer",
+        "IdentityInterface"
+      ],
+      [
+        "anat_fit_wf.outputnode",
+        "IdentityInterface"
+      ],
+      [
+        "anat_fit_wf.refined_buffer",
+        "IdentityInterface"
+      ],
+      [
+        "anat_fit_wf.seg_buffer",
+        "IdentityInterface"
+      ],
+      [
+        "anat_fit_wf.sourcefile_buffer",
+        "IdentityInterface"
+      ],
+      [
+        "anat_fit_wf.std2anat_buffer",
+        "Merge"
+      ],
+      [
+        "anat_fit_wf.surfaces_buffer",
+        "IdentityInterface"
+      ],
+      [
+        "anat_fit_wf.t1w_buffer",
+        "IdentityInterface"
+      ],
+      [
+        "anat_fit_wf.template_buffer",
+        "Merge"
+      ],
+      [
+        "anat_reports_wf.ds_t1w_conform_report",
+        "DerivativesDataSink"
+      ],
+      [
+        "anat_reports_wf.ds_t1w_dseg_mask_report",
+        "DerivativesDataSink"
+      ],
+      [
+        "anat_reports_wf.inputnode",
+        "IdentityInterface"
+      ],
+      [
+        "anat_reports_wf.seg_rpt",
+        "ROIsPlot"
+      ],
+      [
+        "anat_reports_wf.t1w_conform_check",
+        "Function"
+      ]
+    ],
+    "anatomical_registration_nodes_absent": true
+  },
+  "qc_source_record": "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/records/linux2-trust-stock-filter-20261028T165853Z-314305",
+  "subject": "sub-10969",
+  "key": "sub-10969_ses-01_task-trust_run-2",
+  "state": "complete_qc_review_pending",
+  "row": {
+    "key": "sub-10969_ses-01_task-trust_run-2",
+    "subject": "sub-10969",
+    "run": 2,
+    "nvol": 280,
+    "tr": 1.615,
+    "old_bold": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/fmriprep-24/sub-10969/ses-01/func/sub-10969_ses-01_task-trust_run-2_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+    "new_bold": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-10969/fmriprep-24/sub-10969/ses-01/func/sub-10969_ses-01_task-trust_run-2_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+    "original_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10969/ses-01/L1_task-trust_model-01_type-act_run-2_sm-5.feat",
+    "original_fsf": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10969/ses-01/L1_task-trust_model-01_type-act_run-2_sm-5.feat/design.fsf",
+    "fsf_sha256": "bf05d9bf434be9e33cf999a41ba135d340536c23f778e7b4f61ed48d246a690d",
+    "confounds": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/original_confounds/sub-10969/sub-10969_ses-01_task-trust_run-2_desc-TedanaPlusConfounds.tsv",
+    "confounds_sha256": "2d521ce2834bd2c27fea50dc30cf6b2a0cd0c081b2e9fdb1f3768af2b2ab4533",
+    "nuisance_columns": 26,
+    "warpkit": {
+      "ready": true,
+      "problems": [],
+      "files": {
+        "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10969/ses-01/fmap/sub-10969_ses-01_acq-trust_run-2_fieldmap.nii.gz": {
+          "size": 325543,
+          "mtime_ns": 1783875881537579003
+        },
+        "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10969/ses-01/fmap/sub-10969_ses-01_acq-trust_run-2_magnitude.nii.gz": {
+          "size": 621933,
+          "mtime_ns": 1783875883985614982
+        },
+        "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10969/ses-01/fmap/sub-10969_ses-01_acq-trust_run-2_fieldmap.json": {
+          "size": 3714,
+          "mtime_ns": 1783943759712509092,
+          "sha256": "f3848cdbd114813804411903b11c77616c4608bd483b322a30236cb1a4dd95d3"
+        },
+        "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10969/ses-01/fmap/sub-10969_ses-01_acq-trust_run-2_magnitude.json": {
+          "size": 3702,
+          "mtime_ns": 1783943759712509092,
+          "sha256": "6735a38418530b38909ec354cd18fc896fb677b1e103834af3a8dca92c8ecd1c"
+        }
+      },
+      "retained_4d_fieldmaps": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/warpkit/sub-10969/ses-01/sub-10969_ses-01_task-trust_run-2_fieldmaps.nii",
+      "retained_4d_exists": true
+    },
+    "raw_images": {
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10969/ses-01/func/sub-10969_ses-01_task-trust_run-2_echo-1_part-mag_bold.nii.gz": {
+        "size": 136276660,
+        "mtime_ns": 1783332023654354837
+      },
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10969/ses-01/func/sub-10969_ses-01_task-trust_run-2_echo-2_part-mag_bold.nii.gz": {
+        "size": 128323924,
+        "mtime_ns": 1783332027481414793
+      },
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10969/ses-01/func/sub-10969_ses-01_task-trust_run-2_echo-3_part-mag_bold.nii.gz": {
+        "size": 123455705,
+        "mtime_ns": 1783332016156237403
+      },
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10969/ses-01/func/sub-10969_ses-01_task-trust_run-2_echo-4_part-mag_bold.nii.gz": {
+        "size": 120145585,
+        "mtime_ns": 1783332019900296036
+      }
+    },
+    "raw_metadata_sha256": {
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10969/ses-01/func/sub-10969_ses-01_task-trust_run-2_echo-1_part-mag_bold.json": "6f25aa5b1a5159801914ff2ab7a0b915820dea435b6115fbd8f79141e75c4ec2",
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10969/ses-01/func/sub-10969_ses-01_task-trust_run-2_echo-2_part-mag_bold.json": "4465cb1f3ac83224ed6bc8f2a35d73ef83309153c5e5aaf2b3da4d195a1f571d",
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10969/ses-01/func/sub-10969_ses-01_task-trust_run-2_echo-3_part-mag_bold.json": "13c7975efe496ecf7ccbe3472b8b9d11407f4543f4d55ebfa31fb07f6e711540",
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10969/ses-01/func/sub-10969_ses-01_task-trust_run-2_echo-4_part-mag_bold.json": "97e628e9fed6dd3050f87d8c0e1832f063b059ea1ef3f2ef51248b68d689eec6"
+    },
+    "tedana_action": "reuse_original_combined_FEAT_confounds"
+  },
+  "reference_selection": {
+    "key": "sub-10969_ses-01_task-trust_run-2",
+    "status": "same_run",
+    "bold_run": "2",
+    "sbref_run": "2",
+    "source_log": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-10969/sub-10969.fmriprep.log",
+    "line_number": 87,
+    "selected_sbrefs": [
+      "sub-10969_ses-01_task-trust_run-2_echo-1_part-mag_sbref.nii.gz",
+      "sub-10969_ses-01_task-trust_run-2_echo-2_part-mag_sbref.nii.gz",
+      "sub-10969_ses-01_task-trust_run-2_echo-3_part-mag_sbref.nii.gz",
+      "sub-10969_ses-01_task-trust_run-2_echo-4_part-mag_sbref.nii.gz"
+    ],
+    "evidence_type": "explicit_selection_log_with_verified_single_run_input_view",
+    "scoped_bold_files": [
+      "sub-10969_ses-01_task-trust_run-2_echo-1_part-mag_bold.nii.gz",
+      "sub-10969_ses-01_task-trust_run-2_echo-2_part-mag_bold.nii.gz",
+      "sub-10969_ses-01_task-trust_run-2_echo-3_part-mag_bold.nii.gz",
+      "sub-10969_ses-01_task-trust_run-2_echo-4_part-mag_bold.nii.gz"
+    ]
+  },
+  "anatomical_reuse_verified": true,
+  "fmriprep_reused": true,
+  "numerical_qc_reused": true,
+  "review_flags": []
+}
