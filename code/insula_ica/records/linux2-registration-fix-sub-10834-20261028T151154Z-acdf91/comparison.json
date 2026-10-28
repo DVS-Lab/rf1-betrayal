@@ -1,0 +1,84 @@
+[
+  {
+    "key": "sub-10834_ses-01_task-trust_run-1",
+    "before_coverage": {
+      "left": {
+        "total_voxels": 391,
+        "retained_voxels": 242,
+        "retained_fraction": 0.618925831202046
+      },
+      "right": {
+        "total_voxels": 427,
+        "retained_voxels": 243,
+        "retained_fraction": 0.5690866510538641
+      },
+      "bilateral": {
+        "total_voxels": 818,
+        "retained_voxels": 485,
+        "retained_fraction": 0.5929095354523227
+      }
+    },
+    "candidate_coverage": {
+      "left": {
+        "total_voxels": 391,
+        "retained_voxels": 391,
+        "retained_fraction": 1.0
+      },
+      "right": {
+        "total_voxels": 427,
+        "retained_voxels": 427,
+        "retained_fraction": 1.0
+      },
+      "bilateral": {
+        "total_voxels": 818,
+        "retained_voxels": 818,
+        "retained_fraction": 1.0
+      }
+    },
+    "before_spatial_r": 0.3624561313402559,
+    "candidate_spatial_r": 0.9937810815727661,
+    "confounds_exact": true,
+    "hemisphere_coverage_at_least_80_percent": true
+  },
+  {
+    "key": "sub-10834_ses-01_task-trust_run-2",
+    "before_coverage": {
+      "left": {
+        "total_voxels": 391,
+        "retained_voxels": 135,
+        "retained_fraction": 0.3452685421994885
+      },
+      "right": {
+        "total_voxels": 427,
+        "retained_voxels": 158,
+        "retained_fraction": 0.3700234192037471
+      },
+      "bilateral": {
+        "total_voxels": 818,
+        "retained_voxels": 293,
+        "retained_fraction": 0.3581907090464548
+      }
+    },
+    "candidate_coverage": {
+      "left": {
+        "total_voxels": 391,
+        "retained_voxels": 391,
+        "retained_fraction": 1.0
+      },
+      "right": {
+        "total_voxels": 427,
+        "retained_voxels": 427,
+        "retained_fraction": 1.0
+      },
+      "bilateral": {
+        "total_voxels": 818,
+        "retained_voxels": 818,
+        "retained_fraction": 1.0
+      }
+    },
+    "before_spatial_r": 0.3054279885682374,
+    "candidate_spatial_r": 0.9935906491317282,
+    "confounds_exact": true,
+    "hemisphere_coverage_at_least_80_percent": true
+  }
+]

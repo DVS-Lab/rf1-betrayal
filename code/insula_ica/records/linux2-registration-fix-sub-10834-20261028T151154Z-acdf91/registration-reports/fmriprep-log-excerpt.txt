@@ -1,0 +1,422 @@
+1666: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.combine_masks" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/combine_masks".
+1667: 2026-10-28 11:17:16,447 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.combine_masks" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/combine_masks".
+1668: 261028-11:17:16,449 nipype.workflow INFO:
+1669: 	 [Node] Executing "combine_masks" <nipype.interfaces.fsl.maths.BinaryMaths>
+1676: 261028-11:17:18,465 nipype.workflow INFO:
+1677: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.apply_mask" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/apply_mask".
+1678: 2026-10-28 11:17:18,465 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.apply_mask" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/apply_mask".
+1679: 261028-11:17:18,467 nipype.workflow INFO:
+1680: 	 [Node] Executing "apply_mask" <niworkflows.interfaces.nibabel.ApplyMask>
+1696: 261028-11:19:28,446 nipype.workflow INFO:
+1697: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.fmapreg_wf.coregister" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/fmapreg_wf/coregister".
+1698: 2026-10-28 11:19:28,446 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.fmapreg_wf.coregister" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/fmapreg_wf/coregister".
+1699: 261028-11:19:28,449 nipype.workflow INFO:
+1700: 	 [Node] Executing "map_brainmask" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+1705: 261028-11:19:28,453 nipype.workflow INFO:
+1706: 	 [Node] Executing "coregister" <niworkflows.interfaces.fixes.FixHeaderRegistration>
+1707: 2026-10-28 11:19:28,453 [    INFO] [Node] Executing "coregister" <niworkflows.interfaces.fixes.FixHeaderRegistration>
+1708: 2026-10-28 11:19:28,522 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+1709: 2026-10-28 11:19:28,522 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+1712: 261028-11:19:28,919 nipype.workflow INFO:
+1713: 	 [Node] Finished "coregister", elapsed time 0.465391s.
+1714: 2026-10-28 11:19:28,919 [    INFO] [Node] Finished "coregister", elapsed time 0.465391s.
+1715: 261028-11:19:30,453 nipype.workflow INFO:
+1716: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.fmapreg_wf.coregister" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/fmapreg_wf/coregister".
+1717: 2026-10-28 11:19:30,453 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.fmapreg_wf.coregister" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/fmapreg_wf/coregister".
+1718: 261028-11:19:30,454 nipype.workflow INFO:
+1719: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.itk_mat2txt" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/itk_mat2txt".
+1721: 261028-11:19:30,460 nipype.workflow INFO:
+1722: 	 [Node] Executing "coregister" <niworkflows.interfaces.fixes.FixHeaderRegistration>
+1723: 2026-10-28 11:19:30,460 [    INFO] [Node] Executing "coregister" <niworkflows.interfaces.fixes.FixHeaderRegistration>
+1724: 261028-11:19:30,471 nipype.workflow INFO:
+1725: 	 [Node] Executing "itk_mat2txt" <niworkflows.interfaces.nitransforms.ConcatenateXFMs>
+1726: 2026-10-28 11:19:30,471 [    INFO] [Node] Executing "itk_mat2txt" <niworkflows.interfaces.nitransforms.ConcatenateXFMs>
+1727: 2026-10-28 11:19:30,472 [ WARNING] WARNING: Reference space not set
+1728: 261028-11:19:30,473 nipype.workflow INFO:
+1729: 	 [Node] Finished "itk_mat2txt", elapsed time 0.000872s.
+1733: 261028-11:19:30,846 nipype.workflow INFO:
+1734: 	 [Node] Finished "coregister", elapsed time 0.385604s.
+1735: 2026-10-28 11:19:30,846 [    INFO] [Node] Finished "coregister", elapsed time 0.385604s.
+1736: 261028-11:19:32,452 nipype.workflow INFO:
+1737: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.itk_mat2txt" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/itk_mat2txt".
+1741: 2026-10-28 11:19:32,454 [    INFO] [Node] Executing "itk_mat2txt" <niworkflows.interfaces.nitransforms.ConcatenateXFMs>
+1742: 2026-10-28 11:19:32,455 [ WARNING] WARNING: Reference space not set
+1743: 261028-11:19:32,455 nipype.workflow INFO:
+1744: 	 [Node] Finished "itk_mat2txt", elapsed time 0.000814s.
+1994: 2026-10-28 11:20:30,481 [    INFO] [Node] Executing "resample" <sdcflows.interfaces.bspline.ApplyCoeffsField>
+1995: 2026-10-28 11:20:30,494 [ WARNING] WARNING: Image's and B-Spline's grids are not aligned.
+1996: 261028-11:20:30,825 nipype.workflow INFO:
+1997: 	 [Node] Finished "resample", elapsed time 0.343104s.
+2004: 2026-10-28 11:20:32,454 [    INFO] [Node] Executing "resample" <sdcflows.interfaces.bspline.ApplyCoeffsField>
+2005: 2026-10-28 11:20:32,474 [ WARNING] WARNING: Image's and B-Spline's grids are not aligned.
+2006: 261028-11:20:32,800 nipype.workflow INFO:
+2007: 	 [Node] Finished "resample", elapsed time 0.345066s.
+2054: 2026-10-28 11:20:36,454 [    INFO] [Node] Executing "average" <niworkflows.interfaces.images.RobustAverage>
+2055: 261028-11:20:36,467 nipype.interface WARNING:
+2056: 	 Changing /rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_part-mag_desc-coreg_boldref.nii.gz dtype from uint16 to float32
+2057: 2026-10-28 11:20:36,467 [ WARNING] Changing /rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_part-mag_desc-coreg_boldref.nii.gz dtype from uint16 to float32
+2066: 2026-10-28 11:20:36,619 [    INFO] [Node] Executing "average" <niworkflows.interfaces.images.RobustAverage>
+2067: 261028-11:20:36,633 nipype.interface WARNING:
+2068: 	 Changing /rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_part-mag_desc-coreg_boldref.nii.gz dtype from uint16 to float32
+2069: 2026-10-28 11:20:36,633 [ WARNING] Changing /rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_part-mag_desc-coreg_boldref.nii.gz dtype from uint16 to float32
+2105: 261028-11:20:38,467 nipype.workflow INFO:
+2106: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.ds_boldreg_wf.sources" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/ds_boldreg_wf/sources".
+2107: 2026-10-28 11:20:38,467 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.ds_boldreg_wf.sources" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/ds_boldreg_wf/sources".
+2108: 261028-11:20:38,467 nipype.workflow INFO:
+2109: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.func_fit_reports_wf.fmapref_boldref" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/func_fit_reports_wf/fmapref_boldref".
+2117: 261028-11:20:38,468 nipype.workflow INFO:
+2118: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.ds_boldreg_wf.sources" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/ds_boldreg_wf/sources".
+2119: 2026-10-28 11:20:38,468 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.ds_boldreg_wf.sources" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/ds_boldreg_wf/sources".
+2120: 261028-11:20:38,468 nipype.workflow INFO:
+2121: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.func_fit_reports_wf.fmapref_boldref" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/func_fit_reports_wf/fmapref_boldref".
+2161: 2026-10-28 11:20:38,472 [    INFO] [Node] Executing "clipper_pre" <niworkflows.interfaces.nibabel.IntensityClip>
+2162: 2026-10-28 11:20:38,472 [ WARNING] WARNING: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+2163: 2026-10-28 11:20:38,472 [ WARNING] WARNING: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+2164: 261028-11:20:38,473 nipype.workflow INFO:
+2165: 	 [Node] Executing "gen_ref" <niworkflows.interfaces.nibabel.GenerateSamplingReference>
+2181: 2026-10-28 11:20:38,847 [    INFO] [Node] Finished "boldref_fmap", elapsed time 0.369846s.
+2182: 2026-10-28 11:20:38,854 [ WARNING] WARNING: The behavior of affine_transform with a 1-D array supplied for the matrix parameter has changed in SciPy 0.18.0.
+2183: 2026-10-28 11:20:38,854 [ WARNING] WARNING: The behavior of affine_transform with a 1-D array supplied for the matrix parameter has changed in SciPy 0.18.0.
+2184: 261028-11:20:38,925 nipype.workflow INFO:
+2185: 	 [Node] Finished "clipper_pre", elapsed time 0.452561s.
+2189: 2026-10-28 11:20:38,939 [    INFO] [Node] Finished "clipper_pre", elapsed time 0.469208s.
+2190: 2026-10-28 11:20:39,003 [ WARNING] WARNING: The behavior of affine_transform with a 1-D array supplied for the matrix parameter has changed in SciPy 0.18.0.
+2191: 2026-10-28 11:20:39,006 [ WARNING] WARNING: The behavior of affine_transform with a 1-D array supplied for the matrix parameter has changed in SciPy 0.18.0.
+2192: 2026-10-28 11:20:39,051 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2193: 2026-10-28 11:20:39,051 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2196: 2026-10-28 11:20:39,300 [    INFO] [Node] Finished "15_add_7", elapsed time 0.829136s.
+2197: 2026-10-28 11:20:39,359 [ WARNING] WARNING: The behavior of affine_transform with a 1-D array supplied for the matrix parameter has changed in SciPy 0.18.0.
+2198: 2026-10-28 11:20:39,364 [ WARNING] WARNING: The behavior of affine_transform with a 1-D array supplied for the matrix parameter has changed in SciPy 0.18.0.
+2199: 261028-11:20:39,374 nipype.workflow INFO:
+2200: 	 [Node] Finished "gen_ref", elapsed time 0.902633s.
+2262: 2026-10-28 11:20:43,464 [    INFO] [Node] Finished "17_comp_7", elapsed time 1.005044s.
+2263: 2026-10-28 11:20:43,805 [ WARNING] WARNING: Reference space not set
+2264: 2026-10-28 11:20:43,818 [ WARNING] WARNING: Reference space not set
+2265: 261028-11:20:44,493 nipype.workflow INFO:
+2266: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.18_md_7" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/18_md_7".
+2276: 2026-10-28 11:20:44,496 [    INFO] [Node] Executing "masker" <sdcflows.interfaces.brainmask.BrainExtraction>
+2277: 2026-10-28 11:20:44,499 [ WARNING] WARNING: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+2278: 2026-10-28 11:20:44,499 [ WARNING] WARNING: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+2279: 2026-10-28 11:20:45,301 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2280: 2026-10-28 11:20:45,301 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2347: 2026-10-28 11:20:57,446 [    INFO] [Node] Finished "sdecreg_report", elapsed time 8.978021s.
+2348: 2026-10-28 11:20:57,845 [ WARNING] WARNING: Reference space not set
+2349: 2026-10-28 11:20:57,858 [ WARNING] WARNING: Reference space not set
+2350: 261028-11:20:58,496 nipype.workflow INFO:
+2351: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.func_fit_reports_wf.ds_sdcreg_report" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/func_fit_reports_wf/ds_sdcreg_report".
+2401: 2026-10-28 11:21:08,985 [    INFO] [Node] Finished "boldref_bold", elapsed time 12.515763s.
+2402: 261028-11:21:09,518 nipype.interface WARNING:
+2403: 	 Changing /rebuild/fmriprep-24/sub-10834/ses-01/anat/sub-10834_ses-01_desc-brain_mask.nii.gz dtype from int16 to uint8
+2404: 2026-10-28 11:21:09,518 [ WARNING] Changing /rebuild/fmriprep-24/sub-10834/ses-01/anat/sub-10834_ses-01_desc-brain_mask.nii.gz dtype from int16 to uint8
+2426: 261028-11:21:10,92 nipype.workflow INFO:
+2427: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.mask_t1w_brain" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/mask_t1w_brain".
+2428: 2026-10-28 11:21:10,092 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.mask_t1w_brain" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/mask_t1w_brain".
+2429: 261028-11:21:10,93 nipype.workflow INFO:
+2430: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_native_wf.boldref_bold" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_native_wf/_echoidx_2/boldref_bold".
+2455: 2026-10-28 11:21:10,626 [    INFO] [Node] Finished "gen_ref", elapsed time 0.530097s.
+2456: 2026-10-28 11:21:11,529 [ WARNING] WARNING: Reference space not set
+2457: 2026-10-28 11:21:11,544 [ WARNING] WARNING: Reference space not set
+2458: 2026-10-28 11:21:11,545 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2459: 2026-10-28 11:21:11,545 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2462: 261028-11:21:12,127 nipype.workflow INFO:
+2463: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.mask_t1w_brain" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/mask_t1w_brain".
+2464: 2026-10-28 11:21:12,127 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.mask_t1w_brain" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/mask_t1w_brain".
+2465: 261028-11:21:12,127 nipype.workflow INFO:
+2466: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_anat_wf.gen_ref" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_anat_wf/gen_ref".
+2488: 2026-10-28 11:21:12,663 [    INFO] [Node] Finished "trunc_mov", elapsed time 2.688969s.
+2489: 2026-10-28 11:21:13,513 [ WARNING] WARNING: The behavior of affine_transform with a 1-D array supplied for the matrix parameter has changed in SciPy 0.18.0.
+2490: 2026-10-28 11:21:13,526 [ WARNING] WARNING: The behavior of affine_transform with a 1-D array supplied for the matrix parameter has changed in SciPy 0.18.0.
+2491: 2026-10-28 11:21:13,732 [ WARNING] WARNING: The behavior of affine_transform with a 1-D array supplied for the matrix parameter has changed in SciPy 0.18.0.
+2492: 2026-10-28 11:21:13,741 [ WARNING] WARNING: The behavior of affine_transform with a 1-D array supplied for the matrix parameter has changed in SciPy 0.18.0.
+2493: 2026-10-28 11:21:15,067 [ WARNING] WARNING: The behavior of affine_transform with a 1-D array supplied for the matrix parameter has changed in SciPy 0.18.0.
+2494: 2026-10-28 11:21:15,084 [ WARNING] WARNING: The behavior of affine_transform with a 1-D array supplied for the matrix parameter has changed in SciPy 0.18.0.
+2495: 261028-11:21:15,98 nipype.workflow INFO:
+2496: 	 [Node] Finished "gen_ref", elapsed time 2.967633s.
+2509: 2026-10-28 11:21:24,112 [    INFO] [Node] Executing "boldref_bold" <fmriprep.interfaces.resampling.ResampleSeries>
+2510: 2026-10-28 11:21:25,488 [ WARNING] WARNING: Reference space not set
+2511: 2026-10-28 11:21:25,503 [ WARNING] WARNING: Reference space not set
+2512: 261028-11:21:36,781 nipype.workflow INFO:
+2513: 	 [Node] Finished "boldref_bold", elapsed time 12.668163s.
+2546: 2026-10-28 11:21:40,423 [    INFO] [Node] Finished "clipper_post", elapsed time 0.327649s.
+2547: 2026-10-28 11:21:41,598 [ WARNING] WARNING: Reference space not set
+2548: 2026-10-28 11:21:41,616 [ WARNING] WARNING: Reference space not set
+2549: 261028-11:21:42,116 nipype.workflow INFO:
+2550: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.unwarp_wf.brainextraction_wf.masker" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/unwarp_wf/brainextraction_wf/masker".
+2554: 2026-10-28 11:21:42,118 [    INFO] [Node] Executing "masker" <sdcflows.interfaces.brainmask.BrainExtraction>
+2555: 2026-10-28 11:21:42,121 [ WARNING] WARNING: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+2556: 2026-10-28 11:21:42,121 [ WARNING] WARNING: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+2557: 261028-11:21:43,501 nipype.workflow INFO:
+2558: 	 [Node] Finished "masker", elapsed time 1.382629s.
+2573: 2026-10-28 11:22:31,287 [    INFO] [Node] Executing "boldref_bold" <fmriprep.interfaces.resampling.ResampleSeries>
+2574: 2026-10-28 11:22:32,740 [ WARNING] WARNING: Reference space not set
+2575: 2026-10-28 11:22:32,754 [ WARNING] WARNING: Reference space not set
+2576: 261028-11:22:44,148 nipype.workflow INFO:
+2577: 	 [Node] Finished "boldref_bold", elapsed time 12.860211s.
+2599: 2026-10-28 11:23:20,315 [    INFO] [Node] Executing "boldref_bold" <fmriprep.interfaces.resampling.ResampleSeries>
+2600: 2026-10-28 11:23:20,319 [ WARNING] WARNING: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+2601: 2026-10-28 11:23:20,319 [ WARNING] WARNING: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+2602: 261028-11:23:20,342 nipype.workflow INFO:
+2603: 	 [Node] Finished "dilate_mask", elapsed time 0.028187s.
+2604: 2026-10-28 11:23:20,342 [    INFO] [Node] Finished "dilate_mask", elapsed time 0.028187s.
+2605: 2026-10-28 11:23:20,645 [ WARNING] WARNING: Niworkflows will be deprecating visualizations in favor of a standalone library "nireports".
+2606: 261028-11:23:20,646 nipype.workflow INFO:
+2607: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.func_fit_reports_wf.sdecreg_report" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/func_fit_reports_wf/sdecreg_report".
+2613: 2026-10-28 11:23:20,863 [ WARNING] WARNING: SOCKS support in urllib3 requires the installation of optional dependencies: specifically, PySocks.  For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#socks-proxies
+2614: 2026-10-28 11:23:21,739 [ WARNING] WARNING: Reference space not set
+2615: 2026-10-28 11:23:21,753 [ WARNING] WARNING: Reference space not set
+2616: 261028-11:23:25,483 nipype.workflow INFO:
+2617: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.wm_mask" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/wm_mask".
+2618: 2026-10-28 11:23:25,483 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.wm_mask" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/wm_mask".
+2619: 261028-11:23:25,484 nipype.workflow INFO:
+2620: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.wm_mask" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/wm_mask".
+2621: 2026-10-28 11:23:25,484 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.wm_mask" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/wm_mask".
+2622: 261028-11:23:25,484 nipype.workflow INFO:
+2623: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.func_fit_reports_wf.t1w_wm" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/func_fit_reports_wf/t1w_wm".
+2663: 2026-10-28 11:23:31,486 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.func_fit_reports_wf.ds_sdcreg_report" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/func_fit_reports_wf/ds_sdcreg_report".
+2664: 2026-10-28 11:23:32,114 [ WARNING] WARNING: Niworkflows will be deprecating visualizations in favor of a standalone library "nireports".
+2665: 261028-11:23:32,117 nipype.workflow INFO:
+2666: 	 [Node] Executing "ds_sdcreg_report" <fmriprep.interfaces.DerivativesDataSink>
+2679: 2026-10-28 11:23:33,503 [    INFO] [Node] Executing "boldref_bold" <fmriprep.interfaces.resampling.ResampleSeries>
+2680: 2026-10-28 11:23:34,934 [ WARNING] WARNING: Reference space not set
+2681: 2026-10-28 11:23:34,949 [ WARNING] WARNING: Reference space not set
+2682: 261028-11:23:37,928 nipype.workflow INFO:
+2683: 	 [Node] Finished "seg_rpt", elapsed time 12.439354s.
+2691: 261028-11:23:47,643 nipype.workflow INFO:
+2692: 	 [Node] Executing "registration" <niworkflows.interfaces.norm.SpatialNormalization>
+2693: 2026-10-28 11:23:47,643 [    INFO] [Node] Executing "registration" <niworkflows.interfaces.norm.SpatialNormalization>
+2694: 2026-10-28 11:23:47,687 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2695: 2026-10-28 11:23:47,687 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2729: 2026-10-28 11:23:49,537 [    INFO] [Node] Executing "acc_masks" <fmriprep.interfaces.confounds.aCompCorMasks>
+2730: 2026-10-28 11:23:49,542 [ WARNING] WARNING: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+2731: 2026-10-28 11:23:49,542 [ WARNING] WARNING: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+2732: 261028-11:23:49,551 nipype.workflow INFO:
+2733: 	 [Node] Finished "clip_t2star", elapsed time 0.027129s.
+2830: 2026-10-28 11:35:43,176 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2831: 2026-10-28 11:35:43,561 [    INFO] Successful spatial normalization (retry #1).
+2832: 261028-11:35:43,562 nipype.workflow INFO:
+2833: 	 [Node] Finished "registration", elapsed time 715.918078s.
+2838: 261028-11:35:44,552 nipype.workflow INFO:
+2839: 	 [Node] Executing "registration" <niworkflows.interfaces.norm.SpatialNormalization>
+2840: 2026-10-28 11:35:44,552 [    INFO] [Node] Executing "registration" <niworkflows.interfaces.norm.SpatialNormalization>
+2841: 2026-10-28 11:35:45,259 [    INFO] Estimating initial transform using AffineInitializer
+2842: 2026-10-28 11:36:25,054 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2848: 2026-10-28 11:50:22,735 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2849: 2026-10-28 11:50:23,148 [    INFO] Successful spatial normalization (retry #1).
+2850: 261028-11:50:23,148 nipype.workflow INFO:
+2851: 	 [Node] Finished "registration", elapsed time 878.595723s.
+2855: 261028-11:50:24,609 nipype.workflow INFO:
+2856: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.mri_coreg" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/mri_coreg".
+2857: 2026-10-28 11:50:24,609 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.anat_fit_wf.register_template_wf.outputnode" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/anat_fit_wf/register_template_wf/outputnode".
+2858: 2026-10-28 11:50:24,609 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.mri_coreg" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/mri_coreg".
+2859: 261028-11:50:24,611 nipype.workflow INFO:
+2860: 	 [Node] Executing "mri_coreg" <nipype.interfaces.freesurfer.registration.MRICoreg>
+2861: 261028-11:50:24,611 nipype.workflow INFO:
+2862: 	 [Node] Executing "outputnode" <nipype.interfaces.utility.base.IdentityInterface>
+2863: 2026-10-28 11:50:24,611 [    INFO] [Node] Executing "mri_coreg" <nipype.interfaces.freesurfer.registration.MRICoreg>
+2864: 2026-10-28 11:50:24,611 [    INFO] [Node] Executing "outputnode" <nipype.interfaces.utility.base.IdentityInterface>
+2865: 261028-11:50:24,612 nipype.workflow INFO:
+2933: 261028-11:50:38,928 nipype.workflow INFO:
+2934: 	 [Node] Finished "mri_coreg", elapsed time 14.316088s.
+2935: 2026-10-28 11:50:38,928 [    INFO] [Node] Finished "mri_coreg", elapsed time 14.316088s.
+2936: 261028-11:50:40,619 nipype.workflow INFO:
+2937: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.mri_coreg" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/mri_coreg".
+2938: 2026-10-28 11:50:40,619 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.mri_coreg" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/mri_coreg".
+2939: 261028-11:50:40,621 nipype.workflow INFO:
+2940: 	 [Node] Executing "mri_coreg" <nipype.interfaces.freesurfer.registration.MRICoreg>
+2941: 2026-10-28 11:50:40,621 [    INFO] [Node] Executing "mri_coreg" <nipype.interfaces.freesurfer.registration.MRICoreg>
+2942: 2026-10-28 11:50:45,176 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2943: 2026-10-28 11:50:45,176 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+2947: 261028-11:50:46,620 nipype.workflow INFO:
+2948: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.lta_to_fsl" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/lta_to_fsl".
+2949: 2026-10-28 11:50:46,620 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.lta_to_fsl" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/lta_to_fsl".
+2950: 261028-11:50:46,622 nipype.workflow INFO:
+2951: 	 [Node] Executing "lta_to_fsl" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+2958: 261028-11:50:48,623 nipype.workflow INFO:
+2959: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.flt_bbr" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/flt_bbr".
+2960: 2026-10-28 11:50:48,623 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.flt_bbr" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/flt_bbr".
+2961: 261028-11:50:48,627 nipype.workflow INFO:
+2962: 	 [Node] Executing "flt_bbr" <nipype.interfaces.fsl.preprocess.FLIRT>
+2966: 261028-11:50:55,289 nipype.workflow INFO:
+2967: 	 [Node] Finished "mri_coreg", elapsed time 14.667374s.
+2968: 2026-10-28 11:50:55,289 [    INFO] [Node] Finished "mri_coreg", elapsed time 14.667374s.
+2969: 261028-11:50:56,620 nipype.workflow INFO:
+2970: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.lta_to_fsl" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/lta_to_fsl".
+2971: 2026-10-28 11:50:56,620 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.lta_to_fsl" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/lta_to_fsl".
+2972: 261028-11:50:56,621 nipype.workflow INFO:
+2973: 	 [Node] Setting-up "_anat2std_tpms1" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/ds_std_volumes_wf/_in_tuple_MNI152NLin6Asym.resnative/anat2std_tpms/mapflow/_anat2std_tpms1".
+2992: 261028-11:50:58,630 nipype.workflow INFO:
+2993: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.flt_bbr" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/flt_bbr".
+2994: 2026-10-28 11:50:58,630 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.flt_bbr" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/flt_bbr".
+2995: 261028-11:50:58,634 nipype.workflow INFO:
+2996: 	 [Node] Executing "flt_bbr" <nipype.interfaces.fsl.preprocess.FLIRT>
+3054: 2026-10-28 11:51:10,693 [    INFO] [Node] Finished "anat2std_mask", elapsed time 34.039339s.
+3055: 261028-11:51:10,846 nipype.interface WARNING:
+3056: 	 Changing /rebuild/fmriprep-24/sub-10834/ses-01/anat/sub-10834_ses-01_space-MNI152NLin6Asym_desc-brain_mask.nii.gz dtype from float64 to uint8
+3057: 2026-10-28 11:51:10,846 [ WARNING] Changing /rebuild/fmriprep-24/sub-10834/ses-01/anat/sub-10834_ses-01_space-MNI152NLin6Asym_desc-brain_mask.nii.gz dtype from float64 to uint8
+3079: 2026-10-28 11:51:13,299 [    INFO] [Node] Finished "anat2std_dseg", elapsed time 36.646286s.
+3080: 261028-11:51:14,854 nipype.interface WARNING:
+3081: 	 Changing /rebuild/fmriprep-24/sub-10834/ses-01/anat/sub-10834_ses-01_space-MNI152NLin6Asym_dseg.nii.gz dtype from float64 to int16
+3082: 2026-10-28 11:51:14,854 [ WARNING] Changing /rebuild/fmriprep-24/sub-10834/ses-01/anat/sub-10834_ses-01_space-MNI152NLin6Asym_dseg.nii.gz dtype from float64 to int16
+3091: 261028-11:51:32,829 nipype.workflow INFO:
+3092: 	 [Node] Setting-up "_fsl_to_lta1" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta1".
+3093: 2026-10-28 11:51:32,829 [    INFO] [Node] Setting-up "_fsl_to_lta1" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta1".
+3094: 2026-10-28 11:51:32,829 [ WARNING] WARNING: Niworkflows will be deprecating reporting in favor of a standalone library "nireports".
+3095: 261028-11:51:32,831 nipype.workflow INFO:
+3096: 	 [Node] Executing "_fsl_to_lta1" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+3098: 261028-11:51:32,835 nipype.workflow INFO:
+3099: 	 [Node] Setting-up "_fsl_to_lta0" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta0".
+3100: 2026-10-28 11:51:32,835 [    INFO] [Node] Setting-up "_fsl_to_lta0" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta0".
+3101: 261028-11:51:32,836 nipype.workflow INFO:
+3102: 	 [Node] Executing "_fsl_to_lta0" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+3114: 261028-11:51:34,844 nipype.workflow INFO:
+3115: 	 [Node] Setting-up "_fsl_to_lta0" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta0".
+3116: 2026-10-28 11:51:34,844 [    INFO] [Node] Setting-up "_fsl_to_lta0" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta0".
+3117: 261028-11:51:34,844 nipype.workflow INFO:
+3118: 	 [Node] Cached "_fsl_to_lta0" - collecting precomputed outputs
+3123: 261028-11:51:34,845 nipype.workflow INFO:
+3124: 	 [Node] Setting-up "_fsl_to_lta1" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta1".
+3125: 2026-10-28 11:51:34,845 [    INFO] [Node] Setting-up "_fsl_to_lta1" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta1".
+3126: 261028-11:51:34,846 nipype.workflow INFO:
+3127: 	 [Node] Cached "_fsl_to_lta1" - collecting precomputed outputs
+3137: 261028-11:51:36,925 nipype.workflow INFO:
+3138: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.compare_transforms" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/compare_transforms".
+3139: 2026-10-28 11:51:36,925 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.compare_transforms" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/compare_transforms".
+3140: 261028-11:51:36,926 nipype.workflow INFO:
+3141: 	 [Node] Executing "compare_transforms" <nipype.interfaces.utility.wrappers.Function>
+3146: 261028-11:51:40,831 nipype.workflow INFO:
+3147: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.fsl2itk_fwd" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_fwd".
+3148: 2026-10-28 11:51:40,831 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.fsl2itk_fwd" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_fwd".
+3149: 261028-11:51:40,834 nipype.workflow INFO:
+3150: 	 [Node] Executing "fsl2itk_fwd" <nipype.interfaces.c3.C3dAffineTool>
+3152: 261028-11:51:40,867 nipype.workflow INFO:
+3153: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.invt_bbr" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/invt_bbr".
+3154: 2026-10-28 11:51:40,867 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.invt_bbr" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/invt_bbr".
+3155: 261028-11:51:40,869 nipype.workflow INFO:
+3156: 	 [Node] Executing "invt_bbr" <nipype.interfaces.fsl.utils.ConvertXFM>
+3163: 261028-11:51:40,988 nipype.workflow INFO:
+3164: 	 [Node] Setting-up "_fsl_to_lta0" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta0".
+3165: 2026-10-28 11:51:40,988 [    INFO] [Node] Setting-up "_fsl_to_lta0" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta0".
+3166: 261028-11:51:40,989 nipype.workflow INFO:
+3167: 	 [Node] Setting-up "_fsl_to_lta1" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta1".
+3168: 2026-10-28 11:51:40,989 [    INFO] [Node] Setting-up "_fsl_to_lta1" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta1".
+3169: 261028-11:51:40,990 nipype.workflow INFO:
+3170: 	 [Node] Executing "_fsl_to_lta0" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+3190: 261028-11:51:42,833 nipype.workflow INFO:
+3191: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.fsl2itk_inv" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_inv".
+3192: 2026-10-28 11:51:42,833 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.fsl2itk_inv" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_inv".
+3193: 261028-11:51:42,835 nipype.workflow INFO:
+3194: 	 [Node] Executing "fsl2itk_inv" <nipype.interfaces.c3.C3dAffineTool>
+3196: 261028-11:51:42,836 nipype.workflow INFO:
+3197: 	 [Node] Setting-up "_fsl_to_lta0" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta0".
+3198: 2026-10-28 11:51:42,836 [    INFO] [Node] Setting-up "_fsl_to_lta0" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta0".
+3199: 261028-11:51:42,836 nipype.workflow INFO:
+3200: 	 [Node] Cached "_fsl_to_lta0" - collecting precomputed outputs
+3205: 261028-11:51:42,837 nipype.workflow INFO:
+3206: 	 [Node] Setting-up "_fsl_to_lta1" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta1".
+3207: 2026-10-28 11:51:42,837 [    INFO] [Node] Setting-up "_fsl_to_lta1" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta1".
+3208: 261028-11:51:42,837 nipype.workflow INFO:
+3209: 	 [Node] Cached "_fsl_to_lta1" - collecting precomputed outputs
+3219: 261028-11:51:44,829 nipype.workflow INFO:
+3220: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.compare_transforms" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/compare_transforms".
+3221: 2026-10-28 11:51:44,829 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.compare_transforms" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/compare_transforms".
+3222: 261028-11:51:44,830 nipype.workflow INFO:
+3223: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_1_echo_1_part_mag_wf.bold_fit_wf.func_fit_reports_wf.boldref_wm" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/func_fit_reports_wf/boldref_wm".
+3239: 2026-10-28 11:51:44,833 [    INFO] [Node] Executing "label_tfm" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+3240: 2026-10-28 11:51:44,863 [ WARNING] WARNING: Niworkflows will be deprecating reporting in favor of a standalone library "nireports".
+3241: 261028-11:51:44,870 nipype.workflow INFO:
+3242: 	 [Node] Executing "compare_transforms" <nipype.interfaces.utility.wrappers.Function>
+3333: 261028-11:51:47,34 nipype.interface INFO:
+3334: 	 Report - setting before (/rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_part-mag_desc-coreg_boldref.nii.gz) and after (/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/hmc_boldref_wf/gen_avg/sub-10834_ses-01_task-trust_run-1_echo-1_part-mag_bold_average.nii.gz) images
+3335: 2026-10-28 11:51:47,034 [    INFO] Report - setting before (/rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_part-mag_desc-coreg_boldref.nii.gz) and after (/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/hmc_boldref_wf/gen_avg/sub-10834_ses-01_task-trust_run-1_echo-1_part-mag_bold_average.nii.gz) images
+3336: 261028-11:51:47,34 nipype.interface INFO:
+3337: 	 Generating visual report
+3342: 261028-11:51:47,35 nipype.interface INFO:
+3343: 	 Report - setting before (/rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_part-mag_desc-coreg_boldref.nii.gz) and after (/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/func_fit_reports_wf/t1w_boldref/sub-10834_ses-01_desc-preproc_T1w_trans.nii.gz) images
+3344: 2026-10-28 11:51:47,035 [    INFO] Report - setting before (/rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_part-mag_desc-coreg_boldref.nii.gz) and after (/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_fit_wf/func_fit_reports_wf/t1w_boldref/sub-10834_ses-01_desc-preproc_T1w_trans.nii.gz) images
+3345: 261028-11:51:47,35 nipype.interface INFO:
+3346: 	 Generating visual report
+3460: 261028-11:51:48,855 nipype.workflow INFO:
+3461: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.invt_bbr" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/invt_bbr".
+3462: 261028-11:51:48,855 nipype.workflow INFO:
+3463: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.fsl2itk_fwd" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_fwd".
+3464: 2026-10-28 11:51:48,855 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.invt_bbr" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/invt_bbr".
+3465: 2026-10-28 11:51:48,855 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.fsl2itk_fwd" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_fwd".
+3466: 261028-11:51:48,857 nipype.workflow INFO:
+3467: 	 [Node] Executing "invt_bbr" <nipype.interfaces.fsl.utils.ConvertXFM>
+3500: 261028-11:51:49,22 nipype.interface INFO:
+3501: 	 Report - setting before (/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_native_wf/bold_t2smap_wf/t2smap_node/T2starmap.nii.gz) and after (/rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_part-mag_desc-coreg_boldref.nii.gz) images
+3502: 2026-10-28 11:51:49,022 [    INFO] Report - setting before (/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_1_echo_1_part_mag_wf/bold_native_wf/bold_t2smap_wf/t2smap_node/T2starmap.nii.gz) and after (/rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_part-mag_desc-coreg_boldref.nii.gz) images
+3503: 261028-11:51:49,22 nipype.interface INFO:
+3504: 	 Generating visual report
+3529: 2026-10-28 11:51:49,025 [    INFO] [Node] "_acc_msk_tfm2" found cached.
+3530: 2026-10-28 11:51:49,027 [ WARNING] WARNING: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+3531: 2026-10-28 11:51:49,027 [ WARNING] WARNING: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+3532: 261028-11:51:49,54 nipype.workflow INFO:
+3533: 	 [Node] Finished "dilated_mask", elapsed time 0.032264s.
+3542: 2026-10-28 11:51:49,188 [    INFO] [Node] Finished "t2s_hist", elapsed time 0.167208s.
+3543: 261028-11:51:49,261 nipype.interface WARNING:
+3544: 	 Changing /rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_part-mag_space-T1w_desc-brain_mask.nii.gz dtype from float64 to uint8
+3545: 2026-10-28 11:51:49,261 [ WARNING] Changing /rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_part-mag_space-T1w_desc-brain_mask.nii.gz dtype from float64 to uint8
+3554: 261028-11:51:50,849 nipype.workflow INFO:
+3555: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.fsl2itk_inv" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_inv".
+3556: 2026-10-28 11:51:50,849 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.fsl2itk_inv" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_inv".
+3557: 261028-11:51:50,852 nipype.workflow INFO:
+3558: 	 [Node] Executing "fsl2itk_inv" <nipype.interfaces.c3.C3dAffineTool>
+3565: 2026-10-28 11:51:51,002 [    INFO] [Node] Executing "resample" <fmriprep.interfaces.resampling.ResampleSeries>
+3566: 2026-10-28 11:51:51,025 [ WARNING] WARNING: Reference space not set
+3567: 2026-10-28 11:51:51,034 [ WARNING] WARNING: Reference space not set
+3568: 2026-10-28 11:51:51,141 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+3569: 2026-10-28 11:51:51,141 [ WARNING] WARNING: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+3570: 261028-11:51:51,230 nipype.interface WARNING:
+3571: 	 Changing /rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-brain_mask.nii.gz dtype from float64 to uint8
+3572: 2026-10-28 11:51:51,230 [ WARNING] Changing /rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-brain_mask.nii.gz dtype from float64 to uint8
+3684: 261028-11:51:59,270 nipype.interface INFO:
+3685: 	 Report - setting before (/rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_part-mag_desc-coreg_boldref.nii.gz) and after (/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/hmc_boldref_wf/gen_avg/sub-10834_ses-01_task-trust_run-2_echo-1_part-mag_bold_average.nii.gz) images
+3686: 2026-10-28 11:51:59,270 [    INFO] Report - setting before (/rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_part-mag_desc-coreg_boldref.nii.gz) and after (/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/hmc_boldref_wf/gen_avg/sub-10834_ses-01_task-trust_run-2_echo-1_part-mag_bold_average.nii.gz) images
+3687: 261028-11:51:59,270 nipype.interface INFO:
+3688: 	 Generating visual report
+3708: 261028-11:52:00,849 nipype.interface INFO:
+3709: 	 Report - setting before (/rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_part-mag_desc-coreg_boldref.nii.gz) and after (/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/func_fit_reports_wf/t1w_boldref/sub-10834_ses-01_desc-preproc_T1w_trans.nii.gz) images
+3710: 2026-10-28 11:52:00,849 [    INFO] Report - setting before (/rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_part-mag_desc-coreg_boldref.nii.gz) and after (/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_fit_wf/func_fit_reports_wf/t1w_boldref/sub-10834_ses-01_desc-preproc_T1w_trans.nii.gz) images
+3711: 261028-11:52:00,849 nipype.interface INFO:
+3712: 	 Generating visual report
+3825: 261028-11:52:02,873 nipype.interface INFO:
+3826: 	 Report - setting before (/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_native_wf/bold_t2smap_wf/t2smap_node/T2starmap.nii.gz) and after (/rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_part-mag_desc-coreg_boldref.nii.gz) images
+3827: 2026-10-28 11:52:02,873 [    INFO] Report - setting before (/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/bold_native_wf/bold_t2smap_wf/t2smap_node/T2starmap.nii.gz) and after (/rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_part-mag_desc-coreg_boldref.nii.gz) images
+3828: 261028-11:52:02,873 nipype.interface INFO:
+3829: 	 Generating visual report
+3860: 2026-10-28 11:52:04,860 [    INFO] [Node] Finished "dilated_mask", elapsed time 0.012865s.
+3861: 261028-11:52:05,63 nipype.interface WARNING:
+3862: 	 Changing /rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_part-mag_space-T1w_desc-brain_mask.nii.gz dtype from float64 to uint8
+3863: 2026-10-28 11:52:05,063 [ WARNING] Changing /rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_part-mag_space-T1w_desc-brain_mask.nii.gz dtype from float64 to uint8
+3864: 261028-11:52:05,681 nipype.interface WARNING:
+3865: 	 Changing /rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_part-mag_space-MNI152NLin6Asym_desc-brain_mask.nii.gz dtype from float64 to uint8
+3866: 2026-10-28 11:52:05,681 [ WARNING] Changing /rebuild/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_part-mag_space-MNI152NLin6Asym_desc-brain_mask.nii.gz dtype from float64 to uint8
+3966: 2026-10-28 11:52:12,860 [    INFO] [Node] Finished "_acc_msk_brain1", elapsed time 0.016287s.
+3967: 2026-10-28 11:52:12,869 [ WARNING] WARNING: Reference space not set
+3968: 2026-10-28 11:52:12,871 [ WARNING] WARNING: Reference space not set
+3969: 261028-11:52:13,897 nipype.workflow INFO:
+3970: 	 [Node] Finished "epi_t1_report", elapsed time 13.048489s.
+4364: 2026-10-28 11:52:30,924 [    INFO] [Node] Finished "model_expansion", elapsed time 0.069217s.
+4365: 2026-10-28 11:52:30,989 [ WARNING] WARNING: 
+4366: 
+4367: Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+4486: 2026-10-28 11:52:38,922 [    INFO] [Node] Finished "model_expansion", elapsed time 0.069783s.
+4487: 2026-10-28 11:52:38,972 [ WARNING] WARNING: 
+4488: 
+4489: Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+4507: 	 [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.carpetplot_wf.conf_plot" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/carpetplot_wf/conf_plot".
+4508: 2026-10-28 11:52:43,027 [    INFO] [Node] Setting-up "fmriprep_24_1_wf.sub_10834_wf.bold_ses_01_task_trust_run_2_echo_1_part_mag_wf.carpetplot_wf.conf_plot" in "/scratch/fmriprep_24_1_wf/sub_10834_wf/bold_ses_01_task_trust_run_2_echo_1_part_mag_wf/carpetplot_wf/conf_plot".
+4509: 261028-11:52:43,30 nipype.workflow INFO:
+4510: 	 [Node] Executing "conf_plot" <fmriprep.interfaces.confounds.FMRISummary>
+4511: 2026-10-28 11:52:43,030 [    INFO] [Node] Executing "conf_plot" <fmriprep.interfaces.confounds.FMRISummary>
+4512: 2026-10-28 11:52:44,179 [ WARNING] WARNING: The default strategy for standardize is currently 'zscore' which incorrectly uses population std to calculate sample zscores. The new strategy 'zscore_sample' corrects this behavior by using the sample std. In release 0.13, the default strategy will be replaced by the new strategy and the 'zscore' option will be removed. Please use 'zscore_sample' instead.
+4513: 261028-11:52:45,84 nipype.workflow INFO:
+4514: 	 [Node] Finished "conf_plot", elapsed time 2.053973s.
+4515: 2026-10-28 11:52:45,084 [    INFO] [Node] Finished "conf_plot", elapsed time 2.053973s.
+4516: 261028-11:52:48,838 nipype.workflow IMPORTANT:
+4517: 	 fMRIPrep finished successfully!
+4518: 2026-10-28 11:52:48,838 [IMPORTANT] fMRIPrep finished successfully!
+4519: 261028-11:52:48,838 nipype.workflow IMPORTANT:
+4520: 	 Works derived from this fMRIPrep execution should include the boilerplate text found in <OUTPUT_PATH>/logs/CITATION.md.
+4521: 2026-10-28 11:52:48,838 [IMPORTANT] Works derived from this fMRIPrep execution should include the boilerplate text found in <OUTPUT_PATH>/logs/CITATION.md.

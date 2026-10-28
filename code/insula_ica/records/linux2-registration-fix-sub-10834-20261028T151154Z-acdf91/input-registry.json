@@ -1,0 +1,134 @@
+[
+  {
+    "key": "sub-10834_ses-01_task-trust_run-1",
+    "subject": "sub-10834",
+    "run": 1,
+    "nvol": 280,
+    "tr": 1.615,
+    "old_bold": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+    "new_bold": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/registration-sub-10834-ignore-sbref-20261028T151154Z-acdf91/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+    "original_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10834/ses-01/L1_task-trust_model-01_type-act_run-1_sm-5.feat",
+    "original_fsf": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10834/ses-01/L1_task-trust_model-01_type-act_run-1_sm-5.feat/design.fsf",
+    "fsf_sha256": "eea4f5f09629009402151af566a748fa75f12309b4f121365bb484ee07f5cbab",
+    "confounds": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/original_confounds/sub-10834/sub-10834_ses-01_task-trust_run-1_desc-TedanaPlusConfounds.tsv",
+    "confounds_sha256": "3bd7586e92765eb85d6dc149ee7d687115f81851112a954190a0aecb23a15955",
+    "nuisance_columns": 28,
+    "warpkit": {
+      "ready": true,
+      "problems": [],
+      "files": {
+        "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/fmap/sub-10834_ses-01_acq-trust_run-1_fieldmap.nii.gz": {
+          "size": 420199,
+          "mtime_ns": 1783791464978337760
+        },
+        "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/fmap/sub-10834_ses-01_acq-trust_run-1_magnitude.nii.gz": {
+          "size": 693269,
+          "mtime_ns": 1783791466714365157
+        },
+        "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/fmap/sub-10834_ses-01_acq-trust_run-1_fieldmap.json": {
+          "size": 3725,
+          "mtime_ns": 1783943759480505825,
+          "sha256": "eedaed4ca8df806f4323b69a8fa120677cc3567edff770d12eba7e4c220274dc"
+        },
+        "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/fmap/sub-10834_ses-01_acq-trust_run-1_magnitude.json": {
+          "size": 3713,
+          "mtime_ns": 1783943759481505839,
+          "sha256": "43c107f37ac6698d716c497546643870240161bd55d1347872f7d43878bd82f7"
+        }
+      },
+      "retained_4d_fieldmaps": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/warpkit/sub-10834/ses-01/sub-10834_ses-01_task-trust_run-1_fieldmaps.nii",
+      "retained_4d_exists": true
+    },
+    "raw_images": {
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_echo-1_part-mag_bold.nii.gz": {
+        "size": 150444222,
+        "mtime_ns": 1783324253526362963
+      },
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_echo-2_part-mag_bold.nii.gz": {
+        "size": 141918715,
+        "mtime_ns": 1783324249884304124
+      },
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_echo-3_part-mag_bold.nii.gz": {
+        "size": 136206205,
+        "mtime_ns": 1783324246251245431
+      },
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_echo-4_part-mag_bold.nii.gz": {
+        "size": 132231304,
+        "mtime_ns": 1783324257173421884
+      }
+    },
+    "raw_metadata_sha256": {
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_echo-1_part-mag_bold.json": "aa65f151218ea21540500f292f7ffee7deec5a49c83d7f7b738c26fcd31ee42d",
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_echo-2_part-mag_bold.json": "d2157fd6b4210c1b5ec8e9f2361336a3a9400f026ffe9d2aff7a20922419fca9",
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_echo-3_part-mag_bold.json": "3522ceb80b0d82401513fe4f740c28bacc2beadf5859bae0e72ef31dc0d5cbb4",
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-1_echo-4_part-mag_bold.json": "552fac0be26ba9c66f6291595a75bfc88cda479aaee4f29e48ed5e2790409abc"
+    },
+    "tedana_action": "reuse_original_combined_FEAT_confounds"
+  },
+  {
+    "key": "sub-10834_ses-01_task-trust_run-2",
+    "subject": "sub-10834",
+    "run": 2,
+    "nvol": 280,
+    "tr": 1.615,
+    "old_bold": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+    "new_bold": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/registration-sub-10834-ignore-sbref-20261028T151154Z-acdf91/fmriprep-24/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+    "original_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10834/ses-01/L1_task-trust_model-01_type-act_run-2_sm-5.feat",
+    "original_fsf": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10834/ses-01/L1_task-trust_model-01_type-act_run-2_sm-5.feat/design.fsf",
+    "fsf_sha256": "ed3073d2c4e79dee4814c05b1601be58e7dec791536d65898fba64fd94ea4603",
+    "confounds": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/original_confounds/sub-10834/sub-10834_ses-01_task-trust_run-2_desc-TedanaPlusConfounds.tsv",
+    "confounds_sha256": "699cd7a315021d3b8f2c0a6df7e53c0542c4993b66e93b7c515b6d8db326f0f5",
+    "nuisance_columns": 33,
+    "warpkit": {
+      "ready": true,
+      "problems": [],
+      "files": {
+        "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/fmap/sub-10834_ses-01_acq-trust_run-2_fieldmap.nii.gz": {
+          "size": 419932,
+          "mtime_ns": 1783791493866793731
+        },
+        "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/fmap/sub-10834_ses-01_acq-trust_run-2_magnitude.nii.gz": {
+          "size": 693193,
+          "mtime_ns": 1783791495809824405
+        },
+        "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/fmap/sub-10834_ses-01_acq-trust_run-2_fieldmap.json": {
+          "size": 3722,
+          "mtime_ns": 1783943759481505839,
+          "sha256": "c8823a873b754de30f29b265720e187815929cc06e5563182005f1f36b6c1370"
+        },
+        "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/fmap/sub-10834_ses-01_acq-trust_run-2_magnitude.json": {
+          "size": 3710,
+          "mtime_ns": 1783943759481505839,
+          "sha256": "c63faaead86a5881e55c9539abe2c8c0d54f2209af16e2b086966458d8440ff7"
+        }
+      },
+      "retained_4d_fieldmaps": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/warpkit/sub-10834/ses-01/sub-10834_ses-01_task-trust_run-2_fieldmaps.nii",
+      "retained_4d_exists": true
+    },
+    "raw_images": {
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_echo-1_part-mag_bold.nii.gz": {
+        "size": 150475806,
+        "mtime_ns": 1783324290886966588
+      },
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_echo-2_part-mag_bold.nii.gz": {
+        "size": 141968548,
+        "mtime_ns": 1783324298165084187
+      },
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_echo-3_part-mag_bold.nii.gz": {
+        "size": 136281712,
+        "mtime_ns": 1783324294524025355
+      },
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_echo-4_part-mag_bold.nii.gz": {
+        "size": 132323515,
+        "mtime_ns": 1783324301826143344
+      }
+    },
+    "raw_metadata_sha256": {
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_echo-1_part-mag_bold.json": "3fa4af5b5a334742f143df0421d66366f464d3638bf4ee2821416f4b147fea29",
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_echo-2_part-mag_bold.json": "a262216cb5f5236a9928ac16f4cbc34359fb367c238e17d219ffbce219c7798d",
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_echo-3_part-mag_bold.json": "5bb8f7f76660a2c5b869b4075f4a7a8e4c7fb9e3729fb4ce930b4ea45ffe3826",
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10834/ses-01/func/sub-10834_ses-01_task-trust_run-2_echo-4_part-mag_bold.json": "4eb94a15757b79935329ffb2d2d2a64375fff8a89ca7dcec726f2a50565dcc08"
+    },
+    "tedana_action": "reuse_original_combined_FEAT_confounds"
+  }
+]

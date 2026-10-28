@@ -1,0 +1,14 @@
+{
+  "diagnosis": "Gross BOLD-to-T1w mismatch, poor BOLD-reference masking in both runs.",
+  "candidate": "Ignore SBRef and estimate the reference from the BOLD series.",
+  "additional_filter_correction": "SBRef queries now inherit each BOLD run instead of overriding run with a list.",
+  "changed_scientific_setting": [
+    "--ignore sbref"
+  ],
+  "all_other_command_settings_from": "production_command",
+  "source_record": "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/records/linux2-trust-regeneration-20261027T162428Z-ef53c5",
+  "original_confounds_required": true,
+  "automatic_adoption": false,
+  "participant_exclusions": [],
+  "documentation": "https://fmriprep.org/en/24.1.1/usage.html#workflow-configuration"
+}
