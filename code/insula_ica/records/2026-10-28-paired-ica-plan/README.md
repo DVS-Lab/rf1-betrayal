@@ -30,6 +30,12 @@ and pushed, including failures. Original FEAT trees and unrelated working files
 are preserved. Successful results remain `paired_ICA_complete_review_pending`;
 this command does not run network connectivity or task-effect inference.
 
+Use `python code/insula_ica/status_group_ica.py --brief` with the Linux2 Python
+environment for a compact live report. It shows prepared inputs, validated fit
+completion markers (fixed 18 plus automatic 6), active processes, automatic component
+counts, and bounded error lines. Partial maps do not count as completed fits. A full
+status snapshot is saved under ignored `code/insula_ica/output/paired-ica-status-*`.
+
 ## Accepted sources
 
 - Trust base: `linux2-trust-regeneration-20261027T162428Z-ef53c5`.
