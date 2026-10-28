@@ -1,0 +1,3346 @@
+
+Melodic Version 3.15
+
+/usr/local/fsl/bin/melodic -i /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/inputs.txt -o /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/ica/joint_bold/right/dim-5 --tr=1.615 --nobet -a concat -m /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/masks/right_crop.nii.gz --bgimage=/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/reference_crop.nii.gz --report --Oall -d 5 --disableMigp --vn --update_mask --seed=20261028 --maxit=2000 --maxrestart=10 
+---------------------------------------------
+
+Melodic results will be in /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/ica/joint_bold/right/dim-5
+
+Mask provided : /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/masks/right_crop.nii.gz
+
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10369_task-trust  ...  done
+  Estimating data smoothness ...  done 
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10369_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10402_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10402_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10478_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10478_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10486_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10486_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10581_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10581_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10584_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10584_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10589_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10589_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10596_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10596_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10606_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10606_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10608_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10608_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10640_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10640_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10641_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10641_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10642_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10642_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10647_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10647_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10656_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10656_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10661_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10661_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10663_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10663_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10668_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10668_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10673_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10673_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10674_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10674_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10677_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10677_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10685_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10685_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10700_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10700_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10701_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10701_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10718_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10718_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10720_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10720_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10723_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10723_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10741_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10741_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10748_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10748_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10767_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10767_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10777_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10777_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10781_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10781_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10783_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10783_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10794_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10794_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10800_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10800_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10801_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10801_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10802_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10802_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10803_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10803_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10804_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10804_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10817_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10817_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10831_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10831_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10834_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10834_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10838_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10838_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10843_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10843_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10850_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10850_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10854_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10854_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10857_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10857_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10860_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10860_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10863_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10863_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10875_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10875_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10887_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10887_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10896_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10896_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10897_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10897_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10908_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10908_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10918_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10918_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10919_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10919_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10924_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10924_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10929_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10929_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10930_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10930_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10950_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10950_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10952_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10952_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10956_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10956_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10958_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10958_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10961_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10961_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10966_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10966_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10969_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10969_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10977_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10977_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10983_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10983_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10984_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10984_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10998_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10998_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11007_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11007_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11016_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11016_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11021_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11021_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11030_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11030_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11031_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11031_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11036_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11036_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11039_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11039_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11042_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11042_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11053_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11053_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11060_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11060_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11063_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11063_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11065_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11065_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11066_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11066_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11068_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11068_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11072_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11072_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11074_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11074_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11113_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11113_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11139_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11139_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11227_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11227_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11238_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11238_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11246_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11246_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11286_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11286_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11301_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11301_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11311_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11311_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11316_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11316_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11318_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11318_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11321_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11321_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11325_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11325_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11326_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11326_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11329_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11329_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11330_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11330_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11337_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11337_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11338_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11338_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11345_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11345_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11348_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11348_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11358_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11358_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11364_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11364_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11387_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11387_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11426_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11426_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11430_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11430_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11433_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11433_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11435_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11435_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11451_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11451_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11492_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11492_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11498_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11498_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11517_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11517_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11518_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11518_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11523_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11523_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11526_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11526_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11527_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11527_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11529_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11529_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11530_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11530_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11532_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11532_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11533_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11533_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11534_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11534_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11535_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11535_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11536_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11536_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11539_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11539_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11540_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11540_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11570_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11570_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11572_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11572_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11579_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11579_task-ugr  ...  done
+  Removing mean image ... done
+
+Initial data size : 240 x 427
+
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10369_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10369_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10402_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10402_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10478_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10478_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10486_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10486_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10581_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10581_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10584_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10584_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10589_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10589_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10596_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10596_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10606_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10606_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10608_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10608_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10640_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10640_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10641_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10641_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10642_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10642_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10647_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10647_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10656_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10656_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10661_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10661_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10663_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10663_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10668_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10668_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10673_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10673_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10674_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10674_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10677_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10677_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10685_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10685_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10700_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10700_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10701_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10701_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10718_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10718_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10720_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10720_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10723_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10723_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10741_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10741_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10748_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10748_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10767_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10767_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10777_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10777_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10781_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10781_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10783_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10783_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10794_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10794_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10800_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10800_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10801_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10801_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10802_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10802_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10803_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10803_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10804_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10804_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10817_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10817_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10831_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10831_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10834_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10834_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10838_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10838_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10843_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10843_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10850_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10850_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10854_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10854_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10857_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10857_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10860_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10860_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10863_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10863_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10875_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10875_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10887_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10887_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10896_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10896_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10897_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10897_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10908_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10908_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10918_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10918_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10919_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10919_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10924_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10924_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10929_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10929_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10930_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10930_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10950_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10950_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10952_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10952_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10956_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10956_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10958_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10958_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10961_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10961_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10966_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10966_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10969_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10969_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10977_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10977_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10983_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10983_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10984_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10984_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10998_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-10998_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11007_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11007_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11016_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11016_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11021_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11021_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11030_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11030_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11031_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11031_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11036_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11036_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11039_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11039_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11042_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11042_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11053_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11053_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11060_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11060_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11063_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11063_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11065_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11065_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11066_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11066_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11068_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11068_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11072_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11072_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11074_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11074_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11113_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11113_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11139_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11139_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11227_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11227_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11238_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11238_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11246_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11246_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11286_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11286_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11301_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11301_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11311_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11311_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11316_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11316_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11318_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11318_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11321_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11321_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11325_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11325_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11326_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11326_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11329_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11329_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11330_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11330_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11337_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11337_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11338_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11338_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11345_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11345_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11348_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11348_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11358_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11358_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11364_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11364_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11387_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11387_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11426_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11426_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11430_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11430_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11433_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11433_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11435_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11435_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11451_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11451_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11492_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11492_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11498_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11498_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11517_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11517_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11518_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11518_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11523_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11523_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11526_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11526_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11527_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11527_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11529_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11529_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11530_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11530_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11532_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11532_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11533_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11533_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11534_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11534_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11535_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11535_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11536_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11536_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11539_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11539_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11540_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11540_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11570_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11570_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11572_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11572_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11579_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/joint_bold/right/sub-11579_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 5 dimensional subspace 
+
+  Data size : 1320 x 427
+
+Starting PCA  ... done
+Start whitening using  5 dimensions ... 
+  retaining 27.717 percent of the variability 
+ ... done
+
+Starting ICA estimation using concat
+
+  Step no. 1 change : 0.944296
+  Step no. 2 change : 0.699117
+  Step no. 3 change : 0.931246
+  Step no. 4 change : 0.549415
+  Step no. 5 change : 0.767554
+  Step no. 6 change : 0.619265
+  Step no. 7 change : 0.53929
+  Step no. 8 change : 0.818933
+  Step no. 9 change : 0.808386
+  Step no. 10 change : 0.823972
+  Step no. 11 change : 0.788504
+  Step no. 12 change : 0.66977
+  Step no. 13 change : 0.452469
+  Step no. 14 change : 0.353575
+  Step no. 15 change : 0.443842
+  Step no. 16 change : 0.499386
+  Step no. 17 change : 0.576573
+  Step no. 18 change : 0.571275
+  Step no. 19 change : 0.840014
+  Step no. 20 change : 0.705835
+  Step no. 21 change : 0.229582
+  Step no. 22 change : 0.205173
+  Step no. 23 change : 0.363022
+  Step no. 24 change : 0.68042
+  Step no. 25 change : 0.276503
+  Step no. 26 change : 0.43156
+  Step no. 27 change : 0.959292
+  Step no. 28 change : 0.884166
+  Step no. 29 change : 0.655218
+  Step no. 30 change : 0.368886
+  Step no. 31 change : 0.529004
+  Step no. 32 change : 0.984475
+  Step no. 33 change : 0.790328
+  Step no. 34 change : 0.573351
+  Step no. 35 change : 0.99886
+  Step no. 36 change : 0.763965
+  Step no. 37 change : 0.41707
+  Step no. 38 change : 0.732244
+  Step no. 39 change : 0.238154
+  Step no. 40 change : 0.334579
+  Step no. 41 change : 0.424217
+  Step no. 42 change : 0.663796
+  Step no. 43 change : 0.992969
+  Step no. 44 change : 0.245309
+  Step no. 45 change : 0.286234
+  Step no. 46 change : 0.370463
+  Step no. 47 change : 0.652099
+  Step no. 48 change : 0.98239
+  Step no. 49 change : 0.257972
+  Step no. 50 change : 0.194593
+  Step no. 51 change : 0.220153
+  Step no. 52 change : 0.374045
+  Step no. 53 change : 0.573252
+  Step no. 54 change : 0.988649
+  Step no. 55 change : 0.584825
+  Step no. 56 change : 0.320879
+  Step no. 57 change : 0.302041
+  Step no. 58 change : 0.321697
+  Step no. 59 change : 0.352841
+  Step no. 60 change : 0.448142
+  Step no. 61 change : 0.631984
+  Step no. 62 change : 0.971287
+  Step no. 63 change : 0.805449
+  Step no. 64 change : 0.409696
+  Step no. 65 change : 0.209316
+  Step no. 66 change : 0.187459
+  Step no. 67 change : 0.225396
+  Step no. 68 change : 0.299873
+  Step no. 69 change : 0.346586
+  Step no. 70 change : 0.435296
+  Step no. 71 change : 0.478366
+  Step no. 72 change : 0.555628
+  Step no. 73 change : 0.561179
+  Step no. 74 change : 0.545136
+  Step no. 75 change : 0.707238
+  Step no. 76 change : 0.927225
+  Step no. 77 change : 0.865571
+  Step no. 78 change : 0.517924
+  Step no. 79 change : 0.961038
+  Step no. 80 change : 0.697006
+  Step no. 81 change : 0.352195
+  Step no. 82 change : 0.548641
+  Step no. 83 change : 0.968109
+  Step no. 84 change : 0.423076
+  Step no. 85 change : 0.48068
+  Step no. 86 change : 0.988904
+  Step no. 87 change : 0.86789
+  Step no. 88 change : 0.69991
+  Step no. 89 change : 0.477222
+  Step no. 90 change : 0.28971
+  Step no. 91 change : 0.292046
+  Step no. 92 change : 0.336264
+  Step no. 93 change : 0.423415
+  Step no. 94 change : 0.46462
+  Step no. 95 change : 0.54416
+  Step no. 96 change : 0.575656
+  Step no. 97 change : 0.632443
+  Step no. 98 change : 0.638252
+  Step no. 99 change : 0.625498
+  Step no. 100 change : 0.609828
+  Step no. 101 change : 0.949043
+  Step no. 102 change : 0.275445
+  Step no. 103 change : 0.342401
+  Step no. 104 change : 0.444064
+  Step no. 105 change : 0.756372
+  Step no. 106 change : 0.8547
+  Step no. 107 change : 0.443496
+  Step no. 108 change : 0.133127
+  Step no. 109 change : 0.0583633
+  Step no. 110 change : 0.0723035
+  Step no. 111 change : 0.100172
+  Step no. 112 change : 0.124771
+  Step no. 113 change : 0.166126
+  Step no. 114 change : 0.19718
+  Step no. 115 change : 0.248875
+  Step no. 116 change : 0.274572
+  Step no. 117 change : 0.32123
+  Step no. 118 change : 0.456957
+  Step no. 119 change : 0.670711
+  Step no. 120 change : 0.986567
+  Step no. 121 change : 0.729878
+  Step no. 122 change : 0.304175
+  Step no. 123 change : 0.292651
+  Step no. 124 change : 0.34228
+  Step no. 125 change : 0.457261
+  Step no. 126 change : 0.62688
+  Step no. 127 change : 0.964968
+  Step no. 128 change : 0.473172
+  Step no. 129 change : 0.453376
+  Step no. 130 change : 0.99476
+  Step no. 131 change : 0.987724
+  Step no. 132 change : 0.977484
+  Step no. 133 change : 0.942417
+  Step no. 134 change : 0.879101
+  Step no. 135 change : 0.764147
+  Step no. 136 change : 0.56156
+  Step no. 137 change : 0.306523
+  Step no. 138 change : 0.248542
+  Step no. 139 change : 0.433305
+  Step no. 140 change : 0.689541
+  Step no. 141 change : 0.983038
+  Step no. 142 change : 0.773421
+  Step no. 143 change : 0.420734
+  Step no. 144 change : 0.236956
+  Step no. 145 change : 0.233042
+  Step no. 146 change : 0.276593
+  Step no. 147 change : 0.361811
+  Step no. 148 change : 0.409852
+  Step no. 149 change : 0.499184
+  Step no. 150 change : 0.530508
+  Step no. 151 change : 0.574706
+  Step no. 152 change : 0.532654
+  Step no. 153 change : 0.76253
+  Step no. 154 change : 0.823338
+  Step no. 155 change : 0.37392
+  Step no. 156 change : 0.50444
+  Step no. 157 change : 0.912099
+  Step no. 158 change : 0.465909
+  Step no. 159 change : 0.164977
+  Step no. 160 change : 0.168707
+  Step no. 161 change : 0.197276
+  Step no. 162 change : 0.259095
+  Step no. 163 change : 0.304026
+  Step no. 164 change : 0.429033
+  Step no. 165 change : 0.673147
+  Step no. 166 change : 0.916425
+  Step no. 167 change : 0.35695
+  Step no. 168 change : 0.178997
+  Step no. 169 change : 0.14894
+  Step no. 170 change : 0.228702
+  Step no. 171 change : 0.346
+  Step no. 172 change : 0.601058
+  Step no. 173 change : 0.94774
+  Step no. 174 change : 0.195447
+  Step no. 175 change : 0.285326
+  Step no. 176 change : 0.3804
+  Step no. 177 change : 0.666224
+  Step no. 178 change : 0.954401
+  Step no. 179 change : 0.292176
+  Step no. 180 change : 0.171416
+  Step no. 181 change : 0.169759
+  Step no. 182 change : 0.274514
+  Step no. 183 change : 0.417681
+  Step no. 184 change : 0.726584
+  Step no. 185 change : 0.888124
+  Step no. 186 change : 0.510564
+  Step no. 187 change : 0.156091
+  Step no. 188 change : 0.085368
+  Step no. 189 change : 0.154699
+  Step no. 190 change : 0.250059
+  Step no. 191 change : 0.449387
+  Step no. 192 change : 0.738692
+  Step no. 193 change : 0.917655
+  Step no. 194 change : 0.667067
+  Step no. 195 change : 0.341003
+  Step no. 196 change : 0.389998
+  Step no. 197 change : 0.492644
+  Step no. 198 change : 0.598271
+  Step no. 199 change : 0.814665
+  Step no. 200 change : 0.775298
+  Step no. 201 change : 0.311128
+  Step no. 202 change : 0.377132
+  Step no. 203 change : 0.674858
+  Step no. 204 change : 0.891884
+  Step no. 205 change : 0.799058
+  Step no. 206 change : 0.620455
+  Step no. 207 change : 0.36415
+  Step no. 208 change : 0.437218
+  Step no. 209 change : 0.807538
+  Step no. 210 change : 0.539218
+  Step no. 211 change : 0.309318
+  Step no. 212 change : 0.265538
+  Step no. 213 change : 0.292156
+  Step no. 214 change : 0.338703
+  Step no. 215 change : 0.369802
+  Step no. 216 change : 0.490474
+  Step no. 217 change : 0.757559
+  Step no. 218 change : 0.739358
+  Step no. 219 change : 0.599154
+  Step no. 220 change : 0.958583
+  Step no. 221 change : 0.572609
+  Step no. 222 change : 0.216651
+  Step no. 223 change : 0.197177
+  Step no. 224 change : 0.382168
+  Step no. 225 change : 0.651009
+  Step no. 226 change : 0.0661725
+  Step no. 227 change : 0.115794
+  Step no. 228 change : 0.284346
+  Step no. 229 change : 0.270943
+  Step no. 230 change : 0.305115
+  Step no. 231 change : 0.481962
+  Step no. 232 change : 0.702733
+  Step no. 233 change : 0.942695
+  Step no. 234 change : 0.69921
+  Step no. 235 change : 0.855782
+  Step no. 236 change : 0.632831
+  Step no. 237 change : 0.314236
+  Step no. 238 change : 0.469139
+  Step no. 239 change : 0.998619
+  Step no. 240 change : 0.954261
+  Step no. 241 change : 0.922514
+  Step no. 242 change : 0.895279
+  Step no. 243 change : 0.823122
+  Step no. 244 change : 0.679814
+  Step no. 245 change : 0.440307
+  Step no. 246 change : 0.675328
+  Step no. 247 change : 0.918647
+  Step no. 248 change : 0.706835
+  Step no. 249 change : 0.400214
+  Step no. 250 change : 0.290207
+  Step no. 251 change : 0.352766
+  Step no. 252 change : 0.408942
+  Step no. 253 change : 0.496504
+  Step no. 254 change : 0.525176
+  Step no. 255 change : 0.723566
+  Step no. 256 change : 0.913436
+  Step no. 257 change : 0.500114
+  Step no. 258 change : 0.798027
+  Step no. 259 change : 0.514286
+  Step no. 260 change : 0.268462
+  Step no. 261 change : 0.212099
+  Step no. 262 change : 0.237311
+  Step no. 263 change : 0.296624
+  Step no. 264 change : 0.434283
+  Step no. 265 change : 0.633966
+  Step no. 266 change : 0.963154
+  Step no. 267 change : 0.860867
+  Step no. 268 change : 0.511236
+  Step no. 269 change : 0.225424
+  Step no. 270 change : 0.156439
+  Step no. 271 change : 0.273375
+  Step no. 272 change : 0.422109
+  Step no. 273 change : 0.729891
+  Step no. 274 change : 0.971847
+  Step no. 275 change : 0.80908
+  Step no. 276 change : 0.43084
+  Step no. 277 change : 0.775573
+  Step no. 278 change : 0.330318
+  Step no. 279 change : 0.243578
+  Step no. 280 change : 0.278341
+  Step no. 281 change : 0.330728
+  Step no. 282 change : 0.454336
+  Step no. 283 change : 0.694394
+  Step no. 284 change : 0.874004
+  Step no. 285 change : 0.416393
+  Step no. 286 change : 0.162156
+  Step no. 287 change : 0.0967433
+  Step no. 288 change : 0.119813
+  Step no. 289 change : 0.172882
+  Step no. 290 change : 0.279111
+  Step no. 291 change : 0.4196
+  Step no. 292 change : 0.712901
+  Step no. 293 change : 0.868548
+  Step no. 294 change : 0.465276
+  Step no. 295 change : 0.14314
+  Step no. 296 change : 0.060567
+  Step no. 297 change : 0.0709121
+  Step no. 298 change : 0.096885
+  Step no. 299 change : 0.148226
+  Step no. 300 change : 0.214337
+  Step no. 301 change : 0.345198
+  Step no. 302 change : 0.518234
+  Step no. 303 change : 0.875569
+  Step no. 304 change : 0.699275
+  Step no. 305 change : 0.501163
+  Step no. 306 change : 0.768708
+  Step no. 307 change : 0.780665
+  Step no. 308 change : 0.438673
+  Step no. 309 change : 0.551489
+  Step no. 310 change : 0.955755
+  Step no. 311 change : 0.898727
+  Step no. 312 change : 0.755349
+  Step no. 313 change : 0.57664
+  Step no. 314 change : 0.322614
+  Step no. 315 change : 0.281096
+  Step no. 316 change : 0.497176
+  Step no. 317 change : 0.812512
+  Step no. 318 change : 0.828759
+  Step no. 319 change : 0.442577
+  Step no. 320 change : 0.601667
+  Step no. 321 change : 0.958584
+  Step no. 322 change : 0.946121
+  Step no. 323 change : 0.893982
+  Step no. 324 change : 0.790282
+  Step no. 325 change : 0.598324
+  Step no. 326 change : 0.336237
+  Step no. 327 change : 0.356937
+  Step no. 328 change : 0.652212
+  Step no. 329 change : 0.929484
+  Step no. 330 change : 0.582822
+  Step no. 331 change : 0.194902
+  Step no. 332 change : 0.20335
+  Step no. 333 change : 0.394804
+  Step no. 334 change : 0.671129
+  Step no. 335 change : 0.076048
+  Step no. 336 change : 0.139894
+  Step no. 337 change : 0.343844
+  Step no. 338 change : 0.219985
+  Step no. 339 change : 0.198785
+  Step no. 340 change : 0.286998
+  Step no. 341 change : 0.412566
+  Step no. 342 change : 0.671573
+  Step no. 343 change : 0.93831
+  Step no. 344 change : 0.315329
+  Step no. 345 change : 0.190758
+  Step no. 346 change : 0.187774
+  Step no. 347 change : 0.308749
+  Step no. 348 change : 0.471491
+  Step no. 349 change : 0.821334
+  Step no. 350 change : 0.934021
+  Step no. 351 change : 0.911698
+  Step no. 352 change : 0.629673
+  Step no. 353 change : 0.271054
+  Step no. 354 change : 0.443006
+  Step no. 355 change : 0.969415
+  Step no. 356 change : 0.898761
+  Step no. 357 change : 0.709191
+  Step no. 358 change : 0.446402
+  Step no. 359 change : 0.74195
+  Step no. 360 change : 0.785159
+  Step no. 361 change : 0.523111
+  Step no. 362 change : 0.769685
+  Step no. 363 change : 0.710192
+  Step no. 364 change : 0.430154
+  Step no. 365 change : 0.409302
+  Step no. 366 change : 0.77116
+  Step no. 367 change : 0.487895
+  Step no. 368 change : 0.318726
+  Step no. 369 change : 0.37321
+  Step no. 370 change : 0.426757
+  Step no. 371 change : 0.52464
+  Step no. 372 change : 0.554716
+  Step no. 373 change : 0.591307
+  Step no. 374 change : 0.556295
+  Step no. 375 change : 0.836668
+  Step no. 376 change : 0.706834
+  Step no. 377 change : 0.22844
+  Step no. 378 change : 0.19662
+  Step no. 379 change : 0.346974
+  Step no. 380 change : 0.65108
+  Step no. 381 change : 0.247432
+  Step no. 382 change : 0.356539
+  Step no. 383 change : 0.877044
+  Step no. 384 change : 0.584085
+  Step no. 385 change : 0.248959
+  Step no. 386 change : 0.31374
+  Step no. 387 change : 0.714408
+  Step no. 388 change : 0.451168
+  Step no. 389 change : 0.630121
+  Step no. 390 change : 0.957188
+  Step no. 391 change : 0.843986
+  Step no. 392 change : 0.649769
+  Step no. 393 change : 0.386942
+  Step no. 394 change : 0.538304
+  Step no. 395 change : 0.998137
+  Step no. 396 change : 0.834361
+  Step no. 397 change : 0.66612
+  Step no. 398 change : 0.45162
+  Step no. 399 change : 0.334405
+  Step no. 400 change : 0.412337
+  Step no. 401 change : 0.469247
+  Step no. 402 change : 0.557511
+  Step no. 403 change : 0.532089
+  Step no. 404 change : 0.687613
+  Step no. 405 change : 0.948069
+  Step no. 406 change : 0.566182
+  Step no. 407 change : 0.978114
+  Step no. 408 change : 0.843928
+  Step no. 409 change : 0.690722
+  Step no. 410 change : 0.478168
+  Step no. 411 change : 0.301135
+  Step no. 412 change : 0.319662
+  Step no. 413 change : 0.367737
+  Step no. 414 change : 0.461273
+  Step no. 415 change : 0.50411
+  Step no. 416 change : 0.582496
+  Step no. 417 change : 0.598827
+  Step no. 418 change : 0.610083
+  Step no. 419 change : 0.571671
+  Step no. 420 change : 0.869053
+  Step no. 421 change : 0.654475
+  Step no. 422 change : 0.185874
+  Step no. 423 change : 0.109708
+  Step no. 424 change : 0.183149
+  Step no. 425 change : 0.33893
+  Step no. 426 change : 0.649854
+  Step no. 427 change : 0.91549
+  Step no. 428 change : 0.914297
+  Step no. 429 change : 0.704983
+  Step no. 430 change : 0.452971
+  Step no. 431 change : 0.273714
+  Step no. 432 change : 0.284619
+  Step no. 433 change : 0.331815
+  Step no. 434 change : 0.423748
+  Step no. 435 change : 0.469489
+  Step no. 436 change : 0.553073
+  Step no. 437 change : 0.571775
+  Step no. 438 change : 0.586818
+  Step no. 439 change : 0.588531
+  Step no. 440 change : 0.938117
+  Step no. 441 change : 0.257922
+  Step no. 442 change : 0.370463
+  Step no. 443 change : 0.494124
+  Step no. 444 change : 0.838728
+  Step no. 445 change : 0.995725
+  Step no. 446 change : 0.724103
+  Step no. 447 change : 0.318295
+  Step no. 448 change : 0.484775
+  Step no. 449 change : 0.91474
+  Step no. 450 change : 0.612715
+  Step no. 451 change : 0.28463
+  Step no. 452 change : 0.340495
+  Step no. 453 change : 0.622226
+  Step no. 454 change : 0.946144
+  Step no. 455 change : 0.479004
+  Step no. 456 change : 0.148484
+  Step no. 457 change : 0.097745
+  Step no. 458 change : 0.140801
+  Step no. 459 change : 0.224655
+  Step no. 460 change : 0.39334
+  Step no. 461 change : 0.611957
+  Step no. 462 change : 0.944531
+  Step no. 463 change : 0.441239
+  Step no. 464 change : 0.48554
+  Step no. 465 change : 0.944419
+  Step no. 466 change : 0.829885
+  Step no. 467 change : 0.672982
+  Step no. 468 change : 0.4513
+  Step no. 469 change : 0.322594
+  Step no. 470 change : 0.394729
+  Step no. 471 change : 0.451653
+  Step no. 472 change : 0.54474
+  Step no. 473 change : 0.537688
+  Step no. 474 change : 0.613294
+  Step no. 475 change : 0.918641
+  Step no. 476 change : 0.814381
+  Step no. 477 change : 0.593304
+  Step no. 478 change : 0.299105
+  Step no. 479 change : 0.147429
+  Step no. 480 change : 0.165461
+  Step no. 481 change : 0.238168
+  Step no. 482 change : 0.37191
+  Step no. 483 change : 0.547039
+  Step no. 484 change : 0.907541
+  Step no. 485 change : 0.813006
+  Step no. 486 change : 0.75571
+  Step no. 487 change : 0.62579
+  Step no. 488 change : 0.387911
+  Step no. 489 change : 0.432854
+  Step no. 490 change : 0.790509
+  Step no. 491 change : 0.551273
+  Step no. 492 change : 0.329573
+  Step no. 493 change : 0.289958
+  Step no. 494 change : 0.317172
+  Step no. 495 change : 0.366847
+  Step no. 496 change : 0.367595
+  Step no. 497 change : 0.434956
+  Step no. 498 change : 0.647705
+  Step no. 499 change : 0.981674
+  Step no. 500 change : 0.651633
+  Step no. 501 change : 0.252228
+  Step no. 502 change : 0.275247
+  Step no. 503 change : 0.530748
+  Step no. 504 change : 0.925865
+  Step no. 505 change : 0.450697
+  Step no. 506 change : 0.163551
+  Step no. 507 change : 0.135962
+  Step no. 508 change : 0.163844
+  Step no. 509 change : 0.212351
+  Step no. 510 change : 0.240679
+  Step no. 511 change : 0.290318
+  Step no. 512 change : 0.417328
+  Step no. 513 change : 0.596833
+  Step no. 514 change : 0.966746
+  Step no. 515 change : 0.97507
+  Step no. 516 change : 0.736351
+  Step no. 517 change : 0.429433
+  Step no. 518 change : 0.7377
+  Step no. 519 change : 0.764691
+  Step no. 520 change : 0.534786
+  Step no. 521 change : 0.782625
+  Step no. 522 change : 0.698304
+  Step no. 523 change : 0.40815
+  Step no. 524 change : 0.336676
+  Step no. 525 change : 0.62953
+  Step no. 526 change : 0.918355
+  Step no. 527 change : 0.544813
+  Step no. 528 change : 0.173546
+  Step no. 529 change : 0.150864
+  Step no. 530 change : 0.288617
+  Step no. 531 change : 0.481244
+  Step no. 532 change : 0.883145
+  Step no. 533 change : 0.757038
+  Step no. 534 change : 0.647531
+  Step no. 535 change : 0.440462
+  Step no. 536 change : 0.577543
+  Step no. 537 change : 0.815072
+  Step no. 538 change : 0.538068
+  Step no. 539 change : 0.263116
+  Step no. 540 change : 0.196723
+  Step no. 541 change : 0.32848
+  Step no. 542 change : 0.493062
+  Step no. 543 change : 0.831276
+  Step no. 544 change : 0.655724
+  Step no. 545 change : 0.429792
+  Step no. 546 change : 0.47433
+  Step no. 547 change : 0.860641
+  Step no. 548 change : 0.68258
+  Step no. 549 change : 0.467909
+  Step no. 550 change : 0.679917
+  Step no. 551 change : 0.928535
+  Step no. 552 change : 0.673144
+  Step no. 553 change : 0.327553
+  Step no. 554 change : 0.375822
+  Step no. 555 change : 0.468065
+  Step no. 556 change : 0.592312
+  Step no. 557 change : 0.811707
+  Step no. 558 change : 0.792361
+  Step no. 559 change : 0.327967
+  Step no. 560 change : 0.39856
+  Step no. 561 change : 0.714224
+  Step no. 562 change : 0.832963
+  Step no. 563 change : 0.671443
+  Step no. 564 change : 0.376607
+  Step no. 565 change : 0.609946
+  Step no. 566 change : 0.744955
+  Step no. 567 change : 0.496669
+  Step no. 568 change : 0.315451
+  Step no. 569 change : 0.360373
+  Step no. 570 change : 0.411127
+  Step no. 571 change : 0.507312
+  Step no. 572 change : 0.545582
+  Step no. 573 change : 0.608062
+  Step no. 574 change : 0.586425
+  Step no. 575 change : 0.567595
+  Step no. 576 change : 0.854748
+  Step no. 577 change : 0.542846
+  Step no. 578 change : 0.459297
+  Step no. 579 change : 0.616105
+  Step no. 580 change : 0.630699
+  Step no. 581 change : 0.618831
+  Step no. 582 change : 0.944337
+  Step no. 583 change : 0.787264
+  Step no. 584 change : 0.636138
+  Step no. 585 change : 0.309641
+  Step no. 586 change : 0.168209
+  Step no. 587 change : 0.291205
+  Step no. 588 change : 0.462593
+  Step no. 589 change : 0.811355
+  Step no. 590 change : 0.544481
+  Step no. 591 change : 0.323728
+  Step no. 592 change : 0.297133
+  Step no. 593 change : 0.328057
+  Step no. 594 change : 0.386381
+  Step no. 595 change : 0.391948
+  Step no. 596 change : 0.395574
+  Step no. 597 change : 0.526009
+  Step no. 598 change : 0.730394
+  Step no. 599 change : 0.874819
+  Step no. 600 change : 0.497135
+  Step no. 601 change : 0.87071
+  Step no. 602 change : 0.471683
+  Step no. 603 change : 0.816584
+  Step no. 604 change : 0.515257
+  Step no. 605 change : 0.925812
+  Step no. 606 change : 0.428272
+  Step no. 607 change : 0.158742
+  Step no. 608 change : 0.179605
+  Step no. 609 change : 0.208343
+  Step no. 610 change : 0.273141
+  Step no. 611 change : 0.317842
+  Step no. 612 change : 0.403276
+  Step no. 613 change : 0.445443
+  Step no. 614 change : 0.515078
+  Step no. 615 change : 0.497881
+  Step no. 616 change : 0.658972
+  Step no. 617 change : 0.989329
+  Step no. 618 change : 0.669238
+  Step no. 619 change : 0.890923
+  Step no. 620 change : 0.678758
+  Step no. 621 change : 0.366805
+  Step no. 622 change : 0.337169
+  Step no. 623 change : 0.419161
+  Step no. 624 change : 0.464491
+  Step no. 625 change : 0.580311
+  Step no. 626 change : 0.8335
+  Step no. 627 change : 0.641482
+  Step no. 628 change : 0.363181
+  Step no. 629 change : 0.3209
+  Step no. 630 change : 0.509482
+  Step no. 631 change : 0.815864
+  Step no. 632 change : 0.804091
+  Step no. 633 change : 0.378749
+  Step no. 634 change : 0.508762
+  Step no. 635 change : 0.966376
+  Step no. 636 change : 0.717452
+  Step no. 637 change : 0.412788
+  Step no. 638 change : 0.690098
+  Step no. 639 change : 0.89665
+  Step no. 640 change : 0.680165
+  Step no. 641 change : 0.374516
+  Step no. 642 change : 0.344374
+  Step no. 643 change : 0.43275
+  Step no. 644 change : 0.477442
+  Step no. 645 change : 0.58173
+  Step no. 646 change : 0.827915
+  Step no. 647 change : 0.633983
+  Step no. 648 change : 0.353964
+  Step no. 649 change : 0.304614
+  Step no. 650 change : 0.426342
+  Step no. 651 change : 0.636787
+  Step no. 652 change : 0.946109
+  Step no. 653 change : 0.840678
+  Step no. 654 change : 0.480183
+  Step no. 655 change : 0.216676
+  Step no. 656 change : 0.133419
+  Step no. 657 change : 0.192121
+  Step no. 658 change : 0.2782
+  Step no. 659 change : 0.448774
+  Step no. 660 change : 0.688942
+  Step no. 661 change : 0.971524
+  Step no. 662 change : 0.768412
+  Step no. 663 change : 0.390073
+  Step no. 664 change : 0.238422
+  Step no. 665 change : 0.255752
+  Step no. 666 change : 0.305209
+  Step no. 667 change : 0.39562
+  Step no. 668 change : 0.435485
+  Step no. 669 change : 0.486112
+  Step no. 670 change : 0.638524
+  Step no. 671 change : 0.963528
+  Step no. 672 change : 0.330748
+  Step no. 673 change : 0.239659
+  Step no. 674 change : 0.258453
+  Step no. 675 change : 0.435891
+  Step no. 676 change : 0.662063
+  Step no. 677 change : 0.0302823
+  Step no. 678 change : 0.0283889
+  Step no. 679 change : 0.0605064
+  Step no. 680 change : 0.131803
+  Step no. 681 change : 0.316329
+  Step no. 682 change : 0.186026
+  Step no. 683 change : 0.176582
+  Step no. 684 change : 0.278734
+  Step no. 685 change : 0.418827
+  Step no. 686 change : 0.719958
+  Step no. 687 change : 0.872084
+  Step no. 688 change : 0.47619
+  Step no. 689 change : 0.144307
+  Step no. 690 change : 0.0636046
+  Step no. 691 change : 0.0838217
+  Step no. 692 change : 0.1286
+  Step no. 693 change : 0.212266
+  Step no. 694 change : 0.322416
+  Step no. 695 change : 0.555044
+  Step no. 696 change : 0.903323
+  Step no. 697 change : 0.707667
+  Step no. 698 change : 0.350921
+  Step no. 699 change : 0.187187
+  Step no. 700 change : 0.315919
+  Step no. 701 change : 0.499757
+  Step no. 702 change : 0.870723
+  Step no. 703 change : 0.641037
+  Step no. 704 change : 0.398961
+  Step no. 705 change : 0.456178
+  Step no. 706 change : 0.828887
+  Step no. 707 change : 0.615734
+  Step no. 708 change : 0.371322
+  Step no. 709 change : 0.339736
+  Step no. 710 change : 0.596965
+  Step no. 711 change : 0.989965
+  Step no. 712 change : 0.540368
+  Step no. 713 change : 0.350687
+  Step no. 714 change : 0.328685
+  Step no. 715 change : 0.38908
+  Step no. 716 change : 0.473839
+  Step no. 717 change : 0.629822
+  Step no. 718 change : 0.962958
+  Step no. 719 change : 0.250859
+  Step no. 720 change : 0.368171
+  Step no. 721 change : 0.495537
+  Step no. 722 change : 0.848859
+  Step no. 723 change : 0.980657
+  Step no. 724 change : 0.783699
+  Step no. 725 change : 0.402873
+  Step no. 726 change : 0.69754
+  Step no. 727 change : 0.753311
+  Step no. 728 change : 0.622717
+  Step no. 729 change : 0.330079
+  Step no. 730 change : 0.384909
+  Step no. 731 change : 0.777508
+  Step no. 732 change : 0.632274
+  Step no. 733 change : 0.349439
+  Step no. 734 change : 0.471509
+  Step no. 735 change : 0.994914
+  Step no. 736 change : 0.909552
+  Step no. 737 change : 0.803923
+  Step no. 738 change : 0.657404
+  Step no. 739 change : 0.410549
+  Step no. 740 change : 0.57606
+  Step no. 741 change : 0.937131
+  Step no. 742 change : 0.976256
+  Step no. 743 change : 0.955242
+  Step no. 744 change : 0.966969
+  Step no. 745 change : 0.968496
+  Step no. 746 change : 0.958562
+  Step no. 747 change : 0.931371
+  Step no. 748 change : 0.874228
+  Step no. 749 change : 0.76392
+  Step no. 750 change : 0.565293
+  Step no. 751 change : 0.310466
+  Step no. 752 change : 0.257088
+  Step no. 753 change : 0.450136
+  Step no. 754 change : 0.721684
+  Step no. 755 change : 0.967393
+  Step no. 756 change : 0.674984
+  Step no. 757 change : 0.291433
+  Step no. 758 change : 0.508431
+  Step no. 759 change : 0.944565
+  Step no. 760 change : 0.879791
+  Step no. 761 change : 0.816343
+  Step no. 762 change : 0.713268
+  Step no. 763 change : 0.504336
+  Step no. 764 change : 0.852515
+  Step no. 765 change : 0.631173
+  Step no. 766 change : 0.364976
+  Step no. 767 change : 0.20026
+  Step no. 768 change : 0.217315
+  Step no. 769 change : 0.271329
+  Step no. 770 change : 0.398069
+  Step no. 771 change : 0.56989
+  Step no. 772 change : 0.92504
+  Step no. 773 change : 0.944566
+  Step no. 774 change : 0.953431
+  Step no. 775 change : 0.772181
+  Step no. 776 change : 0.512115
+  Step no. 777 change : 0.260803
+  Step no. 778 change : 0.173646
+  Step no. 779 change : 0.257573
+  Step no. 780 change : 0.37267
+  Step no. 781 change : 0.609206
+  Step no. 782 change : 0.995887
+  Step no. 783 change : 0.559028
+  Step no. 784 change : 0.303691
+  Step no. 785 change : 0.224259
+  Step no. 786 change : 0.271357
+  Step no. 787 change : 0.359606
+  Step no. 788 change : 0.40205
+  Step no. 789 change : 0.472637
+  Step no. 790 change : 0.687859
+  Step no. 791 change : 0.906113
+  Step no. 792 change : 0.483301
+  Step no. 793 change : 0.159305
+  Step no. 794 change : 0.0641421
+  Step no. 795 change : 0.0778438
+  Step no. 796 change : 0.10857
+  Step no. 797 change : 0.135914
+  Step no. 798 change : 0.184548
+  Step no. 799 change : 0.222137
+  Step no. 800 change : 0.292579
+  Step no. 801 change : 0.337648
+  Step no. 802 change : 0.424315
+  Step no. 803 change : 0.467916
+  Step no. 804 change : 0.548901
+  Step no. 805 change : 0.566659
+  Step no. 806 change : 0.580457
+  Step no. 807 change : 0.591806
+  Step no. 808 change : 0.953271
+  Step no. 809 change : 0.270042
+  Step no. 810 change : 0.344206
+  Step no. 811 change : 0.449039
+  Step no. 812 change : 0.766171
+  Step no. 813 change : 0.872426
+  Step no. 814 change : 0.475344
+  Step no. 815 change : 0.138037
+  Step no. 816 change : 0.0574189
+  Step no. 817 change : 0.0707217
+  Step no. 818 change : 0.108846
+  Step no. 819 change : 0.177979
+  Step no. 820 change : 0.269116
+  Step no. 821 change : 0.460554
+  Step no. 822 change : 0.73411
+  Step no. 823 change : 0.958157
+  Step no. 824 change : 0.673292
+  Step no. 825 change : 0.304371
+  Step no. 826 change : 0.524816
+  Step no. 827 change : 0.911626
+  Step no. 828 change : 0.803371
+  Step no. 829 change : 0.670571
+  Step no. 830 change : 0.462889
+  Step no. 831 change : 0.336711
+  Step no. 832 change : 0.416094
+  Step no. 833 change : 0.473234
+  Step no. 834 change : 0.564747
+  Step no. 835 change : 0.548677
+  Step no. 836 change : 0.631639
+  Step no. 837 change : 0.9588
+  Step no. 838 change : 0.737345
+  Step no. 839 change : 0.742262
+  Step no. 840 change : 0.417219
+  Step no. 841 change : 0.529222
+  Step no. 842 change : 0.997807
+  Step no. 843 change : 0.813426
+  Step no. 844 change : 0.595682
+  Step no. 845 change : 0.358216
+  Step no. 846 change : 0.459973
+  Step no. 847 change : 0.992765
+  Step no. 848 change : 0.994032
+  Step no. 849 change : 0.96073
+  Step no. 850 change : 0.93699
+  Step no. 851 change : 0.886875
+  Step no. 852 change : 0.788824
+  Step no. 853 change : 0.609573
+  Step no. 854 change : 0.349845
+  Step no. 855 change : 0.461844
+  Step no. 856 change : 0.97662
+  Step no. 857 change : 0.964568
+  Step no. 858 change : 0.909453
+  Step no. 859 change : 0.848665
+  Step no. 860 change : 0.723467
+  Step no. 861 change : 0.503928
+  Step no. 862 change : 0.286023
+  Step no. 863 change : 0.233641
+  Step no. 864 change : 0.263115
+  Step no. 865 change : 0.315811
+  Step no. 866 change : 0.330267
+  Step no. 867 change : 0.431159
+  Step no. 868 change : 0.646031
+  Step no. 869 change : 0.94346
+  Step no. 870 change : 0.56804
+  Step no. 871 change : 0.193153
+  Step no. 872 change : 0.119795
+  Step no. 873 change : 0.229366
+  Step no. 874 change : 0.398926
+  Step no. 875 change : 0.755848
+  Step no. 876 change : 0.924988
+  Step no. 877 change : 0.948474
+  Step no. 878 change : 0.710594
+  Step no. 879 change : 0.418344
+  Step no. 880 change : 0.264555
+  Step no. 881 change : 0.292951
+  Step no. 882 change : 0.344734
+  Step no. 883 change : 0.439782
+  Step no. 884 change : 0.476804
+  Step no. 885 change : 0.523674
+  Step no. 886 change : 0.6092
+  Step no. 887 change : 0.970974
+  Step no. 888 change : 0.272747
+  Step no. 889 change : 0.330503
+  Step no. 890 change : 0.427438
+  Step no. 891 change : 0.733333
+  Step no. 892 change : 0.860948
+  Step no. 893 change : 0.3932
+  Step no. 894 change : 0.133485
+  Step no. 895 change : 0.0811247
+  Step no. 896 change : 0.100929
+  Step no. 897 change : 0.140279
+  Step no. 898 change : 0.177067
+  Step no. 899 change : 0.237068
+  Step no. 900 change : 0.360671
+  Step no. 901 change : 0.525169
+  Step no. 902 change : 0.861709
+  Step no. 903 change : 0.792547
+  Step no. 904 change : 0.728959
+  Step no. 905 change : 0.638271
+  Step no. 906 change : 0.410289
+  Step no. 907 change : 0.435395
+  Step no. 908 change : 0.786344
+  Step no. 909 change : 0.576266
+  Step no. 910 change : 0.347757
+  Step no. 911 change : 0.263324
+  Step no. 912 change : 0.286559
+  Step no. 913 change : 0.372582
+  Step no. 914 change : 0.559078
+  Step no. 915 change : 0.914002
+  Step no. 916 change : 0.649172
+  Step no. 917 change : 0.252486
+  Step no. 918 change : 0.127092
+  Step no. 919 change : 0.22905
+  Step no. 920 change : 0.377332
+  Step no. 921 change : 0.681174
+  Step no. 922 change : 0.999128
+  Step no. 923 change : 0.708237
+  Step no. 924 change : 0.304786
+  Step no. 925 change : 0.498484
+  Step no. 926 change : 0.94629
+  Step no. 927 change : 0.517482
+  Step no. 928 change : 0.391124
+  Step no. 929 change : 0.434649
+  Step no. 930 change : 0.491051
+  Step no. 931 change : 0.591525
+  Step no. 932 change : 0.611556
+  Step no. 933 change : 0.623386
+  Step no. 934 change : 0.605895
+  Step no. 935 change : 0.947042
+  Step no. 936 change : 0.273265
+  Step no. 937 change : 0.3521
+  Step no. 938 change : 0.460512
+  Step no. 939 change : 0.783151
+  Step no. 940 change : 0.897726
+  Step no. 941 change : 0.520451
+  Step no. 942 change : 0.152356
+  Step no. 943 change : 0.0770574
+  Step no. 944 change : 0.138924
+  Step no. 945 change : 0.227304
+  Step no. 946 change : 0.411829
+  Step no. 947 change : 0.680155
+  Step no. 948 change : 0.993229
+  Step no. 949 change : 0.870939
+  Step no. 950 change : 0.681206
+  Step no. 951 change : 0.423211
+  Step no. 952 change : 0.654252
+  Step no. 953 change : 0.942871
+  Step no. 954 change : 0.788822
+  Step no. 955 change : 0.541065
+  Step no. 956 change : 0.283941
+  Step no. 957 change : 0.214676
+  Step no. 958 change : 0.371078
+  Step no. 959 change : 0.577465
+  Step no. 960 change : 0.988355
+  Step no. 961 change : 0.902556
+  Step no. 962 change : 0.877051
+  Step no. 963 change : 0.849664
+  Step no. 964 change : 0.759463
+  Step no. 965 change : 0.578686
+  Step no. 966 change : 0.327308
+  Step no. 967 change : 0.287384
+  Step no. 968 change : 0.508177
+  Step no. 969 change : 0.833272
+  Step no. 970 change : 0.797595
+  Step no. 971 change : 0.406665
+  Step no. 972 change : 0.469546
+  Step no. 973 change : 0.894942
+  Step no. 974 change : 0.607673
+  Step no. 975 change : 0.312634
+  Step no. 976 change : 0.351562
+  Step no. 977 change : 0.637129
+  Step no. 978 change : 0.916454
+  Step no. 979 change : 0.511035
+  Step no. 980 change : 0.158448
+  Step no. 981 change : 0.103352
+  Step no. 982 change : 0.193847
+  Step no. 983 change : 0.318904
+  Step no. 984 change : 0.58848
+  Step no. 985 change : 0.958507
+  Step no. 986 change : 0.249311
+  Step no. 987 change : 0.208781
+  Step no. 988 change : 0.241777
+  Step no. 989 change : 0.402846
+  Step no. 990 change : 0.608654
+  Step no. 991 change : 0.968211
+  Step no. 992 change : 0.486243
+  Step no. 993 change : 0.412382
+  Step no. 994 change : 0.535458
+  Step no. 995 change : 0.551391
+  Step no. 996 change : 0.663424
+  Step no. 997 change : 0.999726
+  Step no. 998 change : 0.658816
+  Step no. 999 change : 0.911966
+  Step no. 1000 change : 0.700359
+  Step no. 1001 change : 0.383363
+  Step no. 1002 change : 0.298961
+  Step no. 1003 change : 0.364387
+  Step no. 1004 change : 0.419243
+  Step no. 1005 change : 0.494304
+  Step no. 1006 change : 0.618305
+  Step no. 1007 change : 0.952463
+  Step no. 1008 change : 0.24796
+  Step no. 1009 change : 0.378569
+  Step no. 1010 change : 0.511853
+  Step no. 1011 change : 0.872891
+  Step no. 1012 change : 0.93824
+  Step no. 1013 change : 0.885348
+  Step no. 1014 change : 0.571031
+  Step no. 1015 change : 0.206367
+  Step no. 1016 change : 0.260379
+  Step no. 1017 change : 0.603864
+  Step no. 1018 change : 0.331176
+  Step no. 1019 change : 0.23595
+  Step no. 1020 change : 0.430939
+  Step no. 1021 change : 0.704745
+  Step no. 1022 change : 0.982698
+  Step no. 1023 change : 0.746048
+  Step no. 1024 change : 0.409877
+  Step no. 1025 change : 0.257289
+  Step no. 1026 change : 0.282497
+  Step no. 1027 change : 0.333672
+  Step no. 1028 change : 0.428261
+  Step no. 1029 change : 0.467773
+  Step no. 1030 change : 0.521265
+  Step no. 1031 change : 0.587484
+  Step no. 1032 change : 0.902258
+  Step no. 1033 change : 0.635735
+  Step no. 1034 change : 0.177456
+  Step no. 1035 change : 0.0758662
+  Step no. 1036 change : 0.120945
+  Step no. 1037 change : 0.222705
+  Step no. 1038 change : 0.434693
+  Step no. 1039 change : 0.762234
+  Step no. 1040 change : 0.278736
+  Step no. 1041 change : 0.274024
+  Step no. 1042 change : 0.326705
+  Step no. 1043 change : 0.501053
+  Step no. 1044 change : 0.723347
+  Step no. 1045 change : 0.998855
+  Step no. 1046 change : 0.605197
+  Step no. 1047 change : 0.99338
+  Step no. 1048 change : 0.900721
+  Step no. 1049 change : 0.795824
+  Step no. 1050 change : 0.647941
+  Step no. 1051 change : 0.399852
+  Step no. 1052 change : 0.537358
+  Step no. 1053 change : 0.992378
+  Step no. 1054 change : 0.843642
+  Step no. 1055 change : 0.701016
+  Step no. 1056 change : 0.507181
+  Step no. 1057 change : 0.302709
+  Step no. 1058 change : 0.273947
+  Step no. 1059 change : 0.308887
+  Step no. 1060 change : 0.376293
+  Step no. 1061 change : 0.395586
+  Step no. 1062 change : 0.427865
+  Step no. 1063 change : 0.4307
+  Step no. 1064 change : 0.47791
+  Step no. 1065 change : 0.709954
+  Step no. 1066 change : 0.686461
+  Step no. 1067 change : 0.484221
+  Step no. 1068 change : 0.537704
+  Step no. 1069 change : 0.97683
+  Step no. 1070 change : 0.927192
+  Step no. 1071 change : 0.940291
+  Step no. 1072 change : 0.971665
+  Step no. 1073 change : 0.999377
+  Step no. 1074 change : 0.967724
+  Step no. 1075 change : 0.916463
+  Step no. 1076 change : 0.827607
+  Step no. 1077 change : 0.667664
+  Step no. 1078 change : 0.417046
+  Step no. 1079 change : 0.61613
+  Step no. 1080 change : 0.981894
+  Step no. 1081 change : 0.923598
+  Step no. 1082 change : 0.776753
+  Step no. 1083 change : 0.559096
+  Step no. 1084 change : 0.980049
+  Step no. 1085 change : 0.720374
+  Step no. 1086 change : 0.365142
+  Step no. 1087 change : 0.600327
+  Step no. 1088 change : 0.104033
+  Step no. 1089 change : 0.14512
+  Step no. 1090 change : 0.357003
+  Step no. 1091 change : 0.271816
+  Step no. 1092 change : 0.272571
+  Step no. 1093 change : 0.352459
+  Step no. 1094 change : 0.486049
+  Step no. 1095 change : 0.750865
+  Step no. 1096 change : 0.97123
+  Step no. 1097 change : 0.631954
+  Step no. 1098 change : 0.216033
+  Step no. 1099 change : 0.195136
+  Step no. 1100 change : 0.367537
+  Step no. 1101 change : 0.638508
+  Step no. 1102 change : 0.974108
+  Step no. 1103 change : 0.991443
+  Step no. 1104 change : 0.997845
+  Step no. 1105 change : 0.988078
+  Step no. 1106 change : 0.969564
+  Step no. 1107 change : 0.937526
+  Step no. 1108 change : 0.877723
+  Step no. 1109 change : 0.7661
+  Step no. 1110 change : 0.5669
+  Step no. 1111 change : 0.310984
+  Step no. 1112 change : 0.261988
+  Step no. 1113 change : 0.460646
+  Step no. 1114 change : 0.742515
+  Step no. 1115 change : 0.935327
+  Step no. 1116 change : 0.613062
+  Step no. 1117 change : 0.23585
+  Step no. 1118 change : 0.304693
+  Step no. 1119 change : 0.71929
+  Step no. 1120 change : 0.4386
+  Step no. 1121 change : 0.605828
+  Step no. 1122 change : 0.994729
+  Step no. 1123 change : 0.938049
+  Step no. 1124 change : 0.838195
+  Step no. 1125 change : 0.673864
+  Step no. 1126 change : 0.411191
+  Step no. 1127 change : 0.333532
+  Step no. 1128 change : 0.413281
+  Step no. 1129 change : 0.466773
+  Step no. 1130 change : 0.534159
+  Step no. 1131 change : 0.640834
+  Step no. 1132 change : 0.95663
+  Step no. 1133 change : 0.348803
+  Step no. 1134 change : 0.241446
+  Step no. 1135 change : 0.253943
+  Step no. 1136 change : 0.425483
+  Step no. 1137 change : 0.644712
+  Step no. 1138 change : 0.907141
+  Step no. 1139 change : 0.42157
+  Step no. 1140 change : 0.319129
+  Step no. 1141 change : 0.704151
+  Step no. 1142 change : 0.448364
+  Step no. 1143 change : 0.625891
+  Step no. 1144 change : 0.968152
+  Step no. 1145 change : 0.861779
+  Step no. 1146 change : 0.67984
+  Step no. 1147 change : 0.424353
+  Step no. 1148 change : 0.653596
+  Step no. 1149 change : 0.94522
+  Step no. 1150 change : 0.790525
+  Step no. 1151 change : 0.542176
+  Step no. 1152 change : 0.284213
+  Step no. 1153 change : 0.217208
+  Step no. 1154 change : 0.376548
+  Step no. 1155 change : 0.588029
+  Step no. 1156 change : 0.992781
+  Step no. 1157 change : 0.937408
+  Step no. 1158 change : 0.942952
+  Step no. 1159 change : 0.978818
+  Step no. 1160 change : 0.986617
+  Step no. 1161 change : 0.938956
+  Step no. 1162 change : 0.861514
+  Step no. 1163 change : 0.726111
+  Step no. 1164 change : 0.497337
+  Step no. 1165 change : 0.280053
+  Step no. 1166 change : 0.231647
+  Step no. 1167 change : 0.262363
+  Step no. 1168 change : 0.318202
+  Step no. 1169 change : 0.329386
+  Step no. 1170 change : 0.393292
+  Step no. 1171 change : 0.570348
+  Step no. 1172 change : 0.958994
+  Step no. 1173 change : 0.569386
+  Step no. 1174 change : 0.228533
+  Step no. 1175 change : 0.0929401
+  Step no. 1176 change : 0.104359
+  Step no. 1177 change : 0.142059
+  Step no. 1178 change : 0.169912
+  Step no. 1179 change : 0.220287
+  Step no. 1180 change : 0.325722
+  Step no. 1181 change : 0.458102
+  Step no. 1182 change : 0.737018
+  Step no. 1183 change : 0.941207
+  Step no. 1184 change : 0.879238
+  Step no. 1185 change : 0.544215
+  Step no. 1186 change : 0.981961
+  Step no. 1187 change : 0.848071
+  Step no. 1188 change : 0.624742
+  Step no. 1189 change : 0.359789
+  Step no. 1190 change : 0.544307
+  Step no. 1191 change : 0.852165
+  Step no. 1192 change : 0.653503
+  Step no. 1193 change : 0.400932
+  Step no. 1194 change : 0.540565
+  Step no. 1195 change : 0.992004
+  Step no. 1196 change : 0.858953
+  Step no. 1197 change : 0.743483
+  Step no. 1198 change : 0.580515
+  Step no. 1199 change : 0.333837
+  Step no. 1200 change : 0.282028
+  Step no. 1201 change : 0.493892
+  Step no. 1202 change : 0.803208
+  Step no. 1203 change : 0.842797
+  Step no. 1204 change : 0.452702
+  Step no. 1205 change : 0.656329
+  Step no. 1206 change : 0.851932
+  Step no. 1207 change : 0.734979
+  Step no. 1208 change : 0.491669
+  Step no. 1209 change : 0.280668
+  Step no. 1210 change : 0.236898
+  Step no. 1211 change : 0.268711
+  Step no. 1212 change : 0.327666
+  Step no. 1213 change : 0.341679
+  Step no. 1214 change : 0.362569
+  Step no. 1215 change : 0.514724
+  Step no. 1216 change : 0.796825
+  Step no. 1217 change : 0.795527
+  Step no. 1218 change : 0.364827
+  Step no. 1219 change : 0.530061
+  Step no. 1220 change : 0.996926
+  Step no. 1221 change : 0.780042
+  Step no. 1222 change : 0.495022
+  Step no. 1223 change : 0.923332
+  Step no. 1224 change : 0.44546
+  Step no. 1225 change : 0.171927
+  Step no. 1226 change : 0.15174
+  Step no. 1227 change : 0.17678
+  Step no. 1228 change : 0.234462
+  Step no. 1229 change : 0.276606
+  Step no. 1230 change : 0.366968
+  Step no. 1231 change : 0.568015
+  Step no. 1232 change : 0.856741
+  Step no. 1233 change : 0.138479
+  Step no. 1234 change : 0.213686
+  Step no. 1235 change : 0.476933
+  Step no. 1236 change : 0.160123
+  Step no. 1237 change : 0.0691372
+  Step no. 1238 change : 0.0843613
+  Step no. 1239 change : 0.117506
+  Step no. 1240 change : 0.146657
+  Step no. 1241 change : 0.19903
+  Step no. 1242 change : 0.238837
+  Step no. 1243 change : 0.313865
+  Step no. 1244 change : 0.360773
+  Step no. 1245 change : 0.449401
+  Step no. 1246 change : 0.487635
+  Step no. 1247 change : 0.548329
+  Step no. 1248 change : 0.51571
+  Step no. 1249 change : 0.685018
+  Step no. 1250 change : 0.955286
+  Step no. 1251 change : 0.575839
+  Step no. 1252 change : 0.995638
+  Step no. 1253 change : 0.877971
+  Step no. 1254 change : 0.753084
+  Step no. 1255 change : 0.576226
+  Step no. 1256 change : 0.324371
+  Step no. 1257 change : 0.278076
+  Step no. 1258 change : 0.489576
+  Step no. 1259 change : 0.796679
+  Step no. 1260 change : 0.852859
+  Step no. 1261 change : 0.469934
+  Step no. 1262 change : 0.707495
+  Step no. 1263 change : 0.762879
+  Step no. 1264 change : 0.57096
+  Step no. 1265 change : 0.925196
+  Step no. 1266 change : 0.473714
+  Step no. 1267 change : 0.186483
+  Step no. 1268 change : 0.12791
+  Step no. 1269 change : 0.150949
+  Step no. 1270 change : 0.235274
+  Step no. 1271 change : 0.395477
+  Step no. 1272 change : 0.60013
+  Step no. 1273 change : 0.983491
+  Step no. 1274 change : 0.493047
+  Step no. 1275 change : 0.409771
+  Step no. 1276 change : 0.533622
+  Step no. 1277 change : 0.556139
+  Step no. 1278 change : 0.630059
+  Step no. 1279 change : 0.937158
+  Step no. 1280 change : 0.778442
+  Step no. 1281 change : 0.670404
+  Step no. 1282 change : 0.330339
+  Step no. 1283 change : 0.246048
+  Step no. 1284 change : 0.461579
+  Step no. 1285 change : 0.777766
+  Step no. 1286 change : 0.843872
+  Step no. 1287 change : 0.543357
+  Step no. 1288 change : 0.862873
+  Step no. 1289 change : 0.543018
+  Step no. 1290 change : 0.394312
+  Step no. 1291 change : 0.38931
+  Step no. 1292 change : 0.450288
+  Step no. 1293 change : 0.555557
+  Step no. 1294 change : 0.564642
+  Step no. 1295 change : 0.545098
+  Step no. 1296 change : 0.785297
+  Step no. 1297 change : 0.717102
+  Step no. 1298 change : 0.521119
+  Step no. 1299 change : 0.815851
+  Step no. 1300 change : 0.743013
+  Step no. 1301 change : 0.35754
+  Step no. 1302 change : 0.343034
+  Step no. 1303 change : 0.653984
+  Step no. 1304 change : 0.324929
+  Step no. 1305 change : 0.392217
+  Step no. 1306 change : 0.862272
+  Step no. 1307 change : 0.696596
+  Step no. 1308 change : 0.422876
+  Step no. 1309 change : 0.29725
+  Step no. 1310 change : 0.355657
+  Step no. 1311 change : 0.411963
+  Step no. 1312 change : 0.506082
+  Step no. 1313 change : 0.510875
+  Step no. 1314 change : 0.599272
+  Step no. 1315 change : 0.885981
+  Step no. 1316 change : 0.480847
+  Step no. 1317 change : 0.455483
+  Step no. 1318 change : 0.928386
+  Step no. 1319 change : 0.924567
+  Step no. 1320 change : 0.888594
+  Step no. 1321 change : 0.792781
+  Step no. 1322 change : 0.61167
+  Step no. 1323 change : 0.351984
+  Step no. 1324 change : 0.40037
+  Step no. 1325 change : 0.736131
+  Step no. 1326 change : 0.465796
+  Step no. 1327 change : 0.677183
+  Step no. 1328 change : 0.59512
+  Step no. 1329 change : 0.96196
+  Step no. 1330 change : 0.638212
+  Step no. 1331 change : 0.235806
+  Step no. 1332 change : 0.323713
+  Step no. 1333 change : 0.62509
+  Step no. 1334 change : 0.938647
+  Step no. 1335 change : 0.526617
+  Step no. 1336 change : 0.177063
+  Step no. 1337 change : 0.155397
+  Step no. 1338 change : 0.280994
+  Step no. 1339 change : 0.451622
+  Step no. 1340 change : 0.799575
+  Step no. 1341 change : 0.500004
+  Step no. 1342 change : 0.313775
+  Step no. 1343 change : 0.360772
+  Step no. 1344 change : 0.411804
+  Step no. 1345 change : 0.508108
+  Step no. 1346 change : 0.546103
+  Step no. 1347 change : 0.607647
+  Step no. 1348 change : 0.583653
+  Step no. 1349 change : 0.576336
+  Step no. 1350 change : 0.872034
+  Step no. 1351 change : 0.5071
+  Step no. 1352 change : 0.546048
+  Step no. 1353 change : 0.870953
+  Step no. 1354 change : 0.641168
+  Step no. 1355 change : 0.35397
+  Step no. 1356 change : 0.479548
+  Step no. 1357 change : 0.884539
+  Step no. 1358 change : 0.63217
+  Step no. 1359 change : 0.375447
+  Step no. 1360 change : 0.449844
+  Step no. 1361 change : 0.820234
+  Step no. 1362 change : 0.584284
+  Step no. 1363 change : 0.339696
+  Step no. 1364 change : 0.25434
+  Step no. 1365 change : 0.390062
+  Step no. 1366 change : 0.587244
+  Step no. 1367 change : 0.982584
+  Step no. 1368 change : 0.985253
+  Step no. 1369 change : 0.909921
+  Step no. 1370 change : 0.713293
+  Step no. 1371 change : 0.433294
+  Step no. 1372 change : 0.267184
+  Step no. 1373 change : 0.288411
+  Step no. 1374 change : 0.338296
+  Step no. 1375 change : 0.43313
+  Step no. 1376 change : 0.477071
+  Step no. 1377 change : 0.548379
+  Step no. 1378 change : 0.528495
+  Step no. 1379 change : 0.63098
+  Step no. 1380 change : 0.959518
+  Step no. 1381 change : 0.744282
+  Step no. 1382 change : 0.728718
+  Step no. 1383 change : 0.403682
+  Step no. 1384 change : 0.479004
+  Step no. 1385 change : 0.909251
+  Step no. 1386 change : 0.64182
+  Step no. 1387 change : 0.355156
+  Step no. 1388 change : 0.462876
+  Step no. 1389 change : 0.848985
+  Step no. 1390 change : 0.597329
+  Step no. 1391 change : 0.342207
+  Step no. 1392 change : 0.302243
+  Step no. 1393 change : 0.525531
+  Step no. 1394 change : 0.86218
+  Step no. 1395 change : 0.754308
+  Step no. 1396 change : 0.356097
+  Step no. 1397 change : 0.314523
+  Step no. 1398 change : 0.599112
+  Step no. 1399 change : 0.968505
+  Step no. 1400 change : 0.556668
+  Step no. 1401 change : 0.174785
+  Step no. 1402 change : 0.171628
+  Step no. 1403 change : 0.323743
+  Step no. 1404 change : 0.531043
+  Step no. 1405 change : 0.958192
+  Step no. 1406 change : 0.623747
+  Step no. 1407 change : 0.383407
+  Step no. 1408 change : 0.309425
+  Step no. 1409 change : 0.509034
+  Step no. 1410 change : 0.822617
+  Step no. 1411 change : 0.802211
+  Step no. 1412 change : 0.383602
+  Step no. 1413 change : 0.491213
+  Step no. 1414 change : 0.934667
+  Step no. 1415 change : 0.663347
+  Step no. 1416 change : 0.350609
+  Step no. 1417 change : 0.50398
+  Step no. 1418 change : 0.927994
+  Step no. 1419 change : 0.701879
+  Step no. 1420 change : 0.458549
+  Step no. 1421 change : 0.734646
+  Step no. 1422 change : 0.835386
+  Step no. 1423 change : 0.535119
+  Step no. 1424 change : 0.872639
+  Step no. 1425 change : 0.521714
+  Step no. 1426 change : 0.873845
+  Step no. 1427 change : 0.483897
+  Step no. 1428 change : 0.851628
+  Step no. 1429 change : 0.701007
+  Step no. 1430 change : 0.424873
+  Step no. 1431 change : 0.257249
+  Step no. 1432 change : 0.423757
+  Step no. 1433 change : 0.67331
+  Step no. 1434 change : 0.963222
+  Step no. 1435 change : 0.807679
+  Step no. 1436 change : 0.46922
+  Step no. 1437 change : 0.230384
+  Step no. 1438 change : 0.164466
+  Step no. 1439 change : 0.192243
+  Step no. 1440 change : 0.238854
+  Step no. 1441 change : 0.326672
+  Step no. 1442 change : 0.449981
+  Step no. 1443 change : 0.709801
+  Step no. 1444 change : 0.978544
+  Step no. 1445 change : 0.767413
+  Step no. 1446 change : 0.385867
+  Step no. 1447 change : 0.637962
+  Step no. 1448 change : 0.209431
+  Step no. 1449 change : 0.323831
+  Step no. 1450 change : 0.791183
+  Step no. 1451 change : 0.447367
+  Step no. 1452 change : 0.722504
+  Step no. 1453 change : 0.749262
+  Step no. 1454 change : 0.544485
+  Step no. 1455 change : 0.810966
+  Step no. 1456 change : 0.656726
+  Step no. 1457 change : 0.376277
+  Step no. 1458 change : 0.218362
+  Step no. 1459 change : 0.353069
+  Step no. 1460 change : 0.550141
+  Step no. 1461 change : 0.94425
+  Step no. 1462 change : 0.813112
+  Step no. 1463 change : 0.709223
+  Step no. 1464 change : 0.535717
+  Step no. 1465 change : 0.316481
+  Step no. 1466 change : 0.244234
+  Step no. 1467 change : 0.267005
+  Step no. 1468 change : 0.310896
+  Step no. 1469 change : 0.446304
+  Step no. 1470 change : 0.65508
+  Step no. 1471 change : 0.963411
+  Step no. 1472 change : 0.774995
+  Step no. 1473 change : 0.367317
+  Step no. 1474 change : 0.23042
+  Step no. 1475 change : 0.24756
+  Step no. 1476 change : 0.297158
+  Step no. 1477 change : 0.383074
+  Step no. 1478 change : 0.41466
+  Step no. 1479 change : 0.556373
+  Step no. 1480 change : 0.841874
+  Step no. 1481 change : 0.691327
+  Step no. 1482 change : 0.462383
+  Step no. 1483 change : 0.65185
+  Step no. 1484 change : 0.993689
+  Step no. 1485 change : 0.766153
+  Step no. 1486 change : 0.408593
+  Step no. 1487 change : 0.238977
+  Step no. 1488 change : 0.24551
+  Step no. 1489 change : 0.292165
+  Step no. 1490 change : 0.381525
+  Step no. 1491 change : 0.428905
+  Step no. 1492 change : 0.508802
+  Step no. 1493 change : 0.507345
+  Step no. 1494 change : 0.592561
+  Step no. 1495 change : 0.883885
+  Step no. 1496 change : 0.491476
+  Step no. 1497 change : 0.498459
+  Step no. 1498 change : 0.973782
+  Step no. 1499 change : 0.845794
+  Step no. 1500 change : 0.658309
+  Step no. 1501 change : 0.415357
+  Step no. 1502 change : 0.355492
+  Step no. 1503 change : 0.444215
+  Step no. 1504 change : 0.493696
+  Step no. 1505 change : 0.544193
+  Step no. 1506 change : 0.706111
+  Step no. 1507 change : 0.957193
+  Step no. 1508 change : 0.771683
+  Step no. 1509 change : 0.351686
+  Step no. 1510 change : 0.54007
+  Step no. 1511 change : 0.981003
+  Step no. 1512 change : 0.80922
+  Step no. 1513 change : 0.542351
+  Step no. 1514 change : 0.970907
+  Step no. 1515 change : 0.693238
+  Step no. 1516 change : 0.324327
+  Step no. 1517 change : 0.504593
+  Step no. 1518 change : 0.957993
+  Step no. 1519 change : 0.501234
+  Step no. 1520 change : 0.394546
+  Step no. 1521 change : 0.483134
+  Step no. 1522 change : 0.543035
+  Step no. 1523 change : 0.632292
+  Step no. 1524 change : 0.586017
+  Step no. 1525 change : 0.683388
+  Step no. 1526 change : 0.94998
+  Step no. 1527 change : 0.543603
+  Step no. 1528 change : 0.941472
+  Step no. 1529 change : 0.765458
+  Step no. 1530 change : 0.55049
+  Step no. 1531 change : 0.96986
+  Step no. 1532 change : 0.616015
+  Step no. 1533 change : 0.247445
+  Step no. 1534 change : 0.300702
+  Step no. 1535 change : 0.58196
+  Step no. 1536 change : 0.991311
+  Step no. 1537 change : 0.412522
+  Step no. 1538 change : 0.146151
+  Step no. 1539 change : 0.120509
+  Step no. 1540 change : 0.147945
+  Step no. 1541 change : 0.199573
+  Step no. 1542 change : 0.2369
+  Step no. 1543 change : 0.305567
+  Step no. 1544 change : 0.344481
+  Step no. 1545 change : 0.418033
+  Step no. 1546 change : 0.445976
+  Step no. 1547 change : 0.500241
+  Step no. 1548 change : 0.507438
+  Step no. 1549 change : 0.523494
+  Step no. 1550 change : 0.508931
+  Step no. 1551 change : 0.483064
+  Step no. 1552 change : 0.499349
+  Step no. 1553 change : 0.507567
+  Step no. 1554 change : 0.718981
+  Step no. 1555 change : 0.684165
+  Step no. 1556 change : 0.481267
+  Step no. 1557 change : 0.534588
+  Step no. 1558 change : 0.970423
+  Step no. 1559 change : 0.913562
+  Step no. 1560 change : 0.913584
+  Step no. 1561 change : 0.918922
+  Step no. 1562 change : 0.894559
+  Step no. 1563 change : 0.827851
+  Step no. 1564 change : 0.691371
+  Step no. 1565 change : 0.457243
+  Step no. 1566 change : 0.301143
+  Step no. 1567 change : 0.343505
+  Step no. 1568 change : 0.39707
+  Step no. 1569 change : 0.495965
+  Step no. 1570 change : 0.530094
+  Step no. 1571 change : 0.574863
+  Step no. 1572 change : 0.556111
+  Step no. 1573 change : 0.828065
+  Step no. 1574 change : 0.724688
+  Step no. 1575 change : 0.248074
+  Step no. 1576 change : 0.231738
+  Step no. 1577 change : 0.412529
+  Step no. 1578 change : 0.769924
+  Step no. 1579 change : 0.371327
+  Step no. 1580 change : 0.259345
+  Step no. 1581 change : 0.299908
+  Step no. 1582 change : 0.350817
+  Step no. 1583 change : 0.426611
+  Step no. 1584 change : 0.569567
+  Step no. 1585 change : 0.835749
+  Step no. 1586 change : 0.77046
+  Step no. 1587 change : 0.287735
+  Step no. 1588 change : 0.277713
+  Step no. 1589 change : 0.49674
+  Step no. 1590 change : 0.91929
+  Step no. 1591 change : 0.606635
+  Step no. 1592 change : 0.271353
+  Step no. 1593 change : 0.314367
+  Step no. 1594 change : 0.571538
+  Step no. 1595 change : 0.958471
+  Step no. 1596 change : 0.319132
+  Step no. 1597 change : 0.190127
+  Step no. 1598 change : 0.184447
+  Step no. 1599 change : 0.225127
+  Step no. 1600 change : 0.2999
+  Step no. 1601 change : 0.45523
+  Step no. 1602 change : 0.677427
+  Step no. 1603 change : 0.961396
+  Step no. 1604 change : 0.772677
+  Step no. 1605 change : 0.375321
+  Step no. 1606 change : 0.234224
+  Step no. 1607 change : 0.253121
+  Step no. 1608 change : 0.303038
+  Step no. 1609 change : 0.391015
+  Step no. 1610 change : 0.424394
+  Step no. 1611 change : 0.524175
+  Step no. 1612 change : 0.77627
+  Step no. 1613 change : 0.847431
+  Step no. 1614 change : 0.914805
+  Step no. 1615 change : 0.979894
+  Step no. 1616 change : 0.810262
+  Step no. 1617 change : 0.565082
+  Step no. 1618 change : 0.963737
+  Step no. 1619 change : 0.840084
+  Step no. 1620 change : 0.549947
+  Step no. 1621 change : 0.987876
+  Step no. 1622 change : 0.769487
+  Step no. 1623 change : 0.471638
+  Step no. 1624 change : 0.868885
+  Step no. 1625 change : 0.571336
+  Step no. 1626 change : 0.399185
+  Step no. 1627 change : 0.363374
+  Step no. 1628 change : 0.418552
+  Step no. 1629 change : 0.522997
+  Step no. 1630 change : 0.559606
+  Step no. 1631 change : 0.612752
+  Step no. 1632 change : 0.564301
+  Step no. 1633 change : 0.671093
+  Step no. 1634 change : 0.956475
+  Step no. 1635 change : 0.58624
+  Step no. 1636 change : 0.965671
+  Step no. 1637 change : 0.957217
+  Step no. 1638 change : 0.911316
+  Step no. 1639 change : 0.865553
+  Step no. 1640 change : 0.76291
+  Step no. 1641 change : 0.571802
+  Step no. 1642 change : 0.317719
+  Step no. 1643 change : 0.272368
+  Step no. 1644 change : 0.480145
+  Step no. 1645 change : 0.779487
+  Step no. 1646 change : 0.878884
+  Step no. 1647 change : 0.507654
+  Step no. 1648 change : 0.834761
+  Step no. 1649 change : 0.546371
+  Step no. 1650 change : 0.397595
+  Step no. 1651 change : 0.362534
+  Step no. 1652 change : 0.415241
+  Step no. 1653 change : 0.516815
+  Step no. 1654 change : 0.556024
+  Step no. 1655 change : 0.62018
+  Step no. 1656 change : 0.601994
+  Step no. 1657 change : 0.549574
+  Step no. 1658 change : 0.819922
+  Step no. 1659 change : 0.629897
+  Step no. 1660 change : 0.360573
+  Step no. 1661 change : 0.301195
+  Step no. 1662 change : 0.364256
+  Step no. 1663 change : 0.491149
+  Step no. 1664 change : 0.777643
+  Step no. 1665 change : 0.732412
+  Step no. 1666 change : 0.581784
+  Step no. 1667 change : 0.985618
+  Step no. 1668 change : 0.469273
+  Step no. 1669 change : 0.175035
+  Step no. 1670 change : 0.101524
+  Step no. 1671 change : 0.12058
+  Step no. 1672 change : 0.192207
+  Step no. 1673 change : 0.327559
+  Step no. 1674 change : 0.502124
+  Step no. 1675 change : 0.86617
+  Step no. 1676 change : 0.821056
+  Step no. 1677 change : 0.799348
+  Step no. 1678 change : 0.758583
+  Step no. 1679 change : 0.617864
+  Step no. 1680 change : 0.393238
+  Step no. 1681 change : 0.500483
+  Step no. 1682 change : 0.972295
+  Step no. 1683 change : 0.837192
+  Step no. 1684 change : 0.64086
+  Step no. 1685 change : 0.395001
+  Step no. 1686 change : 0.627648
+  Step no. 1687 change : 0.707768
+  Step no. 1688 change : 0.447624
+  Step no. 1689 change : 0.67656
+  Step no. 1690 change : 0.594483
+  Step no. 1691 change : 0.928017
+  Step no. 1692 change : 0.572983
+  Step no. 1693 change : 0.186739
+  Step no. 1694 change : 0.19728
+  Step no. 1695 change : 0.379876
+  Step no. 1696 change : 0.636709
+  Step no. 1697 change : 0.0424253
+  Step no. 1698 change : 0.0778219
+  Step no. 1699 change : 0.188655
+  Step no. 1700 change : 0.385933
+  Step no. 1701 change : 0.516041
+  Step no. 1702 change : 0.843118
+  Step no. 1703 change : 0.967518
+  Step no. 1704 change : 0.791077
+  Step no. 1705 change : 0.389368
+  Step no. 1706 change : 0.647568
+  Step no. 1707 change : 0.826919
+  Step no. 1708 change : 0.788951
+  Step no. 1709 change : 0.615266
+  Step no. 1710 change : 0.364833
+  Step no. 1711 change : 0.416849
+  Step no. 1712 change : 0.765973
+  Step no. 1713 change : 0.502148
+  Step no. 1714 change : 0.341912
+  Step no. 1715 change : 0.404561
+  Step no. 1716 change : 0.459377
+  Step no. 1717 change : 0.556578
+  Step no. 1718 change : 0.576135
+  Step no. 1719 change : 0.586207
+  Step no. 1720 change : 0.638391
+  Step no. 1721 change : 0.919794
+  Step no. 1722 change : 0.413834
+  Step no. 1723 change : 0.185236
+  Step no. 1724 change : 0.128114
+  Step no. 1725 change : 0.179247
+  Step no. 1726 change : 0.265908
+  Step no. 1727 change : 0.450088
+  Step no. 1728 change : 0.68675
+  Step no. 1729 change : 0.0410713
+  Step no. 1730 change : 0.0449842
+  Step no. 1731 change : 0.0977814
+  Step no. 1732 change : 0.209295
+  Step no. 1733 change : 0.492842
+  Step no. 1734 change : 0.15475
+  Step no. 1735 change : 0.0607083
+  Step no. 1736 change : 0.0681208
+  Step no. 1737 change : 0.0937515
+  Step no. 1738 change : 0.132128
+  Step no. 1739 change : 0.189694
+  Step no. 1740 change : 0.299736
+  Step no. 1741 change : 0.441637
+  Step no. 1742 change : 0.739794
+  Step no. 1743 change : 0.96319
+  Step no. 1744 change : 0.8321
+  Step no. 1745 change : 0.465089
+  Step no. 1746 change : 0.847843
+  Step no. 1747 change : 0.461717
+  Step no. 1748 change : 0.197336
+  Step no. 1749 change : 0.158824
+  Step no. 1750 change : 0.187595
+  Step no. 1751 change : 0.236509
+  Step no. 1752 change : 0.282748
+  Step no. 1753 change : 0.378112
+  Step no. 1754 change : 0.57398
+  Step no. 1755 change : 0.932633
+  Step no. 1756 change : 0.63504
+  Step no. 1757 change : 0.251913
+  Step no. 1758 change : 0.111978
+  Step no. 1759 change : 0.17251
+  Step no. 1760 change : 0.273797
+  Step no. 1761 change : 0.484138
+  Step no. 1762 change : 0.789275
+  Step no. 1763 change : 0.860782
+  Step no. 1764 change : 0.526941
+  Step no. 1765 change : 0.83525
+  Step no. 1766 change : 0.572988
+  Step no. 1767 change : 0.386453
+  Step no. 1768 change : 0.302223
+  Step no. 1769 change : 0.344682
+  Step no. 1770 change : 0.430906
+  Step no. 1771 change : 0.466899
+  Step no. 1772 change : 0.537015
+  Step no. 1773 change : 0.562558
+  Step no. 1774 change : 0.612738
+  Step no. 1775 change : 0.636228
+  Step no. 1776 change : 0.673251
+  Step no. 1777 change : 0.672519
+  Step no. 1778 change : 0.638158
+  Step no. 1779 change : 0.668882
+  Step no. 1780 change : 0.911533
+  Step no. 1781 change : 0.472711
+  Step no. 1782 change : 0.166319
+  Step no. 1783 change : 0.0771897
+  Step no. 1784 change : 0.0938025
+  Step no. 1785 change : 0.130853
+  Step no. 1786 change : 0.164548
+  Step no. 1787 change : 0.223966
+  Step no. 1788 change : 0.268444
+  Step no. 1789 change : 0.339442
+  Step no. 1790 change : 0.485555
+  Step no. 1791 change : 0.698712
+  Step no. 1792 change : 0.984614
+  Step no. 1793 change : 0.644398
+  Step no. 1794 change : 0.969774
+  Step no. 1795 change : 0.880259
+  Step no. 1796 change : 0.713047
+  Step no. 1797 change : 0.467838
+  Step no. 1798 change : 0.78744
+  Step no. 1799 change : 0.7156
+  Step no. 1800 change : 0.430626
+  Step no. 1801 change : 0.393619
+  Step no. 1802 change : 0.740362
+  Step no. 1803 change : 0.458569
+  Step no. 1804 change : 0.390268
+  Step no. 1805 change : 0.482904
+  Step no. 1806 change : 0.529295
+  Step no. 1807 change : 0.574545
+  Step no. 1808 change : 0.686627
+  Step no. 1809 change : 0.98457
+  Step no. 1810 change : 0.700007
+  Step no. 1811 change : 0.269682
+  Step no. 1812 change : 0.321186
+  Step no. 1813 change : 0.609375
+  Step no. 1814 change : 0.243992
+  Step no. 1815 change : 0.284828
+  Step no. 1816 change : 0.640429
+  Step no. 1817 change : 0.353091
+  Step no. 1818 change : 0.3413
+  Step no. 1819 change : 0.642244
+  Step no. 1820 change : 0.94928
+  Step no. 1821 change : 0.614426
+  Step no. 1822 change : 0.217868
+  Step no. 1823 change : 0.275052
+  Step no. 1824 change : 0.533155
+  Step no. 1825 change : 0.906184
+  Step no. 1826 change : 0.289841
+  Step no. 1827 change : 0.193846
+  Step no. 1828 change : 0.203256
+  Step no. 1829 change : 0.308444
+  Step no. 1830 change : 0.448831
+  Step no. 1831 change : 0.74007
+  Step no. 1832 change : 0.918808
+  Step no. 1833 change : 0.548308
+  Step no. 1834 change : 0.1705
+  Step no. 1835 change : 0.100071
+  Step no. 1836 change : 0.183788
+  Step no. 1837 change : 0.305912
+  Step no. 1838 change : 0.558496
+  Step no. 1839 change : 0.934305
+  Step no. 1840 change : 0.36297
+  Step no. 1841 change : 0.17294
+  Step no. 1842 change : 0.191814
+  Step no. 1843 change : 0.217449
+  Step no. 1844 change : 0.268025
+  Step no. 1845 change : 0.291314
+  Step no. 1846 change : 0.342377
+  Step no. 1847 change : 0.487516
+  Step no. 1848 change : 0.73595
+  Step no. 1849 change : 0.90848
+  Step no. 1850 change : 0.541255
+  Step no. 1851 change : 0.968674
+  Step no. 1852 change : 0.726904
+  Step no. 1853 change : 0.403439
+  Step no. 1854 change : 0.67232
+  Step no. 1855 change : 0.124289
+  Step no. 1856 change : 0.228586
+  Step no. 1857 change : 0.557533
+  Step no. 1858 change : 0.221673
+  Step no. 1859 change : 0.111366
+  Step no. 1860 change : 0.180595
+  Step no. 1861 change : 0.281882
+  Step no. 1862 change : 0.492173
+  Step no. 1863 change : 0.797142
+  Step no. 1864 change : 0.85734
+  Step no. 1865 change : 0.503554
+  Step no. 1866 change : 0.771488
+  Step no. 1867 change : 0.670768
+  Step no. 1868 change : 0.42865
+  Step no. 1869 change : 0.34557
+  Step no. 1870 change : 0.638544
+  Step no. 1871 change : 0.912239
+  Step no. 1872 change : 0.549493
+  Step no. 1873 change : 0.177048
+  Step no. 1874 change : 0.150835
+  Step no. 1875 change : 0.290272
+  Step no. 1876 change : 0.488202
+  Step no. 1877 change : 0.89905
+  Step no. 1878 change : 0.717953
+  Step no. 1879 change : 0.563434
+  Step no. 1880 change : 0.886948
+  Step no. 1881 change : 0.59625
+  Step no. 1882 change : 0.327808
+  Step no. 1883 change : 0.204485
+  Step no. 1884 change : 0.240704
+  Step no. 1885 change : 0.315363
+  Step no. 1886 change : 0.355167
+  Step no. 1887 change : 0.430331
+  Step no. 1888 change : 0.458731
+  Step no. 1889 change : 0.514444
+  Step no. 1890 change : 0.525376
+  Step no. 1891 change : 0.549184
+  Step no. 1892 change : 0.548013
+  Step no. 1893 change : 0.548199
+  Step no. 1894 change : 0.539307
+  Step no. 1895 change : 0.523939
+  Step no. 1896 change : 0.500869
+  Step no. 1897 change : 0.460747
+  Step no. 1898 change : 0.529541
+  Step no. 1899 change : 0.556086
+  Step no. 1900 change : 0.88671
+  Step no. 1901 change : 0.989508
+  Step no. 1902 change : 0.761344
+  Step no. 1903 change : 0.458924
+  Step no. 1904 change : 0.8183
+  Step no. 1905 change : 0.625739
+  Step no. 1906 change : 0.401365
+  Step no. 1907 change : 0.238272
+  Step no. 1908 change : 0.287878
+  Step no. 1909 change : 0.410432
+  Step no. 1910 change : 0.660642
+  Step no. 1911 change : 0.905983
+  Step no. 1912 change : 0.509905
+  Step no. 1913 change : 0.166461
+  Step no. 1914 change : 0.0758972
+  Step no. 1915 change : 0.139029
+  Step no. 1916 change : 0.234629
+  Step no. 1917 change : 0.441823
+  Step no. 1918 change : 0.722681
+  Step no. 1919 change : 0.066528
+  Step no. 1920 change : 0.147723
+  Step no. 1921 change : 0.359172
+  Step no. 1922 change : 0.186351
+  Step no. 1923 change : 0.151332
+  Step no. 1924 change : 0.208514
+  Step no. 1925 change : 0.303516
+  Step no. 1926 change : 0.498118
+  Step no. 1927 change : 0.75026
+  Step no. 1928 change : 0.0672647
+  Step no. 1929 change : 0.0875886
+  Step no. 1930 change : 0.197629
+  Step no. 1931 change : 0.305626
+  Step no. 1932 change : 0.407363
+  Step no. 1933 change : 0.705557
+  Step no. 1934 change : 0.89362
+  Step no. 1935 change : 0.361918
+  Step no. 1936 change : 0.140673
+  Step no. 1937 change : 0.0998398
+  Step no. 1938 change : 0.125507
+  Step no. 1939 change : 0.177699
+  Step no. 1940 change : 0.285588
+  Step no. 1941 change : 0.427448
+  Step no. 1942 change : 0.722562
+  Step no. 1943 change : 0.887409
+  Step no. 1944 change : 0.497907
+  Step no. 1945 change : 0.151341
+  Step no. 1946 change : 0.0688944
+  Step no. 1947 change : 0.105299
+  Step no. 1948 change : 0.165884
+  Step no. 1949 change : 0.288234
+  Step no. 1950 change : 0.456541
+  Step no. 1951 change : 0.802647
+  Step no. 1952 change : 0.508003
+  Step no. 1953 change : 0.315895
+  Step no. 1954 change : 0.354351
+  Step no. 1955 change : 0.403384
+  Step no. 1956 change : 0.49738
+  Step no. 1957 change : 0.537181
+  Step no. 1958 change : 0.607499
+  Step no. 1959 change : 0.610711
+  Step no. 1960 change : 0.590919
+  Step no. 1961 change : 0.666131
+  Step no. 1962 change : 0.934595
+  Step no. 1963 change : 0.524099
+  Step no. 1964 change : 0.166986
+  Step no. 1965 change : 0.0629505
+  Step no. 1966 change : 0.0673741
+  Step no. 1967 change : 0.104104
+  Step no. 1968 change : 0.168881
+  Step no. 1969 change : 0.253657
+  Step no. 1970 change : 0.430484
+  Step no. 1971 change : 0.679159
+  Step no. 1972 change : 0.957145
+  Step no. 1973 change : 0.844787
+  Step no. 1974 change : 0.55602
+  Step no. 1975 change : 0.274626
+  Step no. 1976 change : 0.248966
+  Step no. 1977 change : 0.450413
+  Step no. 1978 change : 0.737073
+  Step no. 1979 change : 0.935496
+  Step no. 1980 change : 0.646861
+  Step no. 1981 change : 0.287529
+  Step no. 1982 change : 0.442907
+  Step no. 1983 change : 0.968342
+  Step no. 1984 change : 0.932085
+  Step no. 1985 change : 0.794262
+  Step no. 1986 change : 0.581216
+  Step no. 1987 change : 0.305551
+  Step no. 1988 change : 0.369196
+  Step no. 1989 change : 0.783087
+  Step no. 1990 change : 0.600284
+  Step no. 1991 change : 0.308096
+  Step no. 1992 change : 0.366878
+  Step no. 1993 change : 0.76024
+  Step no. 1994 change : 0.580559
+  Step no. 1995 change : 0.964889
+  Step no. 1996 change : 0.695897
+  Step no. 1997 change : 0.341698
+  Step no. 1998 change : 0.529552
+  Step no. 1999 change : 0.996297
+
+No convergence -- giving up 
+
