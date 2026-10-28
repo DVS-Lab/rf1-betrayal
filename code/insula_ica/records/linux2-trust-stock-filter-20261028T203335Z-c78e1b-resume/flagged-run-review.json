@@ -1,0 +1,142 @@
+{
+  "review_date": "2026-10-28",
+  "source_record_commit": "6e2f5c8f",
+  "review_method": "Assistant visual inspection of all three uploaded historical-reference/new-BOLD montages, plus their numerical QC reports and recorded reference-selection evidence.",
+  "reviewed_slices_z_mm": [
+    -15,
+    -5,
+    5,
+    15,
+    25,
+    35
+  ],
+  "reviewed_bold_frame_index": 140,
+  "flag_definition": "Whole-brain spatial Pearson correlation between historical FEAT example_func and regenerated BOLD frame 140 below 0.95.",
+  "coverage_definition": "Anatomical ROI voxels within the FEAT mask with finite, temporally nonconstant residual support.",
+  "conclusion": "Retain all three on this QC screen; none shows a mask-support coverage failure or visible gross registration failure.",
+  "limitations": [
+    "The historical-reference correlation is a similarity screen and does not measure BOLD-to-T1 registration accuracy directly.",
+    "The reviewed assets are six axial MNI-space slices of one BOLD frame and its masks. Native BOLD-to-T1 overlays, sagittal/coronal views, motion time series and tSNR were not available in this record and were not reviewed.",
+    "Complete mask/residual support does not establish preserved BOLD signal quality or rule out subtle registration or local susceptibility-related signal loss."
+  ],
+  "exclusions": [],
+  "preprocessing_rerun_requested": false,
+  "analysis_inputs_changed": false,
+  "pipeline_state_unchanged": "functional_reruns_complete_qc_pending",
+  "runs": [
+    {
+      "key": "sub-10720_ses-01_task-trust_run-2",
+      "reviewed_assets": [
+        {
+          "path": "qc/sub-10720_ses-01_task-trust_run-2.json",
+          "sha256": "abf952c966f84363ca025b75bc371c580fcdec65ac02e496ddc885928a52b108"
+        },
+        {
+          "path": "qc/sub-10720_ses-01_task-trust_run-2.png",
+          "sha256": "8fc4f3934c82ea9836537e9bc13f837bfbd85060d8e70262167e81c60b58eb15"
+        }
+      ],
+      "coverage": {
+        "left": {
+          "total_voxels": 391,
+          "retained_voxels": 391,
+          "retained_fraction": 1.0
+        },
+        "right": {
+          "total_voxels": 427,
+          "retained_voxels": 427,
+          "retained_fraction": 1.0
+        },
+        "bilateral": {
+          "total_voxels": 818,
+          "retained_voxels": 818,
+          "retained_fraction": 1.0
+        }
+      },
+      "historical_reference_spatial_r": 0.9363282190281683,
+      "original_review_flags": [
+        "historical_reference_spatial_r_below_0.95_review_alignment"
+      ],
+      "reference_selection": "same_run",
+      "visual_observation": "Insula contours remain within the sampled brain; no obvious gross translation, rotation, or insula truncation in the six axial montage slices.",
+      "classification": "historical_image_similarity_flag_without_insula_coverage_failure_or_visible_gross_misregistration",
+      "recommendation": "retain_run_no_rerun_or_exclusion_indicated_by_available_qc"
+    },
+    {
+      "key": "sub-11326_ses-01_task-trust_run-2",
+      "reviewed_assets": [
+        {
+          "path": "qc/sub-11326_ses-01_task-trust_run-2.json",
+          "sha256": "e2ef2ea659106bf22c38fe972ddca4669f3a5bce51792e0ec3bf1e56538fe66a"
+        },
+        {
+          "path": "qc/sub-11326_ses-01_task-trust_run-2.png",
+          "sha256": "6a7d2af0cfe5234c0c8bb9d1e5d0340692f5af897609d72b2acd32fafa77ef7e"
+        }
+      ],
+      "coverage": {
+        "left": {
+          "total_voxels": 391,
+          "retained_voxels": 391,
+          "retained_fraction": 1.0
+        },
+        "right": {
+          "total_voxels": 427,
+          "retained_voxels": 427,
+          "retained_fraction": 1.0
+        },
+        "bilateral": {
+          "total_voxels": 818,
+          "retained_voxels": 818,
+          "retained_fraction": 1.0
+        }
+      },
+      "historical_reference_spatial_r": 0.9492115135328171,
+      "original_review_flags": [
+        "historical_reference_spatial_r_below_0.95_review_alignment"
+      ],
+      "reference_selection": "same_run",
+      "visual_observation": "Insula contours remain within the sampled brain; no obvious gross translation, rotation, or insula truncation in the six axial montage slices.",
+      "classification": "historical_image_similarity_flag_without_insula_coverage_failure_or_visible_gross_misregistration",
+      "recommendation": "retain_run_no_rerun_or_exclusion_indicated_by_available_qc"
+    },
+    {
+      "key": "sub-11433_ses-01_task-trust_run-2",
+      "reviewed_assets": [
+        {
+          "path": "qc/sub-11433_ses-01_task-trust_run-2.json",
+          "sha256": "09301f4a3a636e68bdcbbf4654127d5802445f90bc9496c50e0ef6ae283ce4d0"
+        },
+        {
+          "path": "qc/sub-11433_ses-01_task-trust_run-2.png",
+          "sha256": "42c8f351723dbd84deb2c52e7e1f9c7e9c2d84133c53edfce61cb8f5444dca69"
+        }
+      ],
+      "coverage": {
+        "left": {
+          "total_voxels": 391,
+          "retained_voxels": 391,
+          "retained_fraction": 1.0
+        },
+        "right": {
+          "total_voxels": 427,
+          "retained_voxels": 427,
+          "retained_fraction": 1.0
+        },
+        "bilateral": {
+          "total_voxels": 818,
+          "retained_voxels": 818,
+          "retained_fraction": 1.0
+        }
+      },
+      "historical_reference_spatial_r": 0.9239187944983664,
+      "original_review_flags": [
+        "historical_reference_spatial_r_below_0.95_review_alignment"
+      ],
+      "reference_selection": "same_run",
+      "visual_observation": "Insula contours remain within the sampled brain; no obvious gross translation, rotation, or insula truncation in the six axial montage slices.",
+      "classification": "historical_image_similarity_flag_without_insula_coverage_failure_or_visible_gross_misregistration",
+      "recommendation": "retain_run_no_rerun_or_exclusion_indicated_by_available_qc"
+    }
+  ]
+}
