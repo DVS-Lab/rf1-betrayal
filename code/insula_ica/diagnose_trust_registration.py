@@ -37,7 +37,7 @@ def selected_report(path):
             or bool(re.search(r'_space-[^/]+_T1w\.svg$', path.name)))
 
 
-def sbref_selection(rows):
+def sbref_selection(rows, extra_logs=()):
     """Read actual selected references from retained report-generation log lines.
 
     A different run is a provenance flag, not by itself a registration failure.
@@ -49,11 +49,18 @@ def sbref_selection(rows):
     for row in rows:
         output = Path(row['new_bold']).parents[4]
         logs[output / (row['subject'] + '.fmriprep.log')] = None
+    logs.update({Path(p): None for p in extra_logs})
     for log in logs:
         if not log.is_file():
             continue
         with log.open(errors='replace') as stream:
             for number, line in enumerate(stream, 1):
+                fallback = re.search(r'No single-band-reference found for (\S+)', line)
+                if fallback:
+                    bold = entities.search(fallback[1])
+                    if bold:
+                        evidence[bold[1]] = dict(bold_run=bold[2], source_log=str(log), line_number=number,
+                            status='bold_derived_reference_no_sbref')
                 match = pair.search(line)
                 if not match:
                     continue
