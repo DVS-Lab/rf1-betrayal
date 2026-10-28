@@ -267,7 +267,7 @@ def load_runs(audit, upstream, output):
 def filter_for(runs):
     # Keep the archived anatomical and fieldmap queries. Restrict only functional
     # inputs to session 01, Trust and the originally accepted runs.
-    return dict(t1w=dict(datatype='anat', session='01', suffix='T1w'),
+    filters = dict(t1w=dict(datatype='anat', session='01', suffix='T1w'),
                 t2w=dict(datatype='anat', session='01', suffix='T2w'),
                 fmap=dict(datatype='fmap'),
                 **{k: dict(datatype='func', session='01', suffix=k, part=[None, 'mag'],
@@ -276,6 +276,11 @@ def filter_for(runs):
                            # Integer runs crash it before preprocessing starts.
                            task='trust', run=[str(x) for x in sorted({int(r['run']) for r in runs})])
                    for k in ('sbref', 'bold')})
+    # fMRIPrep applies sbref filters as overrides of each BOLD run's entities.
+    # A list here erases the current run and can select run 1's SBRef for run 2.
+    # Restrict the BOLD cohort above; retain natural per-run matching for SBRefs.
+    filters['sbref'].pop('run')
+    return filters
 
 
 def command(runtime, image, upstream, output, work, subject, nprocs, mem):

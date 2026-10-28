@@ -25,14 +25,53 @@ from run_bold_controls import publish, save
 SUBJECT = 'sub-10834'
 SOURCE = 'linux2-trust-regeneration-20261027T162428Z-ef53c5'
 REPORT_WORDS = ('coreg', 'bbregister', 'flirtbbr', 'norm', 'brainmask',
-                'skullstrip', 'sdc', 'summary', 'validation')
+                'skullstrip', 'sdc', 'summary', 'validation', 'desc-rois')
 LOG_PATTERN = re.compile(r'warn|error|fallback|reject|boundary|\bbbr\b|coreg|bold.?reg|'
-                         r'anat.?norm|normalization|skull.?strip', re.I)
+                         r'anat.?norm|normalization|skull.?strip|single.?band|sbref', re.I)
+LOG_NOISE = re.compile(r'getdefaultlocale|rcond|standardize|PySocks|dtype from|palette', re.I)
+
+
+def selected_report(path):
+    return (any(word in path.name.lower() for word in REPORT_WORDS)
+            or path.name.endswith('_dseg.svg')
+            or bool(re.search(r'_space-[^/]+_T1w\.svg$', path.name)))
+
+
+def sbref_selection(rows):
+    """Read actual selected references from retained report-generation log lines.
+
+    A different run is a provenance flag, not by itself a registration failure.
+    Missing log evidence remains unknown, never a pass.
+    """
+    evidence, logs = {}, {}
+    pair = re.compile(r'Report - setting before \(([^)]+)\) and after \(([^)]+)\)')
+    entities = re.compile(r'(sub-[^/_]+_ses-[^/_]+_task-[^/_]+_run-(\d+))')
+    for row in rows:
+        output = Path(row['new_bold']).parents[4]
+        logs[output / (row['subject'] + '.fmriprep.log')] = None
+    for log in logs:
+        if not log.is_file():
+            continue
+        with log.open(errors='replace') as stream:
+            for number, line in enumerate(stream, 1):
+                match = pair.search(line)
+                if not match:
+                    continue
+                before, after = match.groups()
+                if not before.endswith('_desc-coreg_boldref.nii.gz') or not after.endswith('_sbref.nii.gz'):
+                    continue
+                bold, reference = entities.search(Path(before).name), entities.search(Path(after).name)
+                if bold and reference:
+                    evidence[bold[1]] = dict(bold_run=bold[2], sbref_run=reference[2], selected_sbref=after,
+                        source_log=str(log), line_number=number,
+                        status='same_run' if bold[2] == reference[2] else 'different_run_reference')
+    return [dict(key=r['key'], **evidence.get(r['key'], dict(status='unknown_no_retained_log_evidence')))
+            for r in rows]
 
 
 def log_excerpt(path, max_hits=160):
     lines = path.read_text(errors='replace').splitlines()
-    hits = [i for i, line in enumerate(lines) if LOG_PATTERN.search(line)]
+    hits = [i for i, line in enumerate(lines) if LOG_PATTERN.search(line) and not LOG_NOISE.search(line)]
     # Save context around the last relevant messages, plus the final log lines.
     selected = set(range(max(0, len(lines)-15), len(lines)))
     for i in hits[-max_hits:]:
@@ -55,7 +94,7 @@ def collect(source, record):
     assets = []
     figures = sorted(p for p in subject_root.rglob('*') if p.is_file() and p.suffix.lower() in ('.svg', '.png'))
     for path in figures:
-        selected = any(word in path.name.lower() for word in REPORT_WORDS)
+        selected = selected_report(path)
         info = dict(path=str(path), size_bytes=path.stat().st_size, selected=selected)
         if selected:
             core.require(info['size_bytes'] <= 12*1024*1024, 'Oversize registration report; inspect separately: ' + str(path))

@@ -107,7 +107,7 @@ class TrustRebuildTests(unittest.TestCase):
         selected = r.filter_for([{'run': 2}])
         self.assertEqual(selected['bold']['task'], 'trust')
         self.assertEqual(selected['bold']['run'], ['2'])
-        self.assertEqual(selected['sbref']['run'], ['2'])
+        self.assertNotIn('run', selected['sbref'])
         self.assertEqual(selected['t1w']['session'], '01')
         self.assertEqual(selected['fmap'], {'datatype': 'fmap'})
         self.assertEqual(selected['bold']['part'], [None, 'mag'])
