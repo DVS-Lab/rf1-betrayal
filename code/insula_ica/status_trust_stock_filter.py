@@ -50,7 +50,7 @@ def inventory(record):
     return state,root,dict(counts),stages,errors
 
 
-def process_table():
+def process_table(extra_seeds=()):
     text = subprocess.check_output(['ps','-u',str(os.getuid()),'-o',
         'pid=,ppid=,pcpu=,pmem=,etime=,stat=,args='],text=True)
     processes=[]
@@ -61,9 +61,10 @@ def process_table():
         pid,ppid,cpu,mem,elapsed,status,args=fields
         processes.append(dict(pid=int(pid),ppid=int(ppid),cpu=float(cpu),
                               mem_percent=float(mem),elapsed=elapsed,status=status,args=args))
-    seeds={p['pid'] for p in processes if p['pid']!=os.getpid() and
-           re.search(r'(?:^|\s)(?:\S*/)?rerun_trust_references\.py(?:\s|$)',p['args'])}
-    return descendants(processes,seeds),sorted(seeds)
+    runners={p['pid'] for p in processes if p['pid']!=os.getpid() and
+           re.search(r'(?:^|\s)(?:\S*/)?(?:rerun_trust_references|resume_trust_stock_filter)\.py(?:\s|$)',p['args'])}
+    seeds=runners | (set(extra_seeds) & {p['pid'] for p in processes})
+    return descendants(processes,seeds),sorted(runners)
 
 
 def resources():
@@ -92,7 +93,7 @@ def main():
     if record is None:
         raise SystemExit('No stock-filter rerun state found.')
     state,root,counts,stages,errors=inventory(record)
-    processes,runners=process_table()
+    processes,runners=process_table(p['pid'] for p in state.get('inherited_processes',[]))
     machine=resources()
     active=sorted(processes,key=lambda p:p['cpu'],reverse=True)
     stamp=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')

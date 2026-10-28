@@ -72,8 +72,38 @@ def sbref_selection(rows, extra_logs=()):
                     evidence[bold[1]] = dict(bold_run=bold[2], sbref_run=reference[2], selected_sbref=after,
                         source_log=str(log), line_number=number,
                         status='same_run' if bold[2] == reference[2] else 'different_run_reference')
-    return [dict(key=r['key'], **evidence.get(r['key'], dict(status='unknown_no_retained_log_evidence')))
-            for r in rows]
+    result=[]
+    for row in rows:
+        selected=evidence.get(row['key'])
+        if selected is None:
+            # Stock-filter reruns expose exactly one BOLD run. Their logs can
+            # omit the SBRef comparison figure but explicitly list selected
+            # references during workflow construction. Attribute that list only
+            # after verifying the one-run view and all selected reference files.
+            case=Path(row['new_bold']).parents[4]
+            view=case/'bids-view'/row['subject']/'ses-01/func'
+            expected={Path(p).name for p in row.get('raw_images',{})}
+            actual={p.name for p in view.glob('*_bold.nii*')}
+            log=case/(row['subject']+'.fmriprep.log')
+            if expected and expected==actual and all(
+                    (m:=entities.search(name)) and m[1]==row['key'] for name in actual) and log.is_file():
+                choices=[]
+                for number,line in enumerate(log.read_text(errors='replace').splitlines(),1):
+                    if 'Using single-band reference file(s)' not in line:
+                        continue
+                    names=re.findall(r'sub-[^,\s/]+_sbref\.nii(?:\.gz)?',line)
+                    if not names:
+                        continue
+                    choices.append((number,names))
+                if choices and all(all((m:=entities.search(name)) and m[1]==row['key'] and
+                                      (view/name).is_file() for name in names) for _,names in choices):
+                    selected=dict(status='same_run',bold_run=entities.search(row['key'])[2],
+                        sbref_run=entities.search(row['key'])[2],source_log=str(log),
+                        line_number=choices[0][0],selected_sbrefs=choices[0][1],
+                        evidence_type='explicit_selection_log_with_verified_single_run_input_view',
+                        scoped_bold_files=sorted(actual))
+        result.append(dict(key=row['key'],**(selected or dict(status='unknown_no_retained_log_evidence'))))
+    return result
 
 
 def log_excerpt(path, max_hits=160):
