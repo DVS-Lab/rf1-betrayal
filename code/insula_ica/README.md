@@ -13,6 +13,20 @@ No new gPPI or behavioral search is included.
 
 ## Current evidence and limits
 
+**2026-10-28 paired ICA launch:** use the
+[current input selection, residual definitions, and launch instructions](records/2026-10-28-paired-ica-plan/README.md).
+The user retained all three reviewed Trust runs and requested both the original
+filtered-BOLD-scale joint GLS residual and native FILM `res4d`. Each representation
+gets separate, physically masked left/right/bilateral 4D inputs, verified exactly
+zero outside its ROI. Run 5 primary components, 3/7 sensitivity fits, and automatic
+dimensionality estimation (`-d 0`): **24 fits**. Automatic fits have a separate RAM
+gate. This stage prepares/computes ICA and comparisons; network/task inference
+follows review. It does not rerun fMRIPrep, TEDANA, or FEAT preprocessing.
+
+```bash
+bash code/insula_ica/start_paired_group_ica.sh
+```
+
 **2026-10-27 production decision:** the user accepted regenerated 24.1.1 BOLD
 with the original combined confounds for this new analysis. Exact historical
 map matching is no longer required for that path. Use the

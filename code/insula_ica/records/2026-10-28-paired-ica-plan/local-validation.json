@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-28",
+  "scope": "Synthetic local development checks; Linux2 real-data pilots and production not yet run.",
+  "python_environment": "/Users/tug87422/anaconda3/bin/python3",
+  "development_fsl_version": "6.0.7.19",
+  "unit_tests": {
+    "command": "python -m unittest test_group_ica test_insula_ica test_rebuild_trust -q",
+    "tests": 40,
+    "passed": true,
+    "coverage": [
+      "490-run orchestration with mocked numerical fits; all 24 planned outputs and comparisons",
+      "Recorded Trust source selection: 241 runs, 108 stock-reference replacements, repaired sub-10834 pair",
+      "Physically written left/right/bilateral 4D files; rejection of changed files after verification",
+      "GLS residual decomposition without refitting; balancing; crop coordinates; unequal automatic component counts",
+      "Frozen historical UGR sources; refusal to rerun Trust preprocessing"
+    ]
+  },
+  "real_film": {
+    "synthetic": true,
+    "passed": true,
+    "frames": 180,
+    "sampled_voxels": 32,
+    "max_effective_design_projection": 2.2312116219609007e-09,
+    "max_whitened_decomposition_relative_error": 1.3135127166796503e-05,
+    "native_vs_unwhitened_joint_relative_error": 0.6809182363825228,
+    "joint_bold_reconstruction_max_error": 2.220446049250313e-16
+  },
+  "real_melodic": {
+    "synthetic": true,
+    "passed": true,
+    "physically_masked_inputs": 264,
+    "frames_per_input": 80,
+    "outside_roi_nonzero_values": 0,
+    "fixed_requested_components": 3,
+    "fixed_obtained_components": 3,
+    "automatic_requested_dimension": 0,
+    "automatic_obtained_components": 2,
+    "full_output_grid": [
+      10,
+      10,
+      10
+    ],
+    "fixed_mask_preserved": true,
+    "seed": 20261028,
+    "fixed_input_validation_sha256": "3953061731655d0f04f8a4f2ef9560040731813ca958502851c05867e1450b7a",
+    "automatic_input_validation_sha256": "3953061731655d0f04f8a4f2ef9560040731813ca958502851c05867e1450b7a",
+    "component_figure_rendered_and_inspected": true
+  },
+  "development_failure_handling": {
+    "initial_synthetic_5_source_3_component_test": "Did not converge; no maps generated; correctly treated as failure. A separate three-source fixture passed fixed and automatic modes. Nonconvergence is now reported explicitly with log path; never counted as completion."
+  },
+  "static_checks": [
+    "pyflakes",
+    "bash -n",
+    "git diff --check"
+  ],
+  "source_sha256": {
+    "group_ica_inputs.py": "0cc6294447f6a9debeec531aaa6b15253630723cbe2e7dc4761428bb170bed30",
+    "run_group_ica.py": "f5a3cf74bbadfbd07e68fe3cac46b50a6e8332be7ec6b980dca65265588d8130",
+    "test_group_ica.py": "b9cac55889cc9d3b529d91c8e9045183ae3f19fd2ff07c97957d7c7edb9a737f",
+    "start_paired_group_ica.sh": "2876471c39b6b5325bb13bc48757683c27a42a39d6129e1865076c0886f68b22"
+  }
+}
