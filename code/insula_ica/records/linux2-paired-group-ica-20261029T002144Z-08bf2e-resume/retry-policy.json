@@ -1,0 +1,23 @@
+{
+  "seeds": [
+    20261028,
+    20261029,
+    20261030,
+    20261031,
+    20261032
+  ],
+  "max_iterations": 10000,
+  "epsilon": 5e-05,
+  "nonlinearity": "pow3",
+  "approach": "concat",
+  "change": "Explicit external random starts and higher iteration budget only; first converged valid fit in fixed seed order.",
+  "fallback_nonlinearity": false,
+  "selection_by_task_effect": false,
+  "completed_fits_untouched": true,
+  "concurrent_queue_slots": 11,
+  "memory_reservations_GiB": {
+    "fixed": 2,
+    "automatic": 16,
+    "headroom": 8
+  }
+}

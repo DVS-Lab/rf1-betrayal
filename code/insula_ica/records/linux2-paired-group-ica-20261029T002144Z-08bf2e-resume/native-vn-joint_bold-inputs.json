@@ -1,0 +1,9 @@
+{
+  "roi": "right",
+  "mode": "joint_bold",
+  "inputs": 264,
+  "global_amplitude_multiplier": 1000.0,
+  "source_collection_sha256": "9138d19a7a133671d77bfacaa61fadd71012973c3c30d785e291e4380e83c54c",
+  "verified_inputs_sha256": "3e1b4d8d0cd4bb2597ef7a296210417fd7e173a50893d0dfcda66552cdde45cf",
+  "rationale": "Global multiplication preserves relative run/voxel weighting and avoids the absolute 0.01 SD floor in classic joint MELODIC variance normalization. No voxelwise mean is added."
+}

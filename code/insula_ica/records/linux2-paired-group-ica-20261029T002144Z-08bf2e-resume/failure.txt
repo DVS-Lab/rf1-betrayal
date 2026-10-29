@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/resume_group_ica.py", line 200, in main
+    try:run(source,root,record,state,args.jobs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/resume_group_ica.py", line 170, in run
+    g.core.require(len(selected)==24,'Some ICA fits remain incomplete; all completed fits and retry logs preserved')
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/insula_ica.py", line 37, in require
+    raise ValueError(message)
+ValueError: Some ICA fits remain incomplete; all completed fits and retry logs preserved

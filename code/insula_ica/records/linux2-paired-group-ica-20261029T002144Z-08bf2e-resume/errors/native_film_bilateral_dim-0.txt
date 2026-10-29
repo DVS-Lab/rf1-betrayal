@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/resume_group_ica.py", line 154, in fit
+    result=retry_fit(plan,root,masks,slices,reference,record,on_attempt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/resume_group_ica.py", line 105, in retry_fit
+    result=g.fit_one(mode,roi,dim,root,masks,slices,reference,**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/run_group_ica.py", line 250, in fit_one
+    with log.open('w') as stream:subprocess.run(argv,env=env,stdout=stream,stderr=subprocess.STDOUT,check=True)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tug87422/envs/tedana-26.0.3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['melodic', '-i', '/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/native_film/bilateral/inputs.txt', '-o', '/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/ica_retries/native_film/bilateral/dim-0/seed-20261028_maxit-10000', '--tr=1.615', '--nobet', '-a', 'concat', '-m', '/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/masks/bilateral_crop.nii.gz', '--bgimage=/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/reference_crop.nii.gz', '--report', '--Oall', '-d', '0', '--disableMigp', '--vn', '--update_mask', '--seed=20261028', '--maxit=10000', '--eps=0.00005', '--nl=pow3']' returned non-zero exit status 139.

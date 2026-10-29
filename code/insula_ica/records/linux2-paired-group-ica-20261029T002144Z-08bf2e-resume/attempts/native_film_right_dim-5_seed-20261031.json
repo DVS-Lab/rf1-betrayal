@@ -1,0 +1,51 @@
+{
+  "mode": "native_film",
+  "roi": "right",
+  "dimensionality": 5,
+  "seed": 20261031,
+  "max_iterations": 10000,
+  "epsilon": 5e-05,
+  "nonlinearity": "pow3",
+  "variance_normalization": false,
+  "argv": [
+    "melodic",
+    "-i",
+    "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/sessions/native_film/right/inputs.txt",
+    "-o",
+    "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/ica_retries/native_film/right/dim-5/seed-20261031_maxit-10000",
+    "--tr=1.615",
+    "--nobet",
+    "-a",
+    "concat",
+    "-m",
+    "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/masks/right_crop.nii.gz",
+    "--bgimage=/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/reference_crop.nii.gz",
+    "--report",
+    "--Oall",
+    "-d",
+    "5",
+    "--disableMigp",
+    "--vn",
+    "--update_mask",
+    "--seed=20261031",
+    "--maxit=10000",
+    "--eps=0.00005",
+    "--nl=pow3"
+  ],
+  "state": "nonconvergence",
+  "error": "MELODIC produced no component maps (possible nonconvergence); inspect /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/ica_retries/native_film/right/dim-5/seed-20261031_maxit-10000.log",
+  "logs": [
+    {
+      "source": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/ica_retries/native_film/right/dim-5/seed-20261031_maxit-10000.log",
+      "source_bytes": 36,
+      "truncated_head": false,
+      "saved": "native_film_right_dim-5_seed-20261031_stdout.txt"
+    },
+    {
+      "source": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/paired-group-ica-20261028T215022Z-679a3e/ica_retries/native_film/right/dim-5/seed-20261031_maxit-10000/log.txt",
+      "source_bytes": 461524,
+      "truncated_head": true,
+      "saved": "native_film_right_dim-5_seed-20261031_melodic.txt"
+    }
+  ]
+}
