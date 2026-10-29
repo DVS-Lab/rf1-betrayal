@@ -1,0 +1,72 @@
+{
+  "state": "UGR_pilot_passed_expanding",
+  "subjects": {
+    "sub-10486": {
+      "state": "complete",
+      "completed_runs": 1,
+      "expected_runs": 1
+    },
+    "sub-10369": {
+      "state": "complete",
+      "completed_runs": 2,
+      "expected_runs": 2
+    }
+  },
+  "runs": {
+    "sub-10486_ses-01_task-ugr_run-1": {
+      "state": "complete",
+      "runs": [
+        "sub-10486_ses-01_task-ugr_run-1"
+      ],
+      "anatomical_reuse_verified": true,
+      "reused_fmriprep": false,
+      "review_flags": {}
+    },
+    "sub-10369_ses-01_task-ugr_run-1": {
+      "state": "complete",
+      "runs": [
+        "sub-10369_ses-01_task-ugr_run-1"
+      ],
+      "anatomical_reuse_verified": true,
+      "reused_fmriprep": false,
+      "review_flags": {}
+    },
+    "sub-10369_ses-01_task-ugr_run-2": {
+      "state": "complete",
+      "runs": [
+        "sub-10369_ses-01_task-ugr_run-2"
+      ],
+      "anatomical_reuse_verified": true,
+      "reused_fmriprep": false,
+      "review_flags": {}
+    }
+  },
+  "feat_runs": {
+    "sub-10369_ses-01_task-ugr_run-2": {
+      "state": "complete",
+      "reused_completed_feat": false
+    },
+    "sub-10369_ses-01_task-ugr_run-1": {
+      "state": "complete",
+      "reused_completed_feat": false
+    },
+    "sub-10486_ses-01_task-ugr_run-1": {
+      "state": "complete",
+      "reused_completed_feat": false
+    }
+  },
+  "output_root": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-anatomy-reuse-20261029T035222Z-81f8e5",
+  "sm0_source_record": "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/records/linux2-sm-0-feat-20261029T002144Z-5e78a6",
+  "started_utc": "2026-10-29T03:52:22.483274+00:00",
+  "code_commit": "9afc0052e1552feaec62058e5d4deaa1dfe775ef",
+  "pilot_subjects": [
+    "10486",
+    "10369"
+  ],
+  "fmriprep_worker_slots": 32,
+  "feat_worker_slots": 64,
+  "usable_cpus": 128,
+  "initial_available_GiB": 84.96969985961914,
+  "sm0_output_root": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/sm-0-feat-20261029T002144Z-5e78a6",
+  "pilot_passed": true
+}
