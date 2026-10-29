@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-29",
+  "paper": {
+    "title": "Reward enhances connectivity between the ventral striatum and the default mode network",
+    "authors": "Dobryakova and Smith",
+    "year": 2022,
+    "doi": "10.1016/j.neuroimage.2022.119398",
+    "sha256": "d055886e5e9fd440d03acce8952771c07773328b6b9c80ede2f482be6bb29125",
+    "reviewed_sections": [
+      "2.5",
+      "3.1",
+      "Figure 1"
+    ],
+    "relevant_pages": [
+      3,
+      4
+    ]
+  },
+  "validation": {
+    "replacement_tests_passed": 6,
+    "background_connectivity_tests_passed": 5,
+    "retained_inventory_numerical_tests_passed": 9,
+    "actual_FSL_version": "6.0.7.19",
+    "synthetic_3_run_pilot_and_resume": true,
+    "source_task_maps_absent_in_pilot_test": true,
+    "linux2_RF1_results": "pending",
+    "stage1_FSL_glm_parity": {
+      "spatial_maps_and_4D_data": true,
+      "all_five_maps_with_spatial_intercept": true,
+      "max_absolute_difference": 3.2688052960749836e-05,
+      "pooled_correlation": 0.9999999999489125,
+      "note": "Large-baseline synthetic float32 NIfTI versus double-precision operator; FSL fsl_glm --demean."
+    }
+  },
+  "withdrawal": {
+    "tracked_task_artifacts_deleted": 6,
+    "ICA_and_background_connectivity_retained": true,
+    "old_task_directions": "withdrawn"
+  }
+}

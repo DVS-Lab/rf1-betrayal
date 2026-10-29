@@ -501,9 +501,8 @@ def prepare(c):
 def regress(c,scope):
     out,a,rows=checked_audit(c);rows=core.scoped_rows(rows,a,scope);dest=out/scope
     core.require((dest/'ica_complete.json').exists(),'ICA not complete')
-    core.require(isinstance(c['ugr_pmods_increase_with_fairness'],bool) and c.get('ugr_coding_evidence'),'Verify UG pmod sign before task projection')
     wb_image=nib.load(out/'audit/wholebrain_coverage.nii.gz');wb=wb_image.get_fdata()>0
-    effects=[];diagnostics=[]
+    diagnostics=[]
     for roi in core.ROIS:
         mask=nib.load(out/f'audit/{roi}_mask.nii.gz').get_fdata()>0
         maps=nib.load(dest/f'{roi}/dim-5/oriented_IC.nii.gz').get_fdata()[mask]
@@ -527,23 +526,8 @@ def regress(c,scope):
             core.save_image(rd/'partial_connectivity.nii.gz',image,wb_image)
             np.savetxt(rd/'timecourses.tsv',standardized,delimiter='\t')
             core.write_json(rd/'scales.json',{'residual_tc_sd':scale.tolist(),'unit':'native FILM residual unit per TC SD'})
-            # Separate task-preserved branch: apply the SAME frozen multivariate
-            # spatial weights to the ORIGINAL FEAT COPE, not to task residuals.
-            cope=nib.load(Path(row['original_feat'])/f'stats/cope{row["contrast_index"]}.nii.gz').get_fdata()
-            sign=-1 if row['task']=='trust' or c['ugr_pmods_increase_with_fairness'] else 1
-            task_effect=sign*(weights@cope[mask])
-            for k in range(5):
-                effects.append({'roi':roi,'subject':row['subject'],'task':row['task'],'run':row['run'],'component':k+1,
-                    'effect':float(task_effect[k]),'sign_multiplier':sign,'source_cope':str(Path(row['original_feat'])/f'stats/cope{row["contrast_index"]}.nii.gz'),
-                    'unit':'original FEAT COPE / frozen spatial-map unit'})
             diagnostics.append({'roi':roi,'key':row['key'],'residual_scale': 'prewhitened' if row['prewhiten']=='1' else 'unwhitened',
                 'temporal_condition':float(np.linalg.cond(standardized)),'no_additional_temporal_regression':True})
-    core.write_table(dest/'run_effects.tsv',effects);core.write_table(dest/'regression_qc.tsv',diagnostics)
-    groups={}
-    for r in effects:groups.setdefault((r['roi'],r['subject'],r['task'],r['component']),[]).append(r['effect'])
-    participant=[{'roi':roi,'subject':sub,'task':task,'component':k,'runs':len(v),'effect':float(np.mean(v)),
-                  'within_participant_se':'not estimated: spatial voxel covariance not assumed independent'}
-                  for (roi,sub,task,k),v in groups.items()]
-    core.write_table(dest/'participant_effects.tsv',participant)
-    core.write_json(dest/'regression_complete.json',{'scope':scope,'source':'native FEAT residual-to-residual connectivity; original COPE task projection',
-        'n_runs':len(rows),'task_projection':'same multivariate least-squares spatial operator as stage 1, without temporal SD scaling'})
+    core.write_table(dest/'regression_qc.tsv',diagnostics)
+    core.write_json(dest/'regression_complete.json',{'scope':scope,
+        'source':'native FEAT residual-to-residual background connectivity only','n_runs':len(rows)})

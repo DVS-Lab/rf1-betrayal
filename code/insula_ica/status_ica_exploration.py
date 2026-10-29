@@ -16,7 +16,6 @@ def main():
     print('State:',state['state'])
     print('Connectivity runs completed:',sum(v['state']=='complete' for v in state['runs'].values()),'/ 490')
     print('Figures exported:',len(list((record/'figures').glob('*.png'))))
-    if state.get('tests'):print('Task projections:',state['tests'],'; Bonferroni-60 p<.05:',state.get('task_tests_p_bonferroni_60_below_05'))
     errors=[k+': '+v.get('error','failed') for k,v in state['runs'].items() if v['state']=='failed']
     if state.get('error'):errors.append(state['error'])
     errors.extend('Git publication: '+p.read_text() for p in record.glob('*publication-error.txt'))

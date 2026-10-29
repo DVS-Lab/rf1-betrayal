@@ -5,7 +5,6 @@ import unittest
 
 import nibabel as nib
 import numpy as np
-from scipy import stats
 
 import explore_completed_ica as e
 import run_group_ica as g
@@ -36,28 +35,6 @@ class ExplorationTests(unittest.TestCase):
         np.testing.assert_allclose(tc.std(axis=0,ddof=1),1)
         self.assertGreater(condition,1)
 
-    def test_group_tests_average_runs_before_participants_and_correct_all_60_tests(self):
-        rng=np.random.default_rng(19);effects=[];known={}
-        for mode in g.inputs.MODES:
-            for roi in g.core.ROIS:
-                for task in g.core.TASKS:
-                    for k in range(1,6):
-                        values=rng.normal(.1,.5,132);known[mode,roi,task,k]=values
-                        for j,value in enumerate(values):
-                            # Unequal run count; participant means must remain the supplied values.
-                            for run,delta in ((1,0.),) if j%2 else ((1,-.2),(2,.2)):
-                                effects.append(dict(mode=mode,roi=roi,task=task,component=k,subject=str(j),run=run,effect=float(value+delta)))
-        participants,groups=e.group_task_tests(effects)
-        self.assertEqual(len(groups),60);self.assertEqual(len(participants),60*132)
-        for row in groups:
-            values=known[row['mode'],row['roi'],row['task'],row['component']]
-            self.assertEqual(row['n'],132);self.assertAlmostEqual(row['effect'],values.mean())
-            self.assertAlmostEqual(row['p'],stats.ttest_1samp(values,0).pvalue)
-            self.assertAlmostEqual(row['p_bonferroni_60'],min(1.,row['p']*60))
-
-    def test_missing_participant_cannot_produce_complete_cohort_task_results(self):
-        with self.assertRaisesRegex(ValueError,'Incomplete'):e.group_task_tests([])
-
     def test_wholebrain_run_matches_direct_residual_regression_for_all_six_bases(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d);feat=root/'feat';(feat/'stats').mkdir(parents=True)
@@ -72,7 +49,6 @@ class ExplorationTests(unittest.TestCase):
             data=(1000+np.einsum('...p,tp->...t',beta,design)+rng.normal(size=(*shape,t))).astype('float32')
             for name,values in [('filtered_func_data.nii.gz',data),('stats/res4d.nii.gz',native)]:
                 image=nib.Nifti1Image(values,reference.affine);image.header.set_xyzt_units('mm','sec');image.header.set_zooms((1,1,1,1.710));nib.save(image,feat/name)
-            cope=rng.normal(size=shape).astype('float32');nib.save(nib.Nifti1Image(cope,reference.affine),feat/'stats/cope11.nii.gz')
             for k in range(4):nib.save(nib.Nifti1Image(beta[...,k],reference.affine),feat/f'stats/pe{k+1}.nii.gz')
             joint=data.astype(float)-data.mean(axis=3,keepdims=True,dtype=float)-np.einsum('...p,tp->...t',beta.astype(float),design)
             row=dict(key='test',active_feat=str(feat),filtered_data=str(feat/'filtered_func_data.nii.gz'),native_residual=str(feat/'stats/res4d.nii.gz'),
@@ -83,7 +59,7 @@ class ExplorationTests(unittest.TestCase):
                 for roi in g.core.ROIS:
                     maps=rng.normal(size=(int(masks[roi].sum()),5));primary[mode,roi]=dict(mask=masks[roi],weights=e.weights(maps))
             result=e.analyze_run(row,source,folder,primary,union,wb,reference)
-            self.assertEqual(len(result['effects']),30)
+            self.assertNotIn('effects',result)
             for mode in g.inputs.MODES:
                 residual=joint if mode=='joint_bold' else native
                 insula=np.load(source/'run_arrays'/f'test_{mode}.npy')

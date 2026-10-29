@@ -22,9 +22,7 @@ job is started or stopped. The automatic ICA submitter remains independent.
    map NIfTIs, peak/absolute-loading-center coordinates and bilateral energy
    asymmetry, 3/5/7 spatial comparisons, and paired residual-scale comparisons.
    These are signed loadings, not disjoint anatomical parcels or network labels.
-2. **Task review:** all 60 task projections, participant means, two-sided tests,
-   pointwise CIs and figures, published before whole-brain connectivity finishes.
-3. **Connectivity review:** group maps and component/connectivity figures, an
+2. **Connectivity review:** group maps and component/connectivity figures, an
    explicit common coverage mask, anatomical target means and signed rankings.
    These maps are descriptive background coefficients, not voxelwise group
    inference, task-modulated connectivity, or independently assigned networks.
@@ -33,7 +31,7 @@ job is started or stopped. The automatic ICA submitter remains independent.
 
 The primary spatial model contains all five centered component maps and a spatial
 intercept inside the defining ROI. Its pseudoinverse supplies the same projection
-operator for residual timecourses and task COPEs. Timecourses are scaled to unit
+operator for residual timecourses. Timecourses are scaled to unit
 sample SD and all five enter the temporal model together. A conditioning/rank
 check rejects an unestimable basis.
 
@@ -50,8 +48,7 @@ where `A` is the pseudoinverse of standardized component timecourses, `X` is the
 saved complete design and `B` the saved voxelwise GLS coefficients. This equals
 projection of the same full-model GLS residual used to derive the ICA inputs;
 it does not fit another nuisance model or apply another temporal filter. The
-insula arrays, source data/model identities and corrected task COPE identities
-are checked. No task/nuisance EVs are appended again to these already cleaned
+insula arrays and source data/model identities are checked. No task/nuisance EVs are appended again to these already cleaned
 residuals. This implements the two multiple-regression stages described in
 [FSL's dual-regression documentation](https://fsl.fmrib.ox.ac.uk/fsl/docs/resting_state/dualregression.html),
 using the previously agreed joint-residual inputs rather than sequential denoising.
@@ -72,23 +69,13 @@ are copied into the Git record. Display cutoffs are descriptive, not significanc
 thresholds. Formal voxelwise inference and reference-network matching remain
 separate analyses.
 
-## Task calculation and interpretation
+## Task analysis removed on 2026-10-29
 
-Already task-cleaned residuals cannot supply the original evoked effect simply
-by regressing task EVs into them again. Instead the same frozen spatial weights
-project each run's current sm-0 task COPE, including the corrected 1.710-second
-UGR fit. Directions are kept **as stored**: Trust `rec-def`, UGR offer pmod.
-No unverified increasing-unfairness sign flip is applied. The relevant EV coding
-should be checked before attaching a directional psychological interpretation.
-
-Runs are averaged within participant/task before a one-sample group test; runs
-are not independent subjects. All 60 tests (two residual bases × three ROIs × five
-components × two tasks) are reported, with Bonferroni-60 as the combined family.
-Within-scale Bonferroni-30 values are also retained. Component indices do not
-identify matched components across ROIs or scales. Maps were estimated in this
-cohort, so all tests are exploratory, not independent confirmation, unique
-psychological encoding, a formal between-task/hemisphere difference, or validation
-of the original PPI. Null and ambiguous findings remain visible.
+The previous task-analysis implementation and all derived task outputs were
+removed at the user's request. No task direction or significance is retained
+from that method. Use [direct network timecourse modeling](../2026-10-29-network-timecourse-methods/README.md)
+with task-preserved BOLD. This exploration now reports anatomy and background
+connectivity only.
 
 ## Execution and validation
 
@@ -104,11 +91,10 @@ with other analysis publishers. Publication failures are recorded locally.
   code/insula_ica/status_ica_exploration.py --brief
 ```
 
-Seven local tests passed, covering exact GLS-residual projection, multivariate
-spatial/temporal operators, temporal SD normalization, run-before-participant
-aggregation, all 60 corrected tests, rejection of incomplete cohorts/primary
-bases, read-only snapshots while source ICA is running, and real NIfTI whole-brain
-outputs for all six bases matching direct residual regression. A real NIfTI
+Five retained local tests passed, covering exact GLS-residual projection,
+multivariate spatial/temporal operators, temporal SD normalization, rejection of
+incomplete primary bases, read-only snapshots while source ICA is running, and
+real NIfTI whole-brain outputs for all six bases matching direct residual regression. A real NIfTI
 figure/export smoke check produced six primary figures/maps and 30 anatomy rows
 at `/private/tmp/rf1-ICA-exploration-review-8ujgt9mh`. Shell syntax checks passed.
 These are software checks, not findings about RF1 connectivity/task effects.

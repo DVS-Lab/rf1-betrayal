@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bounded insula ICA: audit -> reconstruct -> verify -> prepare -> ICA -> regress -> summarize.
+"""Bounded insula ICA: audit -> reconstruct -> verify -> prepare -> ICA -> residual background regression.
 
 No existing FEAT or upstream derivatives are modified. See README before use.
 """
@@ -276,146 +276,12 @@ def bonferroni(p, family=30):
     return np.minimum(np.asarray(p) * family, 1)
 
 
-def summarize(c, scope):
-    out, a, rows = checked_audit(c)
-    rows = scoped_rows(rows, a, scope)
-    dest = analysis_dir(out, scope)
-    require((dest / 'regression_complete.json').exists(), 'Complete regress first')
-    templates = c['network_templates']
-    require(templates and all(t.get('name') and t.get('citation') and Path(t['path']).is_file() for t in templates),
-            'Supply independent reference-network maps and citations before final summary')
-    wb_image = nib.load(out / 'audit/wholebrain_coverage.nii.gz')
-    wb = np.asanyarray(wb_image.dataobj) > 0
-    refmaps = []
-    for t in templates:
-        image = nib.load(t['path'])
-        require(len(image.shape) == 3, 'Network templates must be 3D MNI maps')
-        resampled = resample_from_to(image, (wb.shape, wb_image.affine), order=1)
-        refmaps.append(resampled.get_fdata())
-    write_json(dest / 'network_template_provenance.json', [dict(t, **identity(t['path'])) for t in templates])
-    group = []
-    participants = read_table(dest / 'participant_effects.tsv')
-    for roi in ROIS:
-        for task in TASKS:
-            for k in range(1, 6):
-                vals = np.array([float(r['effect']) for r in participants if r['roi'] == roi and r['task'] == task and int(r['component']) == k])
-                require(len(vals) >= 3 and vals.std(ddof=1) > 0, 'Insufficient participant variation for group test')
-                effect, se = vals.mean(), stats.sem(vals)
-                t = effect / se
-                p = float(2 * stats.t.sf(abs(t), len(vals)-1))
-                delta = stats.t.ppf(.975, len(vals)-1)*se
-                group.append({'roi': roi, 'task': task, 'component': k, 'n': len(vals), 'effect': float(effect),
-                              'se': float(se), 'ci_low': float(effect-delta), 'ci_high': float(effect+delta),
-                              't': float(t), 'p': p, 'p_bonferroni_30': min(30*p, 1)})
-    write_table(dest / 'group_task_effects.tsv', group)
-    fingerprints, anatomy = [], []
-    for roi in ROIS:
-        seed = np.asanyarray(nib.load(out / f'audit/{roi}_mask.nii.gz').dataobj) > 0
-        outside = wb & ~seed
-        maps = nib.load(dest / f'{roi}/dim-5/oriented_IC.nii.gz').get_fdata()
-        for k in range(5):
-            v = maps[..., k][seed]
-            xyz = nib.affines.apply_affine(wb_image.affine, np.argwhere(seed))
-            peak = int(np.argmax(np.abs(v)))
-            anatomy.append({'roi': roi, 'component': k+1, 'peak_x': float(xyz[peak, 0]), 'peak_y': float(xyz[peak, 1]),
-                            'peak_z': float(xyz[peak, 2]), 'positive_voxels': int((v>0).sum()), 'negative_voxels': int((v<0).sum())})
-        # Save participant/task means; tasks have equal weight in pooled subject mean.
-        group_sum = np.zeros((*wb.shape, 5), dtype=np.float64)
-        participant_count = 0
-        folder = dest / roi / 'summary'
-        folder.mkdir(exist_ok=True)
-        for sub in sorted({r['subject'] for r in rows}):
-            tasks = []
-            for task in TASKS:
-                rr = [r for r in rows if r['subject'] == sub and r['task'] == task]
-                require(rr, f'Missing participant/task {sub}/{task}')
-                total = np.zeros((*wb.shape, 5), dtype=np.float32)
-                for r in rr:
-                    total += nib.load(dest / roi / 'runs' / r['key'] / 'partial_connectivity.nii.gz').get_fdata(dtype=np.float32)/len(rr)
-                save_image(folder / f'sub-{sub}_task-{task}_mean.nii.gz', total, wb_image)
-                tasks.append(total)
-            pooled = np.mean(tasks, axis=0)
-            save_image(folder / f'sub-{sub}_pooled_mean.nii.gz', pooled, wb_image)
-            group_sum += pooled
-            participant_count += 1
-        mean = (group_sum/participant_count).astype('float32')
-        save_image(folder / 'group_descriptive_mean.nii.gz', mean, wb_image)
-        for k in range(5):
-            for t, refmap in zip(templates, refmaps):
-                valid = outside & np.isfinite(refmap)
-                require(valid.sum() > 100 and refmap[valid].std() > 0, 'Insufficient reference template variance/coverage')
-                fingerprints.append({'roi': roi, 'component': k+1, 'template': t['name'],
-                                     'outside_insula_r': float(np.corrcoef(mean[..., k][valid], refmap[valid])[0, 1]),
-                                     'n_voxels': int(valid.sum()), 'descriptive_only': True})
-    write_table(dest / 'template_correspondence.tsv', fingerprints)
-    write_table(dest / 'component_anatomy.tsv', anatomy)
-    figures(dest, group, wb_image)
-    summary = [f'# Insula ICA results ({scope})',
-        f'Participants: {len({r["subject"] for r in rows})}; runs: {len(rows)}. All 15 primary components retained.',
-        'Discovery and connectivity used the same native full-task-plus-nuisance FEAT residuals. No additional nuisance regression or temporal filter was applied. Original task COPEs supplied a separate task-preserved spatial projection.',
-        'Connectivity maps are descriptive partial/background coefficients from simultaneous regression of all five residual component timecourses into the same whole-brain residuals. The existing task+nuisance removal is inherited from FEAT; no EVs were appended again. Native prewhitened residuals, if explicitly approved, characterize innovation-scale connectivity rather than unwhitened BOLD covariance.',
-        'Task tests use participant-level equal-run estimates, two-sided one-sample t tests, and Bonferroni correction across all 30 primary ROI × component × task tests.',
-        'TG and UG coefficients have different regressor units. No TG–UG interaction, hemisphere difference, unique psychological encoding, independent replication, or validation of the original gPPI is established.',
-        'The ICA basis was estimated on these task data. Effects, including corrected p values, are exploratory. Different component maps alone do not establish statistically different network fingerprints.',
-        f'Corrected task tests below .05: {sum(r["p_bonferroni_30"] < .05 for r in group)} / 30. All estimates, including null and ambiguous results, are in group_task_effects.tsv.',
-        'Network correspondence is an outside-ROI descriptive correlation with independent templates; weak or competing correlations should remain unlabeled. Inspect all ICA reports, coverage loss, component spectra, nuisance burden and 3/7 correspondence before manuscript interpretation.']
-    (dest / 'results_summary.md').write_text('\n\n'.join(summary) + '\n')
-
-
-def figures(dest, group, reference):
-    import matplotlib
-    matplotlib.use('Agg')
-    import matplotlib.pyplot as plt
-    fig, axes = plt.subplots(3, 2, figsize=(11, 10), sharex=True)
-    for i, roi in enumerate(ROIS):
-        for j, task in enumerate(TASKS):
-            rr = [r for r in group if r['roi'] == roi and r['task'] == task]
-            ax = axes[i, j]
-            vals = np.array([r['effect'] for r in rr])
-            ci = np.array([[r['ci_low'], r['ci_high']] for r in rr])
-            ax.errorbar(np.arange(1, 6), vals, yerr=np.array([vals-ci[:, 0], ci[:, 1]-vals]), fmt='o', capsize=3)
-            ax.axhline(0, color='.5', lw=1)
-            ax.set(title=f'{roi.capitalize()} — {task.upper()}', xlabel='Component', ylabel='Projected task contrast (FEAT units)')
-            ax.set_xticks(range(1, 6))
-    fig.suptitle('Exploratory component task responses; 95% pointwise participant CIs\nTG: nonreciprocated > reciprocated; UG: increasing unfairness')
-    fig.tight_layout(rect=(0, 0, 1, .94))
-    fig.savefig(dest / 'task_responses.png', dpi=180)
-    plt.close(fig)
-    mean_path = dest.parent / 'prepared/reference_mean.nii.gz'
-    bg_image = nib.as_closest_canonical(nib.load(mean_path))
-    bg = bg_image.get_fdata()
-    fig, axes = plt.subplots(15, 2, figsize=(11, 28))
-    for i, roi in enumerate(ROIS):
-        maps = nib.as_closest_canonical(nib.load(dest / f'{roi}/dim-5/oriented_IC.nii.gz')).get_fdata()
-        conn = nib.as_closest_canonical(nib.load(dest / f'{roi}/summary/group_descriptive_mean.nii.gz')).get_fdata()
-        for k in range(5):
-            for j, data in enumerate((maps[..., k], conn[..., k])):
-                z = np.unravel_index(np.argmax(np.abs(data)), data.shape)[2]
-                nonzero = np.abs(data[np.abs(data)>0])
-                scale = float(np.percentile(nonzero, 98)) if len(nonzero) else 1.
-                threshold = float(np.percentile(nonzero, 70)) if len(nonzero) else 0.
-                shown = np.ma.masked_where(np.abs(data[:, :, z].T) <= threshold, data[:, :, z].T)
-                ax = axes[5*i+k, j]
-                ax.imshow(bg[:, :, z].T, origin='lower', cmap='gray', vmin=0, vmax=np.percentile(bg, 99))
-                artist = ax.imshow(shown, origin='lower', cmap='RdBu_r', vmin=-scale, vmax=scale, alpha=.85)
-                z_mm = nib.affines.apply_affine(bg_image.affine, [0, 0, z])[2]
-                ax.set_title(f'{roi} IC{k+1}: {"anatomy" if j==0 else "connectivity (descriptive)"}; z={z_mm:g} mm', fontsize=10)
-                ax.text(.01, .05, 'L', transform=ax.transAxes, color='white')
-                ax.text(.95, .05, 'R', transform=ax.transAxes, color='white')
-                ax.axis('off')
-                fig.colorbar(artist, ax=ax, fraction=.03, pad=.02, label='loading' if j==0 else 'native residual / TC SD')
-    fig.suptitle('All primary components; anatomy and descriptive partial connectivity\nDisplay: largest 30% of nonzero absolute loadings, peak axial slice; no significance threshold', y=1.002)
-    fig.tight_layout()
-    fig.savefig(dest / 'anatomy_connectivity.png', dpi=140, bbox_inches='tight')
-    plt.close(fig)
-
-
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--config', type=Path, required=True)
     p.add_argument('--scope', choices=('pilot', 'full'), default='pilot')
     p.add_argument('--execute', action='store_true', help='Execute reconstruction; default reconstruct is dry-run only')
-    p.add_argument('stage', choices=('audit', 'reconstruct', 'verify', 'prepare', 'ica', 'regress', 'summarize'))
+    p.add_argument('stage', choices=('audit', 'reconstruct', 'verify', 'prepare', 'ica', 'regress'))
     args = p.parse_args()
     c = config(args.config)
     try:

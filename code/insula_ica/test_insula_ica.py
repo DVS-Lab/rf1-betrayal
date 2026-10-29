@@ -29,16 +29,6 @@ class NumericalTests(unittest.TestCase):
             self.assertEqual(revised.replace('/new/run.feat','/old/run.feat'),original)
             self.assertEqual(path.read_text(),original)
 
-    def test_multivariate_task_projection(self):
-        rng=np.random.default_rng(2);maps=rng.normal(size=(130,5));maps[:,1]+=.8*maps[:,0]
-        design=np.column_stack([np.ones(130),maps-maps.mean(axis=0)])
-        weights=np.linalg.pinv(design)[1:];effect=np.array([1,-2,3,4,-5])
-        cope=design[:,1:]@effect+15
-        np.testing.assert_allclose(weights@cope,effect,atol=1e-12)
-        # Spatial mixing commutes with a fixed task contrast, without any new GLM.
-        beta=rng.normal(size=(130,7));contrast=rng.normal(size=7)
-        np.testing.assert_allclose(weights@(beta@contrast),(weights@beta)@contrast,atol=1e-12)
-
     def test_partial_connectivity_conditions_all_components(self):
         rng=np.random.default_rng(3);tc=rng.normal(size=(150,5));tc[:,1]+=.7*tc[:,0]
         true=rng.normal(size=(5,8));target=tc@true
@@ -177,12 +167,11 @@ def integration(folder):
     p.reconstruct(c,'pilot',True);assert p.verify(c,'pilot')==0
     p.reconstruct(c,'full',True);assert p.verify(c,'full')==0
     for path,digest in before.items():assert p.sha(path)==digest,'Historical result modified'
-    p.prepare(c);p.ica(c,'pilot');p.regress(c,'pilot');p.summarize(c,'pilot')
-    assert len(p.read_table(folder/'output/pilot/group_task_effects.tsv'))==30
-    p.ica(c,'full');p.regress(c,'full');p.summarize(c,'full')
+    p.prepare(c);p.ica(c,'pilot');p.regress(c,'pilot')
+    p.ica(c,'full');p.regress(c,'full')
     # A reviewed prewhitened fit is deliberately required, never inferred from the file name.
     c['residual_scale_review']['accept_voxelwise_prewhitened']=False
-    print('FEAT RESIDUAL INTEGRATION PASSED:',folder/'output/full/results_summary.md',flush=True)
+    print('FEAT RESIDUAL INTEGRATION PASSED:',folder/'output/full/regression_complete.json',flush=True)
 
 
 if __name__=='__main__':

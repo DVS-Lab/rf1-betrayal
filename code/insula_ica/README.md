@@ -3,25 +3,39 @@
 This workflow follows the revised 2026-10-26 brief. **The earlier workflow that
 added a new nuisance-cleaning model before ICA is retired.** Old configs are
 rejected. Existing first-level FEAT task+nuisance fits supply the residual data;
-original task COPEs supply a separate task-preserved analysis branch.
+task responses require a separate direct network-timecourse model on task-preserved BOLD.
 
 The earlier user addition remains in force: **left, right and bilateral insula**,
 each with one shared TG+UG basis, five primary components and 3/7 spatial checks.
-Retain every component. The 30 primary ROI × component × task tests form one
-Bonferroni family. Component numbers do not match across ROIs/dimensionalities.
+Retain every component. The paired-basis task analysis retains all 60 primary basis × ROI × component × task tests in one Bonferroni family. Component numbers do not match across ROIs/dimensionalities.
 No new gPPI or behavioral search is included.
 
-## Current evidence and limits
+## Current evidence and task-analysis correction (2026-10-29)
 
-**Explore completed fixed ICA fits now:**
-`bash code/insula_ica/start_ica_exploration.sh` publishes component review figures,
-then all primary task-contrast projections, then descriptive whole-brain
-background-connectivity maps. It can run while automatic ICA continues, using a
-read-only snapshot of all six completed five-component solutions. See the
-[exploration methods and validation](records/2026-10-29-completed-ICA-exploration/README.md).
-Check progress with `status_ica_exploration.py --brief`. Task projections use
-corrected COPEs; residual connectivity adds no new nuisance/task regression or
-temporal filter. Results are exploratory and retain nulls and both residual scales.
+**The previous task-analysis method is withdrawn.** Its implementation, tables,
+figures, significance counts and IC3/IC4 task-direction conclusions were removed.
+Task effects must be estimated from stage-1 network timecourses in task-preserved
+4D BOLD. See [the replacement methods and checks](records/2026-10-29-network-timecourse-methods/README.md).
+
+```bash
+bash code/insula_ica/start_network_timecourses.sh
+```
+
+The detached launcher cleans the specifically withdrawn ignored outputs, runs a
+three-run pilot, then automatically expands to all 490 runs with eight RAM-gated
+4D readers. It reuses all six primary fixed ICA bases. Both basis families use
+unwhitened, task-preserved sm-0 `filtered_func_data` for this analysis. Full saved
+task and nuisance regressors, including the exact saved TEDANA confounds, enter
+one component-level temporal GLS model. Nothing is regressed out sequentially.
+Condition estimates and task contrasts are obtained from that direct model.
+No fMRIPrep, FEAT preprocessing, or ICA is repeated. Pilot/final/failure records
+publish to GitHub. Check with `status_network_timecourses.py --brief`.
+
+The existing component anatomy and residual-to-residual dual-regression maps
+remain valid descriptive **background** connectivity results. Their already
+task-cleaned timecourses are not task-response data. `start_ica_exploration.sh`
+now performs only map review and background connectivity. nPPI/task-dependent
+connectivity requires a separate interaction model and is not claimed here.
 
 **Corrected unsmoothed ICA:** after the successful 490/490 sm-0 timing repair, run
 `bash code/insula_ica/start_unsmoothed_ica.sh`. The [stream policy and validation](records/2026-10-29-unsmoothed-ICA/README.md)
@@ -618,55 +632,10 @@ Original maps are retained, with oriented copies whose largest absolute loading
 is positive. No task coefficient or network label determines the sign. Save all
 3/5/7 spatial correspondences; do not select a dimension based on task effects.
 
-Set `ugr_pmods_increase_with_fairness` and `ugr_coding_evidence` after inspecting
-stored pmod coding. Then run:
-
-```bash
-"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope pilot regress
-```
-
-- **Connectivity stage 1:** one simultaneous spatial model with all five frozen
-  maps and a spatial intercept into insula residuals. Save overlapping-component
-  partial timecourses and the spatial projection operator.
-- **Connectivity stage 2:** simultaneously regress those five TCs into the **same
-  native whole-brain residual series**, after documenting TC SD scaling. Do not
-  append task/confound EVs or use preprocessed BOLD as the target. Maps are
-  descriptive partial/background coefficients, not bivariate seed correlations.
-- **Task response:** apply the **same frozen multivariate spatial operator** to
-  each run's **original task COPE**, separately from the residual timecourses.
-  This is linear spatial projection of a task-preserved estimate, not recovery
-  of modeled task signal from `res4d`. Negate Trust contrast 10 `rec-def`; use
-  UGR contrast 11 across all partner/endowment pmods and reverse it only when
-  increasing pmod amplitude means increasing fairness. Preserve original contrast
-  sum/units. Task coefficients are not divided by residual TC SD.
-
-No independent-voxel assumption is used to manufacture a spatially weighted
-COPE variance. Within-participant projection SEs are left unestimated; equal-run
-participant means enter group one-sample tests/CIs using empirical between-person
-variation. All 30 primary tests receive Bonferroni correction. Task units differ;
-no raw TG–UG interaction or matched cross-ROI component comparison is claimed.
-
-Supply independent 3D MNI network templates (`name`, `path`, `citation`) before
-`summarize`. Only grid interpolation is performed; templates must already be in
-MNI space. Correlate outside the defining insula ROI, report weak/ambiguous
-matches, and retain unlabeled/artifact components. Group connectivity averages
-runs within participant/task, then tasks, then participants equally.
-
-```bash
-"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope pilot summarize
-# Review pilot maps, scales, source timing/sign and model/QC reports first.
-"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope full ica
-"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope full regress
-"$INSULA_AUDIT_PYTHON" code/insula_ica/insula_ica.py --config "$INSULA_CONFIG" --scope full summarize
-```
-
-Outputs include all 15 component anatomies, descriptive network maps/template
-correspondence, all 30 task estimates/N/SE/CI/corrected-p, two composite figures,
-spatial stability, and `results_summary.md`. Potential component differences
-remain exploratory; different maps alone are not a formal difference test.
-The result is not independent validation or a unique betrayal/fairness encoding
-claim, and does not test whether the original sample-defined aIns–vmPFC gPPI
-survives an independent seed. Show null and ambiguous outcomes.
+The legacy `regress` action now computes residual background connectivity only.
+Its task-analysis and summary code has been removed. Use the current network
+timecourse launcher above for all task effects and bars. UGR direction stays as
+stored until the pmod coding supports a psychological sign label.
 
 ## Verification and provenance
 
@@ -678,8 +647,7 @@ survives an independent seed. Show null and ambiguous outcomes.
 The synthetic integration uses actual installed `feat_model`/`film_gls`/MELODIC,
 creates historical fits, deletes their residuals, omits the raw BOLD, dry-runs and
 replays stored FILM commands into separate roots, compares all original results,
-checks native residual scale, and exercises all three ROIs and task/summary
-branches. Historical files must remain byte-identical. A separate prewhitened
+checks native residual scale, and exercises residual connectivity in all three ROIs. Historical files must remain byte-identical. A separate prewhitened
 FILM probe validates the diagnostic whitening convention. No RF1 pilot result
 is implied by these software tests.
 
@@ -702,8 +670,7 @@ Development checks on 2026-10-26: ten numerical/safety tests passed. The real-FS
 synthetic residual-route integration reconstructed six deleted run residuals from
 retained filtered data with missing raw BOLD; all 210 historical COPE/ZSTAT maps
 matched exactly and original files remained byte-identical. It completed all
-3/5/7 decompositions for three ROIs in pilot/full scopes, residual connectivity,
-original-COPE projection and the 30-test summaries/figures. The separate native
+3/5/7 decompositions for three ROIs in pilot/full scopes and residual connectivity. Its former task-analysis route is removed. The separate native
 prewhitened FILM probe matched the whitened joint decomposition to 1.4e-5 relative
 error. Full FEAT prestats reconstruction still requires the real linux2 pilot;
 these synthetic results do not establish RF1 input availability or equivalence.

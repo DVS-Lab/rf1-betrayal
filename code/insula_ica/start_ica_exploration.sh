@@ -22,7 +22,7 @@ nohup bash -c '
     "$INSULA_PYTHON" -u code/insula_ica/explore_completed_ica.py --jobs 8 --publish
 ' > "$INSULA_LOG" 2>&1 < /dev/null &
 echo "Started completed-ICA exploration: PID $!"
-echo "Publishes completed fixed-fit maps first, then all primary task projections, then whole-brain background connectivity."
+echo "Publishes completed fixed-fit maps and whole-brain background connectivity."
 echo "Uses all six five-component bases; eight I/O workers with RAM gating. No ICA/FEAT/FILM jobs or existing inputs changed."
 echo "Automatic ICA continues independently. Log: $INSULA_LOG"
 echo "Status: $INSULA_PYTHON code/insula_ica/status_ica_exploration.py --brief"

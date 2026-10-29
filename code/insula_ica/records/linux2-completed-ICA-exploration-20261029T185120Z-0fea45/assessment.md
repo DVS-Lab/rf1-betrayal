@@ -1,8 +1,6 @@
 # First review of completed unsmoothed ICA exploration
 
-The exploration completed all 490 run-level connectivity analyses and all 60
-planned primary task projections, publishing 26 PNG review figures and derived
-tables. Automatic-dimensionality ICA is a separate process; no completion of its
+The exploration completed all 490 run-level connectivity analyses and published component and background-connectivity review figures and tables. Automatic-dimensionality ICA is a separate process; no completion of its
 six fits is implied by this exploration record.
 
 ## Component anatomy and connectivity
@@ -27,23 +25,12 @@ bilateral primary maps match very closely (matched spatial r 0.995–0.999), as 
 right maps (0.996–0.997). Left matches are lower (0.891–0.950). These use the same
 participants/inputs and are sensitivity comparisons, not independent replication.
 
-## Task projections
+## Task analysis withdrawn
 
-Eight of 60 tests have Bonferroni-60 p<0.05; all eight concern Trust's stored
-`rec-def` contrast. No UGR offer-pmod projection passed that combined threshold.
-
-- Bilateral IC3 is positive in both representations (corrected p approximately
-  0.00014 joint-BOLD and 0.000082 native-FILM).
-- Bilateral IC4 is negative in both (0.0061 and 0.0035).
-- Right IC3 is positive in both (0.00022 and 0.00018).
-- Left IC3 is positive for joint-BOLD (0.0226); left IC4 is negative for native
-  FILM (0.0426). Left-side task findings therefore depend more on representation.
-
-Opposing Trust directions are interesting for follow-up, but do not establish a
-component-specific psychological mechanism, a significant hemisphere/task
-interaction, or validation of the original PPI. The bases were discovered in this
-cohort and the tests are exploratory. Different significance decisions are not a
-test of a difference. Absolute effect units also differ between task contrasts.
+The previous task-analysis method was rejected on 2026-10-29. Its tables, figures,
+statistics and directional conclusions have been removed. IC3/IC4 task directions
+must be re-estimated from network timecourses in task-preserved BOLD. Background
+connectivity and component anatomy are retained.
 
 ## Coverage and publication follow-up
 

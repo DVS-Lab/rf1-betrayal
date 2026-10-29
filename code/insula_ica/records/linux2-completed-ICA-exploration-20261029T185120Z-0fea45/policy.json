@@ -6,12 +6,9 @@
   "extra_temporal_filter": false,
   "new_ICA": false,
   "new_FEAT": false,
-  "task_projection": "Same frozen multivariate spatial weights applied to the current corrected sm-0 FEAT COPE.",
-  "task_directions": "As stored: Trust rec-def; UGR offer pmod. No inferred unfairness sign flip.",
-  "multiplicity": "60 tests across both residual bases, ROIs, components and tasks; within-scale 30-test values also saved.",
   "participant_aggregation": "Equal run means within participant/task, then equal participant means. Connectivity pooling gives each task equal weight.",
-  "task_inference": "Exploratory; same-cohort map discovery, no independent validation or task interaction claimed.",
   "native_FIlM": "Innovation-scale background coefficients, distinct from original-BOLD covariance.",
   "seed_ROI_excluded_from_connectivity_display": true,
-  "network_names": "Anatomical atlas target descriptions only; no reference-network assignment."
+  "network_names": "Anatomical atlas target descriptions only; no reference-network assignment.",
+  "task_analysis": "Withdrawn. Use stage-1 timecourses from task-preserved BOLD with the joint task+nuisance temporal model."
 }
