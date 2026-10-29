@@ -217,7 +217,11 @@ def run(args,record,output,state):
         except Exception as exc:(record/'task-publication-error.txt').write_text(str(exc));print('Git publication failed:',exc,flush=True)
     g.core.require(shutil.disk_usage(output).free>32*1024**3,'Need 32 GiB free for retained run/participant connectivity maps')
     fsldir=Path(os.environ['FSLDIR']);atlaspath=fsldir/'data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr25-2mm.nii.gz'
-    xml=fsldir/'data/atlases/HarvardOxford-Cortical.xml';anatomical,_,_=g.core.anatomical_masks(atlaspath,xml,reference)
+    xml=fsldir/'data/atlases/HarvardOxford-Cortical.xml'
+    atlas_source=json.loads((args.source_record/'atlas.json').read_text())
+    g.core.require(g.core.sha(atlaspath)==atlas_source['atlas']['sha256'] and g.core.sha(xml)==atlas_source['xml']['sha256'],
+                   'Atlas changed since residual array construction; anatomical voxel ordering must remain identical')
+    anatomical,_,_=g.core.anatomical_masks(atlaspath,xml,reference)
     union=anatomical['bilateral'];wb=np.ones(reference.shape,bool);fitted_union=np.zeros(reference.shape,bool)
     for row in rows:
         feat=Path(row['active_feat']);mask=nib.load(feat/'mask.nii.gz');sigma=nib.load(feat/'stats/sigmasquareds.nii.gz')
