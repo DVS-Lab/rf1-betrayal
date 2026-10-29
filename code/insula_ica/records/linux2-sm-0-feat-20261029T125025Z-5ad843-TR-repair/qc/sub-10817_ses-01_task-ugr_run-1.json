@@ -1,0 +1,36 @@
+{
+  "key": "sub-10817_ses-01_task-ugr_run-1",
+  "smoothing_mm": 0,
+  "complete_design_preserved": false,
+  "exact_original_nuisance_matrix": true,
+  "residual_dof": 195.0,
+  "finite_residuals": true,
+  "coverage": {
+    "left": 1.0,
+    "right": 1.0,
+    "bilateral": 1.0
+  },
+  "residual": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/sm-0-feat-20261029T002144Z-5e78a6/feat/sub-10817_ses-01_task-ugr_run-1_sm-0.feat/stats/res4d.nii.gz",
+  "filtered_data": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/sm-0-feat-20261029T002144Z-5e78a6/feat/sub-10817_ses-01_task-ugr_run-1_sm-0.feat/filtered_func_data.nii.gz",
+  "source_bold": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843/sub-10817/run-1/fmriprep-24/sub-10817/ses-01/func/sub-10817_ses-01_task-ugr_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+  "source_bold_identity": {
+    "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843/sub-10817/run-1/fmriprep-24/sub-10817/ses-01/func/sub-10817_ses-01_task-ugr_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+    "size": 191006572,
+    "mtime_ns": 1793278693701693970,
+    "sha256": null
+  },
+  "residual_scale": "Native FILM voxelwise-prewhitened; no additional nuisance regression.",
+  "qc_review_pending": true,
+  "timing_correction": {
+    "key": "sub-10817_ses-01_task-ugr_run-1",
+    "historical_tr_seconds": 1.615,
+    "corrected_tr_seconds": 1.71,
+    "authorization": "user_2026-10-29",
+    "basis": "All four current raw JSONs and NIfTI headers agree; user authorized corrected reanalysis.",
+    "historical_acquisition_provenance_resolved": false,
+    "event_times_rescaled": false
+  },
+  "task_design_regenerated_for_TR": true,
+  "corrected_design_sha256": "9c615206001bed283ecc7a08dd60b9cece87a4e36ba00e895e56fcd06d56343b",
+  "contrast_definitions_preserved": true
+}
