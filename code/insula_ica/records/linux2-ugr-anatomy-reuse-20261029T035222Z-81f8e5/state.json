@@ -1,5 +1,5 @@
 {
-  "state": "finishing_missing_UGR_FEATs",
+  "state": "UGR_recovery_incomplete_review_errors",
   "subjects": {
     "sub-10486": {
       "state": "complete",
@@ -3934,5 +3934,7 @@
   "usable_cpus": 128,
   "initial_available_GiB": 84.96969985961914,
   "sm0_output_root": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/sm-0-feat-20261029T002144Z-5e78a6",
-  "pilot_passed": true
+  "pilot_passed": true,
+  "combined_sm0_record": "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/records/linux2-sm-0-feat-20261029T035222Z-81f8e5-ugr-resume",
+  "finished_utc": "2026-10-29T09:26:21.619515+00:00"
 }
