@@ -13,6 +13,16 @@ No new gPPI or behavioral search is included.
 
 ## Current evidence and limits
 
+**Explore completed fixed ICA fits now:**
+`bash code/insula_ica/start_ica_exploration.sh` publishes component review figures,
+then all primary task-contrast projections, then descriptive whole-brain
+background-connectivity maps. It can run while automatic ICA continues, using a
+read-only snapshot of all six completed five-component solutions. See the
+[exploration methods and validation](records/2026-10-29-completed-ICA-exploration/README.md).
+Check progress with `status_ica_exploration.py --brief`. Task projections use
+corrected COPEs; residual connectivity adds no new nuisance/task regression or
+temporal filter. Results are exploratory and retain nulls and both residual scales.
+
 **Corrected unsmoothed ICA:** after the successful 490/490 sm-0 timing repair, run
 `bash code/insula_ica/start_unsmoothed_ica.sh`. The [stream policy and validation](records/2026-10-29-unsmoothed-ICA/README.md)
 describe 24 paired-scale L/R/bilateral fits at 3/5/7/automatic dimensions, native
