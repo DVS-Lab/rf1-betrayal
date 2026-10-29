@@ -1,0 +1,269 @@
+[
+  {
+    "roi": "left",
+    "joint_bold_components": 5,
+    "native_film_components": 5,
+    "unmatched_joint_bold_components": [],
+    "unmatched_native_film_components": [],
+    "all_pair_spatial_r": [
+      [
+        0.9495630466888934,
+        0.017173649438822908,
+        -0.21121588812759837,
+        -0.13814827999245716,
+        -0.018578917815712557
+      ],
+      [
+        0.017838597534981404,
+        0.9481154617449644,
+        0.31652643966037347,
+        0.15897317276352485,
+        -0.1537783426534656
+      ],
+      [
+        0.09986912522242256,
+        -0.07375317365455189,
+        0.8975664719370571,
+        -0.25292435821272935,
+        0.11625760034438724
+      ],
+      [
+        0.011600317412815267,
+        -0.07923901857065935,
+        0.030732989012249294,
+        0.9040495363607816,
+        0.23901246624579925
+      ],
+      [
+        -0.16662104838753977,
+        0.21711685454423116,
+        -0.2578780068266346,
+        -0.16175476532367974,
+        0.8913493137939593
+      ]
+    ],
+    "matches": [
+      {
+        "joint_bold_component": 1,
+        "native_film_component": 1,
+        "spatial_r": 0.9495630466888934,
+        "absolute_spatial_r": 0.9495630466888934,
+        "native_sign_for_joint_comparison": 1
+      },
+      {
+        "joint_bold_component": 2,
+        "native_film_component": 2,
+        "spatial_r": 0.9481154617449644,
+        "absolute_spatial_r": 0.9481154617449644,
+        "native_sign_for_joint_comparison": 1
+      },
+      {
+        "joint_bold_component": 3,
+        "native_film_component": 3,
+        "spatial_r": 0.8975664719370571,
+        "absolute_spatial_r": 0.8975664719370571,
+        "native_sign_for_joint_comparison": 1
+      },
+      {
+        "joint_bold_component": 4,
+        "native_film_component": 4,
+        "spatial_r": 0.9040495363607816,
+        "absolute_spatial_r": 0.9040495363607816,
+        "native_sign_for_joint_comparison": 1
+      },
+      {
+        "joint_bold_component": 5,
+        "native_film_component": 5,
+        "spatial_r": 0.8913493137939593,
+        "absolute_spatial_r": 0.8913493137939593,
+        "native_sign_for_joint_comparison": 1
+      }
+    ],
+    "centered_subspace_angles_degrees": [
+      30.583206652714125,
+      12.179096707097798,
+      3.8918173156996936,
+      2.129908654983248,
+      1.7025035585230486
+    ],
+    "matching_rule": "One-to-one maximum total absolute spatial correlation; all pairwise correlations also retained."
+  },
+  {
+    "roi": "right",
+    "joint_bold_components": 5,
+    "native_film_components": 5,
+    "unmatched_joint_bold_components": [],
+    "unmatched_native_film_components": [],
+    "all_pair_spatial_r": [
+      [
+        0.9968689481324604,
+        0.008475589592162177,
+        -0.008115047039291404,
+        -0.007296041651529823,
+        -0.0058196864291550875
+      ],
+      [
+        -0.0726134118557965,
+        0.996380968416088,
+        0.03826892734541145,
+        0.006163283436931997,
+        -0.0238261032622652
+      ],
+      [
+        0.035735787290001826,
+        -0.034899853676154356,
+        0.997179963785884,
+        -0.020104013441753384,
+        -0.024829206898009305
+      ],
+      [
+        0.02788110987335407,
+        0.006755455517607052,
+        -0.012687328055808937,
+        0.9957466660873583,
+        0.007712864230961783
+      ],
+      [
+        -0.00012464440424128976,
+        -0.021714391095458748,
+        0.0013619066715315886,
+        0.06692764107059768,
+        0.9971854382678604
+      ]
+    ],
+    "matches": [
+      {
+        "joint_bold_component": 1,
+        "native_film_component": 1,
+        "spatial_r": 0.9968689481324604,
+        "absolute_spatial_r": 0.9968689481324604,
+        "native_sign_for_joint_comparison": 1
+      },
+      {
+        "joint_bold_component": 2,
+        "native_film_component": 2,
+        "spatial_r": 0.996380968416088,
+        "absolute_spatial_r": 0.996380968416088,
+        "native_sign_for_joint_comparison": 1
+      },
+      {
+        "joint_bold_component": 3,
+        "native_film_component": 3,
+        "spatial_r": 0.997179963785884,
+        "absolute_spatial_r": 0.997179963785884,
+        "native_sign_for_joint_comparison": 1
+      },
+      {
+        "joint_bold_component": 4,
+        "native_film_component": 4,
+        "spatial_r": 0.9957466660873583,
+        "absolute_spatial_r": 0.9957466660873583,
+        "native_sign_for_joint_comparison": 1
+      },
+      {
+        "joint_bold_component": 5,
+        "native_film_component": 5,
+        "spatial_r": 0.9971854382678604,
+        "absolute_spatial_r": 0.9971854382678604,
+        "native_sign_for_joint_comparison": 1
+      }
+    ],
+    "centered_subspace_angles_degrees": [
+      6.269589105492595,
+      4.0230909609333585,
+      3.737034254679592,
+      2.2079056495844855,
+      1.239959406595619
+    ],
+    "matching_rule": "One-to-one maximum total absolute spatial correlation; all pairwise correlations also retained."
+  },
+  {
+    "roi": "bilateral",
+    "joint_bold_components": 5,
+    "native_film_components": 5,
+    "unmatched_joint_bold_components": [],
+    "unmatched_native_film_components": [],
+    "all_pair_spatial_r": [
+      [
+        0.9990162470459641,
+        -0.01403161399273505,
+        0.03950234510221789,
+        -0.05349406295577489,
+        -0.02486866294486482
+      ],
+      [
+        -0.003180011876710001,
+        0.9987945240562783,
+        0.0020057992178289068,
+        0.015031237909391142,
+        -0.004171394272742187
+      ],
+      [
+        0.028274151256148957,
+        0.0534124269558117,
+        0.9984432903646415,
+        -0.01565004824079108,
+        -0.016170383356820504
+      ],
+      [
+        -0.06050505661755128,
+        0.009364374645997547,
+        0.013197615459717333,
+        0.9978581565019614,
+        -0.023332952934124924
+      ],
+      [
+        0.006938726086618458,
+        -0.0397074310059389,
+        0.0015523035451949921,
+        -0.02181052893380625,
+        0.9949869277992007
+      ]
+    ],
+    "matches": [
+      {
+        "joint_bold_component": 1,
+        "native_film_component": 1,
+        "spatial_r": 0.9990162470459641,
+        "absolute_spatial_r": 0.9990162470459641,
+        "native_sign_for_joint_comparison": 1
+      },
+      {
+        "joint_bold_component": 2,
+        "native_film_component": 2,
+        "spatial_r": 0.9987945240562783,
+        "absolute_spatial_r": 0.9987945240562783,
+        "native_sign_for_joint_comparison": 1
+      },
+      {
+        "joint_bold_component": 3,
+        "native_film_component": 3,
+        "spatial_r": 0.9984432903646415,
+        "absolute_spatial_r": 0.9984432903646415,
+        "native_sign_for_joint_comparison": 1
+      },
+      {
+        "joint_bold_component": 4,
+        "native_film_component": 4,
+        "spatial_r": 0.9978581565019614,
+        "absolute_spatial_r": 0.9978581565019614,
+        "native_sign_for_joint_comparison": 1
+      },
+      {
+        "joint_bold_component": 5,
+        "native_film_component": 5,
+        "spatial_r": 0.9949869277992007,
+        "absolute_spatial_r": 0.9949869277992007,
+        "native_sign_for_joint_comparison": 1
+      }
+    ],
+    "centered_subspace_angles_degrees": [
+      6.151646684387487,
+      3.759052486634081,
+      2.1247250784535807,
+      1.627127909675491,
+      0.9954968950888473
+    ],
+    "matching_rule": "One-to-one maximum total absolute spatial correlation; all pairwise correlations also retained."
+  }
+]

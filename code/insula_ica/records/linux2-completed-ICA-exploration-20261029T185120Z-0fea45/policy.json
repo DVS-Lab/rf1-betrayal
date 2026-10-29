@@ -1,0 +1,17 @@
+{
+  "source_record": "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/records/linux2-unsmoothed-group-ica-20261029T175618Z-4680e2",
+  "analysis_scope": "Exploratory completed primary ICA maps; automatic fits not required.",
+  "wholebrain_connectivity": "Same residual representation in spatial and temporal regression; all five component timecourses entered simultaneously.",
+  "extra_task_or_nuisance_regression": false,
+  "extra_temporal_filter": false,
+  "new_ICA": false,
+  "new_FEAT": false,
+  "task_projection": "Same frozen multivariate spatial weights applied to the current corrected sm-0 FEAT COPE.",
+  "task_directions": "As stored: Trust rec-def; UGR offer pmod. No inferred unfairness sign flip.",
+  "multiplicity": "60 tests across both residual bases, ROIs, components and tasks; within-scale 30-test values also saved.",
+  "participant_aggregation": "Equal run means within participant/task, then equal participant means. Connectivity pooling gives each task equal weight.",
+  "task_inference": "Exploratory; same-cohort map discovery, no independent validation or task interaction claimed.",
+  "native_FIlM": "Innovation-scale background coefficients, distinct from original-BOLD covariance.",
+  "seed_ROI_excluded_from_connectivity_display": true,
+  "network_names": "Anatomical atlas target descriptions only; no reference-network assignment."
+}
