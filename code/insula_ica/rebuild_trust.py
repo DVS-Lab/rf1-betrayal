@@ -144,13 +144,14 @@ def subject_jobs(pilot, jobs):
     return selected
 
 
-def warpkit_inputs(upstream, sub, run, raw_inputs):
+def warpkit_inputs(upstream, sub, run, raw_inputs, task='trust'):
     """The archived Warpkit script copies its first fieldmap volume into BIDS.
 
     Presence of raw BOLD echoes does not establish distortion-correction inputs.
     Check only the run-specific products and their actual BOLD associations.
     """
-    stem = f'{sub}_ses-01_acq-trust_run-{run}'
+    require(task in ('trust', 'ugr'), 'Unknown Warpkit task')
+    stem = f'{sub}_ses-01_acq-{task}_run-{run}'
     directory = upstream / 'bids' / sub / 'ses-01/fmap'
     paths = [directory / (stem + suffix) for suffix in
              ('_fieldmap.nii.gz', '_magnitude.nii.gz', '_fieldmap.json', '_magnitude.json')]
@@ -187,7 +188,7 @@ def warpkit_inputs(upstream, sub, run, raw_inputs):
         except (ValueError, KeyError, OSError) as exc:
             problems.append(str(exc))
     retained_4d = (upstream / 'derivatives/warpkit' / sub / 'ses-01' /
-                   f'{sub}_ses-01_task-trust_run-{run}_fieldmaps.nii')
+                   f'{sub}_ses-01_task-{task}_run-{run}_fieldmaps.nii')
     return dict(ready=not problems, problems=problems,
                 files={str(p): dict(size=p.stat().st_size, mtime_ns=p.stat().st_mtime_ns,
                                      **({'sha256': sha(p)} if p.suffix == '.json' else {}))

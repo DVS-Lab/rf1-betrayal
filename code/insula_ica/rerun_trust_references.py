@@ -96,7 +96,7 @@ def link_file(source, destination):
     destination.symlink_to(source.resolve())
 
 
-def stage_inputs(row, case, raw=None, stock=None):
+def stage_inputs(row, case, raw=None, stock=None, task='trust'):
     """Limit the input view, not the JSON queries; expose only anatomy for reuse."""
     raw=RAW if raw is None else raw
     stock=STOCK if stock is None else stock
@@ -118,10 +118,10 @@ def stage_inputs(row, case, raw=None, stock=None):
         source=Path(name)
         core.require(source.parent.resolve()==(session/'func').resolve(),'Unexpected raw functional root')
         link_file(source,func/source.name)
-    # Keep all Trust SBRefs. The stock query inherits the BOLD run and selects
+    # Keep all task SBRefs. The stock query inherits the BOLD run and selects
     # the matching one. Include JSON inheritance without adding other BOLD data.
     for source in (session/'func').iterdir():
-        if source.is_file() and (source.suffix=='.json' or ('_task-trust_' in source.name and source.name.endswith(('_sbref.nii.gz','_sbref.nii')))):
+        if source.is_file() and (source.suffix=='.json' or (f'_task-{task}_' in source.name and source.name.endswith(('_sbref.nii.gz','_sbref.nii')))):
             if not (func/source.name).exists():link_file(source,func/source.name)
     config=case/'fmriprep_config.json'; shutil.copyfile(stock,config)
     core.require(config.read_bytes()==stock.read_bytes(),'Stock filter copy changed')

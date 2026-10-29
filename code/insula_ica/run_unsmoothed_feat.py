@@ -31,7 +31,7 @@ def unsmoothed_fsf(text,bold,confounds,target):
     return updated
 
 
-def plan(row,root):
+def plan(row,root,bold_override=None):
     feat=Path(row['active_feat']);fsf=feat/'design.fsf'
     if not fsf.is_file():fsf=Path(row['source_fsf'])
     settings=g.core.fsl_settings(fsf)
@@ -41,7 +41,13 @@ def plan(row,root):
     g.core.require(g.core.sha(row['confounds'])==row['confounds_sha256'],'Historical nuisance file changed')
     nuisance=g.core.load_numeric(row['confounds']);fitted=g.core.load_numeric(feat/'confoundevs.txt')
     g.core.require(nuisance.shape==fitted.shape and np.array_equal(nuisance,fitted),'Original nuisance columns changed')
-    bold=Path(settings['feat_files(1)']);g.core.require(bold.is_absolute(),'Saved BOLD path is not absolute')
+    historical_bold=Path(settings['feat_files(1)'])
+    if bold_override:
+        g.core.require(row['task']=='ugr','Regenerated BOLD override is restricted to UGR')
+        bold=Path(bold_override['path'])
+        g.core.require(g.core.identity(bold,content=False)==bold_override['identity'],'Regenerated UGR BOLD changed')
+    else:bold=historical_bold
+    g.core.require(bold.is_absolute(),'Saved BOLD path is not absolute')
     events=[Path(settings[f'fmri(custom{k})']) for k in range(1,int(settings['fmri(evs_orig)'])+1)
         if settings.get(f'fmri(shape{k})')=='3']
     missing=[str(p) for p in (bold,*events) if not p.is_file()]
@@ -50,7 +56,8 @@ def plan(row,root):
     result=dict(row,source_sm5_feat=str(feat),source_settings=str(fsf),source_fsf_sha256=g.core.sha(fsf),
         source_bold=str(bold),source_bold_present=bold.is_file(),missing_inputs=missing,
         status='missing_source_inputs' if missing else 'ready',target=str(target),source_smoothing_mm=5,smoothing_mm=0,
-        unsmoothed_fsf=str(root/'fsf'/(row['key']+'_sm-0.fsf')))
+        unsmoothed_fsf=str(root/'fsf'/(row['key']+('_sm-0_regenerated-ugr.fsf' if bold_override else '_sm-0.fsf'))))
+    if bold_override:result.update(historical_bold=str(historical_bold),regenerated_bold_provenance=bold_override)
     if not missing:
         image=nib.load(bold);reference=nib.load(feat/'mean_func.nii.gz')
         g.core.require(g.core.same_grid(image,reference) and image.shape==(*reference.shape,row['nvol']),'Saved FEAT BOLD input has wrong grid/time count')
@@ -107,9 +114,15 @@ def fit(item,root,record):
 
 def run(args,root,record,state):
     rows=json.loads((args.source_record/'accepted-inputs.json').read_text());g.core.require(len(rows)==490,'Expected the frozen 490 accepted runs')
+    override_path=getattr(args,'bold_overrides',None)
+    overrides=json.loads(override_path.read_text()) if override_path else {}
+    g.core.require(set(overrides)<={r['key'] for r in rows if r['task']=='ugr'},'Unknown/non-UGR BOLD overrides')
+    if override_path:
+        state['bold_overrides']=str(override_path.resolve())
+        g.save(record/'regenerated-ugr-bold-overrides.json',overrides)
     g.save(record/'software.json',g.core.software());plans=[]
     for row in rows:
-        try:plans.append(plan(row,root))
+        try:plans.append(plan(row,root,overrides.get(row['key'])))
         except Exception as exc:plans.append(dict(key=row['key'],task=row['task'],status='blocked',error=str(exc)))
     g.save(record/'input-plan.json',plans)
     ready=[p for p in plans if p['status']=='ready']
@@ -134,7 +147,8 @@ def run(args,root,record,state):
         state['state']='sm0_FEAT_complete_QC_pending' if len(ready)==490 and failed==0 else 'sm0_partial_inputs_or_failed_fits'
     g.save(record/'state.json',state)
     (record/'README.md').write_text('# Separate unsmoothed FEAT stream\n\n'
-        'Same recorded fMRIPrep BOLD, task EVs and saved TEDANA+nuisance matrix; only FEAT smoothing changes from 5 mm to 0 mm, with new output locations. '
+        'Recorded task EVs and saved TEDANA+nuisance matrix; FEAT smoothing changes from 5 mm to 0 mm, with new output locations. '
+        'Original BOLD is used unless an explicit, identity-checked regenerated UGR override is listed in regenerated-ugr-bold-overrides.json. '
         'No original wrapper, fMRIPrep, TEDANA or Warpkit was executed. No existing sm-5 fit was overwritten. '
         'All sm-0 filtered data, native residuals, autocorrelations and PEs are retained. '
         f'Worker queue slots: {args.jobs}, with 1 GiB reservations and 8 GiB headroom. '
@@ -149,6 +163,7 @@ def main():
     parser.add_argument('--jobs',type=int,default=64)
     parser.add_argument('--execute',action='store_true')
     parser.add_argument('--resume-record',type=Path)
+    parser.add_argument('--bold-overrides',type=Path,help='Explicit identity/provenance registry for regenerated UGR BOLD only')
     parser.add_argument('--publish',action='store_true')
     args=parser.parse_args();g.core.require(1<=args.jobs<=64,'Expected 1–64 workers')
     stamp=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'-'+uuid.uuid4().hex[:6]
@@ -156,6 +171,7 @@ def main():
         previous=json.loads((args.resume_record/'state.json').read_text());root=Path(previous['output_root']).resolve()
         g.core.require(root.is_relative_to((g.core.ROOT/'derivatives/insula_ica').resolve()) and root.name.startswith('sm-0-feat-'),'Invalid sm-0 resume root')
         args.source_record=Path(previous['source_record'])
+        if args.bold_overrides is None and previous.get('bold_overrides'):args.bold_overrides=Path(previous['bold_overrides'])
     else:root=g.core.ROOT/'derivatives/insula_ica'/('sm-0-feat-'+stamp)
     record=g.core.ROOT/'code/insula_ica/records'/('linux2-sm-0-feat-'+stamp)
     lockpath=g.core.ROOT/'code/insula_ica/output/sm-0-feat.lock';lockpath.parent.mkdir(parents=True,exist_ok=True)

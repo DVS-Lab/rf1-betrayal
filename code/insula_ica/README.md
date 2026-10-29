@@ -13,6 +13,17 @@ No new gPPI or behavioral search is included.
 
 ## Current evidence and limits
 
+**UGR unsmoothed-input recovery:** run
+`bash code/insula_ica/start_ugr_anatomy_reuse.sh` on linux2. It runs a two-participant,
+three-run pilot using the existing 24.1.1 anatomical cache and unchanged stock
+filter. After anatomy reuse, BOLD QC and original-model sm-0 FEAT checks pass, it
+automatically expands to all 249 accepted UGR runs, with up to 32 subject workers
+and 64 FEAT workers sharing CPU/RAM limits. Existing Trust sm-0 successes are
+retained. Pilot/final/failure records publish to this branch. This recovers inputs
+for the unsmoothed sensitivity; no new ICA is launched by this command.
+Use `status_ugr_recovery.py --brief` for bounded progress/errors.
+See the [recovery policy and validation](records/2026-10-28-ugr-anatomy-reuse/README.md).
+
 Check all three streams without launching jobs or printing full logs:
 
 ```bash

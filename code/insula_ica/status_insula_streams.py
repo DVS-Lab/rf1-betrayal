@@ -17,7 +17,7 @@ STREAMS = (
     ('Baseline sm-5 ICA', 'linux2-paired-group-ica-*',
      ('run_group_ica.py', 'resume_group_ica.py'), 'paired-group-ica', 'rf1-paired-group-ica.*'),
     ('Unsmoothed sm-0 FEAT', 'linux2-sm-0-feat-*',
-     ('run_unsmoothed_feat.py',), 'sm-0-feat', 'rf1-sm0-feat.*'),
+     ('run_unsmoothed_feat.py', 'recover_ugr_unsmoothed.py'), 'sm-0-feat', 'rf1-sm0-feat.*'),
     ('Task-preserved sensitivity', 'linux2-task-preserved-ica-*',
      ('task_preserved_ica.py',), 'task-preserved-ica', 'rf1-task-preserved-ica.*'),
 )
