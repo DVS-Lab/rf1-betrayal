@@ -88,17 +88,21 @@ def record_attempt(record,folder,attempt):
     g.save(record/'attempts'/(prefix+'.json'),dict(attempt,logs=logs))
 
 
-def retry_fit(plan,root,masks,slices,reference,record,on_attempt=None,*,variance_normalization=False):
+def retry_fit(plan,root,masks,slices,reference,record,on_attempt=None,*,variance_normalization=False,preserve_timing=False,threads=4):
     mode,roi,dim=plan
     for seed in SEEDS:
         folder=root/'ica_retries'/mode/roi/f'dim-{dim}'/f'seed-{seed}_maxit-{MAXIT}'
         note=folder.with_name(folder.name+'.attempt.json')
         kwargs=dict(output_folder=folder,seed=seed,maxit=MAXIT,variance_normalization=variance_normalization)
+        if preserve_timing:kwargs.update(preserve_timing=True)
+        command_kwargs=dict(kwargs)
+        if threads!=4:kwargs['threads']=threads
         if folder.exists() and not (folder/'complete.json').is_file():
             g.core.require(is_nonconvergence(folder),'Unverified partial retry exists; preserve it and inspect: '+str(folder))
             continue
         attempt=dict(mode=mode,roi=roi,dimensionality=dim,seed=seed,max_iterations=MAXIT,epsilon=0.00005,
-            nonlinearity='pow3',variance_normalization=variance_normalization,argv=g.melodic_command(mode,roi,dim,root,**kwargs),state='running')
+            nonlinearity='pow3',variance_normalization=variance_normalization,argv=g.melodic_command(mode,roi,dim,root,**command_kwargs),state='running')
+        if preserve_timing:attempt.update(acquisition_TRs_preserved=True,threads_per_fit=threads)
         folder.parent.mkdir(parents=True,exist_ok=True);g.save(note,attempt)
         if on_attempt:on_attempt(attempt)
         try:

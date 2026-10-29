@@ -80,11 +80,11 @@ def freeze_nifti(path,data,affine):
     else:write_nifti(path,data,affine)
 
 
-def validate_masked_4d(path,mask_image,frames):
+def validate_masked_4d(path,mask_image,frames,tr=1.615):
     """Read the written input: every voxel outside this specific ROI must be zero."""
     image=nib.load(path);mask=mask_image.get_fdata()>0
     core.require(core.same_grid(image,mask_image) and image.shape==(*mask.shape,frames),'Masked 4D input grid/timing mismatch')
-    core.require(np.isclose(image.header.get_zooms()[3],1.615,atol=1e-5),'Masked 4D input TR mismatch')
+    core.require(np.isclose(image.header.get_zooms()[3],tr,atol=1e-5),'Masked 4D input TR mismatch')
     data=np.asanyarray(image.dataobj)
     core.require(np.isfinite(data).all(),'Nonfinite masked 4D input')
     core.require(np.count_nonzero(data[~mask])==0,'Nonzero data outside the specific insula ROI: '+str(path))
@@ -152,7 +152,7 @@ def fixed_masks(rows,root,record,anatomical,reference):
     return masks
 
 
-def sessions(rows,root,record,masks,anatomical_union,reference,*,modes=inputs.MODES,amplitude=1.0):
+def sessions(rows,root,record,masks,anatomical_union,reference,*,modes=inputs.MODES,amplitude=1.0,preserve_timing=False):
     slices,affine=inputs.crop_geometry(reference,masks['bilateral'])
     shape=masks['bilateral'][slices].shape
     groups=defaultdict(list)
@@ -170,6 +170,10 @@ def sessions(rows,root,record,masks,anatomical_union,reference,*,modes=inputs.MO
         for folder in folders.values():folder.mkdir(parents=True,exist_ok=True)
         for (subject,task),rr in sorted(groups.items()):
             rr=sorted(rr,key=lambda r:r['run'])
+            block_tr=float(rr[0]['tr']) if preserve_timing else 1.615
+            if preserve_timing:
+                core.require(all(np.isclose(float(r['tr']),block_tr,rtol=0,atol=1e-5) for r in rr),
+                             'Different TRs within a participant/task block require an explicit policy; no relabeling or interpolation')
             arrays=[np.load(root/'run_arrays'/(r['key']+'_'+mode+'.npy'))[kept] for r in rr]
             values,weights=inputs.balanced_session(arrays)
             for roi,folder in folders.items():
@@ -178,6 +182,7 @@ def sessions(rows,root,record,masks,anatomical_union,reference,*,modes=inputs.MO
                 signature=dict(run_arrays=[core.sha(root/'run_arrays'/(r['key']+'_complete.json')) for r in rr],
                     mask_sha256=core.sha(root/'masks'/(roi+'_crop.nii.gz')),mode=mode,roi=roi)
                 if amplitude!=1:signature['global_amplitude_multiplier']=amplitude
+                if preserve_timing:signature['acquisition_tr_seconds']=block_tr
                 if marker.exists():
                     old=json.loads(marker.read_text());check=old['verification']
                     core.require(old['signature']==signature and check['physical_4d_mask_verified'] and
@@ -186,12 +191,13 @@ def sessions(rows,root,record,masks,anatomical_union,reference,*,modes=inputs.MO
                     core.require(not destination.exists(),'Partial balanced input exists; preserve it')
                     data=np.zeros((*shape,values.shape[1]),dtype='float32')
                     data[masks[roi][slices]]=values[masks[roi][masks['bilateral']]]*amplitude
-                    write_nifti(destination,data,affine)
-                    check=validate_masked_4d(destination,nib.load(root/'masks'/(roi+'_crop.nii.gz')),values.shape[1])
+                    write_nifti(destination,data,affine,tr=block_tr)
+                    check=validate_masked_4d(destination,nib.load(root/'masks'/(roi+'_crop.nii.gz')),values.shape[1],tr=block_tr)
                     save(marker,dict(signature=signature,verification=check))
                 listings[roi].append(str(destination.resolve()));validated[roi].append(check)
             provenance.append(dict(mode=mode,subject=subject,task=task,runs=[r['key'] for r in rr],
                 frames=[r['nvol'] for r in rr],within_session_weights=weights))
+            if preserve_timing:provenance[-1].update(acquisition_tr_seconds=block_tr,interpolated=False,header_relabeling=False)
         for roi,folder in folders.items():
             (folder/'inputs.txt').write_text('\n'.join(listings[roi])+'\n')
             manifest=dict(mode=mode,roi=roi,mask_sha256=core.sha(root/'masks'/(roi+'_crop.nii.gz')),inputs=validated[roi])
@@ -224,19 +230,19 @@ def component_figure(maps,mask,background,affine,path,label,first_component=1):
     fig.tight_layout(rect=(0,0,1,.95));fig.savefig(path,dpi=100,facecolor='black');plt.close(fig)
 
 
-def melodic_command(mode,roi,dim,root,*,output_folder=None,seed=SEED,maxit=2000,variance_normalization=False):
+def melodic_command(mode,roi,dim,root,*,output_folder=None,seed=SEED,maxit=2000,variance_normalization=False,preserve_timing=False):
     argv=['melodic','-i',str(root/'sessions'/mode/roi/'inputs.txt'),'-o',str(output_folder or root/'ica'/mode/roi/f'dim-{dim}'),
-        '--tr=1.615','--nobet','-a','concat','-m',str(root/'masks'/(roi+'_crop.nii.gz')),
-        '--bgimage='+str(root/'reference_crop.nii.gz'),'--report','--Oall','-d',str(dim),
+        *([] if preserve_timing else ['--tr=1.615']),'--nobet','-a','concat','-m',str(root/'masks'/(roi+'_crop.nii.gz')),
+        '--bgimage='+str(root/'reference_crop.nii.gz'),*([] if preserve_timing else ['--report']),'--Oall','-d',str(dim),
         '--disableMigp',*([] if variance_normalization else ['--vn']),'--update_mask','--seed='+str(seed),'--maxit='+str(maxit)]
     if output_folder is None and seed==SEED and maxit==2000 and not variance_normalization:argv.append('--maxrestart=10')
     else:argv.extend(['--eps=0.00005','--nl=pow3'])
     return argv
 
 
-def fit_one(mode,roi,dim,root,masks,slices,reference,*,output_folder=None,seed=SEED,maxit=2000,variance_normalization=False):
+def fit_one(mode,roi,dim,root,masks,slices,reference,*,output_folder=None,seed=SEED,maxit=2000,variance_normalization=False,preserve_timing=False,threads=4):
     verified_inputs_sha256=verify_ica_inputs(mode,roi,root)
-    argv=melodic_command(mode,roi,dim,root,output_folder=output_folder,seed=seed,maxit=maxit,variance_normalization=variance_normalization)
+    argv=melodic_command(mode,roi,dim,root,output_folder=output_folder,seed=seed,maxit=maxit,variance_normalization=variance_normalization,preserve_timing=preserve_timing)
     folder=Path(argv[argv.index('-o')+1]);folder.parent.mkdir(parents=True,exist_ok=True)
     marker=folder/'complete.json'
     if marker.is_file():
@@ -245,7 +251,8 @@ def fit_one(mode,roi,dim,root,masks,slices,reference,*,output_folder=None,seed=S
             previous['map_identity']==core.identity(previous['oriented_maps']),'Completed ICA inputs/maps changed')
         return dict(previous,reused_completed_ica=True)
     core.require(not folder.exists(),'Partial/completed ICA directory already exists; preserve it')
-    env=dict(os.environ,OMP_NUM_THREADS='4',OPENBLAS_NUM_THREADS='4',MKL_NUM_THREADS='4')
+    core.require(1<=threads<=8,'Expected 1–8 threads per ICA fit')
+    env=dict(os.environ,OMP_NUM_THREADS=str(threads),OPENBLAS_NUM_THREADS=str(threads),MKL_NUM_THREADS=str(threads))
     log=folder.parent/(folder.name+'.log')
     with log.open('w') as stream:subprocess.run(argv,env=env,stdout=stream,stderr=subprocess.STDOUT,check=True)
     core.require((folder/'melodic_IC.nii.gz').is_file(),'MELODIC produced no component maps (possible nonconvergence); inspect '+str(log))
@@ -266,10 +273,11 @@ def fit_one(mode,roi,dim,root,masks,slices,reference,*,output_folder=None,seed=S
     core.save_image(folder/'oriented_IC.nii.gz',full,reference)
     result=dict(mode=mode,roi=roi,dimensionality=dim,actual_components=actual_dim,
         dimensionality_selection='MELODIC automatic estimation' if dim==0 else 'prespecified',argv=argv,seed=seed,
-        max_iterations=maxit,convergence_epsilon=0.00005,nonlinearity='pow3',variance_normalization=variance_normalization,threads_per_fit=4,
+        max_iterations=maxit,convergence_epsilon=0.00005,nonlinearity='pow3',variance_normalization=variance_normalization,threads_per_fit=threads,
         oriented_maps=str(folder/'oriented_IC.nii.gz'),mask_sha256=core.sha(root/'masks'/(roi+'.nii.gz')),
         signs=signs,map_identity=core.identity(folder/'oriented_IC.nii.gz'),verified_inputs_sha256=verified_inputs_sha256,
         no_new_temporal_filter=True,no_new_nuisance_regression=True)
+    if preserve_timing:result.update(acquisition_TRs_preserved=True,common_TR_override=False,frequency_report_interpretable=False)
     save(folder/'complete.json',result)
     return result
 

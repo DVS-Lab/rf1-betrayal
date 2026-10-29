@@ -13,6 +13,14 @@ No new gPPI or behavioral search is included.
 
 ## Current evidence and limits
 
+**Corrected unsmoothed ICA:** after the successful 490/490 sm-0 timing repair, run
+`bash code/insula_ica/start_unsmoothed_ica.sh`. The [stream policy and validation](records/2026-10-29-unsmoothed-ICA/README.md)
+describe 24 paired-scale L/R/bilateral fits at 3/5/7/automatic dimensions, native
+MELODIC variance normalization enabled, physically masked inputs, preserved
+run-specific TRs and serialized automatic PCA. This uses completed first-level
+outputs and launches no fMRIPrep, FEAT or FILM. Check it with
+`status_unsmoothed_ica.py --brief`.
+
 **Run-specific timing correction:** the UGR audit identified `sub-10817` run 1
 with raw TR 1.710 seconds versus modeled 1.615. Use
 `bash code/insula_ica/start_ugr_timing_repair.sh` for the authorized correction,

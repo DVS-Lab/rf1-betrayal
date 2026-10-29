@@ -92,7 +92,7 @@ def inspect_source(row,reference):
     core.require(float((feat/'stats/dof').read_text())>=37,'Insufficient residual degrees of freedom')
     image=nib.load(row['filtered_data']);mask=nib.load(feat/'mask.nii.gz')
     core.require(core.same_grid(reference,image) and core.same_grid(reference,mask),'Incompatible common MNI grid')
-    core.require(image.shape==(*reference.shape,len(design)) and np.isclose(image.header.get_zooms()[3],1.615,atol=1e-5),'Wrong grid/TR/time count')
+    core.require(image.shape==(*reference.shape,len(design)) and np.isclose(image.header.get_zooms()[3],float(row['tr']),atol=1e-5),'Wrong grid/TR/time count')
     pe=[feat/f'stats/pe{k+1}.nii.gz' for k in range(design.shape[1])]
     paths=[Path(row['filtered_data']),feat/'design.mat',feat/'design.con',feat/'mask.nii.gz',feat/'mean_func.nii.gz',
            feat/'stats/sigmasquareds.nii.gz',feat/'stats/dof',feat/'confoundevs.txt',Path(row['confounds']),*pe]
