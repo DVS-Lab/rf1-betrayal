@@ -2,4 +2,8 @@
 /config.local.json
 *.nii
 *.nii.gz
+# Explicit group-derived ICA/connectivity review artifacts; source and subject
+# 4D imaging remain excluded everywhere else.
+!/records/*/primary_maps/*.nii.gz
+!/records/*/group_maps/*.nii.gz
 /records/*.tar.gz
