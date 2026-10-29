@@ -1,0 +1,132 @@
+{
+  "key": "sub-11533_ses-01_task-ugr_run-1",
+  "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-anatomy-reuse-20261029T035222Z-81f8e5/sub-11533/run-1/fmriprep-24/sub-11533/ses-01/func/sub-11533_ses-01_task-ugr_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+  "identity": {
+    "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-anatomy-reuse-20261029T035222Z-81f8e5/sub-11533/run-1/fmriprep-24/sub-11533/ses-01/func/sub-11533_ses-01_task-ugr_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+    "size": 195481085,
+    "mtime_ns": 1793265230635621246,
+    "sha256": null
+  },
+  "coverage": {
+    "left": 1.0,
+    "right": 1.0,
+    "bilateral": 1.0
+  },
+  "historical_frame": {
+    "reference": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11533/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/example_func.nii.gz",
+    "bold": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-anatomy-reuse-20261029T035222Z-81f8e5/sub-11533/run-1/fmriprep-24/sub-11533/ses-01/func/sub-11533_ses-01_task-ugr_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+    "frame_index": 120,
+    "same_grid": true,
+    "reference_geometry": {
+      "shape": [
+        57,
+        70,
+        54
+      ],
+      "zooms": [
+        2.700000047683716,
+        2.700000047683716,
+        2.9700000286102295
+      ],
+      "affine": [
+        [
+          2.700000047683716,
+          0.0,
+          0.0,
+          -74.80000305175781
+        ],
+        [
+          0.0,
+          2.700000047683716,
+          0.0,
+          -109.80000305175781
+        ],
+        [
+          0.0,
+          0.0,
+          2.9700000286102295,
+          -72.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "stored_dtype": "float32"
+    },
+    "bold_geometry": {
+      "shape": [
+        57,
+        70,
+        54,
+        240
+      ],
+      "zooms": [
+        2.700000047683716,
+        2.700000047683716,
+        2.9700000286102295,
+        1.6150000095367432
+      ],
+      "affine": [
+        [
+          2.700000047683716,
+          0.0,
+          0.0,
+          -74.80000305175781
+        ],
+        [
+          0.0,
+          2.700000047683716,
+          0.0,
+          -109.80000305175781
+        ],
+        [
+          0.0,
+          0.0,
+          2.9700000286102295,
+          -72.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "stored_dtype": "float32"
+    },
+    "voxels": 104924,
+    "spatial_r": 0.9635507729355753,
+    "relative_rms_difference": 0.12672975338021839,
+    "max_absolute_difference": 8929.153442382812,
+    "global_scale": 0.9930952389953961,
+    "relative_rms_after_global_scale": 0.12654151361225713
+  },
+  "review_flags": [],
+  "exact_saved_confounds_sha256": "83862d9d91c8a69ace2cd9b04cb3ea5e8397845ea0f1f75d6d52ca192c00aaf4",
+  "finite_nonconstant_bold": true,
+  "historical_equality_required": false,
+  "reference_selection": {
+    "key": "sub-11533_ses-01_task-ugr_run-1",
+    "status": "same_run",
+    "bold_run": "1",
+    "sbref_run": "1",
+    "source_log": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-anatomy-reuse-20261029T035222Z-81f8e5/sub-11533/run-1/sub-11533.fmriprep.log",
+    "line_number": 87,
+    "selected_sbrefs": [
+      "sub-11533_ses-01_task-ugr_run-1_echo-1_sbref.nii.gz",
+      "sub-11533_ses-01_task-ugr_run-1_echo-2_sbref.nii.gz",
+      "sub-11533_ses-01_task-ugr_run-1_echo-3_sbref.nii.gz",
+      "sub-11533_ses-01_task-ugr_run-1_echo-4_sbref.nii.gz"
+    ],
+    "evidence_type": "explicit_selection_log_with_verified_single_run_input_view",
+    "scoped_bold_files": [
+      "sub-11533_ses-01_task-ugr_run-1_echo-1_part-mag_bold.nii.gz",
+      "sub-11533_ses-01_task-ugr_run-1_echo-2_part-mag_bold.nii.gz",
+      "sub-11533_ses-01_task-ugr_run-1_echo-3_part-mag_bold.nii.gz",
+      "sub-11533_ses-01_task-ugr_run-1_echo-4_part-mag_bold.nii.gz"
+    ]
+  }
+}

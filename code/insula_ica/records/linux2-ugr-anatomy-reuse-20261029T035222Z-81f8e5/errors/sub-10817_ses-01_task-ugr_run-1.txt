@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/recover_ugr_unsmoothed.py", line 249, in run_case
+    core.require(all(audit[r['key']]['state']=='ready' for r in selected),'UGR raw/Warpkit audit blocked; see raw-warpkit-audit.json')
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/insula_ica.py", line 37, in require
+    raise ValueError(message)
+ValueError: UGR raw/Warpkit audit blocked; see raw-warpkit-audit.json
