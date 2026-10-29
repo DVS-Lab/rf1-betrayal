@@ -13,6 +13,17 @@ No new gPPI or behavioral search is included.
 
 ## Current evidence and limits
 
+Check all three streams without launching jobs or printing full logs:
+
+```bash
+/ZPOOL/data/tools/anaconda/tug87422/envs/tedana-26.0.3/bin/python code/insula_ica/status_insula_streams.py --brief
+```
+
+The checker reports current runners and FSL child processes, recorded progress,
+saved completion markers/maps/QC, missing input counts and bounded error summaries.
+It saves the full status and all recorded errors under ignored `output/`.
+Completed FEAT/ICA counts still require scientific QC review before downstream use.
+
 **2026-10-28 convergence and sensitivity update:** the initial ICA attempt completed
 13 fits and stopped on five optimizer nonconvergences; the six automatic fits had
 not run. Use the [ICA resume and separate sensitivity streams](records/2026-10-28-ica-resume-sensitivities/README.md):
