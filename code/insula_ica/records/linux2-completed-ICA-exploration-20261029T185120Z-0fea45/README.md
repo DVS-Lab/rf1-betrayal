@@ -20,3 +20,12 @@ Fixed-fit spatial figures and primary component maps are available now. Automati
 - [joint_bold, right, 7 components](figures/joint_bold_right_dim-7.png)
 - [native_film, bilateral, 7 components](figures/native_film_bilateral_dim-7.png)
 - [joint_bold, bilateral, 7 components](figures/joint_bold_bilateral_dim-7.png)
+
+
+## Task-projection review ready
+
+All 60 planned projections are available; 8 have Bonferroni-60 p<0.05. Same-cohort exploratory estimates, not independent confirmation. Direction is as stored in each task contrast. Connectivity remains pending at this checkpoint.
+
+- [Joint-BOLD task projections](figures/joint_bold_task_projections.png)
+- [Native-FILM task projections](figures/native_film_task_projections.png)
+- [All task estimates and CIs](group_task_projections.tsv)
