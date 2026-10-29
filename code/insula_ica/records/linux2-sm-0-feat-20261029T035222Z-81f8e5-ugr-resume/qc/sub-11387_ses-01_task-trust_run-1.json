@@ -1,0 +1,24 @@
+{
+  "key": "sub-11387_ses-01_task-trust_run-1",
+  "smoothing_mm": 0,
+  "complete_design_preserved": true,
+  "exact_original_nuisance_matrix": true,
+  "residual_dof": 235.0,
+  "finite_residuals": true,
+  "coverage": {
+    "left": 1.0,
+    "right": 1.0,
+    "bilateral": 1.0
+  },
+  "residual": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/sm-0-feat-20261029T002144Z-5e78a6/feat/sub-11387_ses-01_task-trust_run-1_sm-0.feat/stats/res4d.nii.gz",
+  "filtered_data": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/sm-0-feat-20261029T002144Z-5e78a6/feat/sub-11387_ses-01_task-trust_run-1_sm-0.feat/filtered_func_data.nii.gz",
+  "source_bold": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-11387/ses-01/func/sub-11387_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+  "source_bold_identity": {
+    "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-rebuild-24-linux2-audit-20261026T213907Z-dc0e41/fmriprep-24/sub-11387/ses-01/func/sub-11387_ses-01_task-trust_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+    "size": 219153096,
+    "mtime_ns": 1793164548560121706,
+    "sha256": null
+  },
+  "residual_scale": "Native FILM voxelwise-prewhitened; no additional nuisance regression.",
+  "qc_review_pending": true
+}
