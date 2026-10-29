@@ -1,0 +1,34 @@
+{
+  "images": [
+    "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10817/ses-01/func/sub-10817_ses-01_task-ugr_run-1_echo-1_part-mag_bold.nii.gz",
+    "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10817/ses-01/func/sub-10817_ses-01_task-ugr_run-1_echo-2_part-mag_bold.nii.gz",
+    "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10817/ses-01/func/sub-10817_ses-01_task-ugr_run-1_echo-3_part-mag_bold.nii.gz",
+    "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10817/ses-01/func/sub-10817_ses-01_task-ugr_run-1_echo-4_part-mag_bold.nii.gz"
+  ],
+  "warpkit": {
+    "ready": true,
+    "problems": [],
+    "files": {
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10817/ses-01/fmap/sub-10817_ses-01_acq-ugr_run-1_fieldmap.nii.gz": {
+        "size": 313639,
+        "mtime_ns": 1783790686273157985
+      },
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10817/ses-01/fmap/sub-10817_ses-01_acq-ugr_run-1_magnitude.nii.gz": {
+        "size": 667123,
+        "mtime_ns": 1783790688242188330
+      },
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10817/ses-01/fmap/sub-10817_ses-01_acq-ugr_run-1_fieldmap.json": {
+        "size": 3753,
+        "mtime_ns": 1783943759465505614,
+        "sha256": "92079e8d29fac9d34e86a5cb2aa662379fae053e169c19daa40caab36e103f25"
+      },
+      "/ZPOOL/data/projects/rf1-sra-linux2/bids/sub-10817/ses-01/fmap/sub-10817_ses-01_acq-ugr_run-1_magnitude.json": {
+        "size": 3741,
+        "mtime_ns": 1783943759466505628,
+        "sha256": "ad63cf295467b27cff48b757f21478163e4096024a9f90653cfc9ead194b7f5f"
+      }
+    },
+    "retained_4d_fieldmaps": "/ZPOOL/data/projects/rf1-sra-linux2/derivatives/warpkit/sub-10817/ses-01/sub-10817_ses-01_task-ugr_run-1_fieldmaps.nii",
+    "retained_4d_exists": true
+  }
+}

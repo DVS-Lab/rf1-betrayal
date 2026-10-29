@@ -1,0 +1,34 @@
+{
+  "state": "TR_repair_complete_QC_review_pending",
+  "output_root": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843",
+  "key": "sub-10817_ses-01_task-ugr_run-1",
+  "code_commit": "ebe54e10760f89251f7afa5e878416d802e27033",
+  "fits": {
+    "corrected_sm0": {
+      "state": "complete",
+      "reused_completed_feat": false,
+      "feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/sm-0-feat-20261029T002144Z-5e78a6/feat/sub-10817_ses-01_task-ugr_run-1_sm-0.feat"
+    },
+    "wrong_TR_sm5_control": {
+      "state": "complete",
+      "feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843/sm5-controls/same_BOLD_wrong_TR_1p615.feat",
+      "tr_seconds": 1.615,
+      "smoothing_mm": 5,
+      "task_design_changed": false,
+      "contrast_definitions_preserved": true,
+      "exact_original_nuisance_matrix": true,
+      "role": "wrong_TR_diagnostic_control_only"
+    },
+    "corrected_sm5": {
+      "state": "complete",
+      "feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843/sm5-controls/corrected_TR_1p710.feat",
+      "tr_seconds": 1.71,
+      "smoothing_mm": 5,
+      "task_design_changed": true,
+      "contrast_definitions_preserved": true,
+      "exact_original_nuisance_matrix": true,
+      "role": "corrected_analysis_candidate"
+    }
+  },
+  "combined_sm0_record": "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/records/linux2-sm-0-feat-20261029T125025Z-5ad843-TR-repair"
+}

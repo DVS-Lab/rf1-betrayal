@@ -1,0 +1,111 @@
+{
+  "key": "sub-10817_ses-01_task-ugr_run-1",
+  "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843/sub-10817/run-1/fmriprep-24/sub-10817/ses-01/func/sub-10817_ses-01_task-ugr_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+  "identity": {
+    "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843/sub-10817/run-1/fmriprep-24/sub-10817/ses-01/func/sub-10817_ses-01_task-ugr_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+    "size": 191006572,
+    "mtime_ns": 1793278693701693970,
+    "sha256": null
+  },
+  "coverage": {
+    "left": 1.0,
+    "right": 1.0,
+    "bilateral": 1.0
+  },
+  "historical_frame": {
+    "reference": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10817/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/example_func.nii.gz",
+    "bold": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843/sub-10817/run-1/fmriprep-24/sub-10817/ses-01/func/sub-10817_ses-01_task-ugr_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+    "frame_index": 120,
+    "same_grid": true,
+    "reference_geometry": {
+      "shape": [
+        57,
+        70,
+        54
+      ],
+      "zooms": [
+        2.700000047683716,
+        2.700000047683716,
+        2.9700000286102295
+      ],
+      "affine": [
+        [
+          2.700000047683716,
+          0.0,
+          0.0,
+          -74.80000305175781
+        ],
+        [
+          0.0,
+          2.700000047683716,
+          0.0,
+          -109.80000305175781
+        ],
+        [
+          0.0,
+          0.0,
+          2.9700000286102295,
+          -72.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "stored_dtype": "float32"
+    },
+    "bold_geometry": {
+      "shape": [
+        57,
+        70,
+        54,
+        240
+      ],
+      "zooms": [
+        2.700000047683716,
+        2.700000047683716,
+        2.9700000286102295,
+        1.7100000381469727
+      ],
+      "affine": [
+        [
+          2.700000047683716,
+          0.0,
+          0.0,
+          -74.80000305175781
+        ],
+        [
+          0.0,
+          2.700000047683716,
+          0.0,
+          -109.80000305175781
+        ],
+        [
+          0.0,
+          0.0,
+          2.9700000286102295,
+          -72.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "stored_dtype": "float32"
+    },
+    "voxels": 101166,
+    "spatial_r": 0.9648420843815653,
+    "relative_rms_difference": 0.12091640332696574,
+    "max_absolute_difference": 13010.75244140625,
+    "global_scale": 0.9854347891893287,
+    "relative_rms_after_global_scale": 0.12003595806078592
+  },
+  "review_flags": [],
+  "exact_saved_confounds_sha256": "43d124dc50a44b8cadd2e09094e0ed0da6b35049c256bfaf1fe4036589fa1cc8",
+  "finite_nonconstant_bold": true,
+  "historical_equality_required": false
+}

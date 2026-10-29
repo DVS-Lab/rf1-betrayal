@@ -1,0 +1,31 @@
+{
+  "key": "sub-10817_ses-01_task-ugr_run-1",
+  "subject": "10817",
+  "task": "ugr",
+  "run": 1,
+  "nvol": 240,
+  "tr": 1.71,
+  "nss": 0,
+  "original_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10817/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat",
+  "active_feat": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843/sm5-controls/corrected_TR_1p710.feat",
+  "source_fsf": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843/sm5-controls/corrected_TR_1p710.feat/design.fsf",
+  "filtered_data": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843/sm5-controls/corrected_TR_1p710.feat/filtered_func_data.nii.gz",
+  "native_residual": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843/sm5-controls/corrected_TR_1p710.feat/stats/res4d.nii.gz",
+  "confounds": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10817/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/confoundevs.txt",
+  "confounds_sha256": "43d124dc50a44b8cadd2e09094e0ed0da6b35049c256bfaf1fe4036589fa1cc8",
+  "source_selection_record": "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/output/linux2-audit-20261026T213907Z-dc0e41/audit",
+  "contrast_index": 11,
+  "original_flags": [],
+  "historical_tr": 1.615,
+  "new_bold": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843/sub-10817/run-1/fmriprep-24/sub-10817/ses-01/func/sub-10817_ses-01_task-ugr_run-1_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz",
+  "timing_correction": {
+    "key": "sub-10817_ses-01_task-ugr_run-1",
+    "historical_tr_seconds": 1.615,
+    "corrected_tr_seconds": 1.71,
+    "authorization": "user_2026-10-29",
+    "basis": "All four current raw JSONs and NIfTI headers agree; user authorized corrected reanalysis.",
+    "historical_acquisition_provenance_resolved": false,
+    "event_times_rescaled": false
+  },
+  "analysis_replacement_review_pending": true
+}
