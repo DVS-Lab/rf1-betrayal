@@ -13,6 +13,14 @@ No new gPPI or behavioral search is included.
 
 ## Current evidence and limits
 
+**2026-10-28 convergence and sensitivity update:** the initial ICA attempt completed
+13 fits and stopped on five optimizer nonconvergences; the six automatic fits had
+not run. Use the [ICA resume and separate sensitivity streams](records/2026-10-28-ica-resume-sensitivities/README.md):
+preserve completed results, retry unfinished fits, compare native MELODIC
+normalization in a paired pilot, rerun separate sm-0 FEATs with 64 queue slots,
+and assess task preservation using matched nuisance-only/full-model OLS inputs.
+These are separate analysis streams, not a replacement of the manuscript fits.
+
 **2026-10-28 paired ICA launch:** use the
 [current input selection, residual definitions, and launch instructions](records/2026-10-28-paired-ica-plan/README.md).
 The user retained all three reviewed Trust runs and requested both the original

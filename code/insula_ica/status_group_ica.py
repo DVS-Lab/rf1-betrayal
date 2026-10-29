@@ -60,15 +60,19 @@ def main():
     root=Path(state['output_root']) if state.get('output_root') else None
     processes=process_table()
     runners=[p for p in processes or [] if Path(p['args'].split()[0]).name.startswith('python') and
-        re.search(r'(?:^|\s)(?:\S*/)?run_group_ica\.py(?:\s|$)',p['args'])]
+        re.search(r'(?:^|\s)(?:\S*/)?(?:run|resume)_group_ica\.py(?:\s|$)',p['args'])]
     active={exe:[p for p in processes or [] if root and str(root) in p['args'] and
         Path(p['args'].split()[0]).name==exe] for exe in ('melodic','film_gls')}
     completed=[];errors=[]
     if root:
+        selection=root/'selected_ica_fits.json'
+        selected=read_json(selection).get('fits',{}) if selection.is_file() else {}
         for mode in ('joint_bold','native_film'):
             for roi in ('left','right','bilateral'):
                 for dim in (3,5,7,0):
-                    marker=root/'ica'/mode/roi/f'dim-{dim}/complete.json'
+                    key=f'{mode}/{roi}/dim-{dim}'
+                    chosen=selected.get(key) or state.get('fits',{}).get(key,{})
+                    marker=Path(chosen['oriented_maps']).parent/'complete.json' if chosen.get('oriented_maps') else root/'ica'/key/'complete.json'
                     if not marker.is_file():continue
                     try:
                         item=read_json(marker)
@@ -93,6 +97,10 @@ def main():
     if automatic:
         lines.append('Automatic component counts: '+ '; '.join(f'{c["mode"]}/{c["roi"]}={c["actual_components"]}'
             for c in completed if c['dimension']==0))
+    pilot=state.get('native_variance_normalization_pilot',{})
+    if pilot:
+        lines.append(f'Native MELODIC VN pilot completed: {sum(v.get("state")=="complete" for v in pilot.values())}/2 (separate from 24 baseline fits)')
+        errors.extend(f'VN pilot {mode}: {v.get("error","failed")}' for mode,v in pilot.items() if v.get('state')=='failed')
     lines+=['Recorded errors (up to 8):']+([short(e) for e in errors[:8]] or ['None recorded.'])
     if len(errors)>8:lines.append(f'{len(errors)-8} more errors in the saved snapshot.')
     lines+=['Latest launcher: '+str(log or 'none found'),'Launcher error lines (up to 4):']+(launcher_errors or ['None found in the bounded log tail.'])

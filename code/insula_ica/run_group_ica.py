@@ -37,7 +37,7 @@ def plans():
     return [(mode,roi,dim) for mode in inputs.MODES for roi in core.ROIS for dim in DIMENSIONS]
 
 
-def compare_maps(first,second):
+def compare_maps(first,second,*,labels=('joint_bold','native_film')):
     """Match signed ICA maps by absolute spatial correlation, retaining all pairs."""
     first=np.asarray(first,dtype=float);second=np.asarray(second,dtype=float)
     core.require(first.ndim==second.ndim==2 and first.shape[0]==second.shape[0],'Map comparison grid mismatch')
@@ -45,7 +45,7 @@ def compare_maps(first,second):
     core.require((np.linalg.norm(a,axis=0)>0).all() and (np.linalg.norm(b,axis=0)>0).all(),'Constant component map')
     corr=(a.T@b)/np.outer(np.linalg.norm(a,axis=0),np.linalg.norm(b,axis=0))
     left,right=linear_sum_assignment(-np.abs(corr))
-    return dict(joint_bold_components=first.shape[1],native_film_components=second.shape[1],
+    result=dict(joint_bold_components=first.shape[1],native_film_components=second.shape[1],
         unmatched_joint_bold_components=[k+1 for k in range(first.shape[1]) if k not in left],
         unmatched_native_film_components=[k+1 for k in range(second.shape[1]) if k not in right],
         all_pair_spatial_r=corr.tolist(),matches=[dict(joint_bold_component=int(i+1),
@@ -53,6 +53,15 @@ def compare_maps(first,second):
         native_sign_for_joint_comparison=1 if corr[i,j]>=0 else -1) for i,j in zip(left,right)],
         centered_subspace_angles_degrees=np.degrees(subspace_angles(a,b)).tolist(),
         matching_rule='One-to-one maximum total absolute spatial correlation; all pairwise correlations also retained.')
+    if labels!=('joint_bold','native_film'):
+        for old,new in zip(('joint_bold','native_film'),labels):
+            for prefix in ('','unmatched_'):
+                result[prefix+new+'_components']=result.pop(prefix+old+'_components')
+        for match in result['matches']:
+            match[labels[0]+'_component']=match.pop('joint_bold_component')
+            match[labels[1]+'_component']=match.pop('native_film_component')
+            match[labels[1]+'_sign_for_'+labels[0]+'_comparison']=match.pop('native_sign_for_joint_comparison')
+    return result
 
 
 def write_nifti(path,data,affine,tr=1.615):
@@ -143,7 +152,7 @@ def fixed_masks(rows,root,record,anatomical,reference):
     return masks
 
 
-def sessions(rows,root,record,masks,anatomical_union,reference):
+def sessions(rows,root,record,masks,anatomical_union,reference,*,modes=inputs.MODES,amplitude=1.0):
     slices,affine=inputs.crop_geometry(reference,masks['bilateral'])
     shape=masks['bilateral'][slices].shape
     groups=defaultdict(list)
@@ -155,7 +164,7 @@ def sessions(rows,root,record,masks,anatomical_union,reference):
     ref_data=reference.get_fdata()[slices]
     freeze_nifti(root/'reference_crop.nii.gz',ref_data.astype('float32'),affine)
     provenance=[];verification=[]
-    for mode in inputs.MODES:
+    for mode in modes:
         folders={roi:root/'sessions'/mode/roi for roi in core.ROIS}
         listings={roi:[] for roi in core.ROIS};validated={roi:[] for roi in core.ROIS}
         for folder in folders.values():folder.mkdir(parents=True,exist_ok=True)
@@ -168,6 +177,7 @@ def sessions(rows,root,record,masks,anatomical_union,reference):
                 marker=destination.with_name(destination.name+'.complete.json')
                 signature=dict(run_arrays=[core.sha(root/'run_arrays'/(r['key']+'_complete.json')) for r in rr],
                     mask_sha256=core.sha(root/'masks'/(roi+'_crop.nii.gz')),mode=mode,roi=roi)
+                if amplitude!=1:signature['global_amplitude_multiplier']=amplitude
                 if marker.exists():
                     old=json.loads(marker.read_text());check=old['verification']
                     core.require(old['signature']==signature and check['physical_4d_mask_verified'] and
@@ -175,7 +185,7 @@ def sessions(rows,root,record,masks,anatomical_union,reference):
                 else:
                     core.require(not destination.exists(),'Partial balanced input exists; preserve it')
                     data=np.zeros((*shape,values.shape[1]),dtype='float32')
-                    data[masks[roi][slices]]=values[masks[roi][masks['bilateral']]]
+                    data[masks[roi][slices]]=values[masks[roi][masks['bilateral']]]*amplitude
                     write_nifti(destination,data,affine)
                     check=validate_masked_4d(destination,nib.load(root/'masks'/(roi+'_crop.nii.gz')),values.shape[1])
                     save(marker,dict(signature=signature,verification=check))
@@ -214,16 +224,20 @@ def component_figure(maps,mask,background,affine,path,label,first_component=1):
     fig.tight_layout(rect=(0,0,1,.95));fig.savefig(path,dpi=100,facecolor='black');plt.close(fig)
 
 
-def melodic_command(mode,roi,dim,root):
-    return ['melodic','-i',str(root/'sessions'/mode/roi/'inputs.txt'),'-o',str(root/'ica'/mode/roi/f'dim-{dim}'),
+def melodic_command(mode,roi,dim,root,*,output_folder=None,seed=SEED,maxit=2000,variance_normalization=False):
+    argv=['melodic','-i',str(root/'sessions'/mode/roi/'inputs.txt'),'-o',str(output_folder or root/'ica'/mode/roi/f'dim-{dim}'),
         '--tr=1.615','--nobet','-a','concat','-m',str(root/'masks'/(roi+'_crop.nii.gz')),
         '--bgimage='+str(root/'reference_crop.nii.gz'),'--report','--Oall','-d',str(dim),
-        '--disableMigp','--vn','--update_mask','--seed='+str(SEED),'--maxit=2000','--maxrestart=10']
+        '--disableMigp',*([] if variance_normalization else ['--vn']),'--update_mask','--seed='+str(seed),'--maxit='+str(maxit)]
+    if output_folder is None and seed==SEED and maxit==2000 and not variance_normalization:argv.append('--maxrestart=10')
+    else:argv.extend(['--eps=0.00005','--nl=pow3'])
+    return argv
 
 
-def fit_one(mode,roi,dim,root,masks,slices,reference):
+def fit_one(mode,roi,dim,root,masks,slices,reference,*,output_folder=None,seed=SEED,maxit=2000,variance_normalization=False):
     verified_inputs_sha256=verify_ica_inputs(mode,roi,root)
-    argv=melodic_command(mode,roi,dim,root);folder=Path(argv[argv.index('-o')+1]);folder.parent.mkdir(parents=True,exist_ok=True)
+    argv=melodic_command(mode,roi,dim,root,output_folder=output_folder,seed=seed,maxit=maxit,variance_normalization=variance_normalization)
+    folder=Path(argv[argv.index('-o')+1]);folder.parent.mkdir(parents=True,exist_ok=True)
     marker=folder/'complete.json'
     if marker.is_file():
         previous=json.loads(marker.read_text())
@@ -232,7 +246,7 @@ def fit_one(mode,roi,dim,root,masks,slices,reference):
         return dict(previous,reused_completed_ica=True)
     core.require(not folder.exists(),'Partial/completed ICA directory already exists; preserve it')
     env=dict(os.environ,OMP_NUM_THREADS='4',OPENBLAS_NUM_THREADS='4',MKL_NUM_THREADS='4')
-    log=folder.parent/f'dim-{dim}.log'
+    log=folder.parent/(folder.name+'.log')
     with log.open('w') as stream:subprocess.run(argv,env=env,stdout=stream,stderr=subprocess.STDOUT,check=True)
     core.require((folder/'melodic_IC.nii.gz').is_file(),'MELODIC produced no component maps (possible nonconvergence); inspect '+str(log))
     mask_image=nib.load(root/'masks'/(roi+'_crop.nii.gz'));mask=mask_image.get_fdata()>0
@@ -251,7 +265,8 @@ def fit_one(mode,roi,dim,root,masks,slices,reference):
     full=np.zeros((*reference.shape,actual_dim),dtype='float32');full[slices]=data
     core.save_image(folder/'oriented_IC.nii.gz',full,reference)
     result=dict(mode=mode,roi=roi,dimensionality=dim,actual_components=actual_dim,
-        dimensionality_selection='MELODIC automatic estimation' if dim==0 else 'prespecified',argv=argv,seed=SEED,threads_per_fit=4,
+        dimensionality_selection='MELODIC automatic estimation' if dim==0 else 'prespecified',argv=argv,seed=seed,
+        max_iterations=maxit,convergence_epsilon=0.00005,nonlinearity='pow3',variance_normalization=variance_normalization,threads_per_fit=4,
         oriented_maps=str(folder/'oriented_IC.nii.gz'),mask_sha256=core.sha(root/'masks'/(roi+'.nii.gz')),
         signs=signs,map_identity=core.identity(folder/'oriented_IC.nii.gz'),verified_inputs_sha256=verified_inputs_sha256,
         no_new_temporal_filter=True,no_new_nuisance_regression=True)
@@ -349,6 +364,13 @@ def run(args,root,record,state):
     with ThreadPoolExecutor(max_workers=args.auto_ica_jobs) as pool:
         for future in as_completed([pool.submit(automatic_fit,p) for p in plans() if p[2]==0]):future.result()
     core.require(all(r['state']=='complete' for r in results),'Some ICA fits failed; completed fits remain preserved')
+    review_outputs(results,record,masks,reference,state)
+
+
+def review_outputs(results,record,masks,reference,state):
+    """Render and compare the selected completed fits, including preserved retry paths."""
+    bykey={(r['mode'],r['roi'],r['dimensionality']):r for r in results}
+    core.require(set(bykey)==set(plans()) and all(r['state']=='complete' for r in results),'All 24 selected fits must pass before final comparisons')
     # Figure rendering is serial: Matplotlib has global state.
     for result in results:
         maps=nib.load(result['oriented_maps']).get_fdata();roi=result['roi'];dim=result['dimensionality'];mode=result['mode']
@@ -363,16 +385,16 @@ def run(args,root,record,state):
     comparisons=[]
     for roi in core.ROIS:
         for dim in DIMENSIONS:
-            a=nib.load(root/'ica/joint_bold'/roi/f'dim-{dim}/oriented_IC.nii.gz').get_fdata()[masks[roi]]
-            b=nib.load(root/'ica/native_film'/roi/f'dim-{dim}/oriented_IC.nii.gz').get_fdata()[masks[roi]]
+            a=nib.load(bykey['joint_bold',roi,dim]['oriented_maps']).get_fdata()[masks[roi]]
+            b=nib.load(bykey['native_film',roi,dim]['oriented_maps']).get_fdata()[masks[roi]]
             comparisons.append(dict(roi=roi,dimensionality=dim,**compare_maps(a,b)))
     save(record/'between-scale-spatial-comparisons.json',comparisons)
     stability=[]
     for mode in inputs.MODES:
         for roi in core.ROIS:
-            primary=nib.load(root/'ica'/mode/roi/'dim-5/oriented_IC.nii.gz').get_fdata()[masks[roi]]
+            primary=nib.load(bykey[mode,roi,5]['oriented_maps']).get_fdata()[masks[roi]]
             for dim in (3,7,0):
-                other=nib.load(root/'ica'/mode/roi/f'dim-{dim}/oriented_IC.nii.gz').get_fdata()[masks[roi]]
+                other=nib.load(bykey[mode,roi,dim]['oriented_maps']).get_fdata()[masks[roi]]
                 corr=np.corrcoef(primary.T,other.T)[:5,5:]
                 stability.append(dict(mode=mode,roi=roi,sensitivity_dim=dim,actual_components=other.shape[1],all_pair_spatial_r=corr.tolist()))
     save(record/'dimensionality-stability.json',stability)

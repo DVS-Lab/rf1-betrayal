@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-28",
+  "scope": "Local synthetic validation. No Linux2 sensitivity or retry has been launched by the assistant.",
+  "fsl_version": "6.0.7.19",
+  "linux2_prior_fsl_version": "6.0.7.18",
+  "unit_tests": {
+    "command": "python -m unittest test_group_ica test_resume_group_ica test_unsmoothed_feat test_task_preserved_ica test_insula_ica test_rebuild_trust test_bold_controls -q",
+    "tests": 63,
+    "passed": true,
+    "checked": [
+      "Real Linux2 baseline commands remain unchanged",
+      "13 completed maps reused unchanged; only five missing fixed plus six automatic fits run",
+      "Nonconvergence permits deterministic restart; mask/data validation failures do not",
+      "Partial files preserved; no silent overwrite",
+      "sm-0 FSF changes only intended settings and output paths; exact source path required; no smoothed-data fallback",
+      "Nuisance-only OLS retains conditional task variance; full-model OLS removes it",
+      "490-run matched sensitivity orchestration produces all six native-VN fits"
+    ]
+  },
+  "exact_mean_offset_control": {
+    "synthetic": true,
+    "inputs_per_arm": 264,
+    "frames": 128,
+    "offset": 64,
+    "exactly_representable": true,
+    "max_absolute_map_difference": 0.0,
+    "relative_map_RMS_difference": 0.0
+  },
+  "large_offset_control": {
+    "offset": 1024,
+    "min_abs_spatial_r": 0.9999999999985199,
+    "note": "Not bit-identical: float32 rounding at a large baseline reduces precision; spatial maps remain essentially identical."
+  },
+  "retry_real_binary_probe": {
+    "synthetic": true,
+    "original_fit_nonconverged_at_2000": true,
+    "attempts": [
+      {
+        "seed": 20261028,
+        "state": "nonconvergence",
+        "converged_after_iterations": null
+      },
+      {
+        "seed": 20261029,
+        "state": "nonconvergence",
+        "converged_after_iterations": null
+      },
+      {
+        "seed": 20261030,
+        "state": "complete",
+        "converged_after_iterations": 2203
+      }
+    ],
+    "original_inputs_and_failed_fit_preserved": true
+  },
+  "native_variance_normalization_real_binary_probe": {
+    "synthetic": true,
+    "passed": true,
+    "requested_components": 3,
+    "obtained_components": 3,
+    "native_variance_normalization": true,
+    "global_amplitude_multiplier": 1000,
+    "seed": 20261028
+  },
+  "source_findings": {
+    "concat_uses_symmetric_FastICA": true,
+    "maxrestart_not_used_by_concat": true,
+    "default_epsilon": 5e-05,
+    "default_nonlinearity": "pow3",
+    "supplied_mask_bypasses_intensity_masking": true,
+    "temporal_mean_removed_before_PCA": true,
+    "native_VN_has_absolute_SD_floor": 0.01,
+    "failed_retained_PCA_eigenvalue_ratios": [
+      2.287570549080469,
+      1.9229852652843982,
+      2.0155015272839143,
+      1.9439101844229936,
+      2.017623802517412
+    ]
+  },
+  "references": [
+    "https://fsl.fmrib.ox.ac.uk/fsl/docs/resting_state/melodic.html",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6623935/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6621313/"
+  ],
+  "source_sha256": {
+    "run_group_ica.py": "61c4b2157d3b023735c16715db5039509a5f76ee6f68df2a71ee25abe10cc104",
+    "resume_group_ica.py": "8a25e35045c5452fd9d1b966a8e1bfe82a2e45cf4f0a9595772d08644a1fb196",
+    "group_ica_vn_pilot.py": "ced4ada859157a8b85f8801a8a26b1e36a761a2b088f909a352e0efe2ea510d1",
+    "run_unsmoothed_feat.py": "a445df0fee448824072ca0f7ff9289cdfacef639f2f1fba703c366578a7bcee8",
+    "task_preserved_ica.py": "0dc2c9eec06a06c1dd54afe2912d2830583205771e34e4e8e4cec591582fc353",
+    "run_bold_controls.py": "c92084c25051f2cfa9b3de61a1bbb6439b8f2d9eed9ffe3b6b1ca55e106dfc1b",
+    "status_group_ica.py": "8b2e5a8e2081c6c3a8bcb240892c8e91699a5861e707aeb9689ce7ebf87eba78",
+    "start_paired_group_ica_resume.sh": "973d9c993ab9caa613e063457736f8c98f6c31d906db7f857c6c82da5d41bee6",
+    "start_unsmoothed_feat.sh": "1d099829a759708f15db0c87790597f580e422c8ddde76a6745f3c44f3eed74c",
+    "start_task_preserved_ica.sh": "e42d8785b630413c4095f8b5346550963e444f12b59b4d03173f9483661017d2"
+  }
+}

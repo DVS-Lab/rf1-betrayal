@@ -6,6 +6,7 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 import json
+import fcntl
 import os
 from pathlib import Path
 import shutil
@@ -40,6 +41,14 @@ def now():
 
 def publish(record, message):
     """Commit this record only, preserving unrelated staged/local changes."""
+    lock_path=ROOT/'code/insula_ica/output/record-publication.lock'
+    lock_path.parent.mkdir(parents=True,exist_ok=True)
+    with lock_path.open('a') as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX)
+        _publish_unlocked(record,message)
+
+
+def _publish_unlocked(record, message):
     require(subprocess.check_output(['git', 'branch', '--show-current'], cwd=ROOT, text=True).strip() == 'insula-ica',
             'Publishing requires branch insula-ica')
     subprocess.run(['git', 'fetch', 'origin', 'insula-ica'], cwd=ROOT, check=True, timeout=120)
