@@ -13,6 +13,16 @@ No new gPPI or behavioral search is included.
 
 ## Current evidence and limits
 
+**Run-specific timing correction:** the UGR audit identified `sub-10817` run 1
+with raw TR 1.710 seconds versus modeled 1.615. Use
+`bash code/insula_ica/start_ugr_timing_repair.sh` for the authorized correction,
+Trust/cohort timing checks, corrected sm-0 fit and same-BOLD sm-5 timing controls.
+See [the repair and project integration plan](records/2026-10-29-run-TR-repair/README.md).
+Both project L1 launchers now validate acquisition TR and stamp it into generated
+FSFs; they do not silently skip a completed fit at a different TR. Old ICA inputs
+and downstream group statistics require explicit propagation/reanalysis after
+review of the correction; they are not silently replaced by this local repair.
+
 **UGR unsmoothed-input recovery:** run
 `bash code/insula_ica/start_ugr_anatomy_reuse.sh` on linux2. It runs a two-participant,
 three-run pilot using the existing 24.1.1 anatomical cache and unchanged stock

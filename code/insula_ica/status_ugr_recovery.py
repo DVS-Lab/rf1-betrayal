@@ -13,6 +13,10 @@ def main():
     parser.add_argument('--brief',action='store_true')
     parser.parse_args()
     records=status.ROOT/'code/insula_ica/records'
+    repairs=[p for p in records.glob('linux2-ugr-TR-repair-*') if (p/'state.json').is_file()]
+    if repairs:
+        from status_ugr_timing_repair import main as repair_status
+        repair_status();return
     choices=sorted(p for p in records.glob('linux2-ugr-anatomy-reuse-*') if (p/'state.json').is_file())
     if not choices:
         print('No UGR recovery record found.');return

@@ -42,6 +42,11 @@ def plan(row,root,bold_override=None):
     nuisance=g.core.load_numeric(row['confounds']);fitted=g.core.load_numeric(feat/'confoundevs.txt')
     g.core.require(nuisance.shape==fitted.shape and np.array_equal(nuisance,fitted),'Original nuisance columns changed')
     historical_bold=Path(settings['feat_files(1)'])
+    correction=bold_override.get('timing_correction') if bold_override else None
+    if correction:
+        g.core.require(row['task']=='ugr' and row['key']==correction['key'],'Timing correction key/task mismatch')
+        g.core.require(np.isclose(float(settings['fmri(tr)']),correction['historical_tr_seconds']), 'Historical model TR changed')
+        g.core.require(correction['corrected_tr_seconds']>0 and correction.get('authorization')=='user_2026-10-29', 'Missing authorized timing correction')
     if bold_override:
         g.core.require(row['task']=='ugr','Regenerated BOLD override is restricted to UGR')
         bold=Path(bold_override['path'])
@@ -53,14 +58,21 @@ def plan(row,root,bold_override=None):
     missing=[str(p) for p in (bold,*events) if not p.is_file()]
     target=root/'feat'/(row['key']+'_sm-0.feat')
     text=unsmoothed_fsf(fsf.read_text(),bold,row['confounds'],target)
+    if correction:
+        text,n=re.subn(r'^set\s+fmri\(tr\)\s+.*$',f'set fmri(tr) {correction["corrected_tr_seconds"]:.9g}',text,flags=re.M)
+        g.core.require(n==1,'Ambiguous/missing model TR')
     result=dict(row,source_sm5_feat=str(feat),source_settings=str(fsf),source_fsf_sha256=g.core.sha(fsf),
         source_bold=str(bold),source_bold_present=bold.is_file(),missing_inputs=missing,
         status='missing_source_inputs' if missing else 'ready',target=str(target),source_smoothing_mm=5,smoothing_mm=0,
         unsmoothed_fsf=str(root/'fsf'/(row['key']+('_sm-0_regenerated-ugr.fsf' if bold_override else '_sm-0.fsf'))))
     if bold_override:result.update(historical_bold=str(historical_bold),regenerated_bold_provenance=bold_override)
+    if correction:
+        result.update(timing_correction=correction,tr=correction['corrected_tr_seconds'])
+        result['unsmoothed_fsf']=str(root/'fsf'/(row['key']+'_sm-0_TR-corrected.fsf'))
     if not missing:
         image=nib.load(bold);reference=nib.load(feat/'mean_func.nii.gz')
         g.core.require(g.core.same_grid(image,reference) and image.shape==(*reference.shape,row['nvol']),'Saved FEAT BOLD input has wrong grid/time count')
+        if correction:g.core.require(np.isclose(image.header.get_zooms()[3],result['tr'],atol=1e-5),'Regenerated BOLD/corrected model TR mismatch')
         result['source_bold_identity']=g.core.identity(bold,content=False)
         result['event_identities']=[g.core.identity(p) for p in events]
     path=Path(result['unsmoothed_fsf'])
@@ -79,18 +91,36 @@ def fit(item,root,record):
         g.core.require(all(g.core.identity(p['path'],content=p['sha256'] is not None)==p for p in old['outputs']),'Completed sm-0 outputs changed')
         g.save(record/'qc'/(item['key']+'.json'),old['qc']);return dict(state='complete',reused_completed_feat=True)
     g.core.require(not target.exists(),'Partial FEAT exists; preserve it for inspection: '+str(target))
+    if item.get('timing_correction'):
+        # Generate the expected corrected task design from the same seconds-based
+        # EVs and saved nuisance matrix. Historical design equality is wrong here.
+        base=Path(item['unsmoothed_fsf']).with_suffix('')
+        with (base.with_suffix('.feat_model.log')).open('w') as stream:
+            subprocess.run(['feat_model',str(base),item['confounds']],stdout=stream,stderr=subprocess.STDOUT,check=True)
+        expected_design=base.with_suffix('.mat');expected_contrasts=base.with_suffix('.con')
+    else:expected_design=Path(item['source_sm5_feat'])/'design.mat';expected_contrasts=Path(item['source_sm5_feat'])/'design.con'
     log=root/'logs'/(item['key']+'.txt')
     with log.open('w') as stream:subprocess.run(['feat',item['unsmoothed_fsf']],stdout=stream,stderr=subprocess.STDOUT,check=True)
     # Changing spatial smoothing must not alter the complete temporal design or nuisances.
     original=Path(item['source_sm5_feat'])
-    for name in ('design.mat','design.con'):
-        a,b=g.core.fsl_matrix(original/name),g.core.fsl_matrix(target/name)
+    for name,expected in (('design.mat',expected_design),('design.con',expected_contrasts)):
+        a,b=g.core.fsl_matrix(expected),g.core.fsl_matrix(target/name)
         g.core.require(a.shape==b.shape and np.allclose(a,b,rtol=1e-8,atol=1e-8),'Unsmoothed complete model changed: '+name)
+    if item.get('timing_correction'):
+        a,b=g.core.fsl_matrix(original/'design.con'),g.core.fsl_matrix(target/'design.con')
+        g.core.require(a.shape==b.shape and np.allclose(a,b,rtol=1e-8,atol=1e-8),'Timing repair changed contrast definitions')
+        a,b=g.core.fsl_matrix(original/'design.mat'),g.core.fsl_matrix(target/'design.mat')
+        task_columns=int(g.core.fsl_settings(original/'design.fsf')['fmri(evs_real)'])
+        g.core.require(a.shape==b.shape and not np.allclose(a[:,:task_columns],b[:,:task_columns],rtol=1e-8,atol=1e-8),
+                       'TR changed but task design did not; do not accept a header-only repair')
     a,b=g.core.load_numeric(item['confounds']),g.core.load_numeric(target/'confoundevs.txt')
     g.core.require(a.shape==b.shape and np.array_equal(a,b),'Unsmoothed nuisance file differs')
     settings=g.core.fsl_settings(target/'design.fsf');g.core.require(float(settings['fmri(smooth)'])==0,'FEAT smoothing is not zero')
     reference=nib.load(original/'mean_func.nii.gz');residual=nib.load(target/'stats/res4d.nii.gz')
     g.core.require(g.core.same_grid(reference,residual) and residual.shape==(*reference.shape,item['nvol']),'Unsmoothed residual geometry mismatch')
+    if item.get('timing_correction'):
+        g.core.require(np.isclose(float(settings['fmri(tr)']),item['tr']) and
+                       np.isclose(residual.header.get_zooms()[3],item['tr'],atol=1e-5),'Corrected fit/output TR mismatch')
     mask=nib.load(target/'mask.nii.gz').get_fdata()>0
     values=np.asarray(residual.dataobj,dtype='float32');g.core.require(np.isfinite(values[mask]).all(),'Nonfinite unsmoothed residuals')
     valid=mask.copy();valid[mask]&=values[mask].std(axis=1)>1e-8
@@ -101,11 +131,14 @@ def fit(item,root,record):
         'design.mat','design.con','confoundevs.txt','mask.nii.gz','mean_func.nii.gz')]
     paths.extend(target/f'stats/pe{k+1}.nii.gz' for k in range(g.core.fsl_matrix(target/'design.mat').shape[1]))
     g.core.require(all(p.is_file() for p in paths),'Required sm-0 residual/PE/intermediate output missing')
-    qc=dict(key=item['key'],smoothing_mm=0,complete_design_preserved=True,exact_original_nuisance_matrix=True,
+    qc=dict(key=item['key'],smoothing_mm=0,complete_design_preserved=not bool(item.get('timing_correction')),exact_original_nuisance_matrix=True,
         residual_dof=dof,finite_residuals=True,coverage={roi:float((m&valid).sum()/m.sum()) for roi,m in masks.items()},
         residual=str(target/'stats/res4d.nii.gz'),filtered_data=str(target/'filtered_func_data.nii.gz'),
         source_bold=item['source_bold'],source_bold_identity=item['source_bold_identity'],
         residual_scale='Native FILM voxelwise-prewhitened; no additional nuisance regression.',qc_review_pending=True)
+    if item.get('timing_correction'):
+        qc.update(timing_correction=item['timing_correction'],task_design_regenerated_for_TR=True,
+                  corrected_design_sha256=g.core.sha(target/'design.mat'),contrast_definitions_preserved=True)
     g.core.require(g.core.identity(item['source_bold'],content=False)==item['source_bold_identity'],'FEAT source BOLD changed during the fit')
     outputs=[g.core.identity(p,content=not p.name.endswith('.nii.gz')) for p in paths]
     g.save(record/'qc'/(item['key']+'.json'),qc);g.save(marker,dict(signature=signature,outputs=outputs,qc=qc))

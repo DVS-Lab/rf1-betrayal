@@ -27,6 +27,11 @@ ses=`zeropad 1 2`
 MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}
 mkdir -p $MAINOUTPUT
 DATA=${rf1datadir}/derivatives/fmriprep-24/sub-${sub}/ses-${ses}/func/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_part-mag_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz
+# Validate acquisition timing before FEAT can relabel its output header.
+TIMING_PYTHON="${RF1_TIMING_PYTHON:-${FSLDIR}/bin/fslpython}"
+RUN_TR=$("$TIMING_PYTHON" "${scriptdir}/run_timing.py" resolve \
+    --raw-func "${rf1datadir}/bids/sub-${sub}/ses-${ses}/func" \
+    --key "sub-${sub}_ses-${ses}_task-${TASK}_run-${run}" --bold "$DATA") || exit 1
 NVOLUMES=`fslnvols $DATA`
 CONFOUNDEVS=${rf1datadir}/derivatives/fsl/confounds_tedana-24/sub-${sub}/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_desc-TedanaPlusConfounds.tsv
 # echo $CONFOUNDEVS
@@ -60,6 +65,7 @@ fi
 
 # check for output and skip existing
 if [ -e ${OUTPUT}.feat/cluster_mask_zstat1.nii.gz ]; then
+    "$TIMING_PYTHON" "${scriptdir}/run_timing.py" check-existing --fsf "${OUTPUT}.feat/design.fsf" --tr "$RUN_TR" || exit 1
         exit
 else
         rm -rf ${OUTPUT}.feat
@@ -77,6 +83,7 @@ if [ "$ppi" == "0" ]; then
         -e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
         -e 's@NVOLUMES@'$NVOLUMES'@g' \
         <$ITEMPLATE> $OTEMPLATE
+        "$TIMING_PYTHON" "${scriptdir}/run_timing.py" stamp --fsf "$OTEMPLATE" --tr "$RUN_TR" || exit 1
         feat $OTEMPLATE
 else
         PHYS=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_${ppi}.txt
@@ -92,6 +99,7 @@ else
         -e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
         -e 's@NVOLUMES@'$NVOLUMES'@g' \
         <$ITEMPLATE> $OTEMPLATE
+        "$TIMING_PYTHON" "${scriptdir}/run_timing.py" stamp --fsf "$OTEMPLATE" --tr "$RUN_TR" || exit 1
         feat $OTEMPLATE
 fi
 
