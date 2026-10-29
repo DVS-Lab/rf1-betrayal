@@ -104,7 +104,9 @@ def raw_inputs(row, raw):
         header = nib.load(image)
         core.require(len(header.shape)==4 and header.shape[3]==row['nvol'], 'Raw UGR time count mismatch')
         metadata = json.loads(sidecar.read_text())
-        core.require(np.isclose(metadata['RepetitionTime'],row['tr']), 'Raw UGR TR mismatch')
+        core.require(np.isclose(metadata['RepetitionTime'],row['tr']),
+                     f'Raw UGR TR mismatch: echo {echo} JSON={metadata["RepetitionTime"]}; expected={row["tr"]}; '
+                     f'NIfTI header={header.header.get_zooms()[3]} {header.header.get_xyzt_units()[1]}; file={sidecar}')
         paths.append(image)
     fmap = stock.rebuild.warpkit_inputs(raw.parent,subject,int(row['run']),paths,task='ugr')
     core.require(fmap['ready'],'Missing associated UGR Warpkit BIDS products: '+str(fmap['problems']))
