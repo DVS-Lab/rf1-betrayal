@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/task_preserved_ica.py", line 98, in fit
+    with gate.reserve(2):result=resume.retry_fit((mode,roi,5),root,masks,slices,reference,record,variance_normalization=True)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/resume_group_ica.py", line 115, in retry_fit
+    raise ValueError('No convergence after five deterministic starts at 10000 iterations; inputs, dimension, pow3 objective and epsilon unchanged. All attempts preserved.')
+ValueError: No convergence after five deterministic starts at 10000 iterations; inputs, dimension, pow3 objective and epsilon unchanged. All attempts preserved.

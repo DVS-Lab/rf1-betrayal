@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/task_preserved_ica.py", line 142, in main
+    try:run(args,root,record,state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/task_preserved_ica.py", line 105, in run
+    g.core.require(all(v['state']=='complete' for v in state['fits'].values()),'Some task-preserved sensitivity fits remain incomplete')
+  File "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/insula_ica.py", line 37, in require
+    raise ValueError(message)
+ValueError: Some task-preserved sensitivity fits remain incomplete

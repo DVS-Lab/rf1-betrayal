@@ -1,0 +1,26 @@
+{
+  "key": "sub-10850_ses-01_task-ugr_run-1",
+  "task_columns": 11,
+  "nuisance_columns": 29,
+  "nuisance_rank": 29,
+  "full_model_rank": 39,
+  "conditional_task_fraction_of_nuisance_only_residual_energy": 0.07698943897989138,
+  "exact_fitted_nuisance_columns": true,
+  "task_regressors_removed_from_confounds_only": false,
+  "source_signature": {
+    "filtered_data": {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10850/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/filtered_func_data.nii.gz",
+      "size": 93356487,
+      "mtime_ns": 1771269724758824910,
+      "sha256": null
+    },
+    "design": {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10850/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/design.mat",
+      "size": 130733,
+      "mtime_ns": 1771269729689897252,
+      "sha256": "9e02f324591440e9af375c1561b62f4ffd30fbe0f97fda6e471482e7d9348976"
+    },
+    "nuisance_sha256": "3d9e233eb6a98675b8db1ee00d1d54abee68199f2674ecf6955dab8ffab3037f",
+    "task_columns": 11
+  }
+}

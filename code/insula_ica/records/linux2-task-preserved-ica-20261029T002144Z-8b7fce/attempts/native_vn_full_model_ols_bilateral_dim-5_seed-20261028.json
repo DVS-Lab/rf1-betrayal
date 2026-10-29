@@ -1,0 +1,50 @@
+{
+  "mode": "full_model_ols",
+  "roi": "bilateral",
+  "dimensionality": 5,
+  "seed": 20261028,
+  "max_iterations": 10000,
+  "epsilon": 5e-05,
+  "nonlinearity": "pow3",
+  "variance_normalization": true,
+  "argv": [
+    "melodic",
+    "-i",
+    "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/task-preserved-ols-20261029T002144Z-8b7fce/sessions/full_model_ols/bilateral/inputs.txt",
+    "-o",
+    "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/task-preserved-ols-20261029T002144Z-8b7fce/ica_retries/full_model_ols/bilateral/dim-5/seed-20261028_maxit-10000",
+    "--tr=1.615",
+    "--nobet",
+    "-a",
+    "concat",
+    "-m",
+    "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/task-preserved-ols-20261029T002144Z-8b7fce/masks/bilateral_crop.nii.gz",
+    "--bgimage=/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/task-preserved-ols-20261029T002144Z-8b7fce/reference_crop.nii.gz",
+    "--report",
+    "--Oall",
+    "-d",
+    "5",
+    "--disableMigp",
+    "--update_mask",
+    "--seed=20261028",
+    "--maxit=10000",
+    "--eps=0.00005",
+    "--nl=pow3"
+  ],
+  "state": "complete",
+  "converged_after_iterations": 28,
+  "logs": [
+    {
+      "source": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/task-preserved-ols-20261029T002144Z-8b7fce/ica_retries/full_model_ols/bilateral/dim-5/seed-20261028_maxit-10000.log",
+      "source_bytes": 0,
+      "truncated_head": false,
+      "saved": "native_vn_full_model_ols_bilateral_dim-5_seed-20261028_stdout.txt"
+    },
+    {
+      "source": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/task-preserved-ols-20261029T002144Z-8b7fce/ica_retries/full_model_ols/bilateral/dim-5/seed-20261028_maxit-10000/log.txt",
+      "source_bytes": 139125,
+      "truncated_head": false,
+      "saved": "native_vn_full_model_ols_bilateral_dim-5_seed-20261028_melodic.txt"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "key": "sub-10984_ses-01_task-trust_run-2",
+  "task_columns": 10,
+  "nuisance_columns": 31,
+  "nuisance_rank": 31,
+  "full_model_rank": 41,
+  "conditional_task_fraction_of_nuisance_only_residual_energy": 0.10016305596401298,
+  "exact_fitted_nuisance_columns": true,
+  "task_regressors_removed_from_confounds_only": false,
+  "source_signature": {
+    "filtered_data": {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-10984/feat_reconstruction/sub-10984_ses-01_task-trust_run-2.feat/filtered_func_data.nii.gz",
+      "size": 106992280,
+      "mtime_ns": 1793212857850667251,
+      "sha256": null
+    },
+    "design": {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/trust-stock-filter-20261028T165853Z-314305/sub-10984/feat_reconstruction/sub-10984_ses-01_task-trust_run-2.feat/design.mat",
+      "size": 157021,
+      "mtime_ns": 1793212861410727081,
+      "sha256": "f69f3312317d2079a8ec5c33e200f1a573a881b57bf8267f353eef42ce5e2434"
+    },
+    "nuisance_sha256": "cb6647bc3a1064e0d0299baedc467c528b520f54fc213b667514e2dd10b962a3",
+    "task_columns": 10
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "cohort_n": 132,
+  "trust_runs": 241,
+  "ugr_runs": 249,
+  "modes": [
+    "confounds_only_ols",
+    "full_model_ols"
+  ],
+  "smoothing_mm": 5,
+  "components": 5,
+  "rois": [
+    "left",
+    "right",
+    "bilateral"
+  ],
+  "fitting": "Matched OLS, existing complete design versus its exact appended nuisance block.",
+  "nuisance_only_interpretation": "Retains task variance outside the nuisance span; task-correlated nuisance variance is removed.",
+  "native_melodic_variance_normalization": true,
+  "global_input_amplitude_multiplier": 1000,
+  "no_FEAT_or_fMRIPrep": true,
+  "no_new_temporal_filter": true,
+  "no_additional_smoothing": true
+}
