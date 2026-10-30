@@ -80,7 +80,8 @@ def main():
                 intersections.append(dict(variant=variant,sign=sign,old_intersection_voxels=int(before.sum()),new_intersection_voxels=int(after.sum()),old_insula_voxels=int((before&insula).sum()),new_insula_voxels=int((after&insula).sum()),shared_insula_voxels=int((before&after&insula).sum()),old_seed_region_voxels=int(old_region.sum()),new_seed_region_voxels=int(new_region.sum()),old_region_parts=old_parts,new_region_parts=new_parts,old_seed_retained=int((after&seed).sum())))
                 if variant=='ones' and sign==2:plot_masks=(old_region,new_region)
     out=record/'review';out.mkdir(exist_ok=True)
-    core.write_table(out/'group_comparisons.tsv',comparisons);core.write_table(out/'task_intersections.tsv',intersections)
+    for name,rows in (('group_comparisons.tsv',comparisons),('task_intersections.tsv',intersections)):
+        table=out/name;core.write_table(table,rows);table.write_text(table.read_text(),newline='\n')
     full12=next(c for c in cases if c['task']=='ugr' and '-cov-full-flame1' in Path(c['path']).parent.name and '-cope-12_' in Path(c['path']).name)
     old_mask_im=nib.load(by[full12['path']+'/cope1.feat/cluster_mask_zstat2.nii.gz']);old_mask=old_mask_im.get_fdata()!=0
     xyz=nib.affines.apply_affine(old_mask_im.affine,np.argwhere(old_mask));old_z=nib.load(by[full12['path']+'/cope1.feat/stats/zstat2.nii.gz']).get_fdata()[old_mask];new_z=nib.load(record/'group_maps/full-cope-12-zstat2.nii.gz').get_fdata()[old_mask]
