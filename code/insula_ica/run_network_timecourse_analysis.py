@@ -152,7 +152,7 @@ def summarize(rows, subjects):
     return participant, group
 
 
-def figures(group, folder):
+def figures(group, folder, note=None):
     """Exactly five bars per subregion; two UGR averages and three Trust contrasts."""
     colors = ('#68a9cf', '#186da2', '#e6a658', '#bf7340', '#88532e')
     def draw(ax, values, components):
@@ -171,13 +171,13 @@ def figures(group, folder):
             fig, ax = plt.subplots(figsize=(13, 5.4)); draw(ax, values, range(1, 6))
             ax.set_title(f'{mode} ICA basis | {roi} insula | standardized joint OLS', pad=16)
             ax.legend(ncol=3, loc='upper center', bbox_to_anchor=(.5, -.17), frameon=False, fontsize=9)
-            fig.text(.5, .015, 'N=132; equal run means within participant; 95% pointwise participant CIs. UGR: high/low averaged. Trust: reciprocate minus defect.', ha='center', fontsize=8)
+            fig.text(.5, .015, note or 'N=132; equal run means within participant; 95% pointwise participant CIs. UGR: high/low averaged. Trust: reciprocate minus defect.', ha='center', fontsize=8)
             fig.tight_layout(rect=(0, .07, 1, 1)); fig.savefig(folder/f'{mode}_{roi}_five_task_bars.png', dpi=160); plt.close(fig)
             if roi == 'bilateral':
                 fig, ax = plt.subplots(figsize=(9.5, 5.4)); draw(ax, values, (3, 4))
                 ax.set_title(f'{mode} | bilateral IC3 and IC4 | standardized joint OLS')
                 ax.legend(ncol=2, loc='upper center', bbox_to_anchor=(.5, -.17), frameon=False, fontsize=9)
-                fig.text(.5, .015, 'N=132; 95% pointwise participant CIs; no connectivity inference or between-task difference test.', ha='center', fontsize=8)
+                fig.text(.5, .015, note or 'N=132; 95% pointwise participant CIs; no connectivity inference or between-task difference test.', ha='center', fontsize=8)
                 fig.tight_layout(rect=(0, .07, 1, 1)); fig.savefig(folder/f'{mode}_bilateral_IC3_IC4_five_task_bars.png', dpi=160); plt.close(fig)
 
 

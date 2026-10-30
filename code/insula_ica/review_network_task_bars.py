@@ -19,10 +19,38 @@ def coefficient_flags(rows, threshold=5.):
     return [r for r in rows if abs(float(r['effect'])) > threshold]
 
 
+def five_bar_overview(rows, output):
+    """All ICs/all five original bars; symlog keeps the unresolved UGR visible."""
+    colors = ('#68a9cf', '#186da2', '#e6a658', '#bf7340', '#88532e')
+    titles = ('UGR nonsocial', 'UGR social: unidentifiable-run contamination',
+              'Trust computer: rec - def', 'Trust friend: rec - def', 'Trust stranger: rec - def')
+    for mode in n.g.inputs.MODES:
+        fig, axes = plt.subplots(3, 1, figsize=(13, 11), sharex=True, sharey=True)
+        values = [r for r in rows if r['mode'] == mode and r['contrast'] in n.BAR_LABELS]
+        peak = max(abs(float(r[k])) for r in values for k in ('ci_low', 'ci_high'))
+        for ax, roi in zip(axes, n.g.core.ROIS):
+            for j, (label, title, color) in enumerate(zip(n.BAR_LABELS, titles, colors)):
+                rr = [next(r for r in values if r['roi'] == roi and int(r['component']) == k and r['contrast'] == label) for k in range(1, 6)]
+                y = np.array([float(r['effect']) for r in rr]); lo = np.array([float(r['ci_low']) for r in rr]); hi = np.array([float(r['ci_high']) for r in rr])
+                ax.bar(np.arange(5)+(j-2)*.155, y, width=.145, color=color, label=title,
+                       hatch='///' if j == 1 else None, yerr=[y-lo, hi-y], capsize=2)
+            ax.set_yscale('symlog', linthresh=.03, linscale=1.)
+            ax.set_ylim(-peak*1.2, peak*1.2); ax.axhline(0, color='.3', lw=.8)
+            ax.set(title=roi+' insula', ylabel='Standardized coefficient / contrast')
+            ax.spines[['top', 'right']].set_visible(False)
+        axes[-1].set(xticks=range(5), xticklabels=['IC'+str(k) for k in range(1, 6)])
+        axes[0].legend(loc='upper left', ncol=2, frameon=False, fontsize=8)
+        fig.suptitle(f'All five ICs x five task bars | {mode} ICA basis\nOriginal estimates, with unresolved UGR social model flagged', fontsize=13)
+        fig.text(.5, .035, 'SYMMETRIC LOG AXIS: linear between -0.03 and +0.03, logarithmic beyond. Bar heights are not on a common linear scale.', ha='center', fontsize=8)
+        fig.text(.5, .015, 'N=132; pointwise 95% CIs; no exclusions or clipping. Hatched bars contain the unidentifiable sub-11031 UGR run-1 slope.', ha='center', fontsize=8)
+        fig.tight_layout(rect=(0, .06, 1, .94)); fig.savefig(output/f'{mode}_all_ICs_five_bars_flagged.png', dpi=160); plt.close(fig)
+
+
 def review(record):
     rows = n.g.core.read_table(record/'group_network_task_effects.tsv')
     runs = n.g.core.read_table(record/'run_network_task_effects.tsv')
     flags = coefficient_flags(runs); output = record/'review'; output.mkdir(exist_ok=True)
+    five_bar_overview(rows, output)
     save(output/'coefficient-review.json', dict(threshold=5., flagged_run_effects=flags,
         run_keys=sorted({f'sub-{r["subject"]}_task-{r["task"]}_run-{r["run"]}' for r in flags}),
         status='UGR social bars held for design/numerical review' if flags else 'No magnitude review flags',

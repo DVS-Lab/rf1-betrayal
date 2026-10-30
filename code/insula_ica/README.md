@@ -10,6 +10,23 @@ each with one shared TG+UG basis, five primary components and 3/7 spatial checks
 Retain every component. The paired-basis task analysis retains all 60 primary basis × ROI × component × task tests in one Bonferroni family. Component numbers do not match across ROIs/dimensionalities.
 No new gPPI or behavioral search is included.
 
+## Pooled high/low UGR task model
+
+`bash code/insula_ica/start_pooled_network_tasks.sh` fits two common UGR slopes
+(social/nonsocial), summing high/low pmod columns **before z-scoring**, retaining
+the four condition main effects and every other task/confound column. This
+assumes common high/low slopes and differs from averaging separately standardized
+betas. It uses cached stage-1 timecourses for all 249 UGR runs and reuses the 241
+Trust fits. All 132 participants and 490 accepted runs are retained. No BOLD
+extraction, FEAT, ICA, connectivity or randomise is launched. Outputs include all
+five ICs with five bars each for both bases and all three ROIs. Check with
+`status_pooled_network_tasks.py --brief`.
+
+The design audit found three identical social-high pmod amplitudes in sub-11031
+UGR run 1. The separate social-high slope is unidentifiable; a common slope can
+be identified from social-low variation. The pooled model is a separately saved
+comparison, not an edit to original task models or old results.
+
 ## Current evidence and task-analysis correction (2026-10-29)
 
 **The previous task-analysis method is withdrawn.** Its implementation, tables,

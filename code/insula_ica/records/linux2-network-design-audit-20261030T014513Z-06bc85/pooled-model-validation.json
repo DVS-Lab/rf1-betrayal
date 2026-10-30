@@ -1,0 +1,13 @@
+{
+  "policy": "UGR-common-high-low-slopes-pooled-before-zscore-v1",
+  "tests_passed": 3,
+  "checks": [
+    "Pool raw pmods while preserving four condition constants and all RT/missed/nuisance columns",
+    "Constant-high pmod alias removed by pooling with varying-low pmod; OLS matches independent least-squares reference",
+    "Standardizing after pooling differs from combining separately standardized predictors"
+  ],
+  "scope": "All 249 UGR runs use same pooled model; reuse 241 Trust runs; no subject/run exclusion",
+  "inputs": "Cached stage-1 responses and existing saved designs; no 4D BOLD reads",
+  "publication": "All five ICs, five bars each, both bases and all ROIs",
+  "linux2_results": "pending"
+}
