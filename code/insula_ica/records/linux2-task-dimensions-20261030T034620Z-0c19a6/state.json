@@ -1,0 +1,32 @@
+{
+  "state": "pilot_passed_expanding_task_sensitivity",
+  "policy": "fixed-3-7-task-OLS-and-insula-means-reuse-pooled-5D-v1",
+  "source_record": "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/records/linux2-pooled-network-tasks-20261030T020631Z-75dba4",
+  "output_root": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/task-dimensions-20261030T034620Z-0c19a6",
+  "runs": {
+    "sub-10369_ses-01_task-trust_run-1": {
+      "state": "complete",
+      "extraction_reused": false,
+      "fit_reused": false,
+      "new_component_responses": 60,
+      "mean_responses": 3
+    },
+    "sub-11031_ses-01_task-ugr_run-1": {
+      "state": "complete",
+      "extraction_reused": false,
+      "fit_reused": false,
+      "new_component_responses": 60,
+      "mean_responses": 3
+    },
+    "sub-10817_ses-01_task-ugr_run-1": {
+      "state": "complete",
+      "extraction_reused": false,
+      "fit_reused": false,
+      "new_component_responses": 60,
+      "mean_responses": 3
+    }
+  },
+  "pilot_passed": true,
+  "jobs": 8,
+  "last_started_UTC": "2026-10-30T03:46:20.080522+00:00"
+}
