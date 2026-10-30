@@ -85,6 +85,42 @@ This review does not promote a new seed, change any thresholds, identify the
 historical PPI extraction mask or report corrected PPI results. Those remain
 separate work.
 
+## The two voxel centers and statistical threshold
+
+Both centers receive the Harvard–Oxford maximum-probability insular-cortex label
+at the 25% anatomical atlas threshold:
+
+| Voxel | MNI coordinates (mm) | Insula probability in HO population atlas |
+|---|---|---:|
+| A | -42.4, 17.1, -6.7 | 38% |
+| B | -34.3, 17.1, -9.6 | 65% |
+
+The first voxel is at the anterior/ventral insula–opercular boundary and has a
+less certain atlas assignment than the second. These percentages are anatomical
+atlas probabilities, not fMRI significance values or individualized tissue
+classification. Coarse functional voxel footprints can cross an atlas boundary
+even when their centers receive the insular label.
+
+The two-voxel task overlap comes from the ones/full **cluster-based** models:
+cluster-forming Z=3.1, clusterwise FWE p<0.05. It is the insular portion of
+larger surviving clusters, not a separately corrected two-voxel insula cluster.
+Individual localization to those two voxels does not inherit a voxelwise FWE
+significance claim from cluster survival. The covs-vt model uses **voxelwise FWE
+p<0.05** and has no anatomical-insula task overlap. Its saved Z=3.1 setting does
+not serve as a cluster-forming threshold in that voxelwise mode.
+
+![Slices through the two insula overlap voxels](two_insula_voxels_zoom.png)
+
+Cyan identifies the two coarse-grid voxels, with crosses at their centers.
+Orange is the corrected functional-overlap component and green is the anatomical
+insula outline. Both centers lie at y=17.1 mm; the earlier whole-cluster view
+used y=22 mm and therefore did not show this overlap clearly. These zooms use
+the same anatomical template and nearest-neighbor functional-mask display.
+Coordinates and saved threshold settings are in
+`insula_voxels_and_thresholds.json`. Atlas probabilities were sampled from the
+insular channel of the native 1-mm HO probability atlas at the nearest voxel to
+each functional voxel center. The figure was visually inspected.
+
 ## Records and reproduction
 
 `verification.json` records source identities, all twelve group/sign comparisons,

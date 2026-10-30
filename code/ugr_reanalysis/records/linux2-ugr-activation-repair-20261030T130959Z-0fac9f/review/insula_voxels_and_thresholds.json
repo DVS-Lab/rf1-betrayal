@@ -1,0 +1,72 @@
+{
+  "voxels": [
+    {
+      "label": "A",
+      "MNI_mm": [
+        -42.40000247955322,
+        17.09999918937683,
+        -6.659999370574951
+      ],
+      "HarvardOxford_insula_probability_percent": 38
+    },
+    {
+      "label": "B",
+      "MNI_mm": [
+        -34.300002336502075,
+        17.09999918937683,
+        -9.62999939918518
+      ],
+      "HarvardOxford_insula_probability_percent": 65
+    }
+  ],
+  "threshold_settings": {
+    "ones": {
+      "fmri(thresh)": "3",
+      "fmri(z_thresh)": "3.1",
+      "fmri(prob_thresh)": "0.05"
+    },
+    "full": {
+      "fmri(thresh)": "3",
+      "fmri(z_thresh)": "3.1",
+      "fmri(prob_thresh)": "0.05"
+    },
+    "covs-vt": {
+      "fmri(thresh)": "2",
+      "fmri(z_thresh)": "3.1",
+      "fmri(prob_thresh)": "0.05"
+    }
+  },
+  "interpretation": "The two centers receive the HO25 insular label. They belong to larger cluster-corrected effects, not a separately corrected two-voxel cluster. covs-vt voxelwise FWE branch has zero anatomical-insula task overlap.",
+  "source_probability_atlas": {
+    "path": "/Users/tug87422/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-prob-1mm.nii.gz",
+    "size": 3351312,
+    "mtime_ns": 1623842684000000000,
+    "sha256": "436f8102caeae2488946be092387faf0672b15ed7e09691ff0c9fff4901bcd4c"
+  },
+  "source_corrected_group_map": {
+    "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/code/ugr_reanalysis/records/linux2-ugr-activation-repair-20261030T130959Z-0fac9f/group_maps/ones-cope-11-cluster_mask_zstat2.nii.gz",
+    "size": 1594,
+    "mtime_ns": 1793389293579728594,
+    "sha256": "d9e918c96a272ec7bc9326c3235821977fc559371da7ada639f9f7c8d3dafca0"
+  },
+  "source_FSFS": [
+    {
+      "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/code/ugr_reanalysis/records/linux2-ugr-activation-repair-20261030T130959Z-0fac9f/fsfs/ones-cope-11.fsf",
+      "size": 49664,
+      "mtime_ns": 1793389293495831144,
+      "sha256": "82622128c0895d8ceda9c07f3747a987221f9b92921c99e4c01ee928eaae3d8d"
+    },
+    {
+      "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/code/ugr_reanalysis/records/linux2-ugr-activation-repair-20261030T130959Z-0fac9f/fsfs/full-cope-11.fsf",
+      "size": 106312,
+      "mtime_ns": 1793389293495340935,
+      "sha256": "f3009e49e6b7565fa92797a97ef2d130d83e1997c63afe5e6c36fe1f91752050"
+    },
+    {
+      "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/code/ugr_reanalysis/records/linux2-ugr-activation-repair-20261030T130959Z-0fac9f/fsfs/covs-vt-cope-11.fsf",
+      "size": 106324,
+      "mtime_ns": 1793389293492284639,
+      "sha256": "c56addc56e2c229991a707364ddca54651064d22d27be4860d69dd7fb244a315"
+    }
+  ]
+}
