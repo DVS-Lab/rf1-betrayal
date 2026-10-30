@@ -1,0 +1,93 @@
+{
+  "sources": [
+    {
+      "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/masks/seed-AIns-clusterthresh.nii.gz",
+      "sha256": "66be24139534438a8f2efd49d071afcfa21010df5a578b955917a22b71d234d0"
+    },
+    {
+      "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/masks/ugr-trust_intersection.nii.gz",
+      "sha256": "3434f026983d17401636da5e1f9f763f76416b5fd4c0c92bfc2103859707984b"
+    },
+    {
+      "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/masks/overlap_figure_ugr_mask.nii.gz",
+      "sha256": "30f6122585552605a0d41cddea7d3c46c4072ef342d55262b70f39195a51eb2b"
+    },
+    {
+      "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/masks/overlap_figure_trust_mask.nii.gz",
+      "sha256": "87c4f13242d1b0ee699a03e1be3b0b4a70838c7a18cc4a64bdcc48d4e94f1a93"
+    }
+  ],
+  "background": {
+    "path": "/Users/tug87422/fsl/data/standard/MNI152_T1_1mm_brain.nii.gz",
+    "sha256": "32d5be33460f995a5d305507053c8862c823d9ca6bfb543381308df14590f212"
+  },
+  "seed_voxels": 127,
+  "seed_volume_ml": 2.749715223611643,
+  "centroid_mm": [
+    -43.52677415299603,
+    21.96850321236558,
+    -4.695589902832753
+  ],
+  "bounds_mm": [
+    [
+      -55.9000027179718,
+      17.09999918937683,
+      -18.53999948501587
+    ],
+    [
+      -26.200002193450928,
+      35.99999952316284,
+      14.130000829696655
+    ]
+  ],
+  "intersection_voxels": 365,
+  "intersection_26_connected_clusters": 7,
+  "intersection_matches_saved_task_masks": true,
+  "seed_is_exact_intersection_cluster": true,
+  "atlas": {
+    "path": "/Users/tug87422/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr25-1mm.nii.gz",
+    "sha256": "f71ecc19595ffc85e782dea04563e83c9eb73a7a60c415fb6660c23285200dc1"
+  },
+  "atlas_label_file": {
+    "path": "/Users/tug87422/fsl/data/atlases/HarvardOxford-Cortical.xml",
+    "sha256": "b8eb5ba5e787a4d3b442f75041f533f31b278a83e467bd2ab22438c1cff36581"
+  },
+  "atlas_overlap": [
+    {
+      "label": "Frontal Orbital Cortex",
+      "voxels": 69,
+      "percent": 54.330708661417326
+    },
+    {
+      "label": "Inferior Frontal Gyrus, pars triangularis",
+      "voxels": 22,
+      "percent": 17.322834645669293
+    },
+    {
+      "label": "Frontal Operculum Cortex",
+      "voxels": 15,
+      "percent": 11.811023622047244
+    },
+    {
+      "label": "Inferior Frontal Gyrus, pars opercularis",
+      "voxels": 14,
+      "percent": 11.023622047244094
+    },
+    {
+      "label": "Unlabeled",
+      "voxels": 4,
+      "percent": 3.1496062992125986
+    },
+    {
+      "label": "Insular Cortex",
+      "voxels": 2,
+      "percent": 1.5748031496062993
+    },
+    {
+      "label": "Frontal Pole",
+      "voxels": 1,
+      "percent": 0.7874015748031497
+    }
+  ],
+  "note": "This verifies the tracked clusterthresh seed; historical wrappers also name a separate seed-AIns.nii.gz absent from this checkout."
+}
