@@ -1,5 +1,19 @@
 # Original UGR analysis and functional-seed reassessment
 
+The original-input audit is complete: see
+[findings and the separate activation rerun](records/2026-10-30-original-input-review/README.md).
+Run `bash code/ugr_reanalysis/start_activation.sh` to reuse the completed
+corrected-TR sm-5 fit and original valid run-2 estimates for the two main UGR
+contrasts. It reruns their six saved group models in a fresh versioned
+`derivatives/ugr_reanalysis/` directory, preserving N132 and original group
+designs/thresholds, without new preprocessing, L1 or L2 fitting. It uses nohup,
+automatically resumes validated completed groups and publishes its own record.
+Small 3D input packets are staged inside the new output tree so FSL cannot update
+registration caches in the original source directories. No 4D data is copied.
+Check with the existing Linux2 Python and
+`code/ugr_reanalysis/rerun_activation.py --brief`.
+PPI and other contrasts remain separately tracked work.
+
 First recover and inspect Jacob's saved group maps, actual contrast definitions,
 group inputs and live seed files. The currently tracked clusterthresh mask is
 not established as the manuscript's final seed. Historical seed candidates were

@@ -1,0 +1,168 @@
+{
+  "source_audit": "linux2-original-group-audit-20261030T113752Z-f372a9",
+  "source_manifest": {
+    "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/code/ugr_reanalysis/records/linux2-original-group-audit-20261030T113752Z-f372a9/manifest.json",
+    "size": 161972,
+    "mtime_ns": 1793360521176950366,
+    "sha256": "2be42190c6babe803c4f4fa719c6763d6a13654a272e122f3353cc37e22c74de"
+  },
+  "source_atlas": {
+    "path": "/Users/tug87422/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr25-1mm.nii.gz",
+    "size": 138203,
+    "mtime_ns": 1623842684000000000,
+    "sha256": "f71ecc19595ffc85e782dea04563e83c9eb73a7a60c415fb6660c23285200dc1"
+  },
+  "live_seed_equals_tracked_geometry_and_support": true,
+  "live_seed_exact_component_of_negative_ones_task_intersection": true,
+  "live_saved_intersection_equals_actual_group_mask_intersection": true,
+  "seed_voxels": 127,
+  "seed_atlas_insula_voxels": 2,
+  "anatomical_coverage_mask_voxels": 497,
+  "anatomical_equals_saved_dualtask_coverage": true,
+  "task_intersections": [
+    {
+      "variant": "ones",
+      "sign": 1,
+      "intersection_voxels": 560,
+      "insula_voxels": 0,
+      "seed_voxels_in_intersection": 0
+    },
+    {
+      "variant": "ones",
+      "sign": 2,
+      "intersection_voxels": 365,
+      "insula_voxels": 2,
+      "seed_voxels_in_intersection": 127
+    },
+    {
+      "variant": "full",
+      "sign": 1,
+      "intersection_voxels": 401,
+      "insula_voxels": 0,
+      "seed_voxels_in_intersection": 0
+    },
+    {
+      "variant": "full",
+      "sign": 2,
+      "intersection_voxels": 328,
+      "insula_voxels": 2,
+      "seed_voxels_in_intersection": 115
+    },
+    {
+      "variant": "covs-vt",
+      "sign": 1,
+      "intersection_voxels": 0,
+      "insula_voxels": 0,
+      "seed_voxels_in_intersection": 0
+    },
+    {
+      "variant": "covs-vt",
+      "sign": 2,
+      "intersection_voxels": 7,
+      "insula_voxels": 0,
+      "seed_voxels_in_intersection": 1
+    }
+  ],
+  "original_UGR_flagged_contrasts": [
+    {
+      "key": "sub-11031_ses-01_task-ugr_run-1",
+      "contrast_name": "social_high_constant",
+      "contrast": "5",
+      "cutoff": "1e-06",
+      "rank": "41",
+      "active_columns": "42",
+      "relative_nonestimable_fraction": "0.707106795669384",
+      "weights_on_constant_columns": "False",
+      "requires_review": "True"
+    },
+    {
+      "key": "sub-11031_ses-01_task-ugr_run-1",
+      "contrast_name": "social_high_pmod",
+      "contrast": "6",
+      "cutoff": "1e-06",
+      "rank": "41",
+      "active_columns": "42",
+      "relative_nonestimable_fraction": "0.7071067667035755",
+      "weights_on_constant_columns": "False",
+      "requires_review": "True"
+    },
+    {
+      "key": "sub-11031_ses-01_task-ugr_run-1",
+      "contrast_name": "endowment high > low (constant)",
+      "contrast": "9",
+      "cutoff": "1e-06",
+      "rank": "41",
+      "active_columns": "42",
+      "relative_nonestimable_fraction": "0.5178370995633742",
+      "weights_on_constant_columns": "False",
+      "requires_review": "True"
+    },
+    {
+      "key": "sub-11031_ses-01_task-ugr_run-1",
+      "contrast_name": "social > nonsocial (constant)",
+      "contrast": "10",
+      "cutoff": "1e-06",
+      "rank": "41",
+      "active_columns": "42",
+      "relative_nonestimable_fraction": "0.5178370928376596",
+      "weights_on_constant_columns": "False",
+      "requires_review": "True"
+    },
+    {
+      "key": "sub-11031_ses-01_task-ugr_run-1",
+      "contrast_name": "offer (un)fairness (pmod)",
+      "contrast": "11",
+      "cutoff": "1e-06",
+      "rank": "41",
+      "active_columns": "42",
+      "relative_nonestimable_fraction": "0.6748372403362992",
+      "weights_on_constant_columns": "False",
+      "requires_review": "True"
+    },
+    {
+      "key": "sub-11031_ses-01_task-ugr_run-1",
+      "contrast_name": "social > nonsocial  (pmod)",
+      "contrast": "12",
+      "cutoff": "1e-06",
+      "rank": "41",
+      "active_columns": "42",
+      "relative_nonestimable_fraction": "0.6748372405929586",
+      "weights_on_constant_columns": "False",
+      "requires_review": "True"
+    },
+    {
+      "key": "sub-11031_ses-01_task-ugr_run-1",
+      "contrast_name": "social (pmod)",
+      "contrast": "14",
+      "cutoff": "1e-06",
+      "rank": "41",
+      "active_columns": "42",
+      "relative_nonestimable_fraction": "0.6954063414684134",
+      "weights_on_constant_columns": "False",
+      "requires_review": "True"
+    },
+    {
+      "key": "sub-11031_ses-01_task-ugr_run-1",
+      "contrast_name": "high > low (pmod)",
+      "contrast": "15",
+      "cutoff": "1e-06",
+      "rank": "41",
+      "active_columns": "42",
+      "relative_nonestimable_fraction": "0.674837242511472",
+      "weights_on_constant_columns": "False",
+      "requires_review": "True"
+    },
+    {
+      "key": "sub-11031_ses-01_task-ugr_run-1",
+      "contrast_name": "social high > social low (pmod)",
+      "contrast": "17",
+      "cutoff": "1e-06",
+      "rank": "41",
+      "active_columns": "42",
+      "relative_nonestimable_fraction": "0.6954063462489777",
+      "weights_on_constant_columns": "False",
+      "requires_review": "True"
+    }
+  ],
+  "actual_PPI_extraction_seed_identified": false
+}
