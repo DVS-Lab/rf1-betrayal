@@ -1,0 +1,22 @@
+{
+  "state": "network_timecourse_pilot_passed",
+  "policy": "FEAT-input-network-timecourse-zscored-OLS-v2",
+  "exploration_record": "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/records/linux2-completed-ICA-exploration-20261029T185120Z-0fea45",
+  "output_root": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec",
+  "runs": {
+    "sub-10369_ses-01_task-trust_run-1": {
+      "state": "complete",
+      "network_OLS_fits": 6
+    },
+    "sub-10369_ses-01_task-ugr_run-1": {
+      "state": "complete",
+      "network_OLS_fits": 6
+    },
+    "sub-10817_ses-01_task-ugr_run-1": {
+      "state": "complete",
+      "network_OLS_fits": 6
+    }
+  },
+  "pilot_passed": true,
+  "jobs": 8
+}
