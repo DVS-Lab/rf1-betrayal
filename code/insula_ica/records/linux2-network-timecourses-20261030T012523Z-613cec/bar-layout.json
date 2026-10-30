@@ -1,0 +1,21 @@
+{
+  "labels": [
+    "ugr_nonsocial",
+    "ugr_social",
+    "trust_C_rec_minus_def",
+    "trust_F_rec_minus_def",
+    "trust_S_rec_minus_def"
+  ],
+  "titles": [
+    "UGR nonsocial",
+    "UGR social",
+    "Trust C: rec - def",
+    "Trust F: rec - def",
+    "Trust S: rec - def"
+  ],
+  "standardization": "Within-run columnwise z-scores (ddof=1) for every task/confound column and each component response",
+  "estimator": "simultaneous OLS; no whitening; no prior task/nuisance removal",
+  "input": "Exact 4D feat_files(1) from active saved design.fsf, restricted to the ICA ROI before spatial regression",
+  "group": "Equal run means within each participant/task; N=132; pointwise 95% CIs",
+  "inference": "Descriptive priority review; no randomise or multiple-testing significance labels."
+}
