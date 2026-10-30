@@ -1,0 +1,459 @@
+{
+  "unique_versions": [
+    {
+      "git_commit": "f70193c5",
+      "git_source": "masks/archive/seed-AIns.nii.gz",
+      "blob": "2aa84f5bd0c7ca092d7453a33112965ac57a4217",
+      "sha256": "05b8fda7d8e5a2d85351c1a8d20193a7855dda26415a936d361dd3dad55f02ee",
+      "recovered_file": "code/insula_ica/records/2026-10-30-seed-provenance/primary_maps/archive__seed-AIns.nii.gz",
+      "nonzero_voxels": 142,
+      "shape": [
+        57,
+        70,
+        54
+      ],
+      "centroid_mm": [
+        -44.263382794151845,
+        22.252816181787303,
+        -4.338379629900758
+      ],
+      "insula_voxels": 2,
+      "insula_fraction": 0.014084507042253521,
+      "qform_code": 4,
+      "sform_code": 4,
+      "qform_sform_equal": true,
+      "clusters": 1,
+      "top_labels": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "voxels": 73
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "voxels": 27
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "voxels": 17
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "voxels": 16
+        },
+        {
+          "label": "Unlabeled",
+          "voxels": 6
+        }
+      ]
+    },
+    {
+      "git_commit": "f70193c5",
+      "git_source": "masks/archive/ugr-trust_intersection_voxelthresh.nii.gz",
+      "blob": "5c4225e9819dcda5ae10c79b08eb42471a86ae2a",
+      "sha256": "61bb6b7389e1bac1e17d3fba346e38c4a02a8e4b398a4376b2d63a87760336b5",
+      "recovered_file": "code/insula_ica/records/2026-10-30-seed-provenance/primary_maps/archive__ugr-trust_intersection_voxelthresh.nii.gz",
+      "nonzero_voxels": 8,
+      "shape": [
+        57,
+        70,
+        54
+      ],
+      "centroid_mm": [
+        7.54999840259552,
+        12.712499111890793,
+        -25.964999556541443
+      ],
+      "insula_voxels": 0,
+      "insula_fraction": 0.0,
+      "qform_code": 4,
+      "sform_code": 4,
+      "qform_sform_equal": true,
+      "clusters": 2,
+      "top_labels": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "voxels": 4
+        },
+        {
+          "label": "Temporal Pole",
+          "voxels": 4
+        }
+      ]
+    },
+    {
+      "git_commit": "f70193c5",
+      "git_source": "masks/archive/ugr-trust_intersection-vt.nii.gz",
+      "blob": "56ffefebc9b1f3d60e1f61ed96b65d3ed6de69a1",
+      "sha256": "dd15057108e0c1e7c644a1af926698b7c41dcc9e60c7b98d55f5a0e41e8466e1",
+      "recovered_file": "code/insula_ica/records/2026-10-30-seed-provenance/primary_maps/archive__ugr-trust_intersection-vt.nii.gz",
+      "nonzero_voxels": 7,
+      "shape": [
+        57,
+        70,
+        54
+      ],
+      "centroid_mm": [
+        36.28571319580078,
+        6.685713291168213,
+        -34.66285678318569
+      ],
+      "insula_voxels": 0,
+      "insula_fraction": 0.0,
+      "qform_code": 4,
+      "sform_code": 4,
+      "qform_sform_equal": true,
+      "clusters": 2,
+      "top_labels": [
+        {
+          "label": "Temporal Pole",
+          "voxels": 6
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "voxels": 1
+        }
+      ]
+    },
+    {
+      "git_commit": "f70193c5",
+      "git_source": "masks/archive/ugr-trust_intersection.nii.gz",
+      "blob": "35831050598e763d76b7bf36591a2f3c150ae598",
+      "sha256": "c753fa6c0ff59fd15f502096c00d7f7c7df8f68f50c6a4bb335b00611ecb8adf",
+      "recovered_file": "code/insula_ica/records/2026-10-30-seed-provenance/primary_maps/archive__ugr-trust_intersection.nii.gz",
+      "nonzero_voxels": 400,
+      "shape": [
+        57,
+        70,
+        54
+      ],
+      "centroid_mm": [
+        -3.2297517877817152,
+        22.12874927818775,
+        -2.5316993308067324
+      ],
+      "insula_voxels": 2,
+      "insula_fraction": 0.005,
+      "qform_code": 4,
+      "sform_code": 4,
+      "qform_sform_equal": true,
+      "clusters": 6,
+      "top_labels": [
+        {
+          "label": "Temporal Pole",
+          "voxels": 81
+        },
+        {
+          "label": "Superior Frontal Gyrus",
+          "voxels": 75
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "voxels": 73
+        },
+        {
+          "label": "Frontal Pole",
+          "voxels": 27
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "voxels": 27
+        }
+      ]
+    },
+    {
+      "git_commit": "f70193c5",
+      "git_source": "masks/archive/ugr-trust_intersection_voxelthresh_mask.nii.gz",
+      "blob": "0c66b0f5c3b0d884f29ed33a242d7ceb8b709920",
+      "sha256": "b6cb843f5811b76a9ebb20d32e0e6689879217d8c6130656c5c64c507839b9ed",
+      "recovered_file": "code/insula_ica/records/2026-10-30-seed-provenance/primary_maps/archive__ugr-trust_intersection_voxelthresh_mask.nii.gz",
+      "nonzero_voxels": 4,
+      "shape": [
+        57,
+        70,
+        54
+      ],
+      "centroid_mm": [
+        -33.625002324581146,
+        21.149999260902405,
+        -13.342499434947968
+      ],
+      "insula_voxels": 0,
+      "insula_fraction": 0.0,
+      "qform_code": 4,
+      "sform_code": 4,
+      "qform_sform_equal": true,
+      "clusters": 1,
+      "top_labels": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "voxels": 4
+        }
+      ]
+    },
+    {
+      "git_commit": "f70193c5",
+      "git_source": "masks/overlap_figure_intersection_mask.nii.gz",
+      "blob": "e16033dddf9fe4cc8d82f41dbe67697f28b9ec01",
+      "sha256": "c8e76864ed28968fd33f1da318fa2f5a5281487c2a61b6f86edf9c5bf7d63b03",
+      "recovered_file": "code/insula_ica/records/2026-10-30-seed-provenance/primary_maps/overlap_figure_intersection_mask.nii.gz",
+      "nonzero_voxels": 365,
+      "shape": [
+        57,
+        70,
+        54
+      ],
+      "centroid_mm": [
+        -2.765481231637197,
+        21.974793796016744,
+        -2.4857253577611216
+      ],
+      "insula_voxels": 2,
+      "insula_fraction": 0.005479452054794521,
+      "qform_code": 4,
+      "sform_code": 4,
+      "qform_sform_equal": true,
+      "clusters": 7,
+      "top_labels": [
+        {
+          "label": "Superior Frontal Gyrus",
+          "voxels": 75
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "voxels": 69
+        },
+        {
+          "label": "Temporal Pole",
+          "voxels": 67
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "voxels": 22
+        },
+        {
+          "label": "Frontal Pole",
+          "voxels": 21
+        }
+      ]
+    },
+    {
+      "git_commit": "f70193c5",
+      "git_source": "masks/seed-AIns-clusterthresh.nii.gz",
+      "blob": "4ed77baf3a01648aeb2bf8338b0c8b5a5988eeba",
+      "sha256": "66be24139534438a8f2efd49d071afcfa21010df5a578b955917a22b71d234d0",
+      "recovered_file": "code/insula_ica/records/2026-10-30-seed-provenance/primary_maps/seed-AIns-clusterthresh.nii.gz",
+      "nonzero_voxels": 127,
+      "shape": [
+        57,
+        70,
+        54
+      ],
+      "centroid_mm": [
+        -43.52677415299603,
+        21.96850321236558,
+        -4.695589902832753
+      ],
+      "insula_voxels": 2,
+      "insula_fraction": 0.015748031496062992,
+      "qform_code": 4,
+      "sform_code": 4,
+      "qform_sform_equal": true,
+      "clusters": 1,
+      "top_labels": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "voxels": 69
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "voxels": 22
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "voxels": 15
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "voxels": 14
+        },
+        {
+          "label": "Unlabeled",
+          "voxels": 4
+        }
+      ]
+    },
+    {
+      "git_commit": "f70193c5",
+      "git_source": "masks/seed-AIns-vt.nii.gz",
+      "blob": "ded74bd4f2587fc28f368d4c90b00ebba2618d64",
+      "sha256": "a77340af39988103ded6227361b5160398afe7f3a174cb888f82426bbef245cd",
+      "recovered_file": "code/insula_ica/records/2026-10-30-seed-provenance/primary_maps/seed-AIns-vt.nii.gz",
+      "nonzero_voxels": 1,
+      "shape": [
+        57,
+        70,
+        54
+      ],
+      "centroid_mm": [
+        -34.300002336502075,
+        19.799999237060547,
+        -12.59999942779541
+      ],
+      "insula_voxels": 0,
+      "insula_fraction": 0.0,
+      "qform_code": 4,
+      "sform_code": 4,
+      "qform_sform_equal": true,
+      "clusters": 1,
+      "top_labels": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "voxels": 1
+        }
+      ]
+    },
+    {
+      "git_commit": "f70193c5",
+      "git_source": "masks/ugr-trust_intersection.nii.gz",
+      "blob": "d42e2807954dc390b7184e6c2a91d85807b2a98d",
+      "sha256": "3434f026983d17401636da5e1f9f763f76416b5fd4c0c92bfc2103859707984b",
+      "recovered_file": "code/insula_ica/records/2026-10-30-seed-provenance/primary_maps/ugr-trust_intersection.nii.gz",
+      "nonzero_voxels": 365,
+      "shape": [
+        57,
+        70,
+        54
+      ],
+      "centroid_mm": [
+        -2.765481231637197,
+        21.974793796016744,
+        -2.4857253577611216
+      ],
+      "insula_voxels": 2,
+      "insula_fraction": 0.005479452054794521,
+      "qform_code": 4,
+      "sform_code": 4,
+      "qform_sform_equal": true,
+      "clusters": 7,
+      "top_labels": [
+        {
+          "label": "Superior Frontal Gyrus",
+          "voxels": 75
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "voxels": 69
+        },
+        {
+          "label": "Temporal Pole",
+          "voxels": 67
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "voxels": 22
+        },
+        {
+          "label": "Frontal Pole",
+          "voxels": 21
+        }
+      ]
+    }
+  ],
+  "appearances": [
+    {
+      "commit": "28bc0df6af4827714fbae75fcb83f6a9696ec12f",
+      "source": "masks/overlap_figure_intersection_mask.nii.gz",
+      "blob": "e16033dddf9fe4cc8d82f41dbe67697f28b9ec01"
+    },
+    {
+      "commit": "28bc0df6af4827714fbae75fcb83f6a9696ec12f",
+      "source": "masks/seed-AIns-clusterthresh.nii.gz",
+      "blob": "4ed77baf3a01648aeb2bf8338b0c8b5a5988eeba"
+    },
+    {
+      "commit": "28bc0df6af4827714fbae75fcb83f6a9696ec12f",
+      "source": "masks/ugr-trust_intersection.nii.gz",
+      "blob": "d42e2807954dc390b7184e6c2a91d85807b2a98d"
+    },
+    {
+      "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+      "source": "masks/archive/seed-AIns.nii.gz",
+      "blob": "2aa84f5bd0c7ca092d7453a33112965ac57a4217"
+    },
+    {
+      "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+      "source": "masks/archive/seed-aIns.nii.gz",
+      "blob": "5c4225e9819dcda5ae10c79b08eb42471a86ae2a"
+    },
+    {
+      "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+      "source": "masks/archive/ugr-trust_intersection-vt.nii.gz",
+      "blob": "56ffefebc9b1f3d60e1f61ed96b65d3ed6de69a1"
+    },
+    {
+      "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+      "source": "masks/archive/ugr-trust_intersection.nii.gz",
+      "blob": "35831050598e763d76b7bf36591a2f3c150ae598"
+    },
+    {
+      "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+      "source": "masks/archive/ugr-trust_intersection_voxelthresh.nii.gz",
+      "blob": "5c4225e9819dcda5ae10c79b08eb42471a86ae2a"
+    },
+    {
+      "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+      "source": "masks/archive/ugr-trust_intersection_voxelthresh_mask.nii.gz",
+      "blob": "0c66b0f5c3b0d884f29ed33a242d7ceb8b709920"
+    },
+    {
+      "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+      "source": "masks/overlap_figure_intersection_mask.nii.gz",
+      "blob": "e16033dddf9fe4cc8d82f41dbe67697f28b9ec01"
+    },
+    {
+      "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+      "source": "masks/seed-AIns-clusterthresh.nii.gz",
+      "blob": "4ed77baf3a01648aeb2bf8338b0c8b5a5988eeba"
+    },
+    {
+      "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+      "source": "masks/seed-AIns-vt.nii.gz",
+      "blob": "ded74bd4f2587fc28f368d4c90b00ebba2618d64"
+    },
+    {
+      "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+      "source": "masks/ugr-trust_intersection.nii.gz",
+      "blob": "d42e2807954dc390b7184e6c2a91d85807b2a98d"
+    },
+    {
+      "commit": "005c9295b6c26a86112bf2442a877bb6e2067dca",
+      "source": "masks/archive/ugr-trust_intersection_voxelthresh_mask.nii.gz",
+      "blob": "0c66b0f5c3b0d884f29ed33a242d7ceb8b709920"
+    },
+    {
+      "commit": "005c9295b6c26a86112bf2442a877bb6e2067dca",
+      "source": "masks/seed-aIns.nii.gz",
+      "blob": "5c4225e9819dcda5ae10c79b08eb42471a86ae2a"
+    },
+    {
+      "commit": "005c9295b6c26a86112bf2442a877bb6e2067dca",
+      "source": "masks/ugr-trust_intersection_voxelthresh.nii.gz",
+      "blob": "5c4225e9819dcda5ae10c79b08eb42471a86ae2a"
+    },
+    {
+      "commit": "2069f68b46fe7f678755d8373aacefe9e399367b",
+      "source": "masks/archive/ugr-trust_intersection_voxelthresh_mask.nii.gz",
+      "blob": "0c66b0f5c3b0d884f29ed33a242d7ceb8b709920"
+    },
+    {
+      "commit": "2069f68b46fe7f678755d8373aacefe9e399367b",
+      "source": "masks/ugr-trust_intersection_voxelthresh.nii.gz",
+      "blob": "5c4225e9819dcda5ae10c79b08eb42471a86ae2a"
+    },
+    {
+      "commit": "6feb00729d38268668470b0ac3f09b116bfe3a35",
+      "source": "masks/ugr-trust_intersection_voxelthresh_mask.nii.gz",
+      "blob": "0c66b0f5c3b0d884f29ed33a242d7ceb8b709920"
+    }
+  ]
+}

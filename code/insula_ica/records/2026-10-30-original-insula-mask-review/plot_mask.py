@@ -86,7 +86,7 @@ def main():
             ax.text(.03, .94, 'L', color='white', transform=ax.transAxes); ax.text(.94, .94, 'R', color='white', transform=ax.transAxes)
         else:
             ax.text(.03, .94, 'P', color='white', transform=ax.transAxes); ax.text(.94, .94, 'A', color='white', transform=ax.transAxes)
-    fig.suptitle('Original task-intersection anterior-insula seed', fontsize=16, y=.97)
+    fig.suptitle('Saved clusterthresh mask and anatomical insula', fontsize=16, y=.97)
     fig.legend(handles=[Patch(color='#ffad20', label='Left insula seed: 127 voxels (2.75 mL)'),
                         Patch(color='#21cbd7', label='Other Trust ∩ UGR voxels'),
                         Line2D([0], [0], color='#66f28a', label='Anatomical insula (Harvard–Oxford 25%)')], loc='lower center', bbox_to_anchor=(.5, .075), ncol=3, frameon=False, fontsize=9)

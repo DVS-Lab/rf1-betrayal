@@ -1,4 +1,8 @@
-# Saved functional insula seed: task intersection and anatomy
+# Saved clusterthresh mask: task intersection and anatomy
+
+**Identity remains unresolved:** this is the tracked `clusterthresh` mask,
+not an established identification of Jacob's final manuscript seed. See the
+subsequent historical seed inventory and original-group-input audit plan.
 
 The tracked `masks/seed-AIns-clusterthresh.nii.gz` is exactly one connected
 component of `masks/ugr-trust_intersection.nii.gz` (26-neighbor connectivity).
