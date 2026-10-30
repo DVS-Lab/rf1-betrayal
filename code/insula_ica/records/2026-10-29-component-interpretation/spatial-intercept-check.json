@@ -1,0 +1,35 @@
+{
+  "check": [
+    {
+      "mode": "joint_bold",
+      "roi": "left",
+      "max_abs_response_to_uniform_spatial_signal": 4.87890977618477e-17
+    },
+    {
+      "mode": "joint_bold",
+      "roi": "right",
+      "max_abs_response_to_uniform_spatial_signal": 1.7672495411513722e-17
+    },
+    {
+      "mode": "joint_bold",
+      "roi": "bilateral",
+      "max_abs_response_to_uniform_spatial_signal": 1.9081958235744878e-17
+    },
+    {
+      "mode": "native_film",
+      "roi": "left",
+      "max_abs_response_to_uniform_spatial_signal": 4.445228907190568e-17
+    },
+    {
+      "mode": "native_film",
+      "roi": "right",
+      "max_abs_response_to_uniform_spatial_signal": 3.458604930228759e-17
+    },
+    {
+      "mode": "native_film",
+      "roi": "bilateral",
+      "max_abs_response_to_uniform_spatial_signal": 1.3877787807814457e-17
+    }
+  ],
+  "interpretation": "A spatially uniform ROI-wide signal is represented by the intercept; IC task estimates do not measure the full ROI mean response."
+}
