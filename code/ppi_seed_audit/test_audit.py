@@ -21,6 +21,18 @@ class SeedAuditTests(unittest.TestCase):
         self.assertEqual(a.check_model(settings,12,x[::-1],dm)['status'],'does_not_match_supported_model')
         self.assertEqual(a.check_model(dict(settings,**{'fmri(temphp_yn)':'1'}),12,x,dm)['status'],'not_checked_unsupported_processing')
 
+    def test_model_input_float32_rounding_does_not_relax_raw_identity(self):
+        x=13000+np.random.default_rng(14).normal(size=240)*80
+        y=x.astype(np.float32).astype(float);y-=y.mean()
+        self.assertEqual(a.affine_check(x,y)['status'],'does_not_match_supported_model')
+        result=a.model_column_agreement(x,y)
+        self.assertEqual(result['status'],'matches_after_float32_EV_input_rounding')
+        self.assertTrue(a.supported_model_match(result))
+        self.assertLess(result['relative_residual'],1e-6)
+        self.assertGreater(result['raw_text_comparison']['relative_residual'],1e-6)
+        self.assertFalse(a.supported_model_match(a.model_column_agreement(x[::-1],y)))
+        self.assertFalse(a.raw_match(x,y)['raw_match'])
+
     def test_raw_match_is_stricter_than_affine_agreement(self):
         x=14000+np.random.default_rng(4).normal(size=90)
         self.assertTrue(a.raw_match(x,x+1e-7)['raw_match'])

@@ -98,6 +98,26 @@ def affine_check(x,y):
         note='Agreement with saved model column supports use of this current external series; does not identify a mask by itself.')
 
 
+
+def model_column_agreement(series,column):
+    """Account for feat_model shape-2 input parsing via fscanf("%f", float*).
+
+    Keep the strict residual threshold and record both representations. This is
+    only a model-input check; raw mask-mean identity remains a separate test.
+    """
+    direct=affine_check(series,column)
+    if direct['status']!='does_not_match_supported_model':return direct
+    rounded=affine_check(np.asarray(series,dtype=np.float32).astype(float),column)
+    if rounded['status']!='matches_up_to_positive_centering_scaling':return direct
+    return dict(rounded,status='matches_after_float32_EV_input_rounding',
+        raw_text_comparison=direct,input_representation='IEEE float32 custom shape-2 EV input',
+        note='Saved column agrees after FSL custom-EV input rounding and positive centering/scaling; spatial mask identity is not established.')
+
+
+def supported_model_match(result):
+    return result.get('status') in ('matches_up_to_positive_centering_scaling','matches_after_float32_EV_input_rounding')
+
+
 def check_model(settings,j,series,design):
     unsupported=[]
     if settings.get(f'fmri(shape{j})')!='2':unsupported.append('phys EV is not one-value-per-volume custom input')
@@ -108,7 +128,7 @@ def check_model(settings,j,series,design):
     if unsupported:return dict(status='not_checked_unsupported_processing',reasons=unsupported)
     column=j-1+sum(int(settings.get(f'fmri(deriv_yn{k})','0')) for k in range(1,j))
     if design.ndim!=2 or column>=design.shape[1]:return dict(status='model_column_unavailable')
-    return dict(affine_check(series,design[:,column]),real_column_zero_based=column)
+    return dict(model_column_agreement(series,design[:,column]),real_column_zero_based=column)
 
 
 def source_excerpt(path,results,limit=30):
@@ -253,7 +273,7 @@ def reproduce(phys,candidates,series,record,archive,max_bolds):
                 for candidate_id,predicted in predictions.items():
                     value=raw_match(series[row['series_key']],predicted)
                     result=dict(case=row['case'],task=row['task'],folder_seed_label=row['folder_seed_label'],physiological_file=row['series_file_used_for_check'],external_file_as_saved=row['physiological_file_as_saved'],series_source=row['series_source'],candidate_id=candidate_id,BOLD_identity=before,**value)
-                    result['supports_saved_model_and_current_original_BOLD']=bool(value['raw_match'] and row['model_check']['status']=='matches_up_to_positive_centering_scaling')
+                    result['supports_saved_model_and_current_original_BOLD']=bool(value['raw_match'] and supported_model_match(row['model_check']))
                     results.append(result)
             print(f'Original BOLD comparison {number}/{len(selected)} completed',flush=True)
         except Exception as exc:results.append(dict(BOLD=path,status='original_BOLD_not_compared',error=str(exc)))

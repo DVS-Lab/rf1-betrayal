@@ -1,0 +1,10 @@
+{
+  "returncode": -6,
+  "fsl_version": "6.0.7.19",
+  "case": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11579/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-2_sm-5.feat",
+  "command": [
+    "feat_model",
+    "probe"
+  ],
+  "log_tail": "libc++abi: terminating due to uncaught exception of type std::out_of_range: Mat::operator(): index out of bounds\n"
+}

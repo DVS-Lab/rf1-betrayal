@@ -43,7 +43,11 @@ creates another inventory; it does not restart or change production analyses.
   priority when present, because an external file may have been overwritten.
 - Agreement with the physiological column actually stored in `design.mat`.
   For supported direct, unconvolved and unfiltered EVs, this requires agreement
-  up to positive centering/scaling with relative residual below 1e-6. Unsupported
+  up to positive centering/scaling with relative residual below 1e-6. If direct
+  text comparison fails, an explicit float32 input representation is checked:
+  native `feat_model` reads shape-2 custom values using `fscanf("%f", &tmpf)`
+  with `float tmpf`. Both comparisons are retained; the cutoff is unchanged.
+  This does not relax the separate raw mask-mean identity check. Unsupported
   filtering/basis expansion/orthogonalization is explicitly left unresolved.
   A matching series alone does not identify a spatial mask.
 - Bounded original FEAT and project wrapper-log excerpts, parsed `fslmeants`
@@ -104,9 +108,10 @@ identities and comparisons are saved for review.
   not silently copied. Only small text/model/timecourse sources and 3D masks are
   archived, never participant 4D data.
 
-Local validation: five targeted tests pass, including an end-to-end original
+Local validation: six targeted tests pass, including an end-to-end original
 L3/L2/L1 fixture, actual project templates, detection of an overwritten external
 series, recovery from FEAT's preserved EV snapshot, numerical mask attribution,
 exact-grid embedding and content-addressed archive integrity. Native FSL mean
 agreement, shell syntax and CLI help were also checked. These are fixture tests,
-not claims about Jacob's actual seed; Linux2 audit output remains to be reviewed.
+not claims about Jacob's exact seed mask. See the dated audit record's `review/`
+for the actual saved-design comparison and remaining provenance limits.

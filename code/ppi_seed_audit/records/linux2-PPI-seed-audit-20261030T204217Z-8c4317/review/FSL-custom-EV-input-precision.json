@@ -1,0 +1,9 @@
+{
+  "source": "/Users/tug87422/fsl/src/fsl-feat5/feat_model.cc",
+  "sha256": "89f88cb9f632a9014ee77e1bb2e92680e4738738dbf3d8a4edeefb0fa8e9d520",
+  "FSL_version": "6.0.7.19",
+  "first_line": 951,
+  "last_line": 978,
+  "excerpt": "\n\t      // }}}\n\t    case 2:\n\t      // {{{ custom single column\n\n\t      {\n\t\tFILE *ifp2;\n\n\t\tfilename=string(find_line(fn, tclKey(\"custom\",orig_ev+1) , fl));\n\n\t\tif ((ifp2=fopen(filename.c_str(),\"rb\"))==NULL)\n\t\t  {\n\t\t    cout << \"Can't open \" << filename << \" for reading\" << endl;\n\t\t    exit(1);\n\t\t  }\n\n\t\tfor(i=0,t=0; t<nTimepoints; t++)\n\t\t  {\n\t\t    float tmpf;\n\n\t\t    if (fscanf(ifp2,\"%f\",&tmpf)!=1)\n\t\t      {\n\t\t\tcout << \"Not enough data in \" << filename << endl;\n\t\t\texit(1);\n\t\t      }\n\n\t\t    for(; i<trmult*(t+1); i++)\n\t\t      originalHighResDesign(i+1,orig_ev+1)=tmpf;",
+  "interpretation": "Shape-2 custom EV values are parsed into float tmpf using fscanf %f before centering/model construction. Actual saved historical design columns agree with this input representation in all 506 cases."
+}
