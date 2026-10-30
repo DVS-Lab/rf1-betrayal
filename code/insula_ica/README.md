@@ -12,6 +12,18 @@ No new gPPI or behavioral search is included.
 
 ## Pooled high/low UGR task model
 
+For task responses on the existing **3-, 5- and 7-component solutions**, run
+`bash code/insula_ica/start_task_dimensions.sh`. This reuses completed pooled
+five-component task estimates and existing ICA maps, then extracts all new 3/7
+timecourses and the actual left/right/bilateral insula means in one 4D read per
+accepted run. The means are separately fitted responses, not added confounds.
+All series use the same full task+nuisance z-scored OLS and pooled UGR model.
+It saves five bars per IC and mean reference, spatial correspondence tables,
+and a check that the reused five-component summaries are unchanged. The detached
+launcher automatically resumes extraction/OLS checkpoints and publishes the
+record to `insula-ica`; it launches no ICA or FEAT jobs. Check with
+`status_task_dimensions.py --brief`. See [methods and validation](records/2026-10-29-task-dimension-sensitivity/README.md).
+
 `bash code/insula_ica/start_pooled_network_tasks.sh` fits two common UGR slopes
 (social/nonsocial), summing high/low pmod columns **before z-scoring**, retaining
 the four condition main effects and every other task/confound column. This
