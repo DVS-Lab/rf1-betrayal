@@ -1,129 +1,128 @@
-# Direct network timecourse task analysis
+# Priority task review: standardized OLS and five bars per subregion
 
-The previous spatial projection of voxelwise task estimates is withdrawn. Its
-code, six published task artifacts, numerical findings and directional task
-conclusions were deleted from the working branch on 2026-10-29. Git history is
-retained; no history rewrite or change to original FEAT statistics is intended.
-Completed ICA fits, anatomical descriptions and descriptive background dual
-regression are retained. No previous IC3/IC4 task direction is carried forward.
+Current policy: `FEAT-input-network-timecourse-zscored-OLS-v2`, clarified by the
+user on 2026-10-29. This replaces the earlier unstandardized GLS proposal. The
+original spatial task-map projections remain deleted and withdrawn.
 
-## Paper and framework
+## Task branch (run first)
+
+1. Freeze all six completed primary five-component ICA bases: left/right/bilateral
+   insula by joint-BOLD/native-FILM discovery representation. All components and
+   existing sign orientations are retained. No new ICA is estimated.
+2. Read the exact 4D `feat_files(1)` input in each run's active saved `design.fsf`.
+   Verify its grid, volumes and run-specific TR against the actual L1 design.
+   This is the input to FEAT, **not** `filtered_func_data`, `res4d` or the full-
+   model original-scale residuals. Restrict the data matrix to voxels in the
+   defining ROI before spatial regression. No outside-mask voxel enters the fit.
+3. Simultaneously spatially regress all five component maps with a spatial
+   intercept into that masked input. The resulting network timecourses retain
+   task and nuisance effects. Only a temporal constant baseline is removed.
+4. Columnwise z-score each network timecourse and **every column** of the saved
+   complete L1 task+nuisance design, within run, using sample SD (`ddof=1`).
+   Constant design columns are represented by zero and explicitly listed. No
+   meaningful task or nuisance regressor is excluded. Verify source confound SHA
+   and numeric equality with the exact historical saved TEDANA/confound matrix
+   before standardization. Preserve the corrected UGR 1.710-second design and
+   the other runs' 1.615-second timing.
+5. Fit `Z(TC) = Z(X_full) B + error` with OLS (`pinv(Z(X_full)) @ Z(TC)`). No
+   temporal whitening, FILM, additional filtering or sequential task/nuisance
+   cleaning. An intercept is zero because all inputs are centered. Check that
+   requested task contrasts are estimable. Save raw extracted timecourses, both
+   standardized matrices, the full standardized coefficient matrix, means/SDs,
+   source identities and numerical rank.
+
+## Exactly five plotted values per subregion
+
+| Bar | Operation on fitted standardized coefficients |
+| --- | --- |
+| UGR nonsocial | `(beta_nonsocial_high_pmod + beta_nonsocial_low_pmod) / 2` |
+| UGR social | `(beta_social_high_pmod + beta_social_low_pmod) / 2` |
+| Trust C | `beta_C_rec - beta_C_def` |
+| Trust F | `beta_F_rec - beta_F_def` |
+| Trust S | `beta_S_rec - beta_S_def` |
+
+Standardize individual EV columns **before** fitting and forming these averages
+or contrasts. Do not average the high/low design columns before standardizing.
+Keep all four individual UGR pmod estimates in the result tables. Pmod direction
+follows the original L1 coding; no inferred unfairness sign flip is applied.
+
+Calculate the five values within run, average runs equally within participant
+and task, then plot equal-weight group means over N=132 with pointwise 95%
+between-participant t CIs. In particular, CIs for an average or difference use
+that participant's actual combined estimate, retaining the paired covariance.
+There are 150 plotted group values: two discovery bases x three ROIs x five
+components x five bars. The component indices are local to each basis/ROI.
+
+Produce one grouped five-bar figure for each ROI/basis (six figures) plus
+bilateral IC3/IC4 close-ups (two figures). This is the priority descriptive
+review; no significance stars, permutation tests or new multiple-testing family
+are introduced here. Standardization does not by itself establish a formal
+between-task or between-component difference. Discovery uses this same cohort,
+so results remain exploratory.
+
+## Background connectivity branch (separate; group inference later)
+
+Spatial regression on **masked residualized** data yields background component
+timecourses. Simultaneously regress all component timecourses into the matching
+whole-brain residualized data to obtain run-level connectivity maps, separately
+for the original-BOLD and native FILM residual representations. The existing
+full FEAT fit already removed task and nuisance effects. These timecourses are
+not used for task-response estimation. Average runs within participant/task
+before treating participants as independent observations.
+
+`randomise` is for group inference on the participant connectivity maps; it does
+not perform the run-level timecourse-to-whole-brain regression. The task-bar
+launcher does not launch either connectivity regression or `randomise`.
+
+## Relation to the supplied paper
 
 Dobryakova & Smith (2022), *Reward enhances connectivity between the ventral
 striatum and the default mode network*, NeuroImage 258:119398,
 [doi:10.1016/j.neuroimage.2022.119398](https://doi.org/10.1016/j.neuroimage.2022.119398).
-Sections 2.5 and 3.1, and Figure 1, distinguish spatially extracted network
-timecourses, temporal modeling of their task responses, and nPPI interaction
-models for task-dependent connectivity. This paper uses whole-brain reference
-maps; our spatial model uses the completed restricted-insula ICA maps.
+Sections 2.5/3.1 and Figure 1 distinguish spatially extracted network timecourses,
+temporal task-response modeling, and nPPI models for task-dependent connectivity.
+The user's current instruction specifies standardized OLS for our task branch.
+No nPPI interactions are introduced at this stage. The lab's
+[restricted dual-regression script](https://github.com/DVS-Lab/duke-archive/blob/master/leech12_dual_regression)
+and [confound extension](https://github.com/DVS-Lab/duke-archive/blob/master/leech12_dual_regression_conf)
+provide the corresponding connectivity framework.
 
-The lab's [Leech-style script](https://github.com/DVS-Lab/duke-archive/blob/master/leech12_dual_regression)
-extracts all component timecourses inside the restricted mask and temporally
-regresses them into whole-brain data. Its
-[confound extension](https://github.com/DVS-Lab/duke-archive/blob/master/leech12_dual_regression_conf)
-appends nuisance regressors at the temporal stage. Standard
-[FSL dual regression](https://fsl.fmrib.ox.ac.uk/fsl/docs/resting_state/dualregression.html)
-uses spatial maps -> individual timecourses -> individual connectivity maps.
-The task-response model uses the extracted timecourses as responses to the task
-design; connectivity uses them as predictors of voxel timecourses. These are
-distinct models and outputs.
-
-## Replacement task estimator
-
-1. Freeze all six completed primary five-component solutions: joint-BOLD/native-
-   FILM discovery bases by left/right/bilateral insula. Retain every component;
-   component indices are local to each solution. Keep the existing sign rule
-   (largest absolute spatial loading positive). No effect determines selection
-   or orientation. Discovery remains based on the already agreed residuals;
-   no new ICA is estimated here.
-2. Read each run's corrected, unsmoothed, **task-preserved** `filtered_func_data`.
-   Spatially regress all five maps together, with a spatial intercept, inside
-   their defining mask to estimate T x 5 network timecourses. Centering the
-   timecourses removes only a constant baseline. Do not extract task responses
-   from `res4d` or the original-scale full-model residuals.
-3. Fit each network response to the **complete saved task+nuisance design** in a
-   single temporal GLS model. This includes the exact preserved TEDANA/confound
-   matrix. Source SHA, numeric nuisance equality, completed source QC, grid,
-   timing, model/contrast coding and estimability are checked. The corrected
-   UGR 1.710-second model is retained; other runs remain 1.615 seconds. No new
-   high-pass, nuisance removal, HRF convolution or sequential regression occurs.
-4. Use FILM's own component-level prewhitening, without spatial autocorrelation
-   smoothing. Five responses occupy five independent artificial voxels in one
-   small input, so each receives its own autocorrelation estimate. `--sa` and
-   `--noest` are absent. A permissive `--thr` prevents dropping mean-zero
-   timecourses. The new contrast outputs come from this temporal model; no
-   existing voxelwise task map is read by the task estimator. Save unscaled
-   stage-1 timecourses, fitted contrast variances, commands and a direct temporal
-   OLS diagnostic. Do not normalize task responses by residual SD or claim PSC.
-5. For Trust, retain the original summed C/F/S contrast units and report
-   betrayal minus reciprocity. Estimate the betrayal and reciprocity condition
-   means separately using their actual model weights (C/F/S average). Their
-   difference equals one third of the primary summed contrast, not the entire
-   contrast. UGR uses its stored offer-pmod contrast without an inferred fairness
-   sign. All nuisance coefficients have zero task-contrast weights.
-6. Average runs equally within participant/task, then test participants, N=132.
-   Retain all 60 primary tests across both map bases, three ROIs, five components
-   and two tasks, with Bonferroni-60. Condition bars show pointwise between-person
-   95% CIs and have no separate significance claims. All primary estimates and
-   nulls are published. This is exploratory same-cohort map discovery, not an
-   independent replication or a formal IC3-vs-IC4/task/hemisphere interaction.
-
-**Both discovery bases are applied to the same unwhitened task-preserved BOLD.**
-`native_film` labels where an ICA spatial basis was discovered, not the data
-representation entering this new temporal response model. Voxelwise original
-FILM whitening is not reused for these extracted timecourses.
-
-## Connectivity and scope
-
-Existing connectivity estimates are background dual-regression results: all
-five spatially derived residual timecourses enter a simultaneous whole-brain
-regression on the same residual representation. The original joint FEAT fit
-already removed task and nuisance effects. They remain separate from this new
-task-preserved stage-1/timecourse analysis. No new PPI or claim of condition-
-dependent connectivity is introduced. The attached paper's nPPI extension
-would require network x task interactions and an explicit whole-brain temporal
-model; a main task effect on a network is not such an interaction.
-
-## Execution and outputs
+## Run on Linux2
 
 ```bash
 bash code/insula_ica/start_network_timecourses.sh
 ```
 
-Detached from the terminal. Runs Trust, ordinary UGR and the corrected-TR UGR
-pilot first, then automatically expands with eight RAM-gated 4D readers. This
-does no new ICA, fMRIPrep, FEAT prestats or voxelwise model fitting. It performs
-2940 small network-level GLS fits (490 runs x 6 map bases), using existing
-complete inputs. Partial fits are preserved and never silently overwritten.
+Detached automatically. Tests one Trust, one standard-TR UGR and the corrected-
+TR UGR run, then expands to all 490 accepted runs using eight RAM-gated readers.
+The computation is now just spatial regression plus small OLS fits, with no
+external statistical subprocess per component or run. Pilot/final/failure
+records publish to GitHub. This makes new task outputs and retains all existing
+ICA and background-connectivity work. An older GLS-policy record cannot be
+resumed under this new estimator; start a fresh task record instead.
 
 ```bash
 python code/insula_ica/status_network_timecourses.py --brief
-# For a failed/interrupted record, retain completed runs and retry failed ones:
+# Resume only a record with the current standardized-OLS policy:
 python code/insula_ica/run_network_timecourse_analysis.py \
   --resume-record /absolute/path/to/linux2-network-timecourses-RECORD \
   --retry-failed --jobs 8 --publish
 ```
 
-Linux2 Python is `/ZPOOL/data/tools/anaconda/tug87422/envs/tedana-26.0.3/bin/python`.
-Small group/participant/run result tables, plots and provenance publish under
-`records/linux2-network-timecourses-*`. Extracted timecourses and model outputs
-stay under a separate ignored `derivatives/insula_ica/network-timecourses-*`
-root. The launcher removes the specifically withdrawn ignored exploration task
-outputs and strips their estimates from completion markers, while retaining all
-FEAT maps, ICA fits, connectivity maps and 4D data. Git pull removes the tracked
-withdrawn artifacts. The cleanup log is retained under ignored `output/`.
+Linux2 Python: `/ZPOOL/data/tools/anaconda/tug87422/envs/tedana-26.0.3/bin/python`.
+Small tables, eight task plots and provenance publish under
+`records/linux2-network-timecourses-*`. Raw timecourses, standardized matrices
+and full fitted coefficients remain in the separate ignored
+`derivatives/insula_ica/network-timecourses-*` root. Failed partial outputs are
+preserved rather than overwritten. Completed OLS runs can be resumed without
+re-extraction if all frozen input/output identities still match.
 
-## Validation completed locally
+## Validation
 
-Six replacement tests passed: safe withdrawal cleanup preserving source FEAT and
-connectivity maps; task-signal recovery with correlated nuisance; actual
-condition-contrast construction and EV-order validation; participant/run
-aggregation and all 60 primary tests; real-FSL GLS estimation of five independent
-component timecourses against a single-timecourse reference; and a real-FSL
-three-run 4D pilot/resume exercising all six map bases without source task maps.
-A separate real-FSL stage-1 check matched `fsl_glm --demean` (pooled r > 0.9999999999; maximum absolute float32 difference 0.000033).
-Five background-connectivity tests and nine retained inventory/numerical tests
-also passed. Shell syntax and whitespace checks passed. The bar-plot layout was
-rendered with synthetic values in temporary storage only. No synthetic results
-are published as participant findings. Linux2 RF1 pilot/final results remain
-pending.
+Six targeted tests passed: safe withdrawal cleanup; spatial extraction with
+correlated task/nuisance signal; all five bar weights and EV ordering; actual
+columnwise standardization and joint OLS versus an independent least-squares
+solution, including constant columns; run-before-participant aggregation and
+all 150 planned bar values; and a three-run 4D pilot/resume that proves the exact
+FEAT input is used despite a deliberately different `filtered_func_data`.
+Linux2 participant results and real-data bars are pending execution.

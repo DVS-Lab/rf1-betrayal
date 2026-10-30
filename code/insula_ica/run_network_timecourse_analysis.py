@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage-1 network timecourses from task-preserved BOLD, then joint temporal GLS.
+"""Stage-1 network timecourses from task-preserved BOLD, then standardized joint OLS.
 
 Reuses completed ICA maps. Never reads an existing voxelwise task COPE, fits an
 ICA, reruns FEAT preprocessing, or uses task-regressed residuals as task data.
@@ -11,8 +11,6 @@ import fcntl
 import json
 import os
 from pathlib import Path
-import shutil
-import subprocess
 import threading
 import traceback
 import uuid
@@ -30,7 +28,9 @@ from run_bold_controls import save, publish
 
 ROOT = g.core.ROOT
 RECORDS = ROOT/'code/insula_ica/records'
-POLICY = 'network-timecourse-joint-GLS-v1'
+POLICY = 'FEAT-input-network-timecourse-zscored-OLS-v2'
+BAR_LABELS = ('ugr_nonsocial', 'ugr_social', 'trust_C_rec_minus_def', 'trust_F_rec_minus_def', 'trust_S_rec_minus_def')
+BAR_TITLES = ('UGR nonsocial', 'UGR social', 'Trust C: rec - def', 'Trust F: rec - def', 'Trust S: rec - def')
 
 
 def vest(path, matrix):
@@ -42,9 +42,9 @@ def vest(path, matrix):
 
 
 def contrasts_for(row, settings, design, saved_contrasts):
-    """Primary stored contrast plus real condition estimates, never inferred means."""
+    """Weights apply AFTER z-scoring and OLS, as requested for the five bars."""
     ntask = int(settings['fmri(evs_real)'])
-    c = saved_contrasts[int(row['contrast_index'])-1].copy()
+    c = saved_contrasts[int(row['contrast_index'])-1]
     g.core.require(len(c) == design.shape[1] and not np.any(c[ntask:]),
                    'Task contrast unexpectedly includes nuisance columns')
     if row['task'] == 'trust':
@@ -52,19 +52,22 @@ def contrasts_for(row, settings, design, saved_contrasts):
         g.core.require(np.array_equal(c[:9], expected) and not np.any(c[9:]), 'Unexpected Trust contrast')
         for k, title in enumerate(('C_def', 'C_rec', 'F_def', 'F_rec', 'S_def', 'S_rec'), 4):
             g.core.require(settings[f'fmri(evtitle{k})'] == title, 'Trust EV order changed')
-        betrayal = np.zeros_like(c); betrayal[[3, 5, 7]] = 1/3
-        reciprocity = np.zeros_like(c); reciprocity[[4, 6, 8]] = 1/3
-        # Keep the original sum contrast's units. Condition bars average C/F/S;
-        # their difference is exactly one third of the primary sum contrast.
-        cs = np.stack([-c, betrayal, reciprocity])
-        labels = ['betrayal_minus_reciprocity_sum', 'betrayal_mean_CFS', 'reciprocity_mean_CFS']
+        cs = np.zeros((3, design.shape[1]))
+        for k, (negative, positive) in enumerate(((3, 4), (5, 6), (7, 8))):
+            cs[k, negative] = -1; cs[k, positive] = 1
+        labels = list(BAR_LABELS[2:])
     else:
+        titles = ('nonsocial_high_constant', 'nonsocial_high_pmod', 'nonsocial_low_constant',
+                  'nonsocial_low_pmod', 'social_high_constant', 'social_high_pmod',
+                  'social_low_constant', 'social_low_pmod')
+        for k, title in enumerate(titles, 1):
+            g.core.require(settings[f'fmri(evtitle{k})'] == title, 'UGR EV order changed')
         expected = np.array([0, 1, 0, 1, 0, 1, 0, 1, 0])
         g.core.require(np.array_equal(c[:9], expected) and not np.any(c[9:]), 'Unexpected UGR contrast')
-        cs = c[None, :]; labels = ['offer_pmod_as_stored']
-    centered = design-design.mean(axis=0)
-    g.core.require(np.allclose(cs @ np.linalg.pinv(centered) @ centered, cs, atol=1e-6, rtol=1e-6),
-                   'Requested network contrast is not estimable in this run')
+        cs = np.zeros((6, design.shape[1]))
+        cs[0, [1, 3]] = .5; cs[1, [5, 7]] = .5
+        for k, index in enumerate((1, 3, 5, 7), 2): cs[k, index] = 1
+        labels = list(BAR_LABELS[:2])+[titles[i] for i in (1, 3, 5, 7)]
     return cs, labels
 
 
@@ -79,33 +82,52 @@ def task_timecourses(projector, bold):
     return tc
 
 
-def fit_timecourses(tc, design, contrasts, folder, tr, film):
-    """Each component has its own FILM autocorrelation estimate, with no smoothing."""
+def zscore_columns(values, allow_constant=False):
+    values = np.asarray(values, dtype=float)
+    g.core.require(values.ndim == 2 and len(values) > 2 and np.isfinite(values).all(), 'Invalid data/model matrix')
+    means = values.mean(axis=0); centered = values-means
+    sd = centered.std(axis=0, ddof=1)
+    active = sd > 1e-12*np.maximum(1., np.max(np.abs(values), axis=0))
+    g.core.require(allow_constant or active.all(), 'A network timecourse is constant')
+    z = np.zeros_like(centered); z[:, active] = centered[:, active]/sd[active]
+    return z, means, sd, active
+
+
+def fit_timecourses(tc, design, contrasts, folder):
+    """Z-score each response and every task/confound column; one simultaneous OLS."""
     folder.mkdir()
-    centered = design-design.mean(axis=0)
-    vest(folder/'design.mat', centered); vest(folder/'design.con', contrasts)
+    zy, ymean, ysd, _ = zscore_columns(tc)
+    zx, xmean, xsd, active = zscore_columns(design, allow_constant=True)
+    inverse = np.linalg.pinv(zx, rcond=1e-10)
+    singular = np.linalg.svd(zx, compute_uv=False)
+    g.core.require(np.allclose(contrasts@inverse@zx, contrasts, atol=1e-6, rtol=1e-6),
+                   'Requested standardized task contrast is not estimable')
+    beta = inverse@zy; estimates = contrasts@beta
+    g.core.require(np.isfinite(beta).all(), 'Nonfinite standardized OLS coefficients')
     np.savetxt(folder/'stage1_timecourses.tsv', tc, delimiter='\t', fmt='%.12g')
-    # Five independent artificial voxels carry five responses, not five
-    # predictors. Without --sa there is no spatial autocorrelation pooling.
-    image = nib.Nifti1Image(tc.T.reshape(5, 1, 1, len(tc)).astype('float32'), np.eye(4))
-    image.header.set_xyzt_units('mm', 'sec'); image.header.set_zooms((1, 1, 1, tr))
-    nib.save(image, folder/'network_timecourses.nii.gz')
-    argv = [str(film), '--in='+str(folder/'network_timecourses.nii.gz'),
-            '--rn='+str(folder/'stats'), '--pd='+str(folder/'design.mat'),
-            '--con='+str(folder/'design.con'), '--thr=-1000000000']
-    save(folder/'command.json', argv)
-    with (folder/'film.log').open('w') as stream:
-        subprocess.run(argv, stdout=stream, stderr=subprocess.STDOUT, check=True)
-    estimates = []; variances = []
-    for k in range(len(contrasts)):
-        estimates.append(nib.load(folder/f'stats/cope{k+1}.nii.gz').get_fdata().reshape(5))
-        variances.append(nib.load(folder/f'stats/varcope{k+1}.nii.gz').get_fdata().reshape(5))
-    estimates = np.stack(estimates); variances = np.stack(variances)
-    g.core.require(np.isfinite(estimates).all() and np.isfinite(variances).all() and (variances > 0).all(),
-                   'Invalid component-level GLS results')
-    # A direct temporal OLS fit is a diagnostic, not a projected voxelwise fit.
-    ols = contrasts @ np.linalg.pinv(centered) @ tc
-    return estimates, variances, ols
+    np.save(folder/'standardized_timecourses.npy', zy)
+    np.save(folder/'standardized_design.npy', zx)
+    np.save(folder/'standardized_betas.npy', beta)
+    save(folder/'standardization.json', dict(method='columnwise sample SD, ddof=1, within run',
+        response_mean=ymean.tolist(), response_SD=ysd.tolist(),
+        design_mean=xmean.tolist(), design_SD=xsd.tolist(),
+        constant_design_columns_zeroed=np.flatnonzero(~active).tolist(),
+        rank=int(np.count_nonzero(singular > singular[0]*1e-10)), columns=design.shape[1],
+        pseudoinverse_relative_cutoff=1e-10,
+        estimator='pinv(Z(full saved L1 task+nuisance design)) @ Z(stage1 timecourses)',
+        temporal_filter=False, nuisance_removed_before_fit=False, whitening=False))
+    return estimates, beta
+
+
+def feat_input(row, settings, reference):
+    """Exact 4D FEAT input from active design.fsf, not filtered data or residuals."""
+    path = Path(settings['feat_files(1)'])
+    g.core.require(path.is_absolute() and path.is_file(), 'Missing saved 4D input to FEAT: '+str(path))
+    image = nib.load(path)
+    g.core.require(g.core.same_grid(image, reference) and image.shape == (*reference.shape, row['nvol']),
+                   'Original FEAT input grid/time count differs from saved model')
+    g.core.require(np.isclose(image.header.get_zooms()[3], row['tr'], atol=1e-5), 'Original FEAT input TR differs')
+    return path
 
 
 def summarize(rows, subjects):
@@ -123,36 +145,40 @@ def summarize(rows, subjects):
         values = np.array(values); n = len(values); se = float(stats.sem(values)); mean = float(values.mean())
         g.core.require(n == 132 and se > 0 and np.isfinite(values).all(), 'Incomplete or nonvarying group results')
         delta = float(stats.t.ppf(.975, n-1)*se)
-        primary = key[-1] in ('betrayal_minus_reciprocity_sum', 'offer_pmod_as_stored')
-        p = float(2*stats.t.sf(abs(mean/se), n-1))
         group.append(dict(zip(fields, key), n=n, effect=mean, se=se, ci_low=mean-delta, ci_high=mean+delta,
-                          primary=primary, p=p if primary else '',
-                          p_bonferroni_60=min(1., p*60) if primary else '',
-                          note='Direct component-timecourse GLS; condition CIs descriptive; same-cohort exploratory ICA.'))
-    g.core.require(sum(r['primary'] for r in group) == 60, 'All 60 primary tests required')
+                          plotted=key[-1] in BAR_LABELS,
+                          note='Standardized joint OLS; pointwise participant CI; exploratory task review.'))
+    g.core.require(sum(r['plotted'] for r in group) == 150, 'All 150 planned bar estimates required')
     return participant, group
 
 
 def figures(group, folder):
+    """Exactly five bars per subregion; two UGR averages and three Trust contrasts."""
+    colors = ('#68a9cf', '#186da2', '#e6a658', '#bf7340', '#88532e')
+    def draw(ax, values, components):
+        for j, (label, title, color) in enumerate(zip(BAR_LABELS, BAR_TITLES, colors)):
+            rr = [next(r for r in values if r['component'] == k and r['contrast'] == label) for k in components]
+            y = np.array([r['effect'] for r in rr]); lo = np.array([r['ci_low'] for r in rr]); hi = np.array([r['ci_high'] for r in rr])
+            ax.bar(np.arange(len(components))+(j-2)*.155, y, width=.145, color=color, label=title,
+                   yerr=[y-lo, hi-y], capsize=2)
+        ax.axhline(0, color='.4', lw=1)
+        ax.set(xticks=range(len(components)), xticklabels=['IC'+str(k) for k in components],
+               ylabel='Standardized coefficient / contrast', xlabel='Insula component')
+        ax.spines[['top', 'right']].set_visible(False)
     for mode in g.inputs.MODES:
-        fig, axes = plt.subplots(3, 2, figsize=(12, 10))
-        for i, roi in enumerate(g.core.ROIS):
-            ax = axes[i, 0]
-            for label, shift, color in [('betrayal_mean_CFS', -.18, '#d87535'), ('reciprocity_mean_CFS', .18, '#367bad')]:
-                rr = sorted((r for r in group if (r['mode'], r['roi'], r['contrast']) == (mode, roi, label)), key=lambda r:r['component'])
-                y = np.array([r['effect'] for r in rr]); lo = np.array([r['ci_low'] for r in rr]); hi = np.array([r['ci_high'] for r in rr])
-                ax.bar(np.arange(1, 6)+shift, y, width=.34, color=color, label=label.split('_')[0].capitalize(),
-                       yerr=[y-lo, hi-y], capsize=3)
-            ax.axhline(0, color='.4', lw=1); ax.set(title=roi+' | Trust conditions (C/F/S mean)', xticks=range(1, 6), ylabel='Network timecourse / task-EV unit')
-            ax.legend(frameon=False, fontsize=8)
-            rr = sorted((r for r in group if (r['mode'], r['roi'], r['contrast']) == (mode, roi, 'betrayal_minus_reciprocity_sum')), key=lambda r:r['component'])
-            ax = axes[i, 1]; y = np.array([r['effect'] for r in rr]); lo = np.array([r['ci_low'] for r in rr]); hi = np.array([r['ci_high'] for r in rr])
-            ax.bar(range(1, 6), y, color='#6b658d', yerr=[y-lo, hi-y], capsize=3)
-            ax.axhline(0, color='.4', lw=1); ax.set(title=roi+' | Betrayal - reciprocity (C/F/S sum)', xticks=range(1, 6), ylabel='Direct temporal GLS contrast')
-            for r in rr:
-                if r['p_bonferroni_60'] < .05: ax.annotate('*', (r['component'], r['ci_high']), xytext=(0, 4), textcoords='offset points', ha='center')
-        fig.suptitle(f'{mode} ICA basis | Task-preserved BOLD -> stage-1 timecourses -> joint task+nuisance GLS\nN=132; 95% pointwise participant CIs; * Bonferroni across all 60 primary tests', fontsize=11)
-        fig.tight_layout(rect=(0, 0, 1, .94)); fig.savefig(folder/f'{mode}_trust_bars.png', dpi=160); plt.close(fig)
+        for roi in g.core.ROIS:
+            values = [r for r in group if r['mode'] == mode and r['roi'] == roi]
+            fig, ax = plt.subplots(figsize=(13, 5.4)); draw(ax, values, range(1, 6))
+            ax.set_title(f'{mode} ICA basis | {roi} insula | standardized joint OLS', pad=16)
+            ax.legend(ncol=3, loc='upper center', bbox_to_anchor=(.5, -.17), frameon=False, fontsize=9)
+            fig.text(.5, .015, 'N=132; equal run means within participant; 95% pointwise participant CIs. UGR: high/low averaged. Trust: reciprocate minus defect.', ha='center', fontsize=8)
+            fig.tight_layout(rect=(0, .07, 1, 1)); fig.savefig(folder/f'{mode}_{roi}_five_task_bars.png', dpi=160); plt.close(fig)
+            if roi == 'bilateral':
+                fig, ax = plt.subplots(figsize=(9.5, 5.4)); draw(ax, values, (3, 4))
+                ax.set_title(f'{mode} | bilateral IC3 and IC4 | standardized joint OLS')
+                ax.legend(ncol=2, loc='upper center', bbox_to_anchor=(.5, -.17), frameon=False, fontsize=9)
+                fig.text(.5, .015, 'N=132; 95% pointwise participant CIs; no connectivity inference or between-task difference test.', ha='center', fontsize=8)
+                fig.tight_layout(rect=(0, .07, 1, 1)); fig.savefig(folder/f'{mode}_bilateral_IC3_IC4_five_task_bars.png', dpi=160); plt.close(fig)
 
 
 def run(args, record, output, state):
@@ -169,9 +195,8 @@ def run(args, record, output, state):
             primary[mode, roi] = dict(mask=mask, weights=exploration.weights(image.get_fdata()[mask]))
             identities[f'{mode}/{roi}'] = dict(map=g.core.identity(path), mask=g.core.identity(root/'masks'/(roi+'.nii.gz')))
     save(record/'map-provenance.json', identities); save(record/'accepted-inputs.json', rows)
-    film = Path(os.environ.get('FSLDIR', '/usr/local/fsl'))/'bin/film_gls'
-    g.core.require(film.is_file(), 'FSL film_gls is required')
-    software = dict(film=g.core.identity(film), fsl=(film.parents[1]/'etc/fslversion').read_text().strip())
+    software = dict(python=__import__('sys').version, numpy=np.__version__,
+                    scipy=__import__('scipy').__version__, nibabel=nib.__version__)
     save(record/'software.json', software)
     shared = dict(policy=POLICY, maps=identities, software=software)
     gate = g.inputs.MemoryGate(); lock = threading.Lock()
@@ -182,11 +207,12 @@ def run(args, record, output, state):
             design, inputs = g.inputs.inspect_source(row, reference)
             settings = g.core.fsl_settings(Path(row['active_feat'])/'design.fsf')
             g.core.require(settings['fmri(temphp_yn)'] == '0' and settings['fmri(ndelete)'] == '0', 'Unexpected filtering/deletion')
+            bold_path = feat_input(row, settings, reference)
             cs, labels = contrasts_for(row, settings, design, g.core.fsl_matrix(Path(row['active_feat'])/'design.con'))
             # Existing residuals/PEs need not participate in the task estimator;
             # retain only data, model, nuisance and QC provenance in its signature.
             selected = [v for v in inputs if Path(v['path']).name in ('filtered_func_data.nii.gz', 'design.mat', 'design.con', 'confoundevs.txt', 'mask.nii.gz') or v['path'] == str(Path(row['confounds']).resolve())]
-            signature = dict(shared, inputs=selected, fsf=g.core.identity(Path(row['active_feat'])/'design.fsf'), tr=row['tr'])
+            signature = dict(shared, inputs=selected, fsf=g.core.identity(Path(row['active_feat'])/'design.fsf'), tr=row['tr'], FEAT_input=g.core.identity(bold_path, False))
             if marker.is_file():
                 old = json.loads(marker.read_text())
                 g.core.require(old['signature'] == signature and all(g.core.identity(v['path']) == v for v in old['outputs']), 'Completed timecourse analysis changed')
@@ -195,27 +221,28 @@ def run(args, record, output, state):
                 g.core.require(not folder.exists(), 'Partial timecourse fit exists; preserve it and use --retry-failed')
                 folder.mkdir(); result = []
                 with gate.reserve(4):
-                    data = np.asarray(nib.load(row['filtered_data']).dataobj, dtype='float32')
+                    data = np.asarray(nib.load(bold_path).dataobj, dtype='float32')
                     g.core.require(data.shape == (*reference.shape, row['nvol']), 'Task-preserved 4D dimensions changed')
                     for (mode, roi), current in primary.items():
                         tc = task_timecourses(current['weights'], data[current['mask']])
-                        estimates, variances, ols = fit_timecourses(tc, design, cs, folder/f'{mode}_{roi}', row['tr'], film)
+                        estimates, _ = fit_timecourses(tc, design, cs, folder/f'{mode}_{roi}')
                         for j, label in enumerate(labels):
                             for k in range(5):
                                 result.append(dict(mode=mode, roi=roi, subject=row['subject'], task=row['task'], run=row['run'],
-                                    component=k+1, contrast=label, effect=float(estimates[j, k]), variance=float(variances[j, k]),
-                                    direct_temporal_OLS_diagnostic=float(ols[j, k])))
+                                    component=k+1, contrast=label, effect=float(estimates[j, k]),
+                                    plotted=label in BAR_LABELS, source_FEAT_input=str(bold_path)))
                     del data
+                g.core.require(g.core.identity(bold_path, False) == signature['FEAT_input'], 'FEAT input changed during fit')
                 g.core.require(all(g.core.identity(v['path'], v['sha256'] is not None) == v for v in selected), 'Task inputs changed during fit')
                 outputs = [g.core.identity(p) for p in folder.rglob('*') if p.is_file()]
                 save(marker, dict(signature=signature, result=result, outputs=outputs))
-            status = dict(state='complete', network_GLS_fits=6)
+            status = dict(state='complete', network_OLS_fits=6)
         except Exception as exc:
             status = dict(state='failed', error=str(exc)); result = None
             (record/'errors'/(key+'.txt')).write_text(traceback.format_exc())
         with lock:
             state['runs'][key] = status; save(record/'state.json', state)
-            print(f'Network temporal GLS {len(state["runs"])}/490 | {key}: {status["state"]}', flush=True)
+            print(f'Network standardized OLS {len(state["runs"])}/490 | {key}: {status["state"]}', flush=True)
         return result
 
     pilots = [rows[0], next(r for r in rows if r['task'] == 'ugr' and not np.isclose(r['tr'], 1.710)),
@@ -224,20 +251,26 @@ def run(args, record, output, state):
     results = [worker(r) for r in pilots]
     g.core.require(all(r is not None for r in results), 'Pilot failed; no cohort expansion')
     state.update(state='network_timecourse_pilot_passed', pilot_passed=True); save(record/'state.json', state)
-    if args.publish: publish(record, 'Publish direct network timecourse GLS pilot and frozen methods')
+    if args.publish: publish(record, 'Publish direct standardized OLS task pilot and frozen methods')
     if args.pilot_only: return
     remaining = [r for r in rows if r not in pilots]
-    state['state'] = 'running_all_network_timecourse_GLS'; save(record/'state.json', state)
+    state['state'] = 'running_all_standardized_network_OLS'; save(record/'state.json', state)
     with ThreadPoolExecutor(max_workers=args.jobs) as pool:
         results.extend(f.result() for f in as_completed([pool.submit(worker, r) for r in remaining]))
-    g.core.require(all(r is not None for r in results), 'Some temporal GLS fits failed; no incomplete-cohort results summarized')
+    g.core.require(all(r is not None for r in results), 'Some standardized OLS fits failed; no incomplete-cohort results summarized')
     effects = [r for rr in results for r in rr]
     participants, group = summarize(effects, sorted({r['subject'] for r in rows}))
     g.core.write_table(record/'run_network_task_effects.tsv', effects)
     g.core.write_table(record/'participant_network_task_effects.tsv', participants)
     g.core.write_table(record/'group_network_task_effects.tsv', group)
     figures(group, record/'figures')
-    state.update(state='network_timecourse_GLS_complete_review_pending', primary_tests=60)
+    save(record/'bar-layout.json', dict(labels=BAR_LABELS, titles=BAR_TITLES,
+        standardization='Within-run columnwise z-scores (ddof=1) for every task/confound column and each component response',
+        estimator='simultaneous OLS; no whitening; no prior task/nuisance removal',
+        input='Exact 4D feat_files(1) from active saved design.fsf, restricted to the ICA ROI before spatial regression',
+        group='Equal run means within each participant/task; N=132; pointwise 95% CIs',
+        inference='Descriptive priority review; no randomise or multiple-testing significance labels.'))
+    state.update(state='standardized_task_bars_complete_review_pending', bar_estimates=150)
     save(record/'state.json', state)
 
 
@@ -272,9 +305,9 @@ def main():
         for name in ('errors', 'figures'): (record/name).mkdir(exist_ok=True)
         save(record/'state.json', state)
         (record/'README.md').write_text('Network task analysis uses stage-1 spatial-regression timecourses from task-preserved, '
-            'unsmoothed filtered BOLD, then direct component-level FILM GLS with the complete saved task+nuisance design. '
-            'Both map bases use unwhitened task-preserved BOLD here. No old task maps enter the estimator. '
-            'No new ICA, fMRIPrep, FEAT preprocessing, nuisance filtering or PPI is run. '
+            '4D input to FEAT, then joint OLS with z-scored responses and every column of the complete saved task+nuisance design. '
+            'Five bars per component: UGR nonsocial/social pmods averaged over high/low; Trust C/F/S reciprocate minus defect. '
+            'No connectivity, randomise, ICA, fMRIPrep, FEAT preprocessing, FILM, nuisance filtering or PPI is run. '
             'See ../2026-10-29-network-timecourse-methods/README.md for methods.\n')
         try:
             run(args, record, output, state)
@@ -286,7 +319,7 @@ def main():
             except Exception as exc:
                 (record/'publication-error.txt').write_text(str(exc)); print('Git publication failed:', exc, flush=True)
         print('Final state:', state['state'], '| record:', record, flush=True)
-        raise SystemExit(0 if state['state'] in ('network_timecourse_pilot_passed', 'network_timecourse_GLS_complete_review_pending') else 1)
+        raise SystemExit(0 if state['state'] in ('network_timecourse_pilot_passed', 'standardized_task_bars_complete_review_pending') else 1)
 
 
 if __name__ == '__main__': main()

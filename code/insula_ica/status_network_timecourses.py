@@ -15,8 +15,9 @@ def main():
     print('Runner:', 'unknown' if rows is None else ', '.join(f'PID {r["pid"]}, elapsed {r["elapsed"]}' for r in runners) if runners else 'not running')
     print('State:', state['state'], '| pilot passed:', state['pilot_passed'])
     print('Runs complete:', sum(v['state'] == 'complete' for v in state['runs'].values()), '/ 490')
-    print('Network temporal GLS fits:', sum(v.get('network_GLS_fits', 0) for v in state['runs'].values()), '/ 2940')
-    print('Group task tests:', state.get('primary_tests', 0), '/ 60')
+    print('Standardized OLS fits:', sum(v.get('network_OLS_fits', 0) for v in state['runs'].values()), '/ 2940')
+    print('Group bar estimates:', state.get('bar_estimates', 0), '/ 150')
+    print('Task-bar figures:', len(list((record/'figures').glob('*five_task_bars.png'))), '/ 8')
     errors = [k+': '+v['error'] for k, v in state['runs'].items() if v['state'] == 'failed']
     if state.get('error'): errors.append(state['error'])
     errors.extend('Git publication: '+p.read_text() for p in record.glob('*publication-error.txt'))

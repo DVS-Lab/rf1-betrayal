@@ -1,4 +1,4 @@
-"""Checks for the replacement's data direction, confounds, contrasts and GLS."""
+"""Checks for the replacement's data direction, standardization, OLS and the five requested bars."""
 import os
 import json
 from types import SimpleNamespace
@@ -49,61 +49,63 @@ class NetworkTimecourseTests(unittest.TestCase):
         residual = recovered-x@np.linalg.pinv(x)@recovered
         self.assertLess(np.linalg.norm(residual), 1e-9)
 
-    def test_condition_means_are_fitted_contrasts_not_fabricated_from_difference(self):
+    def test_bar_contrasts_match_saved_EV_order_and_average_after_standardization(self):
         rng = np.random.default_rng(1); design = rng.normal(size=(150, 13)); settings = {'fmri(evs_real)': '10'}
         for i, title in enumerate(('C_def', 'C_rec', 'F_def', 'F_rec', 'S_def', 'S_rec'), 4): settings[f'fmri(evtitle{i})'] = title
         saved = np.zeros((18, 13)); saved[9, :9] = [0, 0, 0, -1, 1, -1, 1, -1, 1]
         cs, labels = n.contrasts_for(dict(task='trust', contrast_index=10), settings, design, saved)
-        np.testing.assert_allclose(cs[0], 3*(cs[1]-cs[2]))
-        self.assertEqual(labels[1], 'betrayal_mean_CFS')
+        self.assertEqual(labels, list(n.BAR_LABELS[2:]))
+        np.testing.assert_allclose(cs.sum(0), saved[9])
+        beta = np.arange(13); np.testing.assert_allclose(cs@beta, [1, 1, 1])
         settings['fmri(evtitle4)'] = 'wrong'
         with self.assertRaisesRegex(ValueError, 'EV order'): n.contrasts_for(dict(task='trust', contrast_index=10), settings, design, saved)
+        titles = ('nonsocial_high_constant', 'nonsocial_high_pmod', 'nonsocial_low_constant', 'nonsocial_low_pmod',
+                  'social_high_constant', 'social_high_pmod', 'social_low_constant', 'social_low_pmod')
+        for i, title in enumerate(titles, 1): settings[f'fmri(evtitle{i})'] = title
+        saved[10, :9] = [0, 1, 0, 1, 0, 1, 0, 1, 0]
+        cs, labels = n.contrasts_for(dict(task='ugr', contrast_index=11), settings, design, saved)
+        self.assertEqual(labels[:2], list(n.BAR_LABELS[:2])); np.testing.assert_allclose(cs@beta, [2, 6, 1, 3, 5, 7])
 
-    def test_group_uses_participants_and_all_primary_tests(self):
+    def test_standardizes_all_model_columns_and_response_before_joint_OLS(self):
+        rng = np.random.default_rng(5); t = 170
+        x = rng.normal(size=(t, 7))*np.arange(1, 8)+np.arange(7)*10
+        x[:, 6] = 25; x[:, 5] = 0
+        tc = rng.normal(size=(t, 5))+x[:, :2]@rng.normal(size=(2, 5))
+        cs = np.eye(7)[:3]
+        with tempfile.TemporaryDirectory() as d:
+            folder = Path(d)/'fit'; effects, beta = n.fit_timecourses(tc, x, cs, folder)
+            zx = np.zeros_like(x); zx[:, :5] = (x[:, :5]-x[:, :5].mean(0))/x[:, :5].std(0, ddof=1)
+            zy = (tc-tc.mean(0))/tc.std(0, ddof=1)
+            expected = np.linalg.lstsq(zx, zy, rcond=1e-10)[0]
+            np.testing.assert_allclose(beta, expected, atol=1e-12)
+            np.testing.assert_allclose(effects, cs@expected, atol=1e-12)
+            np.testing.assert_allclose(np.load(folder/'standardized_design.npy')[:, :5].std(0, ddof=1), 1)
+            np.testing.assert_allclose(np.load(folder/'standardized_timecourses.npy').std(0, ddof=1), 1)
+            self.assertEqual(json.loads((folder/'standardization.json').read_text())['constant_design_columns_zeroed'], [5, 6])
+            bad = np.eye(7)[6:]
+            with self.assertRaisesRegex(ValueError, 'not estimable'): n.fit_timecourses(tc, x, bad, Path(d)/'bad')
+
+    def test_group_uses_participants_and_exactly_five_bars_per_component(self):
         rng = np.random.default_rng(20); rows = []
         subjects = [str(k) for k in range(132)]
         for mode in n.g.inputs.MODES:
             for roi in n.g.core.ROIS:
-                for task, contrast in [('trust', 'betrayal_minus_reciprocity_sum'), ('ugr', 'offer_pmod_as_stored')]:
+                for label in n.BAR_LABELS:
+                    task = 'ugr' if label.startswith('ugr') else 'trust'
                     for k in range(1, 6):
                         for j, subject in enumerate(subjects):
                             value = rng.normal()
                             for run, delta in ([(1, 0)] if j%2 else [(1, -2), (2, 2)]):
-                                rows.append(dict(mode=mode, roi=roi, task=task, contrast=contrast, component=k,
+                                rows.append(dict(mode=mode, roi=roi, task=task, contrast=label, component=k,
                                                  subject=subject, run=run, effect=value+delta))
         participant, group = n.summarize(rows, subjects)
-        self.assertEqual(len(group), 60); self.assertEqual(len(participant), 60*132)
-        for r in group: self.assertAlmostEqual(r['p_bonferroni_60'], min(1, 60*r['p']))
+        self.assertEqual(len(group), 150); self.assertEqual(len(participant), 150*132)
+        self.assertTrue(all(r['plotted'] for r in group))
+        first = group[0]; estimates = [r['effect'] for r in participant if all(r[f] == first[f] for f in ('mode', 'roi', 'task', 'component', 'contrast'))]
+        self.assertAlmostEqual(first['effect'], np.mean(estimates))
         with self.assertRaisesRegex(ValueError, 'Missing participant'): n.summarize(rows[:-2], subjects)
 
-    def test_real_film_estimates_each_network_separately_without_spatial_smoothing(self):
-        film = Path(os.environ.get('FSLDIR', '/Users/tug87422/fsl'))/'bin/film_gls'
-        if not film.is_file(): self.skipTest('FSL is not installed')
-        rng = np.random.default_rng(5); t = 170
-        x = rng.normal(size=(t, 4)); x -= x.mean(0)
-        noise = rng.normal(size=(t, 5))
-        for i in range(1, t): noise[i] += .55*noise[i-1]
-        tc = x@rng.normal(size=(4, 5))+noise; tc -= tc.mean(0)
-        contrasts = np.eye(4)[:2]
-        with tempfile.TemporaryDirectory() as d:
-            root = Path(d)
-            effect, variance, ols = n.fit_timecourses(tc, x, contrasts, root/'all', 1.710, film)
-            self.assertEqual(effect.shape, (2, 5)); self.assertTrue((variance > 0).all())
-            np.testing.assert_allclose(ols, contrasts@np.linalg.pinv(x)@tc)
-            # Independent single-network reference: no cross-network AC pooling.
-            from subprocess import run
-            folder = root/'single'; folder.mkdir()
-            image = nib.Nifti1Image(tc[:, 2].reshape(1, 1, 1, t).astype('float32'), np.eye(4)); nib.save(image, folder/'tc.nii.gz')
-            result = run([str(film), '--in='+str(folder/'tc.nii.gz'), '--rn='+str(folder/'stats'),
-                          '--pd='+str(root/'all/design.mat'), '--con='+str(root/'all/design.con'), '--thr=-1000000000'], capture_output=True)
-            self.assertEqual(result.returncode, 0, result.stderr)
-            for k in range(2): self.assertAlmostEqual(effect[k, 2], nib.load(folder/f'stats/cope{k+1}.nii.gz').get_fdata().item(), places=5)
-            command = (root/'all/command.json').read_text()
-            self.assertNotIn('--sa', command); self.assertNotIn('--noest', command)
-
     def test_three_run_pilot_reads_4d_and_resumes_without_any_source_task_map(self):
-        film = Path(os.environ.get('FSLDIR', '/Users/tug87422/fsl'))/'bin/film_gls'
-        if not film.is_file(): self.skipTest('FSL is not installed')
         rng = np.random.default_rng(8); shape = (6, 6, 6); t = 150
         with tempfile.TemporaryDirectory() as d:
             root = Path(d); source = root/'source'; (source/'masks').mkdir(parents=True)
@@ -124,11 +126,16 @@ class NetworkTimecourseTests(unittest.TestCase):
                 n.vest(feat/'design.mat', design)
                 con = np.zeros((18, 13)); con[9 if task == 'trust' else 10, :9] = ([0, 0, 0, -1, 1, -1, 1, -1, 1] if task == 'trust' else [0, 1, 0, 1, 0, 1, 0, 1, 0])
                 n.vest(feat/'design.con', con)
-                settings = {'fmri(evs_real)': '10', 'fmri(temphp_yn)': '0', 'fmri(ndelete)': '0'}
+                settings = {'fmri(evs_real)': '10', 'fmri(temphp_yn)': '0', 'fmri(ndelete)': '0', 'feat_files(1)': str(feat/'input_to_FEAT.nii.gz')}
+                ugr_titles = ('nonsocial_high_constant', 'nonsocial_high_pmod', 'nonsocial_low_constant', 'nonsocial_low_pmod', 'social_high_constant', 'social_high_pmod', 'social_low_constant', 'social_low_pmod')
                 for i, title in enumerate(('C_def', 'C_rec', 'F_def', 'F_rec', 'S_def', 'S_rec'), 4): settings[f'fmri(evtitle{i})'] = title
+                if task == 'ugr':
+                    for i, title in enumerate(ugr_titles, 1): settings[f'fmri(evtitle{i})'] = title
                 (feat/'design.fsf').write_text('\n'.join(f'set {k} "{v}"' for k, v in settings.items()))
                 y = (1000+rng.normal(size=(*shape, t))).astype('float32')
-                image = nib.Nifti1Image(y, reference.affine); image.header.set_zooms((1, 1, 1, tr)); nib.save(image, feat/'filtered_func_data.nii.gz')
+                image = nib.Nifti1Image(y, reference.affine); image.header.set_zooms((1, 1, 1, tr)); nib.save(image, feat/'input_to_FEAT.nii.gz')
+                # A different processed series must not be used accidentally.
+                nib.save(nib.Nifti1Image(np.zeros_like(y), reference.affine), feat/'filtered_func_data.nii.gz')
                 (feat/'confoundevs.txt').write_text('synthetic source inspector is tested separately')
                 row = dict(key=f'run{j}', subject='synthetic', task=task, tr=tr, run=j+1, nvol=t,
                            active_feat=str(feat), filtered_data=str(feat/'filtered_func_data.nii.gz'),
@@ -140,9 +147,14 @@ class NetworkTimecourseTests(unittest.TestCase):
             args = SimpleNamespace(exploration_record=exploration_record, publish=False, pilot_only=True, jobs=1)
             state = dict(runs={})
             inspect = lambda row, ref: (designs[row['active_feat']], identities[row['active_feat']])
-            with patch.object(n.exploration, 'snapshot', return_value=(source, rows, completed)), patch.object(n.g.inputs, 'inspect_source', side_effect=inspect), patch.dict(os.environ, FSLDIR=str(film.parents[1])):
+            with patch.object(n.exploration, 'snapshot', return_value=(source, rows, completed)), patch.object(n.g.inputs, 'inspect_source', side_effect=inspect):
                 n.run(args, record, output, state)
                 self.assertTrue(state['pilot_passed']); self.assertEqual(len(state['runs']), 3)
+                mask = nib.load(source/'masks/bilateral.nii.gz').get_fdata() > 0
+                maps = nib.load(source/'joint_bold_bilateral.nii.gz').get_fdata()[mask]
+                data = nib.load(root/'feat0/input_to_FEAT.nii.gz').get_fdata()[mask]
+                expected = n.task_timecourses(n.exploration.weights(maps), data)
+                np.testing.assert_allclose(np.loadtxt(output/'run0/joint_bold_bilateral/stage1_timecourses.tsv'), expected, atol=1e-10)
                 path = output/'run0/joint_bold_bilateral/stage1_timecourses.tsv'; before = path.stat().st_mtime_ns
                 n.run(args, record, output, state)
                 self.assertEqual(path.stat().st_mtime_ns, before)

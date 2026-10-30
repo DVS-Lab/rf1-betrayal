@@ -23,13 +23,23 @@ bash code/insula_ica/start_network_timecourses.sh
 
 The detached launcher cleans the specifically withdrawn ignored outputs, runs a
 three-run pilot, then automatically expands to all 490 runs with eight RAM-gated
-4D readers. It reuses all six primary fixed ICA bases. Both basis families use
-unwhitened, task-preserved sm-0 `filtered_func_data` for this analysis. Full saved
-task and nuisance regressors, including the exact saved TEDANA confounds, enter
-one component-level temporal GLS model. Nothing is regressed out sequentially.
-Condition estimates and task contrasts are obtained from that direct model.
-No fMRIPrep, FEAT preprocessing, or ICA is repeated. Pilot/final/failure records
-publish to GitHub. Check with `status_network_timecourses.py --brief`.
+4D readers. It reuses all six primary fixed ICA bases. It reads the exact saved
+`feat_files(1)` input to FEAT and spatially regresses all maps together using
+only voxels inside their defining insula mask. No task/confound signal is removed
+before extracting the task timecourses. Z-score each response and every column
+of the complete L1 task+nuisance design within run, then fit one simultaneous
+OLS model. Constant design columns become zero and are documented. The exact
+saved TEDANA nuisance matrix and full task-design identities are verified first.
+
+Each subregion gets **five bars**: UGR nonsocial and social pmod betas averaged
+over high/low; Trust C, F and S reciprocate-minus-defect standardized beta
+contrasts. Keep the four individual UGR pmod betas in the output tables as well.
+Average runs within participant/task before group means and 95% pointwise CIs.
+No significance stars or `randomise` are run at this descriptive review stage.
+All left/right/bilateral components and both discovery bases are retained, with
+an additional bilateral IC3/IC4 close-up. No FILM, fMRIPrep, FEAT preprocessing,
+connectivity or ICA is launched. Pilot/final/failure records publish to GitHub.
+Check with `status_network_timecourses.py --brief`.
 
 The existing component anatomy and residual-to-residual dual-regression maps
 remain valid descriptive **background** connectivity results. Their already

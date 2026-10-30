@@ -18,23 +18,19 @@
   },
   "validation": {
     "replacement_tests_passed": 6,
-    "background_connectivity_tests_passed": 5,
-    "retained_inventory_numerical_tests_passed": 9,
-    "actual_FSL_version": "6.0.7.19",
+    "standardization": "Columnwise within-run sample SD for data and full model, ddof=1",
+    "OLS_reference": "Independent numpy.linalg.lstsq",
+    "zero_variance_design_columns": "Zeroed and logged",
     "synthetic_3_run_pilot_and_resume": true,
-    "source_task_maps_absent_in_pilot_test": true,
-    "linux2_RF1_results": "pending",
-    "stage1_FSL_glm_parity": {
-      "spatial_maps_and_4D_data": true,
-      "all_five_maps_with_spatial_intercept": true,
-      "max_absolute_difference": 3.2688052960749836e-05,
-      "pooled_correlation": 0.9999999999489125,
-      "note": "Large-baseline synthetic float32 NIfTI versus double-precision operator; FSL fsl_glm --demean."
-    }
+    "exact_FEAT_input_verified_against_different_filtered_data": true,
+    "group_bar_estimates": 150,
+    "plotted_values_per_component": 5,
+    "linux2_RF1_results": "pending"
   },
   "withdrawal": {
     "tracked_task_artifacts_deleted": 6,
     "ICA_and_background_connectivity_retained": true,
     "old_task_directions": "withdrawn"
-  }
+  },
+  "policy": "FEAT-input-network-timecourse-zscored-OLS-v2"
 }
