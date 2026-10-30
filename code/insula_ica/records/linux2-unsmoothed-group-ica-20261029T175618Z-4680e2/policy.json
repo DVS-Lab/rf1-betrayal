@@ -1,0 +1,55 @@
+{
+  "cohort_n": 132,
+  "runs": 490,
+  "trust_runs": 241,
+  "ugr_runs": 249,
+  "smoothing_mm": 0,
+  "residual_modes": [
+    "joint_bold",
+    "native_film"
+  ],
+  "rois": [
+    "left",
+    "right",
+    "bilateral"
+  ],
+  "dimensions": [
+    3,
+    5,
+    7,
+    0
+  ],
+  "native_MELODIC_variance_normalization": true,
+  "global_input_amplitude_multiplier": 1000,
+  "per_run_demean_SD_and_equal_run_energy": true,
+  "no_temporal_resampling": true,
+  "acquisition_TRs_preserved": true,
+  "common_TR_override": false,
+  "mixed_TR_frequency_report_interpretable": false,
+  "native_MELODIC_web_report": false,
+  "temporal_diagnostics": "Sample-lag ACF only; no common-Hz interpretation.",
+  "source_record": "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/records/linux2-sm-0-feat-20261029T125025Z-5ad843-TR-repair",
+  "corrected_run": "sub-10817_ses-01_task-ugr_run-1",
+  "new_regression": false,
+  "new_temporal_filter": false,
+  "new_FEAT": false,
+  "new_FILM": false,
+  "new_fmriprep": false,
+  "seeds": [
+    20261028,
+    20261029,
+    20261030,
+    20261031,
+    20261032
+  ],
+  "iterations_per_start": 10000,
+  "nonlinearity": "pow3",
+  "epsilon": 5e-05,
+  "prepare_slots": 64,
+  "fixed_ICA_slots": 18,
+  "auto_ICA_slots": 1,
+  "auto_memory_reservation_GiB": 32,
+  "fixed_threads": 4,
+  "automatic_threads": 8,
+  "automatic_PCA": "Classic full group PCA, serial automatic fits; no MIGP substitution."
+}

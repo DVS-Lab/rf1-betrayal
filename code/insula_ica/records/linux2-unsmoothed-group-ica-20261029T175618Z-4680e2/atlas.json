@@ -1,0 +1,29 @@
+{
+  "label": 2,
+  "counts": {
+    "left": {
+      "native_voxels": 1160,
+      "grid_voxels": 391
+    },
+    "right": {
+      "native_voxels": 1181,
+      "grid_voxels": 427
+    },
+    "bilateral": {
+      "native_voxels": 2341,
+      "grid_voxels": 818
+    }
+  },
+  "atlas": {
+    "path": "/usr/local/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr25-2mm.nii.gz",
+    "size": 27867,
+    "mtime_ns": 1623842684000000000,
+    "sha256": "7397ffdbae7559e0f0aa6237f998dc0f6aca3f9db9009f6ffa637c0c62b686ca"
+  },
+  "xml": {
+    "path": "/usr/local/fsl/data/atlases/HarvardOxford-Cortical.xml",
+    "size": 4335,
+    "mtime_ns": 1623842684000000000,
+    "sha256": "b8eb5ba5e787a4d3b442f75041f533f31b278a83e467bd2ab22438c1cff36581"
+  }
+}

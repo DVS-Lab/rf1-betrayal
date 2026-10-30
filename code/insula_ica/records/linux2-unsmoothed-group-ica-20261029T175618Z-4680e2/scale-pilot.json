@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "key": "sub-10369_ses-01_task-trust_run-1",
+      "scale": "voxelwise_prewhitened",
+      "sampled_voxels": 32,
+      "max_effective_design_projection": 1.0752846520489048e-08,
+      "max_unwhitened_design_projection": 0.03978567715494957,
+      "nvol": 280,
+      "voxels": 102451,
+      "unwhitened_joint_fit_vs_res4d_relative_error": 0.07542772592173229,
+      "max_whitened_decomposition_relative_error": 1.3325956104582745e-05,
+      "valid_mask": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/unsmoothed-group-ica-20261029T175618Z-4680e2/checks/valid_masks/sub-10369_ses-01_task-trust_run-1.nii.gz",
+      "zero_variance_voxels": 12755
+    },
+    {
+      "key": "sub-10369_ses-01_task-ugr_run-1",
+      "scale": "voxelwise_prewhitened",
+      "sampled_voxels": 32,
+      "max_effective_design_projection": 1.3154716872158732e-08,
+      "max_unwhitened_design_projection": 0.05504279642007209,
+      "nvol": 240,
+      "voxels": 102444,
+      "unwhitened_joint_fit_vs_res4d_relative_error": 0.0827141214237549,
+      "max_whitened_decomposition_relative_error": 2.5841627683468653e-06,
+      "valid_mask": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/unsmoothed-group-ica-20261029T175618Z-4680e2/checks/valid_masks/sub-10369_ses-01_task-ugr_run-1.nii.gz",
+      "zero_variance_voxels": 11912
+    },
+    {
+      "key": "sub-10817_ses-01_task-ugr_run-1",
+      "scale": "voxelwise_prewhitened",
+      "sampled_voxels": 32,
+      "max_effective_design_projection": 1.3193813606886036e-08,
+      "max_unwhitened_design_projection": 0.06096112483117717,
+      "nvol": 240,
+      "voxels": 101162,
+      "unwhitened_joint_fit_vs_res4d_relative_error": 0.09041566416825468,
+      "max_whitened_decomposition_relative_error": 4.760432002232685e-06,
+      "valid_mask": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/unsmoothed-group-ica-20261029T175618Z-4680e2/checks/valid_masks/sub-10817_ses-01_task-ugr_run-1.nii.gz",
+      "zero_variance_voxels": 13316
+    }
+  ]
+}
