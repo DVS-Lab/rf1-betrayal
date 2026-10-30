@@ -1,0 +1,2294 @@
+[
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/L1stats-cat-ugr.sh",
+    "line_number": 82,
+    "tail_byte_offset": 0,
+    "text": "        PHYS=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_${ppi}.txt"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/L1stats-cat-ugr.sh",
+    "line_number": 83,
+    "tail_byte_offset": 0,
+    "text": "        MASK=${maindir}/masks/seed-${ppi}.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/L1stats-cat-ugr.sh",
+    "line_number": 84,
+    "tail_byte_offset": 0,
+    "text": "        fslmeants -i $DATA -o $PHYS -m $MASK"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/L1stats-trust.sh",
+    "line_number": 86,
+    "tail_byte_offset": 0,
+    "text": "\tPHYS=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_${ppi}.txt"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/L1stats-trust.sh",
+    "line_number": 87,
+    "tail_byte_offset": 0,
+    "text": "\tMASK=${maindir}/masks/seed-${ppi}.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/L1stats-trust.sh",
+    "line_number": 88,
+    "tail_byte_offset": 0,
+    "text": "\tfslmeants -i $DATA -o $PHYS -m $MASK"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/L1stats-ugr.sh",
+    "line_number": 89,
+    "tail_byte_offset": 0,
+    "text": "        PHYS=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_${ppi}.txt"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/L1stats-ugr.sh",
+    "line_number": 90,
+    "tail_byte_offset": 0,
+    "text": "        MASK=${maindir}/masks/seed-${ppi}.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/L1stats-ugr.sh",
+    "line_number": 91,
+    "tail_byte_offset": 0,
+    "text": "        fslmeants -i $DATA -o $PHYS -m $MASK"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_cat_ugr_AIns.sh",
+    "line_number": 10,
+    "tail_byte_offset": 0,
+    "text": "mask=${basedir}/masks/seed-AIns.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_cat_ugr_AIns.sh",
+    "line_number": 36,
+    "tail_byte_offset": 0,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_cat_ugr_AIns.sh",
+    "line_number": 46,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_cat_ugr_AIns.sh",
+    "line_number": 56,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_trust_AIns.sh",
+    "line_number": 10,
+    "tail_byte_offset": 0,
+    "text": "mask=${basedir}/masks/seed-AIns-vt.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_trust_AIns.sh",
+    "line_number": 32,
+    "tail_byte_offset": 0,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_trust_AIns.sh",
+    "line_number": 33,
+    "tail_byte_offset": 0,
+    "text": "    #could use fslstats instead - fslmeants is usually for time series\t"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_trust_AIns.sh",
+    "line_number": 42,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_trust_AIns.sh",
+    "line_number": 52,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_trust_AIns_social.sh",
+    "line_number": 10,
+    "tail_byte_offset": 0,
+    "text": "mask=${basedir}/masks/seed-AIns-vt.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_trust_AIns_social.sh",
+    "line_number": 58,
+    "tail_byte_offset": 0,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_trust_AIns_social.sh",
+    "line_number": 74,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_trust_AIns_social.sh",
+    "line_number": 88,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_trust_AIns_social.sh",
+    "line_number": 105,
+    "tail_byte_offset": 0,
+    "text": "    fslmeants -i $DATASOC -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_trust_AIns_social.sh",
+    "line_number": 114,
+    "tail_byte_offset": 0,
+    "text": "         fslmeants -i $DATASOCrun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_trust_AIns_social.sh",
+    "line_number": 122,
+    "tail_byte_offset": 0,
+    "text": "         fslmeants -i $DATASOCrun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_AIns.sh",
+    "line_number": 10,
+    "tail_byte_offset": 0,
+    "text": "mask=${basedir}/masks/seed-AIns.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_AIns.sh",
+    "line_number": 32,
+    "tail_byte_offset": 0,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_AIns.sh",
+    "line_number": 42,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_AIns.sh",
+    "line_number": 52,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_AIns_social.sh",
+    "line_number": 10,
+    "tail_byte_offset": 0,
+    "text": "mask=${basedir}/masks/seed-AIns.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_AIns_social.sh",
+    "line_number": 32,
+    "tail_byte_offset": 0,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_AIns_social.sh",
+    "line_number": 42,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_AIns_social.sh",
+    "line_number": 52,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_ppi_AIns.sh",
+    "line_number": 10,
+    "tail_byte_offset": 0,
+    "text": "mask=${basedir}/masks/vmPFC_socialagnostic_ppi_result_mask.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_ppi_AIns.sh",
+    "line_number": 21,
+    "tail_byte_offset": 0,
+    "text": "  DATA=${basedir}/derivatives/fsl/sub-${sub}/ses-01/L2_task-${task}_model-${model}_type-ppi_seed-AIns_sm-${sm}.gfeat/cope11.feat/stats/zstat1.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_ppi_AIns.sh",
+    "line_number": 23,
+    "tail_byte_offset": 0,
+    "text": "  DATArun1=${basedir}/derivatives/fsl/sub-${sub}/ses-01/L1_task-${task}_model-${model}_type-ppi_seed-AIns_run-1_sm-${sm}.feat/stats/zstat11.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_ppi_AIns.sh",
+    "line_number": 25,
+    "tail_byte_offset": 0,
+    "text": "  DATArun2=${basedir}/derivatives/fsl/sub-${sub}/ses-01/L1_task-${task}_model-${model}_type-ppi_seed-AIns_run-2_sm-${sm}.feat/stats/zstat11.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_ppi_AIns.sh",
+    "line_number": 32,
+    "tail_byte_offset": 0,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_ppi_AIns.sh",
+    "line_number": 42,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_ppi_AIns.sh",
+    "line_number": 52,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_ppi_AIns_social.sh",
+    "line_number": 10,
+    "tail_byte_offset": 0,
+    "text": "mask=${basedir}/masks/vmPFC.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_ppi_AIns_social.sh",
+    "line_number": 21,
+    "tail_byte_offset": 0,
+    "text": "  DATA=${basedir}/derivatives/fsl/sub-${sub}/ses-01/L2_task-${task}_model-${model}_type-ppi_seed-AIns_sm-${sm}.gfeat/cope12.feat/stats/zstat1.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_ppi_AIns_social.sh",
+    "line_number": 23,
+    "tail_byte_offset": 0,
+    "text": "  DATArun1=${basedir}/derivatives/fsl/sub-${sub}/ses-01/L1_task-${task}_model-${model}_type-ppi_seed-AIns_run-1_sm-${sm}.feat/stats/zstat12.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_ppi_AIns_social.sh",
+    "line_number": 25,
+    "tail_byte_offset": 0,
+    "text": "  DATArun2=${basedir}/derivatives/fsl/sub-${sub}/ses-01/L1_task-${task}_model-${model}_type-ppi_seed-AIns_run-2_sm-${sm}.feat/stats/zstat12.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_ppi_AIns_social.sh",
+    "line_number": 32,
+    "tail_byte_offset": 0,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_ppi_AIns_social.sh",
+    "line_number": 42,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_ugr_ppi_AIns_social.sh",
+    "line_number": 52,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_var_cat_ugr_AIns.sh",
+    "line_number": 10,
+    "tail_byte_offset": 0,
+    "text": "mask=${basedir}/masks/seed-AIns.nii.gz"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_var_cat_ugr_AIns.sh",
+    "line_number": 36,
+    "tail_byte_offset": 0,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_var_cat_ugr_AIns.sh",
+    "line_number": 46,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/extract_var_cat_ugr_AIns.sh",
+    "line_number": 56,
+    "tail_byte_offset": 0,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/run_L3stats-ugr.sh",
+    "line_number": 14,
+    "tail_byte_offset": 0,
+    "text": "for analysis in \"ppi_seed-AIns\"; do # \"act\" \"ppi_seed-pTPJ\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/ppi_audit/analyze_ppi_interaction_decomposition.py",
+    "line_number": 12,
+    "tail_byte_offset": 0,
+    "text": "calls FSL's ``fslmeants`` to extract ROI-average COPE values, fits a paired"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/ppi_audit/analyze_ppi_interaction_decomposition.py",
+    "line_number": 16,
+    "tail_byte_offset": 0,
+    "text": "Required for image extraction: FSL's fslmeants on PATH."
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/ppi_audit/analyze_ppi_interaction_decomposition.py",
+    "line_number": 65,
+    "tail_byte_offset": 0,
+    "text": "            \"vmPFC ROI used by fslmeants. Required unless --effects-csv is \""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/ppi_audit/analyze_ppi_interaction_decomposition.py",
+    "line_number": 187,
+    "tail_byte_offset": 0,
+    "text": "                \"fslmeants\","
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/ppi_audit/analyze_ppi_interaction_decomposition.py",
+    "line_number": 201,
+    "tail_byte_offset": 0,
+    "text": "                f\"fslmeants failed for {image}:\\n{completed.stderr.strip()}\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/ppi_audit/analyze_ppi_interaction_decomposition.py",
+    "line_number": 216,
+    "tail_byte_offset": 0,
+    "text": "    if shutil.which(\"fslmeants\") is None:"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/ppi_audit/analyze_ppi_interaction_decomposition.py",
+    "line_number": 217,
+    "tail_byte_offset": 0,
+    "text": "        raise RuntimeError(\"fslmeants is not available on PATH\")"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/ppi_audit/ppi_audit_revised.py",
+    "line_number": 19,
+    "tail_byte_offset": 0,
+    "text": "calls FSL's ``fslmeants`` to extract ROI-average COPE values, fits a paired"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/ppi_audit/ppi_audit_revised.py",
+    "line_number": 25,
+    "tail_byte_offset": 0,
+    "text": "Required for image extraction: FSL's fslmeants on PATH."
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/ppi_audit/ppi_audit_revised.py",
+    "line_number": 75,
+    "tail_byte_offset": 0,
+    "text": "            \"vmPFC ROI used by fslmeants. Required unless --effects-csv is \""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/ppi_audit/ppi_audit_revised.py",
+    "line_number": 197,
+    "tail_byte_offset": 0,
+    "text": "                \"fslmeants\","
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/ppi_audit/ppi_audit_revised.py",
+    "line_number": 211,
+    "tail_byte_offset": 0,
+    "text": "                f\"fslmeants failed for {image}:\\n{completed.stderr.strip()}\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/ppi_audit/ppi_audit_revised.py",
+    "line_number": 226,
+    "tail_byte_offset": 0,
+    "text": "    if shutil.which(\"fslmeants\") is None:"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/code/ppi_audit/ppi_audit_revised.py",
+    "line_number": 227,
+    "tail_byte_offset": 0,
+    "text": "        raise RuntimeError(\"fslmeants is not available on PATH\")"
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 279,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(1) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10369/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 282,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(2) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10402/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 285,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(3) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10478/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 288,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(4) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10486/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 291,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(5) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10581/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 294,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(6) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10584/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 297,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(7) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10589/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 300,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(8) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10596/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 303,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(9) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10606/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 306,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(10) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10608/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 309,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(11) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10640/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 312,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(12) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10641/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 315,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(13) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10642/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 318,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(14) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10647/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 321,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(15) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10656/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 324,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(16) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10661/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 327,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(17) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10663/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 330,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(18) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10668/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 333,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(19) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10673/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 336,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(20) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10674/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 339,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(21) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10677/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 342,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(22) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10685/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 345,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(23) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10700/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 348,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(24) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10701/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 351,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(25) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10718/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 354,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(26) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10720/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 357,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(27) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10723/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 360,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(28) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10741/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 363,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(29) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10748/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns-socialagnostic_n132_flame1.fsf",
+    "line_number": 366,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(30) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10767/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 279,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(1) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10369/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 282,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(2) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10402/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 285,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(3) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10478/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 288,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(4) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10486/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 291,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(5) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10581/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 294,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(6) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10584/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 297,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(7) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10589/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 300,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(8) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10596/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 303,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(9) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10606/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 306,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(10) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10608/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 309,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(11) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10640/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 312,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(12) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10641/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 315,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(13) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10642/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 318,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(14) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10647/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 321,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(15) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10656/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 324,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(16) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10661/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 327,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(17) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10663/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 330,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(18) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10668/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 333,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(19) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10673/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 336,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(20) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10674/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 339,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(21) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10677/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 342,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(22) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10685/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 345,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(23) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10700/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 348,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(24) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10701/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 351,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(25) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10718/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 354,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(26) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10720/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 357,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(27) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10723/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 360,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(28) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10741/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 363,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(29) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10748/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/L3_task-ugr_model-3_type-ppi_group-AIns_n132_flame1.fsf",
+    "line_number": 366,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(30) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10767/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 279,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(1) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10369/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 282,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(2) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10402/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 285,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(3) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10478/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 288,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(4) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10486/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns-vt_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 291,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(5) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10581/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns-vt_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 294,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(6) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10584/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns-vt_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 297,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(7) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10589/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 300,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(8) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10596/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 303,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(9) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10606/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 306,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(10) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10608/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 309,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(11) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10640/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 312,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(12) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10641/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns-vt_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 315,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(13) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10642/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 318,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(14) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10647/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 321,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(15) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10656/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 324,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(16) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10661/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 327,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(17) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10663/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 330,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(18) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10668/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns-vt_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 333,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(19) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10673/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 336,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(20) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10674/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 339,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(21) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10677/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 342,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(22) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10685/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 345,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(23) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10700/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 348,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(24) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10701/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 351,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(25) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10718/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 354,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(26) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10720/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 357,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(27) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10723/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 360,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(28) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10741/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 363,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(29) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10748/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns-vt_n132_flame1.fsf",
+    "line_number": 366,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(30) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10767/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns_n128_flame1.fsf",
+    "line_number": 285,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(3) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10486/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns_n128_flame1.fsf",
+    "line_number": 291,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(5) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10584/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns_n128_flame1.fsf",
+    "line_number": 312,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(12) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10641/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns_n128_flame1.fsf",
+    "line_number": 360,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(28) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10748/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns_n128_flame1.fsf",
+    "line_number": 366,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(30) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10777/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns_n128_flame1.fsf",
+    "line_number": 387,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(37) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10803/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns_n128_flame1.fsf",
+    "line_number": 564,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(96) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11301/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns_n128_flame1.fsf",
+    "line_number": 570,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(98) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11316/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns_n128_flame1.fsf",
+    "line_number": 612,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(112) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11410/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns_n128_flame1.fsf",
+    "line_number": 615,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(113) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11426/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns_n128_flame1.fsf",
+    "line_number": 618,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(114) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11430/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns_n128_flame1.fsf",
+    "line_number": 621,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(115) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11433/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AIns_n128_flame1.fsf",
+    "line_number": 636,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(120) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11498/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 279,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(1) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10369/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 282,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(2) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10402/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 285,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(3) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10478/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 288,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(4) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10486/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns-vt_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 291,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(5) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10581/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns-vt_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 294,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(6) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10584/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns-vt_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 297,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(7) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10589/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 300,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(8) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10596/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 303,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(9) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10606/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 306,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(10) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10608/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 309,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(11) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10640/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 312,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(12) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10641/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns-vt_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 315,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(13) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10642/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 318,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(14) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10647/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 321,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(15) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10656/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 324,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(16) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10661/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 327,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(17) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10663/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 330,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(18) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10668/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns-vt_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 333,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(19) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10673/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 336,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(20) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10674/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 339,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(21) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10677/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 342,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(22) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10685/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 345,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(23) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10700/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 348,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(24) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10701/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 351,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(25) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10718/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 354,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(26) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10720/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 357,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(27) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10723/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 360,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(28) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10741/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 363,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(29) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10748/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ-vt_n132_flame1.fsf",
+    "line_number": 366,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(30) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10767/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns-vt_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n128_flame1.fsf",
+    "line_number": 285,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(3) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10486/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n128_flame1.fsf",
+    "line_number": 291,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(5) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10584/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n128_flame1.fsf",
+    "line_number": 312,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(12) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10641/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n128_flame1.fsf",
+    "line_number": 360,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(28) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10748/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n128_flame1.fsf",
+    "line_number": 366,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(30) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10777/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n128_flame1.fsf",
+    "line_number": 387,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(37) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10803/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n128_flame1.fsf",
+    "line_number": 564,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(96) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11301/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n128_flame1.fsf",
+    "line_number": 570,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(98) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11316/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n128_flame1.fsf",
+    "line_number": 612,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(112) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11410/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n128_flame1.fsf",
+    "line_number": 615,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(113) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11426/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n128_flame1.fsf",
+    "line_number": 618,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(114) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11430/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n128_flame1.fsf",
+    "line_number": 621,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(115) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11433/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n128_flame1.fsf",
+    "line_number": 636,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(120) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11498/ses-01/L1_task-ugr_model-3_type-REPLACEME_seed-aIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 279,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(1) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10369/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 282,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(2) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10402/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 285,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(3) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10478/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 288,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(4) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10486/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 291,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(5) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10581/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 294,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(6) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10584/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 297,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(7) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10589/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 300,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(8) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10596/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 303,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(9) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10606/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 306,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(10) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10608/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 309,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(11) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10640/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 312,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(12) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10641/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 315,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(13) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10642/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 318,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(14) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10647/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 321,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(15) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10656/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 324,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(16) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10661/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 327,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(17) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10663/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 330,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(18) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10668/ses-01/L1_task-ugr_model-3_type-ppi_seed-AIns_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 333,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(19) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10673/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 336,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(20) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10674/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 339,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(21) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10677/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 342,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(22) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10685/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 345,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(23) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10700/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 348,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(24) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10701/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 351,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(25) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10718/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 354,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(26) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10720/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 357,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(27) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10723/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 360,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(28) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10741/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 363,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(29) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10748/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "source": "/ZPOOL/data/projects/rf1-betrayal/templates/archive/L3_task-ugr_model-3_type-ppi_group-AInsxAQ_n132_flame1.fsf",
+    "line_number": 366,
+    "tail_byte_offset": 0,
+    "text": "set feat_files(30) \"/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10767/ses-01/L2_task-ugr_model-3_type-ppi_seed-AIns_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz\""
+  },
+  {
+    "commit": "ebe54e10760f89251f7afa5e878416d802e27033",
+    "date": "2026-10-29T08:09:00-04:00",
+    "subject": "Repair run-specific UGR timing and validate TR in project first-level analyses",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 86,
+    "text": "\tPHYS=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_${ppi}.txt"
+  },
+  {
+    "commit": "ebe54e10760f89251f7afa5e878416d802e27033",
+    "date": "2026-10-29T08:09:00-04:00",
+    "subject": "Repair run-specific UGR timing and validate TR in project first-level analyses",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 87,
+    "text": "\tMASK=${maindir}/masks/seed-${ppi}.nii.gz"
+  },
+  {
+    "commit": "ebe54e10760f89251f7afa5e878416d802e27033",
+    "date": "2026-10-29T08:09:00-04:00",
+    "subject": "Repair run-specific UGR timing and validate TR in project first-level analyses",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 88,
+    "text": "\tfslmeants -i $DATA -o $PHYS -m $MASK"
+  },
+  {
+    "commit": "ebe54e10760f89251f7afa5e878416d802e27033",
+    "date": "2026-10-29T08:09:00-04:00",
+    "subject": "Repair run-specific UGR timing and validate TR in project first-level analyses",
+    "source": "code/L1stats-ugr.sh",
+    "line_number": 89,
+    "text": "        PHYS=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_${ppi}.txt"
+  },
+  {
+    "commit": "ebe54e10760f89251f7afa5e878416d802e27033",
+    "date": "2026-10-29T08:09:00-04:00",
+    "subject": "Repair run-specific UGR timing and validate TR in project first-level analyses",
+    "source": "code/L1stats-ugr.sh",
+    "line_number": 90,
+    "text": "        MASK=${maindir}/masks/seed-${ppi}.nii.gz"
+  },
+  {
+    "commit": "ebe54e10760f89251f7afa5e878416d802e27033",
+    "date": "2026-10-29T08:09:00-04:00",
+    "subject": "Repair run-specific UGR timing and validate TR in project first-level analyses",
+    "source": "code/L1stats-ugr.sh",
+    "line_number": 91,
+    "text": "        fslmeants -i $DATA -o $PHYS -m $MASK"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 10,
+    "text": "mask=${basedir}/masks/seed-AIns-vt.nii.gz"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 32,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 33,
+    "text": "    #could use fslstats instead - fslmeants is usually for time series\t"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 42,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 52,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 10,
+    "text": "mask=${basedir}/masks/seed-AIns-vt.nii.gz"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 58,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 74,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 88,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 105,
+    "text": "    fslmeants -i $DATASOC -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 114,
+    "text": "         fslmeants -i $DATASOCrun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 122,
+    "text": "         fslmeants -i $DATASOCrun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_ugr_ppi_AIns.sh",
+    "line_number": 10,
+    "text": "mask=${basedir}/masks/vmPFC.nii.gz"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_ugr_ppi_AIns.sh",
+    "line_number": 21,
+    "text": "  DATA=${basedir}/derivatives/fsl/sub-${sub}/ses-01/L2_task-${task}_model-${model}_type-ppi_seed-AIns_sm-${sm}.gfeat/cope12.feat/stats/zstat1.nii.gz"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_ugr_ppi_AIns.sh",
+    "line_number": 23,
+    "text": "  DATArun1=${basedir}/derivatives/fsl/sub-${sub}/ses-01/L1_task-${task}_model-${model}_type-ppi_seed-AIns_run-1_sm-${sm}.feat/stats/zstat12.nii.gz"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_ugr_ppi_AIns.sh",
+    "line_number": 25,
+    "text": "  DATArun2=${basedir}/derivatives/fsl/sub-${sub}/ses-01/L1_task-${task}_model-${model}_type-ppi_seed-AIns_run-2_sm-${sm}.feat/stats/zstat12.nii.gz"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_ugr_ppi_AIns.sh",
+    "line_number": 32,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_ugr_ppi_AIns.sh",
+    "line_number": 42,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "f70193c53320f834c7eb4550b8c05ed82be09404",
+    "date": "2026-06-09T10:26:16-04:00",
+    "subject": "getting github up to date",
+    "source": "code/extract_ugr_ppi_AIns.sh",
+    "line_number": 52,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/L1stats-cat-ugr.sh",
+    "line_number": 82,
+    "text": "        PHYS=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_${ppi}.txt"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/L1stats-cat-ugr.sh",
+    "line_number": 83,
+    "text": "        MASK=${maindir}/masks/seed-${ppi}.nii.gz"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/L1stats-cat-ugr.sh",
+    "line_number": 84,
+    "text": "        fslmeants -i $DATA -o $PHYS -m $MASK"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_cat_ugr_AIns.sh",
+    "line_number": 10,
+    "text": "mask=${basedir}/masks/seed-AIns.nii.gz"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_cat_ugr_AIns.sh",
+    "line_number": 36,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_cat_ugr_AIns.sh",
+    "line_number": 46,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_cat_ugr_AIns.sh",
+    "line_number": 56,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 10,
+    "text": "mask=${basedir}/masks/seed-AIns.nii.gz"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 32,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 33,
+    "text": "    #could use fslstats instead - fslmeants is usually for time series\t"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 42,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 52,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 10,
+    "text": "mask=${basedir}/masks/seed-AIns.nii.gz"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 58,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 74,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 88,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 105,
+    "text": "    fslmeants -i $DATASOC -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 114,
+    "text": "         fslmeants -i $DATASOCrun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 122,
+    "text": "         fslmeants -i $DATASOCrun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_ugr_AIns.sh",
+    "line_number": 10,
+    "text": "mask=${basedir}/masks/seed-AIns.nii.gz"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_ugr_AIns.sh",
+    "line_number": 32,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_ugr_AIns.sh",
+    "line_number": 42,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_ugr_AIns.sh",
+    "line_number": 52,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_ugr_AIns_social.sh",
+    "line_number": 10,
+    "text": "mask=${basedir}/masks/seed-AIns.nii.gz"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_ugr_AIns_social.sh",
+    "line_number": 32,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_ugr_AIns_social.sh",
+    "line_number": 42,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_ugr_AIns_social.sh",
+    "line_number": 52,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_var_cat_ugr_AIns.sh",
+    "line_number": 10,
+    "text": "mask=${basedir}/masks/seed-AIns.nii.gz"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_var_cat_ugr_AIns.sh",
+    "line_number": 36,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_var_cat_ugr_AIns.sh",
+    "line_number": 46,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "92cd957e1ac0539445bab21206697928d8762dc3",
+    "date": "2026-03-03T12:13:50-05:00",
+    "subject": "rerunning stats and analyzing categorical models",
+    "source": "code/extract_var_cat_ugr_AIns.sh",
+    "line_number": 56,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "ea3025613dd0305e6481404d30f12dd7dd415eed",
+    "date": "2026-02-09T11:04:53-05:00",
+    "subject": "code and template additions for more analyses",
+    "source": "code/L2stats-ugr.sh",
+    "line_number": 26,
+    "text": "\tINPUT1=${MAINOUTPUT}/L1_task-${task}_model-${model}_type-${type}_seed-aIns_run-1_sm-${sm}.feat"
+  },
+  {
+    "commit": "ea3025613dd0305e6481404d30f12dd7dd415eed",
+    "date": "2026-02-09T11:04:53-05:00",
+    "subject": "code and template additions for more analyses",
+    "source": "code/L2stats-ugr.sh",
+    "line_number": 27,
+    "text": "\tINPUT2=${MAINOUTPUT}/L1_task-${task}_model-${model}_type-${type}_seed-aIns_run-2_sm-${sm}.feat"
+  },
+  {
+    "commit": "005c9295b6c26a86112bf2442a877bb6e2067dca",
+    "date": "2026-01-23T11:09:39-05:00",
+    "subject": "run aIns seed",
+    "source": "code/L1stats-ugr.sh",
+    "line_number": 82,
+    "text": "        PHYS=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_${ppi}.txt"
+  },
+  {
+    "commit": "005c9295b6c26a86112bf2442a877bb6e2067dca",
+    "date": "2026-01-23T11:09:39-05:00",
+    "subject": "run aIns seed",
+    "source": "code/L1stats-ugr.sh",
+    "line_number": 83,
+    "text": "        MASK=${maindir}/masks/seed-${ppi}.nii.gz"
+  },
+  {
+    "commit": "005c9295b6c26a86112bf2442a877bb6e2067dca",
+    "date": "2026-01-23T11:09:39-05:00",
+    "subject": "run aIns seed",
+    "source": "code/L1stats-ugr.sh",
+    "line_number": 84,
+    "text": "        fslmeants -i $DATA -o $PHYS -m $MASK"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 10,
+    "text": "mask=${basedir}/masks/ugr-trust_intersection_voxelthresh.nii.gz"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 32,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 33,
+    "text": "    #could use fslstats instead - fslmeants is usually for time series\t"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 42,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 52,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 10,
+    "text": "mask=${basedir}/masks/ugr-trust_intersection_voxelthresh.nii.gz"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 58,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 74,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 88,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 105,
+    "text": "    fslmeants -i $DATASOC -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 114,
+    "text": "         fslmeants -i $DATASOCrun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_trust_AIns_social.sh",
+    "line_number": 122,
+    "text": "         fslmeants -i $DATASOCrun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_ugr_AIns_social.sh",
+    "line_number": 10,
+    "text": "mask=${basedir}/masks/ugr-trust_intersection_voxelthresh.nii.gz"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_ugr_AIns_social.sh",
+    "line_number": 32,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_ugr_AIns_social.sh",
+    "line_number": 42,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "61c07644927a6517808f1d8cdddf541632a71801",
+    "date": "2026-01-20T15:56:28-05:00",
+    "subject": "adding extraction scripts and associated output",
+    "source": "code/extract_ugr_AIns_social.sh",
+    "line_number": 52,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "9df49468af0535f8a2ccbcf962069d8c342b3590",
+    "date": "2026-01-20T13:11:48-05:00",
+    "subject": "adding extract scripts for ugr and trust and their output",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 10,
+    "text": "mask=${basedir}/masks/ugr-trust_intersection_voxelthresh.nii.gz"
+  },
+  {
+    "commit": "9df49468af0535f8a2ccbcf962069d8c342b3590",
+    "date": "2026-01-20T13:11:48-05:00",
+    "subject": "adding extract scripts for ugr and trust and their output",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 32,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "9df49468af0535f8a2ccbcf962069d8c342b3590",
+    "date": "2026-01-20T13:11:48-05:00",
+    "subject": "adding extract scripts for ugr and trust and their output",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 42,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "9df49468af0535f8a2ccbcf962069d8c342b3590",
+    "date": "2026-01-20T13:11:48-05:00",
+    "subject": "adding extract scripts for ugr and trust and their output",
+    "source": "code/extract_trust_AIns.sh",
+    "line_number": 52,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "9df49468af0535f8a2ccbcf962069d8c342b3590",
+    "date": "2026-01-20T13:11:48-05:00",
+    "subject": "adding extract scripts for ugr and trust and their output",
+    "source": "code/extract_ugr_AIns.sh",
+    "line_number": 10,
+    "text": "mask=${basedir}/masks/ugr-trust_intersection_voxelthresh.nii.gz"
+  },
+  {
+    "commit": "9df49468af0535f8a2ccbcf962069d8c342b3590",
+    "date": "2026-01-20T13:11:48-05:00",
+    "subject": "adding extract scripts for ugr and trust and their output",
+    "source": "code/extract_ugr_AIns.sh",
+    "line_number": 32,
+    "text": "    fslmeants -i $DATA -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "9df49468af0535f8a2ccbcf962069d8c342b3590",
+    "date": "2026-01-20T13:11:48-05:00",
+    "subject": "adding extract scripts for ugr and trust and their output",
+    "source": "code/extract_ugr_AIns.sh",
+    "line_number": 42,
+    "text": "   \t fslmeants -i $DATArun1 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "9df49468af0535f8a2ccbcf962069d8c342b3590",
+    "date": "2026-01-20T13:11:48-05:00",
+    "subject": "adding extract scripts for ugr and trust and their output",
+    "source": "code/extract_ugr_AIns.sh",
+    "line_number": 52,
+    "text": "   \t fslmeants -i $DATArun2 -o $OUTPUT -m $mask"
+  },
+  {
+    "commit": "60f03e00ed96de30003de1d899374f37513a268e",
+    "date": "2026-01-09T09:57:07-05:00",
+    "subject": "adding templates and modifying scripts",
+    "source": "code/L1stats-ugr.sh",
+    "line_number": 83,
+    "text": "        PHYS=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_${ppi}.txt"
+  },
+  {
+    "commit": "60f03e00ed96de30003de1d899374f37513a268e",
+    "date": "2026-01-09T09:57:07-05:00",
+    "subject": "adding templates and modifying scripts",
+    "source": "code/L1stats-ugr.sh",
+    "line_number": 84,
+    "text": "        MASK=${maindir}/masks/seed-${ppi}.nii.gz"
+  },
+  {
+    "commit": "60f03e00ed96de30003de1d899374f37513a268e",
+    "date": "2026-01-09T09:57:07-05:00",
+    "subject": "adding templates and modifying scripts",
+    "source": "code/L1stats-ugr.sh",
+    "line_number": 85,
+    "text": "        fslmeants -i $DATA -o $PHYS -m $MASK"
+  },
+  {
+    "commit": "74076798695b80fbdfdb8f999daf5cc1935b864a",
+    "date": "2026-01-07T16:20:32-05:00",
+    "subject": "tweaked L1 and L2 scripts",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 79,
+    "text": "\tPHYS=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_${ppi}.txt"
+  },
+  {
+    "commit": "74076798695b80fbdfdb8f999daf5cc1935b864a",
+    "date": "2026-01-07T16:20:32-05:00",
+    "subject": "tweaked L1 and L2 scripts",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 80,
+    "text": "\tMASK=${maindir}/masks/seed-${ppi}.nii.gz"
+  },
+  {
+    "commit": "74076798695b80fbdfdb8f999daf5cc1935b864a",
+    "date": "2026-01-07T16:20:32-05:00",
+    "subject": "tweaked L1 and L2 scripts",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 81,
+    "text": "\tfslmeants -i $DATA -o $PHYS -m $MASK"
+  },
+  {
+    "commit": "2d083d7d80a2c38ad70ba0df46a998e140896075",
+    "date": "2026-01-07T11:02:21-05:00",
+    "subject": "modified L1 file paths and added templates",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 85,
+    "text": "\tPHYS=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_${ppi}.txt"
+  },
+  {
+    "commit": "2d083d7d80a2c38ad70ba0df46a998e140896075",
+    "date": "2026-01-07T11:02:21-05:00",
+    "subject": "modified L1 file paths and added templates",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 86,
+    "text": "\tMASK=${maindir}/masks/seed-${ppi}.nii.gz"
+  },
+  {
+    "commit": "2d083d7d80a2c38ad70ba0df46a998e140896075",
+    "date": "2026-01-07T11:02:21-05:00",
+    "subject": "modified L1 file paths and added templates",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 87,
+    "text": "\tfslmeants -i $DATA -o $PHYS -m $MASK"
+  },
+  {
+    "commit": "2314fc7f43df73ebdf140a07bbd6d48b90c958c0",
+    "date": "2026-01-06T20:34:15-05:00",
+    "subject": "remove extra lines and update paths",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 85,
+    "text": "\tPHYS=${maindir}/derivatives/fsl/sub-${sub}/ses-${ses}/sub-${sub}_ses-${ses}_task-${TASK}_run-${run}_${ppi}.txt"
+  },
+  {
+    "commit": "2314fc7f43df73ebdf140a07bbd6d48b90c958c0",
+    "date": "2026-01-06T20:34:15-05:00",
+    "subject": "remove extra lines and update paths",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 86,
+    "text": "\tMASK=${maindir}/masks/seed-${ppi}.nii.gz"
+  },
+  {
+    "commit": "2314fc7f43df73ebdf140a07bbd6d48b90c958c0",
+    "date": "2026-01-06T20:34:15-05:00",
+    "subject": "remove extra lines and update paths",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 87,
+    "text": "\tfslmeants -i $DATA -o $PHYS -m $MASK"
+  },
+  {
+    "commit": "123453efe2f3cd3582d110157d8335ddf89051dc",
+    "date": "2026-01-06T15:54:48-05:00",
+    "subject": "initial commit",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 65,
+    "text": "\tMASK=${MAINOUTPUT}/L1_task-${TASK}_model-${model}_type-act_run-${run}_sm-${sm}.feat/mask"
+  },
+  {
+    "commit": "123453efe2f3cd3582d110157d8335ddf89051dc",
+    "date": "2026-01-06T15:54:48-05:00",
+    "subject": "initial commit",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 166,
+    "text": "\t\tPHYS=${maindir}/derivatives/fsl/sub-${sub}/sub-${sub}_task-${TASK}_run-${run}_${ppi}.txt"
+  },
+  {
+    "commit": "123453efe2f3cd3582d110157d8335ddf89051dc",
+    "date": "2026-01-06T15:54:48-05:00",
+    "subject": "initial commit",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 167,
+    "text": "\t\tMASK=${maindir}/masks/seed-${ppi}.nii.gz"
+  },
+  {
+    "commit": "123453efe2f3cd3582d110157d8335ddf89051dc",
+    "date": "2026-01-06T15:54:48-05:00",
+    "subject": "initial commit",
+    "source": "code/L1stats-trust.sh",
+    "line_number": 168,
+    "text": "\t\tfslmeants -i $DATA -o $PHYS -m $MASK"
+  },
+  {
+    "commit": "123453efe2f3cd3582d110157d8335ddf89051dc",
+    "date": "2026-01-06T15:54:48-05:00",
+    "subject": "initial commit",
+    "source": "code/L1stats-ugr.sh",
+    "line_number": 65,
+    "text": "\tMASK=${MAINOUTPUT}/L1_task-${TASK}_model-${model}_type-act_run-${run}_sm-${sm}.feat/mask"
+  },
+  {
+    "commit": "123453efe2f3cd3582d110157d8335ddf89051dc",
+    "date": "2026-01-06T15:54:48-05:00",
+    "subject": "initial commit",
+    "source": "code/L1stats-ugr.sh",
+    "line_number": 165,
+    "text": "\t\tPHYS=${maindir}/derivatives/fsl/sub-${sub}/sub-${sub}_task-${TASK}_run-${run}_${ppi}.txt"
+  },
+  {
+    "commit": "123453efe2f3cd3582d110157d8335ddf89051dc",
+    "date": "2026-01-06T15:54:48-05:00",
+    "subject": "initial commit",
+    "source": "code/L1stats-ugr.sh",
+    "line_number": 166,
+    "text": "\t\tMASK=${maindir}/masks/seed-${ppi}.nii.gz"
+  },
+  {
+    "commit": "123453efe2f3cd3582d110157d8335ddf89051dc",
+    "date": "2026-01-06T15:54:48-05:00",
+    "subject": "initial commit",
+    "source": "code/L1stats-ugr.sh",
+    "line_number": 167,
+    "text": "\t\tfslmeants -i $DATA -o $PHYS -m $MASK"
+  }
+]

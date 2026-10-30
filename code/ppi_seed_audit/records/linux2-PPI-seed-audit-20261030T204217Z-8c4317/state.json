@@ -1,0 +1,33 @@
+{
+  "state": "PPI_seed_provenance_audit_complete_review_required",
+  "max_original_BOLD_reads": 4,
+  "physiological_EVs": 506,
+  "saved_designs_read": 810,
+  "subjects": 132,
+  "accepted_runs": 490,
+  "accepted_run_physiological_EVs": 498,
+  "FEAT_cached_physiological_EVs": 506,
+  "external_vs_cache_mismatches": 0,
+  "model_column_status": {
+    "does_not_match_supported_model": 253,
+    "matches_up_to_positive_centering_scaling": 253
+  },
+  "case_counts": {
+    "ugr/AIns": 253,
+    "ugr/AIns-vt": 253
+  },
+  "group_linked_seed_counts": {
+    "ugr/AIns": 249,
+    "ugr/AIns-vt": 249
+  },
+  "distinct_candidate_supports": 11,
+  "missing_sources": 22,
+  "numerical_reproduction": {
+    "original_BOLD_images_present": 0,
+    "original_BOLD_images_selected": 0,
+    "comparisons": 0,
+    "raw_candidate_matches": 0,
+    "model_supported_matches": 0
+  },
+  "production_modified": false
+}
