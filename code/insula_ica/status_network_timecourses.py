@@ -18,6 +18,8 @@ def main():
     print('Standardized OLS fits:', sum(v.get('network_OLS_fits', 0) for v in state['runs'].values()), '/ 2940')
     print('Group bar estimates:', state.get('bar_estimates', 0), '/ 150')
     print('Task-bar figures:', len(list((record/'figures').glob('*five_task_bars.png'))), '/ 8')
+    print('Coefficient magnitude review flags:', state.get('coefficient_review_flag_count', 'not audited'),
+          '| numerical review required:', state.get('numerical_review_required', 'not audited'))
     errors = [k+': '+v['error'] for k, v in state['runs'].items() if v['state'] == 'failed']
     if state.get('error'): errors.append(state['error'])
     errors.extend('Git publication: '+p.read_text() for p in record.glob('*publication-error.txt'))

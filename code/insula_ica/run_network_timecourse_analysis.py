@@ -259,6 +259,12 @@ def run(args, record, output, state):
         results.extend(f.result() for f in as_completed([pool.submit(worker, r) for r in remaining]))
     g.core.require(all(r is not None for r in results), 'Some standardized OLS fits failed; no incomplete-cohort results summarized')
     effects = [r for rr in results for r in rr]
+    # Finite/estimable does not guarantee a stable partial coefficient. Retain
+    # every estimate, but surface large coefficients for design review before
+    # anyone interprets the group bars. This is not an exclusion or beta bound.
+    magnitude_flags = [r for r in effects if abs(r['effect']) > 5.]
+    save(record/'coefficient_review_flags.json', dict(review_threshold=5., flags=magnitude_flags,
+        exclusions_applied=False, note='Magnitude review trigger only; investigate design conditioning and event amplitudes.'))
     participants, group = summarize(effects, sorted({r['subject'] for r in rows}))
     g.core.write_table(record/'run_network_task_effects.tsv', effects)
     g.core.write_table(record/'participant_network_task_effects.tsv', participants)
@@ -270,7 +276,8 @@ def run(args, record, output, state):
         input='Exact 4D feat_files(1) from active saved design.fsf, restricted to the ICA ROI before spatial regression',
         group='Equal run means within each participant/task; N=132; pointwise 95% CIs',
         inference='Descriptive priority review; no randomise or multiple-testing significance labels.'))
-    state.update(state='standardized_task_bars_complete_review_pending', bar_estimates=150)
+    state.update(state='standardized_task_bars_complete_review_pending', bar_estimates=150,
+                 coefficient_review_flag_count=len(magnitude_flags), numerical_review_required=bool(magnitude_flags))
     save(record/'state.json', state)
 
 
