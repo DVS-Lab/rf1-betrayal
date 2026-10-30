@@ -1,0 +1,209 @@
+{
+  "atlas": {
+    "path": "/Users/tug87422/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr25-1mm.nii.gz",
+    "sha256": "f71ecc19595ffc85e782dea04563e83c9eb73a7a60c415fb6660c23285200dc1"
+  },
+  "atlas_labels": {
+    "path": "/Users/tug87422/fsl/data/atlases/HarvardOxford-Cortical.xml",
+    "sha256": "b8eb5ba5e787a4d3b442f75041f533f31b278a83e467bd2ab22438c1cff36581"
+  },
+  "background": {
+    "path": "/Users/tug87422/fsl/data/standard/MNI152_T1_1mm_brain.nii.gz",
+    "sha256": "32d5be33460f995a5d305507053c8862c823d9ca6bfb543381308df14590f212"
+  },
+  "definition": "Harvard-Oxford cortical maximum-probability atlas, threshold 25%; Insular Cortex label, nearest-neighbor sampled at original seed voxel centers. Percent denominator is seed voxel count, not total insula volume.",
+  "display": "Nearest-neighbor seed resampling on 1-mm MNI152 template; no smoothing. Centroid cuts per seed; shared field of view. Original masks are not changed.",
+  "seeds": [
+    {
+      "name": "Recovered AIns",
+      "source": {
+        "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/code/insula_ica/records/2026-10-30-seed-provenance/primary_maps/2aa84f5bd0c7-seed-AIns.nii.gz",
+        "sha256": "05b8fda7d8e5a2d85351c1a8d20193a7855dda26415a936d361dd3dad55f02ee"
+      },
+      "voxels": 142,
+      "voxel_volume_mm3": 21.651300973320023,
+      "centroid_MNI_mm": [
+        -44.263382794151845,
+        22.252816181787303,
+        -4.338379629900758
+      ],
+      "bounds_MNI_mm": [
+        [
+          -55.9000027179718,
+          17.09999918937683,
+          -18.53999948501587
+        ],
+        [
+          -26.200002193450928,
+          35.99999952316284,
+          14.130000829696655
+        ]
+      ],
+      "insula_voxels": 2,
+      "insula_percent": 1.408450704225352,
+      "atlas_membership": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "voxels": 73,
+          "percent": 51.40845070422535
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "voxels": 27,
+          "percent": 19.014084507042252
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "voxels": 17,
+          "percent": 11.971830985915492
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "voxels": 16,
+          "percent": 11.267605633802818
+        },
+        {
+          "label": "Unlabeled",
+          "voxels": 6,
+          "percent": 4.225352112676056
+        },
+        {
+          "label": "Insular Cortex",
+          "voxels": 2,
+          "percent": 1.4084507042253522
+        },
+        {
+          "label": "Frontal Pole",
+          "voxels": 1,
+          "percent": 0.7042253521126761
+        }
+      ]
+    },
+    {
+      "name": "Current clusterthresh",
+      "source": {
+        "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/masks/seed-AIns-clusterthresh.nii.gz",
+        "sha256": "66be24139534438a8f2efd49d071afcfa21010df5a578b955917a22b71d234d0"
+      },
+      "voxels": 127,
+      "voxel_volume_mm3": 21.651300973320023,
+      "centroid_MNI_mm": [
+        -43.52677415299603,
+        21.96850321236558,
+        -4.695589902832753
+      ],
+      "bounds_MNI_mm": [
+        [
+          -55.9000027179718,
+          17.09999918937683,
+          -18.53999948501587
+        ],
+        [
+          -26.200002193450928,
+          35.99999952316284,
+          14.130000829696655
+        ]
+      ],
+      "insula_voxels": 2,
+      "insula_percent": 1.5748031496062993,
+      "atlas_membership": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "voxels": 69,
+          "percent": 54.330708661417326
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "voxels": 22,
+          "percent": 17.322834645669293
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "voxels": 15,
+          "percent": 11.811023622047244
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "voxels": 14,
+          "percent": 11.023622047244094
+        },
+        {
+          "label": "Unlabeled",
+          "voxels": 4,
+          "percent": 3.149606299212598
+        },
+        {
+          "label": "Insular Cortex",
+          "voxels": 2,
+          "percent": 1.574803149606299
+        },
+        {
+          "label": "Frontal Pole",
+          "voxels": 1,
+          "percent": 0.7874015748031495
+        }
+      ]
+    },
+    {
+      "name": "Recovered AIns-vt",
+      "source": {
+        "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/code/insula_ica/records/2026-10-30-seed-provenance/primary_maps/ded74bd4f258-seed-AIns-vt.nii.gz",
+        "sha256": "a77340af39988103ded6227361b5160398afe7f3a174cb888f82426bbef245cd"
+      },
+      "voxels": 1,
+      "voxel_volume_mm3": 21.651300973320023,
+      "centroid_MNI_mm": [
+        -34.300002336502075,
+        19.799999237060547,
+        -12.59999942779541
+      ],
+      "bounds_MNI_mm": [
+        [
+          -34.300002336502075,
+          19.799999237060547,
+          -12.59999942779541
+        ],
+        [
+          -34.300002336502075,
+          19.799999237060547,
+          -12.59999942779541
+        ]
+      ],
+      "insula_voxels": 0,
+      "insula_percent": 0.0,
+      "atlas_membership": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "voxels": 1,
+          "percent": 100.0
+        }
+      ]
+    }
+  ],
+  "pairwise_overlap": [
+    {
+      "first": "Recovered AIns",
+      "second": "Current clusterthresh",
+      "shared_voxels": 123,
+      "dice": 0.9144981412639405,
+      "first_only_voxels": 19,
+      "second_only_voxels": 4
+    },
+    {
+      "first": "Recovered AIns",
+      "second": "Recovered AIns-vt",
+      "shared_voxels": 1,
+      "dice": 0.013986013986013986,
+      "first_only_voxels": 141,
+      "second_only_voxels": 0
+    },
+    {
+      "first": "Current clusterthresh",
+      "second": "Recovered AIns-vt",
+      "shared_voxels": 1,
+      "dice": 0.015625,
+      "first_only_voxels": 126,
+      "second_only_voxels": 0
+    }
+  ]
+}
