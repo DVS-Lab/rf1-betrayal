@@ -1,0 +1,293 @@
+{
+  "key": "sub-10584_ses-01_task-ugr_run-1",
+  "condition": 54.29753835748155,
+  "original_model": {
+    "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/sm-0-feat-20261029T002144Z-5e78a6/feat/sub-10584_ses-01_task-ugr_run-1_sm-0.feat/design.mat",
+    "size": 101345,
+    "mtime_ns": 1793247673478892175,
+    "sha256": "e254935fdaa661917ce1dfdf9061cb3a342e51ff3029deb615e471eaa9a39938"
+  },
+  "mapping": [
+    {
+      "new_column": 0,
+      "original_columns": [
+        0
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 1,
+      "original_columns": [
+        1,
+        3
+      ],
+      "operation": "sum before z-scoring"
+    },
+    {
+      "new_column": 2,
+      "original_columns": [
+        2
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 3,
+      "original_columns": [
+        4
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 4,
+      "original_columns": [
+        5,
+        7
+      ],
+      "operation": "sum before z-scoring"
+    },
+    {
+      "new_column": 5,
+      "original_columns": [
+        6
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 6,
+      "original_columns": [
+        8
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 7,
+      "original_columns": [
+        9
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 8,
+      "original_columns": [
+        10
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 9,
+      "original_columns": [
+        11
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 10,
+      "original_columns": [
+        12
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 11,
+      "original_columns": [
+        13
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 12,
+      "original_columns": [
+        14
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 13,
+      "original_columns": [
+        15
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 14,
+      "original_columns": [
+        16
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 15,
+      "original_columns": [
+        17
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 16,
+      "original_columns": [
+        18
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 17,
+      "original_columns": [
+        19
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 18,
+      "original_columns": [
+        20
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 19,
+      "original_columns": [
+        21
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 20,
+      "original_columns": [
+        22
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 21,
+      "original_columns": [
+        23
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 22,
+      "original_columns": [
+        24
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 23,
+      "original_columns": [
+        25
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 24,
+      "original_columns": [
+        26
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 25,
+      "original_columns": [
+        27
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 26,
+      "original_columns": [
+        28
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 27,
+      "original_columns": [
+        29
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 28,
+      "original_columns": [
+        30
+      ],
+      "operation": "unchanged"
+    }
+  ],
+  "cached_inputs": [
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10584_ses-01_task-ugr_run-1/joint_bold_left/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323696198637201,
+      "sha256": "4faab47c7541e9fe35c6149ab2412a93e9a4f5d5d469790aa12ddc05e2a7b8d4"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10584_ses-01_task-ugr_run-1/joint_bold_left/standardization.json",
+      "size": 2306,
+      "mtime_ns": 1793323696199637217,
+      "sha256": "78ed705d3e2c71a3523564231855179447655da65054b0a89a51ad83919ec94b"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10584_ses-01_task-ugr_run-1/joint_bold_right/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323696203637281,
+      "sha256": "4a3956f99111feeb59e8ca17b2d3eef0dfc8255f731fb925d3d78eca7e0d6b41"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10584_ses-01_task-ugr_run-1/joint_bold_right/standardization.json",
+      "size": 2303,
+      "mtime_ns": 1793323696204637297,
+      "sha256": "2b816ecf7cde376524bbb9b61bcb6617dad9ca66cb1b3f0c7883fcc94b828cfd"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10584_ses-01_task-ugr_run-1/joint_bold_bilateral/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323696210637394,
+      "sha256": "4959e7e44e51ca7f93db0c8e74a629710bccef559f98b9c16858103759e3ffa7"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10584_ses-01_task-ugr_run-1/joint_bold_bilateral/standardization.json",
+      "size": 2307,
+      "mtime_ns": 1793323696212637426,
+      "sha256": "ff494aef241d6c2a75274cc232c1ef152471d68adad9afafe765029c501d4ce4"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10584_ses-01_task-ugr_run-1/native_film_left/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323696217637507,
+      "sha256": "579ffd92ecd215a182fe05c00aadf7354c6cec2dde6ad84e76f999fe9106d361"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10584_ses-01_task-ugr_run-1/native_film_left/standardization.json",
+      "size": 2303,
+      "mtime_ns": 1793323696219637539,
+      "sha256": "e97175c80cc0e33bf14f4c26894a8157e5cca555859c8ab137a5d5b6584b9b29"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10584_ses-01_task-ugr_run-1/native_film_right/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323696222637587,
+      "sha256": "dfe26e72424154c245a771b2b1d52d3706417327e7bc28b3e0a7f7f73de795c0"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10584_ses-01_task-ugr_run-1/native_film_right/standardization.json",
+      "size": 2307,
+      "mtime_ns": 1793323696223637604,
+      "sha256": "7ef4443ac9b232f20097d0319316298cec4f0d8280160e7c3cfa7895adda1bd6"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10584_ses-01_task-ugr_run-1/native_film_bilateral/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323696227637668,
+      "sha256": "aa00f929ac290c363f4ddcd8f9c46167a39fe6baa871c83bb74e2eed3c3130f9"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10584_ses-01_task-ugr_run-1/native_film_bilateral/standardization.json",
+      "size": 2303,
+      "mtime_ns": 1793323696228637684,
+      "sha256": "928fe0dafada64f83db0dcc49b58bc0a833eac93d3ae9b5959536c5bc0ae76c1"
+    }
+  ],
+  "original_columns": 31,
+  "pooled_columns": 29
+}

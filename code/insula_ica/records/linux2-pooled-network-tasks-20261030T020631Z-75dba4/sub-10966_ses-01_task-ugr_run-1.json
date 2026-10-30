@@ -1,0 +1,342 @@
+{
+  "key": "sub-10966_ses-01_task-ugr_run-1",
+  "condition": 18.21118152724248,
+  "original_model": {
+    "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/sm-0-feat-20261029T002144Z-5e78a6/feat/sub-10966_ses-01_task-ugr_run-1_sm-0.feat/design.mat",
+    "size": 124439,
+    "mtime_ns": 1793259906944661755,
+    "sha256": "bf67dc4fb74594cf113e988ac04162bfc942158e809beaa33cd650a52308fe54"
+  },
+  "mapping": [
+    {
+      "new_column": 0,
+      "original_columns": [
+        0
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 1,
+      "original_columns": [
+        1,
+        3
+      ],
+      "operation": "sum before z-scoring"
+    },
+    {
+      "new_column": 2,
+      "original_columns": [
+        2
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 3,
+      "original_columns": [
+        4
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 4,
+      "original_columns": [
+        5,
+        7
+      ],
+      "operation": "sum before z-scoring"
+    },
+    {
+      "new_column": 5,
+      "original_columns": [
+        6
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 6,
+      "original_columns": [
+        8
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 7,
+      "original_columns": [
+        9
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 8,
+      "original_columns": [
+        10
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 9,
+      "original_columns": [
+        11
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 10,
+      "original_columns": [
+        12
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 11,
+      "original_columns": [
+        13
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 12,
+      "original_columns": [
+        14
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 13,
+      "original_columns": [
+        15
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 14,
+      "original_columns": [
+        16
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 15,
+      "original_columns": [
+        17
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 16,
+      "original_columns": [
+        18
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 17,
+      "original_columns": [
+        19
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 18,
+      "original_columns": [
+        20
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 19,
+      "original_columns": [
+        21
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 20,
+      "original_columns": [
+        22
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 21,
+      "original_columns": [
+        23
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 22,
+      "original_columns": [
+        24
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 23,
+      "original_columns": [
+        25
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 24,
+      "original_columns": [
+        26
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 25,
+      "original_columns": [
+        27
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 26,
+      "original_columns": [
+        28
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 27,
+      "original_columns": [
+        29
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 28,
+      "original_columns": [
+        30
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 29,
+      "original_columns": [
+        31
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 30,
+      "original_columns": [
+        32
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 31,
+      "original_columns": [
+        33
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 32,
+      "original_columns": [
+        34
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 33,
+      "original_columns": [
+        35
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 34,
+      "original_columns": [
+        36
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 35,
+      "original_columns": [
+        37
+      ],
+      "operation": "unchanged"
+    }
+  ],
+  "cached_inputs": [
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10966_ses-01_task-ugr_run-1/joint_bold_left/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323760286668439,
+      "sha256": "5cd26222e7f4ac6e5b32fc546fd7b6c9f218f7685a54a1ae1c43bfc2972b61f2"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10966_ses-01_task-ugr_run-1/joint_bold_left/standardization.json",
+      "size": 2693,
+      "mtime_ns": 1793323760288668471,
+      "sha256": "46fb3652eb31437b17ebee7d40c4eb58f2b457ee467ff98d696927b78f782b75"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10966_ses-01_task-ugr_run-1/joint_bold_right/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323760296668599,
+      "sha256": "47d69fed342596761f1859428f6cc5aaf25ddf04f206dee7e5e7474c4fa38fa2"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10966_ses-01_task-ugr_run-1/joint_bold_right/standardization.json",
+      "size": 2697,
+      "mtime_ns": 1793323760298668631,
+      "sha256": "612f4ecdac727d2963dc8adbe382d2ca73aef22a216366ab6f1e8066cd3acf2f"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10966_ses-01_task-ugr_run-1/joint_bold_bilateral/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323760305668744,
+      "sha256": "5438b5beeae6316dcbe4a9d056bc25db7dbf06f737ea23ffdc54f5210bd7e213"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10966_ses-01_task-ugr_run-1/joint_bold_bilateral/standardization.json",
+      "size": 2691,
+      "mtime_ns": 1793323760307668776,
+      "sha256": "ccb4e0ca1f29097806874a906f261b2dceeca05a9578bd336614c5cd43c955c5"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10966_ses-01_task-ugr_run-1/native_film_left/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323760313668872,
+      "sha256": "ef18ecf89a9ede108dbd4ea5f367f9d6842d5a7d85a5e68e88c3340d5440b93a"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10966_ses-01_task-ugr_run-1/native_film_left/standardization.json",
+      "size": 2675,
+      "mtime_ns": 1793323760315668904,
+      "sha256": "5fed7e3425c12f8261c213ba3c20eef15f395a391018da6f13ae31ff4a91cf00"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10966_ses-01_task-ugr_run-1/native_film_right/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323760320668985,
+      "sha256": "cf21691e7d8d030733d0ba9b4e137b9b1eb311120663a338d62f0dac27f70ae9"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10966_ses-01_task-ugr_run-1/native_film_right/standardization.json",
+      "size": 2691,
+      "mtime_ns": 1793323760322669017,
+      "sha256": "8207c22f98a71da31b9bc889581ee56a65eb8e9fd856dab74c5f1648b86c3b0d"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10966_ses-01_task-ugr_run-1/native_film_bilateral/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323760328669113,
+      "sha256": "c1d5abb490c794abe87fbafc2e78014b7c0929f5a3cca8a5ee9a30a1c95d0db4"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-10966_ses-01_task-ugr_run-1/native_film_bilateral/standardization.json",
+      "size": 2671,
+      "mtime_ns": 1793323760330669146,
+      "sha256": "d7e5204e6fafbb3eba0605fba2dd917e6b0bc65b33813d48f53ac4f4ca239f46"
+    }
+  ],
+  "original_columns": 38,
+  "pooled_columns": 36
+}

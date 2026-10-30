@@ -1,0 +1,300 @@
+{
+  "key": "sub-11426_ses-01_task-ugr_run-1",
+  "condition": 25.94577436961928,
+  "original_model": {
+    "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/sm-0-feat-20261029T002144Z-5e78a6/feat/sub-11426_ses-01_task-ugr_run-1_sm-0.feat/design.mat",
+    "size": 104637,
+    "mtime_ns": 1793264620359192370,
+    "sha256": "fb2efdc88d7d9d61c347528130d9928293dfb44518d5ec5c2c996d6e3fe2be32"
+  },
+  "mapping": [
+    {
+      "new_column": 0,
+      "original_columns": [
+        0
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 1,
+      "original_columns": [
+        1,
+        3
+      ],
+      "operation": "sum before z-scoring"
+    },
+    {
+      "new_column": 2,
+      "original_columns": [
+        2
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 3,
+      "original_columns": [
+        4
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 4,
+      "original_columns": [
+        5,
+        7
+      ],
+      "operation": "sum before z-scoring"
+    },
+    {
+      "new_column": 5,
+      "original_columns": [
+        6
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 6,
+      "original_columns": [
+        8
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 7,
+      "original_columns": [
+        9
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 8,
+      "original_columns": [
+        10
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 9,
+      "original_columns": [
+        11
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 10,
+      "original_columns": [
+        12
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 11,
+      "original_columns": [
+        13
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 12,
+      "original_columns": [
+        14
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 13,
+      "original_columns": [
+        15
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 14,
+      "original_columns": [
+        16
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 15,
+      "original_columns": [
+        17
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 16,
+      "original_columns": [
+        18
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 17,
+      "original_columns": [
+        19
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 18,
+      "original_columns": [
+        20
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 19,
+      "original_columns": [
+        21
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 20,
+      "original_columns": [
+        22
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 21,
+      "original_columns": [
+        23
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 22,
+      "original_columns": [
+        24
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 23,
+      "original_columns": [
+        25
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 24,
+      "original_columns": [
+        26
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 25,
+      "original_columns": [
+        27
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 26,
+      "original_columns": [
+        28
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 27,
+      "original_columns": [
+        29
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 28,
+      "original_columns": [
+        30
+      ],
+      "operation": "unchanged"
+    },
+    {
+      "new_column": 29,
+      "original_columns": [
+        31
+      ],
+      "operation": "unchanged"
+    }
+  ],
+  "cached_inputs": [
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-11426_ses-01_task-ugr_run-1/joint_bold_left/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323812602507692,
+      "sha256": "d89b2492383d1f6a96af9cc86cd4b1a28e0b3091dd77f3d1f9c23e26fa8c626f"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-11426_ses-01_task-ugr_run-1/joint_bold_left/standardization.json",
+      "size": 2361,
+      "mtime_ns": 1793323812603507708,
+      "sha256": "916da31c02e3591e0e6da896249f5ef31adc60cf5b3a582b34e38b1408510414"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-11426_ses-01_task-ugr_run-1/joint_bold_right/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323812612507852,
+      "sha256": "5b3c962ca075bfa90fda0b42eb4a344c4f83643b36773ab9f72bc2783a6324f4"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-11426_ses-01_task-ugr_run-1/joint_bold_right/standardization.json",
+      "size": 2363,
+      "mtime_ns": 1793323812613507868,
+      "sha256": "abc7877b1d5d07dacf71e3407ec7d347be52cecdbb242a09e183eeece8344ca6"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-11426_ses-01_task-ugr_run-1/joint_bold_bilateral/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323812619507964,
+      "sha256": "a8ace2d5641bbe4112609b9313271a03a57974ad65b6c7deb0ae47f64ef3a001"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-11426_ses-01_task-ugr_run-1/joint_bold_bilateral/standardization.json",
+      "size": 2340,
+      "mtime_ns": 1793323812621507996,
+      "sha256": "02ed3bc66f31879ed059e47944347a0d598f127140ab66001ed36927e7d017e8"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-11426_ses-01_task-ugr_run-1/native_film_left/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323812625508060,
+      "sha256": "4b4b0aafb17952236e3c048c55ef84bc1d5c294d19329f7448172fd893acfff1"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-11426_ses-01_task-ugr_run-1/native_film_left/standardization.json",
+      "size": 2359,
+      "mtime_ns": 1793323812626508076,
+      "sha256": "d0f55288b143455064a131ea8f92e0262ab50460cb7c3e768e181662fb3a4a77"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-11426_ses-01_task-ugr_run-1/native_film_right/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323812632508173,
+      "sha256": "e2ff6a47d4106f9ccf273edd57462c1b57208e63cd79f68d264388e0f8a84c43"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-11426_ses-01_task-ugr_run-1/native_film_right/standardization.json",
+      "size": 2363,
+      "mtime_ns": 1793323812633508188,
+      "sha256": "d36e336938abc13764d6af2ada888728cc09bbc9d63c15f1f93a816ebeb71b25"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-11426_ses-01_task-ugr_run-1/native_film_bilateral/standardized_timecourses.npy",
+      "size": 9728,
+      "mtime_ns": 1793323812638508268,
+      "sha256": "0cd1b7a970b6f30940ae41050ebf8faa71146481bbe488c288a402fd6e52857d"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/network-timecourses-20261030T012523Z-613cec/sub-11426_ses-01_task-ugr_run-1/native_film_bilateral/standardization.json",
+      "size": 2363,
+      "mtime_ns": 1793323812639508285,
+      "sha256": "ff4b76f37e94e2243e70c4b3454826dae8716d0daaa8b1a7a43d5cf93f6e789c"
+    }
+  ],
+  "original_columns": 32,
+  "pooled_columns": 30
+}
