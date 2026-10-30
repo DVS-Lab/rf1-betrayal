@@ -1,0 +1,5 @@
+# Original manuscript group-map and UGR audit
+
+Read-only inventory of live seeds, original UGR/Trust N132 activation group maps (UGR COPE11/12, Trust COPE10), saved group designs, and all 249 original sm-5 UGR designs. See manifest.json for original paths, hashes and copies. Map names are not assumed to establish effect direction; group_cases.json preserves saved contrast names and input paths. Only 3D group/seed images and small model files are copied. No subject 4D images, FEAT jobs, or existing output changes.
+
+The original contrast estimability diagnostic scales design columns for numerical SVD and transforms original contrast weights by the same SDs. It reports three numerical cutoffs, including a conservative 1e-6 diagnostic, rather than changing original models or substituting standardized task contrasts. Constant-column weights and near-dependent contrasts require review. A review flag is not a new exclusion. Timing compares the original model with the accepted corrected acquisition-TR registry. Missing originals are recorded and never replaced silently by the newer sm-0 ICA stream.
