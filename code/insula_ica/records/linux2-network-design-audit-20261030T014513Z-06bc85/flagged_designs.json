@@ -1,0 +1,2497 @@
+[
+  {
+    "key": "sub-11031_ses-01_task-trust_run-1",
+    "diagnostic": {
+      "rows": 280,
+      "columns": 42,
+      "nonconstant_columns": 42,
+      "singular_values": [
+        44.1812167367401,
+        31.288983385931033,
+        26.844594232294803,
+        26.202116488567974,
+        23.85003288196035,
+        23.57528662985873,
+        22.88870832560247,
+        22.05293160025273,
+        20.130917099723572,
+        20.081934366867912,
+        19.33405025287586,
+        19.244713039822184,
+        18.665574129292093,
+        18.03821189203875,
+        17.33489692930973,
+        17.041930245527713,
+        16.955488447591314,
+        16.71042908800816,
+        15.904393482202266,
+        14.943145853933773,
+        14.339296772385973,
+        14.265923968945403,
+        13.18021914633615,
+        12.266381548903071,
+        11.444211214758406,
+        10.923271546979484,
+        10.041543558568303,
+        8.278716597274393,
+        6.725782249004655,
+        6.321675056640643,
+        5.957218455527633,
+        5.243616591713932,
+        4.487950503721959,
+        4.216111074441989,
+        3.416176928146725,
+        3.178633837049473,
+        2.7784225389036696,
+        2.2972744839534,
+        2.0995559270848263,
+        1.7803626953085372,
+        1.4809686835379576,
+        0.9974475141555913
+      ],
+      "condition_nonconstant": 44.2942772524152,
+      "rank_at_relative_cutoffs": {
+        "1e-10": 42,
+        "1e-08": 42,
+        "1e-06": 42
+      },
+      "task_columns": [
+        {
+          "index": 0,
+          "conditional_energy_fraction": 0.6108412223934346,
+          "constant": false
+        },
+        {
+          "index": 1,
+          "conditional_energy_fraction": 0.5772454320840331,
+          "constant": false
+        },
+        {
+          "index": 2,
+          "conditional_energy_fraction": 0.5104842285021653,
+          "constant": false
+        },
+        {
+          "index": 3,
+          "conditional_energy_fraction": 0.6472134515222386,
+          "constant": false
+        },
+        {
+          "index": 4,
+          "conditional_energy_fraction": 0.7083221849469615,
+          "constant": false
+        },
+        {
+          "index": 5,
+          "conditional_energy_fraction": 0.7029834436629867,
+          "constant": false
+        },
+        {
+          "index": 6,
+          "conditional_energy_fraction": 0.6966872451557913,
+          "constant": false
+        },
+        {
+          "index": 7,
+          "conditional_energy_fraction": 0.7114333791880452,
+          "constant": false
+        },
+        {
+          "index": 8,
+          "conditional_energy_fraction": 0.6597265034339759,
+          "constant": false
+        },
+        {
+          "index": 9,
+          "conditional_energy_fraction": 0.6611196955939186,
+          "constant": false
+        }
+      ]
+    },
+    "design": {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/sm-0-feat-20261029T002144Z-5e78a6/feat/sub-11031_ses-01_task-trust_run-1_sm-0.feat/design.mat",
+      "size": 160878,
+      "mtime_ns": 1793234376393929459,
+      "sha256": "49e8dad9226eb49a3052c996b3710b709a055e934adee8322939f2112fa11348"
+    },
+    "standardization": {
+      "method": "columnwise sample SD, ddof=1, within run",
+      "response_mean": [
+        -1.3195793664116147e-15,
+        0.0,
+        -1.2180732613030289e-15,
+        0.0,
+        2.0301221021717148e-16
+      ],
+      "response_SD": [
+        9.491129400050013,
+        8.590813348282424,
+        8.273846922800201,
+        10.931131557554078,
+        9.116854183220314
+      ],
+      "design_mean": [
+        -1.821427953899565e-11,
+        5.035714291985143e-10,
+        -1.153571438199108e-09,
+        -1.2999999956108637e-09,
+        5.00000020429595e-11,
+        2.5392857125154657e-09,
+        8.892857110792487e-10,
+        1.5314285692619762e-09,
+        6.071428685698401e-10,
+        -7.499998950881437e-11,
+        4.389183663347903e-10,
+        1.142908166854326e-10,
+        9.510816327947972e-10,
+        9.835561224720172e-10,
+        7.643367360163752e-11,
+        -3.3320408186071624e-10,
+        1.8338505317469104e-18,
+        -7.1428574860421534e-12,
+        1.5860328923216522e-18,
+        -3.001020726565797e-11,
+        -1.1895246692412392e-18,
+        3.9650822308041304e-19,
+        -3.249999821750253e-10,
+        -3.249999821750253e-10,
+        4.2142857767479043e-10,
+        3.196785721306423e-09,
+        2.010857131501398e-09,
+        -1.1057500061758451e-10,
+        -1.2792857130886852e-10,
+        -5.336428653801449e-11,
+        2.2328571439469185e-09,
+        -3.5714285850125497e-09,
+        -1.7907142895496568e-09,
+        1.139285711822456e-08,
+        7.214285713660498e-09,
+        9.732142882154912e-09,
+        -1.1928571376694309e-09,
+        1.3771428341342277e-08,
+        -2.7107142901855453e-10,
+        -1.982142822891981e-09,
+        8.117857011999012e-09,
+        -9.142857016713231e-09
+      ],
+      "design_SD": [
+        0.11730341391830125,
+        0.11091641617491216,
+        0.1163861501464682,
+        0.04873437385526222,
+        0.04560224933633494,
+        0.04600268114346869,
+        0.04955197881663137,
+        0.04544384588081598,
+        0.03740904053052678,
+        0.05663262881340096,
+        0.05986843512904874,
+        0.059868434324285846,
+        0.059868434797078235,
+        0.05986843361728559,
+        0.05986843491843691,
+        0.05986843341093758,
+        0.05986843403845415,
+        0.059868433849576,
+        0.05986843403845415,
+        0.059868434695589015,
+        0.059868434038454134,
+        0.05986843385003491,
+        0.05976143219980147,
+        0.05976143219980147,
+        0.03386960648188635,
+        0.04973155420042407,
+        0.06340571047374377,
+        0.0012361108919415947,
+        0.0009109607850388445,
+        0.0006527571958620067,
+        0.06455953615073418,
+        1.0017905271091199,
+        1.0017905452979448,
+        1.0017904830962427,
+        1.0017905303828256,
+        1.001790633257801,
+        1.0017905139582148,
+        1.0017905225452541,
+        1.0017905199154102,
+        1.0017905350759297,
+        1.0017905275903674,
+        1.0017905343228612
+      ],
+      "constant_design_columns_zeroed": [],
+      "rank": 42,
+      "columns": 42,
+      "pseudoinverse_relative_cutoff": 1e-10,
+      "estimator": "pinv(Z(full saved L1 task+nuisance design)) @ Z(stage1 timecourses)",
+      "temporal_filter": false,
+      "nuisance_removed_before_fit": false,
+      "whitening": false
+    },
+    "task_EV_titles": [
+      "c_C",
+      "c_F",
+      "c_S",
+      "C_def",
+      "C_rec",
+      "F_def",
+      "F_rec",
+      "S_def",
+      "S_rec",
+      "miss"
+    ],
+    "event_amplitude_summaries": [
+      {
+        "EV": 1,
+        "title": "c_C",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-1_choice_computer.txt",
+        "sha256": "e9e11a98e1b6302a03452ab7313cafde082b34d2920263558c4c15dc2034ed64",
+        "events": 14,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 2,
+        "title": "c_F",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-1_choice_friend.txt",
+        "sha256": "796ca031312a851b362c21faba3f40b5ccfbe3f8ec2e89c41b773ebda62d7f13",
+        "events": 13,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 3,
+        "title": "c_S",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-1_choice_stranger.txt",
+        "sha256": "1d2611071dc1fe6e6ecba763600cb9ec596bcfe71d5b20aa17b184c884c01dbd",
+        "events": 14,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 4,
+        "title": "C_def",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-1_outcome_computer_defect.txt",
+        "sha256": "3daa56926212be42c3e0f51be4e47ca1dc83ad85c8e8aeeffb81c7eab1660ff4",
+        "events": 7,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 5,
+        "title": "C_rec",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-1_outcome_computer_recip.txt",
+        "sha256": "e8ffd97e569abc2d298c84e0df2bd8235fbc5b0f4a1f571235f3c80482932e79",
+        "events": 6,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 6,
+        "title": "F_def",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-1_outcome_friend_defect.txt",
+        "sha256": "88a7b2fece048a12028a2534f0857a837269c2712e97d211ab42ca7ef0132780",
+        "events": 6,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 7,
+        "title": "F_rec",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-1_outcome_friend_recip.txt",
+        "sha256": "024b2aaeadd049e2862489492ad2514830acd247a88dd73f3bfb37a7737f0b20",
+        "events": 7,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 8,
+        "title": "S_def",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-1_outcome_stranger_defect.txt",
+        "sha256": "4a999f4236379379003a278407e53d78be39a720487e90caed4bdadce1f0a353",
+        "events": 6,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 9,
+        "title": "S_rec",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-1_outcome_stranger_recip.txt",
+        "sha256": "9f07b64bc818c1097433001a434d7dcdd03df787e34006c84e1ae2406106d74d",
+        "events": 4,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 10,
+        "title": "miss",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-1_missed_trial.txt",
+        "sha256": "6145b4e67a9e5626d0927089e2daf80f75505bf7150071f74f4b6a98e4e327fb",
+        "events": 1,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      }
+    ],
+    "cutoff_diagnostics": [
+      {
+        "mode": "joint_bold",
+        "cutoff": 1e-10,
+        "labels": [
+          "trust_C_rec_minus_def",
+          "trust_F_rec_minus_def",
+          "trust_S_rec_minus_def"
+        ],
+        "diagnostic_estimates": [
+          [
+            -0.06535379764430146,
+            0.23408247722602038,
+            0.04822360947536447,
+            0.09974919792601074,
+            0.08848158779526254
+          ],
+          [
+            -0.1489796458609954,
+            0.10090294401406263,
+            0.10373196258704385,
+            0.008820707726793359,
+            0.05475600342929067
+          ],
+          [
+            0.1030979363999723,
+            -0.055672524455386334,
+            -0.24606505284561078,
+            -0.03515797507585032,
+            -0.10085361535214232
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "joint_bold",
+        "cutoff": 1e-08,
+        "labels": [
+          "trust_C_rec_minus_def",
+          "trust_F_rec_minus_def",
+          "trust_S_rec_minus_def"
+        ],
+        "diagnostic_estimates": [
+          [
+            -0.06535379764430146,
+            0.23408247722602038,
+            0.04822360947536447,
+            0.09974919792601074,
+            0.08848158779526254
+          ],
+          [
+            -0.1489796458609954,
+            0.10090294401406263,
+            0.10373196258704385,
+            0.008820707726793359,
+            0.05475600342929067
+          ],
+          [
+            0.1030979363999723,
+            -0.055672524455386334,
+            -0.24606505284561078,
+            -0.03515797507585032,
+            -0.10085361535214232
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "joint_bold",
+        "cutoff": 1e-06,
+        "labels": [
+          "trust_C_rec_minus_def",
+          "trust_F_rec_minus_def",
+          "trust_S_rec_minus_def"
+        ],
+        "diagnostic_estimates": [
+          [
+            -0.06535379764430146,
+            0.23408247722602038,
+            0.04822360947536447,
+            0.09974919792601074,
+            0.08848158779526254
+          ],
+          [
+            -0.1489796458609954,
+            0.10090294401406263,
+            0.10373196258704385,
+            0.008820707726793359,
+            0.05475600342929067
+          ],
+          [
+            0.1030979363999723,
+            -0.055672524455386334,
+            -0.24606505284561078,
+            -0.03515797507585032,
+            -0.10085361535214232
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "native_film",
+        "cutoff": 1e-10,
+        "labels": [
+          "trust_C_rec_minus_def",
+          "trust_F_rec_minus_def",
+          "trust_S_rec_minus_def"
+        ],
+        "diagnostic_estimates": [
+          [
+            -0.06327292513292204,
+            0.23774050478195674,
+            0.0413145916879058,
+            0.09982906904252103,
+            0.09148010936580472
+          ],
+          [
+            -0.14733732516323844,
+            0.10379748656891191,
+            0.10136740667542245,
+            0.004938563857972457,
+            0.06206694022217551
+          ],
+          [
+            0.10006363041489827,
+            -0.055364872572006237,
+            -0.2491106800830799,
+            -0.034285312696118585,
+            -0.1081354866031993
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "native_film",
+        "cutoff": 1e-08,
+        "labels": [
+          "trust_C_rec_minus_def",
+          "trust_F_rec_minus_def",
+          "trust_S_rec_minus_def"
+        ],
+        "diagnostic_estimates": [
+          [
+            -0.06327292513292204,
+            0.23774050478195674,
+            0.0413145916879058,
+            0.09982906904252103,
+            0.09148010936580472
+          ],
+          [
+            -0.14733732516323844,
+            0.10379748656891191,
+            0.10136740667542245,
+            0.004938563857972457,
+            0.06206694022217551
+          ],
+          [
+            0.10006363041489827,
+            -0.055364872572006237,
+            -0.2491106800830799,
+            -0.034285312696118585,
+            -0.1081354866031993
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "native_film",
+        "cutoff": 1e-06,
+        "labels": [
+          "trust_C_rec_minus_def",
+          "trust_F_rec_minus_def",
+          "trust_S_rec_minus_def"
+        ],
+        "diagnostic_estimates": [
+          [
+            -0.06327292513292204,
+            0.23774050478195674,
+            0.0413145916879058,
+            0.09982906904252103,
+            0.09148010936580472
+          ],
+          [
+            -0.14733732516323844,
+            0.10379748656891191,
+            0.10136740667542245,
+            0.004938563857972457,
+            0.06206694022217551
+          ],
+          [
+            0.10006363041489827,
+            -0.055364872572006237,
+            -0.2491106800830799,
+            -0.034285312696118585,
+            -0.1081354866031993
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      }
+    ]
+  },
+  {
+    "key": "sub-11031_ses-01_task-trust_run-2",
+    "diagnostic": {
+      "rows": 280,
+      "columns": 40,
+      "nonconstant_columns": 39,
+      "singular_values": [
+        38.14986910471463,
+        32.606960704001516,
+        27.117338397050354,
+        25.995592859096813,
+        24.811991373635394,
+        23.113686145303067,
+        22.50981842582734,
+        22.26564262931254,
+        21.87532737962402,
+        21.23447359972475,
+        18.889287608378392,
+        18.363467265000313,
+        17.982324076301566,
+        17.472311808818816,
+        16.82302586326131,
+        16.28893198096277,
+        15.807222047117916,
+        15.468014399685076,
+        14.637711233314553,
+        13.225799192039672,
+        12.539560689471854,
+        12.28900951779373,
+        11.26809146811666,
+        10.89434629864843,
+        10.191144651848298,
+        8.99482059547197,
+        8.958466756787454,
+        8.43869074851479,
+        7.351504811332888,
+        6.564282808215492,
+        5.39786221959578,
+        5.027046034680792,
+        4.921492143552133,
+        4.20378096646451,
+        3.84363527760621,
+        3.732171761561856,
+        1.9751826211663672,
+        1.6988835064037338,
+        1.0458982156762777
+      ],
+      "condition_nonconstant": 36.47569957851676,
+      "rank_at_relative_cutoffs": {
+        "1e-10": 39,
+        "1e-08": 39,
+        "1e-06": 39
+      },
+      "task_columns": [
+        {
+          "index": 0,
+          "conditional_energy_fraction": 0.5623836348188147,
+          "constant": false
+        },
+        {
+          "index": 1,
+          "conditional_energy_fraction": 0.4694251507679879,
+          "constant": false
+        },
+        {
+          "index": 2,
+          "conditional_energy_fraction": 0.5788486122191712,
+          "constant": false
+        },
+        {
+          "index": 3,
+          "conditional_energy_fraction": 0.5694001371551771,
+          "constant": false
+        },
+        {
+          "index": 4,
+          "conditional_energy_fraction": 0.5955686804149969,
+          "constant": false
+        },
+        {
+          "index": 5,
+          "conditional_energy_fraction": 0.6843740742531996,
+          "constant": false
+        },
+        {
+          "index": 6,
+          "conditional_energy_fraction": 0.6630724536251849,
+          "constant": false
+        },
+        {
+          "index": 7,
+          "conditional_energy_fraction": 0.5895004711095636,
+          "constant": false
+        },
+        {
+          "index": 8,
+          "conditional_energy_fraction": 0.711137184087111,
+          "constant": false
+        },
+        {
+          "index": 9,
+          "conditional_energy_fraction": null,
+          "constant": true
+        }
+      ]
+    },
+    "design": {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/sm-0-feat-20261029T002144Z-5e78a6/feat/sub-11031_ses-01_task-trust_run-2_sm-0.feat/design.mat",
+      "size": 152953,
+      "mtime_ns": 1793234394478205285,
+      "sha256": "7fc713f5abd89589915c55ef23a867230a2e85b24f6323f4f27901111bfa315d"
+    },
+    "standardization": {
+      "method": "columnwise sample SD, ddof=1, within run",
+      "response_mean": [
+        8.120488408686859e-16,
+        3.2481953634747436e-15,
+        8.120488408686859e-16,
+        8.120488408686859e-16,
+        -4.0602442043434295e-16
+      ],
+      "response_SD": [
+        9.956486472191232,
+        9.85848845662129,
+        8.317354556390644,
+        14.417334770806791,
+        11.027052242716092
+      ],
+      "design_mean": [
+        1.1392857227561702e-09,
+        -4.464285627677914e-10,
+        7.642857072914788e-10,
+        1.1750000010914737e-09,
+        -2.453571414690841e-09,
+        -1.0724999906899988e-09,
+        3.335714288580312e-09,
+        -3.3607142916648734e-09,
+        -3.0496428462457373e-09,
+        0.0,
+        9.607270433067575e-11,
+        -1.821339277561467e-10,
+        2.5785841879391987e-10,
+        2.7643239852417505e-10,
+        -1.162141581330973e-09,
+        4.028622453614612e-10,
+        -1.2390881971262908e-18,
+        -1.4072576229318123e-10,
+        -1.2886517250113425e-18,
+        1.4072576268968945e-10,
+        -5.947623346206196e-19,
+        -1.1465332651537454e-14,
+        -3.249999821750253e-10,
+        -1.039285714283879e-09,
+        -1.7086428541504353e-09,
+        7.442857156980676e-09,
+        7.481428586296319e-11,
+        2.3504285732649913e-11,
+        -5.2199998088592456e-12,
+        1.1500000012409322e-09,
+        1.4899999962171364e-08,
+        2.284642858101292e-08,
+        -3.3571430230987837e-09,
+        8.642857334579496e-09,
+        -8.825000014089923e-09,
+        -2.071428577871919e-09,
+        -6.4249999891836346e-09,
+        -1.637142897438691e-09,
+        -6.492857099194005e-09,
+        -1.2792857154883343e-08
+      ],
+      "design_SD": [
+        0.11399353856911269,
+        0.11657519748918989,
+        0.10179703841694329,
+        0.04625487291473429,
+        0.046193139366925914,
+        0.049223753023059855,
+        0.048559308038232156,
+        0.04262757410711474,
+        0.04548764063165206,
+        0.0,
+        0.05986843557525527,
+        0.059868432156452614,
+        0.05986843520805702,
+        0.05986843434695909,
+        0.05986843389445742,
+        0.059868435331578686,
+        0.05986843371184471,
+        0.05986843379925383,
+        0.05986843301583395,
+        0.05986843379925382,
+        0.05986843371184471,
+        0.05986843383225298,
+        0.05976143219980147,
+        0.01664496393410841,
+        0.029517402741703804,
+        0.1096031947009702,
+        0.0011718556916957253,
+        0.00039822188011961985,
+        0.0003675203608923061,
+        0.08080100641719268,
+        1.0017904803931055,
+        1.0017904980428585,
+        1.0017905335176922,
+        1.0017905137540686,
+        1.0017905379526428,
+        1.001790517074597,
+        1.0017905300821273,
+        1.0017905305682104,
+        1.0017905069418962,
+        1.001790495431261
+      ],
+      "constant_design_columns_zeroed": [
+        9
+      ],
+      "rank": 39,
+      "columns": 40,
+      "pseudoinverse_relative_cutoff": 1e-10,
+      "estimator": "pinv(Z(full saved L1 task+nuisance design)) @ Z(stage1 timecourses)",
+      "temporal_filter": false,
+      "nuisance_removed_before_fit": false,
+      "whitening": false
+    },
+    "task_EV_titles": [
+      "c_C",
+      "c_F",
+      "c_S",
+      "C_def",
+      "C_rec",
+      "F_def",
+      "F_rec",
+      "S_def",
+      "S_rec",
+      "miss"
+    ],
+    "event_amplitude_summaries": [
+      {
+        "EV": 1,
+        "title": "c_C",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-2_choice_computer.txt",
+        "sha256": "979180960d3f052201150747e292a7ff293c81e1b68f5406075807acf79cfebf",
+        "events": 14,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 2,
+        "title": "c_F",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-2_choice_friend.txt",
+        "sha256": "339342f452ac82272d7276a32a0eded30f627999011827f956fd51305669b00d",
+        "events": 14,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 3,
+        "title": "c_S",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-2_choice_stranger.txt",
+        "sha256": "0f6c69ae3f5049e52ef3dfa90c57b720f959194e34d49918e1dfa991a7fa70b5",
+        "events": 14,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 4,
+        "title": "C_def",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-2_outcome_computer_defect.txt",
+        "sha256": "80e254df2cfa56cc3f0c527adfb99b5d9d636bd3cf6427dc990313761cfe4212",
+        "events": 6,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 5,
+        "title": "C_rec",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-2_outcome_computer_recip.txt",
+        "sha256": "a71333d78870893397159e808c32af3b674145fd4d91e4a66b3b1f2a1c783d05",
+        "events": 6,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 6,
+        "title": "F_def",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-2_outcome_friend_defect.txt",
+        "sha256": "ee6c71a1d46f793b171efaf08707b73d198414c5a0c3bab01aeb2cdae33274fa",
+        "events": 7,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 7,
+        "title": "F_rec",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-2_outcome_friend_recip.txt",
+        "sha256": "0992e0010c10295f5c66e3bba3e268599f9d317c84f83629ae0b02ccc54ec261",
+        "events": 7,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 8,
+        "title": "S_def",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-2_outcome_stranger_defect.txt",
+        "sha256": "bdec5cdcd88e1e2ba7007cc5c7eab162d70aa470271657ff6831e78fca5e2fa3",
+        "events": 5,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 9,
+        "title": "S_rec",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/trust/run-2_outcome_stranger_recip.txt",
+        "sha256": "e787bbf331d8189068970a121a6baf74bcbbc631a7095b6d18e908695ab1f172",
+        "events": 6,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      }
+    ],
+    "cutoff_diagnostics": [
+      {
+        "mode": "joint_bold",
+        "cutoff": 1e-10,
+        "labels": [
+          "trust_C_rec_minus_def",
+          "trust_F_rec_minus_def",
+          "trust_S_rec_minus_def"
+        ],
+        "diagnostic_estimates": [
+          [
+            0.1411297290549543,
+            -0.19731237509179061,
+            -0.06949431852266467,
+            -0.022867106079849375,
+            0.007211859518270636
+          ],
+          [
+            -0.09398438497146722,
+            0.07133215168873273,
+            0.017966660455586328,
+            0.07865660793348345,
+            0.03621634809652643
+          ],
+          [
+            0.08229765631148477,
+            -0.24194373983726894,
+            -0.2002566935630524,
+            0.04107902131552535,
+            -0.0557533718975559
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "joint_bold",
+        "cutoff": 1e-08,
+        "labels": [
+          "trust_C_rec_minus_def",
+          "trust_F_rec_minus_def",
+          "trust_S_rec_minus_def"
+        ],
+        "diagnostic_estimates": [
+          [
+            0.1411297290549543,
+            -0.19731237509179061,
+            -0.06949431852266467,
+            -0.022867106079849375,
+            0.007211859518270636
+          ],
+          [
+            -0.09398438497146722,
+            0.07133215168873273,
+            0.017966660455586328,
+            0.07865660793348345,
+            0.03621634809652643
+          ],
+          [
+            0.08229765631148477,
+            -0.24194373983726894,
+            -0.2002566935630524,
+            0.04107902131552535,
+            -0.0557533718975559
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "joint_bold",
+        "cutoff": 1e-06,
+        "labels": [
+          "trust_C_rec_minus_def",
+          "trust_F_rec_minus_def",
+          "trust_S_rec_minus_def"
+        ],
+        "diagnostic_estimates": [
+          [
+            0.1411297290549543,
+            -0.19731237509179061,
+            -0.06949431852266467,
+            -0.022867106079849375,
+            0.007211859518270636
+          ],
+          [
+            -0.09398438497146722,
+            0.07133215168873273,
+            0.017966660455586328,
+            0.07865660793348345,
+            0.03621634809652643
+          ],
+          [
+            0.08229765631148477,
+            -0.24194373983726894,
+            -0.2002566935630524,
+            0.04107902131552535,
+            -0.0557533718975559
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "native_film",
+        "cutoff": 1e-10,
+        "labels": [
+          "trust_C_rec_minus_def",
+          "trust_F_rec_minus_def",
+          "trust_S_rec_minus_def"
+        ],
+        "diagnostic_estimates": [
+          [
+            0.140797358000895,
+            -0.1992192288406221,
+            -0.05926545632761969,
+            -0.021624694688972393,
+            0.0003903755974338091
+          ],
+          [
+            -0.09560535784921836,
+            0.0719221417503215,
+            0.01553009915570417,
+            0.07656766307488407,
+            0.036275901793706794
+          ],
+          [
+            0.08001435550491973,
+            -0.24549673996282034,
+            -0.1920267295566973,
+            0.04323299193206233,
+            -0.06091312216530097
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "native_film",
+        "cutoff": 1e-08,
+        "labels": [
+          "trust_C_rec_minus_def",
+          "trust_F_rec_minus_def",
+          "trust_S_rec_minus_def"
+        ],
+        "diagnostic_estimates": [
+          [
+            0.140797358000895,
+            -0.1992192288406221,
+            -0.05926545632761969,
+            -0.021624694688972393,
+            0.0003903755974338091
+          ],
+          [
+            -0.09560535784921836,
+            0.0719221417503215,
+            0.01553009915570417,
+            0.07656766307488407,
+            0.036275901793706794
+          ],
+          [
+            0.08001435550491973,
+            -0.24549673996282034,
+            -0.1920267295566973,
+            0.04323299193206233,
+            -0.06091312216530097
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "native_film",
+        "cutoff": 1e-06,
+        "labels": [
+          "trust_C_rec_minus_def",
+          "trust_F_rec_minus_def",
+          "trust_S_rec_minus_def"
+        ],
+        "diagnostic_estimates": [
+          [
+            0.140797358000895,
+            -0.1992192288406221,
+            -0.05926545632761969,
+            -0.021624694688972393,
+            0.0003903755974338091
+          ],
+          [
+            -0.09560535784921836,
+            0.0719221417503215,
+            0.01553009915570417,
+            0.07656766307488407,
+            0.036275901793706794
+          ],
+          [
+            0.08001435550491973,
+            -0.24549673996282034,
+            -0.1920267295566973,
+            0.04323299193206233,
+            -0.06091312216530097
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      }
+    ]
+  },
+  {
+    "key": "sub-11031_ses-01_task-ugr_run-1",
+    "diagnostic": {
+      "rows": 240,
+      "columns": 43,
+      "nonconstant_columns": 42,
+      "singular_values": [
+        38.90814055419151,
+        29.907609208566328,
+        25.986265305039694,
+        23.953642044117935,
+        23.412578264704027,
+        22.127539029686563,
+        21.64394654589663,
+        21.263469581499493,
+        20.27333709883077,
+        20.097849309932982,
+        19.166981881894923,
+        18.363095213523977,
+        17.708596012546177,
+        16.71408852635771,
+        16.56464237027296,
+        15.041519714560698,
+        14.781343879638708,
+        14.49047013039993,
+        13.45190180917446,
+        13.199247165284044,
+        12.523589513698912,
+        11.440035091108939,
+        11.059153498245136,
+        10.904919833707766,
+        10.153664366601875,
+        9.439820156313719,
+        8.858459841783743,
+        7.499912976558101,
+        6.60046183965114,
+        5.090238751489863,
+        4.71750114893754,
+        4.561142537526903,
+        3.884701246451742,
+        3.7007295706676624,
+        3.25491838797346,
+        2.611059989631195,
+        2.4951113794026636,
+        1.6398003359346234,
+        1.0352947261816634,
+        0.7238813647652921,
+        0.64288986117082,
+        1.951675582712253e-06
+      ],
+      "condition_nonconstant": 19935762.325888548,
+      "rank_at_relative_cutoffs": {
+        "1e-10": 42,
+        "1e-08": 42,
+        "1e-06": 41
+      },
+      "task_columns": [
+        {
+          "index": 0,
+          "conditional_energy_fraction": 0.15545065565842967,
+          "constant": false
+        },
+        {
+          "index": 1,
+          "conditional_energy_fraction": 0.40500275086959614,
+          "constant": false
+        },
+        {
+          "index": 2,
+          "conditional_energy_fraction": 0.13153931640207372,
+          "constant": false
+        },
+        {
+          "index": 3,
+          "conditional_energy_fraction": 0.5748679426849879,
+          "constant": false
+        },
+        {
+          "index": 4,
+          "conditional_energy_fraction": 3.187479018461741e-14,
+          "constant": false
+        },
+        {
+          "index": 5,
+          "conditional_energy_fraction": 3.18747927792737e-14,
+          "constant": false
+        },
+        {
+          "index": 6,
+          "conditional_energy_fraction": 0.09763689614184745,
+          "constant": false
+        },
+        {
+          "index": 7,
+          "conditional_energy_fraction": 0.4742556212194762,
+          "constant": false
+        },
+        {
+          "index": 8,
+          "conditional_energy_fraction": 0.30386442784937123,
+          "constant": false
+        },
+        {
+          "index": 9,
+          "conditional_energy_fraction": 0.4686407040080817,
+          "constant": false
+        },
+        {
+          "index": 10,
+          "conditional_energy_fraction": null,
+          "constant": true
+        }
+      ]
+    },
+    "design": {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/sm-0-feat-20261029T002144Z-5e78a6/feat/sub-11031_ses-01_task-ugr_run-1_sm-0.feat/design.mat",
+      "size": 140420,
+      "mtime_ns": 1793263371176536777,
+      "sha256": "32f392d7d26353e05b8fef3897080ecc0aa33fe6ad901d3cf14b4fe7dbf1c686"
+    },
+    "standardization": {
+      "method": "columnwise sample SD, ddof=1, within run",
+      "response_mean": [
+        -2.3684757858670006e-16,
+        0.0,
+        -1.4210854715202005e-15,
+        4.026408835973901e-15,
+        4.736951571734001e-16
+      ],
+      "response_SD": [
+        9.881845420302273,
+        11.320953510102802,
+        8.785146779281572,
+        13.702766858848884,
+        12.022988555821678
+      ],
+      "design_mean": [
+        -1.8958333313524405e-08,
+        5.329166698255413e-08,
+        -2.7500000084982694e-09,
+        -6.249993948307756e-11,
+        -3.750000012164162e-09,
+        2.0416667039872366e-09,
+        4.933333315239782e-09,
+        -1.4791666824604903e-08,
+        7.499996211463948e-13,
+        -7.612916883038473e-12,
+        0.0,
+        3.48345487062122e-10,
+        5.91664930417457e-10,
+        3.558263889039459e-10,
+        -3.0250694397354616e-10,
+        3.1041666686467777e-10,
+        8.32986102692936e-12,
+        8.333335757559901e-12,
+        -8.333853699730535e-11,
+        -4.16666649100117e-12,
+        8.333854081369699e-11,
+        4.166666664473517e-12,
+        -4.708333441371416e-10,
+        -2.291666673787107e-09,
+        -3.5558333355325176e-09,
+        1.3345833341227298e-08,
+        -2.667083344468658e-10,
+        -1.4166666589188567e-10,
+        -2.050000002198875e-12,
+        2.626958325926502e-09,
+        -1.46999999379079e-08,
+        -8.75000000695921e-10,
+        -1.2083333380171387e-08,
+        -3.845833445222565e-09,
+        7.3083333206972835e-09,
+        -3.4791666755906726e-09,
+        -1.621666671641764e-08,
+        1.7500000099960702e-08,
+        1.3721666671309695e-08,
+        -1.871154177897812e-09,
+        6.499999974374226e-09,
+        5.333333309304652e-09,
+        4.266666702353502e-09
+      ],
+      "design_SD": [
+        0.2740850955869568,
+        2.1553756523588317,
+        0.3572707241926552,
+        1.1521997567155156,
+        0.1762560731648603,
+        0.2570400299486496,
+        0.3867768204587197,
+        1.395356461978914,
+        0.005734823128364118,
+        0.0025448595148811126,
+        0.0,
+        0.06468462277339149,
+        0.06468462307608011,
+        0.06468462307674872,
+        0.06468462455114259,
+        0.06468462271820093,
+        0.0646846210113404,
+        0.06468462244684664,
+        0.06468462310815323,
+        0.06468462244746775,
+        0.06468462310815323,
+        0.06468462244746775,
+        0.06454972030664968,
+        0.06282828427739831,
+        0.04222976690823261,
+        0.4840537524575676,
+        0.0035295408930622212,
+        0.0016558208664042195,
+        0.0004323902613083712,
+        0.12112065316337856,
+        1.0020898558780968,
+        1.002089868063884,
+        1.0020898626266317,
+        1.0020898825352986,
+        1.002089842044349,
+        1.0020898663985633,
+        1.0020898971366994,
+        1.0020898411899044,
+        1.0020898554207902,
+        1.0020898931388589,
+        1.0020898723725564,
+        1.0020898731385977,
+        1.0020898404969258
+      ],
+      "constant_design_columns_zeroed": [
+        10
+      ],
+      "rank": 42,
+      "columns": 43,
+      "pseudoinverse_relative_cutoff": 1e-10,
+      "estimator": "pinv(Z(full saved L1 task+nuisance design)) @ Z(stage1 timecourses)",
+      "temporal_filter": false,
+      "nuisance_removed_before_fit": false,
+      "whitening": false
+    },
+    "task_EV_titles": [
+      "nonsocial_high_constant",
+      "nonsocial_high_pmod",
+      "nonsocial_low_constant",
+      "nonsocial_low_pmod",
+      "social_high_constant",
+      "social_high_pmod",
+      "social_low_constant",
+      "social_low_pmod",
+      "rt_constant",
+      "rt_pmod",
+      "miss"
+    ],
+    "event_amplitude_summaries": [
+      {
+        "EV": 1,
+        "title": "nonsocial_high_constant",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-1_nonsocial_high_constant.txt",
+        "sha256": "3a4096a7ec7dad08d789f86df4027b8fba4b2f08a39531a1c7c159c786898d18",
+        "events": 7,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 2,
+        "title": "nonsocial_high_pmod",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-1_nonsocial_high_pmod.txt",
+        "sha256": "592210e76caf30930e6fa2bc40467ee9c22fce0bfb5bc3af5bc1fb28d8dea54b",
+        "events": 7,
+        "amplitude_min": -2.458333,
+        "amplitude_max": 11.541667,
+        "amplitude_SD": 6.197431989566818,
+        "unique_amplitudes": 4
+      },
+      {
+        "EV": 3,
+        "title": "nonsocial_low_constant",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-1_nonsocial_low_constant.txt",
+        "sha256": "833a541c2967d3ea9370b06b08a45940bf6892b0193922ac3ec4851f86087089",
+        "events": 17,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 4,
+        "title": "nonsocial_low_pmod",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-1_nonsocial_low_pmod.txt",
+        "sha256": "3ccad48bd37c15e4b88bb4521b210648566ad622d269f98ae7906bdded2fdb51",
+        "events": 17,
+        "amplitude_min": -3.458333,
+        "amplitude_max": 3.541667,
+        "amplitude_SD": 2.4480767113746835,
+        "unique_amplitudes": 4
+      },
+      {
+        "EV": 5,
+        "title": "social_high_constant",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-1_social_high_constant.txt",
+        "sha256": "9411a0761d3ff806226c3b3087fe8b42e427b4502b7d233c0f9a0cd568f74783",
+        "events": 3,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 6,
+        "title": "social_high_pmod",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-1_social_high_pmod.txt",
+        "sha256": "dc127978a955ebd9bf97945cc1b21f406f74afaf4ac3f5432df024a56cc8ddc9",
+        "events": 3,
+        "amplitude_min": -1.458333,
+        "amplitude_max": -1.458333,
+        "amplitude_SD": 2.220446049250313e-16,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 7,
+        "title": "social_low_constant",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-1_social_low_constant.txt",
+        "sha256": "1cedb73623725ffa81013786802b28c887947acf7a07d5e2c00ac0e7bda114c4",
+        "events": 21,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 8,
+        "title": "social_low_pmod",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-1_social_low_pmod.txt",
+        "sha256": "188ac2d4b4576eb83ae8e1398e32be425d420223fbfcad05597d3e464919027f",
+        "events": 21,
+        "amplitude_min": -3.458333,
+        "amplitude_max": 3.541667,
+        "amplitude_SD": 2.7774602993176543,
+        "unique_amplitudes": 4
+      },
+      {
+        "EV": 9,
+        "title": "rt_constant",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-1_rt_constant.txt",
+        "sha256": "bbda8fcbca3b99a239db98205926f624491fc0f094cafef1beac2e963c852a95",
+        "events": 48,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 10,
+        "title": "rt_pmod",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-1_rt_pmod.txt",
+        "sha256": "72d9548d99cc2320be1e53f2916accb9b9b9c175e9e3927100bd012b307f9445",
+        "events": 48,
+        "amplitude_min": -0.439121,
+        "amplitude_max": 0.576948,
+        "amplitude_SD": 0.21890674015781333,
+        "unique_amplitudes": 48
+      }
+    ],
+    "cutoff_diagnostics": [
+      {
+        "mode": "joint_bold",
+        "cutoff": 1e-10,
+        "labels": [
+          "ugr_nonsocial",
+          "ugr_social",
+          "nonsocial_high_pmod",
+          "nonsocial_low_pmod",
+          "social_high_pmod",
+          "social_low_pmod"
+        ],
+        "diagnostic_estimates": [
+          [
+            -0.13247650165591351,
+            0.008885983180295477,
+            0.05573315498717277,
+            0.06379325986561768,
+            0.011753814113293262
+          ],
+          [
+            -14899.722081122829,
+            118253.42968476845,
+            272946.9044723907,
+            -49648.538901839245,
+            52496.761782100315
+          ],
+          [
+            -0.12719438266588495,
+            -0.03553365020684786,
+            -0.005021253854152294,
+            0.05836031177079818,
+            0.03906495370738449
+          ],
+          [
+            -0.1377586206459421,
+            0.05330561656743881,
+            0.11648756382849783,
+            0.06922620796043717,
+            -0.01555732548079797
+          ],
+          [
+            -29799.4424023477,
+            236506.7588813545,
+            545893.9240308205,
+            -99297.15315130963,
+            104993.4052745966
+          ],
+          [
+            -0.0017598979590208203,
+            0.10048818238870173,
+            -0.11508603903805509,
+            0.07534763114018964,
+            0.11828960403207515
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "joint_bold",
+        "cutoff": 1e-08,
+        "labels": [
+          "ugr_nonsocial",
+          "ugr_social",
+          "nonsocial_high_pmod",
+          "nonsocial_low_pmod",
+          "social_high_pmod",
+          "social_low_pmod"
+        ],
+        "diagnostic_estimates": [
+          [
+            -0.13247650165591351,
+            0.008885983180295477,
+            0.05573315498717277,
+            0.06379325986561768,
+            0.011753814113293262
+          ],
+          [
+            -14899.722081122829,
+            118253.42968476845,
+            272946.9044723907,
+            -49648.538901839245,
+            52496.761782100315
+          ],
+          [
+            -0.12719438266588495,
+            -0.03553365020684786,
+            -0.005021253854152294,
+            0.05836031177079818,
+            0.03906495370738449
+          ],
+          [
+            -0.1377586206459421,
+            0.05330561656743881,
+            0.11648756382849783,
+            0.06922620796043717,
+            -0.01555732548079797
+          ],
+          [
+            -29799.4424023477,
+            236506.7588813545,
+            545893.9240308205,
+            -99297.15315130963,
+            104993.4052745966
+          ],
+          [
+            -0.0017598979590208203,
+            0.10048818238870173,
+            -0.11508603903805509,
+            0.07534763114018964,
+            0.11828960403207515
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "joint_bold",
+        "cutoff": 1e-06,
+        "labels": [
+          "ugr_nonsocial",
+          "ugr_social",
+          "nonsocial_high_pmod",
+          "nonsocial_low_pmod",
+          "social_high_pmod",
+          "social_low_pmod"
+        ],
+        "diagnostic_estimates": [
+          [
+            -0.1326064212929936,
+            0.009917107051734937,
+            0.058113147005327166,
+            0.06336034315523917,
+            0.01221156476600742
+          ],
+          [
+            -0.020979093779696086,
+            0.03990550748082493,
+            -0.053298516439742455,
+            0.07259124855800286,
+            0.09493493031855192
+          ],
+          [
+            -0.12769808407187705,
+            -0.03153595936142302,
+            0.004206029663082412,
+            0.05668188377795613,
+            0.040839663462952557
+          ],
+          [
+            -0.13751475851411016,
+            0.05137017346489289,
+            0.11202026434757192,
+            0.07003880253252219,
+            -0.016416533930937716
+          ],
+          [
+            -0.039642254152278775,
+            -0.025090214113298738,
+            -0.0016969823341110779,
+            0.07168768085778537,
+            0.06962115638725598
+          ],
+          [
+            -0.002315933407113396,
+            0.1049012290749486,
+            -0.10490005054537384,
+            0.07349481625822034,
+            0.12024870424984786
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "native_film",
+        "cutoff": 1e-10,
+        "labels": [
+          "ugr_nonsocial",
+          "ugr_social",
+          "nonsocial_high_pmod",
+          "nonsocial_low_pmod",
+          "social_high_pmod",
+          "social_low_pmod"
+        ],
+        "diagnostic_estimates": [
+          [
+            -0.1319079739588065,
+            0.00929997473780918,
+            0.05729595631597834,
+            0.06278978276192419,
+            0.0166107110436974
+          ],
+          [
+            -16140.832090728865,
+            126330.71620775026,
+            266638.70319746534,
+            -53611.4814526301,
+            45955.81450901218
+          ],
+          [
+            -0.12621056582244142,
+            -0.037482431983806574,
+            8.490376304010041e-05,
+            0.05813653864225199,
+            0.04691763658144305
+          ],
+          [
+            -0.1376053820951716,
+            0.056082381459424936,
+            0.11450700886891658,
+            0.0674430268815964,
+            -0.013696214494048255
+          ],
+          [
+            -32281.667577373646,
+            252661.33842512642,
+            533277.5205317995,
+            -107223.04331830796,
+            91911.5067971479
+          ],
+          [
+            0.003395915916710994,
+            0.09399037410031698,
+            -0.1141368688271546,
+            0.08041304776383562,
+            0.12222087646665003
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "native_film",
+        "cutoff": 1e-08,
+        "labels": [
+          "ugr_nonsocial",
+          "ugr_social",
+          "nonsocial_high_pmod",
+          "nonsocial_low_pmod",
+          "social_high_pmod",
+          "social_low_pmod"
+        ],
+        "diagnostic_estimates": [
+          [
+            -0.1319079739588065,
+            0.00929997473780918,
+            0.05729595631597834,
+            0.06278978276192419,
+            0.0166107110436974
+          ],
+          [
+            -16140.832090728865,
+            126330.71620775026,
+            266638.70319746534,
+            -53611.4814526301,
+            45955.81450901218
+          ],
+          [
+            -0.12621056582244142,
+            -0.037482431983806574,
+            8.490376304010041e-05,
+            0.05813653864225199,
+            0.04691763658144305
+          ],
+          [
+            -0.1376053820951716,
+            0.056082381459424936,
+            0.11450700886891658,
+            0.0674430268815964,
+            -0.013696214494048255
+          ],
+          [
+            -32281.667577373646,
+            252661.33842512642,
+            533277.5205317995,
+            -107223.04331830796,
+            91911.5067971479
+          ],
+          [
+            0.003395915916710994,
+            0.09399037410031698,
+            -0.1141368688271546,
+            0.08041304776383562,
+            0.12222087646665003
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "native_film",
+        "cutoff": 1e-06,
+        "labels": [
+          "ugr_nonsocial",
+          "ugr_social",
+          "nonsocial_high_pmod",
+          "nonsocial_low_pmod",
+          "social_high_pmod",
+          "social_low_pmod"
+        ],
+        "diagnostic_estimates": [
+          [
+            -0.13204871562483375,
+            0.010401529461844788,
+            0.05962094323238236,
+            0.06232231069812212,
+            0.01701142714442784
+          ],
+          [
+            -0.017633907973973472,
+            0.03591545699961754,
+            -0.05056680762594389,
+            0.07551242477126491,
+            0.0970990801327865
+          ],
+          [
+            -0.12675622448230892,
+            -0.03321167911115312,
+            0.00909893124207186,
+            0.05632413875343491,
+            0.048471222073812846
+          ],
+          [
+            -0.1373412067673586,
+            0.0540147380348427,
+            0.11014295522269285,
+            0.06832048264280934,
+            -0.014448367784957165
+          ],
+          [
+            -0.03806137984849198,
+            -0.0268739396697091,
+            0.0030526781970815296,
+            0.07261250809460458,
+            0.0702622824208773
+          ],
+          [
+            0.002793563900545035,
+            0.09870485366894417,
+            -0.10418629344896932,
+            0.07841234144792522,
+            0.12393587784469569
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      }
+    ]
+  },
+  {
+    "key": "sub-11031_ses-01_task-ugr_run-2",
+    "diagnostic": {
+      "rows": 240,
+      "columns": 40,
+      "nonconstant_columns": 39,
+      "singular_values": [
+        36.31990407366136,
+        28.162453155071653,
+        28.063638314716137,
+        24.128591508116834,
+        23.776507697574278,
+        22.885187673259676,
+        22.07875668275579,
+        20.62718495967308,
+        19.69124844185429,
+        19.100098261828002,
+        18.62860281873075,
+        17.200408625860558,
+        16.19965585068236,
+        15.816187980484019,
+        15.401429935839293,
+        14.38332265592971,
+        13.865929816258006,
+        13.458589918000369,
+        12.907088828208002,
+        12.264696655916662,
+        11.85421885890903,
+        10.760807615157383,
+        10.280993822248035,
+        9.154920496446142,
+        8.76582978090033,
+        8.011792006961192,
+        6.969278128215904,
+        6.576272104415612,
+        6.1347303294604485,
+        5.031202256934607,
+        4.391037609168772,
+        3.7666869827800924,
+        2.8011586793598866,
+        2.2951352219666945,
+        1.4976700928742337,
+        1.23247313214779,
+        1.012710745780045,
+        0.9986861347987247,
+        0.6854977717020697
+      ],
+      "condition_nonconstant": 52.983256216107264,
+      "rank_at_relative_cutoffs": {
+        "1e-10": 39,
+        "1e-08": 39,
+        "1e-06": 39
+      },
+      "task_columns": [
+        {
+          "index": 0,
+          "conditional_energy_fraction": 0.0933835968434842,
+          "constant": false
+        },
+        {
+          "index": 1,
+          "conditional_energy_fraction": 0.14934664980586648,
+          "constant": false
+        },
+        {
+          "index": 2,
+          "conditional_energy_fraction": 0.08436262703120823,
+          "constant": false
+        },
+        {
+          "index": 3,
+          "conditional_energy_fraction": 0.48233251182693726,
+          "constant": false
+        },
+        {
+          "index": 4,
+          "conditional_energy_fraction": 0.3150698590152506,
+          "constant": false
+        },
+        {
+          "index": 5,
+          "conditional_energy_fraction": 0.5762815041201329,
+          "constant": false
+        },
+        {
+          "index": 6,
+          "conditional_energy_fraction": 0.09471032837516924,
+          "constant": false
+        },
+        {
+          "index": 7,
+          "conditional_energy_fraction": 0.6372399736639138,
+          "constant": false
+        },
+        {
+          "index": 8,
+          "conditional_energy_fraction": 0.3199199320085731,
+          "constant": false
+        },
+        {
+          "index": 9,
+          "conditional_energy_fraction": 0.43875379935976,
+          "constant": false
+        },
+        {
+          "index": 10,
+          "conditional_energy_fraction": null,
+          "constant": true
+        }
+      ]
+    },
+    "design": {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/sm-0-feat-20261029T002144Z-5e78a6/feat/sub-11031_ses-01_task-ugr_run-2_sm-0.feat/design.mat",
+      "size": 130744,
+      "mtime_ns": 1793263401042954310,
+      "sha256": "a725172f15b6a1e6b47ae756ae2965e397af1157cc21e0b9eb2513b9c2deae01"
+    },
+    "standardization": {
+      "method": "columnwise sample SD, ddof=1, within run",
+      "response_mean": [
+        4.026408835973901e-15,
+        -1.5631940186722205e-14,
+        -8.289665250534502e-16,
+        0.0,
+        2.042810365310288e-15
+      ],
+      "response_SD": [
+        10.388213353415338,
+        11.231996939880771,
+        7.9910157195659375,
+        11.177202516288945,
+        9.37083255603546
+      ],
+      "design_mean": [
+        -1.0251666675634152e-08,
+        -2.758333319160163e-08,
+        -5.170833349231e-09,
+        1.0004166102010418e-09,
+        -3.2041666762558375e-09,
+        2.6245832674432847e-09,
+        -3.1666664452682327e-10,
+        -2.3935833269016678e-08,
+        -2.2090833307585044e-11,
+        2.2912499899749962e-11,
+        0.0,
+        5.99164931601795e-10,
+        5.191788198718553e-10,
+        -1.1375694324601097e-10,
+        -6.708333339054222e-11,
+        1.733281257814782e-10,
+        1.6708506809029466e-10,
+        8.333335757559901e-12,
+        -8.333853699730535e-11,
+        -4.16666649100117e-12,
+        8.333854081369699e-11,
+        4.166666664473517e-12,
+        -4.708333441371416e-10,
+        3.2916665979737527e-09,
+        -2.601249983469334e-09,
+        -1.7185208336298402e-08,
+        -2.679715414464438e-10,
+        -3.875833330992219e-11,
+        -2.3166666563435914e-10,
+        -1.5076666669162445e-09,
+        -7.73749999604297e-09,
+        6.2291666540204014e-09,
+        -5.041666675346483e-09,
+        -3.4999999657762495e-09,
+        1.170416665460805e-08,
+        1.0041666933154522e-09,
+        -5.8416666652109464e-09,
+        -3.4499997451457412e-09,
+        8.125000005206513e-09,
+        1.3587499653189284e-09
+      ],
+      "design_SD": [
+        0.2738588176487087,
+        1.8475600991604286,
+        0.3635975952890971,
+        1.3756173671456062,
+        0.18168212140167156,
+        0.4414009988074266,
+        0.38483975912716983,
+        1.407847128361549,
+        0.003408627423272557,
+        0.0017723958984884982,
+        0.0,
+        0.06468462094084648,
+        0.06468462349171075,
+        0.06468462325841924,
+        0.0646846216721802,
+        0.0646846238703286,
+        0.06468462354372005,
+        0.06468462244684664,
+        0.06468462310815323,
+        0.06468462244746775,
+        0.06468462310815323,
+        0.06468462244746775,
+        0.06454972030664968,
+        0.1260651924343847,
+        0.06271667713295853,
+        0.20386787245411092,
+        0.0031324992569227586,
+        0.0007950202902508143,
+        0.001587939802927528,
+        0.11528487822289486,
+        1.0020898575580366,
+        1.002089877255566,
+        1.0020898666964648,
+        1.002089888843945,
+        1.002090042601829,
+        1.0020898375418104,
+        1.002089873053871,
+        1.002089857927983,
+        1.0020898822011937,
+        1.0020898454313263
+      ],
+      "constant_design_columns_zeroed": [
+        10
+      ],
+      "rank": 39,
+      "columns": 40,
+      "pseudoinverse_relative_cutoff": 1e-10,
+      "estimator": "pinv(Z(full saved L1 task+nuisance design)) @ Z(stage1 timecourses)",
+      "temporal_filter": false,
+      "nuisance_removed_before_fit": false,
+      "whitening": false
+    },
+    "task_EV_titles": [
+      "nonsocial_high_constant",
+      "nonsocial_high_pmod",
+      "nonsocial_low_constant",
+      "nonsocial_low_pmod",
+      "social_high_constant",
+      "social_high_pmod",
+      "social_low_constant",
+      "social_low_pmod",
+      "rt_constant",
+      "rt_pmod",
+      "miss"
+    ],
+    "event_amplitude_summaries": [
+      {
+        "EV": 1,
+        "title": "nonsocial_high_constant",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-2_nonsocial_high_constant.txt",
+        "sha256": "5686721193a92c3a97a285c01ba44d98acae830ef67642549dac526deeacb92e",
+        "events": 7,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 2,
+        "title": "nonsocial_high_pmod",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-2_nonsocial_high_pmod.txt",
+        "sha256": "06d7314cbdcf2ecf71bc50496fb84382d8656431fe9a0284dce4a3bca1c148dc",
+        "events": 7,
+        "amplitude_min": 3.375,
+        "amplitude_max": 11.375,
+        "amplitude_SD": 3.614031611621005,
+        "unique_amplitudes": 2
+      },
+      {
+        "EV": 3,
+        "title": "nonsocial_low_constant",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-2_nonsocial_low_constant.txt",
+        "sha256": "e6bea1362ff3e43874faab54929f8461e02e80fc04177a6b058eebf92f63bd11",
+        "events": 17,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 4,
+        "title": "nonsocial_low_pmod",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-2_nonsocial_low_pmod.txt",
+        "sha256": "255ee94fada598c548f125876794f8d039fb41661aaaa02b36293ac530ea2f76",
+        "events": 17,
+        "amplitude_min": -3.625,
+        "amplitude_max": 3.375,
+        "amplitude_SD": 2.7703321974862622,
+        "unique_amplitudes": 4
+      },
+      {
+        "EV": 5,
+        "title": "social_high_constant",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-2_social_high_constant.txt",
+        "sha256": "0bc504b32ef02cc33602dac87caea2a8dd339e37e72808edf916c5a9ed2ac2ce",
+        "events": 3,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 6,
+        "title": "social_high_pmod",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-2_social_high_pmod.txt",
+        "sha256": "f9c81a7060dbe72495affe00f330eeeb413c99dc3fa5acb21482d5dfbfdea08f",
+        "events": 3,
+        "amplitude_min": -1.625,
+        "amplitude_max": 3.375,
+        "amplitude_SD": 2.3570226039551585,
+        "unique_amplitudes": 2
+      },
+      {
+        "EV": 7,
+        "title": "social_low_constant",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-2_social_low_constant.txt",
+        "sha256": "a4be1bef8c4179ce50811e07dd1765c8dda76d406d5fe70931bbe7b7d5985472",
+        "events": 21,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 8,
+        "title": "social_low_pmod",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-2_social_low_pmod.txt",
+        "sha256": "85ef0ef7cc7f7a90329b02d85be26b36218e69db012a03663e188bd9d5d001b4",
+        "events": 21,
+        "amplitude_min": -3.625,
+        "amplitude_max": 3.375,
+        "amplitude_SD": 2.809927331796558,
+        "unique_amplitudes": 4
+      },
+      {
+        "EV": 9,
+        "title": "rt_constant",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-2_rt_constant.txt",
+        "sha256": "83508ff0012f50e4da6c0e4c3a0780630c0f8e91f7d1241d15b5a2c6f6d9f524",
+        "events": 48,
+        "amplitude_min": 1.0,
+        "amplitude_max": 1.0,
+        "amplitude_SD": 0.0,
+        "unique_amplitudes": 1
+      },
+      {
+        "EV": 10,
+        "title": "rt_pmod",
+        "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/EVfiles/sub-11031/ugr/model-3/run-2_rt_pmod.txt",
+        "sha256": "9b44ab7e370ad187cb805de5b509fac822aeafa599e6688aa269637f439b26c5",
+        "events": 48,
+        "amplitude_min": -0.314234,
+        "amplitude_max": 0.801666,
+        "amplitude_SD": 0.23123331428297683,
+        "unique_amplitudes": 48
+      }
+    ],
+    "cutoff_diagnostics": [
+      {
+        "mode": "joint_bold",
+        "cutoff": 1e-10,
+        "labels": [
+          "ugr_nonsocial",
+          "ugr_social",
+          "nonsocial_high_pmod",
+          "nonsocial_low_pmod",
+          "social_high_pmod",
+          "social_low_pmod"
+        ],
+        "diagnostic_estimates": [
+          [
+            0.06212782180053729,
+            -0.1961174937077781,
+            0.05092512101292959,
+            -0.10697472731709762,
+            -0.1597930254208373
+          ],
+          [
+            -0.04482467623933311,
+            -0.007122005978104303,
+            -0.035685642703298374,
+            0.12628847834544693,
+            -0.06263639073573099
+          ],
+          [
+            0.30880682796053105,
+            -0.4521830619548573,
+            0.0781927401174033,
+            -0.3148757656493089,
+            -0.4083915693814495
+          ],
+          [
+            -0.18455118435945647,
+            0.05994807453930112,
+            0.023657501908455884,
+            0.10092631101511368,
+            0.08880551853977489
+          ],
+          [
+            0.058926976929567734,
+            -0.07490018062637906,
+            -0.050825964531707346,
+            0.13989817851196978,
+            -0.08813853880024707
+          ],
+          [
+            -0.14857632940823395,
+            0.06065616867017045,
+            -0.020545320874889406,
+            0.11267877817892406,
+            -0.03713424267121491
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "joint_bold",
+        "cutoff": 1e-08,
+        "labels": [
+          "ugr_nonsocial",
+          "ugr_social",
+          "nonsocial_high_pmod",
+          "nonsocial_low_pmod",
+          "social_high_pmod",
+          "social_low_pmod"
+        ],
+        "diagnostic_estimates": [
+          [
+            0.06212782180053729,
+            -0.1961174937077781,
+            0.05092512101292959,
+            -0.10697472731709762,
+            -0.1597930254208373
+          ],
+          [
+            -0.04482467623933311,
+            -0.007122005978104303,
+            -0.035685642703298374,
+            0.12628847834544693,
+            -0.06263639073573099
+          ],
+          [
+            0.30880682796053105,
+            -0.4521830619548573,
+            0.0781927401174033,
+            -0.3148757656493089,
+            -0.4083915693814495
+          ],
+          [
+            -0.18455118435945647,
+            0.05994807453930112,
+            0.023657501908455884,
+            0.10092631101511368,
+            0.08880551853977489
+          ],
+          [
+            0.058926976929567734,
+            -0.07490018062637906,
+            -0.050825964531707346,
+            0.13989817851196978,
+            -0.08813853880024707
+          ],
+          [
+            -0.14857632940823395,
+            0.06065616867017045,
+            -0.020545320874889406,
+            0.11267877817892406,
+            -0.03713424267121491
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "joint_bold",
+        "cutoff": 1e-06,
+        "labels": [
+          "ugr_nonsocial",
+          "ugr_social",
+          "nonsocial_high_pmod",
+          "nonsocial_low_pmod",
+          "social_high_pmod",
+          "social_low_pmod"
+        ],
+        "diagnostic_estimates": [
+          [
+            0.06212782180053729,
+            -0.1961174937077781,
+            0.05092512101292959,
+            -0.10697472731709762,
+            -0.1597930254208373
+          ],
+          [
+            -0.04482467623933311,
+            -0.007122005978104303,
+            -0.035685642703298374,
+            0.12628847834544693,
+            -0.06263639073573099
+          ],
+          [
+            0.30880682796053105,
+            -0.4521830619548573,
+            0.0781927401174033,
+            -0.3148757656493089,
+            -0.4083915693814495
+          ],
+          [
+            -0.18455118435945647,
+            0.05994807453930112,
+            0.023657501908455884,
+            0.10092631101511368,
+            0.08880551853977489
+          ],
+          [
+            0.058926976929567734,
+            -0.07490018062637906,
+            -0.050825964531707346,
+            0.13989817851196978,
+            -0.08813853880024707
+          ],
+          [
+            -0.14857632940823395,
+            0.06065616867017045,
+            -0.020545320874889406,
+            0.11267877817892406,
+            -0.03713424267121491
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "native_film",
+        "cutoff": 1e-10,
+        "labels": [
+          "ugr_nonsocial",
+          "ugr_social",
+          "nonsocial_high_pmod",
+          "nonsocial_low_pmod",
+          "social_high_pmod",
+          "social_low_pmod"
+        ],
+        "diagnostic_estimates": [
+          [
+            0.056555905449241675,
+            -0.19210694970740394,
+            0.05448973625979203,
+            -0.10963955431940947,
+            -0.16890431868118597
+          ],
+          [
+            -0.04750242169436053,
+            -0.006691130809394864,
+            -0.03774384755913224,
+            0.1250891628841498,
+            -0.06534127015965195
+          ],
+          [
+            0.29696019299112497,
+            -0.4446693355314685,
+            0.0867397775362334,
+            -0.31643080340710034,
+            -0.4325542384715644
+          ],
+          [
+            -0.18384838209264162,
+            0.06045543611666058,
+            0.022239694983350666,
+            0.09715169476828141,
+            0.09474560110919246
+          ],
+          [
+            0.053166204828793105,
+            -0.07489077611255479,
+            -0.05082469612316846,
+            0.13896550124153104,
+            -0.09686016628235476
+          ],
+          [
+            -0.14817104821751417,
+            0.061508514493765064,
+            -0.024662998995096014,
+            0.11121282452676857,
+            -0.03382237403694914
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "native_film",
+        "cutoff": 1e-08,
+        "labels": [
+          "ugr_nonsocial",
+          "ugr_social",
+          "nonsocial_high_pmod",
+          "nonsocial_low_pmod",
+          "social_high_pmod",
+          "social_low_pmod"
+        ],
+        "diagnostic_estimates": [
+          [
+            0.056555905449241675,
+            -0.19210694970740394,
+            0.05448973625979203,
+            -0.10963955431940947,
+            -0.16890431868118597
+          ],
+          [
+            -0.04750242169436053,
+            -0.006691130809394864,
+            -0.03774384755913224,
+            0.1250891628841498,
+            -0.06534127015965195
+          ],
+          [
+            0.29696019299112497,
+            -0.4446693355314685,
+            0.0867397775362334,
+            -0.31643080340710034,
+            -0.4325542384715644
+          ],
+          [
+            -0.18384838209264162,
+            0.06045543611666058,
+            0.022239694983350666,
+            0.09715169476828141,
+            0.09474560110919246
+          ],
+          [
+            0.053166204828793105,
+            -0.07489077611255479,
+            -0.05082469612316846,
+            0.13896550124153104,
+            -0.09686016628235476
+          ],
+          [
+            -0.14817104821751417,
+            0.061508514493765064,
+            -0.024662998995096014,
+            0.11121282452676857,
+            -0.03382237403694914
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      },
+      {
+        "mode": "native_film",
+        "cutoff": 1e-06,
+        "labels": [
+          "ugr_nonsocial",
+          "ugr_social",
+          "nonsocial_high_pmod",
+          "nonsocial_low_pmod",
+          "social_high_pmod",
+          "social_low_pmod"
+        ],
+        "diagnostic_estimates": [
+          [
+            0.056555905449241675,
+            -0.19210694970740394,
+            0.05448973625979203,
+            -0.10963955431940947,
+            -0.16890431868118597
+          ],
+          [
+            -0.04750242169436053,
+            -0.006691130809394864,
+            -0.03774384755913224,
+            0.1250891628841498,
+            -0.06534127015965195
+          ],
+          [
+            0.29696019299112497,
+            -0.4446693355314685,
+            0.0867397775362334,
+            -0.31643080340710034,
+            -0.4325542384715644
+          ],
+          [
+            -0.18384838209264162,
+            0.06045543611666058,
+            0.022239694983350666,
+            0.09715169476828141,
+            0.09474560110919246
+          ],
+          [
+            0.053166204828793105,
+            -0.07489077611255479,
+            -0.05082469612316846,
+            0.13896550124153104,
+            -0.09686016628235476
+          ],
+          [
+            -0.14817104821751417,
+            0.061508514493765064,
+            -0.024662998995096014,
+            0.11121282452676857,
+            -0.03382237403694914
+          ]
+        ],
+        "note": "Diagnostics only; no result replacement or exclusion."
+      }
+    ]
+  }
+]
