@@ -1,5 +1,11 @@
 # Original UGR analysis and functional-seed reassessment
 
+The first six repaired activation groups are complete. See the
+[original-versus-corrected review](records/linux2-ugr-activation-repair-20261030T130959Z-0fac9f/review/README.md):
+whole-brain patterns remain similar, one small full-model social-minus-nonsocial
+cluster loses threshold survival, and anatomical-insula task overlap does not
+increase. This does not mark PPI or other activation contrasts repaired.
+
 The original-input audit is complete: see
 [findings and the separate activation rerun](records/2026-10-30-original-input-review/README.md).
 Run `bash code/ugr_reanalysis/start_activation.sh` to reuse the completed
