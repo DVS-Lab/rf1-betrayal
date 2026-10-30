@@ -1,0 +1,24 @@
+{
+  "state": "original_group_input_audit_complete_review_required",
+  "UGR_runs_expected": 249,
+  "UGR_runs_audited": 249,
+  "UGR_runs_failed": 0,
+  "flagged_design_runs": [
+    "sub-11031_ses-01_task-ugr_run-1"
+  ],
+  "TR_mismatches": [
+    {
+      "key": "sub-10817_ses-01_task-ugr_run-1",
+      "expected_acquisition_TR": 1.71,
+      "historical_model_TR": 1.615,
+      "mismatch": true
+    }
+  ],
+  "group_cases": 9,
+  "script_named_parents_found": 2,
+  "script_named_parents_expected": 2,
+  "copied_files": 190,
+  "collection_errors": [],
+  "data_or_analysis_modified": false,
+  "FEAT_or_group_jobs_launched": false
+}
