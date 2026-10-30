@@ -1,0 +1,66 @@
+{
+  "correction_record": {
+    "path": "/ZPOOL/data/projects/rf1-betrayal/code/insula_ica/records/linux2-ugr-TR-repair-20261029T125025Z-5ad843/corrected-analysis-input.json",
+    "size": 2064,
+    "mtime_ns": 1793278955130454810,
+    "sha256": "7a8bc22ff95555902cc6bc08fbf99fb8ac46345de657b14bfe44472d712dbf88"
+  },
+  "corrected_sm5_model": [
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843/sm5-controls/corrected_TR_1p710.feat/design.fsf",
+      "size": 75218,
+      "mtime_ns": 1793278717537034175,
+      "sha256": "5e2359f15ff83374d860e470eb442e3de8a4051109fddeef919d7a2884736e75"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843/sm5-controls/corrected_TR_1p710.feat/design.con",
+      "size": 10816,
+      "mtime_ns": 1793278807576324639,
+      "sha256": "859e2c14db1c4273cb7d3ed494e8f2a6390245650aeab96e0925543080891a8f"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/ugr-TR-repair-20261029T125025Z-5ad843/sm5-controls/corrected_TR_1p710.feat/confoundevs.txt",
+      "size": 123801,
+      "mtime_ns": 1793278807234319722,
+      "sha256": "43d124dc50a44b8cadd2e09094e0ed0da6b35049c256bfaf1fe4036589fa1cc8"
+    }
+  ],
+  "original_valid_run2_model": [
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11031/ses-01/L1_task-ugr_model-3_type-act_run-2_sm-5.feat/design.fsf",
+      "size": 75150,
+      "mtime_ns": 1771270091124208494,
+      "sha256": "d3fa50f7161eae30c817a4433546758abe13a1978b640f7cb5ec628b976cb102"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11031/ses-01/L1_task-ugr_model-3_type-act_run-2_sm-5.feat/design.mat",
+      "size": 130744,
+      "mtime_ns": 1771270238243373951,
+      "sha256": "a725172f15b6a1e6b47ae756ae2965e397af1157cc21e0b9eb2513b9c2deae01"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11031/ses-01/L1_task-ugr_model-3_type-act_run-2_sm-5.feat/design.con",
+      "size": 9932,
+      "mtime_ns": 1771270238244373966,
+      "sha256": "ce6e1b0f9348699c8885cb4b0ef8424a3f732d43a774df96b88296daf4050a22"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-11031/ses-01/L1_task-ugr_model-3_type-act_run-2_sm-5.feat/confoundevs.txt",
+      "size": 102011,
+      "mtime_ns": 1771270237646365161,
+      "sha256": "209a1486f377135c196ca7dd24d99152b82a37e6afcf672ff3a068ea23a3a405"
+    }
+  ],
+  "original_bad_run1_contrasts": [
+    5,
+    6,
+    9,
+    10,
+    11,
+    12,
+    14,
+    15,
+    17
+  ],
+  "policy": "original-UGR-activation-TR1710-valid-run2-for-nonestimable-contrasts-v1"
+}
