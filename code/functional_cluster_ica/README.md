@@ -113,3 +113,69 @@ figures using the actual 465 saved anatomical estimates without mutating them.
 These tests do not assert that a real Linux2 cohort fit or new ICA has already
 run. The production pilots and MELODIC convergence checks remain part of the
 Linux2 execution.
+
+## Matched 5 mm smoothing arm
+
+```bash
+bash code/functional_cluster_ica/start_smoothed.sh
+```
+
+This separate `nohup` submitter can be launched while the unsmoothed arm is
+running. It records a waiting state, waits on the unsmoothed runner's lock,
+then holds a shared lock to keep that source stable. The existing sm-0 runner,
+its code and its output roots are not changed or restarted. No shared helper
+implementation used by its frozen provenance is edited by this addition.
+
+The matched arm uses 64 RAM-gated FEAT/extraction/task slots, six fixed ICA
+slots and serialized automatic PCA. Check progress without large log dumps:
+
+```bash
+/ZPOOL/data/tools/anaconda/tug87422/envs/tedana-26.0.3/bin/python \
+  code/functional_cluster_ica/status_smoothed.py --brief
+```
+
+Every candidate sm-5 fit must match the unsmoothed arm's exact BOLD identity,
+run-specific TR, complete design/contrasts, fitted original nuisance matrix,
+geometry and other FEAT settings. Only smoothing/output destinations may
+change; equivalent task-EV content is compared by hash. Candidates come from
+saved original/accepted fit paths and the explicitly corrected TR control,
+not a filesystem-wide search. Candidates that mismatch, including historical
+UGR fits made from a different BOLD or the old TR, are not reused.
+
+Only missing/mismatched fits are rebuilt in a new
+`derivatives/insula_ica/functional-sm5-*` root, by cloning the active sm-0 FSF
+and setting smoothing to 5 mm. A `feat_model` preflight requires the complete
+temporal model to match before FEAT runs. FEAT smooths the **whole-brain BOLD
+before ROI masking**, rather than blurring an already masked seed or smoothing
+native whitened residuals after fitting. The FSL version must match the source
+arm. No fMRIPrep or TEDANA is run. The two retained residual representations
+then use the same algebra/extraction and physical masking as the sm-0 arm.
+
+The ICA mask must remain **identical** to the unsmoothed arm. The code records
+sm-5 validity and stops if any of those fixed voxels is unavailable; it never
+silently erodes the mask or changes participants/runs to improve a match.
+Balancing, input multiplier, concat, native variance normalization, 3/5/7/0
+settings, deterministic starts, TR handling and convergence rules are shared.
+Raw task-preserved ROI values and the functional/anatomical means are reused
+from sm-0, with no new BOLD extraction or mean fitting. The new discovery maps
+are spatially regressed onto that same raw task input before the established
+pooled-UGR/full-task+nuisance standardized OLS. Thus the task comparison isolates
+the smoothing used to discover components, keeping task measurement constant.
+
+New records are `linux2-functional-sm5-*`. They publish selected/rejected
+candidate reasons, FEAT output identities, coverage, ICA commands/maps and
+five-bar figures. `smoothing_spatial_correspondence.json` matches sm-0/sm-5 maps
+by absolute spatial correlation without task-based selection, retaining all
+pairwise correlations and unmatched components. When corresponding sm-0 task
+estimates are available, `smoothing_paired_task_comparisons.tsv` reports
+sign-aligned, paired participant changes with descriptive pointwise CIs.
+Component indices are not assumed to match. Original estimates are untouched.
+Checkpoints reuse completed sm-5 FEATs, residual arrays, sessions, ICAs and
+per-basis temporal fits on resume; failures and final/partial results publish.
+
+Six additional tests verify that the generated FSF changes only allowed
+settings; candidate reuse rejects different BOLD/TR/filter/design/confounds;
+a completed FEAT checkpoint prevents any FSL refit; a mismatched regenerated
+temporal model stops before FEAT starts; raw task caches require no
+new image reads; and spatial permutation/sign matching precedes paired task
+differences. Real Linux2 FEAT/convergence/QC checks remain execution-time checks.
