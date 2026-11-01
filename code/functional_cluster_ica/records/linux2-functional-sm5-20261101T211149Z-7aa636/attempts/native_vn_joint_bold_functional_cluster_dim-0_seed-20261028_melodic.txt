@@ -1,0 +1,1730 @@
+
+Melodic Version 3.15
+
+/usr/local/fsl/bin/melodic -i /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/inputs.txt -o /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000 --nobet -a concat -m /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/masks/functional_cluster_crop.nii.gz --bgimage=/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/reference_crop.nii.gz --Oall -d 0 --disableMigp --update_mask --seed=20261028 --maxit=10000 --eps=0.00005 --nl=pow3 
+---------------------------------------------
+
+Melodic results will be in /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000
+
+Mask provided : /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/masks/functional_cluster_crop.nii.gz
+
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10369_task-trust  ...  done
+  Estimating data smoothness ...  done 
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10369_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10402_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10402_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10478_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10478_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10486_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10486_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10581_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10581_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10584_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10584_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10589_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10589_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10596_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10596_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10606_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10606_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10608_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10608_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10640_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10640_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10641_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10641_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10642_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10642_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10647_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10647_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10656_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10656_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10661_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10661_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10663_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10663_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10668_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10668_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10673_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10673_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10674_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10674_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10677_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10677_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10685_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10685_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10700_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10700_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10701_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10701_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10718_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10718_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10720_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10720_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10723_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10723_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10741_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10741_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10748_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10748_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10767_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10767_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10777_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10777_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10781_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10781_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10783_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10783_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10794_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10794_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10800_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10800_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10801_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10801_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10802_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10802_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10803_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10803_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10804_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10804_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10817_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10817_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10831_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10831_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10834_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10834_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10838_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10838_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10843_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10843_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10850_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10850_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10854_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10854_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10857_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10857_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10860_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10860_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10863_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10863_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10875_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10875_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10887_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10887_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10896_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10896_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10897_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10897_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10908_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10908_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10918_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10918_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10919_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10919_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10924_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10924_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10929_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10929_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10930_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10930_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10950_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10950_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10952_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10952_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10956_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10956_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10958_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10958_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10961_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10961_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10966_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10966_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10969_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10969_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10977_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10977_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10983_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10983_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10984_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10984_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10998_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10998_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11007_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11007_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11016_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11016_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11021_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11021_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11030_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11030_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11031_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11031_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11036_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11036_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11039_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11039_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11042_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11042_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11053_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11053_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11060_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11060_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11063_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11063_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11065_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11065_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11066_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11066_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11068_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11068_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11072_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11072_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11074_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11074_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11113_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11113_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11139_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11139_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11227_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11227_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11238_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11238_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11246_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11246_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11286_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11286_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11301_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11301_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11311_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11311_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11316_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11316_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11318_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11318_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11321_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11321_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11325_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11325_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11326_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11326_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11329_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11329_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11330_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11330_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11337_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11337_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11338_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11338_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11345_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11345_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11348_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11348_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11358_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11358_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11364_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11364_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11387_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11387_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11426_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11426_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11430_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11430_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11433_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11433_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11435_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11435_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11451_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11451_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11492_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11492_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11498_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11498_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11517_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11517_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11518_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11518_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11523_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11523_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11526_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11526_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11527_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11527_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11529_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11529_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11530_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11530_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11532_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11532_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11533_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11533_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11534_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11534_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11535_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11535_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11536_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11536_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11539_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11539_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11540_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11540_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11570_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11570_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11572_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11572_task-ugr  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11579_task-trust  ...  done
+  Removing mean image ... done
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11579_task-ugr  ...  done
+  Removing mean image ... done
+
+Normalising jointly by voxel-wise variance ... done
+
+Initial data size : 240 x 117
+
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10369_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10369_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10402_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10402_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10478_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10478_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10486_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10486_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10581_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10581_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10584_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10584_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10589_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10589_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10596_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10596_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10606_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10606_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10608_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10608_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10640_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10640_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10641_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10641_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10642_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10642_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10647_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10647_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10656_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10656_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10661_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10661_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10663_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10663_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10668_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10668_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10673_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10673_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10674_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10674_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10677_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10677_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10685_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10685_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10700_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10700_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10701_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10701_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10718_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10718_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10720_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10720_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10723_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10723_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10741_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10741_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10748_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10748_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10767_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10767_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10777_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10777_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10781_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10781_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10783_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10783_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10794_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10794_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10800_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10800_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10801_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10801_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10802_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10802_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10803_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10803_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10804_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10804_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10817_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10817_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10831_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10831_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10834_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10834_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10838_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10838_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10843_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10843_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10850_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10850_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10854_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10854_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10857_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10857_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10860_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10860_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10863_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10863_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10875_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10875_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10887_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10887_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10896_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10896_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10897_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10897_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10908_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10908_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10918_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10918_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10919_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10919_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10924_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10924_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10929_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10929_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10930_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10930_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10950_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10950_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10952_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10952_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10956_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10956_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10958_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10958_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10961_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10961_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10966_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10966_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10969_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10969_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10977_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10977_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10983_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10983_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10984_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10984_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10998_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-10998_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11007_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11007_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11016_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11016_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11021_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11021_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11030_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11030_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11031_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11031_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11036_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11036_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11039_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11039_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11042_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11042_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11053_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11053_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11060_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11060_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11063_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11063_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11065_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11065_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11066_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11066_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11068_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11068_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11072_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11072_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11074_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11074_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11113_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11113_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11139_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11139_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11227_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11227_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11238_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11238_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11246_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11246_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11286_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11286_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11301_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11301_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11311_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11311_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11316_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11316_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11318_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11318_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11321_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11321_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11325_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11325_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11326_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11326_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11329_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11329_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11330_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11330_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11337_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11337_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11338_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11338_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11345_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11345_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11348_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11348_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11358_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11358_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11364_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11364_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11387_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11387_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11426_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11426_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11430_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11430_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11433_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11433_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11435_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11435_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11451_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11451_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11492_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11492_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11498_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11498_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11517_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11517_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11518_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11518_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11523_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11523_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11526_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11526_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11527_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11527_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11529_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11529_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11530_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11530_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11532_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11532_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11533_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11533_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11534_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11534_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11535_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11535_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11536_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11536_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11539_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11539_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11540_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11540_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11570_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11570_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11572_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11572_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11579_task-trust  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+Reading data file /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/sessions/joint_bold/functional_cluster/sub-11579_task-ugr  ...  done
+  Removing mean image ... done
+  Individual whitening in a 39 dimensional subspace 
+
+  Data size : 10296 x 117
+
+Starting PCA  ... done
+Start whitening using  39 dimensions ... 
+  retaining 94.1218 percent of the variability 
+ ... done
+
+Starting ICA estimation using concat
+
+  Step no. 1 change : 0.973987
+  Step no. 2 change : 0.567785
+  Step no. 3 change : 0.206267
+  Step no. 4 change : 0.0565758
+  Step no. 5 change : 0.0518239
+  Step no. 6 change : 0.0465574
+  Step no. 7 change : 0.0481099
+  Step no. 8 change : 0.0521326
+  Step no. 9 change : 0.0417306
+  Step no. 10 change : 0.0422438
+  Step no. 11 change : 0.0322783
+  Step no. 12 change : 0.00852098
+  Step no. 13 change : 0.00141391
+  Step no. 14 change : 0.000946127
+  Step no. 15 change : 0.000715003
+  Step no. 16 change : 0.000543334
+  Step no. 17 change : 0.00042022
+  Step no. 18 change : 0.000332041
+  Step no. 19 change : 0.000261214
+  Step no. 20 change : 0.00020483
+  Step no. 21 change : 0.000160078
+  Step no. 22 change : 0.000124614
+  Step no. 23 change : 9.65815e-05
+  Step no. 24 change : 7.45139e-05
+  Step no. 25 change : 5.72366e-05
+  Step no. 26 change : 4.37932e-05
+  Convergence after 26 steps 
+
+Sorting IC maps
+
+Writing results to : 
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_oIC
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_IC
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/Noise__inv
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_Tmodes
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_mix
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_FTmix
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_PPCA
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_ICstats
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_unmix
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/mask
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_white
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_dewhite
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_FTdewhite
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_pcaE
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_pcaD
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_pca
+...done
+Creating report index page ...done
+
+
+Running Mixture Modelling on Z-transformed IC maps ...
+  IC map 1 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_1
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_1
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat1
+  IC map 2 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_2
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_2
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat2
+  IC map 3 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_3
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_3
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat3
+  IC map 4 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_4
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_4
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat4
+  IC map 5 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_5
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_5
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat5
+  IC map 6 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_6
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_6
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat6
+  IC map 7 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_7
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_7
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat7
+  IC map 8 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_8
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_8
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat8
+  IC map 9 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_9
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_9
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat9
+  IC map 10 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_10
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_10
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat10
+  IC map 11 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_11
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_11
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat11
+  IC map 12 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_12
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_12
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat12
+  IC map 13 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_13
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_13
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat13
+  IC map 14 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_14
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_14
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat14
+  IC map 15 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_15
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_15
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat15
+  IC map 16 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_16
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_16
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat16
+  IC map 17 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_17
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_17
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat17
+  IC map 18 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_18
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_18
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat18
+  IC map 19 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_19
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_19
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat19
+  IC map 20 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_20
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_20
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat20
+  IC map 21 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_21
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_21
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat21
+  IC map 22 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_22
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_22
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat22
+  IC map 23 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_23
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_23
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat23
+  IC map 24 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_24
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_24
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat24
+  IC map 25 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_25
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_25
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat25
+  IC map 26 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_26
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_26
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat26
+  IC map 27 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_27
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_27
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat27
+  IC map 28 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_28
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_28
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat28
+  IC map 29 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_29
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_29
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat29
+  IC map 30 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_30
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_30
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat30
+  IC map 31 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_31
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_31
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat31
+  IC map 32 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_32
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_32
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat32
+  IC map 33 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_33
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_33
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat33
+  IC map 34 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_34
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_34
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat34
+  IC map 35 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_35
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_35
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat35
+  IC map 36 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_36
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_36
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat36
+  IC map 37 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_37
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_37
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat37
+  IC map 38 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_38
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_38
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat38
+  IC map 39 ... 
+   calculating mixture-model fit 
+   saving probability map:    /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/probmap_39
+   saving mixture model fit:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/MMstats_39
+   re-scaling spatial maps ... 
+   thresholding ... 
+   alternative hypothesis test at p > 0.5
+   saving thresholded Z-stats image:  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/stats/thresh_zstat39
+
+Writing results to : 
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_IC
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/Noise__inv
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_Tmodes
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_mix
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_FTmix
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_PPCA
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_ICstats
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_unmix
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/mask
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_white
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_dewhite
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_FTdewhite
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_pcaE
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_pcaD
+  /ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/ica_retries/joint_bold/functional_cluster/dim-0/seed-20261028_maxit-10000/melodic_pca
+...done
+finished!
+

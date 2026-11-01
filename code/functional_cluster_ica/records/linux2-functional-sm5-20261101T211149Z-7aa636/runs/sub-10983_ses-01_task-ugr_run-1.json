@@ -1,0 +1,370 @@
+{
+  "key": "sub-10983_ses-01_task-ugr_run-1",
+  "valid_voxels": 127,
+  "native_recovered_by_film": false,
+  "source_identities": [
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/filtered_func_data.nii.gz",
+      "size": 91623834,
+      "mtime_ns": 1793569579085745552,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/design.mat",
+      "size": 163517,
+      "mtime_ns": 1793569582251794814,
+      "sha256": "704da52c1e43121dd9457c1110bdec3dee9cbd05048f3e0fb1ce454b8a1d718d"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/design.con",
+      "size": 12142,
+      "mtime_ns": 1793569582252794830,
+      "sha256": "27b02785bca449c27884b00a5c739fd0863c5d4581f46f89e166f6926d4b385c"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/mask.nii.gz",
+      "size": 8654,
+      "mtime_ns": 1793569509002654521,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/mean_func.nii.gz",
+      "size": 371425,
+      "mtime_ns": 1793569581225778850,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/sigmasquareds.nii.gz",
+      "size": 336217,
+      "mtime_ns": 1793569754469471544,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/dof",
+      "size": 6,
+      "mtime_ns": 1793569754471471575,
+      "sha256": "1ee7b98599d91c20c6e853f738f2cb718f0d8b69ca240b6de532dfeaf2831bfd"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/confoundevs.txt",
+      "size": 147554,
+      "mtime_ns": 1793569581831788279,
+      "sha256": "7d9b71186702525be822de8acdc58c2b5a6516cd8374e4465ed82b4e790bb1d6"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/fsl/sub-10983/ses-01/L1_task-ugr_model-3_type-act_run-1_sm-5.feat/confoundevs.txt",
+      "size": 147554,
+      "mtime_ns": 1771270202439846820,
+      "sha256": "7d9b71186702525be822de8acdc58c2b5a6516cd8374e4465ed82b4e790bb1d6"
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe1.nii.gz",
+      "size": 350005,
+      "mtime_ns": 1793569751716428794,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe2.nii.gz",
+      "size": 349595,
+      "mtime_ns": 1793569751735429089,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe3.nii.gz",
+      "size": 350068,
+      "mtime_ns": 1793569751753429369,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe4.nii.gz",
+      "size": 349558,
+      "mtime_ns": 1793569751774429695,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe5.nii.gz",
+      "size": 350084,
+      "mtime_ns": 1793569751793429990,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe6.nii.gz",
+      "size": 350030,
+      "mtime_ns": 1793569751812430285,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe7.nii.gz",
+      "size": 350180,
+      "mtime_ns": 1793569751831430580,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe8.nii.gz",
+      "size": 350083,
+      "mtime_ns": 1793569751851430891,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe9.nii.gz",
+      "size": 349605,
+      "mtime_ns": 1793569751870431186,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe10.nii.gz",
+      "size": 349541,
+      "mtime_ns": 1793569751888431465,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe11.nii.gz",
+      "size": 349791,
+      "mtime_ns": 1793569751907431760,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe12.nii.gz",
+      "size": 349549,
+      "mtime_ns": 1793569751925432040,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe13.nii.gz",
+      "size": 345165,
+      "mtime_ns": 1793569751943432319,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe14.nii.gz",
+      "size": 348418,
+      "mtime_ns": 1793569751961432599,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe15.nii.gz",
+      "size": 349159,
+      "mtime_ns": 1793569751980432894,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe16.nii.gz",
+      "size": 349340,
+      "mtime_ns": 1793569751998433173,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe17.nii.gz",
+      "size": 350321,
+      "mtime_ns": 1793569752017433468,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe18.nii.gz",
+      "size": 349569,
+      "mtime_ns": 1793569752035433748,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe19.nii.gz",
+      "size": 349437,
+      "mtime_ns": 1793569752053434027,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe20.nii.gz",
+      "size": 349464,
+      "mtime_ns": 1793569752071434307,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe21.nii.gz",
+      "size": 349404,
+      "mtime_ns": 1793569752090434602,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe22.nii.gz",
+      "size": 348350,
+      "mtime_ns": 1793569752108434882,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe23.nii.gz",
+      "size": 349537,
+      "mtime_ns": 1793569752126435161,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe24.nii.gz",
+      "size": 349547,
+      "mtime_ns": 1793569752144435440,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe25.nii.gz",
+      "size": 349469,
+      "mtime_ns": 1793569752163435736,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe26.nii.gz",
+      "size": 348745,
+      "mtime_ns": 1793569752181436015,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe27.nii.gz",
+      "size": 349170,
+      "mtime_ns": 1793569752199436295,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe28.nii.gz",
+      "size": 349620,
+      "mtime_ns": 1793569752217436574,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe29.nii.gz",
+      "size": 349795,
+      "mtime_ns": 1793569752235436854,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe30.nii.gz",
+      "size": 345748,
+      "mtime_ns": 1793569752254437149,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe31.nii.gz",
+      "size": 349309,
+      "mtime_ns": 1793569752273437444,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe32.nii.gz",
+      "size": 349366,
+      "mtime_ns": 1793569752291437723,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe33.nii.gz",
+      "size": 350061,
+      "mtime_ns": 1793569752310438018,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe34.nii.gz",
+      "size": 349619,
+      "mtime_ns": 1793569752329438313,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe35.nii.gz",
+      "size": 349623,
+      "mtime_ns": 1793569752348438608,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe36.nii.gz",
+      "size": 350992,
+      "mtime_ns": 1793569752367438903,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe37.nii.gz",
+      "size": 350080,
+      "mtime_ns": 1793569752385439183,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe38.nii.gz",
+      "size": 349999,
+      "mtime_ns": 1793569752404439478,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe39.nii.gz",
+      "size": 350542,
+      "mtime_ns": 1793569752423439773,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe40.nii.gz",
+      "size": 350266,
+      "mtime_ns": 1793569752442440068,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe41.nii.gz",
+      "size": 348049,
+      "mtime_ns": 1793569752461440363,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe42.nii.gz",
+      "size": 350335,
+      "mtime_ns": 1793569752480440658,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe43.nii.gz",
+      "size": 346896,
+      "mtime_ns": 1793569752499440953,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe44.nii.gz",
+      "size": 349309,
+      "mtime_ns": 1793569752517441233,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe45.nii.gz",
+      "size": 350059,
+      "mtime_ns": 1793569752536441528,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe46.nii.gz",
+      "size": 349974,
+      "mtime_ns": 1793569752555441823,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe47.nii.gz",
+      "size": 349811,
+      "mtime_ns": 1793569752573442102,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe48.nii.gz",
+      "size": 350307,
+      "mtime_ns": 1793569752592442397,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe49.nii.gz",
+      "size": 349243,
+      "mtime_ns": 1793569752611442692,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/pe50.nii.gz",
+      "size": 349938,
+      "mtime_ns": 1793569752630442988,
+      "sha256": null
+    },
+    {
+      "path": "/ZPOOL/data/projects/rf1-betrayal/derivatives/insula_ica/functional-sm5-20261101T211149Z-7aa636/feat/sub-10983_ses-01_task-ugr_run-1_sm-5.feat/stats/res4d.nii.gz",
+      "size": 83840146,
+      "mtime_ns": 1793569751069418747,
+      "sha256": null
+    }
+  ],
+  "parent_anatomical_ICA_snapshot_verified": true,
+  "no_new_regression": true,
+  "no_new_temporal_filter": true
+}
