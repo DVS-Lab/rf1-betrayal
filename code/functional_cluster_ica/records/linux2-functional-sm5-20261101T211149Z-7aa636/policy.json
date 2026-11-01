@@ -1,0 +1,24 @@
+{
+  "smoothing_mm": 5,
+  "paired_with_smoothing_mm": 0,
+  "cohort_n": 132,
+  "accepted_runs": 490,
+  "dimensions": [
+    3,
+    5,
+    7,
+    0
+  ],
+  "residual_modes": [
+    "joint_bold",
+    "native_film"
+  ],
+  "variance_normalization": true,
+  "temporal_concatenation": true,
+  "physically_masked_4D": true,
+  "same_frozen_ICA_mask": true,
+  "same_full_temporal_model": true,
+  "same_corrected_TRs": true,
+  "raw_task_BOLD_and_means_reused": true,
+  "no_upstream_preprocessing": true
+}
