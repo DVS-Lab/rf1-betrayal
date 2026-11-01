@@ -1,0 +1,342 @@
+[
+  {
+    "mode": "joint_bold",
+    "sensitivity_dimension": 3,
+    "all_pair_spatial_r": [
+      [
+        0.7871781457372724,
+        0.3065811458492703,
+        -0.13612312933997964
+      ],
+      [
+        -0.3550047899120737,
+        0.7446006954238913,
+        0.16750023685190246
+      ],
+      [
+        0.13342074492352596,
+        -0.1904709482207728,
+        0.9546427281590684
+      ],
+      [
+        -0.23044651693080273,
+        -0.4799054322237295,
+        -0.10101216703189245
+      ],
+      [
+        0.4573136774488684,
+        -0.266285126832253,
+        0.04134165330005614
+      ]
+    ],
+    "matches": [
+      {
+        "spatial_r": 0.7871781457372724,
+        "absolute_spatial_r": 0.7871781457372724,
+        "primary_component": 1,
+        "sensitivity_component": 1,
+        "sensitivity_sign_for_primary_comparison": 1
+      },
+      {
+        "spatial_r": 0.7446006954238913,
+        "absolute_spatial_r": 0.7446006954238913,
+        "primary_component": 2,
+        "sensitivity_component": 2,
+        "sensitivity_sign_for_primary_comparison": 1
+      },
+      {
+        "spatial_r": 0.9546427281590684,
+        "absolute_spatial_r": 0.9546427281590684,
+        "primary_component": 3,
+        "sensitivity_component": 3,
+        "sensitivity_sign_for_primary_comparison": 1
+      }
+    ],
+    "centered_subspace_angles_degrees": [
+      9.94672940089774,
+      4.741080443329101,
+      3.4021573510945493
+    ],
+    "matching_rule": "One-to-one maximum total absolute spatial correlation; all pairwise correlations also retained.",
+    "primary_components": 5,
+    "unmatched_primary_components": [
+      4,
+      5
+    ],
+    "sensitivity_components": 3,
+    "unmatched_sensitivity_components": []
+  },
+  {
+    "mode": "joint_bold",
+    "sensitivity_dimension": 7,
+    "all_pair_spatial_r": [
+      [
+        0.8335594803324047,
+        -0.009734753915496731,
+        -0.17410730212804748,
+        -0.37097318403709173,
+        -0.16001035699360094,
+        -0.06125303843475558,
+        0.28297316833567343
+      ],
+      [
+        -0.0938918516931808,
+        -0.021589603420093337,
+        0.7958959642490571,
+        -0.5590326077493117,
+        -0.01915943412111194,
+        -0.12031556162395433,
+        -0.17611006488524808
+      ],
+      [
+        -0.12256898171523628,
+        -0.0003800030745815154,
+        -0.07638602330484885,
+        -0.07970538189403326,
+        0.8001268691482272,
+        -0.006617513651066358,
+        0.566202131088945
+      ],
+      [
+        -0.09277762025101911,
+        0.9687304692313033,
+        -0.0934876929162862,
+        -0.0879488776115763,
+        -0.05459786204197679,
+        -0.06555449525149973,
+        -0.00039632170450095344
+      ],
+      [
+        -0.002557205279825129,
+        0.020001220342743715,
+        -0.0424464495005215,
+        -0.1802042702103577,
+        -0.07007911577716183,
+        0.953590734191574,
+        0.06578612750707319
+      ]
+    ],
+    "matches": [
+      {
+        "spatial_r": 0.8335594803324047,
+        "absolute_spatial_r": 0.8335594803324047,
+        "primary_component": 1,
+        "sensitivity_component": 1,
+        "sensitivity_sign_for_primary_comparison": 1
+      },
+      {
+        "spatial_r": 0.7958959642490571,
+        "absolute_spatial_r": 0.7958959642490571,
+        "primary_component": 2,
+        "sensitivity_component": 3,
+        "sensitivity_sign_for_primary_comparison": 1
+      },
+      {
+        "spatial_r": 0.8001268691482272,
+        "absolute_spatial_r": 0.8001268691482272,
+        "primary_component": 3,
+        "sensitivity_component": 5,
+        "sensitivity_sign_for_primary_comparison": 1
+      },
+      {
+        "spatial_r": 0.9687304692313033,
+        "absolute_spatial_r": 0.9687304692313033,
+        "primary_component": 4,
+        "sensitivity_component": 2,
+        "sensitivity_sign_for_primary_comparison": 1
+      },
+      {
+        "spatial_r": 0.953590734191574,
+        "absolute_spatial_r": 0.953590734191574,
+        "primary_component": 5,
+        "sensitivity_component": 6,
+        "sensitivity_sign_for_primary_comparison": 1
+      }
+    ],
+    "centered_subspace_angles_degrees": [
+      13.705687155502451,
+      7.254977423058948,
+      4.976008840445499,
+      3.9955662657126942,
+      3.2099341252999847
+    ],
+    "matching_rule": "One-to-one maximum total absolute spatial correlation; all pairwise correlations also retained.",
+    "primary_components": 5,
+    "unmatched_primary_components": [],
+    "sensitivity_components": 7,
+    "unmatched_sensitivity_components": [
+      4,
+      7
+    ]
+  },
+  {
+    "mode": "native_film",
+    "sensitivity_dimension": 3,
+    "all_pair_spatial_r": [
+      [
+        -0.1544290774874391,
+        -0.12036240729262972,
+        0.8609653052963517
+      ],
+      [
+        0.7846010742294033,
+        -0.01635466279124827,
+        0.04775694610247037
+      ],
+      [
+        0.09637839467217217,
+        0.9829734379225641,
+        0.11385568998581261
+      ],
+      [
+        0.4537735083028545,
+        -0.12105419267573475,
+        -0.14283279477065494
+      ],
+      [
+        0.3947945688656971,
+        -0.06792555229463183,
+        0.4703526937451966
+      ]
+    ],
+    "matches": [
+      {
+        "spatial_r": 0.8609653052963517,
+        "absolute_spatial_r": 0.8609653052963517,
+        "primary_component": 1,
+        "sensitivity_component": 3,
+        "sensitivity_sign_for_primary_comparison": 1
+      },
+      {
+        "spatial_r": 0.7846010742294033,
+        "absolute_spatial_r": 0.7846010742294033,
+        "primary_component": 2,
+        "sensitivity_component": 1,
+        "sensitivity_sign_for_primary_comparison": 1
+      },
+      {
+        "spatial_r": 0.9829734379225641,
+        "absolute_spatial_r": 0.9829734379225641,
+        "primary_component": 3,
+        "sensitivity_component": 2,
+        "sensitivity_sign_for_primary_comparison": 1
+      }
+    ],
+    "centered_subspace_angles_degrees": [
+      7.244774899686615,
+      4.976456247596209,
+      2.7485736366530764
+    ],
+    "matching_rule": "One-to-one maximum total absolute spatial correlation; all pairwise correlations also retained.",
+    "primary_components": 5,
+    "unmatched_primary_components": [
+      4,
+      5
+    ],
+    "sensitivity_components": 3,
+    "unmatched_sensitivity_components": []
+  },
+  {
+    "mode": "native_film",
+    "sensitivity_dimension": 7,
+    "all_pair_spatial_r": [
+      [
+        -0.07779764730136547,
+        -0.14689777607073964,
+        -0.037362359798885296,
+        -0.3789660249728056,
+        0.48744322602689377,
+        0.6823192779820995,
+        -0.3257599821937474
+      ],
+      [
+        0.05851558892953111,
+        0.8887572761002748,
+        0.08298464031917863,
+        -0.3314332475677669,
+        0.11559034603766535,
+        -0.1115559610002443,
+        -0.17514728879355485
+      ],
+      [
+        0.9647644643749254,
+        0.016163465714101637,
+        0.008016061979985408,
+        0.13068878447352258,
+        0.06636889731705475,
+        0.10037542379158607,
+        -0.03117781429970566
+      ],
+      [
+        0.05037545856058091,
+        -0.1551128973402943,
+        0.9240037432911234,
+        -0.2935336694037156,
+        -0.17823236264037187,
+        0.018158966730538198,
+        0.1198580018729402
+      ],
+      [
+        0.08653672906047814,
+        -0.023048725313429105,
+        -0.10168268175424293,
+        -0.4028135290065492,
+        0.49082776083094326,
+        -0.1599672269663099,
+        0.7264182214355678
+      ]
+    ],
+    "matches": [
+      {
+        "spatial_r": 0.6823192779820995,
+        "absolute_spatial_r": 0.6823192779820995,
+        "primary_component": 1,
+        "sensitivity_component": 6,
+        "sensitivity_sign_for_primary_comparison": 1
+      },
+      {
+        "spatial_r": 0.8887572761002748,
+        "absolute_spatial_r": 0.8887572761002748,
+        "primary_component": 2,
+        "sensitivity_component": 2,
+        "sensitivity_sign_for_primary_comparison": 1
+      },
+      {
+        "spatial_r": 0.9647644643749254,
+        "absolute_spatial_r": 0.9647644643749254,
+        "primary_component": 3,
+        "sensitivity_component": 1,
+        "sensitivity_sign_for_primary_comparison": 1
+      },
+      {
+        "spatial_r": 0.9240037432911234,
+        "absolute_spatial_r": 0.9240037432911234,
+        "primary_component": 4,
+        "sensitivity_component": 3,
+        "sensitivity_sign_for_primary_comparison": 1
+      },
+      {
+        "spatial_r": 0.7264182214355678,
+        "absolute_spatial_r": 0.7264182214355678,
+        "primary_component": 5,
+        "sensitivity_component": 7,
+        "sensitivity_sign_for_primary_comparison": 1
+      }
+    ],
+    "centered_subspace_angles_degrees": [
+      7.773266485223063,
+      7.059974733173099,
+      5.169492888826266,
+      3.7563991706875863,
+      3.259270178031718
+    ],
+    "matching_rule": "One-to-one maximum total absolute spatial correlation; all pairwise correlations also retained.",
+    "primary_components": 5,
+    "unmatched_primary_components": [],
+    "sensitivity_components": 7,
+    "unmatched_sensitivity_components": [
+      4,
+      5
+    ]
+  }
+]
