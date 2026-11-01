@@ -1,0 +1,90 @@
+{
+  "sources": [
+    {
+      "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/masks/overlap_figure_ugr_mask.nii.gz",
+      "sha256": "30f6122585552605a0d41cddea7d3c46c4072ef342d55262b70f39195a51eb2b",
+      "voxels": 545
+    },
+    {
+      "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/masks/overlap_figure_trust_mask.nii.gz",
+      "sha256": "87c4f13242d1b0ee699a03e1be3b0b4a70838c7a18cc4a64bdcc48d4e94f1a93",
+      "voxels": 3214
+    },
+    {
+      "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/masks/overlap_figure_intersection_mask.nii.gz",
+      "sha256": "c8e76864ed28968fd33f1da318fa2f5a5281487c2a61b6f86edf9c5bf7d63b03",
+      "voxels": 365
+    },
+    {
+      "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/masks/seed-AIns-clusterthresh.nii.gz",
+      "sha256": "66be24139534438a8f2efd49d071afcfa21010df5a578b955917a22b71d234d0",
+      "voxels": 127
+    }
+  ],
+  "slices": [
+    {
+      "display_z": -16,
+      "native_z_index": 19,
+      "native_slice_z": -15.56999945640564,
+      "whole_brain_overlap_slice_voxels": 12,
+      "left_seed_slice_voxels": 12
+    },
+    {
+      "display_z": -13,
+      "native_z_index": 20,
+      "native_slice_z": -12.59999942779541,
+      "whole_brain_overlap_slice_voxels": 18,
+      "left_seed_slice_voxels": 18
+    },
+    {
+      "display_z": -10,
+      "native_z_index": 21,
+      "native_slice_z": -9.62999939918518,
+      "whole_brain_overlap_slice_voxels": 15,
+      "left_seed_slice_voxels": 15
+    },
+    {
+      "display_z": -7,
+      "native_z_index": 22,
+      "native_slice_z": -6.659999370574951,
+      "whole_brain_overlap_slice_voxels": 19,
+      "left_seed_slice_voxels": 19
+    },
+    {
+      "display_z": -4,
+      "native_z_index": 23,
+      "native_slice_z": -3.6899993419647217,
+      "whole_brain_overlap_slice_voxels": 13,
+      "left_seed_slice_voxels": 13
+    },
+    {
+      "display_z": -1,
+      "native_z_index": 24,
+      "native_slice_z": -0.7199993133544922,
+      "whole_brain_overlap_slice_voxels": 11,
+      "left_seed_slice_voxels": 11
+    },
+    {
+      "display_z": 2,
+      "native_z_index": 25,
+      "native_slice_z": 2.2500007152557373,
+      "whole_brain_overlap_slice_voxels": 11,
+      "left_seed_slice_voxels": 11
+    },
+    {
+      "display_z": 5,
+      "native_z_index": 26,
+      "native_slice_z": 5.220000743865967,
+      "whole_brain_overlap_slice_voxels": 13,
+      "left_seed_slice_voxels": 13
+    },
+    {
+      "display_z": 8,
+      "native_z_index": 27,
+      "native_slice_z": 8.190000772476196,
+      "whole_brain_overlap_slice_voxels": 10,
+      "left_seed_slice_voxels": 10
+    }
+  ],
+  "note": "These are saved overlap_figure masks; no exact correspondence with the published raster figure is assumed."
+}
