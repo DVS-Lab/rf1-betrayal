@@ -10,6 +10,20 @@ each with one shared TG+UG basis, five primary components and 3/7 spatial checks
 Retain every component. The paired-basis task analysis retains all 60 primary basis × ROI × component × task tests in one Bonferroni family. Component numbers do not match across ROIs/dimensionalities.
 No new gPPI or behavioral search is included.
 
+## Functional-cluster mean and separate fractionation
+
+`bash code/functional_cluster_ica/start.sh` adds the current 127-voxel functional
+cluster mean to all existing 3/5/7-component five-bar figures, reusing every
+anatomical-insula estimate. It publishes those plots first, then fractionates
+the functional ROI separately at 3/5/7/automatic dimensions in both retained
+unsmoothed residual representations. Inputs are physically masked 4D data.
+All new ICs also receive the same task-preserved spatial-regression/timecourse
+OLS analysis and five-bar plots. Existing preprocessing/FEAT/ICA fits are reused;
+no new fMRIPrep, FEAT or FILM is launched. The detached launcher resumes its
+checkpoints and publishes to `insula-ica`. See the
+[methods, storage and validation](../functional_cluster_ica/README.md), and
+check `code/functional_cluster_ica/status.py --brief`.
+
 ## Pooled high/low UGR task model
 
 For task responses on the existing **3-, 5- and 7-component solutions**, run
