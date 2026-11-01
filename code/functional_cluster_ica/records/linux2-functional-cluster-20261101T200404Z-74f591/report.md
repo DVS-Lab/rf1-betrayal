@@ -1,0 +1,9 @@
+# Functional cluster: mean and exploratory fractionation
+
+Current documented 127-voxel seed-AIns-clusterthresh candidate, not a proven historical PPI mask. Mean: original 127 voxels in exact unresidualized input to completed sm-0 FEAT. New ICA: common valid fitted support of that candidate, minimum 80% retained, no participant/run exclusions. Existing anatomical-insula fits and 465 group estimates remain unchanged.
+
+N132, Trust241/UGR249. Both joint BOLD-scale and native FILM residual representations from retained unsmoothed FEAT fits. Physically masked 4D blocks, per-run SD/run-energy balance, native MELODIC variance normalization enabled, concat, dimensions 3/5/7/automatic. Automatic PCA serialized. No new temporal filtering, task/confound regression, smoothing, fMRIPrep, FEAT or FILM.
+
+New component timecourses use simultaneous spatial regression inside the functional mask on cached raw FEAT-input BOLD, with a spatial intercept. Responses and full task+nuisance model are z-scored before joint OLS; UGR uses the established pooled high/low fairness slopes, Trust uses C/F/S reciprocate−defect contrasts. Runs averaged within participants, then equal-participant means and descriptive pointwise 95% CIs. Task-selected ROI, exploratory characterization without independent confirmation, permutation tests or significance selection. Component signs set by spatial peak, not task effects; component indices local to each fit.
+
+Means publish before ICA. All complete raw extractions, temporal fits, residual arrays, masked sessions and ICA fits are checked and reused on resume. New outputs remain under the isolated output_root in state.json; only small records/maps/plots/tables are published. See coverage.json, reused-insula-verification.json, provenance.json, ica-plan.json, fits and errors.
