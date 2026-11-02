@@ -1,0 +1,3481 @@
+{
+  "sources": [
+    {
+      "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/code/functional_cluster_ica/records/linux2-functional-cluster-20261101T200404Z-74f591",
+      "state": "functional_cluster_complete_review_pending",
+      "group_effects_sha256": "fc45bea02782022f2a1fd6371c9da9439e1190dcdbc1f8d22d02585d86e9a404"
+    },
+    {
+      "path": "/Users/tug87422/Documents/Codex/2026-10-26/ok/work/rf1-betrayal/code/functional_cluster_ica/records/linux2-functional-sm5-20261101T211149Z-7aa636",
+      "state": "matched_sm5_functional_cluster_complete_review_pending",
+      "group_effects_sha256": "48d6e8686730d52fe758012c690d49927cd99d6944d14d19ec23e5ef7c096ab6"
+    }
+  ],
+  "original_mean_mask_voxels": 127,
+  "ICA_mask_voxels": 117,
+  "whole_ROI_insula_voxels": 2,
+  "ICA_ROI_insula_voxels": 2,
+  "functional_mean": [
+    {
+      "mode": "functional_mean",
+      "roi": "functional_cluster",
+      "dimensionality": "0",
+      "series": "functional_mean",
+      "component": "0",
+      "task": "trust",
+      "contrast": "trust_C_rec_minus_def",
+      "n": "132",
+      "effect": "-0.017391444116338473",
+      "se": "0.005985611703030185",
+      "ci_low": "-0.029232411868141173",
+      "ci_high": "-0.005550476364535772",
+      "inference": "Exploratory pointwise participant CI; no permutation test or significance selection"
+    },
+    {
+      "mode": "functional_mean",
+      "roi": "functional_cluster",
+      "dimensionality": "0",
+      "series": "functional_mean",
+      "component": "0",
+      "task": "trust",
+      "contrast": "trust_F_rec_minus_def",
+      "n": "132",
+      "effect": "-0.05882324821057804",
+      "se": "0.006777681252757993",
+      "ci_low": "-0.07223111847140315",
+      "ci_high": "-0.045415377949752936",
+      "inference": "Exploratory pointwise participant CI; no permutation test or significance selection"
+    },
+    {
+      "mode": "functional_mean",
+      "roi": "functional_cluster",
+      "dimensionality": "0",
+      "series": "functional_mean",
+      "component": "0",
+      "task": "trust",
+      "contrast": "trust_S_rec_minus_def",
+      "n": "132",
+      "effect": "-0.023719594077253048",
+      "se": "0.006182329054026267",
+      "ci_low": "-0.03594971567413151",
+      "ci_high": "-0.01148947248037459",
+      "inference": "Exploratory pointwise participant CI; no permutation test or significance selection"
+    },
+    {
+      "mode": "functional_mean",
+      "roi": "functional_cluster",
+      "dimensionality": "0",
+      "series": "functional_mean",
+      "component": "0",
+      "task": "ugr",
+      "contrast": "ugr_nonsocial",
+      "n": "132",
+      "effect": "-0.021550712840448676",
+      "se": "0.0064419042293987535",
+      "ci_low": "-0.03429433605307647",
+      "ci_high": "-0.00880708962782088",
+      "inference": "Exploratory pointwise participant CI; no permutation test or significance selection"
+    },
+    {
+      "mode": "functional_mean",
+      "roi": "functional_cluster",
+      "dimensionality": "0",
+      "series": "functional_mean",
+      "component": "0",
+      "task": "ugr",
+      "contrast": "ugr_social",
+      "n": "132",
+      "effect": "-0.029783277340356035",
+      "se": "0.005707139445147825",
+      "ci_low": "-0.04107336053950935",
+      "ci_high": "-0.01849319414120272",
+      "inference": "Exploratory pointwise participant CI; no permutation test or significance selection"
+    }
+  ],
+  "spatial_smoothing_summary": [
+    {
+      "mode": "joint_bold",
+      "dimensionality": 3,
+      "matched_components": 3,
+      "min_abs_r": 0.8652385534345588,
+      "median_abs_r": 0.877645920847057,
+      "max_abs_r": 0.9328611275225781
+    },
+    {
+      "mode": "native_film",
+      "dimensionality": 3,
+      "matched_components": 3,
+      "min_abs_r": 0.8714193683742303,
+      "median_abs_r": 0.8767505088343561,
+      "max_abs_r": 0.9176931538128293
+    },
+    {
+      "mode": "joint_bold",
+      "dimensionality": 5,
+      "matched_components": 5,
+      "min_abs_r": 0.5973856836783896,
+      "median_abs_r": 0.7104243618919976,
+      "max_abs_r": 0.9351124868954173
+    },
+    {
+      "mode": "native_film",
+      "dimensionality": 5,
+      "matched_components": 5,
+      "min_abs_r": 0.7160911938375958,
+      "median_abs_r": 0.8405450402021813,
+      "max_abs_r": 0.8599496052130567
+    },
+    {
+      "mode": "native_film",
+      "dimensionality": 7,
+      "matched_components": 7,
+      "min_abs_r": 0.7136562992618068,
+      "median_abs_r": 0.8570143062042649,
+      "max_abs_r": 0.9160290478469897
+    },
+    {
+      "mode": "joint_bold",
+      "dimensionality": 7,
+      "matched_components": 7,
+      "min_abs_r": 0.37838263323551075,
+      "median_abs_r": 0.6942234739289762,
+      "max_abs_r": 0.8884106988763738
+    },
+    {
+      "mode": "joint_bold",
+      "dimensionality": 0,
+      "matched_components": 39,
+      "min_abs_r": 0.47697214116583286,
+      "median_abs_r": 0.7216096688430655,
+      "max_abs_r": 0.9407292740505196
+    },
+    {
+      "mode": "native_film",
+      "dimensionality": 0,
+      "matched_components": 40,
+      "min_abs_r": 0.5103060361334162,
+      "median_abs_r": 0.7288238522943387,
+      "max_abs_r": 0.9703738115095825
+    }
+  ],
+  "residual_scale_map_correspondence": [
+    {
+      "arm": "sm0",
+      "dimensionality": 3,
+      "all_pair_spatial_r": [
+        [
+          -0.14061916298488528,
+          -0.13158736311716154,
+          0.9702124927009887
+        ],
+        [
+          -0.9788688437637858,
+          0.028557615712828166,
+          -0.1838537942833545
+        ],
+        [
+          0.0371076230417446,
+          0.980200343807875,
+          0.1613834199318395
+        ]
+      ],
+      "matches": [
+        {
+          "spatial_r": 0.9702124927009887,
+          "absolute_spatial_r": 0.9702124927009887,
+          "bold_component": 1,
+          "film_component": 3,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": -0.9788688437637858,
+          "absolute_spatial_r": 0.9788688437637858,
+          "bold_component": 2,
+          "film_component": 1,
+          "film_sign_for_bold_comparison": -1
+        },
+        {
+          "spatial_r": 0.980200343807875,
+          "absolute_spatial_r": 0.980200343807875,
+          "bold_component": 3,
+          "film_component": 2,
+          "film_sign_for_bold_comparison": 1
+        }
+      ],
+      "centered_subspace_angles_degrees": [
+        9.69397270017643,
+        5.780206912741226,
+        2.9930690439483487
+      ],
+      "matching_rule": "One-to-one maximum total absolute spatial correlation; all pairwise correlations also retained.",
+      "bold_components": 3,
+      "unmatched_bold_components": [],
+      "film_components": 3,
+      "unmatched_film_components": []
+    },
+    {
+      "arm": "sm0",
+      "dimensionality": 5,
+      "all_pair_spatial_r": [
+        [
+          0.9181134283655971,
+          -0.2977112635003409,
+          -0.1405228791315437,
+          0.06580438930234911,
+          -0.16458693573662275
+        ],
+        [
+          -0.3032446266913512,
+          -0.6310628304425175,
+          0.19955889932974621,
+          -0.1080802272703555,
+          -0.40224026236295196
+        ],
+        [
+          0.15622808397204938,
+          0.09417573205117384,
+          0.9451660343468715,
+          0.0189514419303206,
+          0.06529406341617973
+        ],
+        [
+          -0.012700239365914643,
+          0.29399930260259194,
+          0.036582027608966235,
+          0.8516553400353662,
+          -0.13679747773449155
+        ],
+        [
+          0.16015856321331148,
+          -0.04065352450090516,
+          0.033223071491983995,
+          -0.08271524042833446,
+          0.8166888841714051
+        ]
+      ],
+      "matches": [
+        {
+          "spatial_r": 0.9181134283655971,
+          "absolute_spatial_r": 0.9181134283655971,
+          "bold_component": 1,
+          "film_component": 1,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": -0.6310628304425175,
+          "absolute_spatial_r": 0.6310628304425175,
+          "bold_component": 2,
+          "film_component": 2,
+          "film_sign_for_bold_comparison": -1
+        },
+        {
+          "spatial_r": 0.9451660343468715,
+          "absolute_spatial_r": 0.9451660343468715,
+          "bold_component": 3,
+          "film_component": 3,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.8516553400353662,
+          "absolute_spatial_r": 0.8516553400353662,
+          "bold_component": 4,
+          "film_component": 4,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.8166888841714051,
+          "absolute_spatial_r": 0.8166888841714051,
+          "bold_component": 5,
+          "film_component": 5,
+          "film_sign_for_bold_comparison": 1
+        }
+      ],
+      "centered_subspace_angles_degrees": [
+        62.975225360782034,
+        9.105390752941018,
+        8.139977380373114,
+        5.153803876101359,
+        4.630761140093717
+      ],
+      "matching_rule": "One-to-one maximum total absolute spatial correlation; all pairwise correlations also retained.",
+      "bold_components": 5,
+      "unmatched_bold_components": [],
+      "film_components": 5,
+      "unmatched_film_components": []
+    },
+    {
+      "arm": "sm0",
+      "dimensionality": 7,
+      "all_pair_spatial_r": [
+        [
+          -0.28656029537033706,
+          -0.121424666712112,
+          -0.15220674098889192,
+          -0.13931968989995527,
+          0.4745439199974783,
+          0.3727202150563354,
+          -0.6165857292906506
+        ],
+        [
+          -0.0006706115465747814,
+          0.3233800458363815,
+          0.9099683780679602,
+          -0.0021437808487175048,
+          0.1228443125997473,
+          -0.02766161902101701,
+          -0.14036042542681604
+        ],
+        [
+          -0.04116082558095821,
+          0.1711593134924289,
+          -0.1417829572666305,
+          0.9485586960080458,
+          0.025014596887645627,
+          -0.011127103913945351,
+          -0.18587819249949888
+        ],
+        [
+          -0.09917847794064008,
+          0.8713843730363003,
+          -0.292761043345032,
+          -0.20118987457388304,
+          -0.06914695513083259,
+          -0.12738014970645148,
+          -0.14505082057803592
+        ],
+        [
+          0.8678114529834875,
+          -0.017616371129327724,
+          -0.10492482411842308,
+          -0.12931304107324107,
+          0.12332176930536784,
+          -0.2468749213041299,
+          -0.28352641999012207
+        ],
+        [
+          -0.025551392460158473,
+          0.207008114259866,
+          -0.11212534507604127,
+          -0.006523884365749141,
+          0.8309325960584842,
+          -0.12315604757077671,
+          0.4510059520335473
+        ],
+        [
+          0.36497213389509026,
+          0.2122585873578693,
+          -0.023318334343771733,
+          -0.08031785631009797,
+          0.002130680178166987,
+          0.7958914863211911,
+          0.19137851563160757
+        ]
+      ],
+      "matches": [
+        {
+          "spatial_r": -0.6165857292906506,
+          "absolute_spatial_r": 0.6165857292906506,
+          "bold_component": 1,
+          "film_component": 7,
+          "film_sign_for_bold_comparison": -1
+        },
+        {
+          "spatial_r": 0.9099683780679602,
+          "absolute_spatial_r": 0.9099683780679602,
+          "bold_component": 2,
+          "film_component": 3,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.9485586960080458,
+          "absolute_spatial_r": 0.9485586960080458,
+          "bold_component": 3,
+          "film_component": 4,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.8713843730363003,
+          "absolute_spatial_r": 0.8713843730363003,
+          "bold_component": 4,
+          "film_component": 2,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.8678114529834875,
+          "absolute_spatial_r": 0.8678114529834875,
+          "bold_component": 5,
+          "film_component": 1,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.8309325960584842,
+          "absolute_spatial_r": 0.8309325960584842,
+          "bold_component": 6,
+          "film_component": 5,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.7958914863211911,
+          "absolute_spatial_r": 0.7958914863211911,
+          "bold_component": 7,
+          "film_component": 6,
+          "film_sign_for_bold_comparison": 1
+        }
+      ],
+      "centered_subspace_angles_degrees": [
+        35.038146092062156,
+        13.637220225459618,
+        10.98715798092858,
+        8.974994512048838,
+        4.439175005960214,
+        3.516295177537965,
+        2.6692564408345176
+      ],
+      "matching_rule": "One-to-one maximum total absolute spatial correlation; all pairwise correlations also retained.",
+      "bold_components": 7,
+      "unmatched_bold_components": [],
+      "film_components": 7,
+      "unmatched_film_components": []
+    },
+    {
+      "arm": "sm5",
+      "dimensionality": 3,
+      "all_pair_spatial_r": [
+        [
+          0.9972225300826647,
+          -0.09856897507304367,
+          0.0811034725098179
+        ],
+        [
+          -0.0892454015080158,
+          0.9945604942270274,
+          0.07151038300319548
+        ],
+        [
+          0.03103783144941762,
+          -0.08090196182195437,
+          0.9934511755631812
+        ]
+      ],
+      "matches": [
+        {
+          "spatial_r": 0.9972225300826647,
+          "absolute_spatial_r": 0.9972225300826647,
+          "bold_component": 1,
+          "film_component": 1,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.9945604942270274,
+          "absolute_spatial_r": 0.9945604942270274,
+          "bold_component": 2,
+          "film_component": 2,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.9934511755631812,
+          "absolute_spatial_r": 0.9934511755631812,
+          "bold_component": 3,
+          "film_component": 3,
+          "film_sign_for_bold_comparison": 1
+        }
+      ],
+      "centered_subspace_angles_degrees": [
+        6.385916094131281,
+        2.474239807029302,
+        2.320746986563566
+      ],
+      "matching_rule": "One-to-one maximum total absolute spatial correlation; all pairwise correlations also retained.",
+      "bold_components": 3,
+      "unmatched_bold_components": [],
+      "film_components": 3,
+      "unmatched_film_components": []
+    },
+    {
+      "arm": "sm5",
+      "dimensionality": 5,
+      "all_pair_spatial_r": [
+        [
+          0.04667444235225807,
+          -0.051944502875804585,
+          0.9915062774575486,
+          -0.09542907834586765,
+          -0.06028809882170748
+        ],
+        [
+          0.20261050487542767,
+          0.9864419430551133,
+          0.06380368294512537,
+          -0.05001883292693513,
+          0.001085371874395666
+        ],
+        [
+          0.9774629710527225,
+          -0.0739837936830792,
+          0.03960826842835394,
+          0.05613465063587456,
+          -0.057232014936691764
+        ],
+        [
+          -0.10384821097069273,
+          -0.007241215139212358,
+          0.035502211933979906,
+          0.944820057176843,
+          -0.15730109008577509
+        ],
+        [
+          0.11370305691275584,
+          0.013418854768075255,
+          -0.06626338777350067,
+          0.21250781060182486,
+          0.9750040011071109
+        ]
+      ],
+      "matches": [
+        {
+          "spatial_r": 0.9915062774575486,
+          "absolute_spatial_r": 0.9915062774575486,
+          "bold_component": 1,
+          "film_component": 3,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.9864419430551133,
+          "absolute_spatial_r": 0.9864419430551133,
+          "bold_component": 2,
+          "film_component": 2,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.9774629710527225,
+          "absolute_spatial_r": 0.9774629710527225,
+          "bold_component": 3,
+          "film_component": 1,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.944820057176843,
+          "absolute_spatial_r": 0.944820057176843,
+          "bold_component": 4,
+          "film_component": 4,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.9750040011071109,
+          "absolute_spatial_r": 0.9750040011071109,
+          "bold_component": 5,
+          "film_component": 5,
+          "film_sign_for_bold_comparison": 1
+        }
+      ],
+      "centered_subspace_angles_degrees": [
+        14.589079985435257,
+        8.125863883545318,
+        3.7867196778083962,
+        3.2499062618506396,
+        2.5756893602986244
+      ],
+      "matching_rule": "One-to-one maximum total absolute spatial correlation; all pairwise correlations also retained.",
+      "bold_components": 5,
+      "unmatched_bold_components": [],
+      "film_components": 5,
+      "unmatched_film_components": []
+    },
+    {
+      "arm": "sm5",
+      "dimensionality": 7,
+      "all_pair_spatial_r": [
+        [
+          0.9107217269410834,
+          -0.028687650160959175,
+          -0.04023768535903062,
+          0.04669176808599615,
+          -0.1741423984249376,
+          0.33068613332332425,
+          -0.13773189986837567
+        ],
+        [
+          0.025756479324650312,
+          -0.14900351913784934,
+          0.9798763574222832,
+          0.21296124487353096,
+          -0.01193897114724764,
+          -0.035620551930895486,
+          0.029812338228890182
+        ],
+        [
+          -0.0670508533202797,
+          -0.04783582404634454,
+          -0.07419671085018949,
+          0.9089996325554021,
+          0.2711998376420954,
+          0.07073379864108004,
+          -0.08401456289510154
+        ],
+        [
+          0.36824038055543845,
+          0.015879739691514856,
+          -0.014981364205807729,
+          -0.12209752762353684,
+          0.6521122904554489,
+          -0.466657246518139,
+          0.5093223392943703
+        ],
+        [
+          -0.06522465054612539,
+          0.8326643669300366,
+          0.00675140319301779,
+          -0.17484704201772047,
+          0.22189313015998416,
+          0.2246463502033217,
+          -0.1285630579393187
+        ],
+        [
+          -0.08516892724010158,
+          0.02063174080213419,
+          -0.06141180290091714,
+          0.012662584349851352,
+          -0.1783845336936658,
+          0.5689200718439638,
+          0.788096984138567
+        ],
+        [
+          0.11249610613368992,
+          0.5147254304393261,
+          -0.07304713671899185,
+          0.32590549541801767,
+          -0.5054480157783664,
+          -0.49947825348866837,
+          0.17365992565371707
+        ]
+      ],
+      "matches": [
+        {
+          "spatial_r": 0.9107217269410834,
+          "absolute_spatial_r": 0.9107217269410834,
+          "bold_component": 1,
+          "film_component": 1,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.9798763574222832,
+          "absolute_spatial_r": 0.9798763574222832,
+          "bold_component": 2,
+          "film_component": 3,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.9089996325554021,
+          "absolute_spatial_r": 0.9089996325554021,
+          "bold_component": 3,
+          "film_component": 4,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.6521122904554489,
+          "absolute_spatial_r": 0.6521122904554489,
+          "bold_component": 4,
+          "film_component": 5,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.8326643669300366,
+          "absolute_spatial_r": 0.8326643669300366,
+          "bold_component": 5,
+          "film_component": 2,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": 0.788096984138567,
+          "absolute_spatial_r": 0.788096984138567,
+          "bold_component": 6,
+          "film_component": 7,
+          "film_sign_for_bold_comparison": 1
+        },
+        {
+          "spatial_r": -0.49947825348866837,
+          "absolute_spatial_r": 0.49947825348866837,
+          "bold_component": 7,
+          "film_component": 6,
+          "film_sign_for_bold_comparison": -1
+        }
+      ],
+      "centered_subspace_angles_degrees": [
+        27.746999861886476,
+        9.021240455314823,
+        7.124638611148251,
+        5.395299824217177,
+        5.246424732844947,
+        3.6039719409611917,
+        3.238509250224097
+      ],
+      "matching_rule": "One-to-one maximum total absolute spatial correlation; all pairwise correlations also retained.",
+      "bold_components": 7,
+      "unmatched_bold_components": [],
+      "film_components": 7,
+      "unmatched_film_components": []
+    }
+  ],
+  "component_anatomy": [
+    {
+      "arm": "sm0",
+      "mode": "joint_bold",
+      "dimensionality": 3,
+      "component": 1,
+      "peak_MNI_mm": [
+        -45.10000252723694,
+        22.499999284744263,
+        -3.6899993419647217
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.35651274288881,
+        23.377438401632908,
+        -4.354131355651919
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.5919958455091114
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.312164597364303
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.03968741326101304
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.03634142554837896
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.01596151039377038
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.0030123226824641212
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0008368852409586905
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "joint_bold",
+      "dimensionality": 3,
+      "component": 2,
+      "peak_MNI_mm": [
+        -50.50000262260437,
+        17.09999918937683,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -46.558610049405864,
+        22.282837199416235,
+        -1.4830239175731077
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.3825827317496011
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.2874677931525059
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.28053525084989495
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.023618031507833436
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.01294112129656831
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.007910051210451149
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.004945020233145084
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "joint_bold",
+      "dimensionality": 3,
+      "component": 3,
+      "peak_MNI_mm": [
+        -45.10000252723694,
+        22.499999284744263,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.84289203473403,
+        21.84756598843843,
+        0.0930819314784124
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.37225904274319843
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.27077487293171204
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.19678435599528557
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.07846797375645842
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.07586871946795233
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.005844882936554914
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 1.5216883850347288e-07
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "joint_bold",
+      "dimensionality": 5,
+      "component": 1,
+      "peak_MNI_mm": [
+        -45.10000252723694,
+        25.19999933242798,
+        -3.6899993419647217
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.37753804052556,
+        24.260552889608334,
+        -5.076708316971441
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.595789299672133
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.264816104760304
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.10457080847242549
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.014276714586711554
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.013683275329801037
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.006385579063256974
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.0004782181153678665
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "joint_bold",
+      "dimensionality": 5,
+      "component": 2,
+      "peak_MNI_mm": [
+        -50.50000262260437,
+        19.799999237060547,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -45.53041157834971,
+        21.173278721765126,
+        -0.8268672081634328
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.48127914439414016
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.23466851921659748
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.2327487003237333
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.041935031767802555
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.0055285641767294945
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.002695150109362806
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.0011448900116340398
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "joint_bold",
+      "dimensionality": 5,
+      "component": 3,
+      "peak_MNI_mm": [
+        -45.10000252723694,
+        22.499999284744263,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.59643364191237,
+        21.757843857218436,
+        0.02056989603972066
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.4729921693519769
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.21353024216607497
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.1931188642498692
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.06580063646871238
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.04751771263163934
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.006981834695881136
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 5.8540435846326375e-05
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "joint_bold",
+      "dimensionality": 5,
+      "component": 4,
+      "peak_MNI_mm": [
+        -34.300002336502075,
+        17.09999918937683,
+        -12.59999942779541
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -38.37505006204329,
+        19.813155947217048,
+        -9.95482188580993
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.9381695944980047
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.03358703932745143
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.009961201187243326
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.009911494647192107
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.005746963042052748
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.0025211920456718606
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.00010251525238377613
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "joint_bold",
+      "dimensionality": 5,
+      "component": 5,
+      "peak_MNI_mm": [
+        -42.40000247955322,
+        19.799999237060547,
+        -6.659999370574951
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -41.8521670591261,
+        21.83250545865617,
+        -7.7245418954694705
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.8966985845821978
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.05741297093877813
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.03002486378469813
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.0089257929911286
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.004716356300137601
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.0014619887544482528
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0007594426486116735
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "joint_bold",
+      "dimensionality": 7,
+      "component": 1,
+      "peak_MNI_mm": [
+        -45.10000252723694,
+        27.899999380111694,
+        -6.659999370574951
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.21845498306666,
+        24.01777120923871,
+        -5.475145989833429
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.7152170911035429
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.18941271392334652
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.060322067051622824
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.015531085728806135
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.007849868638667276
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.00783166359867997
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.003835509955334337
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "joint_bold",
+      "dimensionality": 7,
+      "component": 2,
+      "peak_MNI_mm": [
+        -34.300002336502075,
+        17.09999918937683,
+        -12.59999942779541
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -37.46393261405843,
+        19.521576117956467,
+        -10.484068746603677
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.9015586901413052
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.07947457406725322
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.009379572169795796
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.003423339553127321
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.0033336738005942446
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.0027607846861676592
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 6.936558175625318e-05
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "joint_bold",
+      "dimensionality": 7,
+      "component": 3,
+      "peak_MNI_mm": [
+        -50.50000262260437,
+        19.799999237060547,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -46.33096664864795,
+        20.298565842251882,
+        -0.46871789537016895
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.5549496175645051
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.25380211431073146
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.1325136286666904
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.02645550041214193
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.024638369076379313
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.006969885157618594
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0006708848119330963
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "joint_bold",
+      "dimensionality": 7,
+      "component": 4,
+      "peak_MNI_mm": [
+        -34.300002336502075,
+        19.799999237060547,
+        -9.62999939918518
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -37.808412423042256,
+        20.934576089074426,
+        -9.326271943079222
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.9273468618701909
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.04499179494486071
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.012885322120648203
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.008057325054623003
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.005888040025870408
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.0007915339861893402
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 3.9121997617378145e-05
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "joint_bold",
+      "dimensionality": 7,
+      "component": 5,
+      "peak_MNI_mm": [
+        -45.10000252723694,
+        22.499999284744263,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.30574097230963,
+        21.538853863272454,
+        0.4664751926947131
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Unlabeled",
+          "fraction": 0.3609627880037929
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.2777978570243733
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.2109180359241724
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.08641005622539602
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.054931796931506835
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.008631333441346095
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.000348132449412424
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "joint_bold",
+      "dimensionality": 7,
+      "component": 6,
+      "peak_MNI_mm": [
+        -42.40000247955322,
+        19.799999237060547,
+        -6.659999370574951
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -41.20991724102281,
+        21.766778479064246,
+        -7.831000454705002
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.8759839767697666
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.05854860625028956
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.050772981341681164
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.009865668473818338
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.003075240724825746
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.0014640997549449006
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.00028942668467399184
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "joint_bold",
+      "dimensionality": 7,
+      "component": 7,
+      "peak_MNI_mm": [
+        -45.10000252723694,
+        22.499999284744263,
+        -0.7199993133544922
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -45.85957601201593,
+        22.135059537755414,
+        -1.5996298655097567
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.5720595108653561
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.24403960677655687
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.12090448793771127
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.039903243292970896
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.015301675615262501
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.007343362446591682
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.00044811306555076434
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "native_film",
+      "dimensionality": 3,
+      "component": 1,
+      "peak_MNI_mm": [
+        -34.300002336502075,
+        19.799999237060547,
+        -12.59999942779541
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -39.70878411500153,
+        20.613503499434575,
+        -7.139926289945765
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.7811370042895445
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.08888610009037393
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.05493608684681001
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.027550903331010724
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.025256311407669874
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.022190718882629506
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 4.287515196162659e-05
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "native_film",
+      "dimensionality": 3,
+      "component": 2,
+      "peak_MNI_mm": [
+        -45.10000252723694,
+        22.499999284744263,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -45.268132455086125,
+        21.74017060227195,
+        0.46675924278317577
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.3000652517233068
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.27151560200220043
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.22080553746977546
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.12691185941048103
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.07423909081123506
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.006461716175525462
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 9.424074757550031e-07
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "native_film",
+      "dimensionality": 3,
+      "component": 3,
+      "peak_MNI_mm": [
+        -45.10000252723694,
+        22.499999284744263,
+        -3.6899993419647217
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.1666707505743,
+        22.72359229737982,
+        -4.058859027469599
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.5643966025534491
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.3278839852703284
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.06440584770973438
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.021335131973561773
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.015829946752242096
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.00608130626053328
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 6.717948015085143e-05
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "native_film",
+      "dimensionality": 5,
+      "component": 1,
+      "peak_MNI_mm": [
+        -45.10000252723694,
+        25.19999933242798,
+        -3.6899993419647217
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.98666777084544,
+        23.862973582930156,
+        -4.167946693189472
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.5315295210695411
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.3397898152425863
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.07661683857474039
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.028575923449818755
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.016327102479304783
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0038813219149170966
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.0032794772690915453
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "native_film",
+      "dimensionality": 5,
+      "component": 2,
+      "peak_MNI_mm": [
+        -34.300002336502075,
+        19.799999237060547,
+        -9.62999939918518
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -39.67808584595685,
+        20.89667732729144,
+        -6.938795861250086
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.8072506236295859
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.0876482111710923
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.04011705218735474
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.03327117034282961
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.028139973378527798
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.002969452741785728
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0006035165488240025
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "native_film",
+      "dimensionality": 5,
+      "component": 3,
+      "peak_MNI_mm": [
+        -45.10000252723694,
+        22.499999284744263,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.57589624583372,
+        21.740911686185516,
+        -0.3749448863969875
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.2916921677166664
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.2833730726289299
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.22732545216004582
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.10048601008003236
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.08739597096076045
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.009726632182432284
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 6.942711327288276e-07
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "native_film",
+      "dimensionality": 5,
+      "component": 4,
+      "peak_MNI_mm": [
+        -37.00000238418579,
+        17.09999918937683,
+        -15.56999945640564
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -39.88762683377924,
+        19.742470411031352,
+        -8.875368277530027
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.9149002840660457
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.06893022318408225
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.012051612465463112
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.002214222851704996
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.001792839070993819
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 8.840899568441424e-05
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 2.2409366025989125e-05
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "native_film",
+      "dimensionality": 5,
+      "component": 5,
+      "peak_MNI_mm": [
+        -42.40000247955322,
+        22.499999284744263,
+        -9.62999939918518
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -43.08768238311237,
+        21.752224165654816,
+        -6.084937010385669
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.8316298715175187
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.05884647711727227
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.055891014069869654
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.03271135655509751
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.014331185647193623
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.00478371929517851
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0018063757978696447
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "native_film",
+      "dimensionality": 7,
+      "component": 1,
+      "peak_MNI_mm": [
+        -45.10000252723694,
+        22.499999284744263,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.99661216152743,
+        21.784816954199183,
+        0.7401840223078815
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.33764165343876473
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.28576836503485487
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.24331031287639743
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.07583422566542179
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.05207480778208004
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.0053579510746291255
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 1.2684127852039034e-05
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "native_film",
+      "dimensionality": 7,
+      "component": 2,
+      "peak_MNI_mm": [
+        -34.300002336502075,
+        19.799999237060547,
+        -9.62999939918518
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -39.28553808600095,
+        21.10644128273914,
+        -7.7000358660164165
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.812707110965785
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.1186313603073688
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.035799500515683175
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.021790453596009486
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.007698093647350305
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.003086960983967158
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.00028651998383604475
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "native_film",
+      "dimensionality": 7,
+      "component": 3,
+      "peak_MNI_mm": [
+        -34.300002336502075,
+        17.09999918937683,
+        -12.59999942779541
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -37.894704674300684,
+        19.5845506508224,
+        -10.996291099431634
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.9688075565041183
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.019388461134168332
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.004514432891450821
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.003412388391449653
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.0027366977997744383
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.001039008250635084
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.00010145502840358874
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "native_film",
+      "dimensionality": 7,
+      "component": 4,
+      "peak_MNI_mm": [
+        -50.50000262260437,
+        19.799999237060547,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -47.3697507396805,
+        20.6442024696028,
+        0.7013171921105372
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.5921537343476844
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.286014512455378
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.083027321029027
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.018299715277779276
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.015149110571155896
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.004331984512524003
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0010236218064514323
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "native_film",
+      "dimensionality": 7,
+      "component": 5,
+      "peak_MNI_mm": [
+        -42.40000247955322,
+        22.499999284744263,
+        -6.659999370574951
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -42.32605727217426,
+        22.01063557329943,
+        -6.2589796531328235
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.786847189422356
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.081813419786536
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.07826444460691495
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.037962253325215294
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.01320114720245104
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.0016417078561083624
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.00026983780041847834
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "native_film",
+      "dimensionality": 7,
+      "component": 6,
+      "peak_MNI_mm": [
+        -47.800002574920654,
+        25.19999933242798,
+        -3.6899993419647217
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -46.13660157206981,
+        23.13762275979842,
+        -2.5675110543552426
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.39189360054275174
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.3190024211401746
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.23121930396733936
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.031437606240214994
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.023016771368173383
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0020616289001475457
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.0013686678411984816
+        }
+      ]
+    },
+    {
+      "arm": "sm0",
+      "mode": "native_film",
+      "dimensionality": 7,
+      "component": 7,
+      "peak_MNI_mm": [
+        -42.40000247955322,
+        19.799999237060547,
+        -12.59999942779541
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -42.531432408911144,
+        21.776371654498032,
+        -7.154723783116563
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.865594512365251
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.05704255307656172
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.03990022613055634
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.018737775664872374
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.009678228920653778
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.0076237820137337485
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0014229218283713775
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "joint_bold",
+      "dimensionality": 3,
+      "component": 1,
+      "peak_MNI_mm": [
+        -34.300002336502075,
+        19.799999237060547,
+        -12.59999942779541
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -38.49529730944666,
+        20.8427259304009,
+        -8.929160625021805
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.886582431839013
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.045009776642543735
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.0350183342823626
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.01833603524888208
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.008379476683101777
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.006384157472870584
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0002897878312262395
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "joint_bold",
+      "dimensionality": 3,
+      "component": 2,
+      "peak_MNI_mm": [
+        -42.40000247955322,
+        22.499999284744263,
+        -3.6899993419647217
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.42037555228272,
+        22.879855598222537,
+        -3.226209185443144
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.5726138174695206
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.28717442375235536
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.07398773386490026
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.03989306520612446
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.016410690520158113
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.009716075774833929
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0002041934121075823
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "joint_bold",
+      "dimensionality": 3,
+      "component": 3,
+      "peak_MNI_mm": [
+        -42.40000247955322,
+        19.799999237060547,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.57577267890512,
+        22.339436821154614,
+        0.031567910263675385
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.5272597757324542
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.1760213931819535
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.16845268945383537
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.0749903126244531
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.04793526262996894
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.004603204495137291
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0007373618821977731
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "joint_bold",
+      "dimensionality": 5,
+      "component": 1,
+      "peak_MNI_mm": [
+        -31.60000228881836,
+        19.799999237060547,
+        -12.59999942779541
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -37.09727043571785,
+        21.13250737914321,
+        -9.09091460203228
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.9387302024896472
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.022867334882024047
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.015882769734438907
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.008736531864666434
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.006904551687850959
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.006859460539975249
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 1.9148801397213134e-05
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "joint_bold",
+      "dimensionality": 5,
+      "component": 2,
+      "peak_MNI_mm": [
+        -42.40000247955322,
+        22.499999284744263,
+        2.2500007152557373
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.44268928301151,
+        22.050009572325727,
+        0.16692489849063927
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.5619701044311585
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.17586168603657362
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.1413465421801911
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.0696570619494409
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.04441897072695944
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.006401038973308751
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0003445957023677164
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "joint_bold",
+      "dimensionality": 5,
+      "component": 3,
+      "peak_MNI_mm": [
+        -50.50000262260437,
+        19.799999237060547,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -46.7209539809168,
+        21.293632845791198,
+        0.6278630484819849
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.4603577296209339
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.2996113779657454
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.14014017007876076
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.05339161664166545
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.04454105293574831
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.0016961364122711044
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0002619163448751392
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "joint_bold",
+      "dimensionality": 5,
+      "component": 4,
+      "peak_MNI_mm": [
+        -39.70000243186951,
+        22.499999284744263,
+        -9.62999939918518
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -40.0773251059869,
+        21.803932912287365,
+        -8.825982900202204
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.9580667047942887
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.023656889414836277
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.013607228842233844
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.002236859795310452
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.0009901563775845652
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.0007661891230789139
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0006759716526671374
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "joint_bold",
+      "dimensionality": 5,
+      "component": 5,
+      "peak_MNI_mm": [
+        -39.70000243186951,
+        17.09999918937683,
+        -15.56999945640564
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -39.580911084831385,
+        20.393114796666488,
+        -10.270324073159454
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.9649140310698143
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.01196138674755644
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.00876019934093937
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.007178198168812929
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.004754951471495766
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.0023179610859210627
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.00011327211546008273
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "joint_bold",
+      "dimensionality": 7,
+      "component": 1,
+      "peak_MNI_mm": [
+        -42.40000247955322,
+        22.499999284744263,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -45.270778077575294,
+        22.008560279153393,
+        1.590133653820804
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.4019331884893226
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.25229775282093236
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.2229034717339755
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.08967815562964455
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.032682325072760074
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.00046475952918897994
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 4.0346724175985525e-05
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "joint_bold",
+      "dimensionality": 7,
+      "component": 2,
+      "peak_MNI_mm": [
+        -37.00000238418579,
+        17.09999918937683,
+        -15.56999945640564
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -39.17569732493363,
+        19.824692393812192,
+        -10.864482310995637
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.9679596915940523
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.01217083977755849
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.011341104050434484
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.005136324334093455
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.0031189332286720374
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.0001704585385437615
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.00010264847664545075
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "joint_bold",
+      "dimensionality": 7,
+      "component": 3,
+      "peak_MNI_mm": [
+        -39.70000243186951,
+        22.499999284744263,
+        -12.59999942779541
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -39.435623709342885,
+        21.49471437890574,
+        -9.870562668831976
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.9860167894670486
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.004826387470062172
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.0033451873669007467
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.003029637580868442
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.001287083823659221
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.0010830418990785786
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0004118723923819027
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "joint_bold",
+      "dimensionality": 7,
+      "component": 4,
+      "peak_MNI_mm": [
+        -45.10000252723694,
+        22.499999284744263,
+        -0.7199993133544922
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -45.64013367528253,
+        21.921295037626393,
+        -1.04990904940747
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.5259442233990216
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.19141245502688242
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.13136488851702982
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.12742117478805978
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.013997676780329834
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.009278613718486827
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0005809677701897247
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "joint_bold",
+      "dimensionality": 7,
+      "component": 5,
+      "peak_MNI_mm": [
+        -31.60000228881836,
+        19.799999237060547,
+        -9.62999939918518
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -38.920769551078834,
+        20.904445053152262,
+        -8.51535106265504
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.8186383246530888
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.132794627380955
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.018518824150972845
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.01546391942642535
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.01284140166949244
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.0011254425739210027
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0006174601451447181
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "joint_bold",
+      "dimensionality": 7,
+      "component": 6,
+      "peak_MNI_mm": [
+        -53.200002670288086,
+        19.799999237060547,
+        2.2500007152557373
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -47.42661761287186,
+        21.566670066833016,
+        -0.14913406916432703
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.529914232986591
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.29293044886395003
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.1041240205701726
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.0655292760685716
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.005067429427991582
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.0022762511499415275
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.00015834093278185092
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "joint_bold",
+      "dimensionality": 7,
+      "component": 7,
+      "peak_MNI_mm": [
+        -31.60000228881836,
+        22.499999284744263,
+        -12.59999942779541
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -39.573643050783794,
+        21.44891648197546,
+        -7.465087933821329
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.8699792689077716
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.04651163660696492
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.03969299084643807
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.03561924319421482
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.005830757296456881
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.0023145719139041586
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 5.15312342495977e-05
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "native_film",
+      "dimensionality": 3,
+      "component": 1,
+      "peak_MNI_mm": [
+        -34.300002336502075,
+        19.799999237060547,
+        -12.59999942779541
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -38.5456661771942,
+        20.704161634638393,
+        -8.983938692001434
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.8933736111213966
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.04124736740337971
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.0290676081070007
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.018891074305812272
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.012810971626676713
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.004479116867712694
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.00013025056802145628
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "native_film",
+      "dimensionality": 3,
+      "component": 2,
+      "peak_MNI_mm": [
+        -42.40000247955322,
+        25.19999933242798,
+        -6.659999370574951
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.78911129764807,
+        22.95273808840881,
+        -3.005112994167872
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.5681894743600896
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.2597722489142902
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.09499015117736004
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.05179461482291054
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.017242439348029572
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.007488572770983924
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0005224986063359859
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "native_film",
+      "dimensionality": 3,
+      "component": 3,
+      "peak_MNI_mm": [
+        -42.40000247955322,
+        22.499999284744263,
+        2.2500007152557373
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.515113110579584,
+        22.309387694333942,
+        0.4202963988383997
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.5897908336541952
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.16723241358231208
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.14735146293663137
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.054997233502749605
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.036302825103553135
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.003920233093650661
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0004049981269077908
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "native_film",
+      "dimensionality": 5,
+      "component": 1,
+      "peak_MNI_mm": [
+        -47.800002574920654,
+        19.799999237060547,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -46.859474805974166,
+        21.57970178445709,
+        0.865852241887675
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.412106176652545
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.3003669338410551
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.13303765169198983
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.08359292767195534
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.06985268034457451
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.0009767897880350418
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 6.6840009845052e-05
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "native_film",
+      "dimensionality": 5,
+      "component": 2,
+      "peak_MNI_mm": [
+        -42.40000247955322,
+        22.499999284744263,
+        2.2500007152557373
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -44.49052133367947,
+        22.057392961222476,
+        0.22373833669660884
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.6083961941667642
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.15912836411854184
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.11817422776653248
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.07327860320511746
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.03633033451142638
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.004594243965487126
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 9.80322661306314e-05
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "native_film",
+      "dimensionality": 5,
+      "component": 3,
+      "peak_MNI_mm": [
+        -31.60000228881836,
+        19.799999237060547,
+        -12.59999942779541
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -37.65486008380242,
+        21.342401957659582,
+        -8.755735894603838
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.916994959629562
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.0308885365612999
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.022609042268168962
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.014560629157669942
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.008106590860664871
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.006720829585212163
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.00011941193742213005
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "native_film",
+      "dimensionality": 5,
+      "component": 4,
+      "peak_MNI_mm": [
+        -39.70000243186951,
+        22.499999284744263,
+        -9.62999939918518
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -40.59220187963585,
+        21.842425849431308,
+        -9.19929706027352
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.9744772991402675
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.010477814274226555
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.009050095946139605
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.0036656949379008734
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.0012046336165773342
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.000960520960853394
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.0001639411240350259
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "native_film",
+      "dimensionality": 5,
+      "component": 5,
+      "peak_MNI_mm": [
+        -37.00000238418579,
+        17.09999918937683,
+        -15.56999945640564
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -39.23955315278514,
+        20.062746289772875,
+        -10.40928024818633
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.9664009927969732
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.01254856141935815
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.009254215750447532
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.006485307421466147
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.003555149281537646
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.0017372399791415313
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 1.8533351075800918e-05
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "native_film",
+      "dimensionality": 7,
+      "component": 1,
+      "peak_MNI_mm": [
+        -42.40000247955322,
+        22.499999284744263,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -45.131005413772954,
+        21.93470698331058,
+        1.4213873178388081
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.5976530304753245
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.17550363614697148
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.16068533996753534
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.04342396342595866
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.02222896530353301
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.0004651221115311997
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 3.9942569145963694e-05
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "native_film",
+      "dimensionality": 7,
+      "component": 2,
+      "peak_MNI_mm": [
+        -31.60000228881836,
+        19.799999237060547,
+        -9.62999939918518
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -38.01248353032828,
+        21.04252749002585,
+        -8.856163570639932
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.9023820792433199
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.04825447048541537
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.02123667934848788
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.018093571283488236
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.0092588374045754
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.0004186004223936402
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.0003557618123195501
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "native_film",
+      "dimensionality": 7,
+      "component": 3,
+      "peak_MNI_mm": [
+        -37.00000238418579,
+        17.09999918937683,
+        -15.56999945640564
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -38.55364808019398,
+        19.584743326709358,
+        -11.689131956380105
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.9753731830213719
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.01114880587208951
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.010527274534126121
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.0024527336390101307
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.0004017906901107906
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 7.561732394663329e-05
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 2.0594919344886243e-05
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "native_film",
+      "dimensionality": 7,
+      "component": 4,
+      "peak_MNI_mm": [
+        -39.70000243186951,
+        22.499999284744263,
+        -12.59999942779541
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -40.393521894742165,
+        21.696755567262397,
+        -8.94844169351092
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.9608827295411431
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.013556519012205174
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.012078065309998642
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.006867483128222155
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.004530344455079056
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.0017680796821438307
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.00031677887120808943
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "native_film",
+      "dimensionality": 7,
+      "component": 5,
+      "peak_MNI_mm": [
+        -42.40000247955322,
+        22.499999284744263,
+        -6.659999370574951
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -41.69334230023299,
+        22.141174725748712,
+        -6.48763402628865
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.7084118804466867
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.23002818352392074
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.04400900459566291
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.008364499623973043
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.0061452689662234855
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.0030410325037701844
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 1.3033976316730222e-07
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "native_film",
+      "dimensionality": 7,
+      "component": 6,
+      "peak_MNI_mm": [
+        -50.50000262260437,
+        19.799999237060547,
+        5.220000743865967
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -46.261935027365695,
+        21.11452006416475,
+        -0.3785682624938301
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.5441687293399411
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.21531317376422815
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.15431087232095328
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.03767636279616023
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.03525252065593107
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.013175469336414175
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 0.00010287178637225223
+        }
+      ]
+    },
+    {
+      "arm": "sm5",
+      "mode": "native_film",
+      "dimensionality": 7,
+      "component": 7,
+      "peak_MNI_mm": [
+        -50.50000262260437,
+        19.799999237060547,
+        -0.7199993133544922
+      ],
+      "absolute_loading_centroid_MNI_mm": [
+        -47.71770055268052,
+        21.833322078051754,
+        -0.4048024788250061
+      ],
+      "spatial_energy_by_atlas_label": [
+        {
+          "label": "Inferior Frontal Gyrus, pars triangularis",
+          "fraction": 0.6252835643653729
+        },
+        {
+          "label": "Frontal Operculum Cortex",
+          "fraction": 0.2019729403497254
+        },
+        {
+          "label": "Inferior Frontal Gyrus, pars opercularis",
+          "fraction": 0.09661549289633813
+        },
+        {
+          "label": "Frontal Orbital Cortex",
+          "fraction": 0.061993861902761585
+        },
+        {
+          "label": "Unlabeled",
+          "fraction": 0.012099324888201583
+        },
+        {
+          "label": "Insular Cortex",
+          "fraction": 0.0020110593426916996
+        },
+        {
+          "label": "Frontal Pole",
+          "fraction": 2.375625490854789e-05
+        }
+      ]
+    }
+  ]
+}
