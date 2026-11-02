@@ -1,0 +1,60 @@
+{
+  "source_URL": "https://www.fmrib.ox.ac.uk/datasets/brainmap%2Brsns/PNAS_Smith09_rsn10.nii.gz",
+  "source_page": "https://www.fmrib.ox.ac.uk/datasets/brainmap%2Brsns/",
+  "citation": "Smith et al., PNAS 2009, doi:10.1073/pnas.0905267106",
+  "source_sha256": "dc0e5213014476e460f7badd8f027c28177186c8346717ddc1b740f42c54fca7",
+  "source_shape": [
+    91,
+    109,
+    91,
+    10
+  ],
+  "derived_sha256": "e25b743de24e86de03050b26fdd22e0020c1115a6e1395c4c860a166ed4564bc",
+  "derived_shape": [
+    57,
+    70,
+    54,
+    10
+  ],
+  "derived_affine": [
+    [
+      2.700000047683716,
+      0.0,
+      0.0,
+      -74.80000305175781
+    ],
+    [
+      0.0,
+      2.700000047683716,
+      0.0,
+      -109.80000305175781
+    ],
+    [
+      0.0,
+      0.0,
+      2.9700000286102295,
+      -72.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "interpolation": "Linear resampling of independent templates only; no participant data interpolation",
+  "nibabel_version": "5.3.2",
+  "labels": [
+    "Visual 1",
+    "Visual 2",
+    "Visual 3",
+    "Default mode",
+    "Cerebellar",
+    "Sensorimotor",
+    "Auditory",
+    "Executive control",
+    "Frontoparietal 9",
+    "Frontoparietal 10"
+  ],
+  "interpretation": "Signed spatial correspondence outside defining ROI, descriptive only. No forced network membership, significance claim, or salience/valuation relabeling."
+}

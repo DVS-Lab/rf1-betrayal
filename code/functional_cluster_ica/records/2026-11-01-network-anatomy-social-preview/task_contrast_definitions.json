@@ -1,0 +1,53 @@
+{
+  "definitions": {
+    "UGR nonsocial": {
+      "ugr_nonsocial": 1
+    },
+    "UGR social": {
+      "ugr_social": 1
+    },
+    "Trust computer": {
+      "trust_C_rec_minus_def": 1
+    },
+    "Trust stranger": {
+      "trust_S_rec_minus_def": 1
+    },
+    "UGR social \u2212 nonsocial": {
+      "ugr_social": 1,
+      "ugr_nonsocial": -1
+    },
+    "Trust stranger \u2212 computer": {
+      "trust_S_rec_minus_def": 1,
+      "trust_C_rec_minus_def": -1
+    },
+    "Trust friend \u2212 computer": {
+      "trust_F_rec_minus_def": 1,
+      "trust_C_rec_minus_def": -1
+    },
+    "Trust social-average \u2212 computer": {
+      "trust_F_rec_minus_def": 0.5,
+      "trust_S_rec_minus_def": 0.5,
+      "trust_C_rec_minus_def": -1
+    },
+    "Trust friend \u2212 stranger": {
+      "trust_F_rec_minus_def": 1,
+      "trust_S_rec_minus_def": -1
+    },
+    "UGR partner average": {
+      "ugr_nonsocial": 0.5,
+      "ugr_social": 0.5
+    },
+    "Trust partner average": {
+      "trust_C_rec_minus_def": 0.3333333333333333,
+      "trust_F_rec_minus_def": 0.3333333333333333,
+      "trust_S_rec_minus_def": 0.3333333333333333
+    }
+  },
+  "primary_social": [
+    "UGR social \u2212 nonsocial",
+    "Trust stranger \u2212 computer"
+  ],
+  "friend_handling": "Separate, with social-average secondary; original five bars retained in source records",
+  "orientation": "UGR fairness slope and Trust rec-minus-def preserved. Negative social contrasts indicate greater social norm-violation sensitivity.",
+  "cross_task_average": "No averaging UG and Trust into one coefficient; slopes and binary contrasts differ"
+}

@@ -1,0 +1,27 @@
+{
+  "test": "Native randomise explicit one-sample design, positive/negative contrasts and 3D TFCE",
+  "data": "Synthetic 7x7x7 volume, 16 observations, seeded noise plus positive patch; not participant data",
+  "permutations": 100,
+  "production_permutations": 5000,
+  "fsl_version": "6.0.7.19",
+  "TFCE_both_tails_finite_probability_maps": true,
+  "tstat2_equals_negative_tstat1": true,
+  "completed_checkpoint_reused": true,
+  "command_template": [
+    "randomise",
+    "-i",
+    "132_participant_maps.nii.gz",
+    "-o",
+    "dr",
+    "-m",
+    "inference_mask.nii.gz",
+    "-d",
+    "ones.mat",
+    "-t",
+    "tails.con",
+    "-n",
+    "5000",
+    "-T",
+    "--seed=20261101"
+  ]
+}

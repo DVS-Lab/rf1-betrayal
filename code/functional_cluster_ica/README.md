@@ -179,3 +179,113 @@ a completed FEAT checkpoint prevents any FSL refit; a mismatched regenerated
 temporal model stops before FEAT starts; raw task caches require no
 new image reads; and spatial permutation/sign matching precedes paired task
 differences. Real Linux2 FEAT/convergence/QC checks remain execution-time checks.
+
+## Whole-brain dual regression: fixed 3- and 5-component solutions
+
+```bash
+cd /ZPOOL/data/projects/rf1-betrayal
+git pull --ff-only origin insula-ica
+bash code/functional_cluster_ica/start_wholebrain.sh
+```
+
+The `nohup` launcher reuses the completed functional sm-0 and matched sm-5
+solutions, both BOLD-scale and native-FILM residual representations. Eight
+fixed bases contain 32 components in total. It has 32 RAM-gated run workers
+(4 GiB reservation each plus shared 8 GiB headroom), then 32 single-threaded
+`randomise` slots (2 GiB reservation each). The memory gate uses available
+memory, so actual concurrency may be lower. There is no new FEAT, FILM, ICA,
+fMRIPrep or TEDANA execution in this stage.
+
+```bash
+/ZPOOL/data/tools/anaconda/tug87422/envs/tedana-26.0.3/bin/python \
+  code/functional_cluster_ica/status_wholebrain.py --brief
+```
+
+Stage 1 regresses all component maps in a solution, plus a spatial intercept,
+onto its **117 physically masked residual voxels**. The resulting timecourses
+are centered and normalized to unit sample SD. Stage 2 regresses all these
+timecourses together onto matching whole-brain residuals. BOLD-scale data use
+the exact saved joint FILM fit: centered filtered BOLD minus the full design
+times existing parameter estimates. The implementation applies this projection
+in chunks, without storing another whole-brain 4D residual or refitting the
+task/nuisance model. The native sensitivity uses the retained voxelwise
+prewhitened `res4d`; its maps describe innovation-scale partial association,
+which differs from unwhitened temporal covariance. Both dimensionalities share
+each whole-brain read. Source hashes and retained output identities are checked.
+Pilots include Trust, the pooled-pmod sub-11031 UGR run, and the corrected-TR
+sub-10817 UGR run before expansion. Existing voxelwise full-model residuals
+are retained; pooling pmods was an estimability repair for the separate raw
+timecourse task model, not a new voxelwise fit here.
+
+Runs are averaged within participant/task; the two tasks receive equal weight
+within participant. The group input is **132 independent participant maps**.
+Per-task group means are descriptive. Inference asks about pooled background
+coupling, not task differences or social modulation of connectivity. The
+whole-brain mask requires finite positive fitted variance and FEAT support in
+all 980 run-arm entries. The entire original 127-voxel defining ROI is excluded
+from group inference. No effect-based coverage selection is used.
+
+Each of the 32 components gets 5,000 sign-flip permutations with 3D TFCE and
+explicit positive and negative contrasts. The command is:
+
+```text
+randomise -i participant_maps.nii.gz -o dr -m inference_mask.nii.gz \
+  -d group_design.mat -t group_design.con -n 5000 -T --seed=20261101
+```
+
+The design is a column of ones; contrasts are +1 and -1. Data are not demeaned
+across participants (`-D` would remove the tested mean). FSL outputs `1-p`.
+Reports distinguish per-map/tail TFCE FWE .05 from Bonferroni correction over
+the two tails and all components within each basis (6 or 10 tests), and over
+the entire requested set (64 tests). Within-basis and all-model signed maps
+and figures are saved; all per-map/tail corrected probability maps remain
+available. This is conservative across correlated solutions.
+
+Anatomical component views and paired social task plots publish first. Then
+group means publish before permutation inference. Final records include
+TFCE maps, command arrays, mask coverage, anatomical target coefficients and
+descriptive correspondence with the independent Smith et al. (2009) RSN10
+reference. These latter summaries exclude the original ROI plus a predeclared
+10-mm guard band, to reduce local spatial overlap; this extra guard band does
+not alter the whole-brain inference mask. All template correlations are
+reported, without forced network assignment. ICA signs and indices remain
+local to each solution; do not equate IC numbers between arms.
+
+Production maps stay under the separate ignored
+`derivatives/insula_ica/functional-wholebrain-*` root. Small group/inference
+maps, masks, plots, commands, tables and failures publish under
+`code/functional_cluster_ica/records/linux2-functional-wholebrain-*` on
+`insula-ica`. Repeating the same launcher verifies and reuses completed run,
+participant, merge and permutation checkpoints. Partial attempts are preserved
+separately. A lock prevents duplicate network runners and shared source locks
+protect the completed functional arms. Failed publication is reported by the
+status tool and retried on resume.
+
+Five new tests verify whole-brain projection against direct residual regression
+at 3/5 components and both residual scales, paired task contrasts, balanced
+participant aggregation, frozen group designs and reuse without new external
+permutations. A native FSL synthetic check validates the two signed one-sample
+TFCE outputs and completed-checkpoint reuse. Its 100-permutation fixture is
+not participant inference; production always uses at least 5,000 permutations.
+
+Method references: [FSL dual regression](https://fsl.fmrib.ox.ac.uk/fsl/docs/resting_state/dualregression.html),
+[FSL randomise](https://fsl.fmrib.ox.ac.uk/fsl/docs/statistics/randomise.html).
+
+## Social versus nonsocial task characterization
+
+Original five-bar estimates remain available. Additional four-condition views
+show UGR nonsocial/social fairness slopes and Trust computer/stranger
+reciprocate-minus-defect contrasts. The two primary paired differences are
+**UGR social minus nonsocial** and **Trust stranger minus computer**; stranger
+matches UGR's social partner more closely than friend. Friend-minus-computer,
+friend-minus-stranger, and friend/stranger-average-minus-computer remain
+secondary summaries in tables. Means and confidence intervals are computed
+from each participant's contrast, preserving the paired design.
+
+Do not average UGR slopes and Trust binary contrasts into a single coefficient,
+or infer social specificity from one bar crossing zero and another not doing
+so. Original coefficient directions remain: a negative social difference can
+indicate stronger responses to social norm violations. Pointwise 95% CIs are
+descriptive, without multiplicity-adjusted task inference; the functional ROI
+was task selected. Testing whether connectivity itself is more social would
+require a separate condition-interaction/PPI model.
